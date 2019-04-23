@@ -1,0 +1,140 @@
+// Name:            Padding
+// Description:     Utilities for padding
+//
+// Component:       `padding`
+//                  `padding-large`
+//                  `padding-remove-*`
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@padding-padding: @global-padding;
+@padding-padding-l: @global-padding-large;
+
+@padding-small-padding: @global-padding-small;
+
+@padding-large-padding: @global-padding;
+@padding-large-padding-l: @global-padding-largest;
+
+/* ========================================================================
+   Component: Padding
+ ========================================================================== */
+
+.padding {
+  padding: @global-padding;
+}
+
+/* Desktop and bigger */
+@media (min-width: @global-breakpoint-desktop) {
+  .padding {
+    padding: @padding-padding-l;
+  }
+}
+
+/* Small
+ ========================================================================== */
+
+.padding-small {
+  padding: @global-padding-small;
+}
+
+/* Small
+ ========================================================================== */
+.padding-smaller {
+  padding: @global-padding-smaller;
+}
+
+/* Small
+ ========================================================================== */
+
+.padding-smallest {
+  padding: @global-padding-smallest;
+}
+
+/* Large
+ ========================================================================== */
+
+.padding-large {
+  padding: @global-padding-large;
+}
+
+/* Desktop and bigger */
+@media (min-width: @global-breakpoint-desktop) {
+  .padding-large {
+    padding: @padding-large-padding-l;
+  }
+}
+.padding-largest{
+  padding: @global-padding-largest
+}
+
+/* Remove
+ ========================================================================== */
+
+.padding-remove {
+  padding: 0 !important;
+}
+.padding-top-remove {
+  padding-top: 0 !important;
+}
+.padding-bottom-remove {
+  padding-bottom: 0 !important;
+}
+.padding-left-remove {
+  padding-left: 0 !important;
+}
+.padding-right-remove {
+  padding-right: 0 !important;
+}
+
+.padding-vertical-remove {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.padding-horizontal-remove {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// Hooks
+// ========================================================================
+
+.hook-padding-misc;
+
+.hook-padding-misc() {
+}
+
+
+.padding-left-smaller{padding-left:@global-padding-smaller};
+.padding-left-small{padding-left:@global-padding-small};
+.padding-left{padding-left:@global-padding};
+.padding-left-large{padding-left:@global-padding-large};
+.padding-left-larger{padding-left:@global-padding-larger};
+.padding-left-largest{padding-left:@global-padding-largest};
+
+.padding-right-smallest{padding-right:@global-padding-smallest};
+.padding-right-smaller{padding-right:@global-padding-smaller};
+.padding-right-small{padding-right:@global-padding-small};
+.padding-right{padding-right:@global-padding};
+.padding-right-large{padding-right:@global-padding-large};
+.padding-right-larger{padding-right:@global-padding-larger};
+.padding-right-largest{padding-right:@global-padding-largest};
+
+.padding-top-smallest{padding-top:@global-padding-smallest};
+.padding-top-smaller{padding-top:@global-padding-smaller};
+.padding-top-small{padding-top:@global-padding-small};
+.padding-top{padding-top:@global-padding};
+.padding-top-large{padding-top:@global-padding-large};
+.padding-top-larger{padding-top:@global-padding-larger};
+.padding-top-largest{padding-top:@global-padding-largest};
+
+.padding-bottom-smallest{padding-bottom:@global-padding-smallest};
+.padding-bottom-smaller{padding-bottom:@global-padding-smaller};
+.padding-bottom-small{padding-bottom:@global-padding-small};
+.padding-bottom{padding-bottom:@global-padding};
+.padding-bottom-large{padding-bottom:@global-padding-large};
+.padding-bottom-larger{padding-bottom:@global-padding-larger};
+.padding-bottom-largest{padding-bottom:@global-padding-largest};

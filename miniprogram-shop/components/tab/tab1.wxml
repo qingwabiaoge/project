@@ -1,0 +1,4 @@
+<template name="tab1" data="{{goods}}">
+  <rich-text nodes="{{goods.content}}"></rich-text>
+
+</template>

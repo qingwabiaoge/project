@@ -1,0 +1,20 @@
+<wux-search-bar clear  value="{{ value }}"
+                controlled placeholder="搜索"
+                bind:change="onChange"
+                bind:confirm="onConfirm"
+                bind:clear="onClear"
+                bind:blur="onBlur"
+
+/>
+
+<view class='flex flex-between '>
+    <view style='width:200rpx'>
+        <navigator-siderbar navs="{{navs}}" category="{{category}}" bind:setCategory="tapSetCategory">
+        </navigator-siderbar>
+    </view>
+    <view style='width:530rpx'>
+        <piclist-simple goodss="{{goodss}}" noMore="{{noMore}}">
+        </piclist-simple>
+
+    </view>
+</view>

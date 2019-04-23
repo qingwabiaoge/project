@@ -1,0 +1,57 @@
+<import src="/components/tab/tab1"/>
+<import src="/components/tab/tab2"/>
+<import src="/components/tab/tab3"/>
+
+<!-- 产品缩略图 -->
+<swiper indicator-dots="ture"
+        autoplay="ture"
+        interval="5000"
+        duration="1000"
+        indicator-col
+        
+        
+        
+        or="rgba(255,255,255,.5)"
+        indicator-active-color="#e60000">
+    <block wx:for="{{goods.fileList}}" wx:key="item._id">
+        <swiper-item>
+            <navigator>
+                <image mode='widthFix' src="{{item.url}}" class="slide-image"/>
+            </navigator>
+        </swiper-item>
+    </block>
+</swiper>
+
+<!-- 价格面板 -->
+<view class="padding background-default margin-top">
+    <view class='text-medium text-black text-bold  '>{{goods.name}}
+    <button class='wx-button-reset float-right' open-type="share"><i class="icon icon-fenxiang2 ico-small" ></i></button>
+    </view>
+    <view>
+        <text class="text-large text-primary">¥{{goods.truePrice}}</text>
+    </view>
+    <view >原价:
+        <text class='text-throughline'>¥{{goods.price}}</text>
+    </view>
+    <view >
+        折扣:{{discount}}折
+        <text class='float-right'>{{goods.sales}}人已付款</text>
+    </view>
+
+</view>
+
+<!-- tab -->
+<view class="margin-top-small">
+    <wux-tabs current="{{ key }}" theme="assertive" bindchange="onTabsChange">
+        <block wx:for="{{ tabs }}" wx:key="key">
+            <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+        </block>
+    </wux-tabs>
+</view>
+
+<template is="{{current}}" data="{{goods,size}}"></template>
+
+<!-- 下单工具栏 -->
+<order-toolbar goods="{{goods}}">
+
+</order-toolbar>

@@ -1,0 +1,3 @@
+<template>
+  <talk></talk>
+</template>

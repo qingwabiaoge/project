@@ -1,0 +1,9 @@
+<template name="tab2" data="{{goods}}">
+<view class='padding'>
+<text><text class='b'>材质:</text>{{goods.material}}\n</text>
+<wux-divider show-text="{{ false }}" />
+<text><text class='b'>尺寸:</text>{{goods.size}}</text>
+<wux-divider show-text="{{ false }}" />
+  
+</view>
+</template>

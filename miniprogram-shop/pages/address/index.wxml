@@ -1,0 +1,9 @@
+<wux-radio-group name="b" value="{{ value2 }}" title="Label" bind:change="onChange">
+
+    <wux-radio wx:for="{{userInfo.contact}}"
+               wx:key="{{item.address}}"
+                title="{{item.name}}"
+               label="details"
+               value="" />
+
+</wux-radio-group>

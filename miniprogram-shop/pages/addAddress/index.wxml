@@ -1,0 +1,33 @@
+<wux-toptips id="wux-toptips"/>
+<wux-cascader visible="{{ visible1 }}" default-value="{{ value1 }}" title="所在地区" options="{{ options1 }}"
+              bind:close="onClose1" bind:change="onChange1"/>
+
+
+<wux-cell-group>
+    <wux-cell title="点击选择地址" extra="{{ area }}" bind:click="onOpen1"></wux-cell>
+
+
+    <wux-cell hover-class="none">
+        <wux-input label="详细地址" placeholder="请输入详细地址" bind:change="onChange2"/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="联系人" placeholder="请输入联系人" bind:change="onChange3"/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="手机号码"
+                   placeholder="请输入手机号码"
+                   value="{{ value }}"
+                   controlled error="{{ error }}"
+                   type="number"
+                   bind:change="onChange"
+                   bind:focus="onFocus"
+                   bind:blur="onBlur"
+                   bind:confirm="onConfirm"
+                   bind:clear="onClear"
+                   bind:error="onError"/>
+    </wux-cell>
+</wux-cell-group>
+<view class="padding">
+<wux-button block type="assertive " bindtap="addAdress">提交</wux-button>
+</view>
+

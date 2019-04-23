@@ -1,0 +1,15 @@
+
+
+<view class="height-1-1" scroll-y >
+    <view 
+             wx:for="{{navs}}"
+             class='flex flex-center flex-middle   background-muted  {{item.value===category?"active":""}}  '
+             style="height: 100rpx"
+             bindtap='onTap'
+             hover-class="link-hover"
+             data-category="{{item.value}}"
+             >
+
+      <text class='text-nowrap'> {{item.value}}</text>
+    </view>
+</view>

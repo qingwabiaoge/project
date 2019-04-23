@@ -1,0 +1,59 @@
+@background-default-background:                 @global-background;
+@background-muted-background:                   @global-muted-background;
+@background-primary-background:                 @global-primary-background;
+@background-black-background:               @global-black-background;
+
+/* Color
+ ========================================================================== */
+
+.background-default { background-color: @background-default-background; }
+.background-muted { background-color: @background-muted-background; }
+.background-primary { background-color: @background-primary-background; }
+.background-secondary { background-color: @background-black-background; }
+
+
+/* Size
+ ========================================================================== */
+
+.background-cover,
+.background-contain {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.background-cover { background-size: cover; }
+.background-contain { background-size: contain; }
+
+
+/* Position
+ ========================================================================== */
+
+.background-top-left { background-position: 0 0; }
+.background-top-center { background-position: 50% 0; }
+.background-top-right { background-position: 100% 0; }
+.background-center-left { background-position: 0 50%; }
+.background-center-center { background-position: 50% 50%; }
+.background-center-right { background-position: 100% 50%; }
+.background-bottom-left { background-position: 0 100%; }
+.background-bottom-center { background-position: 50% 100%; }
+.background-bottom-right { background-position: 100% 100%; }
+
+
+/* Repeat
+ ========================================================================== */
+
+.background-norepeat { background-repeat: no-repeat; }
+
+
+/* Attachment
+ ========================================================================== */
+
+/*
+ * 1. Fix bug introduced in Chrome 67: the background image is not visible if any element on the page uses `translate3d`
+ */
+
+.background-fixed {
+  background-attachment: fixed;
+  /* 1 */
+  backface-visibility: hidden;
+}

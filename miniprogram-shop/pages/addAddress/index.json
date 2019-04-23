@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "增加联系人",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-cascader": "../../dist/cascader/index",
+    "wux-input": "../../dist/input/index",
+    "wux-toptips": "../../dist/toptips/index",
+    "wux-button": "../../dist/button/index"
+  }
+}

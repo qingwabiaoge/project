@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+"order-toolbar":"/components/order-toolbar/index",
+"wux-cell-group": "../../dist/cell-group/index",
+"wux-cell": "../../dist/cell/index",
+"wux-tabs": "../../dist/tabs/index",
+"wux-tab": "../../dist/tab/index",
+"wux-divider": "../../dist/divider/index"
+
+}
+}

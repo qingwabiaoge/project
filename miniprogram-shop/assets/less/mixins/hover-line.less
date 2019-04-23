@@ -1,0 +1,191 @@
+@hover-line-before:@global-color;
+@hover-line-after:@global-primary-background;
+@hover-line-spin-width:6em;
+.hover-line(){
+&{
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px @hover-line-before;
+  color: @hover-line-before;
+  font-size: inherit;
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  vertical-align: middle;
+  a{ color: @global-link-hover-color;}
+
+}
+&::before, &::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+&-draw {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+&-draw::before, &-draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+&-draw::before {
+  top: 0;
+  left: 0;
+}
+&-draw::after {
+  bottom: 0;
+  right: 0;
+}
+&-draw:hover {
+  color: @hover-line-after;
+}
+&-draw:hover::before, &-draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+&-draw:hover::before {
+  border-top-color: @hover-line-after;
+  border-right-color: @hover-line-after;
+  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+&-draw:hover::after {
+  border-bottom-color: @hover-line-after;
+  border-left-color: @hover-line-after;
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+&-draw-meet:hover {
+  color: @hover-line-after;
+}
+&-draw-meet::after {
+  top: 0;
+  left: 0;
+}
+&-draw-meet:hover::before {
+  border-top-color: @hover-line-after;
+  border-right-color: @hover-line-after;
+}
+&-draw-meet:hover::after {
+  border-bottom-color: @hover-line-after;
+  border-left-color: @hover-line-after;
+  -webkit-transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+}
+
+&-draw-center:hover {
+  color: @hover-line-after;
+}
+&-draw-center::before, &-draw-center::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+&-draw-center::before {
+  border-top: 2px solid @hover-line-after;
+  border-bottom: 2px solid @hover-line-after;
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+}
+&-draw-center::after {
+  border-left: 2px solid @hover-line-after;
+  border-right: 2px solid @hover-line-after;
+  -webkit-transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
+}
+&-draw-center:hover::before, &-draw-center:hover::after {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+&-spin {
+  width: @hover-line-spin-width;
+  height: @hover-line-spin-width;
+  padding: 0;
+}
+&-spin:hover {
+  color: @hover-line-after;
+}
+&-spin::before, &-spin::after {
+  top: 0;
+  left: 0;
+}
+&-spin::before {
+  border: 2px solid transparent;
+}
+&-spin:hover::before {
+  border-top-color: @hover-line-after;
+  border-right-color: @hover-line-after;
+  border-bottom-color: @hover-line-after;
+  -webkit-transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+&-spin::after {
+  border: 0 solid transparent;
+}
+&-spin:hover::after {
+  border-top: 2px solid @hover-line-after;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-transition: -webkit-transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+}
+
+&-spin-circle {
+  border-radius: 100%;
+  box-shadow: 1px;
+}
+&-spin-circle::before, &-spin-circle::after {
+  border-radius: 100%;
+}
+
+&-spin-thick {
+  color: @hover-line-before;
+}
+&-spin-thick:hover {
+  color: #fff;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 2px @hover-line-after;
+}
+&-spin-thick::before {
+  border: 3em solid transparent;
+  z-index: -1;
+}
+&-spin-thick::after {
+
+  mix-blend-mode: color-dodge;
+  z-index: -1;
+}
+&-spin-thick:hover::before {
+  background: @hover-line-after;
+  border-top-color: @hover-line-after;
+  border-right-color: @hover-line-after;
+  border-bottom-color: @hover-line-after;
+  -webkit-transition: background 0s linear 0.4s, border-top-color 0.15s linear, border-right-color 0.15s linear 0.15s, border-bottom-color 0.15s linear 0.25s;
+  transition: background 0s linear 0.4s, border-top-color 0.15s linear, border-right-color 0.15s linear 0.15s, border-bottom-color 0.15s linear 0.25s;
+}
+&-spin-thick:hover::after {
+  border-top: 3em solid @hover-line-after;
+  border-left-width: 3em;
+  border-right-width: 3em;
+}
+}
+
+
+
+.hover-line{.hover-line()}

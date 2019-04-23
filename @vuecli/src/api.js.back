@@ -1,0 +1,172 @@
+import axios from 'axios'
+import store from './store'
+import router from './router'
+import {Message} from 'element-ui';
+import CONFIG from './config'
+
+const baseURL = CONFIG.host+'admin'
+//创建一个axios实例
+const instance = axios.create({
+  baseURL,
+  timeout: 3000,
+  headers: {'Content-Type': 'application/json;charset=UTF-8'}
+});
+
+// 添加请求拦截器,请求数据前做些什么
+instance.interceptors.request.use(
+  config => {
+    // 在发送请求之前1做些什么：每次发送请求之前检测都vuex存有token,那么都要放在请求头发送给服务器
+    if (store.state.token) {
+      config.headers.Authorization = `token ${store.state.token}`;
+    }
+    return config;
+  },
+  err => {
+    // 对请求错误做些什么
+    return Promise.reject(err);
+  }
+);
+// 添加响应拦截器 接收数据前做些什么
+instance.interceptors.response.use(
+  // status=2xx的 正确的的走这里
+  res => {
+
+    if (res.data.code === -1&&res.data.data.msg) {
+      Message.error(res.data.data.msg)
+    } else {
+      if (res.data.data.msg) {
+        Message({
+          message: res.data.data.msg,
+          type: 'success'
+        });
+      }
+
+      return res.data.data; //返回给的res的数据,默认返回自定义的data里的数据   “axios.('')then(res=>{})”
+
+    }
+
+  },
+  //检测status默认除了2XX之外的都是错误的，就会走这里
+  error => {
+    if (error.response) {
+
+      switch (error.response.status) {
+        case 401:
+          Message.error('登陆过期，请重新登陆' )
+          store.dispatch('UserLogout'); //可能是token过期，清除它
+          router.replace({ //跳转到登录页面
+            path: '/login',
+            query: {redirect: router.currentRoute.fullPath} // 将跳转的路由path作为参数，登录成功后跳转到该路由
+          });
+          break
+        case 404:
+          Message.error('404错误，请检查网络' + error.response.statusText)
+          break
+
+        default:
+          Message.error('错误:' + error.response.statusText)
+
+
+      }
+    }
+    return Promise.reject(error.response);
+  }
+);
+
+export default {
+  instance,
+  //用户注册
+  userRegister(data) {
+    return instance.post('/register', data);
+  },
+  //用户登录
+  userLogin(para) {
+    return instance.post('/login', para);
+  },
+  //获取用户
+  getUser() {
+    return instance.get('/user');
+  },
+  //删除用户
+  delUser(data) {
+    return instance.post('/delUser', data);
+  },
+
+//获得商品列表
+  getGoodss(para) {
+    return instance.get('/goodss', {params: para})
+  },
+  getGoodsById(id){
+    return instance.get('/getGoodsById/'+id)
+  },
+
+  addGoods(para) {
+    return instance.post('/addGoods', para)//post不用params=
+  },
+  editGoods(para) {
+    return instance.post('/editGoods', para)
+  },
+  delGoods(para) {
+    return instance.post('/delGoods', para)//post不用params=
+  },
+  delGoodss(para) {
+    return instance.post('/delGoodss', para)//post不用params=
+  },
+
+  //获得文章列表
+
+  getArticles(para) {
+    return instance.get('/getArticles', {params: para})
+  },
+  getArticleById(id){
+    return instance.get('/getArticleById/'+id)
+  },
+
+  addArticle(para) {
+    return instance.post('/addArticle', para)//post不用params=
+  },
+  editArticle(para) {
+    return instance.post('/editArticle', para)
+  },
+  delArticle(para) {
+    return instance.post('/delArticle', para)//post不用params=
+  },
+  delArticles(para) {
+    return instance.post('/delArticles', para)//post不用params=
+  },
+
+  //component
+
+  getComponents(para) {
+    return instance.get('/getComponents', {params: para})
+  },
+
+  addcomponent(para) {
+    return instance.post('/addcomponent', para)//post不用params=
+  },
+  editcomponent(para) {
+    return instance.post('/editcomponent', para)
+  },
+  delcomponent(para) {
+    return instance.post('/delcomponent', para)//post不用params=
+  },
+
+
+//上传接口
+  upload(para) {
+    let config = {
+      headers: {'Content-Type': 'multipart/form-data'}
+    }; //添加请求头
+    return instance.post('/upload', para, config)
+
+  },
+
+  carousel(para){
+    return instance.post("/carousel",para)
+  }
+
+
+
+
+}
+

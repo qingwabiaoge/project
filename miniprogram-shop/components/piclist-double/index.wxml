@@ -1,0 +1,20 @@
+<template name="piclist-double" >
+
+<view class="flex flex-between flex-wrap">
+    <navigator wx:for="{{goodss}}" 
+               wx:key="{{item.name}}"
+               url="/pages/goods/index?id={{item._id}}"
+               class="margin-bottom-small"
+               style="width:370rpx"
+                >
+      <image mode="widthFix" src="{{item.fileList[0].url}}"></image>
+      <view class="padding-small">
+          <text>
+          <text class='text-primary text-large '>¥{{item.price}} </text>
+              {{item.name}}
+          </text>
+      </view>
+    </navigator>
+</view>
+
+</template>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wux-spin": "../../dist/spin/index",
+    "wux-divider": "../../dist/divider/index"
+  }
+}

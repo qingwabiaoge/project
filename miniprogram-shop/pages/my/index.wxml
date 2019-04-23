@@ -1,0 +1,62 @@
+<!--wx:if="{{!hasUserInfo && canIUse}}"-->
+
+<view class="container background-primary">
+    <view class="userinfo">
+
+        <button wx:if="{{!userInfo}}"
+                open-type="getUserInfo"
+                bindgetuserinfo="login"
+                class='wx-button-reset background-primary padding-top-medium padding-bottom'
+        >
+            <image class="userinfo-avatar" src="/assets/images/unlogin.jpg" mode="cover"></image>
+
+            <view class="userinfo-nickname margin-top text-white text-medium"> 点我登陆</view>
+        </button>
+        <button
+                wx:else
+              
+                class='wx-button-reset background-primary padding-top-medium padding-bottom'
+        >
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+
+            <view class="userinfo-nickname margin-top text-white text-medium"> {{userInfo.nickName}}</view>
+        </button>
+
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>
+</view>
+
+
+<wux-cell-group>
+    <wux-cell title="我的购物车" is-link url="/pages/cart/index"></wux-cell>
+    <wux-cell title="我的订单" is-link></wux-cell>
+
+    <wux-cell title="收货地址" is-link url="/pages/address/index"></wux-cell>
+
+</wux-cell-group>
+
+<view class="margin-top-small">
+    <wux-cell-group>
+        <wux-cell title="我的代金券" is-link></wux-cell>
+
+    </wux-cell-group>
+
+</view>
+<view class="margin-top-small">
+    <wux-cell-group>
+        <wux-cell title="我的返利" is-link></wux-cell>
+        <wux-cell title="我的团队" is-link></wux-cell>
+    </wux-cell-group>
+
+</view>
+
+<view class="margin-top-small">
+    <wux-cell title="联系客服" is-link open-type="contact" bind:contact="onContact"></wux-cell>
+</view>
+
+<button bindtap="order">
+    提交订单
+
+</button>

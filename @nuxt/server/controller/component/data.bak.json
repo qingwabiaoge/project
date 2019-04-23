@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "children": [
+      {
+        "id": 2,
+        "title": "",
+        "image": "/upload/1553806979652.jpeg",
+        "href": "/produces/朴素?page=1"
+      }
+    ],
+    "componentName": "首页全屏幻灯片",
+    "key": "carouselFull",
+    "cover": "/upload/1552439652945.jpeg",
+    "image": "",
+    "href": "",
+    "type": "component",
+    "title": "首页全屏幻灯片"
+  },
+  {
+    "id": 3,
+    "children": [
+      {
+        "id": 4,
+        "image": "/upload/1553807340399.jpeg",
+        "title": "Fast fashion",
+        "subtitle": "Artificial nails art exhibition",
+        "button": "more+",
+        "href": "/produces/快时尚?page=1",
+        "isCategory": true,
+        "etitle": "Fast fashion"
+      },
+      {
+        "id": 5,
+        "image": "/upload/1553807345819.jpeg",
+        "title": "Heavy embllished",
+        "subtitle": "Artificial nails art exhibition",
+        "button": "more+",
+        "href": "/produces/奢华?page=1",
+        "isCategory": true,
+        "etitle": "Heavy embllished"
+      },
+      {
+        "id": 6,
+        "image": "/upload/1553807466602.jpeg",
+        "title": "SOLID COLORS",
+        "subtitle": "Artificial nails art exhibition",
+        "button": "more+",
+        "href": "/produces/朴素?page=1",
+        "isCategory": true,
+        "etitle": "SOLID COLORS"
+      },
+      {
+        "id": 7,
+        "button": "more+",
+        "href": "/produces/",
+        "image": "/upload/1553807523599.jpeg",
+        "subtitle": "",
+        "isCategory": true,
+        "title": "more"
+      }
+    ],
+    "cover": "/upload/1551967093629.jpeg",
+    "componentName": "PRODUCES",
+    "key": "goods",
+    "href": "/produces",
+    "type": "component",
+    "content": "",
+    "image": "",
+    "subtitle": "产品",
+    "title": "PRODUCES",
+    "categoryImage": "/upload/1552418777779.jpeg",
+    "isCategory": true,
+    "etitle": "produces"
+  },
+  {
+    "id": 16,
+    "children": [
+      {
+        "id": 17,
+        "image": "/upload/1553807340399.jpeg",
+        "title": "公司新闻",
+        "subtitle": "Artificial nails art exhibition",
+        "button": "more+",
+        "href": "/produces/快时尚?page=1",
+        "isCategory": true,
+        "etitle": "Fast fashion"
+      },
+      {
+        "id": 18,
+        "image": "/upload/1553807345819.jpeg",
+        "title": "行业新闻",
+        "subtitle": "Artificial nails art exhibition",
+        "button": "more+",
+        "href": "/produces/奢华?page=1",
+        "isCategory": true,
+        "etitle": "Heavy embllished"
+      }
+    ],
+    "cover": "/upload/1551967093629.jpeg",
+    "componentName": "PRODUCES",
+    "key": "article",
+    "href": "/produces",
+    "type": "component",
+    "content": "",
+    "image": "",
+    "subtitle": "new",
+    "title": "新闻",
+    "categoryImage": "/upload/1552418777779.jpeg",
+    "isCategory": true,
+    "etitle": "new"
+  },
+  {
+    "id": 8,
+    "children": [
+    ],
+    "cover": "/upload/1552053092820.jpeg",
+    "componentName": "SERVICE",
+    "key": "pictextOne",
+    "image": "/upload/1552053258143.jpeg",
+    "title": "SERVICE",
+    "subtitle": "Chapter One is an intr oduction",
+    "info": "BonnieNa",
+    "description": "Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. ",
+    "button": "more+",
+    "href": "/service",
+    "type": "component",
+    "content": "<p><br></p><p>        </p><p>             Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different keyets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.</p>",
+    "isCategory": true,
+    "etitle": "service"
+  },
+  {
+    "id": 9,
+    "children": [
+      {
+        "id": 10,
+        "title": "2005",
+        "info": "",
+        "description": "2005....."
+      },
+      {
+        "id": 11,
+        "title": "2006",
+        "info": "",
+        "description": "2005....."
+      }
+    ],
+    "key": "pictextHistory",
+    "componentName": "公司历史",
+    "image": "",
+    "backgroundImage": "/upload/1552232059752.jpeg",
+    "href": "#",
+    "type": "component",
+    "isCategory": false
+  },
+  {
+    "id": 12,
+    "type": "component",
+    "href": "/simple/oem",
+    "children": [
+    ],
+    "componentName": "OEM",
+    "key": "oem",
+    "image": "/upload/1553811130978.jpeg",
+    "content": "",
+    "isCategory": true,
+    "title": "OEM"
+  },
+  {
+    "id": 13,
+    "type": "component",
+    "href": "/trend",
+    "children": [
+    ],
+    "componentName": "潮流",
+    "key": "trend",
+    "content": "<p>........</p>",
+    "isCategory": true,
+    "title": "TREND"
+  },
+  {
+    "id": 14,
+    "type": "component",
+    "href": "/brand",
+    "children": [
+    ],
+    "componentName": "品牌",
+    "key": "brand",
+    "title": "SENBOMA",
+    "isCategory": true,
+    "content": "",
+    "cover": "",
+    "image": "/upload/1553806929513.jpeg",
+    "description": "Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different keyets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.",
+    "etitle": "",
+    "info": ""
+  },
+  {
+    "id": 15,
+    "type": "component",
+    "href": "/contact",
+    "children": [
+    ],
+    "image": "/upload/1552044605214.jpeg",
+    "map": "/upload/1552370299520.jpeg",
+    "componentName": "联系我们",
+    "title": "contact",
+    "etitle": "",
+    "tel": "+86 20-22878858",
+    "qq": "2224501370",
+    "email": "2224501370@qq.com",
+    "address": "No.4, Road 1,Chongkou Industrial Region,Dashi Town,Panyu District,Guangzhou,China",
+    "key": "contact",
+    "isCategory": true,
+    "fax": "+86 20-22878859",
+    "content": "<p class=\"ql-align-center\"><img src=\"/upload/1553810095783.jpeg\"></p>"
+  }
+]

@@ -1,0 +1,45 @@
+// Name:            Placeholder
+// Description:     Component to create placeholder boxes
+//
+// Component:       `placeholder`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@placeholder-margin-vertical:                   @global-margin;
+@placeholder-padding-vertical:                  @global-padding;
+@placeholder-padding-horizontal:                @global-padding;
+@placeholder-background:                        @global-background-muted;
+
+
+/* ========================================================================
+   Component: Placeholder
+ ========================================================================== */
+
+.placeholder {
+    margin-bottom: @placeholder-margin-vertical;
+    padding: @placeholder-padding-vertical @placeholder-padding-horizontal;
+    background: @placeholder-background;
+    .hook-placeholder;
+}
+
+/* Add margin if adjacent element */
+* + .placeholder { margin-top: @placeholder-margin-vertical; }
+
+/*
+ * Remove margin from the last-child
+ */
+
+.placeholder > :last-child { margin-bottom: 0; }
+
+
+// Hooks
+// ========================================================================
+
+.hook-placeholder-misc;
+
+.hook-placeholder() {}
+.hook-placeholder-misc() {}

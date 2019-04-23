@@ -1,0 +1,31 @@
+
+
+
+    <navigator wx:for="{{goodss}}"
+              wx:key="{{item.name}}"
+              url="/pages/goods/index?id={{item._id}}"
+              class='flex flex-around flex-middle background-default padding-small  margin-bottom'>
+
+      <view style='width:180rpx; padding-bottom:0' class='padding-right-small' >
+        <image mode="widthFix" src="{{item.fileList[0].url}}" style=''></image>
+      </view>
+
+      <view style="width:180rpx">
+        <text class='text-primary text-large padding-bottom-small'>¥{{item.truePrice}} \n</text> {{item.name}}
+      </view>
+    </navigator>
+
+  <wux-divider dashed wx:if="{{noMore}}">
+            <view class="loadmore">
+               
+                <text class="text"> 没有更多了</text>
+            </view>
+        </wux-divider>
+      <wux-divider dashed  wx:else>
+            <view class="loadmore">
+                 <wux-spin wux-class="spin" size="small" />
+                <text class="text">  正在加载</text>
+            </view>
+        </wux-divider>
+
+

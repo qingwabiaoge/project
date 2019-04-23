@@ -1,0 +1,92 @@
+<template>
+  <div id="login" v-show="!$store.state.token">
+    <el-card class=" uk-padding-left-lg uk-padding-right-lg uk-box-shadow-medium uk-box-shadow-hover-large">
+      <div slot="header">
+        <img class="logo" src="@/assets/images/logo.jpg" alt="">
+      </div>
+      <el-form :model="loginForm" status-icon :rules="loginFormRules" ref="loginForm" label-width="100px"
+               class="demo-ruleForm"
+      >
+        <el-form-item label="用户名：" prop="username">
+          <el-input type="userword" v-model="loginForm.username" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="密   码：" prop="password">
+          <el-input type="password" v-model="loginForm.password" auto-complete="off"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button type="primary" @click="submitForm('loginForm')">提交</el-button>
+          <el-button @click="resetForm('loginForm')">重置</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
+  </div>
+</template>
+
+
+<script>
+
+  import CONFIG from '@/config'
+
+  export default {
+    data() {
+
+      return {
+        loginForm: {},
+        loginFormRules: CONFIG.rules
+      };
+    },
+    props: {value: Boolean},
+
+    methods: {
+      //提交表单
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) { //验证通过
+            this.$store.dispatch('getToken', this.loginForm)
+              .then((token) => {
+                if (!token) {
+                  return false
+                } else {
+                  const redirectUrl = decodeURIComponent(this.$route.path);
+                  this.$router.push({
+                    path: redirectUrl
+                  });
+                }
+
+              })
+
+          }
+        });
+      },
+      //重置表单
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
+      }
+    },
+    mounted() {
+
+      // document.getElementById('login').style.height = document.documentElement.clientHeight + 'px'
+
+    }
+
+  };
+</script>
+
+
+<style lang="less">
+
+
+  #login {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; /*主轴方向*/
+    flex-wrap: nowrap; /*是否换行*/
+    justify-content: center; /*主轴方向排序*/
+    align-items: center; /*主轴垂直方向排序*/
+  }
+</style>

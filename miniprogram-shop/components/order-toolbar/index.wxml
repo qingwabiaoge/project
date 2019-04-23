@@ -1,0 +1,29 @@
+
+    <view class="buy-toolbar">
+        <view class="item item-width-sm ">
+         
+            <navigator url="/pages/cart/index" open-type="navigateTo" >
+
+                <i class="icon icon-gouwuche "></i>
+                <text> \n 购物车
+                </text>
+            </navigator>
+            <wux-badge style=" align-self: flex-start; " count="{{allGoodsNumber}}" />
+        </view>
+        <view class="item item-width-sm border-left ">
+            <button class="wx-button-reset" open-type="contact">
+                <i class="icon icon-weixin "></i>
+                <text> \n 客服
+                </text>
+            </button>
+        </view>
+        <view class="item border-left text-medium" bindtap="addCart" >
+
+            添加购物车
+        </view>
+
+        <view class="item background-primary text-white text-medium" bindtap="addCartAndBuy">
+            立即购买
+        </view>
+
+    </view>

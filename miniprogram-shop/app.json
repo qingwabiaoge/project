@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/index",
+    "pages/addAddress/index",
+    "pages/address/index",
+    "pages/my/index",
+    "pages/category/index",
+    "pages/goods/index",
+    "pages/brand/index",
+    "pages/action/index",
+    "pages/order/index",
+    "pages/search/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#e50000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/shop.png",
+        "selectedIconPath": "assets/images/shop_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "assets/images/sort.png",
+        "selectedIconPath": "assets/images/sort_active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/action/index",
+        "iconPath": "assets/images/action.png",
+        "selectedIconPath": "assets/images/action_active.png",
+        "text": "优惠"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "assets/images/my.png",
+        "selectedIconPath": "assets/images/my_active.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

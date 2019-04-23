@@ -1,0 +1,30 @@
+<template>
+  <div class="  flex background-default"
+       style="padding: 24px 0 24px 30px;"
+  >
+    <div class="border-circle background-primary flex flex-center flex-middle"
+         style="width: 45px; height: 45px ;padding:10px; color: white; margin-right: 8px">
+      <svg aria-hidden="true" style="width: 100%; height: 100%">
+        <use :xlink:href="'#icon-'+icon"></use>
+      </svg>
+    </div>
+    <div>
+      <h3 style="font-size: 12px">{{title}}</h3>
+      <h2 class="color-primary" style="font-size:18px ">{{subTitle}}</h2>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    props: {
+      icon: String,
+      title: String,
+      subTitle: String
+    }
+  }
+
+</script>
+<style lang="less" module>
+
+
+</style>

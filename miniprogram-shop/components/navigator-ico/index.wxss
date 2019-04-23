@@ -1,0 +1,21 @@
+
+ .flex-container {
+        display: flex;
+        flex-direction:row;            /*主轴方向*/
+        flex-wrap: nowrap;            /*是否换行*/
+        justify-content: flex-start;   /*主轴方向排序*/
+        align-items: center;              /*主轴垂直方向排序*/
+    }
+    .flex-container>navigator{
+
+     
+        width: 1%;
+        /*flex-grow ，item大小加一下不够100% 为1放大填满 为0不放大!*/
+        flex-grow:1 ;
+
+        /*flex-shrink窗口超过100%  为1缩小填满，为0不缩小*/
+        /*flex-shrink:1*/
+       
+     
+    }
+

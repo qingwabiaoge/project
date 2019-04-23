@@ -1,0 +1,52 @@
+// Name:            Inverse
+// Description:     Inverse component style for light or dark backgrounds
+//
+// Component:       `light`
+//                  `dark`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@inverse-global-color-mode:                     light;
+
+@inverse-global-color:                          fade(@global-color-inverse, 70%);
+@inverse-global-emphasis-color:                 @global-color-inverse;
+@inverse-global-muted-color:                    fade(@global-color-inverse, 50%);
+@inverse-global-inverse-color:                  @global-color;
+
+@inverse-global-primary-background:             @global-color-inverse;
+@inverse-global-muted-background:               fade(@global-color-inverse, 10%);
+
+@inverse-global-border:                         fade(@global-color-inverse, 20%);
+
+
+/* ========================================================================
+   Component: Inverse
+ ========================================================================== */
+
+/*
+ * Implemented class depends on the general theme color
+ * `light` is for light colors on dark backgrounds
+ * `dark` is or dark colors on light backgrounds
+ */
+
+.light when (@inverse-global-color-mode = light) {
+
+    .hook-inverse;
+
+}
+
+.dark when (@inverse-global-color-mode = dark) {
+
+    .hook-inverse;
+
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-inverse() {}

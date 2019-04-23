@@ -1,0 +1,10 @@
+<import src="/components/piclist-double/index"/>
+<wux-search-bar clear  value="{{ name }}"
+                controlled placeholder="搜索"
+                bind:change="onChange"
+                bind:confirm="onConfirm"
+                bind:clear="onClear"
+                bind:blur="onBlur"
+
+/>
+<template is="piclist-double" data="{{goodss}}"></template>

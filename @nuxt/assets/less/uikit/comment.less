@@ -1,0 +1,173 @@
+// Name:            Comment
+// Description:     Component to create nested comments
+//
+// Component:       `comment`
+//
+// Sub-objects:     `comment-body`
+//                  `comment-header`
+//                  `comment-title`
+//                  `comment-meta`
+//                  `comment-avatar`
+//                  `comment-list`
+//
+// Modifier:        `comment-primary`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@comment-header-margin-bottom:                  @global-margin;
+
+@comment-title-font-size:                       @global-font-size-h4;
+@comment-title-line-height:                     1.4;
+
+@comment-meta-font-size:                        @global-font-size-h6;
+@comment-meta-line-height:                      1.4;
+@comment-meta-color:                            @global-background-muted;
+
+@comment-list-margin-top:                       @global-margin-larger;
+@comment-list-padding-left:                     30px;
+@comment-list-padding-left-m:                   100px;
+
+
+/* ========================================================================
+   Component: Comment
+ ========================================================================== */
+
+.comment {
+    .hook-comment;
+}
+
+
+/* Sections
+ ========================================================================== */
+
+.comment-body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    .hook-comment-body;
+}
+
+.comment-header {
+    margin-bottom: @comment-header-margin-bottom;
+    .hook-comment-header;
+}
+
+/*
+ * Micro clearfix
+ */
+
+.comment-body::before,
+.comment-body::after,
+.comment-header::before,
+.comment-header::after {
+    content: "";
+    display: table;
+}
+
+.comment-body::after,
+.comment-header::after { clear: both; }
+
+/*
+ * Remove margin from the last-child
+ */
+
+.comment-body > :last-child,
+.comment-header > :last-child { margin-bottom: 0; }
+
+
+/* Title
+ ========================================================================== */
+
+.comment-title {
+    font-size: @comment-title-font-size;
+    line-height: @comment-title-line-height;
+    .hook-comment-title;
+}
+
+
+/* Meta
+ ========================================================================== */
+
+.comment-meta {
+    font-size: @comment-meta-font-size;
+    line-height: @comment-meta-line-height;
+    color: @comment-meta-color;
+    .hook-comment-meta;
+}
+
+
+/* Avatar
+ ========================================================================== */
+
+.comment-avatar {
+    .hook-comment-avatar;
+}
+
+
+/* List
+ ========================================================================== */
+
+.comment-list {
+    padding: 0;
+    list-style: none;
+}
+
+/* Adjacent siblings */
+.comment-list > :nth-child(n+2) {
+    margin-top: @comment-list-margin-top;
+    .hook-comment-list-adjacent;
+}
+
+/*
+ * Sublists
+ * Note: General sibling selector allows reply block between comment and sublist
+ */
+
+.comment-list .comment ~ ul {
+    margin: @comment-list-margin-top 0 0 0;
+    padding-left: @comment-list-padding-left;
+    list-style: none;
+    .hook-comment-list-sub;
+}
+
+/* Tablet and bigger */
+@media (min-width: @global-breakpoint-tablet) {
+
+    .comment-list .comment ~ ul { padding-left: @comment-list-padding-left-m; }
+
+}
+
+/* Adjacent siblings */
+.comment-list .comment ~ ul > :nth-child(n+2) {
+    margin-top: @comment-list-margin-top;
+    .hook-comment-list-sub-adjacent;
+}
+
+
+/* Style modifier
+ ========================================================================== */
+
+.comment-primary {
+    .hook-comment-primary;
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-comment-misc;
+
+.hook-comment() {}
+.hook-comment-body() {}
+.hook-comment-header() {}
+.hook-comment-title() {}
+.hook-comment-meta() {}
+.hook-comment-avatar() {}
+.hook-comment-list-adjacent() {}
+.hook-comment-list-sub() {}
+.hook-comment-list-sub-adjacent() {}
+.hook-comment-primary() {}
+.hook-comment-misc() {}

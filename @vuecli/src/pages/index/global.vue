@@ -1,0 +1,49 @@
+<template>
+  <div>
+    <el-breadcrumb separator=">" class="border-bottom-small uk-padding-bottom uk-margin-medium-bottom">
+      <el-breadcrumb-item>首页</el-breadcrumb-item>
+      <el-breadcrumb-item>网站配置</el-breadcrumb-item>
+    </el-breadcrumb>
+
+    <el-button type="primary" @click="get">编辑全局信息</el-button>
+    <uniform ref="uniform" :data="uniformData" @submit='submit'></uniform>
+
+  </div>
+
+</template>
+<script>
+
+
+  export default {
+
+    data() {
+      return {
+        uniformData: {},
+        global: {},
+      };
+    },
+
+    methods: {
+      async submit() {
+        this.$store.dispatch('global/patch',this.uniformData)
+        this.$refs.uniform.visible = false
+      },
+
+      get: function () {
+        this.uniformData = Object.assign({}, this.$store.state.global)
+        this.$refs.uniform.visible = true
+      },
+
+    }
+    ,
+    mounted() {
+      this.get()
+    }
+  }
+
+
+</script>
+<style lang="less" scoped>
+
+
+</style>

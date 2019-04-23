@@ -1,0 +1,54 @@
+// Name:            Align
+// Description:     Utilities to align embedded content
+//
+// Component:       `align-left-*`
+//                  `align-right-*`
+//                  `align-center`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@align-margin-horizontal:                       0;
+@align-margin-vertical:                         @global-gutter;
+
+@align-margin-horizontal-l:                     @global-medium-gutter;
+
+
+/* ========================================================================
+   Component: Align
+ ========================================================================== */
+
+
+
+.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+ * Left/Right
+ */
+
+.align-left {
+    margin-top: 0;
+    margin-right: @align-margin-horizontal;
+    float: left;
+}
+
+.align-right {
+    margin-top: 0;
+    margin-left: @align-margin-horizontal;
+    float: right;
+}
+
+
+
+// Hooks
+// ========================================================================
+
+.hook-align-misc;
+
+.hook-align-misc() {}

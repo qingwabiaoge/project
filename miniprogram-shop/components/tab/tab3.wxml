@@ -1,0 +1,3 @@
+<template name="tab3" data="{{goods}}">
+评论
+</template>
