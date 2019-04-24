@@ -6,7 +6,7 @@ module.exports = function(user_id,jwtString){
     const token = jwt.sign({
         user_id: user_id
     }, CONFIG.adminJwtString, {
-        expiresIn: '3600s'
+        expiresIn: '360000s'
     });
     return token;
 };

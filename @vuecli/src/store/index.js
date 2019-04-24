@@ -5,7 +5,7 @@ import global from './global'
 import components from './components'
 import token from './token'
 import rules from './rules'
-import tool from '@/tool'
+import tool from '@/store/tool'
 Vue.use(Vuex);
 
 

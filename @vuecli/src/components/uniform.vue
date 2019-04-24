@@ -76,7 +76,9 @@
       <h4 v-if="/(contact|联系)/i.test(data.title)">联系方式</h4>
 
       <section v-if="/(contact|联系)/i.test(data.title)">
+
         <el-form-item label="电话"
+                      :label-width="formLabelWidth"
                       prop="tel">
           <!--data.name 数据-->
           <el-input v-model="data.tel"
@@ -85,6 +87,7 @@
         </el-form-item>
 
         <el-form-item label=" 公众号二维码"
+                      :label-width="formLabelWidth"
                       prop="qcode"
         >
           <upload v-model="data.qcode"
@@ -94,21 +97,26 @@
         </el-form-item>
 
         <el-form-item label="QQ"
+                      :label-width="formLabelWidth"
                       prop="qq">
           <!--data.name 数据-->
           <el-input v-model="data.qq"
                     placeholder="请输入qq号码">
           </el-input>
         </el-form-item>
-        <el-form-item label="邮箱">
+
+        <el-form-item label="邮箱"
+                      :label-width="formLabelWidth">
           <!--data.name 数据-->
           <el-input v-model="data.email"
+                    :label-width="formLabelWidth"
                     placeholder="请输入qq号码">
           </el-input>
         </el-form-item>
 
 
         <el-form-item label="地址"
+                      :label-width="formLabelWidth"
                       prop="address">
           <!--data.name 数据-->
           <el-input v-model="data.address"
@@ -118,6 +126,7 @@
 
 
         <el-form-item label="地图"
+                      :label-width="formLabelWidth"
         >
 
           <upload v-model="data.map"
@@ -284,8 +293,8 @@
         </el-form-item>
       </section>
 
-      <h4> 开关</h4>
-      <section>
+      <h4 v-if="data.type!=='global'"> 开关</h4>
+      <section v-if="data.type!=='global'">
 
         <el-form-item v-if="data.type==='component'">
           <el-switch
@@ -308,7 +317,7 @@
           </el-switch>
         </el-form-item>
 
-        <el-form-item>
+        <el-form-item >
           <el-switch
             v-model="data.publish"
             active-text="发布"
@@ -340,17 +349,33 @@
 
       <section v-if="data.type==='global'">
 
+        <el-form-item label="主机地址"   :label-width="formLabelWidth">
+          <el-input type="text"
+                    v-model.number="data.host"
+                    auto-complete="off">
 
-        <el-form-item label="产品分页">
-          <el-input type="number" v-model.number="data.goodsPagerSize" auto-complete="off"></el-input>
+          </el-input>
+        </el-form-item>
+
+        <el-form-item label="产品分页"   :label-width="formLabelWidth">
+          <el-input type="number"
+                    v-model.number="data.goodsPagerSize"
+                    auto-complete="off">
+
+          </el-input>
         </el-form-item>
 
 
-        <el-form-item label="新闻分页">
-          <el-input type="number" v-model.number="data.newsPagerSize" auto-complete="off"></el-input>
+        <el-form-item label="新闻分页"  :label-width="formLabelWidth">
+          <el-input type="number"
+                    v-model.number="data.newsPagerSize"
+                    auto-complete="off">
+
+          </el-input>
         </el-form-item>
 
         <el-form-item label="备案号"
+                      :label-width="formLabelWidth"
                       prop="beian">
           <!--global.name 数据-->
           <el-input v-model="data.beian"

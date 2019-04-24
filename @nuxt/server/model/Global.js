@@ -20,7 +20,7 @@ const globalSchema = mongoose.Schema({
   goodsPagerSize:Number,
   newsPagerSize:Number,
 
-
+  host:String,
   beian: String,
   background: String,
   background2: String,

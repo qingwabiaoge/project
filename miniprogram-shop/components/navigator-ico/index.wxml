@@ -1,19 +1,20 @@
 <template name="navigator-ico">
-<scroll-view  scroll-x>
+    <scroll-view scroll-x>
 
-  <view class='flex-container  padding-top-small padding-bottom-small background-default text-center' style='width:1400rpx'>
- 
-    <navigator  wx:for="{{icoNav}}"
-               url="/pages/category/index?category={{item.value}}"
-              open-type="reLaunch"
-               hover-class="link-hover">
-      <i  class=" icon icon-medium icon-{{item.ico}}"></i>
+        <view class='flex-container  padding-top-small padding-bottom-small background-default text-center'
+              style='width:1400rpx'>
 
-      <view > {{item.value}}</view>
-    </navigator>
+            <navigator wx:for="{{icoNav}}"
+                       url="/pages/category/index?category={{item.value}}"
+                       open-type="reLaunch"
+                       hover-class="link-hover">
+                <image src="{{item.icon}}" alt=""></image>
+
+                <view> {{item.title}}</view>
+            </navigator>
 
 
-  </view>
+        </view>
 
-</scroll-view>
+    </scroll-view>
 </template>

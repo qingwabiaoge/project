@@ -14,7 +14,7 @@ Page({
         //搜索框的默认值
         name: '',
         //导航数据
-        icoNav: app.goodsCategory,
+        icoNav:'',
         //热卖商品列表
         goodss: []
 
@@ -46,8 +46,9 @@ Page({
         get('goodss', {flag: true}).then(
             ({goodss}) => {
 
-//设置data对象
+
                 this.setData({goodss})
+               this.setData({icoNav:app.goodsCategory})
 
             }
         )

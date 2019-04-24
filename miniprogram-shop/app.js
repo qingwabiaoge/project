@@ -1,11 +1,13 @@
 //app.js
-import {get} from './util.js'
+import {get, addImageHttp} from './util.js'
+import config from './config'
 
 require('./libs/mixin.js')
 
+
 const regeneratorRuntime = require('./libs/runtime')
 App({
-
+    host: '/',
     userInfo: null,
     components: {},
     categorys: [],
@@ -14,22 +16,23 @@ App({
 
     onLaunch: async function () {
         //獲得原始的components
-        const {components} = await get(`components`)   //按照键值名分裂数组
-        const _components = components
+        let {components} = await get(`components`)
 
+        console.log(components)
         //獲得components
-        _components.forEach((item, index, self) => {
+        components.forEach((item, index, self) => {
             this.components[item.key] = item
         })
 
 
-        this.categorys = _components.filter(item => item.isCategory === true)
+        this.categorys = components.filter(item => item.isCategory === true)
 
 
         this.goodsCategory = this.components.goods.children
 
 
         this.articleCategory = this.components.article.children
+
 
         console.log('app', this)
 
