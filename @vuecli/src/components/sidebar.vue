@@ -97,9 +97,9 @@
     name: "sidebar",
     data() {
       return {
-        goodsCategory: this.$store.getters['oricomponents/goodsCategory'],
+        goodsCategory: this.$store.getters['components/goodsCategory'],
         isCollapse: true,
-        articleCategory: this.$store.getters['oricomponents/articleCategory']
+        articleCategory: this.$store.getters['components/articleCategory']
 
       };
     },

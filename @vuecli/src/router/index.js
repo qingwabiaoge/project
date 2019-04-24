@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../store'
-import cs2 from '../pages/index/cs2'
+
 
 Vue.use(Router)
 
@@ -38,22 +38,7 @@ const router = new Router({
             //requiresAuth: true
           }
         },
-        {
-          path: 'cs/',
-          name: 'cs',
-          component: () => import('../pages/index/cs'),
-          meta: {
-            //requiresAuth: true
-          }
-        },
-        {
-          path: 'cs2/',
-          name: 'cs2',
-          component: cs2,
-          meta: {
-            //requiresAuth: true
-          }
-        },
+
         {
 
           path: 'articles/:cid',

@@ -1,22 +1,23 @@
 export default {
+  namespaced: true,
   state: {},
   mutations: {
 
-    setGlobal(state, global) {
+    set(state, global) {
       Object.assign(state, global)
     }
 
   }
   ,
   actions: {
-    async getGlobal({commit}) {
+    async get({commit}) {
       const {global} = await this.$axios.get('/global')
-      commit('setGlobal', global)
+      commit('set', global)
 
 
     },
-    async patchGlobal({commit, state}, data) {
-      commit('setGlobal', data)
+    async patch({commit, state}, data) {
+      commit('set', data)
       this.$axios.patch('/global', state)
     }
   }

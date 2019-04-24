@@ -43,7 +43,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) { //验证通过
-            this.$store.dispatch('getToken', this.loginForm)
+            this.$store.dispatch('token/get', this.loginForm)
              .then((token) => {
                   if (!token) {
                     return false

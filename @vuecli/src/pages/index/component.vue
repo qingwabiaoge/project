@@ -46,7 +46,7 @@
   export default {
     data() {
       return {
-        treeData: Object.assign([], this.$store.state.oricomponents),
+        treeData: Object.assign([], this.$store.state.components),
         id: 1000,
         uniformData: {},
       }

@@ -14,7 +14,7 @@ Page({
         //搜索框的默认值
         name: '',
         //导航数据
-        icoNav: CONFIG.goodsCategory,
+        icoNav: app.goodsCategory,
         //热卖商品列表
         goodss: []
 
@@ -30,7 +30,7 @@ Page({
 
     },
     onFocus(e) {
-        console.log(e)
+
         wx.navigateTo({url:'/pages/search/index'})
     },
     onConfirm() {
@@ -52,8 +52,6 @@ Page({
             }
         )
 
-
-
     }
     ,
 
@@ -61,7 +59,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-        console.log(this.data)
+
     },
 
     /**

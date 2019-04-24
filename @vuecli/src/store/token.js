@@ -10,9 +10,10 @@ import router from '../router'
 //如果token的有效期比较短，直接有sessionStorage比较好。
 
 export default {
+  namespaced: true,
   state: {token: window.sessionStorage.getItem('token')||''},
   mutations: {
-    setToken: (state, token) => {
+    set: (state, token) => {
       //更改token的值
       // state.token = data;
       state.token = token
@@ -20,7 +21,7 @@ export default {
       // window.sessionStorage.setItem('user', JSON.stringify(user))
 
     },
-    clearToken: (state) => {
+    remove: (state) => {
       //登出的时候要清除token
       state.token = '';
       window.sessionStorage.removeItem('token');
@@ -30,9 +31,9 @@ export default {
   },
 
   actions: {
-    async getToken({commit}, para) {
+    async get({commit}, para) {
       const {token} = await this.$axios.post('/adminLogin', para);
-      commit('setToken', token);
+      commit('set', token);
       return token //为了login.vue中跳转redirectUrl的异步,形成promise链
     },
   }

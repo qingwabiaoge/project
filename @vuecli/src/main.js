@@ -23,11 +23,8 @@ import './assets/less/all/index.css'
 Vue.prototype.$axios = axios;
 
 store.$axios = axios
-
-
-
- store.dispatch('getGlobal')
- store.dispatch('oricomponents/get')
+store.dispatch('global/get')
+store.dispatch('components/get')
 
 
 

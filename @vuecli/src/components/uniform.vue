@@ -11,10 +11,18 @@
     <el-form :model="data" :rules="$store.state.rules" ref="form">
       <h4>基本字段:</h4>
       <section>
+
         <el-form-item label="标题" :label-width="formLabelWidth" prop="title">
           <el-input type="text" v-model="data.title" auto-complete="off"></el-input>
         </el-form-item>
 
+        <el-form-item label="key"
+                      v-if="data.type==='component'"
+                      :label-width="formLabelWidth"
+                      prop="key"
+                      class="test">
+          <el-input type="text" v-model="data.key" auto-complete="off"></el-input>
+        </el-form-item>
 
         <el-form-item
           v-if="data.type==='goods'||data.type==='article'"
@@ -60,6 +68,7 @@
                     auto-complete="off">
 
           </el-input>
+
         </el-form-item>
 
       </section>
@@ -214,7 +223,7 @@
 
         <el-form-item v-else
                       :label="data.type==='global'?'LOGO':'缩略图'"
-                     >
+        >
 
           <upload v-model="data.image">
 
@@ -223,7 +232,7 @@
 
         <el-form-item v-if="data.isCategory===true"
                       label="栏目内页缩略图"
-                     >
+        >
 
           <upload v-model="data.cimage">
 
@@ -355,7 +364,7 @@
 
     <div class="test">{{data}}</div>
     <span slot="footer" class="dialog-footer">
-    <el-button @click="visible = false;" >取 消</el-button>
+    <el-button @click="visible = false;">取 消</el-button>
 
     <el-button type="primary" @click="submit">确 定</el-button>
     </span>
@@ -414,7 +423,7 @@
       async submit() {
         try {
           await this.$refs.form.validate()
-          this.visible=false
+          this.visible = false
           this.$emit('submit')
         } catch (e) {
           this.$message('有必填的字段!')

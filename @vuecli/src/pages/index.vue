@@ -13,7 +13,7 @@
           <i class="iconfont icon-yonghu uk-h1"></i>
 
           <span class="uk-padding-left-xs">{{$store.state.global.name}} 登录成功</span>
-          <a @click="$store.commit('clearToken');" class="uk-text-danger uk-padding-left">
+          <a @click="$store.commit('token/remove');" class="uk-text-danger uk-padding-left">
             <i class="iconfont  icon-tuichu uk-h4 uk-text-danger"></i>
             退出登录
           </a>
@@ -31,7 +31,7 @@
 
       <el-col :span="3">
 
-<!--        <siderbar></siderbar>-->
+        <siderbar></siderbar>
 
       </el-col>
       <el-col :span="21" class="background-white">
