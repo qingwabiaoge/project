@@ -1,5 +1,8 @@
-{"usingComponents": {
-
+{
+  "usingComponents": {
+    "icon-nav": "/components/icon-nav/index",
+    "swiper-proto": "/components/swiper-proto/index",
     "wux-search-bar": "../../dist/search-bar/index"
-   
-  }}
+  }
+}
+

@@ -1,0 +1,16 @@
+
+    <swiper indicator-dots="ture"
+            autoplay="ture"
+            interval="5000"
+            duration="1000"
+            indicator-color="rgba(255,255,255,.5)"
+            indicator-active-color="#e60000">
+        <block wx:for="{{data}}" wx:key="item._id">
+            <swiper-item>
+                <navigator>
+
+                    <image mode='widthFix' src="{{item.image}}" class="slide-image"/>
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>

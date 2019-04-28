@@ -1,11 +1,7 @@
-<import src="/components/navigator-ico/index"/>
-<import src="/components/swiper/index"/>
-<import src="/components/piclist-double/index"/>
-
-<template is="swiper" data="{{componentDatas}}"></template>
+<swiper-proto data="{{swiperData}}"></swiper-proto>
 
 
-<wux-search-bar clear  value="{{ name }}"
+<wux-search-bar clear value="{{ name }}"
                 controlled placeholder="搜索"
                 bind:change="onChange"
                 bind:confirm="onConfirm"
@@ -13,13 +9,12 @@
                 bind:blur="onBlur"
                 bind:focus="onFocus"
 
-             />
+/>
 
+<icon-nav data="{{icoNavData}}"></icon-nav>
 
-<template  is="navigator-ico" data="{{icoNav}}"></template>
+<view class='padding-small text-medium'><i class=" icon icon-zhekouquan text-primary"></i> 限时折扣</view>
 
-<view class='padding-small text-medium'><i class="icon icon-zhekouquan text-primary"></i> 限时折扣</view>
-<template is="piclist-double" data="{{goodss}}"></template>
 <view class=' padding-small text-medium'><i class="icon icon-youhuiquan text-primary "></i> 优惠券</view>
 
 

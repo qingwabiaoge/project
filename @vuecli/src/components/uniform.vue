@@ -139,13 +139,13 @@
       <h4 v-if="data.type==='goods'">产品字段:</h4>
       <section v-if="data.type==='goods'">
         <el-form-item label="原价" :label-width="formLabelWidth" prop="">
-          <el-input type="number" v-model.number="data.price" auto-complete="off"></el-input>
+          <el-input type="number" v-model.number="data.maxPrice" auto-complete="off"></el-input>
         </el-form-item>
 
         <el-tooltip class="item" effect="dark"
-                    :content="(data.truePrice*10/data.price).toFixed(2).toString()+'折'" placement="right">
+                    :content="(data.price*10/data.maxPrice).toFixed(2).toString()+'折'" placement="right">
           <el-form-item label="实价" :label-width="formLabelWidth" prop="">
-            <el-input type="number" v-model.number="data.truePrice" auto-complete="off"></el-input>
+            <el-input type="number" v-model.number="data.price" auto-complete="off"></el-input>
           </el-form-item>
         </el-tooltip>
 

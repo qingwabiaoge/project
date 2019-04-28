@@ -1,16 +1,18 @@
 {
   "pages": [
+      "pages/category/index",
     "pages/index/index",
     "pages/cart/index",
     "pages/addAddress/index",
     "pages/address/index",
     "pages/my/index",
-    "pages/category/index",
+ 
     "pages/goods/index",
     "pages/brand/index",
     "pages/action/index",
     "pages/order/index",
-    "pages/search/index"
+    "pages/search/index",
+    "components/swiper-proto/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

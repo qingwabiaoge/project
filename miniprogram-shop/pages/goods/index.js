@@ -1,5 +1,7 @@
 
 import {get} from '../../util.js'
+const {computed} = require('../../libs/vuefy.js')
+
 Page({
 
   /**
@@ -49,7 +51,7 @@ Page({
 //折扣
     computed(this,{
       discount:function(){
-       return (this.data.goods.truePrice * 10 / this.data.goods.price).toFixed(2).toString()
+       return (this.data.goods.price * 10 / this.data.goods.maxPrice).toFixed(2).toString()
       }
      
     })

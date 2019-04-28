@@ -12,12 +12,13 @@ export function request(url, method, data, header = {}) {
             success: function (res) {
                 const data = res.data.data
                 if (res.data.code === 0) {
+                    //处理数据给图片加上host
                     for (let item in data) {
-                        if (Array.isArray(data[item])) {
+                        if (Array.isArray(data[item])) { //data有3种 array,obj,基本烈性比如单个文章
                             data[item].forEach(ite => {
                                     ite.image = ite.image ? config.host + ite.image : '';
                                     ite.icon = ite.image ? config.host + ite.icon : '';
-                                    if (ite.children.length > 0) {
+                                    if (ite.children && ite.children.length > 0) {
                                         ite.children.forEach(
                                             i => {
                                                 i.image = i.image ? config.host + i.image : ''
@@ -27,6 +28,15 @@ export function request(url, method, data, header = {}) {
                                     }
                                 }
                             )
+                        } else if (typeof data[item] === 'object' && !Array.isArray(data[item])) {
+                            const obj =data[item]
+                            obj.image = obj.image ? config.host + obj.image : '';
+                            obj.icon = obj.icon ? config.host + obj.icon : '';
+                            if(obj.images){
+                                obj.images.forEach(item=>{
+                                    item.url = item.url ? config.host + item.url : '';;
+                                })
+                            }
                         }
                     }
 

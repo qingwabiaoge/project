@@ -16,9 +16,10 @@ App({
 
     onLaunch: async function () {
         //獲得原始的components
+
         let {components} = await get(`components`)
 
-        console.log(components)
+
         //獲得components
         components.forEach((item, index, self) => {
             this.components[item.key] = item
@@ -35,7 +36,6 @@ App({
 
 
         console.log('app', this)
-
         // //获取缓存中的用户信息
         // const openId = wx.getStorageSync('openId')
         // const {userInfo} = await get('getUser', {openId})

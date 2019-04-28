@@ -11,7 +11,7 @@ module.exports = async (ctx, next) => {
   console.log(userInfo)
   ctx.state.code = 0
   ctx.state.data = {
-    openId: userInfo.openId, token: createToken(username)
+    openId: userInfo.openId, token: createToken(userInfo.openId)
   }
 
 

@@ -4,7 +4,7 @@
       <div slot="header">
         <img class="logo" src="@/assets/images/logo.jpg" alt="">
       </div>
-      <el-form :model="loginForm" status-icon :rules="loginFormRules" ref="loginForm" label-width="100px"
+      <el-form :model="loginForm" status-icon :rules="$store.rules" ref="loginForm" label-width="100px"
                class="demo-ruleForm"
       >
         <el-form-item label="用户名：" prop="username">
@@ -26,14 +26,14 @@
 
 <script>
 
-  import CONFIG from '@/config'
+
 
   export default {
     data() {
 
       return {
         loginForm: {},
-        loginFormRules: CONFIG.rules
+
       };
     },
     props: {value: Boolean},

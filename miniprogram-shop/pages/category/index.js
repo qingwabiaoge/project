@@ -1,7 +1,7 @@
 import {get} from '../../util.js'
-import CONFIG from '../../config.js'
 
 const app = getApp()
+const {computed} = require('../../libs/vuefy.js')
 // pages/sort/index.js
 Page({
 
@@ -10,15 +10,16 @@ Page({
      */
 
     data: {
-        //navs数据
-        navs: CONFIG.goodsCategory,//导航数据config里
-        //category:nav激活菜单,也用于axios
-        category: '',
+        // siderba数据
+
+        siderbarData: [],
+        value: 3,
+
         //axios数据
         page: 1,
         size: 10,
         //piclist-simple插件数据
-        goodss: [],
+        goodssData: [],
         noMore: false
     },
 
@@ -26,15 +27,15 @@ Page({
         //柯理化函数
 
         get('goodss', {
-            category: this.data.category,
+            cid: this.data.value,
             page: this.data.page,
             size: this.data.size
         }).then(
             ({goodss, total}) => {
                 //设置data对象
-                this.setData({goodss: [...this.data.goodss, ...goodss]})
+                this.setData({goodssData: [...this.data.goodssData, ...goodss]})
                 //设置自动加载
-                if (total < this.data.size) {
+                if (goodss.length < this.data.size) {
                     this.setData({noMore: true})
                 } else {
 
@@ -44,7 +45,7 @@ Page({
         )
     },
 // 点击侧边栏导航
-    tapSetCategory({detail}) {
+    siderbarClick({detail}) {
         this.setData({category: detail})
         this.setData({goodss: []})
         this.setData({page: 1})
@@ -60,6 +61,11 @@ Page({
         const category = options.category ? options.category : ''
         this.setData({category})
         this.getGoodss()
+        computed(this, {
+            siderbarData: () => app.goodsCategory
+
+
+        })
     },
 
     /**

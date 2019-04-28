@@ -12,6 +12,7 @@
       show-checkbox
       node-key="id"
       default-expand-all
+      @node-drop="drop"
       draggable
       :expand-on-click-node="false">
       <span class="custom-tree-node" slot-scope="{ node, data }">
@@ -47,19 +48,23 @@
     data() {
       return {
         treeData: Object.assign([], this.$store.state.components),
-        id: 1000,
+        id: this.$store.getters['components/maxId'],
         uniformData: {},
       }
     },
     methods: {
-      //tree-----------------------------
+      //网络操作-----------------------------
+      put() {
+        this.$store.dispatch('components/put', this.treeData)
+      },
+
+
       add(data) {
         const newComponent = {
           title: 'new',
           id: this.id++,
           type: 'component',
           image: '',//验证upload ruler需要不可删除
-          // category:this.$route.params.cid-0,
           publish: true,
           isCategory: false,
         }
@@ -71,16 +76,25 @@
         } else { //添加顶级
           this.treeData.push(newComponent)
         }
-        this.$store.dispatch('components/put', this.treeData)
+        this.put()
       },
+
 
       edit(node, data) {
         this.uniformData = data
         this.$refs.uniform.visible = true
       },
-      submit(){
-        this.$store.dispatch('components/put', this.treeData)
+
+
+      submit() {
+        this.put()
       },
+
+
+      drop() {
+        this.put()
+      },
+
 
       remove(node, data) {
         this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
@@ -88,25 +102,21 @@
           cancelButtonText: '取消',
           type: 'warning'
         })
+        //点了确定按钮
           .then(() => {
             const parent = node.parent;
             const children = parent.data.children || parent.data;
             const index = children.findIndex(d => d.id === data.id);
             children.splice(index, 1);
-            this.$store.dispatch('components/put', this.treeData)
-            this.$message({
-              type: 'success',
-              message: '删除成功!'
-            });
-
+            this.put()
           })
+          //点了取消按钮
           .catch(() => {
             this.$message({
               type: 'info',
               message: '已取消删除'
             });
           });
-
       },
 
     }

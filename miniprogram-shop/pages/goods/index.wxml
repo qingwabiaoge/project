@@ -8,12 +8,10 @@
         interval="5000"
         duration="1000"
         indicator-col
-        
-        
-        
+
         or="rgba(255,255,255,.5)"
         indicator-active-color="#e60000">
-    <block wx:for="{{goods.fileList}}" wx:key="item._id">
+    <block wx:for="{{goods.images}}" wx:key="item._id">
         <swiper-item>
             <navigator>
                 <image mode='widthFix' src="{{item.url}}" class="slide-image"/>
@@ -24,14 +22,14 @@
 
 <!-- 价格面板 -->
 <view class="padding background-default margin-top">
-    <view class='text-medium text-black text-bold  '>{{goods.name}}
+    <view class='text-medium text-black text-bold  '>{{goods.title}}
     <button class='wx-button-reset float-right' open-type="share"><i class="icon icon-fenxiang2 ico-small" ></i></button>
     </view>
     <view>
-        <text class="text-large text-primary">¥{{goods.truePrice}}</text>
+        <text class="text-large text-primary">¥{{goods.price}}</text>
     </view>
     <view >原价:
-        <text class='text-throughline'>¥{{goods.price}}</text>
+        <text class='text-throughline'>¥{{goods.maxPrice}}</text>
     </view>
     <view >
         折扣:{{discount}}折

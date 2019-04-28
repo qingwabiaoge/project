@@ -4,7 +4,6 @@ const Article = require('../../model/Article');
 module.exports = async (ctx) => {
 
     let {_id} = ctx.params
-    console.log(_id)
     const article = await Article.findOne({_id})
     ctx.state.code = 0
     ctx.state.data = {

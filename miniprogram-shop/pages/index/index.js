@@ -1,6 +1,8 @@
 // pages/index/index.js
 import {get} from '../../util.js'
-import CONFIG from '../../config.js'
+
+const regeneratorRuntime = require('../../libs/runtime')
+const { computed} = require('../../libs/vuefy.js')
 const app = getApp()
 
 Page({
@@ -13,11 +15,10 @@ Page({
         componentDatas: [],
         //搜索框的默认值
         name: '',
+        swiperData:[],
         //导航数据
-        icoNav:'',
         //热卖商品列表
         goodss: []
-
 
     },
     // 搜索框收入人内容
@@ -31,28 +32,25 @@ Page({
     },
     onFocus(e) {
 
-        wx.navigateTo({url:'/pages/search/index'})
+        wx.navigateTo({url: '/pages/search/index'})
     },
-    onConfirm() {
 
-    },
-    onBlur() {
-        this.onConfirm()
-    },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad(options) {
-        get('goodss', {flag: true}).then(
-            ({goodss}) => {
+    async onLoad(options) {
+        const {goodss} = await get('goodss', {flag: true})
+        this.setData({goodss})
 
 
-                this.setData({goodss})
-               this.setData({icoNav:app.goodsCategory})
-
+        computed(this, {
+            icoNavData: function () {
+                return app.goodsCategory
+            },
+            swiperData(){
+                return app.components.swiper.children
             }
-        )
-
+        })
     }
     ,
 

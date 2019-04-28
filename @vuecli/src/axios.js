@@ -2,13 +2,14 @@ import axios from 'axios'
 import store from './store'
 import router from './router'
 import {Loading, Message} from 'element-ui';
-import CONFIG from './config'
 
-let loadinginstace; //load加载
-const baseURL = CONFIG.host
+
+//load加载获得登陆页面冲突
+//let loadinginstace;
+
 //创建一个axios实例
 const instance = axios.create({
-  baseURL,
+  baseURL:store.state.HOST,
   timeout: 3000,
   headers: {'Content-Type': 'application/json;charset=UTF-8'}
 });
@@ -20,7 +21,7 @@ instance.interceptors.request.use(
     if (store.state.token.token) {
       config.headers.Authorization = `token ${store.state.token.token}`;
     }
-    //loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
+  // loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
     return config;
   },
   err => {
@@ -33,7 +34,7 @@ instance.interceptors.response.use(
   // status=2xx的 正确的的走这里
 
   res => { // 响应成功关闭loading
-    //loadinginstace.close();
+  // loadinginstace.close();
     if (res.data.code === -1 && res.data.data.msg) {
       Message.error(res.data.data.msg)
     } else {
@@ -57,7 +58,7 @@ instance.interceptors.response.use(
           Message.error('登陆过期，请重新登陆')
           store.commit('LOGOUT'); //可能是token过期，清除它
           router.replace({ //跳转到登录页面
-            path: '/',
+            path: '/login',
             query: {redirect: router.currentRoute.fullPath} // 将跳转的路由path作为参数，登录成功后跳转到该路由
           });
           break

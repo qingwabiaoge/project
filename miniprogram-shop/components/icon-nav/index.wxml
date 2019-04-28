@@ -1,0 +1,17 @@
+
+        <view class="icon-nav">
+
+            <navigator wx:for="{{data}}"
+                       wx:key="item.icon"
+                       url="/pages/category/index?category={{item.id}}"
+                       open-type="reLaunch"
+                       hover-class="link-hover">
+
+                <image mode="widthFix" src="{{item.icon}}" alt="{{item.icon}}"></image>
+
+                <view> {{item.title}}</view>
+            </navigator>
+
+        </view>
+
+

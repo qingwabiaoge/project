@@ -29,7 +29,7 @@ const goodsSchema = mongoose.Schema({
   suk: Number,
   pv: Number,
   price: Number,
-  truePrice: Number,
+  maxPrice: Number,
   number: Number,
   material: String,
   size: String,

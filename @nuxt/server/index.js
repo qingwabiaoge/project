@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const app = new Koa();
 const cors = require('koa2-cors');
- const path = require('path')
+const path = require('path')
 const static = require('koa-static')
 // const bodyParser = require('koa-bodyparser')
 // const xmlParser = require('koa-xml-body');
@@ -10,18 +10,18 @@ const response = require('./middlewares/response.js')
 const router = require('./router')
 const consola = require('consola')
 const {Nuxt, Builder} = require('nuxt')
-const nuxt_config=require('../nuxt.config')
-const host=nuxt_config.env.HOST
- const port= nuxt_config.env.PORT
+const nuxt_config = require('../nuxt.config')
+const host = nuxt_config.env.HOST
+const port = nuxt_config.env.PORT
 // 静态资源目录对于相对入口文件index.js的路径
- const staticPath = '../staticPath'
+const staticPath = '../staticPath'
 
 app.use(response) //捕捉错误和空返回值
-.use(static(path.join(__dirname, staticPath)))
-// .use(bodyParser())
+  .use(static(path.join(__dirname, staticPath)))
+  // .use(bodyParser())
   .use(cors())
   .use(koaBody({
-    parsedMethods: ['POST', 'PUT', 'PATCH','DELETE'],//允许解析delete
+    parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],//允许解析delete
     multipart: true,
     formidable: {
       maxFileSize: 1 * 1024 * 1024    // 设置上传文件大小最大限制，默认2M
@@ -38,11 +38,6 @@ async function start() {
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
 
-  // const {
-  //   host = process.env.HOST || '127.0.0.1',
-  //   port = process.env.PORT || 3002
-  // } = nuxt.options.server
-
   // Build in development
   if (config.dev) {
     const builder = new Builder(nuxt)
@@ -57,7 +52,7 @@ async function start() {
     ctx.req.ctx = ctx // This might be useful later on, e.g. in nuxtServerInit or with nuxt-stash
     nuxt.render(ctx.req, ctx.res)
   })
-
+  app.listen(port)
 
   consola.ready({
     message: `Server listening on http://${host}:${port}`,
@@ -67,9 +62,9 @@ async function start() {
 
 }
 
-//start()
+start()
 
-app.listen(port)
+
 // app.listen(port); //这里是巨坑 不要加host,加host画蛇添足,不填写服务器的host还无法运行
 // console.log('Server listening on ' + host + ':' + port)
 

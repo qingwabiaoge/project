@@ -1,5 +1,5 @@
 <view class='cartMain' >
-    <view wx:for="{{cartItems}}">
+    <view wx:for="{{cartItems}}" wx:key="item._id">
         <view data-id="{{item.id}}" class='cart-box' data-index="{{index}}">
             <view class='icon'>
                 <icon wx:if="{{item.selected}}" type="success" color="#e60000" size="20" bindtap="selectedCart"

@@ -11,7 +11,7 @@
         <el-form :inline="true">
 
           <el-form-item>
-            <el-input v-model="keyword"
+            <el-input v-model="serchBoxValue"
                       clearable
                       prefix-icon="el-icon-search"
                       placeholder="输入名称搜索产品"
@@ -170,7 +170,7 @@
         tableData: [],
         uniformData: {},
         listLoading: false,
-        keyword: undefined,
+        serchBoxValue: undefined,
         //要显示的第几页和每页的数量
         total: 0,
         page: 1,
@@ -182,13 +182,8 @@
 
     computed: {
       filterTableData: function () {
-        const keyword = new RegExp(this.keyword)
-        /*
-         @重点解释this.$store.state.goodss
-         当vuex的state未填充前this.$store.state.goodss=null
-         null不能被fileter用三目可以避免这种错误
-          */
-        return this.tableData.filter(item => keyword.test(item.title))
+        const serchBoxValue = new RegExp(this.serchBoxValue)
+        return this.tableData.filter(item => serchBoxValue.test(item.title))
 
       }
 
@@ -196,7 +191,10 @@
 
     methods: {
 
-
+      async gets() {
+        const {goodss} = await this.$axios.get('goodss')
+        this.tableData = goodss
+      },
 //通用表格过滤器------------------------------------------------------------
 
       filterHandler(value, row, column) {
@@ -247,57 +245,47 @@
         const ids = this.sels.map(item => item._id)
         this.$confirm('确认删除选中记录吗？', '提示', {
           type: 'warning'
-        }).then(_=> {
+        }).then(_ => {
           this.$axios.delete('/goodss', {data: {ids}})
           this.gets()
         })
       },
-          handleSizeChange(val)
-        {
-          console.log(`每页 ${val} 条`);
-        }
-      ,
-        //页面
-        handleCurrentChange(val)
-        {
-          this.page = val;
-          this.gets()
-        }
-      ,
-
-        //选择发生改变
-        selsChange: function (sels) {
-          this.sels = sels;
-        }
-      ,
-
-        //提交数据按钮
-        submit: function () {
-
-          if (!this.uniformData._id) {// 如果不存在_id 是新增商品操作
-            this.$axios.post('goods', {...this.uniformData, image: this.uniformData.images[0].url}) //计算出首页缩略图地址方便list写法和articl通用
-          } else {// 如果是编辑
-            this.$axios.patch('goods', {...this.uniformData, image: this.uniformData.images[0].url})
-          }
-          this.gets()
-        }
-      ,
-
-        async
-        gets()
-        {
-          const {goodss} = await this.$axios.get('goodss')
-          this.tableData = goodss
-        }
-      ,
-
+      handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
       }
       ,
-
-      mounted() {
+      //页面
+      handleCurrentChange(val) {
+        this.page = val;
         this.gets()
       }
+      ,
+
+      //选择发生改变
+      selsChange: function (sels) {
+        this.sels = sels;
+      }
+      ,
+
+      //提交数据按钮
+      submit: function () {
+
+        if (!this.uniformData._id) {// 如果不存在_id 是新增商品操作
+          this.$axios.post('goods', {...this.uniformData, image: this.uniformData.images[0].url}) //计算出首页缩略图地址方便list写法和articl通用
+        } else {// 如果是编辑
+          this.$axios.patch('goods', {...this.uniformData, image: this.uniformData.images[0].url})
+        }
+        this.gets()
+      },
+
+
     }
+    ,
+
+    mounted() {
+      this.gets()
+    }
+  }
 </script>
 
 <style>

@@ -1,0 +1,16 @@
+<view style="height: 100%" scroll-y>
+    {{siderbarData.length}}
+
+    <view
+            wx:for="{{data}}"
+            wx:key="item.id"
+            class=' {{item.id===value?"active":""}} '
+            style="height: 100rpx"
+            bindtap='onTap'
+            hover-class="link-hover"
+            data-category="{{item.title}}"
+    >
+        1
+        <text> {{item.title}}</text>
+    </view>
+</view>

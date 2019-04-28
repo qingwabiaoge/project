@@ -16,11 +16,12 @@ Page({
         // 说明是app.js获取了globalData.userInfo是
         // 是二次登陆
         const openId = wx.getStorageSync('openId')
+        if(openId){
         const {userInfo} = await get('getUser', {openId})
         this.setData({
             userInfo: userInfo,
         })
-
+        }
     },
     onLoad(){
         this.getUserInfo()

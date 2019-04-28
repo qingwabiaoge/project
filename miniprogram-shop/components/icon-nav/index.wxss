@@ -1,0 +1,13 @@
+
+.icon-nav {
+    display: flex;
+    justify-content: flex-start; /*主轴方向排序*/
+    text-align: center;
+
+}
+
+.icon-nav > navigator {
+
+    width: 25%;
+
+}

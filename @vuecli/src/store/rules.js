@@ -1,4 +1,4 @@
-import tool from '../tool'
+import tool from './tool'
 
 export default {
   state: {

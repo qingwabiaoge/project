@@ -20,6 +20,22 @@ export default {
     },
     articleCategory(state, getters) {
       return getters.components.article.children
+    },
+    maxId(state, getters) {
+      let _maxid = 0
+      state.forEach(item => {
+        if (item.id > _maxid) {
+          _maxid = item.id
+          if (item.id.children && item.id.children.length > 0) {
+            item.id.children.forEach((i) => {
+              if (i.id > _maxid) {
+                _maxid = i.id
+              }
+            })
+          }
+        }
+      })
+      return _maxid + 1
     }
   },
 
