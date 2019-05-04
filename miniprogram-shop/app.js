@@ -1,5 +1,5 @@
 //app.js
-import {get, addImageHttp} from './util.js'
+import {get, addHost} from './util.js'
 import config from './config'
 
 require('./libs/mixin.js')

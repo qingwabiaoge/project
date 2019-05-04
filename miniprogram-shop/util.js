@@ -99,7 +99,7 @@ export function showSuccess(text) {
     })
 }
 
-export function addImageHttp(arr) {
+export function addHost(arr) {
     return arr.map(item => config.host + item.image)
 }
 

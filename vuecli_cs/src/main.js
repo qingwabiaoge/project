@@ -127,6 +127,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 
+console.log('process',process.env)
 
 new Vue({
   el: '#app',
