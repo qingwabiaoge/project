@@ -1,12 +1,12 @@
 <template>
-  <div :style="{background:`url(${$store.state.global.background})`,backgroundAttachment: 'fixed'} ">
-    <header2></header2>
+<!--  <div :style="{background:`url(${$store.state.global.background})`,backgroundAttachment: 'fixed'} ">-->
+<!--    <header2></header2>-->
     <!--<bannerCategory></bannerCategory>-->
     <!--
         <nuxt style="padding-bottom:90px; background-repeat: no-repeat;background-attachment: fixed;" :style="{backgroundImage:`url(${$store.state.global.background})`}"/>-->
     <nuxt/>
-    <footerTalk></footerTalk>
-  </div>
+<!--    <footerTalk></footerTalk>-->
+<!--  </div>-->
 </template>
 
 <script>
@@ -16,9 +16,7 @@
   export default {
 
     components: {header2, footer3},
-    mounted() {
-      console.log(this.$route)
-    }
+
   }
 
 </script>

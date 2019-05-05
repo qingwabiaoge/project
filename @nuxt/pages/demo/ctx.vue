@@ -4,11 +4,11 @@
 
 <script>
   import Vue from 'vue'
-  export default {
+  export default {  layout:'demo',
 
     async asyncData(ctx) {
 
-      console.log(ctx) //false
+      console.log('ctx',ctx) //false
 
 
       // fn()
@@ -18,7 +18,7 @@
     },
 
     mounted(){
-      console.log(this)
+      console.log('this',this)
       // this.$myCombinedInjectedFunction('this.$myCombinedInjectedFunction')
       // this.$store.$myCombinedInjectedFunction('this.$store.$myCombinedInjectedFunction')
       // this.$store.commit('injectedFunction','this.$store.commit')

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  export default {
+  export default {  layout:'demo',
 
     fetch({store, params}) {
       console.log(store)

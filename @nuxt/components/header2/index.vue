@@ -9,7 +9,7 @@
         <el-row>
           <el-col :md="12" class="left">
 
-            Welcome To {{$store.state.components.brand.etitle}}
+            Welcome To {{$store.getters.components.brand.title}}
           </el-col>
 
           <el-col :md="12" class="right">

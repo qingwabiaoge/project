@@ -10,9 +10,9 @@
   </div>
 </template>
 <script>
-  export default {
+  export default {  layout:'demo',
     async asyncData({app}) {
-      const {goods} = await app.$axios.get('/qin')
+      const {goods} = await app.$axios.get('/test')
       return {goods}
     },
 

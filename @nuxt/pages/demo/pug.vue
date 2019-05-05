@@ -10,7 +10,7 @@
   import mixin from '@/pug/pug1/mixin'
   import mixin2 from '@/pug/pug2/mixin'
 
-  export default {
+  export default {  layout:'demo',
  /*   asyncData() {
       return {msg: 'page'}
     },*/

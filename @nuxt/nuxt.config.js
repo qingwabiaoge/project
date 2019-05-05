@@ -1,9 +1,11 @@
 module.exports = {
 
   //不渲染ui目录
-  ignore: ['pages/-ui/*',
+  ignore: [
+    'pages/-ui/*',
     'pages/-demo/*',
-   'pages/api/*'
+   'pages/api/*',
+    'pages/brand/*'
     ],
   // static: {'index': ['index.html', 'index.htm']},
   //本配置可以在server ,插件$axios使用

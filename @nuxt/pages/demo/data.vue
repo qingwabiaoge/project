@@ -4,7 +4,7 @@
   </button>
 </template>
 <script>
-  export default {
+  export default {  layout:'demo',
     asyncData() {
       return {msg: 0}
     },

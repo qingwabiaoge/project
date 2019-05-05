@@ -6,7 +6,7 @@
 
 <script>
   console.log('组件内引入js代码')
-export default {
+export default {  layout:'demo',
 
 
 

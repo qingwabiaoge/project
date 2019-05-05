@@ -2,7 +2,7 @@
   <div>
 
     <div class="position-fixed background-black ">
-      <router-link v-for="item in $router.options.routes.filter(item=>/^ui-/.test(item.name))" :key="item.path"
+      <router-link v-for="item in $router.options.routes.filter(item=>/^demo-/.test(item.name))" :key="item.path"
                    :to="{ path:item.path}"
                    class="inverse-wrap">
         {{item.name}}
@@ -16,3 +16,8 @@
   </div>
 
 </template>
+
+<style>
+
+
+</style>

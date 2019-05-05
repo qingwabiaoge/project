@@ -12,7 +12,7 @@ const router = new Router({prefix: '/api'})
 
 //checkToken作为中间件存在
 const checkToken = require('../libs/token/checkToken.js');
-
+router.get('/test', ctx => ctx.body = {code: '0', data: {msg: '后端返回的消息', goods: '家具'}})
 router.post('/adminLogin', controller.adminLogin);
 //产品1
 router
