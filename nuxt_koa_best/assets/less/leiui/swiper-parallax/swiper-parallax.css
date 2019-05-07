@@ -1,0 +1,43 @@
+.swiper-parallax {
+  height: 300px;
+  background: #000;
+}
+.swiper-parallax .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.swiper-parallax .swiper-slide {
+  position: relative;
+}
+.swiper-parallax .swiper-slide div:nth-child(1) {
+  position: absolute;
+  left: 20%;
+  width: 30%;
+  top: 100px;
+}
+.swiper-parallax .swiper-slide div:nth-child(2) {
+  position: absolute;
+  left: 60%;
+  width: 5%;
+  top: 130px;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  line-height: 2;
+}
+.swiper-parallax .swiper-slide div:nth-child(3) {
+  position: absolute;
+  left: 70%;
+  width: 10%;
+  top: 130px;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+/*# sourceMappingURL=swiper-parallax.css.map */

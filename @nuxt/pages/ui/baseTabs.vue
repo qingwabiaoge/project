@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    export default {
+    export default {   layout: 'ui',
         data() {
             return {
                 navs: [{value: 'tab1', label: '组件1'},

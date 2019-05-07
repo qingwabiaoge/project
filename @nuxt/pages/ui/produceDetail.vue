@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  export default {
+  export default {   layout: 'ui',
     data() {
       return {
         data: {

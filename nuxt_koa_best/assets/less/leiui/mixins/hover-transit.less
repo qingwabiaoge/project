@@ -1,0 +1,73 @@
+//dom只有一個hover,hover下可以爲不同子dom配置多個動畫效果
+//图层fade
+.hover-fade() {
+  opacity: 0.7;
+  transition: all @global-translation;
+  &:hover {
+    opacity: 1
+
+  }
+
+}
+
+  //背景fade
+.hover-white-backgoud-fade-in() {
+  background: rgba(255, 255, 255, 0.5);
+  transition: all @global-translation;
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+//阴影
+.hover-shadow-transition() {
+
+  box-shadow: @global-shadow-smaller;
+  transition: all @global-translation;
+  &:hover {
+    box-shadow: @global-shadow-large;
+  }
+}
+
+//图片放大
+.hover-child-image-scale() {
+  & {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+  }
+  & > img {
+    transition: all @global-translation;
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
+
+  &:hover img {
+    overflow: hidden;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+//图片fade
+.hover-child-image-fade() {
+
+  img {
+    transition: all @global-translation;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+  }
+
+  &:hover {
+    img {
+      -webkit-filter: brightness(1);
+      filter: brightness(1);
+    }
+  }
+}
+
+
+
+

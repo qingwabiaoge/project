@@ -49,3 +49,6 @@
   }
 
 </style>
+<script>
+  export default {   layout: 'ui',}
+</script>

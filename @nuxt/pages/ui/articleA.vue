@@ -6,8 +6,8 @@
 <script>
     import articleA from '@/components/articleA/index.vue'
 
-    export default {
-      layout: 'ui',
+    export default {   layout: 'ui',
+   
         data() {
             return {
                 articleAdata: {}

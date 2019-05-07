@@ -1,0 +1,17 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.slider-left-enter-active,
+.slider-left-leave-active {
+  transition: all 0.5s;
+}
+.slider-left-enter,
+.slider-left-leave-to {
+  transform: translateX(-100%);
+}
+/*# sourceMappingURL=vue.transition.css.map */

@@ -20,9 +20,8 @@
 </template>
 
 <script>
-
+  export default {   layout: 'ui',}
 </script>
-
 <style scoped>
 
 </style>

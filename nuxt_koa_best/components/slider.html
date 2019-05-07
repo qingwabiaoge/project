@@ -1,0 +1,127 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+    <div @mouseover="stopTimer" @mouseout="startTimer">
+        <transition name="fade">
+            <a v-if="show" :href="cur.href">
+                <img :src="cur.img" alt="" width="300px" height="300px">
+            </a>
+        </transition>
+        <br>
+        <a @click="back"> < </a> <a @click="go"> > </a>
+        <span v-for="item in this.swiper.length" @click="n=item-1" :class="item===index+1? 'active':''">
+    {{item}}
+  </span>
+    </div>
+</div>
+
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                swiper: [
+                    {
+                        img: 'http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320',
+                        href: ''
+                    },
+                    {
+                        img: 'http://img.hb.aicdn.com/01d41e243c6509262c906ed1cd5133d2c01c1b4953e162-XW3yzD_fw658',
+                        href: ''
+                    },
+                    {
+                        img: 'http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320',
+                        href: ''
+                    },
+                    {
+                        img: 'http://img.hb.aicdn.com/01d41e243c6509262c906ed1cd5133d2c01c1b4953e162-XW3yzD_fw658',
+                        href: ''
+                    }
+
+                ],
+
+                n: 0, //首张幻灯片
+                interval: null,//声明this.interval定时器
+                switchTime: 4000, //定时切换
+                transitionTime: 200,//过渡时间
+                show: true //为了动画设置了v-if show和!show
+            }
+        },
+        computed: {
+            //输出序号处理限制在 0,...this.swiper.length
+            index() {
+                return this.n % this.swiper.length
+            },
+            //当前显示的幻灯片
+            cur() {
+                return this.swiper[this.index]
+            }
+        },
+        methods: {
+            go() {//动画和切换
+                this.show = false
+                setTimeout(() => {
+                    this.n++;
+                    this.show = true
+                }, this.transitionTime)
+            },
+            back() {
+                if (this.n > 0) {
+                    this.show = false
+                    setTimeout(() => {
+                        this.n--;
+                        this.show = true
+                    }, this.transitionTime)
+
+                }
+                else {
+                    //如果n=0会自动加上幻灯片的数目
+                    this.n += (this.swiper.length + 1)
+                }
+            }
+            ,
+            startTimer() {
+                //保存定时器到this.interval
+                this.interval = setInterval(() => { //开始定时器或者暂停后再运行定时器
+                    this.go()
+                }, this.switchTime);
+            },
+            stopTimer() {
+                clearInterval(this.interval) //暂停定时器
+            }
+        },
+        created() {
+            this.startTimer()
+        }
+    })
+
+</script>
+<style>
+    .active {
+        color: red
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+    {
+        opacity: 0;
+    }
+
+    .slide-fade-enter-active {
+        transition: all .3s ease;
+    }
+
+    .slide-fade-leave-active {
+        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+
+    .slide-fade-enter, .slide-fade-leave-to
+        /* .slide-fade-leave-active for below version 2.1.8 */
+    {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+</style>

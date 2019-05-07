@@ -5,3 +5,6 @@
     <swiperbg :gutter="20" :num="3"></swiperbg>
   </div>
 </template>
+<script>
+  export default {   layout: 'ui',}
+</script>

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  export default {}
+  export default {   layout: 'ui',}
 </script>
 
 <style lang="less" scoped>

@@ -7,7 +7,7 @@
 
 <script>
 
-  export default {
+  export default {   layout: 'ui',
 
   fn(data){console.log(data)}
   }
