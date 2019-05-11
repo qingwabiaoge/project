@@ -1,32 +1,32 @@
 // Name:            Navbar
 // Description:     Component to create horizontal navigation bars
 //
-// Component:       `uk-navbar`
+// Component:       `navbar`
 //
-// Sub-objects:     `uk-navbar-container`
-//                  `uk-navbar-left`
-//                  `uk-navbar-right`
-//                  `uk-navbar-center`
-//                  `uk-navbar-center-left`
-//                  `uk-navbar-center-right`
-//                  `uk-navbar-nav`
-//                  `uk-navbar-item`
-//                  `uk-navbar-toggle`
-//                  `uk-navbar-subtitle`
-//                  `uk-navbar-dropbar`
+// Sub-objects:     `navbar-container`
+//                  `navbar-left`
+//                  `navbar-right`
+//                  `navbar-center`
+//                  `navbar-center-left`
+//                  `navbar-center-right`
+//                  `navbar-nav`
+//                  `navbar-item`
+//                  `navbar-toggle`
+//                  `navbar-subtitle`
+//                  `navbar-dropbar`
 //
-// Adopted:         `uk-navbar-dropdown` + Modifiers
-//                  `uk-navbar-dropdown-nav`
-//                  `uk-navbar-dropdown-grid`
-//                  `uk-navbar-toggle-icon`
+// Adopted:         `navbar-dropdown` + Modifiers
+//                  `navbar-dropdown-nav`
+//                  `navbar-dropdown-grid`
+//                  `navbar-toggle-icon`
 //
-// Modifiers:       `uk-navbar-transparent`
-//                  `uk-navbar-sticky`
-//                  `uk-navbar-dropdown-stack`
+// Modifiers:       `navbar-transparent`
+//                  `navbar-sticky`
+//                  `navbar-dropdown-stack`
 //
-// States:          `uk-active`
-//                  `uk-parent`
-//                  `uk-open`
+// States:          `active`
+//                  `parent`
+//                  `open`
 //
 //
 // ========================================================================
@@ -87,7 +87,7 @@
  * 1. Create position context to center navbar group
  */
 
-.uk-navbar {
+.navbar {
     display: flex;
     /* 1 */
     position: relative;
@@ -98,21 +98,21 @@
 /* Container
  ========================================================================== */
 
-.uk-navbar-container:not(.uk-navbar-transparent) {
+.navbar-container:not(.navbar-transparent) {
     background: @navbar-background;
     .hook-navbar-container;
 }
 
 // Color Mode
-.uk-navbar-container:not(.uk-navbar-transparent):extend(.uk-light all) when (@navbar-color-mode = light) {}
-.uk-navbar-container:not(.uk-navbar-transparent):extend(.uk-dark all) when (@navbar-color-mode = dark) {}
+.navbar-container:not(.navbar-transparent):extend(.light all) when (@navbar-color-mode = light) {}
+.navbar-container:not(.navbar-transparent):extend(.dark all) when (@navbar-color-mode = dark) {}
 
 /*
  * Remove pseudo elements created by micro clearfix as precaution (if Container component is used)
  */
 
-.uk-navbar-container > ::before,
-.uk-navbar-container > ::after { display: none !important; }
+.navbar-container > ::before,
+.navbar-container > ::after { display: none !important; }
 
 
 /* Groups
@@ -123,12 +123,12 @@
  * 2. Note: IE 11 requires an extra `div` which affects the center selector
  */
 
-.uk-navbar-left,
-.uk-navbar-right,
-// 2. [class*='uk-navbar-center'],
-.uk-navbar-center,
-.uk-navbar-center-left > *,
-.uk-navbar-center-right > * {
+.navbar-left,
+.navbar-right,
+// 2. [class*='navbar-center'],
+.navbar-center,
+.navbar-center-left > *,
+.navbar-center-right > * {
     display: flex;
     /* 1 */
     align-items: center;
@@ -143,16 +143,16 @@
  * 4. Align sub groups for centered navbar
  */
 
-.uk-navbar-right { margin-left: auto; }
+.navbar-right { margin-left: auto; }
 
-.uk-navbar-center:only-child {
+.navbar-center:only-child {
     margin-left: auto;
     margin-right: auto;
     /* 1 */
     position: relative;
 }
 
-.uk-navbar-center:not(:only-child) {
+.navbar-center:not(:only-child) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -162,23 +162,23 @@
 }
 
 /* 3 */
-.uk-navbar-center:not(:only-child) .uk-navbar-nav > li > a,
-.uk-navbar-center:not(:only-child) .uk-navbar-item,
-.uk-navbar-center:not(:only-child) .uk-navbar-toggle { white-space: nowrap; }
+.navbar-center:not(:only-child) .navbar-nav > li > a,
+.navbar-center:not(:only-child) .navbar-item,
+.navbar-center:not(:only-child) .navbar-toggle { white-space: nowrap; }
 
 /* 4 */
-.uk-navbar-center-left,
-.uk-navbar-center-right {
+.navbar-center-left,
+.navbar-center-right {
    position: absolute;
    top: 0;
 }
 
-.uk-navbar-center-left { right: 100%; }
-.uk-navbar-center-right { left: 100%; }
+.navbar-center-left { right: 100%; }
+.navbar-center-right { left: 100%; }
 
-[class*='uk-navbar-center-'] .uk-navbar-nav > li > a,
-[class*='uk-navbar-center-'] .uk-navbar-item,
-[class*='uk-navbar-center-'] .uk-navbar-toggle { white-space: nowrap; }
+[class*='navbar-center-'] .navbar-nav > li > a,
+[class*='navbar-center-'] .navbar-item,
+[class*='navbar-center-'] .navbar-toggle { white-space: nowrap; }
 
 
 /* Nav
@@ -188,7 +188,7 @@
  * 1. Reset list
  */
 
-.uk-navbar-nav {
+.navbar-nav {
     display: flex;
     /* 1 */
     margin: 0;
@@ -201,9 +201,9 @@
  * Only not `absolute` positioned groups
  */
 
-.uk-navbar-left,
-.uk-navbar-right,
-.uk-navbar-center:only-child { flex-wrap: wrap; }
+.navbar-left,
+.navbar-right,
+.navbar-center:only-child { flex-wrap: wrap; }
 
 /*
  * Items
@@ -213,9 +213,9 @@
  * 4. Required for `a`
  */
 
-.uk-navbar-nav > li > a,    // Nav item
-.uk-navbar-item,            // Content item
-.uk-navbar-toggle {         // Clickable item
+.navbar-nav > li > a,    // Nav item
+.navbar-item,            // Content item
+.navbar-toggle {         // Clickable item
     /* 1 */
     display: flex;
     justify-content: center;
@@ -235,7 +235,7 @@
  * Nav items
  */
 
-.uk-navbar-nav > li > a {
+.navbar-nav > li > a {
     color: @navbar-nav-item-color;
     .hook-navbar-nav-item;
 }
@@ -245,22 +245,22 @@
  * Apply hover style also to focus state and if dropdown is opened
  */
 
-.uk-navbar-nav > li:hover > a,
-.uk-navbar-nav > li > a:focus,
-.uk-navbar-nav > li > a.uk-open {
+.navbar-nav > li:hover > a,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a.open {
     color: @navbar-nav-item-hover-color;
     outline: none;
     .hook-navbar-nav-item-hover;
 }
 
 /* OnClick */
-.uk-navbar-nav > li > a:active {
+.navbar-nav > li > a:active {
     color: @navbar-nav-item-onclick-color;
     .hook-navbar-nav-item-onclick;
 }
 
 /* Active */
-.uk-navbar-nav > li.uk-active > a {
+.navbar-nav > li.active > a {
     color: @navbar-nav-item-active-color;
     .hook-navbar-nav-item-active;
 }
@@ -269,7 +269,7 @@
 /* Item
  ========================================================================== */
 
-.uk-navbar-item {
+.navbar-item {
     color: @navbar-item-color;
     .hook-navbar-item;
 }
@@ -278,14 +278,14 @@
 /* Toggle
  ========================================================================== */
 
-.uk-navbar-toggle {
+.navbar-toggle {
     color: @navbar-toggle-color;
     .hook-navbar-toggle;
 }
 
-.uk-navbar-toggle:hover,
-.uk-navbar-toggle:focus,
-.uk-navbar-toggle.uk-open {
+.navbar-toggle:hover,
+.navbar-toggle:focus,
+.navbar-toggle.open {
     color: @navbar-toggle-hover-color;
     outline: none;
     text-decoration: none;
@@ -294,16 +294,16 @@
 
 /*
  * Icon
- * Adopts `uk-icon`
+ * Adopts `icon`
  */
 
-.uk-navbar-toggle-icon {
+.navbar-toggle-icon {
     .hook-navbar-toggle-icon;
 }
 
 /* Hover + Focus */
-:hover > .uk-navbar-toggle-icon,
-:focus > .uk-navbar-toggle-icon {
+:hover > .navbar-toggle-icon,
+:focus > .navbar-toggle-icon {
     .hook-navbar-toggle-icon-hover;
 }
 
@@ -311,7 +311,7 @@
 /* Subtitle
  ========================================================================== */
 
-.uk-navbar-subtitle {
+.navbar-subtitle {
     font-size: @navbar-subtitle-font-size;
     .hook-navbar-subtitle;
 }
@@ -320,11 +320,11 @@
 /* Style modifiers
  ========================================================================== */
 
-.uk-navbar-transparent {
+.navbar-transparent {
     .hook-navbar-transparent;
 }
 
-.uk-navbar-sticky {
+.navbar-sticky {
     .hook-navbar-sticky;
 }
 
@@ -333,14 +333,14 @@
  ========================================================================== */
 
 /*
- * Adopts `uk-dropdown`
+ * Adopts `dropdown`
  * 1. Hide by default
  * 2. Set position
  * 3. Set a default width
  * 4. Style
  */
 
-.uk-navbar-dropdown {
+.navbar-dropdown {
     /* 1 */
     display: none;
     /* 2 */
@@ -357,47 +357,47 @@
 }
 
 /* Show */
-.uk-navbar-dropdown.uk-open { display: block; }
+.navbar-dropdown.open { display: block; }
 
 /*
  * Direction / Alignment modifiers
  */
 
 /* Direction */
-[class*='uk-navbar-dropdown-top'] { margin-top: -@navbar-dropdown-margin; }
-[class*='uk-navbar-dropdown-bottom'] { margin-top: @navbar-dropdown-margin; }
-[class*='uk-navbar-dropdown-left'] { margin-left: -@navbar-dropdown-margin; }
-[class*='uk-navbar-dropdown-right'] { margin-left: @navbar-dropdown-margin; }
+[class*='navbar-dropdown-top'] { margin-top: -@navbar-dropdown-margin; }
+[class*='navbar-dropdown-bottom'] { margin-top: @navbar-dropdown-margin; }
+[class*='navbar-dropdown-left'] { margin-left: -@navbar-dropdown-margin; }
+[class*='navbar-dropdown-right'] { margin-left: @navbar-dropdown-margin; }
 
 /*
  * Grid
- * Adopts `uk-grid`
+ * Adopts `grid`
  */
 
 /* Gutter Horizontal */
-.uk-navbar-dropdown-grid { margin-left: -@navbar-dropdown-grid-gutter-horizontal; }
-.uk-navbar-dropdown-grid > * { padding-left: @navbar-dropdown-grid-gutter-horizontal; }
+.navbar-dropdown-grid { margin-left: -@navbar-dropdown-grid-gutter-horizontal; }
+.navbar-dropdown-grid > * { padding-left: @navbar-dropdown-grid-gutter-horizontal; }
 
 /* Gutter Vertical */
-.uk-navbar-dropdown-grid > .uk-grid-margin { margin-top: @navbar-dropdown-grid-gutter-vertical; }
+.navbar-dropdown-grid > .grid-margin { margin-top: @navbar-dropdown-grid-gutter-vertical; }
 
 /* Stack */
-.uk-navbar-dropdown-stack .uk-navbar-dropdown-grid > * { width: 100% !important; }
+.navbar-dropdown-stack .navbar-dropdown-grid > * { width: 100% !important; }
 
 /*
  * Width modifier
  */
 
-.uk-navbar-dropdown-width-2:not(.uk-navbar-dropdown-stack) { width: (@navbar-dropdown-width * 2); }
-.uk-navbar-dropdown-width-3:not(.uk-navbar-dropdown-stack) { width: (@navbar-dropdown-width * 3); }
-.uk-navbar-dropdown-width-4:not(.uk-navbar-dropdown-stack) { width: (@navbar-dropdown-width * 4); }
-.uk-navbar-dropdown-width-5:not(.uk-navbar-dropdown-stack) { width: (@navbar-dropdown-width * 5); }
+.navbar-dropdown-width-2:not(.navbar-dropdown-stack) { width: (@navbar-dropdown-width * 2); }
+.navbar-dropdown-width-3:not(.navbar-dropdown-stack) { width: (@navbar-dropdown-width * 3); }
+.navbar-dropdown-width-4:not(.navbar-dropdown-stack) { width: (@navbar-dropdown-width * 4); }
+.navbar-dropdown-width-5:not(.navbar-dropdown-stack) { width: (@navbar-dropdown-width * 5); }
 
 /*
  * Dropbar modifier
  */
 
-.uk-navbar-dropdown-dropbar {
+.navbar-dropdown-dropbar {
     margin-top: @navbar-dropdown-dropbar-margin-top;
     margin-bottom: @navbar-dropdown-dropbar-margin-bottom;
     .hook-navbar-dropdown-dropbar;
@@ -405,10 +405,10 @@
 
 
 /* Dropdown Nav
- * Adopts `uk-nav`
+ * Adopts `nav`
  ========================================================================== */
 
-.uk-navbar-dropdown-nav {
+.navbar-dropdown-nav {
     .hook-navbar-dropdown-nav;
 }
 
@@ -416,20 +416,20 @@
  * Items
  */
 
-.uk-navbar-dropdown-nav > li > a {
+.navbar-dropdown-nav > li > a {
     color: @navbar-dropdown-nav-item-color;
     .hook-navbar-dropdown-nav-item;
 }
 
 /* Hover + Focus */
-.uk-navbar-dropdown-nav > li > a:hover,
-.uk-navbar-dropdown-nav > li > a:focus {
+.navbar-dropdown-nav > li > a:hover,
+.navbar-dropdown-nav > li > a:focus {
     color: @navbar-dropdown-nav-item-hover-color;
     .hook-navbar-dropdown-nav-item-hover;
 }
 
 /* Active */
-.uk-navbar-dropdown-nav > li.uk-active > a {
+.navbar-dropdown-nav > li.active > a {
     color: @navbar-dropdown-nav-item-active-color;
     .hook-navbar-dropdown-nav-item-active;
 }
@@ -438,7 +438,7 @@
  * Header
  */
 
-.uk-navbar-dropdown-nav .uk-nav-header {
+.navbar-dropdown-nav .nav-header {
     color: @navbar-dropdown-nav-header-color;
     .hook-navbar-dropdown-nav-header;
 }
@@ -447,7 +447,7 @@
  * Divider
  */
 
-.uk-navbar-dropdown-nav .uk-nav-divider {
+.navbar-dropdown-nav .nav-divider {
     border-top: @navbar-dropdown-nav-divider-border-width solid @navbar-dropdown-nav-divider-border;
     .hook-navbar-dropdown-nav-divider;
 }
@@ -456,16 +456,16 @@
  * Sublists
  */
 
-.uk-navbar-dropdown-nav .uk-nav-sub a { color: @navbar-dropdown-nav-sublist-item-color; }
+.navbar-dropdown-nav .nav-sub a { color: @navbar-dropdown-nav-sublist-item-color; }
 
-.uk-navbar-dropdown-nav .uk-nav-sub a:hover,
-.uk-navbar-dropdown-nav .uk-nav-sub a:focus { color: @navbar-dropdown-nav-sublist-item-hover-color; }
+.navbar-dropdown-nav .nav-sub a:hover,
+.navbar-dropdown-nav .nav-sub a:focus { color: @navbar-dropdown-nav-sublist-item-hover-color; }
 
 
 /* Dropbar
  ========================================================================== */
 
-.uk-navbar-dropbar {
+.navbar-dropbar {
     background: @navbar-dropbar-background;
     .hook-navbar-dropbar;
 }
@@ -474,7 +474,7 @@
  * Slide modifier
  */
 
-.uk-navbar-dropbar-slide {
+.navbar-dropbar-slide {
     position: absolute;
     z-index: @navbar-dropbar-z-index;
     left: 0;
@@ -528,41 +528,41 @@
 
 .hook-inverse() {
 
-    .uk-navbar-nav > li > a {
+    .navbar-nav > li > a {
         color: @inverse-navbar-nav-item-color;
         .hook-inverse-navbar-nav-item;
     }
 
-    .uk-navbar-nav > li:hover > a,
-    .uk-navbar-nav > li > a:focus,
-    .uk-navbar-nav > li > a.uk-open {
+    .navbar-nav > li:hover > a,
+    .navbar-nav > li > a:focus,
+    .navbar-nav > li > a.open {
         color: @inverse-navbar-nav-item-hover-color;
         .hook-inverse-navbar-nav-item-hover;
     }
 
-    .uk-navbar-nav > li > a:active {
+    .navbar-nav > li > a:active {
         color: @inverse-navbar-nav-item-onclick-color;
         .hook-inverse-navbar-nav-item-onclick;
     }
 
-    .uk-navbar-nav > li.uk-active > a {
+    .navbar-nav > li.active > a {
         color: @inverse-navbar-nav-item-active-color;
         .hook-inverse-navbar-nav-item-active;
     }
 
-    .uk-navbar-item {
+    .navbar-item {
         color: @inverse-navbar-item-color;
         .hook-inverse-navbar-item;
     }
 
-    .uk-navbar-toggle {
+    .navbar-toggle {
         color: @inverse-navbar-toggle-color;
         .hook-inverse-navbar-toggle;
     }
 
-    .uk-navbar-toggle:hover,
-    .uk-navbar-toggle:focus,
-    .uk-navbar-toggle.uk-open {
+    .navbar-toggle:hover,
+    .navbar-toggle:focus,
+    .navbar-toggle.open {
         color: @inverse-navbar-toggle-hover-color;
         .hook-inverse-navbar-toggle-hover;
     }

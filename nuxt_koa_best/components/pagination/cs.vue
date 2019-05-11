@@ -8,7 +8,7 @@
                     :total="151"
                     :current="2"
                     :path="$route.path"
-                    class="uk-text-center">
+                    class="text-center">
 
         </pagination>
 

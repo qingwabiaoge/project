@@ -1,5 +1,5 @@
 <template>
-    <div class="uk-padding-bottom-smaller">
+    <div class="padding-bottom-smaller">
         <ul>
             <li v-for="item in navs">
                 <collapseNav_item :item="item">

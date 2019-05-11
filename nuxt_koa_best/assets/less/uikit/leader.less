@@ -1,7 +1,7 @@
 // Name:            Leader
 // Description:     Component to create dot leaders
 //
-// Component:       `uk-leader`
+// Component:       `leader`
 //
 // ========================================================================
 
@@ -17,7 +17,7 @@
    Component: Leader
  ========================================================================== */
 
-.uk-leader { overflow: hidden; }
+.leader { overflow: hidden; }
 
 /*
  * 1. Place element in text flow
@@ -26,7 +26,7 @@
  * 4. Prevent wrapping. Overflowing characters will be clipped by the container
  */
 
-.uk-leader-fill::after {
+.leader-fill::after {
     /* 1 */
     display: inline-block;
     margin-left: @leader-fill-margin-left;
@@ -43,7 +43,7 @@
  * Hide if media does not match
  */
 
-.uk-leader-fill.uk-leader-hide::after { display: none; }
+.leader-fill.leader-hide::after { display: none; }
 
 /* Pass fill character to JS */
 .var-leader-fill::before { content: @leader-fill-content; }
@@ -63,7 +63,7 @@
 
 .hook-inverse() {
 
-    .uk-leader-fill {
+    .leader-fill {
         .hook-inverse-leader;
     }
 

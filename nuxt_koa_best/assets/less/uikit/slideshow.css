@@ -4,7 +4,7 @@
 /*
  * 1. Prevent tab highlighting on iOS.
  */
-.uk-slideshow {
+.slideshow {
   /* 1 */
   -webkit-tap-highlight-color: transparent;
 }
@@ -16,7 +16,7 @@
  * 3. Clip child elements
  * 4. Prevent displaying the callout information on iOS.
  */
-.uk-slideshow-items {
+.slideshow-items {
   /* 1 */
   position: relative;
   z-index: 0;
@@ -34,11 +34,11 @@
 /*
  * 1. Position items above each other
  * 2. Take the full width
- * 3. Clip child elements, e.g. for `uk-cover`
+ * 3. Clip child elements, e.g. for `cover`
  * 4. Optimize animation
  * 5. Disable horizontal panning gestures in IE11 and Edge
  */
-.uk-slideshow-items > * {
+.slideshow-items > * {
   /* 1 */
   position: absolute;
   top: 0;
@@ -56,7 +56,7 @@
 /*
  * Hide not active items
  */
-.uk-slideshow-items > :not(.uk-active) {
+.slideshow-items > :not(.active) {
   display: none;
 }
 /*# sourceMappingURL=slideshow.css.map */

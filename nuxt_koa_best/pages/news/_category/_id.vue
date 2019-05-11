@@ -1,24 +1,24 @@
 <template>
-  <div class="uk-background-gray-lightest uk-padding-top-small uk-padding-bottom-largest">
-    <pictextContact :data="$store.state.componentDatas.pictextContact" class="uk-hidden@xs"></pictextContact>
+  <div class="background-gray-lightest padding-top-small padding-bottom-largest">
+    <pictextContact :data="$store.state.componentDatas.pictextContact" class="hidden@xs"></pictextContact>
 
-    <div class="uk-margin-top container ">
+    <div class="margin-top container ">
 
       <el-row :gutter="30">
-        <el-col :md="6" class="uk-hidden@xs">
+        <el-col :md="6" class="hidden@xs">
           <titlebarA icon="xinwenzixun"
                      title="新闻资讯"
                      subTitle="NEWS"
-                     class="uk-border-bottom">
+                     class="border-bottom">
 
           </titlebarA>
 
 
-          <div class="uk-background-default uk-padding-bottom-large uk-padding-top">
+          <div class="background-default padding-bottom-large padding-top">
 
 
             <nuxt-link
-              class="uk-display-block hover-underline hover-underline-left "
+              class="display-block hover-underline hover-underline-left "
               style="padding: 15px 0 15px 30px"
               v-for="item in $store.state.config.articleCategory"
               :key="item.text"
@@ -30,7 +30,7 @@
           <titlebarA icon="xiazai"
                      title="联系我们"
                      subTitle="CONTACT US"
-                     class="uk-border-bottom uk-margin-top">
+                     class="border-bottom margin-top">
 
           </titlebarA>
 

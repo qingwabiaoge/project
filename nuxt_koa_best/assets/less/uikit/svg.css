@@ -6,17 +6,17 @@
  * 2. Set the fill and stroke color of all SVG elements to the current text color
  */
 /* 1 */
-.uk-svg,
-.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+.svg,
+.svg:not(.preserve) [fill*='#']:not(.preserve) {
   fill: currentcolor;
 }
-.uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+.svg:not(.preserve) [stroke*='#']:not(.preserve) {
   stroke: currentcolor;
 }
 /*
  * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
  */
-.uk-svg {
+.svg {
   transform: translate(0, 0);
 }
 /*# sourceMappingURL=svg.css.map */

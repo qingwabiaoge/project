@@ -4,7 +4,7 @@
 /*
  * 1. Prevent tab highlighting on iOS.
  */
-.uk-slider {
+.slider {
   /* 1 */
   -webkit-tap-highlight-color: transparent;
 }
@@ -13,7 +13,7 @@
 /*
  * 1. Clip child elements
  */
-.uk-slider-container {
+.slider-container {
   /* 1 */
   overflow: hidden;
 }
@@ -23,7 +23,7 @@
  * 1. Optimize animation
  * 2. Create a containing block. In Safari it's neither created by `transform` nor `will-change`.
  */
-.uk-slider-items {
+.slider-items {
   /* 1 */
   will-change: transform;
   /* 2 */
@@ -33,7 +33,7 @@
  * 1. Reset list style without interfering with grid
  * 2. Prevent displaying the callout information on iOS.
  */
-.uk-slider-items:not(.uk-grid) {
+.slider-items:not(.grid) {
   display: flex;
   /* 1 */
   margin: 0;
@@ -42,7 +42,7 @@
   /* 2 */
   -webkit-touch-callout: none;
 }
-.uk-slider-items.uk-grid {
+.slider-items.grid {
   flex-wrap: nowrap;
 }
 /* Item
@@ -52,7 +52,7 @@
  * 2. Create position context
  * 3. Disable horizontal panning gestures in IE11 and Edge
  */
-.uk-slider-items > * {
+.slider-items > * {
   /* 1 */
   flex: none;
   /* 2 */

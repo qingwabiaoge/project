@@ -1,14 +1,14 @@
 // Name:            Visibility
 // Description:     Utilities to show or hide content on breakpoints, hover or touch
 //
-// Component:       `uk-hidden-*`
-//                  `uk-visible-*`
-//                  `uk-invisible`
-//                  `uk-visible-toggle`
-//                  `uk-hidden-hover`
-//                  `uk-invisible-hover`
-//                  `uk-hidden-touch`
-//                  `uk-hidden-notouch`
+// Component:       `hidden-*`
+//                  `visible-*`
+//                  `invisible`
+//                  `visible-toggle`
+//                  `hidden-hover`
+//                  `invisible-hover`
+//                  `hidden-touch`
+//                  `hidden-notouch`
 //
 // ========================================================================
 
@@ -23,39 +23,39 @@
  */
 
 [hidden],
-.uk-hidden { display: none !important; }
+.hidden { display: none !important; }
 
 @media (max-width: @global-breakpoint-phone) {
 
-  .uk-hidden\@xs { display: none !important; }
+  .hidden\@xs { display: none !important; }
 
 }
 
 /* Phone landscape and bigger */
 @media (min-width: @global-breakpoint-phone) {
 
-    .uk-hidden\@s { display: none !important; }
+    .hidden\@s { display: none !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-hidden\@m { display: none !important; }
+    .hidden\@m { display: none !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: @global-breakpoint-desktop) {
 
-    .uk-hidden\@l { display: none !important; }
+    .hidden\@l { display: none !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: @global-breakpoint-largeScreens) {
 
-    .uk-hidden\@xl { display: none !important; }
+    .hidden\@xl { display: none !important; }
 
 }
 
@@ -67,28 +67,28 @@
 
 @media (max-width: @breakpoint-xsmall-max) {
 
-    .uk-visible\@s { display: none !important; }
+    .visible\@s { display: none !important; }
 
 }
 
 /* Phone landscape and smaller */
 @media (max-width: @global-breakpoint-phone-max) {
 
-    .uk-visible\@m { display: none !important; }
+    .visible\@m { display: none !important; }
 
 }
 
 /* Tablet landscape and smaller */
 @media (max-width: @global-breakpoint-tablet-max) {
 
-    .uk-visible\@l { display: none !important; }
+    .visible\@l { display: none !important; }
 
 }
 
 /* Desktop and smaller */
 @media (max-width: @global-breakpoint-desktop-max) {
 
-    .uk-visible\@xl { display: none !important; }
+    .visible\@xl { display: none !important; }
 
 }
 
@@ -96,7 +96,7 @@
 /* Visibility
  ========================================================================== */
 
-.uk-invisible { visibility: hidden !important; }
+.invisible { visibility: hidden !important; }
 
 
 /* Hover
@@ -107,7 +107,7 @@
  * Can't use `display: none` because it's not accessible through keyboard.
  */
 
-.uk-visible-toggle:not(:hover):not(.uk-hover) .uk-hidden-hover:not(:focus) {
+.visible-toggle:not(:hover):not(.hover) .hidden-hover:not(:focus) {
     position: absolute !important;
     width: 0 !important;
     height: 0 !important;
@@ -121,7 +121,7 @@
  * Can't use `visibility: hidden` because it's not accessible through keyboard.
  */
 
-.uk-visible-toggle:not(:hover):not(.uk-hover) .uk-invisible-hover:not(:focus) { opacity: 0 !important; }
+.visible-toggle:not(:hover):not(.hover) .invisible-hover:not(:focus) { opacity: 0 !important; }
 
 
 /* Touch
@@ -133,7 +133,7 @@
  */
 
 @media (pointer: coarse) {
-    .uk-hidden-touch { display: none !important; }
+    .hidden-touch { display: none !important; }
 }
 
 /*
@@ -143,10 +143,10 @@
  */
 
 /* 1 */
-.uk-hidden-notouch { display: none !important; }
+.hidden-notouch { display: none !important; }
 
 @media (pointer: coarse) {
-    .uk-hidden-notouch { display: block !important; }
+    .hidden-notouch { display: block !important; }
 }
 
 

@@ -4,15 +4,15 @@
                      class="col-md-3"
                      :class="$style.newslist">
 
-            <div class="uk-position-relative hover-child-image-scale">
+            <div class="position-relative hover-child-image-scale">
                 <img v-lazy="item.image" alt="item.title">
             </div>
 
-            <div class="uk-position-relative">
+            <div class="position-relative">
                 <img v-lazy="item.image" alt="item.title">
-                <section class="uk-flex uk-flex-center uk-flex-middle uk-background-gray-lightest">
+                <section class="flex flex-center flex-middle background-gray-lightest">
                     <div>
-                        <h3 class="uk-text-capitalize">{{item.title}}</h3>
+                        <h3 class="text-capitalize">{{item.title}}</h3>
                         <h4 class="hover-underline">{{item.subtitle||item.seotitle}}</h4>
                         <p>{{item.discribe}}</p>
                         <!--<span>【查看更多】</span>-->

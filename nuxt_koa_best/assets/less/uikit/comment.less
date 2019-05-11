@@ -1,16 +1,16 @@
 // Name:            Comment
 // Description:     Component to create nested comments
 //
-// Component:       `uk-comment`
+// Component:       `comment`
 //
-// Sub-objects:     `uk-comment-body`
-//                  `uk-comment-header`
-//                  `uk-comment-title`
-//                  `uk-comment-meta`
-//                  `uk-comment-avatar`
-//                  `uk-comment-list`
+// Sub-objects:     `comment-body`
+//                  `comment-header`
+//                  `comment-title`
+//                  `comment-meta`
+//                  `comment-avatar`
+//                  `comment-list`
 //
-// Modifier:        `uk-comment-primary`
+// Modifier:        `comment-primary`
 //
 // ========================================================================
 
@@ -36,7 +36,7 @@
    Component: Comment
  ========================================================================== */
 
-.uk-comment {
+.comment {
     .hook-comment;
 }
 
@@ -44,13 +44,13 @@
 /* Sections
  ========================================================================== */
 
-.uk-comment-body {
+.comment-body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     .hook-comment-body;
 }
 
-.uk-comment-header {
+.comment-header {
     margin-bottom: @comment-header-margin-bottom;
     .hook-comment-header;
 }
@@ -59,29 +59,29 @@
  * Micro clearfix
  */
 
-.uk-comment-body::before,
-.uk-comment-body::after,
-.uk-comment-header::before,
-.uk-comment-header::after {
+.comment-body::before,
+.comment-body::after,
+.comment-header::before,
+.comment-header::after {
     content: "";
     display: table;
 }
 
-.uk-comment-body::after,
-.uk-comment-header::after { clear: both; }
+.comment-body::after,
+.comment-header::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-comment-body > :last-child,
-.uk-comment-header > :last-child { margin-bottom: 0; }
+.comment-body > :last-child,
+.comment-header > :last-child { margin-bottom: 0; }
 
 
 /* Title
  ========================================================================== */
 
-.uk-comment-title {
+.comment-title {
     font-size: @comment-title-font-size;
     line-height: @comment-title-line-height;
     .hook-comment-title;
@@ -91,7 +91,7 @@
 /* Meta
  ========================================================================== */
 
-.uk-comment-meta {
+.comment-meta {
     font-size: @comment-meta-font-size;
     line-height: @comment-meta-line-height;
     color: @comment-meta-color;
@@ -102,7 +102,7 @@
 /* Avatar
  ========================================================================== */
 
-.uk-comment-avatar {
+.comment-avatar {
     .hook-comment-avatar;
 }
 
@@ -110,13 +110,13 @@
 /* List
  ========================================================================== */
 
-.uk-comment-list {
+.comment-list {
     padding: 0;
     list-style: none;
 }
 
 /* Adjacent siblings */
-.uk-comment-list > :nth-child(n+2) {
+.comment-list > :nth-child(n+2) {
     margin-top: @comment-list-margin-top;
     .hook-comment-list-adjacent;
 }
@@ -126,7 +126,7 @@
  * Note: General sibling selector allows reply block between comment and sublist
  */
 
-.uk-comment-list .uk-comment ~ ul {
+.comment-list .comment ~ ul {
     margin: @comment-list-margin-top 0 0 0;
     padding-left: @comment-list-padding-left;
     list-style: none;
@@ -136,12 +136,12 @@
 /* Tablet and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-comment-list .uk-comment ~ ul { padding-left: @comment-list-padding-left-m; }
+    .comment-list .comment ~ ul { padding-left: @comment-list-padding-left-m; }
 
 }
 
 /* Adjacent siblings */
-.uk-comment-list .uk-comment ~ ul > :nth-child(n+2) {
+.comment-list .comment ~ ul > :nth-child(n+2) {
     margin-top: @comment-list-margin-top;
     .hook-comment-list-sub-adjacent;
 }
@@ -150,7 +150,7 @@
 /* Style modifier
  ========================================================================== */
 
-.uk-comment-primary {
+.comment-primary {
     .hook-comment-primary;
 }
 

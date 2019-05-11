@@ -21,10 +21,10 @@
 
       <!--    </transition-group>-->
     </div>
-    <div v-if="pagination" class="uk-text-center">
+    <div v-if="pagination" class="text-center">
       <div v-for="(item,arrindex) in sliderData"
            @click="index=arrindex"
-           class="uk-border-circle uk-background-default-transparent uk-text-center uk-inline "
+           class="border-circle background-default-transparent text-center inline "
            style="width: 20px; height: 20px;line-height:20px;  margin-left: 5px"
            :style="{marginTop:-paginationIndexBottom+'px'}"
            :class="index===arrindex? 'active':''">

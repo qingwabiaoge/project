@@ -1,24 +1,24 @@
 // Name:            Modal
 // Description:     Component to create modal dialogs
 //
-// Component:       `uk-modal`
+// Component:       `modal`
 //
-// Sub-objects:     `uk-modal-page`
-//                  `uk-modal-dialog`
-//                  `uk-modal-header`
-//                  `uk-modal-body`
-//                  `uk-modal-footer`
-//                  `uk-modal-title`
-//                  `uk-modal-close`
+// Sub-objects:     `modal-page`
+//                  `modal-dialog`
+//                  `modal-header`
+//                  `modal-body`
+//                  `modal-footer`
+//                  `modal-title`
+//                  `modal-close`
 //
-// Adopted:         `uk-modal-close-default`
-//                  `uk-modal-close-outside`
-//                  `uk-modal-close-full`
+// Adopted:         `modal-close-default`
+//                  `modal-close-outside`
+//                  `modal-close-full`
 //
-// Modifiers:       `uk-modal-container`
-//                  `uk-modal-full`
+// Modifiers:       `modal-container`
+//                  `modal-full`
 //
-// States:          `uk-open`
+// States:          `open`
 //
 // ========================================================================
 
@@ -76,7 +76,7 @@
  * 6. Fade-in transition
  */
 
-.uk-modal {
+.modal {
     /* 1 */
     display: none;
     /* 2 */
@@ -102,14 +102,14 @@
 /* Phone landscape and bigger */
 @media (min-width: @global-breakpoint-phone) {
 
-    .uk-modal { padding: @modal-padding-vertical-s @modal-padding-horizontal-s; }
+    .modal { padding: @modal-padding-vertical-s @modal-padding-horizontal-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-modal {
+    .modal {
         padding-left: @modal-padding-horizontal-m;
         padding-right: @modal-padding-horizontal-m;
     }
@@ -120,7 +120,7 @@
  * Open
  */
 
-.uk-modal.uk-open { opacity: 1; }
+.modal.open { opacity: 1; }
 
 
 /* Page
@@ -130,7 +130,7 @@
  * Prevent scrollbars
  */
 
-.uk-modal-page { overflow: hidden; }
+.modal-page { overflow: hidden; }
 
 
 /* Dialog
@@ -140,12 +140,12 @@
  * 1. Create position context for spinner and close button
  * 2. Dimensions
  * 3. Fix `max-width: 100%` not working in combination with flex and responsive images in IE11
- *    `!important` needed to overwrite `uk-width-auto`. See `#modal-media-image` in tests
+ *    `!important` needed to overwrite `width-auto`. See `#modal-media-image` in tests
  * 4. Style
  * 5. Slide-in transition
  */
 
-.uk-modal-dialog {
+.modal-dialog {
     /* 1 */
     position: relative;
     /* 2 */
@@ -168,7 +168,7 @@
  * Open
  */
 
-.uk-open > .uk-modal-dialog {
+.open > .modal-dialog {
     opacity: 1;
     transform: translateY(0);
 }
@@ -182,7 +182,7 @@
  * Take the same size as the Container component
  */
 
-.uk-modal-container .uk-modal-dialog { width: @modal-container-width; }
+.modal-container .modal-dialog { width: @modal-container-width; }
 
 /*
  * Full size
@@ -191,13 +191,13 @@
  */
 
 /* 1 */
-.uk-modal-full {
+.modal-full {
     padding: 0;
     background: none;
 }
 
 /* 2 */
-.uk-modal-full .uk-modal-dialog {
+.modal-full .modal-dialog {
     margin: 0;
     width: 100%;
     max-width: 100%;
@@ -209,18 +209,18 @@
 /* Sections
  ========================================================================== */
 
-.uk-modal-body {
+.modal-body {
     padding: @modal-body-padding-vertical @modal-body-padding-horizontal;
     .hook-modal-body;
 }
 
-.uk-modal-header {
+.modal-header {
     padding: @modal-header-padding-vertical @modal-header-padding-horizontal;
     background: @modal-header-background;
     .hook-modal-header;
 }
 
-.uk-modal-footer {
+.modal-footer {
     padding: @modal-footer-padding-vertical @modal-footer-padding-horizontal;
     background: @modal-footer-background;
     .hook-modal-footer;
@@ -230,33 +230,33 @@
  * Micro clearfix
  */
 
-.uk-modal-body::before,
-.uk-modal-body::after,
-.uk-modal-header::before,
-.uk-modal-header::after,
-.uk-modal-footer::before,
-.uk-modal-footer::after {
+.modal-body::before,
+.modal-body::after,
+.modal-header::before,
+.modal-header::after,
+.modal-footer::before,
+.modal-footer::after {
     content: "";
     display: table;
 }
 
-.uk-modal-body::after,
-.uk-modal-header::after,
-.uk-modal-footer::after { clear: both; }
+.modal-body::after,
+.modal-header::after,
+.modal-footer::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-modal-body > :last-child,
-.uk-modal-header > :last-child,
-.uk-modal-footer > :last-child { margin-bottom: 0; }
+.modal-body > :last-child,
+.modal-header > :last-child,
+.modal-footer > :last-child { margin-bottom: 0; }
 
 
 /* Title
  ========================================================================== */
 
-.uk-modal-title {
+.modal-title {
     font-size: @modal-title-font-size;
     line-height: @modal-title-line-height;
     .hook-modal-title;
@@ -264,10 +264,10 @@
 
 
 /* Close
- * Adopts `uk-close`
+ * Adopts `close`
  ========================================================================== */
 
-[class*='uk-modal-close-'] {
+[class*='modal-close-'] {
     position: absolute;
     z-index: @modal-z-index;
     top: @modal-close-position;
@@ -280,13 +280,13 @@
  * Remove margin from adjacent element
  */
 
-[class*='uk-modal-close-']:first-child + * { margin-top: 0; }
+[class*='modal-close-']:first-child + * { margin-top: 0; }
 
 /*
  * Hover
  */
 
-[class*='uk-modal-close-']:hover {
+[class*='modal-close-']:hover {
     .hook-modal-close-hover;
 }
 
@@ -294,11 +294,11 @@
  * Default
  */
 
-.uk-modal-close-default {
+.modal-close-default {
     .hook-modal-close-default;
 }
 
-.uk-modal-close-default:hover {
+.modal-close-default:hover {
     .hook-modal-close-default-hover;
 }
 
@@ -307,7 +307,7 @@
  * 1. Prevent scrollbar on small devices
  */
 
-.uk-modal-close-outside {
+.modal-close-outside {
     top: @modal-close-outside-position;
     /* 1 */
     right: -@modal-close-padding;
@@ -316,7 +316,7 @@
     .hook-modal-close-outside;
 }
 
-.uk-modal-close-outside:hover {
+.modal-close-outside:hover {
     color: @modal-close-outside-hover-color;
     .hook-modal-close-outside-hover;
 }
@@ -325,7 +325,7 @@
 @media (min-width: @global-breakpoint-tablet) {
 
     /* 1 */
-    .uk-modal-close-outside {
+    .modal-close-outside {
         right: @modal-close-outside-position;
         transform: translate(@modal-close-outside-translate, -(@modal-close-outside-translate));
     }
@@ -336,11 +336,11 @@
  * Full
  */
 
-.uk-modal-close-full {
+.modal-close-full {
     .hook-modal-close-full;
 }
 
-.uk-modal-close-full:hover {
+.modal-close-full:hover {
     .hook-modal-close-full-hover;
 }
 

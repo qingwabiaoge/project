@@ -1,12 +1,12 @@
 // Name:            Slider
 // Description:     Component to create horizontal sliders
 //
-// Component:       `uk-slider`
+// Component:       `slider`
 //
-// Sub-objects:     `uk-slider-container`
-//                  `uk-slider-items`
+// Sub-objects:     `slider-container`
+//                  `slider-items`
 //
-// States:          `uk-active`
+// States:          `active`
 //
 // ========================================================================
 
@@ -19,7 +19,7 @@
  * 1. Prevent tab highlighting on iOS.
  */
 
-.uk-slider {
+.slider {
     /* 1 */
     -webkit-tap-highlight-color: transparent;
     .hook-slider;
@@ -33,7 +33,7 @@
  * 1. Clip child elements
  */
 
-.uk-slider-container {
+.slider-container {
     /* 1 */
     overflow: hidden;
 }
@@ -46,7 +46,7 @@
  * 2. Create a containing block. In Safari it's neither created by `transform` nor `will-change`.
  */
 
-.uk-slider-items {
+.slider-items {
     /* 1 */
     will-change: transform;
     /* 2 */
@@ -58,7 +58,7 @@
  * 2. Prevent displaying the callout information on iOS.
  */
 
-.uk-slider-items:not(.uk-grid) {
+.slider-items:not(.grid) {
     display: flex;
     /* 1 */
     margin: 0;
@@ -68,7 +68,7 @@
     -webkit-touch-callout: none;
 }
 
-.uk-slider-items.uk-grid { flex-wrap: nowrap; }
+.slider-items.grid { flex-wrap: nowrap; }
 
 
 /* Item
@@ -80,7 +80,7 @@
  * 3. Disable horizontal panning gestures in IE11 and Edge
  */
 
-.uk-slider-items > * {
+.slider-items > * {
     /* 1 */
     flex: none;
     /* 2 */

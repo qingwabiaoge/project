@@ -39,12 +39,12 @@
                 subTitle="历史"
                 text="brand history"
                 href="/brand"
-                class="uk-hidden@xs"
+                class="hidden@xs"
                description="　BEST 百事得成立于2005年，位于意大利Viadana-维亚达纳，作为房屋内部装饰涂料品牌，百事得bset着重于提高对人体居住环境的健康性，舒适性而努力。在意大利本土拥有1600家销售网点，产品涵盖了艺术涂料、内外墙建筑涂料、木器漆以及全线的民用涂料产品。">
     </titleScale>
 
 
-    <pictextHistory :data="$store.state.componentDatas.pictextHistory"  class="uk-hidden@xs"></pictextHistory>
+    <pictextHistory :data="$store.state.componentDatas.pictextHistory"  class="hidden@xs"></pictextHistory>
 
 
     <titleScale title="公司"
@@ -53,10 +53,10 @@
                 href="/公司新闻">
     </titleScale>
 
-    <el-row :gutter="80" class="uk-margin-top-small">
+    <el-row :gutter="80" class="margin-top-small">
       <el-col :xl="6" :md="6"  v-for="(item,index) in $store.state.articles.picA"
                   :key="'picAlist'+index">
-        <picA :item="item" class="uk-margin-top">
+        <picA :item="item" class="margin-top">
         </picA>
       </el-col>
     </el-row>

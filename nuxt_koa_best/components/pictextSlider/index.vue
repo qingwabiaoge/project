@@ -1,5 +1,5 @@
 <template>
-  <el-row class=" uk-inverse uk-background-gray-dark">
+  <el-row class=" inverse background-gray-dark">
     <el-col :md="12">
       <baseSlider :sliderData="left"
                   :number="1"

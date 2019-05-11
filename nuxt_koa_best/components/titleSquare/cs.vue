@@ -2,7 +2,7 @@
     <div>
         <titleSquare>标题</titleSquare>
         <titleSquare type="default">标题</titleSquare>
-        <div class="uk-background-black">
+        <div class="background-black">
             <titleSquare type="primary">标题</titleSquare>
             <titleSquare type="inverse">标题</titleSquare>
         </div>

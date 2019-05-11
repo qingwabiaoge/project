@@ -1,11 +1,11 @@
 // Name:            Thumbnav
 // Description:     Component to create thumbnail navigations
 //
-// Component:       `uk-thumbnav`
+// Component:       `thumbnav`
 //
-// Modifier:        `uk-thumbnav-vertical`
+// Modifier:        `thumbnav-vertical`
 //
-// States:          `uk-active`
+// States:          `active`
 //
 // ========================================================================
 
@@ -27,7 +27,7 @@
  * 3. Gutter
  */
 
-.uk-thumbnav {
+.thumbnav {
     display: flex;
     /* 1 */
     flex-wrap: wrap;
@@ -45,7 +45,7 @@
  * 1. Gutter
  */
 
-.uk-thumbnav > * {
+.thumbnav > * {
     /* 1 */
     padding-left: @thumbnav-margin-horizontal;
 }
@@ -58,25 +58,25 @@
  * Items
  */
 
-.uk-thumbnav > * > * {
+.thumbnav > * > * {
     display: inline-block;
     .hook-thumbnav-item;
 }
 
 /* Hover + Focus */
-.uk-thumbnav > * > :hover,
-.uk-thumbnav > * > :focus {
+.thumbnav > * > :hover,
+.thumbnav > * > :focus {
     outline: none;
     .hook-thumbnav-item-hover;
 }
 
 /* Active */
-.uk-thumbnav > .uk-active > * {
+.thumbnav > .active > * {
     .hook-thumbnav-item-active;
 }
 
 
-/* Modifier: 'uk-thumbnav-vertical'
+/* Modifier: 'thumbnav-vertical'
  ========================================================================== */
 
 /*
@@ -84,7 +84,7 @@
  * 2. Gutter
  */
 
-.uk-thumbnav-vertical {
+.thumbnav-vertical {
     /* 1 */
     flex-direction: column;
     /* 2 */
@@ -93,7 +93,7 @@
 }
 
 /* 2 */
-.uk-thumbnav-vertical > * {
+.thumbnav-vertical > * {
     padding-left: 0;
     padding-top: @thumbnav-margin-vertical;
 }
@@ -116,16 +116,16 @@
 
 .hook-inverse() {
 
-    .uk-thumbnav > * > * {
+    .thumbnav > * > * {
         .hook-inverse-thumbnav-item;
     }
 
-    .uk-thumbnav > * > :hover,
-    .uk-thumbnav > * > :focus {
+    .thumbnav > * > :hover,
+    .thumbnav > * > :focus {
         .hook-inverse-thumbnav-item-hover;
     }
 
-    .uk-thumbnav > .uk-active > * {
+    .thumbnav > .active > * {
         .hook-inverse-thumbnav-item-active;
     }
 

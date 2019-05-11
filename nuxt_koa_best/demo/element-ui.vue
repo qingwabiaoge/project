@@ -4,7 +4,7 @@
         <i class="iconfont icon-weixin"></i>
 <el-button>按钮</el-button>
 
-        <baseButton class="uk-margin-medium-top"></baseButton>
+        <baseButton class="margin-medium-top"></baseButton>
     <picCard>阿牛</picCard>
 
 

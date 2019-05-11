@@ -1,15 +1,15 @@
 <template>
-    <div class="uk-background-gray-lightest">
-        <div class="container uk-flex uk-flex-between  "
+    <div class="background-gray-lightest">
+        <div class="container flex flex-between  "
              :class="$style['ico-group']"
         >
             <div v-for="item in data"
-                 class="uk-flex uk-flex-column uk-flex-middle"
+                 class="flex flex-column flex-middle"
             >
               <base-icon :icon="item.ico" circle="84"></base-icon>
                 <h3
                 >{{item.title}}</h3>
-                <p class="uk-padding-top-smaller">
+                <p class="padding-top-smaller">
                     {{item.subtitle}}
                 </p>
             </div>

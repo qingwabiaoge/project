@@ -1,16 +1,16 @@
 // Name:            Dropdown
 // Description:     Component to create dropdown menus
 //
-// Component:       `uk-dropdown`
+// Component:       `dropdown`
 //
-// Adopted:         `uk-dropdown-nav`
+// Adopted:         `dropdown-nav`
 //
-// Modifiers:       `uk-dropdown-top-*`
-//                  `uk-dropdown-bottom-*`
-//                  `uk-dropdown-left-*`
-//                  `uk-dropdown-right-*`
-//                  `uk-dropdown-stack`
-//                  `uk-dropdown-grid`
+// Modifiers:       `dropdown-top-*`
+//                  `dropdown-bottom-*`
+//                  `dropdown-left-*`
+//                  `dropdown-right-*`
+//                  `dropdown-stack`
+//                  `dropdown-grid`
 //
 // ========================================================================
 
@@ -45,7 +45,7 @@
  * 4. Style
  */
 
-.uk-dropdown {
+.dropdown {
     /* 1 */
     display: none;
     /* 2 */
@@ -62,14 +62,14 @@
 }
 
 /* Show */
-.uk-dropdown.uk-open { display: block; }
+.dropdown.open { display: block; }
 
 
 /* Nav
- * Adopts `uk-nav`
+ * Adopts `nav`
  ========================================================================== */
 
-.uk-dropdown-nav {
+.dropdown-nav {
     white-space: nowrap;
     .hook-dropdown-nav;
 }
@@ -78,15 +78,15 @@
  * Items
  */
 
-.uk-dropdown-nav > li > a {
+.dropdown-nav > li > a {
     color: @dropdown-nav-item-color;
     .hook-dropdown-nav-item;
 }
 
 /* Hover + Focus + Active */
-.uk-dropdown-nav > li > a:hover,
-.uk-dropdown-nav > li > a:focus,
-.uk-dropdown-nav > li.uk-active > a {
+.dropdown-nav > li > a:hover,
+.dropdown-nav > li > a:focus,
+.dropdown-nav > li.active > a {
     color: @dropdown-nav-item-hover-color;
     .hook-dropdown-nav-item-hover;
 }
@@ -95,7 +95,7 @@
  * Header
  */
 
-.uk-dropdown-nav .uk-nav-header {
+.dropdown-nav .nav-header {
     color: @dropdown-nav-header-color;
     .hook-dropdown-nav-header;
 }
@@ -104,7 +104,7 @@
  * Divider
  */
 
-.uk-dropdown-nav .uk-nav-divider {
+.dropdown-nav .nav-divider {
     border-top: @dropdown-nav-divider-border-width solid @dropdown-nav-divider-border;
     .hook-dropdown-nav-divider;
 }
@@ -113,26 +113,26 @@
  * Sublists
  */
 
-.uk-dropdown-nav .uk-nav-sub a { color: @dropdown-nav-sublist-item-color; }
+.dropdown-nav .nav-sub a { color: @dropdown-nav-sublist-item-color; }
 
-.uk-dropdown-nav .uk-nav-sub a:hover,
-.uk-dropdown-nav .uk-nav-sub a:focus { color: @dropdown-nav-sublist-item-hover-color; }
+.dropdown-nav .nav-sub a:hover,
+.dropdown-nav .nav-sub a:focus { color: @dropdown-nav-sublist-item-hover-color; }
 
 
 /* Direction / Alignment modifiers
  ========================================================================== */
 
 /* Direction */
-[class*='uk-dropdown-top'] { margin-top: -@dropdown-margin; }
-[class*='uk-dropdown-bottom'] { margin-top: @dropdown-margin; }
-[class*='uk-dropdown-left'] { margin-left: -@dropdown-margin; }
-[class*='uk-dropdown-right'] { margin-left: @dropdown-margin; }
+[class*='dropdown-top'] { margin-top: -@dropdown-margin; }
+[class*='dropdown-bottom'] { margin-top: @dropdown-margin; }
+[class*='dropdown-left'] { margin-left: -@dropdown-margin; }
+[class*='dropdown-right'] { margin-left: @dropdown-margin; }
 
 
 /* Grid modifiers
  ========================================================================== */
 
-.uk-dropdown-stack .uk-dropdown-grid > * { width: 100% !important; }
+.dropdown-stack .dropdown-grid > * { width: 100% !important; }
 
 
 

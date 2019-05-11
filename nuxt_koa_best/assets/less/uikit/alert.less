@@ -1,14 +1,14 @@
 // Name:            Alert
 // Description:     Component to create alert messages
 //
-// Component:       `uk-alert`
+// Component:       `alert`
 //
-// Adopted:         `uk-alert-close`
+// Adopted:         `alert-close`
 //
-// Modifiers:       `uk-alert-primary`
-//                  `uk-alert-success`
-//                  `uk-alert-warning`
-//                  `uk-alert-danger`
+// Modifiers:       `alert-primary`
+//                  `alert-success`
+//                  `alert-warning`
+//                  `alert-danger`
 //
 // ========================================================================
 
@@ -42,7 +42,7 @@
    Component: Alert
  ========================================================================== */
 
-.uk-alert {
+.alert {
     position: relative;
     margin-bottom: @alert-margin-vertical;
     padding: @alert-padding @alert-padding-right @alert-padding @alert-padding;
@@ -52,20 +52,20 @@
 }
 
 /* Add margin if adjacent element */
-* + .uk-alert { margin-top: @alert-margin-vertical; }
+* + .alert { margin-top: @alert-margin-vertical; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-alert > :last-child { margin-bottom: 0; }
+.alert > :last-child { margin-bottom: 0; }
 
 
 /* Close
- * Adopts `uk-close`
+ * Adopts `close`
  ========================================================================== */
 
-.uk-alert-close {
+.alert-close {
     position: absolute;
     top: @alert-close-top;
     right: @alert-close-right;
@@ -76,14 +76,14 @@
  * Remove margin from adjacent element
  */
 
-.uk-alert-close:first-child + * { margin-top: 0; }
+.alert-close:first-child + * { margin-top: 0; }
 
 /*
  * Hover + Focus
  */
 
-.uk-alert-close:hover,
-.uk-alert-close:focus {
+.alert-close:hover,
+.alert-close:focus {
     .hook-alert-close-hover;
 }
 
@@ -95,7 +95,7 @@
  * Primary
  */
 
-.uk-alert-primary {
+.alert-primary {
     background: @alert-primary-background;
     color: @alert-primary-color;
     .hook-alert-primary;
@@ -105,7 +105,7 @@
  * Success
  */
 
-.uk-alert-success {
+.alert-success {
     background: @alert-success-background;
     color: @alert-success-color;
     .hook-alert-success;
@@ -115,7 +115,7 @@
  * Warning
  */
 
-.uk-alert-warning {
+.alert-warning {
     background: @alert-warning-background;
     color: @alert-warning-color;
     .hook-alert-warning;
@@ -125,7 +125,7 @@
  * Danger
  */
 
-.uk-alert-danger {
+.alert-danger {
     background: @alert-danger-background;
     color: @alert-danger-color;
     .hook-alert-danger;

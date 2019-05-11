@@ -1,17 +1,17 @@
 // Name:            Lightbox
 // Description:     Component to create an lightbox image gallery
 //
-// Component:       `uk-lightbox`
+// Component:       `lightbox`
 //
-// Sub-objects:     `uk-lightbox-page`
-//                  `uk-lightbox-items`
-//                  `uk-lightbox-toolbar`
-//                  `uk-lightbox-toolbar-icon`
-//                  `uk-lightbox-button`
-//                  `uk-lightbox-caption`
-//                  `uk-lightbox-iframe`
+// Sub-objects:     `lightbox-page`
+//                  `lightbox-items`
+//                  `lightbox-toolbar`
+//                  `lightbox-toolbar-icon`
+//                  `lightbox-button`
+//                  `lightbox-caption`
+//                  `lightbox-iframe`
 //
-// States:          `uk-open`
+// States:          `open`
 //
 // ========================================================================
 
@@ -54,7 +54,7 @@
  * 6. Fade-in transition
  */
 
-.uk-lightbox {
+.lightbox {
     /* 1 */
     display: none;
     /* 2 */
@@ -78,7 +78,7 @@
  * 2. Fade-in
  */
 
-.uk-lightbox.uk-open {
+.lightbox.open {
     display: block;
     /* 2 */
     opacity: 1;
@@ -92,7 +92,7 @@
  * Prevent scrollbars
  */
 
-.uk-lightbox-page { overflow: hidden; }
+.lightbox-page { overflow: hidden; }
 
 
 /* Item
@@ -108,7 +108,7 @@
  *    Using `vh` and `vw` to make responsive image work in IE11
  */
 
-.uk-lightbox-items > * {
+.lightbox-items > * {
     /* 1 */
     position: absolute;
     top: 0;
@@ -127,35 +127,35 @@
 }
 
 /* 5 */
-.uk-lightbox-items > * > * {
+.lightbox-items > * > * {
     max-width: 100vw;
     max-height: 100vh;
 }
 
-.uk-lightbox-items > * > :not(iframe) {
+.lightbox-items > * > :not(iframe) {
     width: auto;
     height: auto;
 }
 
-.uk-lightbox-items > .uk-active { display: flex; }
+.lightbox-items > .active { display: flex; }
 
 /* Toolbar
  ========================================================================== */
 
-.uk-lightbox-toolbar {
+.lightbox-toolbar {
     padding: @lightbox-toolbar-padding-vertical @lightbox-toolbar-padding-horizontal;
     background: @lightbox-toolbar-background;
     color: @lightbox-toolbar-color;
     .hook-lightbox-toolbar;
 }
 
-.uk-lightbox-toolbar * { color: @lightbox-toolbar-color; }
+.lightbox-toolbar * { color: @lightbox-toolbar-color; }
 
 
 /* Toolbar Icon (Close)
  ========================================================================== */
 
-.uk-lightbox-toolbar-icon {
+.lightbox-toolbar-icon {
     padding: @lightbox-toolbar-icon-padding;
     color: @lightbox-toolbar-icon-color;
     .hook-lightbox-toolbar-icon;
@@ -165,7 +165,7 @@
  * Hover
  */
 
-.uk-lightbox-toolbar-icon:hover {
+.lightbox-toolbar-icon:hover {
     color: @lightbox-toolbar-icon-hover-color;
     .hook-lightbox-toolbar-icon-hover;
 }
@@ -179,7 +179,7 @@
  * 1. Center icon vertically and horizontally
  */
 
-.uk-lightbox-button {
+.lightbox-button {
     box-sizing: border-box;
     width: @lightbox-button-size;
     height: @lightbox-button-size;
@@ -196,7 +196,7 @@
  * Hover
  */
 
-.uk-lightbox-button:hover {
+.lightbox-button:hover {
     color: @lightbox-button-hover-color;
     .hook-lightbox-button-hover;
 }
@@ -205,13 +205,13 @@
 /* Caption
  ========================================================================== */
 
-.uk-lightbox-caption {}
+.lightbox-caption {}
 
 
 /* Iframe
  ========================================================================== */
 
-.uk-lightbox-iframe {
+.lightbox-iframe {
     width: 80%;
     height: 80%;
 }

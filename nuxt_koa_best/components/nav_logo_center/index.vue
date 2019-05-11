@@ -1,5 +1,5 @@
 <template>
-  <div class="nav_logo_center uk-background-default ">
+  <div class="nav_logo_center background-default ">
     <a href="/" class="hover-underline active">首页</a>
     <a href="#" class="hover-underline">产品</a>
     <a href="#" class="hover-underline">品牌</a>

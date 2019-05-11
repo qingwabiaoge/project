@@ -1,6 +1,6 @@
 <template>
     <div style="width: 300px">
-        <collapseNav :navs="navs" class="collapse-nav uk-background-default">
+        <collapseNav :navs="navs" class="collapse-nav background-default">
 
         </collapseNav>
     </div>

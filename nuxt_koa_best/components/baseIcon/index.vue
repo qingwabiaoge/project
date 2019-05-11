@@ -1,12 +1,12 @@
 <template>
 
-    <div class="uk-inline"
+    <div class="inline"
          :class="[$style.wrap,
-               circle?`uk-border
-               uk-border-circle
-               uk-flex-inline
-               uk-flex-center
-               uk-flex-middle`:'']"
+               circle?`border
+               border-circle
+               flex-inline
+               flex-center
+               flex-middle`:'']"
          :style="{width:circle+'px' ,height:circle+'px'}"
     >
 

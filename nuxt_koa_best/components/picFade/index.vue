@@ -1,13 +1,13 @@
 <template>
     <div class=" row row-children-padding-remove">
         <nuxt-link :to="{path:item.href}"
-                     class="col-md-4 uk-inline hover-child-image-fade hover-child-image-scale"
+                     class="col-md-4 inline hover-child-image-fade hover-child-image-scale"
                      v-for="(item,index) in data"
                      :key="item.title+index">
 
             <img v-lazy="item.image" alt="">
             <div :class="$style.flex">
-                <div class="uk-text-uppercase ">
+                <div class="text-uppercase ">
                     <h2 class="color-white">{{item.title}} </h2>
                     {{item.subtitle}}
                 </div>

@@ -3,7 +3,7 @@
 
     <div class="container">
 
-      <div class="clearfix uk-border-bottom">
+      <div class="clearfix border-bottom">
         <ul class="nav pull-left">
           <li><a href="#">产品</a></li>
           <li><a href="#">品牌</a></li>
@@ -53,9 +53,9 @@
 
         </ul>
       </div>
-      <h6 class=" uk-margin-medium-top">粤ICP备15111100号-1 | 粤ICP备15111100号 广东省通信管理局ICP备案　　</h6>
+      <h6 class=" margin-medium-top">粤ICP备15111100号-1 | 粤ICP备15111100号 广东省通信管理局ICP备案　　</h6>
 
-      <P class=" uk-margin-top-small">Copyright © 2016　V.S HOLIDAY 时尚男装　All Rights Reserved.</P>
+      <P class=" margin-top-small">Copyright © 2016　V.S HOLIDAY 时尚男装　All Rights Reserved.</P>
     </div>
 
   </div>

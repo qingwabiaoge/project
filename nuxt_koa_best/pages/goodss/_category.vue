@@ -1,22 +1,22 @@
 <template>
-    <div class="uk-background-gray-lightest uk-padding-top-small uk-padding-bottom-largest">
+    <div class="background-gray-lightest padding-top-small padding-bottom-largest">
 
-        <pictextContact  :data="$store.state.componentDatas.pictextContact" class="uk-hidden@xs"></pictextContact>
+        <pictextContact  :data="$store.state.componentDatas.pictextContact" class="hidden@xs"></pictextContact>
 
-        <div class="uk-margin-top container">
+        <div class="margin-top container">
 
             <el-row :gutter="30">
                 <el-col :md="6">
                     <titlebarA icon="chanpin"
                                title="产品中心"
                                subTitle="PRODUCE"
-                               class="uk-border-bottom">
+                               class="border-bottom">
 
                     </titlebarA>
 
-                  <div class="uk-background-default uk-padding-bottom-large uk-padding-top">
+                  <div class="background-default padding-bottom-large padding-top">
                     <nuxt-link
-                      class="uk-display-block hover-underline hover-underline-left "
+                      class="display-block hover-underline hover-underline-left "
                       style="padding: 15px 0 15px 30px"
                       v-for="item in $store.state.config.goodsCategory"
                       :key="item.text"
@@ -29,12 +29,12 @@
                     <titlebarA icon="xiazai"
                                title="联系我们"
                                subTitle="CONTACT"
-                               class="uk-border-bottom uk-margin-top uk-hidden@xs">
+                               class="border-bottom margin-top hidden@xs">
 
                     </titlebarA>
 
 
-                      <pictextContactSiderbar class="uk-hidden@xs"></pictextContactSiderbar>
+                      <pictextContactSiderbar class="hidden@xs"></pictextContactSiderbar>
 
 
 
@@ -56,7 +56,7 @@
                             :total="151"
                             :current="2"
                             path="/公司新闻"
-                            class="uk-text-center uk-margin-top">
+                            class="text-center margin-top">
 
                     </pagination>
                 </el-col>

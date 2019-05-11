@@ -1,15 +1,15 @@
 // Name:            Sortable
 // Description:     Component to create sortable grids and lists
 //
-// Component:       `uk-sortable`
+// Component:       `sortable`
 //
-// Sub-objects:     `uk-sortable-drag`
-//                  `uk-sortable-placeholder`
-//                  `uk-sortable-handle`
+// Sub-objects:     `sortable-drag`
+//                  `sortable-placeholder`
+//                  `sortable-handle`
 //
-// Modifiers:       `uk-sortable-empty`
+// Modifiers:       `sortable-empty`
 //
-// States:          `uk-drag`
+// States:          `drag`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@
    Component: Sortable
  ========================================================================== */
 
-.uk-sortable {
+.sortable {
     position: relative;
     .hook-sortable;
 }
@@ -37,25 +37,25 @@
  * Deactivate browser touch actions in IE11 and Edge
  */
 
-.uk-sortable > * { touch-action: none; }
+.sortable > * { touch-action: none; }
 
 /*
  * Deactivate pointer-events on SVGs in Safari
  */
 
-.uk-sortable svg { pointer-events: none; }
+.sortable svg { pointer-events: none; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-sortable > :last-child { margin-bottom: 0; }
+.sortable > :last-child { margin-bottom: 0; }
 
 
 /* Drag
  ========================================================================== */
 
-.uk-sortable-drag {
+.sortable-drag {
     position: absolute !important;
     z-index: @sortable-dragged-z-index !important;
     pointer-events: none;
@@ -66,7 +66,7 @@
 /* Placeholder
  ========================================================================== */
 
-.uk-sortable-placeholder {
+.sortable-placeholder {
     opacity: @sortable-placeholder-opacity;
     .hook-sortable-placeholder;
 }
@@ -75,7 +75,7 @@
 /* Empty modifier
  ========================================================================== */
 
-.uk-sortable-empty {
+.sortable-empty {
     min-height: @sortable-empty-height;
     .hook-sortable-empty;
 }
@@ -85,7 +85,7 @@
  ========================================================================== */
 
 /* Hover */
-.uk-sortable-handle:hover { cursor: move; }
+.sortable-handle:hover { cursor: move; }
 
 
 

@@ -3,20 +3,20 @@
 
     <div :class="$style.module"
          :style="{background:`url(${bg}) center`}"
-         class="uk-flex uk-flex-column "
+         class="flex flex-column "
          style=" height: 638px; color: white; justify-content: flex-end;align-items: flex-end "
          v-if="data"
     >
-        <section class="container uk-text-right">
-            <div class=" uk-inline uk-text-left uk-margin-bottom"
+        <section class="container text-right">
+            <div class=" inline text-left margin-bottom"
                  style="width:553px; padding :45px 55px;background: rgba(255,219,155,0.4)">
                 <h2 class="color-white" style="font-size: 27px;">{{cur.title}}</h2>
                 <p style="padding: 25px 0">{{cur.description}}</p>
             </div>
         </section>
         <!--导航-->
-        <ul class="container uk-flex uk-flex-between">
-            <li class="uk-inline uk-text-center "
+        <ul class="container flex flex-between">
+            <li class="inline text-center "
                 :class="{[$style.active]:cur===item}"
                 style=" width: 55px; height: 66px;  padding-top: 22px ;margin-bottom: 12px;"
                 v-for="item in tabs"

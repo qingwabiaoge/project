@@ -1,8 +1,8 @@
 <template>
-    <div class="  uk-flex uk-background-default"
+    <div class="  flex background-default"
          style="padding: 24px 0 24px 30px;"
     >
-        <div class="uk-border-circle uk-background-primary uk-flex uk-flex-center uk-flex-middle"
+        <div class="border-circle background-primary flex flex-center flex-middle"
              style="width: 45px; height: 45px ;margin-right: 8px">
             <i class="color-white"
                style="font-size: 26px"

@@ -1,7 +1,7 @@
 // Name:            Background
 // Description:     Utilities for backgrounds
 //
-// Component:       `uk-background-*`
+// Component:       `background-*`
 //
 // ========================================================================
 
@@ -21,47 +21,47 @@
 
 /* Color
  ========================================================================== */
-.uk-background-gray-darker {background-color:@global-color-gray-darker};
-.uk-background-gray-dark {background-color:@global-color-gray-dark};
-.uk-background-gray { background-color: @global-color-gray; }
-.uk-background-gray-lighter { background-color: @global-color-gray-lighter; }
-.uk-background-gray-lightest { background-color: @global-color-gray-lightest; }
-.uk-background-default { background-color: @background-default-background; }
-.uk-background-primary { background-color: @background-primary-background; }
-.uk-background-secondary,.uk-background-black { background-color: @background-black-background; }
+.background-gray-darker {background-color:@global-color-gray-darker};
+.background-gray-dark {background-color:@global-color-gray-dark};
+.background-gray { background-color: @global-color-gray; }
+.background-gray-lighter { background-color: @global-color-gray-lighter; }
+.background-gray-lightest { background-color: @global-color-gray-lightest; }
+.background-default { background-color: @background-default-background; }
+.background-primary { background-color: @background-primary-background; }
+.background-secondary,.background-black { background-color: @background-black-background; }
 
 
 /* Size
  ========================================================================== */
 
-.uk-background-cover,
-.uk-background-contain {
+.background-cover,
+.background-contain {
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
 
-.uk-background-cover { background-size: cover; }
-.uk-background-contain { background-size: contain; }
+.background-cover { background-size: cover; }
+.background-contain { background-size: contain; }
 
 
 /* Position
  ========================================================================== */
 
-.uk-background-top-left { background-position: 0 0; }
-.uk-background-top-center { background-position: 50% 0; }
-.uk-background-top-right { background-position: 100% 0; }
-.uk-background-center-left { background-position: 0 50%; }
-.uk-background-center-center { background-position: 50% 50%; }
-.uk-background-center-right { background-position: 100% 50%; }
-.uk-background-bottom-left { background-position: 0 100%; }
-.uk-background-bottom-center { background-position: 50% 100%; }
-.uk-background-bottom-right { background-position: 100% 100%; }
+.background-top-left { background-position: 0 0; }
+.background-top-center { background-position: 50% 0; }
+.background-top-right { background-position: 100% 0; }
+.background-center-left { background-position: 0 50%; }
+.background-center-center { background-position: 50% 50%; }
+.background-center-right { background-position: 100% 50%; }
+.background-bottom-left { background-position: 0 100%; }
+.background-bottom-center { background-position: 50% 100%; }
+.background-bottom-right { background-position: 100% 100%; }
 
 
 /* Repeat
  ========================================================================== */
 
-.uk-background-norepeat { background-repeat: no-repeat; }
+.background-norepeat { background-repeat: no-repeat; }
 
 
 /* Attachment
@@ -71,7 +71,7 @@
  * 1. Fix bug introduced in Chrome 67: the background image is not visible if any element on the page uses `translate3d`
  */
 
-.uk-background-fixed {
+.background-fixed {
     background-attachment: fixed;
     /* 1 */
     backface-visibility: hidden;
@@ -82,7 +82,7 @@
  */
 
 @media (pointer: coarse) {
-    .uk-background-fixed { background-attachment: scroll; }
+    .background-fixed { background-attachment: scroll; }
 }
 
 
@@ -92,28 +92,28 @@
 /* Phone portrait and smaller */
 @media (max-width: @breakpoint-xsmall-max) {
 
-    .uk-background-image\@s { background-image: none !important; }
+    .background-image\@s { background-image: none !important; }
 
 }
 
 /* Phone landscape and smaller */
 @media (max-width: @global-breakpoint-phone-max) {
 
-    .uk-background-image\@m { background-image: none !important; }
+    .background-image\@m { background-image: none !important; }
 
 }
 
 /* Tablet landscape and smaller */
 @media (max-width: @global-breakpoint-tablet-max) {
 
-    .uk-background-image\@l { background-image: none !important; }
+    .background-image\@l { background-image: none !important; }
 
 }
 
 /* Desktop and smaller */
 @media (max-width: @global-breakpoint-desktop-max) {
 
-    .uk-background-image\@xl {background-image: none !important; }
+    .background-image\@xl {background-image: none !important; }
 
 }
 
@@ -121,21 +121,21 @@
 /* Blend modes
  ========================================================================== */
 
-.uk-background-blend-multiply { background-blend-mode: multiply; }
-.uk-background-blend-screen { background-blend-mode: screen; }
-.uk-background-blend-overlay { background-blend-mode: overlay; }
-.uk-background-blend-darken { background-blend-mode: darken; }
-.uk-background-blend-lighten { background-blend-mode: lighten; }
-.uk-background-blend-color-dodge { background-blend-mode: color-dodge; }
-.uk-background-blend-color-burn { background-blend-mode: color-burn; }
-.uk-background-blend-hard-light { background-blend-mode: hard-light; }
-.uk-background-blend-soft-light { background-blend-mode: soft-light; }
-.uk-background-blend-difference { background-blend-mode: difference; }
-.uk-background-blend-exclusion { background-blend-mode: exclusion; }
-.uk-background-blend-hue { background-blend-mode: hue; }
-.uk-background-blend-saturation { background-blend-mode: saturation; }
-.uk-background-blend-color { background-blend-mode: color; }
-.uk-background-blend-luminosity { background-blend-mode: luminosity; }
+.background-blend-multiply { background-blend-mode: multiply; }
+.background-blend-screen { background-blend-mode: screen; }
+.background-blend-overlay { background-blend-mode: overlay; }
+.background-blend-darken { background-blend-mode: darken; }
+.background-blend-lighten { background-blend-mode: lighten; }
+.background-blend-color-dodge { background-blend-mode: color-dodge; }
+.background-blend-color-burn { background-blend-mode: color-burn; }
+.background-blend-hard-light { background-blend-mode: hard-light; }
+.background-blend-soft-light { background-blend-mode: soft-light; }
+.background-blend-difference { background-blend-mode: difference; }
+.background-blend-exclusion { background-blend-mode: exclusion; }
+.background-blend-hue { background-blend-mode: hue; }
+.background-blend-saturation { background-blend-mode: saturation; }
+.background-blend-color { background-blend-mode: color; }
+.background-blend-luminosity { background-blend-mode: luminosity; }
 
 
 // Hooks
@@ -150,9 +150,9 @@
   background-color:rgba(red(@background), green(@background), blue(@background), @transparent);
 }
 
-.uk-background-none {background: none !important;}
+.background-none {background: none !important;}
 
-.uk-background-default-transparent {.background-transparent(@background-default-background,0.5)}
-.uk-background-light-black-transparent { .background-transparent(@global-color-black,0.2) }
-.uk-background-primary-transparent {.background-transparent(@global-color-primary,0.5) }
-.uk-background-black-transparent {.background-transparent(@global-color-black,0.5) }
+.background-default-transparent {.background-transparent(@background-default-background,0.5)}
+.background-light-black-transparent { .background-transparent(@global-color-black,0.2) }
+.background-primary-transparent {.background-transparent(@global-color-primary,0.5) }
+.background-black-transparent {.background-transparent(@global-color-black,0.5) }

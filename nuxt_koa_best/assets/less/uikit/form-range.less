@@ -1,7 +1,7 @@
 // Name:            Form Range
 // Description:     Styles for the range input type
 //
-// Component:       `uk-range`
+// Component:       `range`
 //
 // ========================================================================
 
@@ -31,7 +31,7 @@
  * 6. Remove padding in IE11
  */
 
-.uk-range {
+.range {
     /* 1 */
     box-sizing: border-box;
     margin: 0;
@@ -50,11 +50,11 @@
 }
 
 /* Focus */
-.uk-range:focus { outline: none; }
-.uk-range::-moz-focus-outer { border: none; }
+.range:focus { outline: none; }
+.range::-moz-focus-outer { border: none; }
 
 /* IE11 Reset */
-.uk-range::-ms-track {
+.range::-ms-track {
     height: @form-range-thumb-height;
     background: transparent;
     border-color: transparent;
@@ -65,9 +65,9 @@
  * Improves consistency of cursor style for clickable elements
  */
 
-.uk-range:not(:disabled)::-webkit-slider-thumb { cursor: pointer; }
-.uk-range:not(:disabled)::-moz-range-thumb { cursor: pointer; }
-.uk-range:not(:disabled)::-ms-thumb { cursor: pointer; }
+.range:not(:disabled)::-webkit-slider-thumb { cursor: pointer; }
+.range:not(:disabled)::-moz-range-thumb { cursor: pointer; }
+.range:not(:disabled)::-ms-thumb { cursor: pointer; }
 
 
 /* Thumb
@@ -79,7 +79,7 @@
  */
 
 /* Webkit */
-.uk-range::-webkit-slider-thumb {
+.range::-webkit-slider-thumb {
     /* 1 */
     -webkit-appearance: none;
     margin-top: (floor(@form-range-thumb-height / 2) * -1);
@@ -92,7 +92,7 @@
 }
 
 /* Firefox */
-.uk-range::-moz-range-thumb {
+.range::-moz-range-thumb {
     /* 1 */
     border: none;
     /* 2 */
@@ -104,13 +104,13 @@
 }
 
 /* Edge */
-.uk-range::-ms-thumb {
+.range::-ms-thumb {
     /* 1 */
     margin-top: 0;
 }
 
 /* IE11 */
-.uk-range::-ms-thumb {
+.range::-ms-thumb {
     /* 1 */
     border: none;
     /* 2 */
@@ -122,7 +122,7 @@
 }
 
 /* Edge + IE11 */
-.uk-range::-ms-tooltip { display: none; }
+.range::-ms-tooltip { display: none; }
 
 
 /* Track
@@ -133,41 +133,41 @@
  */
 
 /* Webkit */
-.uk-range::-webkit-slider-runnable-track {
+.range::-webkit-slider-runnable-track {
     height: @form-range-track-height;
     background: @form-range-track-background;
     .hook-form-range-track;
 }
 
-.uk-range:focus::-webkit-slider-runnable-track,
+.range:focus::-webkit-slider-runnable-track,
 /* 1 */
-.uk-range:active::-webkit-slider-runnable-track {
+.range:active::-webkit-slider-runnable-track {
     background: @form-range-track-focus-background;
     .hook-form-range-track-focus;
 }
 
 /* Firefox */
-.uk-range::-moz-range-track {
+.range::-moz-range-track {
     height: @form-range-track-height;
     background: @form-range-track-background;
     .hook-form-range-track;
 }
 
-.uk-range:focus::-moz-range-track {
+.range:focus::-moz-range-track {
     background: @form-range-track-focus-background;
     .hook-form-range-track-focus;
 }
 
 /* Edge */
-.uk-range::-ms-fill-lower,
-.uk-range::-ms-fill-upper {
+.range::-ms-fill-lower,
+.range::-ms-fill-upper {
     height: @form-range-track-height;
     background: @form-range-track-background;
     .hook-form-range-track;
 }
 
-.uk-range:focus::-ms-fill-lower,
-.uk-range:focus::-ms-fill-upper {
+.range:focus::-ms-fill-lower,
+.range:focus::-ms-fill-upper {
     background: @form-range-track-focus-background;
     .hook-form-range-track-focus;
 }

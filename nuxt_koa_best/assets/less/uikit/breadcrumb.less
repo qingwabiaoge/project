@@ -1,9 +1,9 @@
 // Name:            Breadcrumb
 // Description:     Component to create a breadcrumb navigation
 //
-// Component:       `uk-breadcrumb`
+// Component:       `breadcrumb`
 //
-// States:          `uk-disabled`
+// States:          `disabled`
 //
 // ========================================================================
 
@@ -31,7 +31,7 @@
  * 2. Reset list
  */
 
-.uk-breadcrumb {
+.breadcrumb {
     display: flex;
     /* 1 */
     flex-wrap: wrap;
@@ -45,13 +45,13 @@
  * Space is allocated solely based on content dimensions: 0 0 auto
  */
 
-.uk-breadcrumb > * { flex: none; }
+.breadcrumb > * { flex: none; }
 
 
 /* Items
  ========================================================================== */
 
-.uk-breadcrumb > * > * {
+.breadcrumb > * > * {
     display: inline-block;
     font-size: @breadcrumb-item-font-size;
     color: @breadcrumb-item-color;
@@ -59,20 +59,20 @@
 }
 
 /* Hover + Focus */
-.uk-breadcrumb > * > :hover,
-.uk-breadcrumb > * > :focus {
+.breadcrumb > * > :hover,
+.breadcrumb > * > :focus {
     color: @breadcrumb-item-hover-color;
     text-decoration: @breadcrumb-item-hover-text-decoration;
     .hook-breadcrumb-item-hover;
 }
 
 /* Disabled */
-.uk-breadcrumb > .uk-disabled > * {
+.breadcrumb > .disabled > * {
     .hook-breadcrumb-item-disabled;
 }
 
 /* Active */
-.uk-breadcrumb > :last-child > * {
+.breadcrumb > :last-child > * {
     color: @breadcrumb-item-active-color;
     .hook-breadcrumb-item-active;
 }
@@ -82,7 +82,7 @@
  * `nth-child` makes it also work without JS if it's only one row
  */
 
-.uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+.breadcrumb > :nth-child(n+2):not(.first-column)::before {
     content: @breadcrumb-divider;
     display: inline-block;
     margin: 0 @breadcrumb-divider-margin-horizontal;
@@ -115,23 +115,23 @@
 
 .hook-inverse() {
 
-    .uk-breadcrumb > * > * {
+    .breadcrumb > * > * {
         color: @inverse-breadcrumb-item-color;
         .hook-inverse-breadcrumb-item;
     }
 
-    .uk-breadcrumb > * > :hover,
-    .uk-breadcrumb > * > :focus {
+    .breadcrumb > * > :hover,
+    .breadcrumb > * > :focus {
         color: @inverse-breadcrumb-item-hover-color;
         .hook-inverse-breadcrumb-item-hover;
     }
 
 
-    .uk-breadcrumb > .uk-disabled > * {
+    .breadcrumb > .disabled > * {
         .hook-inverse-breadcrumb-item-disabled;
     }
 
-    .uk-breadcrumb > :last-child > * {
+    .breadcrumb > :last-child > * {
         color: @inverse-breadcrumb-item-active-color;
         .hook-inverse-breadcrumb-item-active;
     }
@@ -140,7 +140,7 @@
     // Divider
     //
 
-    .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+    .breadcrumb > :nth-child(n+2):not(.first-column)::before {
         color: @inverse-breadcrumb-divider-color;
         .hook-inverse-breadcrumb-divider;
     }

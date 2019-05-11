@@ -1,11 +1,11 @@
 // Name:            Countdown
 // Description:     Component to create countdown timers
 //
-// Component:       `uk-countdown`
+// Component:       `countdown`
 //
-// Sub-objects:     `uk-countdown-number`
-//                  `uk-countdown-separator`
-//                  `uk-countdown-label`
+// Sub-objects:     `countdown-number`
+//                  `countdown-separator`
+//                  `countdown-label`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@
    Component: Countdown
  ========================================================================== */
 
-.uk-countdown {
+.countdown {
     .hook-countdown;
 }
 
@@ -40,8 +40,8 @@
  * 1. Center numbers and separators vertically
  */
 
-.uk-countdown-number,
-.uk-countdown-separator {
+.countdown-number,
+.countdown-separator {
     /* 1 */
     line-height: @countdown-item-line-height;
     .hook-countdown-item;
@@ -51,7 +51,7 @@
 /* Number
  ========================================================================== */
 
-.uk-countdown-number {
+.countdown-number {
     font-size: @countdown-number-font-size;
     .hook-countdown-number;
 }
@@ -59,14 +59,14 @@
 /* Phone landscape and bigger */
 @media (min-width: @global-breakpoint-phone) {
 
-    .uk-countdown-number { font-size: @countdown-number-font-size-s; }
+    .countdown-number { font-size: @countdown-number-font-size-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-countdown-number { font-size: @countdown-number-font-size-m; }
+    .countdown-number { font-size: @countdown-number-font-size-m; }
 
 }
 
@@ -74,7 +74,7 @@
 /* Separator
  ========================================================================== */
 
-.uk-countdown-separator {
+.countdown-separator {
     font-size: @countdown-separator-font-size;
     .hook-countdown-separator;
 }
@@ -82,14 +82,14 @@
 /* Phone landscape and bigger */
 @media (min-width: @global-breakpoint-phone) {
 
-    .uk-countdown-separator { font-size: @countdown-separator-font-size-s; }
+    .countdown-separator { font-size: @countdown-separator-font-size-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-countdown-separator { font-size: @countdown-separator-font-size-m; }
+    .countdown-separator { font-size: @countdown-separator-font-size-m; }
 
 }
 
@@ -97,7 +97,7 @@
 /* Label
  ========================================================================== */
 
-.uk-countdown-label {
+.countdown-label {
     .hook-countdown-label;
 }
 
@@ -120,20 +120,20 @@
 
 .hook-inverse() {
 
-    .uk-countdown-number,
-    .uk-countdown-separator {
+    .countdown-number,
+    .countdown-separator {
         .hook-inverse-countdown-item;
     }
 
-    .uk-countdown-number {
+    .countdown-number {
         .hook-inverse-countdown-number;
     }
 
-    .uk-countdown-separator {
+    .countdown-separator {
         .hook-inverse-countdown-separator;
     }
 
-    .uk-countdown-label {
+    .countdown-label {
         .hook-inverse-countdown-label;
     }
 

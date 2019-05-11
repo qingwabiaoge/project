@@ -1,7 +1,7 @@
 // Name:            Text
 // Description:     Utilities for text
 //
-// Component:       `uk-text-*`
+// Component:       `text-*`
 //
 // ========================================================================
 
@@ -43,14 +43,14 @@
 /* Style modifiers
  ========================================================================== */
 
-.uk-text-lead {
+.text-lead {
     font-size: @text-lead-font-size;
     line-height: @text-lead-line-height;
     color: @text-lead-color;
     .hook-text-lead;
 }
 
-.uk-text-meta {
+.text-meta {
     font-size: @text-meta-font-size;
     line-height: @text-meta-line-height;
     color: @text-meta-color;
@@ -61,11 +61,11 @@
 /* Size modifiers
  ========================================================================== */
 
-.uk-text-small {
+.text-small {
    font-size: 85%;
 }
 
-.uk-text-large {
+.text-large {
     font-size: 115%
 }
 
@@ -73,27 +73,27 @@
 /* Weight modifier
  ========================================================================== */
 
-.uk-text-bold { font-weight: @text-bold-font-weight; }
+.text-bold { font-weight: @text-bold-font-weight; }
 
 
 /* Transform modifier
  ========================================================================== */
 
-.uk-text-uppercase { text-transform: uppercase !important; }
-.uk-text-capitalize { text-transform: capitalize !important; }
-.uk-text-lowercase { text-transform: lowercase !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+.text-lowercase { text-transform: lowercase !important; }
 
 
 /* Color modifiers
  ========================================================================== */
 
-.uk-text-muted { color: @text-muted-color !important; }
-.uk-text-primary { color: @text-primary-color !important; }
-.uk-text-success { color: @text-success-color !important; }
-.uk-text-warning { color: @text-warning-color !important; }
-.uk-text-danger { color: @text-danger-color !important; }
+.text-muted { color: @text-muted-color !important; }
+.text-primary { color: @text-primary-color !important; }
+.text-success { color: @text-success-color !important; }
+.text-warning { color: @text-warning-color !important; }
+.text-danger { color: @text-danger-color !important; }
 
-.uk-text-white{color: @global-color-white !important;}
+.text-white{color: @global-color-white !important;}
 
 /* Background modifier
  ========================================================================== */
@@ -105,7 +105,7 @@
  * 3. Fallback color for IE11
  */
 
-.uk-text-background {
+.text-background {
     /* 1 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,7 +117,7 @@
 
 @supports (-webkit-background-clip: text) {
 
-    .uk-text-background {
+    .text-background {
         background-color: @text-background-color;
         .hook-text-background;
     }
@@ -128,52 +128,52 @@
 /* Alignment modifiers
  ========================================================================== */
 
-.uk-text-left { text-align: left !important; }
-.uk-text-right { text-align: right !important; }
-.uk-text-center { text-align: center !important; }
-.uk-text-justify { text-align: justify !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+.text-justify { text-align: justify !important; }
 
 /* Phone landscape and bigger */
 @media (max-width: @global-breakpoint-phone) {
 
-  .uk-text-left\@xs { text-align: left !important; }
-  .uk-text-right\@xs { text-align: right !important; }
-  .uk-text-center\@xs { text-align: center !important; }
+  .text-left\@xs { text-align: left !important; }
+  .text-right\@xs { text-align: right !important; }
+  .text-center\@xs { text-align: center !important; }
 
 }
 
 @media (min-width: @global-breakpoint-phone) {
 
-    .uk-text-left\@s { text-align: left !important; }
-    .uk-text-right\@s { text-align: right !important; }
-    .uk-text-center\@s { text-align: center !important; }
+    .text-left\@s { text-align: left !important; }
+    .text-right\@s { text-align: right !important; }
+    .text-center\@s { text-align: center !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-text-left\@m { text-align: left !important; }
-    .uk-text-right\@m { text-align: right !important; }
-    .uk-text-center\@m { text-align: center !important; }
+    .text-left\@m { text-align: left !important; }
+    .text-right\@m { text-align: right !important; }
+    .text-center\@m { text-align: center !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: @global-breakpoint-desktop) {
 
-    .uk-text-left\@l { text-align: left !important; }
-    .uk-text-right\@l { text-align: right !important; }
-    .uk-text-center\@l { text-align: center !important; }
+    .text-left\@l { text-align: left !important; }
+    .text-right\@l { text-align: right !important; }
+    .text-center\@l { text-align: center !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: @global-breakpoint-largeScreens) {
 
-    .uk-text-left\@xl { text-align: left !important; }
-    .uk-text-right\@xl { text-align: right !important; }
-    .uk-text-center\@xl { text-align: center !important; }
+    .text-left\@xl { text-align: left !important; }
+    .text-right\@xl { text-align: right !important; }
+    .text-center\@xl { text-align: center !important; }
 
 }
 
@@ -181,10 +181,10 @@
  * Vertical
  */
 
-.uk-text-top { vertical-align: top !important; }
-.uk-text-middle { vertical-align: middle !important; }
-.uk-text-bottom { vertical-align: bottom !important; }
-.uk-text-baseline { vertical-align: baseline !important; }
+.text-top { vertical-align: top !important; }
+.text-middle { vertical-align: middle !important; }
+.text-bottom { vertical-align: bottom !important; }
+.text-baseline { vertical-align: baseline !important; }
 
 
 /* Wrap modifiers
@@ -194,7 +194,7 @@
  * Prevent text from wrapping onto multiple lines
  */
 
-.uk-text-nowrap { white-space: nowrap; }
+.text-nowrap { white-space: nowrap; }
 
 /*
  * 1. Make sure a max-width is set after which truncation can occur
@@ -202,7 +202,7 @@
  * 3. Fix for table cells
  */
 
-.uk-text-truncate {
+.text-truncate {
     /* 1 */
     max-width: 100%;
     /* 2 */
@@ -212,8 +212,8 @@
 }
 
 /* 2 */
-th.uk-text-truncate,
-td.uk-text-truncate { max-width: 0; }
+th.text-truncate,
+td.text-truncate { max-width: 0; }
 
 
 /*
@@ -224,7 +224,7 @@ td.uk-text-truncate { max-width: 0; }
  * Note: Not using `hyphens: auto;` because it hyphenates text even if not needed
  */
 
-.uk-text-break {
+.text-break {
     /* 1 */
     overflow-wrap: break-word;
     /* 2 */
@@ -232,8 +232,8 @@ td.uk-text-truncate { max-width: 0; }
 }
 
 /* 3 */
-th.uk-text-break,
-td.uk-text-break { word-break: break-all; }
+th.text-break,
+td.text-break { word-break: break-all; }
 
 
 
@@ -260,18 +260,18 @@ td.uk-text-break { word-break: break-all; }
 
 .hook-inverse() {
 
-    .uk-text-lead {
+    .text-lead {
         color: @inverse-text-lead-color;
         .hook-inverse-text-lead;
     }
 
-    .uk-text-meta {
+    .text-meta {
         color: @inverse-text-meta-color;
         .hook-inverse-text-meta;
     }
 
-    .uk-text-muted { color: @inverse-text-muted-color !important; }
-    .uk-text-primary { color: @inverse-text-primary-color !important; }
+    .text-muted { color: @inverse-text-muted-color !important; }
+    .text-primary { color: @inverse-text-primary-color !important; }
 
 }
 

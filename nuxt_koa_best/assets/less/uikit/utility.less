@@ -1,28 +1,28 @@
 // Name:            Utility
 // Description:     Utilities collection
 //
-// Component:       `uk-panel-*`
-//                  `uk-clearfix`
-//                  `uk-float-*`
-//                  `uk-overflow-*`
-//                  `uk-resize-*`
-//                  `uk-display-*`
-//                  `uk-inline-*`
-//                  `uk-responsive-*`
-//                  `uk-preserve-width`
-//                  `uk-border-*`
-//                  `uk-box-shadow-*`
-//                  `uk-box-shadow-bottom`
-//                  `uk-dropcap`
-//                  `uk-logo`
-//                  `uk-blend-*`
-//                  `uk-transform-*`
-//                  `uk-transform-origin-*`
+// Component:       `panel-*`
+//                  `clearfix`
+//                  `float-*`
+//                  `overflow-*`
+//                  `resize-*`
+//                  `display-*`
+//                  `inline-*`
+//                  `responsive-*`
+//                  `preserve-width`
+//                  `border-*`
+//                  `box-shadow-*`
+//                  `box-shadow-bottom`
+//                  `dropcap`
+//                  `logo`
+//                  `blend-*`
+//                  `transform-*`
+//                  `transform-origin-*`
 //
-// States:          `uk-disabled`
-//                  `uk-drag`
-//                  `uk-dragover`
-//                  `uk-preserve`
+// States:          `disabled`
+//                  `drag`
+//                  `dragover`
+//                  `preserve`
 //
 // ========================================================================
 
@@ -63,7 +63,7 @@
 /* Panel
  ========================================================================== */
 
-.uk-panel {
+.panel {
     position: relative;
     box-sizing: border-box;
 }
@@ -72,26 +72,26 @@
  * Micro clearfix
  */
 
-.uk-panel::before,
-.uk-panel::after {
+.panel::before,
+.panel::after {
     content: "";
     display: table;
 }
 
-.uk-panel::after { clear: both; }
+.panel::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-panel > :last-child { margin-bottom: 0; }
+.panel > :last-child { margin-bottom: 0; }
 
 
 /*
  * Scrollable
  */
 
-.uk-panel-scrollable {
+.panel-scrollable {
     height: @panel-scrollable-height;
     padding: @panel-scrollable-padding;
     border: @panel-scrollable-border-width solid @panel-scrollable-border;
@@ -112,13 +112,13 @@
  */
 
 /* 1 */
-.uk-clearfix::before {
+.clearfix::before {
     content: "";
     display: table-cell;
 }
 
 /* 2 */
-.uk-clearfix::after {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
@@ -132,44 +132,44 @@
  * 1. Prevent content overflow
  */
 
-.uk-float-left { float: left; }
-.uk-float-right { float: right; }
+.float-left { float: left; }
+.float-right { float: right; }
 
 /* 1 */
-[class*='uk-float-'] { max-width: 100%; }
+[class*='float-'] { max-width: 100%; }
 
 
 /* Overfow
  ========================================================================== */
 
-.uk-overflow-hidden { overflow: hidden; }
+.overflow-hidden { overflow: hidden; }
 
 /*
  * Enable scrollbars if content is clipped
  * Note: Firefox ignores `padding-bottom` for the scrollable overflow https://bugzilla.mozilla.org/show_bug.cgi?id=748518
  */
 
-.uk-overflow-auto {
+.overflow-auto {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.uk-overflow-auto > :last-child { margin-bottom: 0; }
+.overflow-auto > :last-child { margin-bottom: 0; }
 
 
 /* Resize
  ========================================================================== */
 
-.uk-resize { resize: both; }
-.uk-resize-vertical { resize: vertical; }
+.resize { resize: both; }
+.resize-vertical { resize: vertical; }
 
 
 /* Display
  ========================================================================== */
 
-.uk-display-block { display: block !important; }
-.uk-display-inline { display: inline !important; }
-.uk-display-inline-block { display: inline-block !important; }
+.display-block { display: block !important; }
+.display-inline { display: inline !important; }
+.display-inline-block { display: inline-block !important; }
 
 
 /* Inline
@@ -185,7 +185,7 @@
  * 6. Clip child elements
  */
 
-[class*='uk-inline'] {
+[class*='inline'] {
     /* 1 */
     display: inline-block;
     /* 2 */
@@ -198,7 +198,7 @@
     -webkit-backface-visibility: hidden;
 }
 
-.uk-inline-clip {
+.inline-clip {
     /* 6 */
     overflow: hidden;
 }
@@ -212,27 +212,27 @@
  * Because `img, `video`, `canvas` and  `audio` are already responsive by default, see Base component
  */
 
-.uk-preserve-width,
-.uk-preserve-width audio,
-.uk-preserve-width canvas,
-.uk-preserve-width img,
-.uk-preserve-width svg,
-.uk-preserve-width video { max-width: none; }
+.preserve-width,
+.preserve-width audio,
+.preserve-width canvas,
+.preserve-width img,
+.preserve-width svg,
+.preserve-width video { max-width: none; }
 
 /*
  * Responsiveness
  * Corrects `max-width` and `max-height` behavior if padding and border are used
  */
 
-.uk-responsive-width,
-.uk-responsive-height { box-sizing: border-box; }
+.responsive-width,
+.responsive-height { box-sizing: border-box; }
 
 /*
- * 1. Set a maximum width. `important` needed to override `uk-preserve-width img`
+ * 1. Set a maximum width. `important` needed to override `preserve-width img`
  * 2. Auto scale the height. Only needed if `height` attribute is present
  */
 
-.uk-responsive-width {
+.responsive-width {
     /* 1 */
     max-width: 100% !important;
     /* 2 */
@@ -245,7 +245,7 @@
  * 3. Reset max-width, which `img, `video`, `canvas` and  `audio` already have by default
  */
 
-.uk-responsive-height {
+.responsive-height {
     /* 1 */
     max-height: 100%;
     /* 2 */
@@ -258,34 +258,34 @@
 /* Border
  ========================================================================== */
 
-//.uk-uk-border-circle { border-radius: 50%; }
-.uk-border-rounded { border-radius: @border-rounded-border-radius; }
+//.border-circle { border-radius: 50%; }
+.border-rounded { border-radius: @border-rounded-border-radius; }
 
 /*
  * Fix `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
  */
 
-.uk-inline-clip[class*='uk-border-'] { -webkit-transform: translateZ(0); }
+.inline-clip[class*='border-'] { -webkit-transform: translateZ(0); }
 
 
 /* Box-shadow
  ========================================================================== */
 
-.uk-box-shadow-small { box-shadow: @global-shadow-smaller; }
-.uk-box-shadow-medium { box-shadow: @global-shadow; }
-.uk-box-shadow-large { box-shadow: @global-shadow-large; }
-.uk-box-shadow-xlarge { box-shadow: @global-shadow-larger; }
+.box-shadow-small { box-shadow: @global-shadow-smaller; }
+.box-shadow-medium { box-shadow: @global-shadow; }
+.box-shadow-large { box-shadow: @global-shadow-large; }
+.box-shadow-xlarge { box-shadow: @global-shadow-larger; }
 
 /*
  * Hover
  */
 
-[class*='uk-box-shadow-hover'] { transition: box-shadow @box-shadow-duration ease-in-out; }
+[class*='box-shadow-hover'] { transition: box-shadow @box-shadow-duration ease-in-out; }
 
-.uk-box-shadow-hover-small:hover { box-shadow: @global-shadow-smaller; }
-.uk-box-shadow-hover-medium:hover { box-shadow: @global-shadow; }
-.uk-box-shadow-hover-large:hover { box-shadow: @global-shadow-large; }
-.uk-box-shadow-hover-xlarge:hover { box-shadow: @global-shadow-larger; }
+.box-shadow-hover-small:hover { box-shadow: @global-shadow-smaller; }
+.box-shadow-hover-medium:hover { box-shadow: @global-shadow; }
+.box-shadow-hover-large:hover { box-shadow: @global-shadow-large; }
+.box-shadow-hover-xlarge:hover { box-shadow: @global-shadow-larger; }
 
 
 /* Box-shadow bottom
@@ -300,14 +300,14 @@
 
 @supports (filter: blur(0)) {
 
-    .uk-box-shadow-bottom {
+    .box-shadow-bottom {
         display: inline-block;
         position: relative;
         max-width: 100%;
         vertical-align: middle;
     }
 
-    .uk-box-shadow-bottom::before {
+    .box-shadow-bottom::before {
         content: '';
         /* 1 */
         position: absolute;
@@ -323,7 +323,7 @@
     }
 
     /* 3 */
-    .uk-box-shadow-bottom > * { position: relative; }
+    .box-shadow-bottom > * { position: relative; }
 
 }
 
@@ -340,9 +340,9 @@
  *    This doubles the `font-size` exponential when using the `em` unit.
  */
 
-.uk-dropcap::first-letter,
+.dropcap::first-letter,
 /* 1 */
-.uk-dropcap > p:first-of-type::first-letter {
+.dropcap > p:first-of-type::first-letter {
     display: block;
     margin-right: @dropcap-margin-right;
     float: left;
@@ -354,15 +354,15 @@
 /* 2 */
 @-moz-document url-prefix() {
 
-  .uk-dropcap::first-letter,
-  .uk-dropcap > p:first-of-type::first-letter { margin-top: 1.1%; }
+  .dropcap::first-letter,
+  .dropcap > p:first-of-type::first-letter { margin-top: 1.1%; }
 
 }
 
 /* 3 */
 @supports (-ms-ime-align: auto) {
 
-  .uk-dropcap > p:first-of-type::first-letter { font-size: 1em; }
+  .dropcap > p:first-of-type::first-letter { font-size: 1em; }
 
 }
 
@@ -374,7 +374,7 @@
  * 1. Required for `a`
  */
 
-.uk-logo {
+.logo {
     font-size: @logo-font-size;
     font-family: @logo-font-family;
     color: @logo-color;
@@ -384,8 +384,8 @@
 }
 
 /* Hover + Focus */
-.uk-logo:hover,
-.uk-logo:focus {
+.logo:hover,
+.logo:focus {
     color: @logo-hover-color;
     outline: none;
     /* 1 */
@@ -393,13 +393,13 @@
     .hook-logo-hover;
 }
 
-.uk-logo-inverse { display: none; }
+.logo-inverse { display: none; }
 
 
 /* Disabled State
  ========================================================================== */
 
-.uk-disabled { pointer-events: none; }
+.disabled { pointer-events: none; }
 
 
 /* Drag State
@@ -410,12 +410,12 @@
  * 2. Fix dragging over iframes
  */
 
-.uk-drag,
+.drag,
 /* 1 */
-.uk-drag * { cursor: move; }
+.drag * { cursor: move; }
 
 /* 2 */
-.uk-drag iframe { pointer-events: none; }
+.drag iframe { pointer-events: none; }
 
 
 /* Dragover State
@@ -425,46 +425,46 @@
  * Create a box-shadow when dragging a file over the upload area
  */
 
-.uk-dragover { box-shadow: @dragover-box-shadow; }
+.dragover { box-shadow: @dragover-box-shadow; }
 
 
 /* Blend modes
  ========================================================================== */
 
-.uk-blend-multiply { mix-blend-mode: multiply; }
-.uk-blend-screen { mix-blend-mode: screen; }
-.uk-blend-overlay { mix-blend-mode: overlay; }
-.uk-blend-darken { mix-blend-mode: darken; }
-.uk-blend-lighten { mix-blend-mode: lighten; }
-.uk-blend-color-dodge { mix-blend-mode: color-dodge; }
-.uk-blend-color-burn { mix-blend-mode: color-burn; }
-.uk-blend-hard-light { mix-blend-mode: hard-light; }
-.uk-blend-soft-light { mix-blend-mode: soft-light; }
-.uk-blend-difference { mix-blend-mode: difference; }
-.uk-blend-exclusion { mix-blend-mode: exclusion; }
-.uk-blend-hue { mix-blend-mode: hue; }
-.uk-blend-saturation { mix-blend-mode: saturation; }
-.uk-blend-color { mix-blend-mode: color; }
-.uk-blend-luminosity { mix-blend-mode: luminosity; }
+.blend-multiply { mix-blend-mode: multiply; }
+.blend-screen { mix-blend-mode: screen; }
+.blend-overlay { mix-blend-mode: overlay; }
+.blend-darken { mix-blend-mode: darken; }
+.blend-lighten { mix-blend-mode: lighten; }
+.blend-color-dodge { mix-blend-mode: color-dodge; }
+.blend-color-burn { mix-blend-mode: color-burn; }
+.blend-hard-light { mix-blend-mode: hard-light; }
+.blend-soft-light { mix-blend-mode: soft-light; }
+.blend-difference { mix-blend-mode: difference; }
+.blend-exclusion { mix-blend-mode: exclusion; }
+.blend-hue { mix-blend-mode: hue; }
+.blend-saturation { mix-blend-mode: saturation; }
+.blend-color { mix-blend-mode: color; }
+.blend-luminosity { mix-blend-mode: luminosity; }
 
 
 /* Transform
 ========================================================================== */
 
-.uk-transform-center { transform: translate(-50%, -50%); }
+.transform-center { transform: translate(-50%, -50%); }
 
 
 /* Transform Origin
 ========================================================================== */
 
-.uk-transform-origin-top-left { transform-origin: 0 0; }
-.uk-transform-origin-top-center { transform-origin: 50% 0; }
-.uk-transform-origin-top-right { transform-origin: 100% 0; }
-.uk-transform-origin-center-left { transform-origin: 0 50%; }
-.uk-transform-origin-center-right { transform-origin: 100% 50%; }
-.uk-transform-origin-bottom-left { transform-origin: 0 100%; }
-.uk-transform-origin-bottom-center { transform-origin: 50% 100%; }
-.uk-transform-origin-bottom-right { transform-origin: 100% 100%; }
+.transform-origin-top-left { transform-origin: 0 0; }
+.transform-origin-top-center { transform-origin: 50% 0; }
+.transform-origin-top-right { transform-origin: 100% 0; }
+.transform-origin-center-left { transform-origin: 0 50%; }
+.transform-origin-center-right { transform-origin: 100% 50%; }
+.transform-origin-bottom-left { transform-origin: 0 100%; }
+.transform-origin-bottom-center { transform-origin: 50% 100%; }
+.transform-origin-bottom-right { transform-origin: 100% 100%; }
 
 
 // Hooks
@@ -488,24 +488,24 @@
 
 .hook-inverse() {
 
-    .uk-dropcap::first-letter,
-    .uk-dropcap p:first-of-type::first-letter {
+    .dropcap::first-letter,
+    .dropcap p:first-of-type::first-letter {
         .hook-inverse-dropcap;
     }
 
-    .uk-logo {
+    .logo {
         color: @inverse-logo-color;
         .hook-inverse-logo;
     }
 
-    .uk-logo:hover,
-    .uk-logo:focus {
+    .logo:hover,
+    .logo:focus {
         color: @inverse-logo-hover-color;
         .hook-inverse-logo-hover;
     }
 
-    .uk-logo > :not(.uk-logo-inverse):not(:only-of-type) { display: none; }
-    .uk-logo-inverse { display: inline; }
+    .logo > :not(.logo-inverse):not(:only-of-type) { display: none; }
+    .logo-inverse { display: inline; }
 
 }
 

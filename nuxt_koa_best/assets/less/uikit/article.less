@@ -1,10 +1,10 @@
 // Name:            Article
 // Description:     Component to create articles
 //
-// Component:       `uk-article`
+// Component:       `article`
 //
-// Sub-objects:     `uk-article-title`
-//                  `uk-article-meta`
+// Sub-objects:     `article-title`
+//                  `article-meta`
 //
 // ========================================================================
 
@@ -27,7 +27,7 @@
    Component: Article
  ========================================================================== */
 
-.uk-article {
+.article {
     .hook-article;
 }
 
@@ -35,25 +35,25 @@
  * Micro clearfix
  */
 
-.uk-article::before,
-.uk-article::after {
+.article::before,
+.article::after {
     content: "";
     display: table;
 }
 
-.uk-article::after { clear: both; }
+.article::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-article > :last-child { margin-bottom: 0; }
+.article > :last-child { margin-bottom: 0; }
 
 
 /* Adjacent sibling
  ========================================================================== */
 
-.uk-article + .uk-article {
+.article + .article {
     margin-top: @article-margin-top;
     .hook-article-adjacent;
 }
@@ -62,7 +62,7 @@
 /* Title
  ========================================================================== */
 
-.uk-article-title {
+.article-title {
     font-size: @article-title-font-size;
     line-height: @article-title-line-height;
     .hook-article-title;
@@ -71,7 +71,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-article-title { font-size: @article-title-font-size-m; }
+    .article-title { font-size: @article-title-font-size-m; }
 
 }
 
@@ -79,7 +79,7 @@
 /* Meta
  ========================================================================== */
 
-.uk-article-meta {
+.article-meta {
     font-size: @article-meta-font-size;
     line-height: @article-meta-line-height;
     color: @article-meta-color;
@@ -106,11 +106,11 @@
 
 .hook-inverse() {
 
-    .uk-article-title  {
+    .article-title  {
         .hook-inverse-article-title;
     }
 
-    .uk-article-meta  {
+    .article-meta  {
         color: @inverse-article-meta-color;
         .hook-inverse-article-meta;
     }

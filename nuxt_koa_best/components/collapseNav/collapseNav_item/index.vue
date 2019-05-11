@@ -4,9 +4,9 @@
             <nuxt-link :to="{path: item.path}"
                     @click.prevent.stop="open=!open"
             >
-                <div class="title uk-flex uk-flex-between">
+                <div class="title flex flex-between">
                     <!--下文 判断有没有子级,如果有进一步判断是否open状态和设置符号-->
-                    <span> {{item.text}} </span> <span class="uk-text-small">{{item.children ? (open? 'v':'>') : '' }}</span>
+                    <span> {{item.text}} </span> <span class="text-small">{{item.children ? (open? 'v':'>') : '' }}</span>
                 </div>
             </nuxt-link>
         </h4>

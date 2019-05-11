@@ -4,7 +4,7 @@
 /*
  * Reset list
  */
-.uk-switcher {
+.switcher {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -14,13 +14,13 @@
 /*
  * Hide not active items
  */
-.uk-switcher > :not(.uk-active) {
+.switcher > :not(.active) {
   display: none;
 }
 /*
  * Remove margin from the last-child
  */
-.uk-switcher > * > :last-child {
+.switcher > * > :last-child {
   margin-bottom: 0;
 }
 /*# sourceMappingURL=switcher.css.map */

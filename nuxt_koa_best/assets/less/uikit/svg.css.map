@@ -1,1 +1,1 @@
-{"version":3,"sources":["svg.less"],"names":[],"mappings":";;;;;;;;AAkBA;AAEA,OAAO,IAAI,cAAe,YAAW,IAAI;EAAiB,kBAAA;;AAC1D,OAAO,IAAI,cAAe,cAAa,IAAI;EAAiB,oBAAA;;;;;AAM5D;EAAU,WAAW,eAAX","file":"svg.css"}
+{"version":3,"sources":["svg.less"],"names":[],"mappings":";;;;;;;;AAkBA;AAEA,IAAI,IAAI,WAAY,YAAW,IAAI;EAAc,kBAAA;;AACjD,IAAI,IAAI,WAAY,cAAa,IAAI;EAAc,oBAAA;;;;;AAMnD;EAAO,WAAW,eAAX","file":"svg.css"}

@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-a uk-text-center">
+  <div class="footer-a text-center">
     <div class="container">
       <div class="row">
         <nav class="col-xs-6 col-xs-offset-3 "><a>关于我们</a><a>联系我们</a><a>网站模板</a></nav>

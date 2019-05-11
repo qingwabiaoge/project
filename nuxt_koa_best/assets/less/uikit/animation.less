@@ -1,23 +1,23 @@
 // Name:            Animation
 // Description:     Utilities for keyframe animations
 //
-// Component:       `uk-animation-*`
+// Component:       `animation-*`
 //
-// Modifiers:       `uk-animation-reverse`
-//                  `uk-animation-fast`
-//                  `uk-animation-fade`
-//                  `uk-animation-scale-up`
-//                  `uk-animation-scale-down`
-//                  `uk-animation-slide-top-*`
-//                  `uk-animation-slide-bottom-*`
-//                  `uk-animation-slide-left-*`
-//                  `uk-animation-slide-right-*`
-//                  `uk-animation-kenburns`
-//                  `uk-animation-shake`
+// Modifiers:       `animation-reverse`
+//                  `animation-fast`
+//                  `animation-fade`
+//                  `animation-scale-up`
+//                  `animation-scale-down`
+//                  `animation-slide-top-*`
+//                  `animation-slide-bottom-*`
+//                  `animation-slide-left-*`
+//                  `animation-slide-right-*`
+//                  `animation-kenburns`
+//                  `animation-shake`
 //
-// Sub-objects:     `uk-animation-toggle`
+// Sub-objects:     `animation-toggle`
 //
-// States:          `uk-hover`
+// States:          `hover`
 //
 // ========================================================================
 
@@ -38,7 +38,7 @@
    Component: Animation
  ========================================================================== */
 
-[class*='uk-animation-'] {
+[class*='animation-'] {
     animation-duration: @animation-duration;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
@@ -48,7 +48,7 @@
 /* Direction modifier
  ========================================================================== */
 
-.uk-animation-reverse {
+.animation-reverse {
     animation-direction: reverse;
     animation-timing-function: ease-in;
 }
@@ -61,8 +61,8 @@
  * Fade
  */
 
-.uk-animation-fade {
-    animation-name: uk-fade;
+.animation-fade {
+    animation-name: fade;
     animation-duration: @animation-fade-duration;
     animation-timing-function: linear;
 }
@@ -71,42 +71,42 @@
  * Scale
  */
 
-.uk-animation-scale-up { animation-name: uk-fade-scale-02; }
-.uk-animation-scale-down { animation-name: uk-fade-scale-18; }
+.animation-scale-up { animation-name: fade-scale-02; }
+.animation-scale-down { animation-name: fade-scale-18; }
 
 /*
  * Slide
  */
 
-.uk-animation-slide-top { animation-name: uk-fade-top; }
-.uk-animation-slide-bottom { animation-name: uk-fade-bottom; }
-.uk-animation-slide-left { animation-name: uk-fade-left; }
-.uk-animation-slide-right { animation-name: uk-fade-right; }
+.animation-slide-top { animation-name: fade-top; }
+.animation-slide-bottom { animation-name: fade-bottom; }
+.animation-slide-left { animation-name: fade-left; }
+.animation-slide-right { animation-name: fade-right; }
 
 /*
  * Slide Small
  */
 
-.uk-animation-slide-top-small { animation-name: uk-fade-top-small; }
-.uk-animation-slide-bottom-small { animation-name: uk-fade-bottom-small; }
-.uk-animation-slide-left-small { animation-name: uk-fade-left-small; }
-.uk-animation-slide-right-small { animation-name: uk-fade-right-small; }
+.animation-slide-top-small { animation-name: fade-top-small; }
+.animation-slide-bottom-small { animation-name: fade-bottom-small; }
+.animation-slide-left-small { animation-name: fade-left-small; }
+.animation-slide-right-small { animation-name: fade-right-small; }
 
 /*
  * Slide Medium
  */
 
-.uk-animation-slide-top-medium { animation-name: uk-fade-top-medium; }
-.uk-animation-slide-bottom-medium { animation-name: uk-fade-bottom-medium; }
-.uk-animation-slide-left-medium { animation-name: uk-fade-left-medium; }
-.uk-animation-slide-right-medium { animation-name: uk-fade-right-medium; }
+.animation-slide-top-medium { animation-name: fade-top-medium; }
+.animation-slide-bottom-medium { animation-name: fade-bottom-medium; }
+.animation-slide-left-medium { animation-name: fade-left-medium; }
+.animation-slide-right-medium { animation-name: fade-right-medium; }
 
 /*
  * Kenburns
  */
 
-.uk-animation-kenburns {
-    animation-name: uk-scale-kenburns;
+.animation-kenburns {
+    animation-name: scale-kenburns;
     animation-duration: @animation-kenburns-duration;
 }
 
@@ -114,13 +114,13 @@
  * Shake
  */
 
-.uk-animation-shake { animation-name: uk-shake; }
+.animation-shake { animation-name: shake; }
 
 
 /* Duration modifier
  ========================================================================== */
 
-.uk-animation-fast { animation-duration: @animation-fast-duration; }
+.animation-fast { animation-duration: @animation-fast-duration; }
 
 
 /* Enable animation only on hover
@@ -130,7 +130,7 @@
  * Note: Firefox and IE needs this because animations are not triggered when switching between display `none` and `block`
  */
 
-.uk-animation-toggle:not(:hover):not(.uk-hover) [class*='uk-animation-'] { animation-name: none; }
+.animation-toggle:not(:hover):not(.hover) [class*='animation-'] { animation-name: none; }
 
 
 /* Keyframes used by animation classes
@@ -140,7 +140,7 @@
  * Fade
  */
 
-@keyframes uk-fade {
+@keyframes fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
@@ -149,7 +149,7 @@
  * Slide Top
  */
 
-@keyframes uk-fade-top {
+@keyframes fade-top {
     0% {
         opacity: 0;
         transform: translateY(-100%);
@@ -164,7 +164,7 @@
  * Slide Bottom
  */
 
-@keyframes uk-fade-bottom {
+@keyframes fade-bottom {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -179,7 +179,7 @@
  * Slide Left
  */
 
-@keyframes uk-fade-left {
+@keyframes fade-left {
     0% {
         opacity: 0;
         transform: translateX(-100%);
@@ -194,7 +194,7 @@
  * Slide Right
  */
 
-@keyframes uk-fade-right {
+@keyframes fade-right {
     0% {
         opacity: 0;
         transform: translateX(100%);
@@ -209,7 +209,7 @@
  * Slide Top Small
  */
 
-@keyframes uk-fade-top-small {
+@keyframes fade-top-small {
     0% {
         opacity: 0;
         transform: translateY(-@animation-slide-small-translate);
@@ -224,7 +224,7 @@
  * Slide Bottom Small
  */
 
-@keyframes uk-fade-bottom-small {
+@keyframes fade-bottom-small {
     0% {
         opacity: 0;
         transform: translateY(@animation-slide-small-translate);
@@ -239,7 +239,7 @@
  * Slide Left Small
  */
 
-@keyframes uk-fade-left-small {
+@keyframes fade-left-small {
     0% {
         opacity: 0;
         transform: translateX(-@animation-slide-small-translate);
@@ -254,7 +254,7 @@
  * Slide Right Small
  */
 
-@keyframes uk-fade-right-small {
+@keyframes fade-right-small {
     0% {
         opacity: 0;
         transform: translateX(@animation-slide-small-translate);
@@ -269,7 +269,7 @@
  * Slide Top Medium
  */
 
-@keyframes uk-fade-top-medium {
+@keyframes fade-top-medium {
     0% {
         opacity: 0;
         transform: translateY(-@animation-slide-medium-translate);
@@ -284,7 +284,7 @@
  * Slide Bottom Medium
  */
 
-@keyframes uk-fade-bottom-medium {
+@keyframes fade-bottom-medium {
     0% {
         opacity: 0;
         transform: translateY(@animation-slide-medium-translate);
@@ -299,7 +299,7 @@
  * Slide Left Medium
  */
 
-@keyframes uk-fade-left-medium {
+@keyframes fade-left-medium {
     0% {
         opacity: 0;
         transform: translateX(-@animation-slide-medium-translate);
@@ -314,7 +314,7 @@
  * Slide Right Medium
  */
 
-@keyframes uk-fade-right-medium {
+@keyframes fade-right-medium {
     0% {
         opacity: 0;
         transform: translateX(@animation-slide-medium-translate);
@@ -329,7 +329,7 @@
  * Scale Up
  */
 
-@keyframes uk-fade-scale-02 {
+@keyframes fade-scale-02 {
     0% {
         opacity: 0;
         transform: scale(0.2);
@@ -344,7 +344,7 @@
  * Scale Down
  */
 
-@keyframes uk-fade-scale-18 {
+@keyframes fade-scale-18 {
     0% {
         opacity: 0;
         transform: scale(1.8);
@@ -359,7 +359,7 @@
  * Kenburns
  */
 
-@keyframes uk-scale-kenburns {
+@keyframes scale-kenburns {
     0% { transform: scale(1); }
     100% { transform: scale(1.2); }
 }
@@ -368,7 +368,7 @@
  * Shake
  */
 
-@keyframes uk-shake {
+@keyframes shake {
     0%, 100% { transform: translateX(0); }
     10% { transform: translateX(-9px); }
     20% { transform: translateX(8px); }

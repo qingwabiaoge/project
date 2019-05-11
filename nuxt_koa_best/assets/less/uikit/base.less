@@ -118,12 +118,12 @@ body {
 /* Headings
  ========================================================================== */
 
-h1, .uk-h1,
-h2, .uk-h2,
-h3, .uk-h3,
-h4, .uk-h4,
-h5, .uk-h5,
-h6, .uk-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   margin: 0;
   font-family: @base-heading-font-family;
   font-weight: @base-heading-font-weight;
@@ -136,33 +136,33 @@ h6, .uk-h6 {
  * Sizes
  */
 
-h1, .uk-h1 {
+h1, .h1 {
   font-size: @base-h1-font-size;
   font-weight: bold;
 
 }
 
-h2, .uk-h2 {
+h2, .h2 {
   font-size: @base-h2-font-size;
 
 }
 
-h3, .uk-h3 {
+h3, .h3 {
   font-size: @base-h3-font-size;
 
 }
 
-h4, .uk-h4 {
+h4, .h4 {
   font-size: @base-h4-font-size;
 
 }
 
-h5, .uk-h5 {
+h5, .h5 {
   font-size: @base-h5-font-size;
 
 }
 
-h6, .uk-h6 {
+h6, .h6 {
   font-size: @base-h6-font-size;
 
 }
@@ -170,11 +170,11 @@ h6, .uk-h6 {
 
 @media (min-width: @global-breakpoint-tablet) {
 
-  h1, .uk-h1 {
+  h1, .h1 {
     font-size: @base-h1-font-size-m;
   }
 
-  h2, .uk-h2 {
+  h2, .h2 {
     font-size: @base-h2-font-size-m;
   }
 
@@ -182,14 +182,14 @@ h6, .uk-h6 {
 
 
 a,
-.uk-link {
+.link {
   color: @base-link-color;
   text-decoration: @base-link-text-decoration;
   cursor: pointer;
 }
 
 a:hover,
-.uk-link:hover,
+.link:hover,
 a.active
 
   //,a.linkActiveClass//包含上级目录
@@ -266,7 +266,7 @@ dd {
   margin-left: 0;
 }
 
-hr, .uk-hr {
+hr, .hr {
   /* 1 */
   box-sizing: content-box;
   height: 0;
@@ -283,7 +283,7 @@ hr, .uk-hr {
 
 
 * + hr,
-* + .uk-hr {
+* + .hr {
   margin-top: @base-hr-margin-vertical
 }
 
@@ -328,7 +328,7 @@ small {
 
 
 
-i, .uk-i {
+i, .i {
   color: @global-color-gray-dark;
   font-style: italic;
 }
@@ -382,17 +382,17 @@ sub {
 }
 
 
-.uk-inverse, .uk-hover-inverse:hover {
+.inverse, .hover-inverse:hover {
   background: #000;
   color: #ccc;
   h1, h2, h3, b, i {
     color: white!important;
   }
-  h4, h5, h6, p, ul, li, div, a, .uk-link {
+  h4, h5, h6, p, ul, li, div, a, .link {
     color: #ccc;
   }
   a:hover,
-  .uk-link:hover,
+  .link:hover,
   a.active {
     color: @global-color-primary;
   }
@@ -429,12 +429,12 @@ article, .article {
   }
 
 
-  h1, .uk-h1,
-  h2, .uk-h2,
-  h3, .uk-h3,
-  h4, .uk-h4,
-  h5, .uk-h5,
-  h6, .uk-h6 {
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
     margin: 0 0 @base-margin-vertical 0;
     font-family: @base-heading-font-family;
     font-weight: @base-heading-font-weight;
@@ -444,12 +444,12 @@ article, .article {
   }
 
   /* Add margin if adjacent element */
-  * + h1, * + .uk-h1,
-  * + h2, * + .uk-h2,
-  * + h3, * + .uk-h3,
-  * + h4, * + .uk-h4,
-  * + h5, * + .uk-h5,
-  * + h6, * + .uk-h6 {
+  * + h1, * + .h1,
+  * + h2, * + .h2,
+  * + h3, * + .h3,
+  * + h4, * + .h4,
+  * + h5, * + .h5,
+  * + h6, * + .h6 {
     margin-top: @base-heading-margin-top;
   }
 
@@ -457,37 +457,37 @@ article, .article {
    * Sizes
    */
 
-  h1, .uk-h1 {
+  h1, .h1 {
     font-size: @base-h1-font-size;
     line-height: @base-h1-line-height;
 
   }
 
-  h2, .uk-h2 {
+  h2, .h2 {
     font-size: @base-h2-font-size;
     line-height: @base-h2-line-height;
 
   }
 
-  h3, .uk-h3 {
+  h3, .h3 {
     font-size: @base-h3-font-size;
     line-height: @base-h3-line-height;
 
   }
 
-  h4, .uk-h4 {
+  h4, .h4 {
     font-size: @base-h4-font-size;
     line-height: @base-h4-line-height;
 
   }
 
-  h5, .uk-h5 {
+  h5, .h5 {
     font-size: @base-h5-font-size;
     line-height: @base-h5-line-height;
 
   }
 
-  h6, .uk-h6 {
+  h6, .h6 {
     font-size: @base-h6-font-size;
     line-height: @base-h6-line-height;
 
@@ -496,11 +496,11 @@ article, .article {
   /* Tablet landscape and bigger */
   @media (min-width: @global-breakpoint-tablet) {
 
-    h1, .uk-h1 {
+    h1, .h1 {
       font-size: @base-h1-font-size-m;
     }
 
-    h2, .uk-h2 {
+    h2, .h2 {
       font-size: @base-h2-font-size-m;
     }
 

@@ -7,7 +7,7 @@
                     <!--hover-child-image-scale必须放到这里-->
                     <img v-lazy="item.image" :alt="item.title">
                 </div>
-                <div class="uk-padding">
+                <div class="padding">
                     <h4>{{item.title}}</h4>
                     <p :class="$style.p">
                         {{item.text}}

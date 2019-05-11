@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div class="uk-background-default" :class="$style.module">
+    <div class="background-default" :class="$style.module">
       <el-row
         :gutter="20"
-        class=" uk-background-gray-lightest "
+        class=" background-gray-lightest "
       >
         <el-col :md="12" v-for="item in data" :key="item.image">
 
-          <div class="uk-text-left"
+          <div class="text-left"
                :style="{backgroundImage:`url(${item.image}) `}"
                style="padding: 83px 72px;background: #fff no-repeat right bottom ">
-            <div class="uk-h1">
+            <div class="h1">
               <span class="color-primary">{{item.title}}</span><span>{{item.subtitle}}</span>
             </div>
-            <h3 class="uk-text-uppercase" style="color:#666">{{item.text}}</h3>
+            <h3 class="text-uppercase" style="color:#666">{{item.text}}</h3>
             <h4 style="padding: 53px 0 80px">
               {{item.description}}
             </h4>
@@ -41,7 +41,7 @@
   /*media<720*/
   @media (max-width: @global-breakpoint-phone) {
     .module {
-      :global(.uk-text-left) {
+      :global(.text-left) {
         background-image: none!important;
       }
     }

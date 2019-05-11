@@ -6,7 +6,7 @@
  * 2. Reset list
  * 3. Gutter
  */
-.uk-thumbnav {
+.thumbnav {
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
  * Space is allocated based on content dimensions, but shrinks: 0 1 auto
  * 1. Gutter
  */
-.uk-thumbnav > * {
+.thumbnav > * {
   /* 1 */
   padding-left: 15px;
 }
@@ -30,22 +30,22 @@
 /*
  * Items
  */
-.uk-thumbnav > * > * {
+.thumbnav > * > * {
   display: inline-block;
 }
 /* Hover + Focus */
-.uk-thumbnav > * > :hover,
-.uk-thumbnav > * > :focus {
+.thumbnav > * > :hover,
+.thumbnav > * > :focus {
   outline: none;
 }
 /* Active */
-/* Modifier: 'uk-thumbnav-vertical'
+/* Modifier: 'thumbnav-vertical'
  ========================================================================== */
 /*
  * 1. Change direction
  * 2. Gutter
  */
-.uk-thumbnav-vertical {
+.thumbnav-vertical {
   /* 1 */
   flex-direction: column;
   /* 2 */
@@ -53,7 +53,7 @@
   margin-top: -15px;
 }
 /* 2 */
-.uk-thumbnav-vertical > * {
+.thumbnav-vertical > * {
   padding-left: 0;
   padding-top: 15px;
 }

@@ -1,8 +1,8 @@
 // Name:            Inverse
 // Description:     Inverse component style for light or dark backgrounds
 //
-// Component:       `uk-light`
-//                  `uk-dark`
+// Component:       `light`
+//                  `dark`
 //
 // ========================================================================
 
@@ -29,17 +29,17 @@
 
 /*
  * Implemented class depends on the general theme color
- * `uk-light` is for light colors on dark backgrounds
- * `uk-dark` is or dark colors on light backgrounds
+ * `light` is for light colors on dark backgrounds
+ * `dark` is or dark colors on light backgrounds
  */
 
-.uk-light when (@inverse-global-color-mode = light) {
+.light when (@inverse-global-color-mode = light) {
 
     .hook-inverse;
 
 }
 
-.uk-dark when (@inverse-global-color-mode = dark) {
+.dark when (@inverse-global-color-mode = dark) {
 
     .hook-inverse;
 

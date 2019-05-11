@@ -3,8 +3,10 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-  export default {  layout:'demo',
+
+  export default {
+
+    layout:'demo',
 
     async asyncData(ctx) {
 

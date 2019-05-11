@@ -1,15 +1,15 @@
 <template>
-  <div class="container  uk-inverse uk-background-gray-dark">
+  <div class="container  inverse background-gray-dark">
     <el-row :gutter="28">
 
       <el-col :md="12" v-if="data">
 
         <div :class="$style['hover-white-backgoud-fade-in']"
-             class="uk-inline hover-child-image-scale "
+             class="inline hover-child-image-scale "
         >
           <img v-lazy="data[0].image"
                :alt="data[0].title">
-          <div class="uk-overlay uk-overlay-default uk-position-bottom ">
+          <div class="overlay overlay-default position-bottom ">
             <div>
               <h3> {{data[0].title}}</h3>
               <p>{{data[0].subtitle}}</p>
@@ -20,10 +20,10 @@
       </el-col>
       <el-col :md="12">
         <div :class="$style['hover-white-backgoud-fade-in']"
-             class="uk-inline uk-background-primary hover-child-image-scale "
+             class="inline background-primary hover-child-image-scale "
         >
           <img v-lazy="data[1].image" alt="data[1].title">
-          <div class="uk-position-right uk-overlay uk-overlay-default uk-flex uk-flex-middle"
+          <div class="position-right overlay overlay-default flex flex-middle"
                style="width: 50%">
             <div>
               <h3 >{{data[1].title}}</h3>
@@ -32,10 +32,10 @@
           </div>
         </div>
         <div :class="$style['hover-white-backgoud-fade-in']"
-             class="uk-inline uk-background-secondary hover-child-image-scale"
+             class="inline background-secondary hover-child-image-scale"
              style="margin-top:28px">
           <img v-lazy="data[2].image" alt="data[2].title">
-          <div class="uk-position-right uk-overlay uk-overlay-default uk-flex uk-flex-middle" style="width: 50%">
+          <div class="position-right overlay overlay-default flex flex-middle" style="width: 50%">
             <div>
               <h3>{{data[2].title}}</h3>
               <p>{{data[2].subtitle}}</p>

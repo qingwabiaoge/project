@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="uk-inverse  uk-padding-bottom uk-background-gray-darker "
+    <div class="inverse  padding-bottom background-gray-darker "
     >
       <el-row class="container">
-        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+        <el-col  :md="5" class="padding-top-larger hidden@xs">
           <h3>艺术产品</h3>
           <ul style="margin-top: 18px; margin-left: 6px">
             <li v-for="item in $store.state.config.goodsCategory">
@@ -13,7 +13,7 @@
             </li>
           </ul>
         </el-col>
-        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+        <el-col  :md="5" class="padding-top-larger hidden@xs">
           <h3>百事得新闻</h3>
           <ul style="margin-top: 18px; margin-left: 6px">
             <li v-for="item in $store.state.config.articleCategory">
@@ -25,7 +25,7 @@
           </ul>
         </el-col>
 
-        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+        <el-col  :md="5" class="padding-top-larger hidden@xs">
           <h3>加入我们</h3>
           <ul style="margin-top: 18px; margin-left: 6px">
 
@@ -36,7 +36,7 @@
 
           </ul>
         </el-col>
-        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+        <el-col  :md="5" class="padding-top-larger hidden@xs">
           <h3>关于</h3>
           <ul style="margin-top: 18px; margin-left: 6px">
 
@@ -54,15 +54,15 @@
         </el-col>
 
 
-        <el-col  :md="4" class="uk-text-right uk-padding-top-larger uk-text-center@xs">
+        <el-col  :md="4" class="text-right padding-top-larger text-center@xs">
           <img v-lazy="$store.state.config.global.qcode" style="width: 200px" alt="二维码">
         </el-col>
 
       </el-row>
     </div>
-    <div class="uk-inverse"
+    <div class="inverse"
          style=" line-height: 67px; color: #666">
-      <el-row class="container uk-text-center@xs">
+      <el-row class="container text-center@xs">
         <el-col :md="8" >
           {{$store.state.config.global.address}}
 
@@ -72,7 +72,7 @@
             {{$store.state.config.global.beian}}
           </a>
         </el-col>
-        <el-col :md="8" class="uk-hidden@xs">友情链接:</el-col>
+        <el-col :md="8" class="hidden@xs">友情链接:</el-col>
       </el-row>
     </div>
   </div>

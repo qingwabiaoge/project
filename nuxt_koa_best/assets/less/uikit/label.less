@@ -1,11 +1,11 @@
 // Name:            Label
 // Description:     Component to indicate important notes
 //
-// Component:       `uk-label`
+// Component:       `label`
 //
-// Modifiers:       `uk-label-success`
-//                  `uk-label-warning`
-//                  `uk-label-danger`
+// Modifiers:       `label-success`
+//                  `label-warning`
+//                  `label-danger`
 //
 // ========================================================================
 
@@ -32,7 +32,7 @@
    Component: Label
  ========================================================================== */
 
-.uk-label {
+.label {
     display: inline-block;
     padding: @label-padding-vertical @label-padding-horizontal;
     background: @label-background;
@@ -52,7 +52,7 @@
  * Success
  */
 
-.uk-label-success {
+.label-success {
     background-color: @label-success-background;
     color: @label-success-color;
     .hook-label-success;
@@ -62,7 +62,7 @@
  * Warning
  */
 
-.uk-label-warning {
+.label-warning {
     background-color: @label-warning-background;
     color: @label-warning-color;
     .hook-label-warning;
@@ -72,7 +72,7 @@
  * Danger
  */
 
-.uk-label-danger {
+.label-danger {
     background-color: @label-danger-background;
     color: @label-danger-color;
     .hook-label-danger;
@@ -99,7 +99,7 @@
 
 .hook-inverse() {
 
-    .uk-label {
+    .label {
         background-color: @inverse-label-background;
         color: @inverse-label-color;
         .hook-inverse-label;

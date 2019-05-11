@@ -1,8 +1,8 @@
 // Name:            Divider
 // Description:     Styles for dividers
 //
-// Component:       `uk-divider-icon`
-//                  `uk-divider-small`
+// Component:       `divider-icon`
+//                  `divider-small`
 //
 // ========================================================================
 
@@ -36,7 +36,7 @@
  * 2. Set margin if a `div` is used for semantical reason
  */
 
-[class*='uk-divider'] {
+[class*='divider'] {
     /* 1 */
     border: none;
     /* 2 */
@@ -44,13 +44,13 @@
 }
 
 /* Add margin if adjacent element */
-* + [class*='uk-divider'] { margin-top: @divider-margin-vertical; }
+* + [class*='divider'] { margin-top: @divider-margin-vertical; }
 
 
 /* Icon
  ========================================================================== */
 
-.uk-divider-icon {
+.divider-icon {
     position: relative;
     height: @divider-icon-height;
     .svg-fill(@internal-divider-icon-image, "#000", @divider-icon-color);
@@ -59,8 +59,8 @@
     .hook-divider-icon;
 }
 
-.uk-divider-icon::before,
-.uk-divider-icon::after {
+.divider-icon::before,
+.divider-icon::after {
     content: "";
     position: absolute;
     top: @divider-icon-line-top;
@@ -69,13 +69,13 @@
     .hook-divider-icon-line;
 }
 
-.uk-divider-icon::before {
+.divider-icon::before {
     right: ~'calc(50% + (@{divider-icon-width} / 2))';
     width: @divider-icon-line-width;
     .hook-divider-icon-line-left;
 }
 
-.uk-divider-icon::after {
+.divider-icon::after {
     left: ~'calc(50% + (@{divider-icon-width} / 2))';
     width: @divider-icon-line-width;
     .hook-divider-icon-line-right;
@@ -89,9 +89,9 @@
  * Reset child height, caused by `inline-block`
  */
 
-.uk-divider-small { line-height: 0; }
+.divider-small { line-height: 0; }
 
-.uk-divider-small::after {
+.divider-small::after {
     content: "";
     display: inline-block;
     width: @divider-small-width;
@@ -124,18 +124,18 @@
 
 .hook-inverse() {
 
-    .uk-divider-icon {
+    .divider-icon {
         .svg-fill(@internal-divider-icon-image, "#000", @inverse-divider-icon-color);
         .hook-inverse-divider-icon;
     }
 
-    .uk-divider-icon::before,
-    .uk-divider-icon::after {
+    .divider-icon::before,
+    .divider-icon::after {
         border-bottom-color: @inverse-divider-icon-line-border;
         .hook-inverse-divider-icon-line;
     }
 
-    .uk-divider-small::after {
+    .divider-small::after {
         border-top-color: @inverse-divider-small-border;
         .hook-inverse-divider-small;
     }

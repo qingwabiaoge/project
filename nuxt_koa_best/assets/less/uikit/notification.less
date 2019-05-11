@@ -1,21 +1,21 @@
 // Name:            Notification
 // Description:     Component to create notification messages
 //
-// Component:       `uk-notification`
+// Component:       `notification`
 //
-// Sub-objects:     `uk-notification-message`
+// Sub-objects:     `notification-message`
 //
-// Adopted:         `uk-notification-close`
+// Adopted:         `notification-close`
 //
-// Modifiers:       `uk-notification-top-center`
-//                  `uk-notification-top-right`
-//                  `uk-notification-bottom-left`
-//                  `uk-notification-bottom-center`
-//                  `uk-notification-bottom-right`
-//                  `uk-notification-message-primary`
-//                  `uk-notification-message-success`
-//                  `uk-notification-message-warning`
-//                  `uk-notification-message-danger`
+// Modifiers:       `notification-top-center`
+//                  `notification-top-right`
+//                  `notification-bottom-left`
+//                  `notification-bottom-center`
+//                  `notification-bottom-right`
+//                  `notification-message-primary`
+//                  `notification-message-success`
+//                  `notification-message-warning`
+//                  `notification-message-danger`
 //
 // ========================================================================
 
@@ -52,7 +52,7 @@
  * 2. Dimensions
  */
 
-.uk-notification {
+.notification {
     /* 1 */
     position: fixed;
     top: @notification-position;
@@ -68,21 +68,21 @@
 /* Position modifiers
 ========================================================================== */
 
-.uk-notification-top-right,
-.uk-notification-bottom-right {
+.notification-top-right,
+.notification-bottom-right {
     left: auto;
     right: @notification-position;
 }
 
-.uk-notification-top-center,
-.uk-notification-bottom-center {
+.notification-top-center,
+.notification-bottom-center {
     left: 50%;
     margin-left: (@notification-width / -2);
 }
 
-.uk-notification-bottom-left,
-.uk-notification-bottom-right,
-.uk-notification-bottom-center {
+.notification-bottom-left,
+.notification-bottom-right,
+.notification-bottom-center {
     top: auto;
     bottom: @notification-position;
 }
@@ -94,7 +94,7 @@
 /* Phones portrait and smaller */
 @media (max-width: @breakpoint-xsmall-max) {
 
-    .uk-notification {
+    .notification {
         left: @notification-position;
         right: @notification-position;
         width: auto;
@@ -107,7 +107,7 @@
 /* Message
 ========================================================================== */
 
-.uk-notification-message {
+.notification-message {
     position: relative;
     margin-bottom: @notification-message-margin-bottom;
     padding: @notification-message-padding;
@@ -121,10 +121,10 @@
 
 
 /* Close
- * Adopts `uk-close`
+ * Adopts `close`
  ========================================================================== */
 
-.uk-notification-close {
+.notification-close {
     display: none;
     position: absolute;
     top: @notification-close-top;
@@ -132,7 +132,7 @@
     .hook-notification-close;
 }
 
-.uk-notification-message:hover .uk-notification-close { display: block; }
+.notification-message:hover .notification-close { display: block; }
 
 
 /* Style modifiers
@@ -142,7 +142,7 @@
  * Primary
  */
 
-.uk-notification-message-primary {
+.notification-message-primary {
     color: @notification-message-primary-color;
     .hook-notification-message-primary;
 }
@@ -151,7 +151,7 @@
  * Success
  */
 
-.uk-notification-message-success {
+.notification-message-success {
     color: @notification-message-success-color;
     .hook-notification-message-success;
 }
@@ -160,7 +160,7 @@
  * Warning
  */
 
-.uk-notification-message-warning {
+.notification-message-warning {
     color: @notification-message-warning-color;
     .hook-notification-message-warning;
 }
@@ -169,7 +169,7 @@
  * Danger
  */
 
-.uk-notification-message-danger {
+.notification-message-danger {
     color: @notification-message-danger-color;
     .hook-notification-message-danger;
 }

@@ -1,12 +1,12 @@
 // Name:            List
 // Description:     Styles for lists
 //
-// Component:       `uk-list`
+// Component:       `list`
 //
-// Modifiers:       `uk-list-divider`
-//                  `uk-list-striped`
-//                  `uk-list-bullet`
-//                  `uk-list-large`
+// Modifiers:       `list-divider`
+//                  `list-striped`
+//                  `list-bullet`
+//                  `list-large`
 //
 // ========================================================================
 
@@ -43,7 +43,7 @@
    Component: List
  ========================================================================== */
 
-.uk-list {
+.list {
     padding: 0;
     list-style: none;
 }
@@ -52,25 +52,25 @@
  * Micro clearfix
  */
 
-.uk-list > li::before,
-.uk-list > li::after {
+.list > li::before,
+.list > li::after {
     content: "";
     display: table;
 }
 
-.uk-list > li::after { clear: both; }
+.list > li::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-list > li > :last-child { margin-bottom: 0; }
+.list > li > :last-child { margin-bottom: 0; }
 
 /*
  * Nested lists
  */
 
-.uk-list ul {
+.list ul {
     margin: 0;
     padding-left: @list-nested-padding-left;
     list-style: none;
@@ -80,8 +80,8 @@
  * Style
  */
 
-.uk-list > li:nth-child(n+2),
-.uk-list > li > ul { margin-top: @list-margin-top; }
+.list > li:nth-child(n+2),
+.list > li > ul { margin-top: @list-margin-top; }
 
 
 /* Style modifiers
@@ -91,7 +91,7 @@
  * Divider
  */
 
-.uk-list-divider > li:nth-child(n+2) {
+.list-divider > li:nth-child(n+2) {
     margin-top: @list-divider-margin-top;
     padding-top: @list-divider-margin-top;
     border-top: @list-divider-border-width solid @list-divider-border;
@@ -102,25 +102,25 @@
  * Striped
  */
 
-.uk-list-striped > li {
+.list-striped > li {
     padding: @list-striped-padding-vertical @list-striped-padding-horizontal;
     .hook-list-striped;
 }
 
-.uk-list-striped > li:nth-of-type(odd) { background: @list-striped-background; }
+.list-striped > li:nth-of-type(odd) { background: @list-striped-background; }
 
-.uk-list-striped > li:nth-child(n+2) { margin-top: 0; }
+.list-striped > li:nth-child(n+2) { margin-top: 0; }
 
 /*
  * Bullet
  */
 
-.uk-list-bullet > li {
+.list-bullet > li {
     position: relative;
     padding-left: ~'calc(@{list-bullet-width} + @{list-bullet-margin-right})';
 }
 
-.uk-list-bullet > li::before {
+.list-bullet > li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -138,14 +138,14 @@
 /* Size modifier
  ========================================================================== */
 
-.uk-list-large > li:nth-child(n+2),
-.uk-list-large > li > ul { margin-top: @list-large-margin-top; }
+.list-large > li:nth-child(n+2),
+.list-large > li > ul { margin-top: @list-large-margin-top; }
 
 /*
  * Divider
  */
 
-.uk-list-large.uk-list-divider > li:nth-child(n+2) {
+.list-large.list-divider > li:nth-child(n+2) {
     margin-top: @list-large-divider-margin-top;
     padding-top: @list-large-divider-margin-top;
 }
@@ -154,12 +154,12 @@
  * Striped
  */
 
-.uk-list-large.uk-list-striped > li {
+.list-large.list-striped > li {
     padding: @list-large-striped-padding-vertical @list-large-striped-padding-horizontal;
     .hook-list-striped;
 }
 
-.uk-list-large.uk-list-striped > li:nth-child(n+2) { margin-top: 0; }
+.list-large.list-striped > li:nth-child(n+2) { margin-top: 0; }
 
 
 // Hooks
@@ -182,18 +182,18 @@
 
 .hook-inverse() {
 
-    .uk-list-divider > li:nth-child(n+2) {
+    .list-divider > li:nth-child(n+2) {
         border-top-color: @inverse-list-divider-border;
         .hook-inverse-list-divider;
     }
 
-    .uk-list-striped > li {
+    .list-striped > li {
         .hook-inverse-list-striped;
     }
 
-    .uk-list-striped > li:nth-of-type(odd) { background-color: @inverse-list-striped-background; }
+    .list-striped > li:nth-of-type(odd) { background-color: @inverse-list-striped-background; }
 
-    .uk-list-bullet > li::before {
+    .list-bullet > li::before {
         .svg-fill(@internal-list-bullet-image, "#000", @inverse-list-bullet-icon-color);
         .hook-inverse-list-bullet;
     }

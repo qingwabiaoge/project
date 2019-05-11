@@ -1,8 +1,8 @@
 <template>
-  <div class="uk-background-gray-lightest uk-padding-top-small uk-padding-bottom-largest">
-    <pictextContact :data="$store.state.componentDatas.pictextContact" class="uk-hidden@xs"></pictextContact>
+  <div class="background-gray-lightest padding-top-small padding-bottom-largest">
+    <pictextContact :data="$store.state.componentDatas.pictextContact" class="hidden@xs"></pictextContact>
 
-    <div class="container  uk-margin-top uk-padding   uk-background-default">
+    <div class="container  margin-top padding   background-default">
       <el-row :gutter="25">
         <el-col :md="12">
           <img :src="$store.state.config.global.image" :alt="$store.state.config.global.name">
@@ -10,13 +10,13 @@
         <el-col :md="12" style="line-height: 2">
           <h1>{{$store.state.config.global.name}}</h1>
           <hr>
-          <i class="iconfont icon-zuoji1 uk-margin-right-small"></i>热线:{{$store.state.config.global.tel}} <br>
-          <i class="iconfont icon-qq uk-margin-right-small"></i>Q Q:{{$store.state.config.global.qq}} <br>
-          <i class="iconfont icon-coordinates uk-margin-right-small"></i>地址:{{$store.state.config.global.address}} <br>
+          <i class="iconfont icon-zuoji1 margin-right-small"></i>热线:{{$store.state.config.global.tel}} <br>
+          <i class="iconfont icon-qq margin-right-small"></i>Q Q:{{$store.state.config.global.qq}} <br>
+          <i class="iconfont icon-coordinates margin-right-small"></i>地址:{{$store.state.config.global.address}} <br>
         </el-col>
 
       </el-row>
-      <el-row class="uk-margin-top-small">
+      <el-row class="margin-top-small">
 
         <img v-lazy="$store.state.config.global.map" :alt="$store.state.config.global.name">
 

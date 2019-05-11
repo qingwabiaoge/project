@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="uk-text-center">
+    <div class="text-center">
       <img src="@/assets/pic/brandbg.jpg" alt="">
     </div>
     <icolist :data="$store.state.componentDatas.icolist"></icolist>
@@ -22,17 +22,17 @@
                 text="Color Art"
     >
     </titleScale>
-<!--    <div class='uk-background-gray-dark uk-padding-top-larger uk-padding-bottom-larger'>
+<!--    <div class='background-gray-dark padding-top-larger padding-bottom-larger'>
       <pictextThree :data="$store.state.componentDatas.pictextThree"></pictextThree>
     </div>-->
     <titleScale title="品牌"
                 subTitle="历史"
                 text="brand history"
-                class="uk-hidden@xs"
+                class="hidden@xs"
                 :description="$store.state.componentDatas.pictextHistory[0].description">
     </titleScale>
 
-    <pictextHistory :data="$store.state.componentDatas.pictextHistory" class="uk-hidden@xs"></pictextHistory>
+    <pictextHistory :data="$store.state.componentDatas.pictextHistory" class="hidden@xs"></pictextHistory>
 
 
  <!--   <titleScale title="CCTV"

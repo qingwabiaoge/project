@@ -175,17 +175,17 @@ body {
 /* Headings
  ========================================================================== */
 h1,
-.uk-h1,
+.h1,
 h2,
-.uk-h2,
+.h2,
 h3,
-.uk-h3,
+.h3,
 h4,
-.uk-h4,
+.h4,
 h5,
-.uk-h5,
+.h5,
 h6,
-.uk-h6 {
+.h6 {
   margin: 0;
   font-family: Arial, 'Times New Roman', 'Microsoft YaHei', SimHei, "宋体", sans-serif;
   font-weight: normal;
@@ -196,54 +196,54 @@ h6,
  * Sizes
  */
 h1,
-.uk-h1 {
+.h1 {
   font-size: 1.938rem;
   font-weight: bold;
 }
 h2,
-.uk-h2 {
+.h2 {
   font-size: 1.632rem;
 }
 h3,
-.uk-h3 {
+.h3 {
   font-size: 1.285rem;
 }
 h4,
-.uk-h4 {
+.h4 {
   font-size: 1.15rem;
 }
 h5,
-.uk-h5 {
+.h5 {
   font-size: 14px;
 }
 h6,
-.uk-h6 {
+.h6 {
   font-size: 0.875rem;
 }
 @media (min-width: 960px) {
   h1,
-  .uk-h1 {
+  .h1 {
     font-size: 2.28rem;
   }
   h2,
-  .uk-h2 {
+  .h2 {
     font-size: 1.92rem;
   }
 }
 a,
-.uk-link {
+.link {
   color: #333;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover,
-.uk-link:hover,
+.link:hover,
 a.active {
   color: #e2c083;
   text-decoration: none;
 }
 a:hover *,
-.uk-link:hover *,
+.link:hover *,
 a.active * {
   color: #e2c083;
   text-decoration: none;
@@ -290,7 +290,7 @@ dd {
   margin-left: 0;
 }
 hr,
-.uk-hr {
+.hr {
   /* 1 */
   box-sizing: content-box;
   height: 0;
@@ -304,7 +304,7 @@ hr,
   border-top: 1px solid #E6E6E6;
 }
 * + hr,
-* + .uk-hr {
+* + .hr {
   margin-top: 25px;
 }
 abbr[title] {
@@ -334,7 +334,7 @@ small {
   font-size: 80%;
 }
 i,
-.uk-i {
+.i {
   color: #333;
   font-style: italic;
 }
@@ -375,49 +375,49 @@ sup {
 sub {
   bottom: -0.25em;
 }
-.uk-inverse,
-.uk-hover-inverse:hover {
+.inverse,
+.hover-inverse:hover {
   background: #000;
   color: #ccc;
 }
-.uk-inverse h1,
-.uk-hover-inverse:hover h1,
-.uk-inverse h2,
-.uk-hover-inverse:hover h2,
-.uk-inverse h3,
-.uk-hover-inverse:hover h3,
-.uk-inverse b,
-.uk-hover-inverse:hover b,
-.uk-inverse i,
-.uk-hover-inverse:hover i {
+.inverse h1,
+.hover-inverse:hover h1,
+.inverse h2,
+.hover-inverse:hover h2,
+.inverse h3,
+.hover-inverse:hover h3,
+.inverse b,
+.hover-inverse:hover b,
+.inverse i,
+.hover-inverse:hover i {
   color: white!important;
 }
-.uk-inverse h4,
-.uk-hover-inverse:hover h4,
-.uk-inverse h5,
-.uk-hover-inverse:hover h5,
-.uk-inverse h6,
-.uk-hover-inverse:hover h6,
-.uk-inverse p,
-.uk-hover-inverse:hover p,
-.uk-inverse ul,
-.uk-hover-inverse:hover ul,
-.uk-inverse li,
-.uk-hover-inverse:hover li,
-.uk-inverse div,
-.uk-hover-inverse:hover div,
-.uk-inverse a,
-.uk-hover-inverse:hover a,
-.uk-inverse .uk-link,
-.uk-hover-inverse:hover .uk-link {
+.inverse h4,
+.hover-inverse:hover h4,
+.inverse h5,
+.hover-inverse:hover h5,
+.inverse h6,
+.hover-inverse:hover h6,
+.inverse p,
+.hover-inverse:hover p,
+.inverse ul,
+.hover-inverse:hover ul,
+.inverse li,
+.hover-inverse:hover li,
+.inverse div,
+.hover-inverse:hover div,
+.inverse a,
+.hover-inverse:hover a,
+.inverse .link,
+.hover-inverse:hover .link {
   color: #ccc;
 }
-.uk-inverse a:hover,
-.uk-hover-inverse:hover a:hover,
-.uk-inverse .uk-link:hover,
-.uk-hover-inverse:hover .uk-link:hover,
-.uk-inverse a.active,
-.uk-hover-inverse:hover a.active {
+.inverse a:hover,
+.hover-inverse:hover a:hover,
+.inverse .link:hover,
+.hover-inverse:hover .link:hover,
+.inverse a.active,
+.hover-inverse:hover a.active {
   color: #e2c083;
 }
 article,
@@ -475,28 +475,28 @@ article * + figure,
 }
 article h1,
 .article h1,
-article .uk-h1,
-.article .uk-h1,
+article .h1,
+.article .h1,
 article h2,
 .article h2,
-article .uk-h2,
-.article .uk-h2,
+article .h2,
+.article .h2,
 article h3,
 .article h3,
-article .uk-h3,
-.article .uk-h3,
+article .h3,
+.article .h3,
 article h4,
 .article h4,
-article .uk-h4,
-.article .uk-h4,
+article .h4,
+.article .h4,
 article h5,
 .article h5,
-article .uk-h5,
-.article .uk-h5,
+article .h5,
+.article .h5,
 article h6,
 .article h6,
-article .uk-h6,
-.article .uk-h6 {
+article .h6,
+.article .h6 {
   margin: 0 0 10px 0;
   font-family: Arial, 'Times New Roman', 'Microsoft YaHei', SimHei, "宋体", sans-serif;
   font-weight: normal;
@@ -505,83 +505,83 @@ article .uk-h6,
 }
 article * + h1,
 .article * + h1,
-article * + .uk-h1,
-.article * + .uk-h1,
+article * + .h1,
+.article * + .h1,
 article * + h2,
 .article * + h2,
-article * + .uk-h2,
-.article * + .uk-h2,
+article * + .h2,
+.article * + .h2,
 article * + h3,
 .article * + h3,
-article * + .uk-h3,
-.article * + .uk-h3,
+article * + .h3,
+.article * + .h3,
 article * + h4,
 .article * + h4,
-article * + .uk-h4,
-.article * + .uk-h4,
+article * + .h4,
+.article * + .h4,
 article * + h5,
 .article * + h5,
-article * + .uk-h5,
-.article * + .uk-h5,
+article * + .h5,
+.article * + .h5,
 article * + h6,
 .article * + h6,
-article * + .uk-h6,
-.article * + .uk-h6 {
+article * + .h6,
+.article * + .h6 {
   margin-top: 35px;
 }
 article h1,
 .article h1,
-article .uk-h1,
-.article .uk-h1 {
+article .h1,
+.article .h1 {
   font-size: 1.938rem;
   line-height: 1.2;
 }
 article h2,
 .article h2,
-article .uk-h2,
-.article .uk-h2 {
+article .h2,
+.article .h2 {
   font-size: 1.632rem;
   line-height: 1.3;
 }
 article h3,
 .article h3,
-article .uk-h3,
-.article .uk-h3 {
+article .h3,
+.article .h3 {
   font-size: 1.285rem;
   line-height: 1.4;
 }
 article h4,
 .article h4,
-article .uk-h4,
-.article .uk-h4 {
+article .h4,
+.article .h4 {
   font-size: 1.15rem;
   line-height: 1.4;
 }
 article h5,
 .article h5,
-article .uk-h5,
-.article .uk-h5 {
+article .h5,
+.article .h5 {
   font-size: 14px;
   line-height: 1.4;
 }
 article h6,
 .article h6,
-article .uk-h6,
-.article .uk-h6 {
+article .h6,
+.article .h6 {
   font-size: 0.875rem;
   line-height: 1.4;
 }
 @media (min-width: 960px) {
   article h1,
   .article h1,
-  article .uk-h1,
-  .article .uk-h1 {
+  article .h1,
+  .article .h1 {
     font-size: 2.28rem;
   }
   article h2,
   .article h2,
-  article .uk-h2,
-  .article .uk-h2 {
+  article .h2,
+  .article .h2 {
     font-size: 1.92rem;
   }
 }
@@ -635,52 +635,52 @@ article ol > li > ul,
  ========================================================================== */
 /* Primary
  ========================================================================== */
-.uk-heading-primary {
+.heading-primary {
   font-size: 3rem;
   line-height: 1.2;
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-heading-primary {
+  .heading-primary {
     font-size: 3.375rem;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-heading-primary {
+  .heading-primary {
     font-size: 3.75rem;
     line-height: 1.1;
   }
 }
 /* Hero
  ========================================================================== */
-.uk-heading-hero {
+.heading-hero {
   font-size: 4rem;
   line-height: 1.1;
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-heading-hero {
+  .heading-hero {
     font-size: 6rem;
     line-height: 1;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-heading-hero {
+  .heading-hero {
     font-size: 8rem;
     line-height: 1;
   }
 }
 /* Divider
  ========================================================================== */
-.uk-heading-divider {
+.heading-divider {
   padding-bottom: 10px;
   border-bottom: 1px solid #E6E6E6;
 }
 /* Bullet
  ========================================================================== */
-.uk-heading-bullet {
+.heading-bullet {
   position: relative;
 }
 /*
@@ -688,7 +688,7 @@ article ol > li > ul,
  * 2. Center vertically
  * 3. Style
  */
-.uk-heading-bullet::before {
+.heading-bullet::before {
   content: "";
   /* 1 */
   display: inline-block;
@@ -706,13 +706,13 @@ article ol > li > ul,
 /*
  * Clip the child element
  */
-.uk-heading-line {
+.heading-line {
   overflow: hidden;
 }
 /*
  * Extra markup is needed to make it work with text align
  */
-.uk-heading-line > * {
+.heading-line > * {
   display: inline-block;
   position: relative;
 }
@@ -721,8 +721,8 @@ article ol > li > ul,
  * 2. Make the element as large as possible. It's clipped by the container.
  * 3. Style
  */
-.uk-heading-line > ::before,
-.uk-heading-line > ::after {
+.heading-line > ::before,
+.heading-line > ::after {
   content: "";
   /* 1 */
   position: absolute;
@@ -732,67 +732,67 @@ article ol > li > ul,
   /* 3 */
   border-bottom: 1px solid #E6E6E6;
 }
-.uk-heading-line > ::before {
+.heading-line > ::before {
   right: 100%;
   margin-right: 0.6em;
 }
-.uk-heading-line > ::after {
+.heading-line > ::after {
   left: 100%;
   margin-left: 0.6em;
 }
 /* ========================================================================
    Component: Card
  ========================================================================== */
-.uk-card {
+.card {
   position: relative;
   box-sizing: border-box;
 }
 /* Sections
  ========================================================================== */
-.uk-card-body {
+.card-body {
   padding: 25px 25px;
 }
-.uk-card-header {
+.card-header {
   padding: 13px 25px;
 }
-.uk-card-footer {
+.card-footer {
   padding: 12.5px 25px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-card-body {
+  .card-body {
     padding: 35px 35px;
   }
-  .uk-card-header {
+  .card-header {
     padding: 18px 35px;
   }
-  .uk-card-footer {
+  .card-footer {
     padding: 18px 35px;
   }
 }
 /*
  * Micro clearfix
  */
-.uk-card-body::before,
-.uk-card-body::after,
-.uk-card-header::before,
-.uk-card-header::after,
-.uk-card-footer::before,
-.uk-card-footer::after {
+.card-body::before,
+.card-body::after,
+.card-header::before,
+.card-header::after,
+.card-footer::before,
+.card-footer::after {
   content: "";
   display: table;
 }
-.uk-card-body::after,
-.uk-card-header::after,
-.uk-card-footer::after {
+.card-body::after,
+.card-header::after,
+.card-footer::after {
   clear: both;
 }
 /*
  * Remove margin from the last-child
  */
-.uk-card-body > :last-child,
-.uk-card-header > :last-child,
-.uk-card-footer > :last-child {
+.card-body > :last-child,
+.card-header > :last-child,
+.card-footer > :last-child {
   margin-bottom: 0;
 }
 /* Media
@@ -803,13 +803,13 @@ article ol > li > ul,
  */
 /* Title
  ========================================================================== */
-.uk-card-title {
+.card-title {
   font-size: 1.285rem;
   line-height: 1.4;
 }
 /* Badge
  ========================================================================== */
-.uk-card-badge {
+.card-badge {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -818,12 +818,12 @@ article ol > li > ul,
 /*
  * Remove margin from adjacent element
  */
-.uk-card-badge:first-child + * {
+.card-badge:first-child + * {
   margin-top: 0;
 }
 /* Hover modifier
  ========================================================================== */
-.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+.card-hover:not(.card-default):not(.card-primary):not(.card-secondary):hover {
   background: #fff;
 }
 /* Style modifiers
@@ -832,40 +832,40 @@ article ol > li > ul,
  * Default
  * Note: Header and Footer are only implemented for the default style
  */
-.uk-card-default {
+.card-default {
   background: #fff;
   color: #666;
 }
-.uk-card-default .uk-card-title {
+.card-default .card-title {
   color: #333;
 }
-.uk-card-default.uk-card-hover:hover {
+.card-default.card-hover:hover {
   background-color: #f2f2f2;
 }
 /*
  * Primary
  */
-.uk-card-primary {
+.card-primary {
   background: #e2c083;
   color: #fff;
 }
-.uk-card-primary .uk-card-title {
+.card-primary .card-title {
   color: #fff;
 }
-.uk-card-primary.uk-card-hover:hover {
+.card-primary.card-hover:hover {
   background-color: #ddb66e;
 }
 /*
  * Secondary
  */
-.uk-card-secondary {
+.card-secondary {
   background: #000;
   color: #fff;
 }
-.uk-card-secondary .uk-card-title {
+.card-secondary .card-title {
   color: #fff;
 }
-.uk-card-secondary.uk-card-hover:hover {
+.card-secondary.card-hover:hover {
   background-color: #000000;
 }
 /* Size modifier
@@ -873,14 +873,14 @@ article ol > li > ul,
 /*
  * Small
  */
-.uk-card-small.uk-card-body,
-.uk-card-small .uk-card-body {
+.card-small.card-body,
+.card-small .card-body {
   padding: 25px 25px;
 }
-.uk-card-small .uk-card-header {
+.card-small .card-header {
   padding: 17px 25px;
 }
-.uk-card-small .uk-card-footer {
+.card-small .card-footer {
   padding: 17px 25px;
 }
 /*
@@ -888,27 +888,27 @@ article ol > li > ul,
  */
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-card-large.uk-card-body,
-  .uk-card-large .uk-card-body {
+  .card-large.card-body,
+  .card-large .card-body {
     padding: 70px 70px;
   }
-  .uk-card-large .uk-card-header {
+  .card-large .card-header {
     padding: 35px 70px;
   }
-  .uk-card-large .uk-card-footer {
+  .card-large .card-footer {
     padding: 35px 70px;
   }
 }
 /* ========================================================================
    Component: Overlay
  ========================================================================== */
-.uk-overlay {
+.overlay {
   padding: 25px 25px;
 }
 /*
  * Remove margin from the last-child
  */
-.uk-overlay > :last-child {
+.overlay > :last-child {
   margin-bottom: 0;
 }
 /* Icon
@@ -918,13 +918,13 @@ article ol > li > ul,
 /*
  * Default
  */
-.uk-overlay-default {
+.overlay-default {
   background: rgba(255, 255, 255, 0.8);
 }
 /*
  * Primary
  */
-.uk-overlay-primary {
+.overlay-primary {
   background: rgba(0, 0, 0, 0.8);
 }
 .color-white {
@@ -947,26 +947,26 @@ article ol > li > ul,
  ========================================================================== */
 /* Equal child widths
  ========================================================================== */
-[class*='uk-child-width'] > * {
+[class*='child-width'] > * {
   box-sizing: border-box;
   width: 100%;
 }
-.uk-child-width-1-2 > * {
+.child-width-1-2 > * {
   width: 50%;
 }
-.uk-child-width-1-3 > * {
+.child-width-1-3 > * {
   width: calc(100% * 1 / 3.001);
 }
-.uk-child-width-1-4 > * {
+.child-width-1-4 > * {
   width: 25%;
 }
-.uk-child-width-1-5 > * {
+.child-width-1-5 > * {
   width: 20%;
 }
-.uk-child-width-1-6 > * {
+.child-width-1-6 > * {
   width: calc(100% * 1 / 6.001);
 }
-.uk-child-width-auto > * {
+.child-width-auto > * {
   width: auto;
 }
 /*
@@ -975,119 +975,119 @@ article ol > li > ul,
  *    Using `1px` instead of `0`, so items still wrap into the next line,
  *    if they have zero width and padding and the predecessor is 100% wide.
  */
-.uk-child-width-expand > :not([class*='uk-width']) {
+.child-width-expand > :not([class*='width']) {
   flex: 1;
   /* 1 */
   min-width: 1px;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
-  .uk-child-width-1-1\@s > * {
+  .child-width-1-1\@s > * {
     width: 100%;
   }
-  .uk-child-width-1-2\@s > * {
+  .child-width-1-2\@s > * {
     width: 50%;
   }
-  .uk-child-width-1-3\@s > * {
+  .child-width-1-3\@s > * {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-child-width-1-4\@s > * {
+  .child-width-1-4\@s > * {
     width: 25%;
   }
-  .uk-child-width-1-5\@s > * {
+  .child-width-1-5\@s > * {
     width: 20%;
   }
-  .uk-child-width-1-6\@s > * {
+  .child-width-1-6\@s > * {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-child-width-auto\@s > * {
+  .child-width-auto\@s > * {
     width: auto;
   }
-  .uk-child-width-expand\@s > :not([class*='uk-width']) {
+  .child-width-expand\@s > :not([class*='width']) {
     flex: 1;
     min-width: 1px;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-child-width-1-1\@m > * {
+  .child-width-1-1\@m > * {
     width: 100%;
   }
-  .uk-child-width-1-2\@m > * {
+  .child-width-1-2\@m > * {
     width: 50%;
   }
-  .uk-child-width-1-3\@m > * {
+  .child-width-1-3\@m > * {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-child-width-1-4\@m > * {
+  .child-width-1-4\@m > * {
     width: 25%;
   }
-  .uk-child-width-1-5\@m > * {
+  .child-width-1-5\@m > * {
     width: 20%;
   }
-  .uk-child-width-1-6\@m > * {
+  .child-width-1-6\@m > * {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-child-width-auto\@m > * {
+  .child-width-auto\@m > * {
     width: auto;
   }
-  .uk-child-width-expand\@m > :not([class*='uk-width']) {
+  .child-width-expand\@m > :not([class*='width']) {
     flex: 1;
     min-width: 1px;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-child-width-1-1\@l > * {
+  .child-width-1-1\@l > * {
     width: 100%;
   }
-  .uk-child-width-1-2\@l > * {
+  .child-width-1-2\@l > * {
     width: 50%;
   }
-  .uk-child-width-1-3\@l > * {
+  .child-width-1-3\@l > * {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-child-width-1-4\@l > * {
+  .child-width-1-4\@l > * {
     width: 25%;
   }
-  .uk-child-width-1-5\@l > * {
+  .child-width-1-5\@l > * {
     width: 20%;
   }
-  .uk-child-width-1-6\@l > * {
+  .child-width-1-6\@l > * {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-child-width-auto\@l > * {
+  .child-width-auto\@l > * {
     width: auto;
   }
-  .uk-child-width-expand\@l > :not([class*='uk-width']) {
+  .child-width-expand\@l > :not([class*='width']) {
     flex: 1;
     min-width: 1px;
   }
 }
 /* Large screen and bigger */
 @media (min-width: 1600px) {
-  .uk-child-width-1-1\@xl > * {
+  .child-width-1-1\@xl > * {
     width: 100%;
   }
-  .uk-child-width-1-2\@xl > * {
+  .child-width-1-2\@xl > * {
     width: 50%;
   }
-  .uk-child-width-1-3\@xl > * {
+  .child-width-1-3\@xl > * {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-child-width-1-4\@xl > * {
+  .child-width-1-4\@xl > * {
     width: 25%;
   }
-  .uk-child-width-1-5\@xl > * {
+  .child-width-1-5\@xl > * {
     width: 20%;
   }
-  .uk-child-width-1-6\@xl > * {
+  .child-width-1-6\@xl > * {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-child-width-auto\@xl > * {
+  .child-width-auto\@xl > * {
     width: auto;
   }
-  .uk-child-width-expand\@xl > :not([class*='uk-width']) {
+  .child-width-expand\@xl > :not([class*='width']) {
     flex: 1;
     min-width: 1px;
   }
@@ -1097,141 +1097,141 @@ article ol > li > ul,
 /*
  * 1. `max-width` is needed for the pixel-based classes
  */
-[class*='uk-width'] {
+[class*='width'] {
   box-sizing: border-box;
   width: 100%;
   /* 1 */
   max-width: 100%;
 }
 /* Halves */
-.uk-width-1-2 {
+.width-1-2 {
   width: 50%;
 }
 /* Thirds */
-.uk-width-1-3 {
+.width-1-3 {
   width: calc(100% * 1 / 3.001);
 }
-.uk-width-2-3 {
+.width-2-3 {
   width: calc(100% * 2 / 3.001);
 }
 /* Quarters */
-.uk-width-1-4 {
+.width-1-4 {
   width: 25%;
 }
-.uk-width-3-4 {
+.width-3-4 {
   width: 75%;
 }
 /* Fifths */
-.uk-width-1-5 {
+.width-1-5 {
   width: 20%;
 }
-.uk-width-2-5 {
+.width-2-5 {
   width: 40%;
 }
-.uk-width-3-5 {
+.width-3-5 {
   width: 60%;
 }
-.uk-width-4-5 {
+.width-4-5 {
   width: 80%;
 }
 /* Sixths */
-.uk-width-1-6 {
+.width-1-6 {
   width: calc(100% * 1 / 6.001);
 }
-.uk-width-5-6 {
+.width-5-6 {
   width: calc(100% * 5 / 6.001);
 }
 /* Pixel */
-.uk-width-small {
+.width-small {
   width: 150px;
 }
-.uk-width-medium {
+.width-medium {
   width: 300px;
 }
-.uk-width-large {
+.width-large {
   width: 450px;
 }
-.uk-width-xlarge {
+.width-xlarge {
   width: 600px;
 }
-.uk-width-xxlarge {
+.width-xxlarge {
   width: 750px;
 }
 /* Auto */
-.uk-width-auto {
+.width-auto {
   width: auto;
 }
 /* Expand */
-.uk-width-expand {
+.width-expand {
   flex: 1;
   min-width: 1px;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
   /* Whole */
-  .uk-width-1-1\@s {
+  .width-1-1\@s {
     width: 100%;
   }
   /* Halves */
-  .uk-width-1-2\@s {
+  .width-1-2\@s {
     width: 50%;
   }
   /* Thirds */
-  .uk-width-1-3\@s {
+  .width-1-3\@s {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-width-2-3\@s {
+  .width-2-3\@s {
     width: calc(100% * 2 / 3.001);
   }
   /* Quarters */
-  .uk-width-1-4\@s {
+  .width-1-4\@s {
     width: 25%;
   }
-  .uk-width-3-4\@s {
+  .width-3-4\@s {
     width: 75%;
   }
   /* Fifths */
-  .uk-width-1-5\@s {
+  .width-1-5\@s {
     width: 20%;
   }
-  .uk-width-2-5\@s {
+  .width-2-5\@s {
     width: 40%;
   }
-  .uk-width-3-5\@s {
+  .width-3-5\@s {
     width: 60%;
   }
-  .uk-width-4-5\@s {
+  .width-4-5\@s {
     width: 80%;
   }
   /* Sixths */
-  .uk-width-1-6\@s {
+  .width-1-6\@s {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-width-5-6\@s {
+  .width-5-6\@s {
     width: calc(100% * 5 / 6.001);
   }
   /* Pixel */
-  .uk-width-small\@s {
+  .width-small\@s {
     width: 150px;
   }
-  .uk-width-medium\@s {
+  .width-medium\@s {
     width: 300px;
   }
-  .uk-width-large\@s {
+  .width-large\@s {
     width: 450px;
   }
-  .uk-width-xlarge\@s {
+  .width-xlarge\@s {
     width: 600px;
   }
-  .uk-width-xxlarge\@s {
+  .width-xxlarge\@s {
     width: 750px;
   }
   /* Auto */
-  .uk-width-auto\@s {
+  .width-auto\@s {
     width: auto;
   }
   /* Expand */
-  .uk-width-expand\@s {
+  .width-expand\@s {
     flex: 1;
     min-width: 1px;
   }
@@ -1239,69 +1239,69 @@ article ol > li > ul,
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
   /* Whole */
-  .uk-width-1-1\@m {
+  .width-1-1\@m {
     width: 100%;
   }
   /* Halves */
-  .uk-width-1-2\@m {
+  .width-1-2\@m {
     width: 50%;
   }
   /* Thirds */
-  .uk-width-1-3\@m {
+  .width-1-3\@m {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-width-2-3\@m {
+  .width-2-3\@m {
     width: calc(100% * 2 / 3.001);
   }
   /* Quarters */
-  .uk-width-1-4\@m {
+  .width-1-4\@m {
     width: 25%;
   }
-  .uk-width-3-4\@m {
+  .width-3-4\@m {
     width: 75%;
   }
   /* Fifths */
-  .uk-width-1-5\@m {
+  .width-1-5\@m {
     width: 20%;
   }
-  .uk-width-2-5\@m {
+  .width-2-5\@m {
     width: 40%;
   }
-  .uk-width-3-5\@m {
+  .width-3-5\@m {
     width: 60%;
   }
-  .uk-width-4-5\@m {
+  .width-4-5\@m {
     width: 80%;
   }
   /* Sixths */
-  .uk-width-1-6\@m {
+  .width-1-6\@m {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-width-5-6\@m {
+  .width-5-6\@m {
     width: calc(100% * 5 / 6.001);
   }
   /* Pixel */
-  .uk-width-small\@m {
+  .width-small\@m {
     width: 150px;
   }
-  .uk-width-medium\@m {
+  .width-medium\@m {
     width: 300px;
   }
-  .uk-width-large\@m {
+  .width-large\@m {
     width: 450px;
   }
-  .uk-width-xlarge\@m {
+  .width-xlarge\@m {
     width: 600px;
   }
-  .uk-width-xxlarge\@m {
+  .width-xxlarge\@m {
     width: 750px;
   }
   /* Auto */
-  .uk-width-auto\@m {
+  .width-auto\@m {
     width: auto;
   }
   /* Expand */
-  .uk-width-expand\@m {
+  .width-expand\@m {
     flex: 1;
     min-width: 1px;
   }
@@ -1309,69 +1309,69 @@ article ol > li > ul,
 /* Desktop and bigger */
 @media (min-width: 1200px) {
   /* Whole */
-  .uk-width-1-1\@l {
+  .width-1-1\@l {
     width: 100%;
   }
   /* Halves */
-  .uk-width-1-2\@l {
+  .width-1-2\@l {
     width: 50%;
   }
   /* Thirds */
-  .uk-width-1-3\@l {
+  .width-1-3\@l {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-width-2-3\@l {
+  .width-2-3\@l {
     width: calc(100% * 2 / 3.001);
   }
   /* Quarters */
-  .uk-width-1-4\@l {
+  .width-1-4\@l {
     width: 25%;
   }
-  .uk-width-3-4\@l {
+  .width-3-4\@l {
     width: 75%;
   }
   /* Fifths */
-  .uk-width-1-5\@l {
+  .width-1-5\@l {
     width: 20%;
   }
-  .uk-width-2-5\@l {
+  .width-2-5\@l {
     width: 40%;
   }
-  .uk-width-3-5\@l {
+  .width-3-5\@l {
     width: 60%;
   }
-  .uk-width-4-5\@l {
+  .width-4-5\@l {
     width: 80%;
   }
   /* Sixths */
-  .uk-width-1-6\@l {
+  .width-1-6\@l {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-width-5-6\@l {
+  .width-5-6\@l {
     width: calc(100% * 5 / 6.001);
   }
   /* Pixel */
-  .uk-width-small\@l {
+  .width-small\@l {
     width: 150px;
   }
-  .uk-width-medium\@l {
+  .width-medium\@l {
     width: 300px;
   }
-  .uk-width-large\@l {
+  .width-large\@l {
     width: 450px;
   }
-  .uk-width-xlarge\@l {
+  .width-xlarge\@l {
     width: 600px;
   }
-  .uk-width-xxlarge\@l {
+  .width-xxlarge\@l {
     width: 750px;
   }
   /* Auto */
-  .uk-width-auto\@l {
+  .width-auto\@l {
     width: auto;
   }
   /* Expand */
-  .uk-width-expand\@l {
+  .width-expand\@l {
     flex: 1;
     min-width: 1px;
   }
@@ -1379,69 +1379,69 @@ article ol > li > ul,
 /* Large screen and bigger */
 @media (min-width: 1600px) {
   /* Whole */
-  .uk-width-1-1\@xl {
+  .width-1-1\@xl {
     width: 100%;
   }
   /* Halves */
-  .uk-width-1-2\@xl {
+  .width-1-2\@xl {
     width: 50%;
   }
   /* Thirds */
-  .uk-width-1-3\@xl {
+  .width-1-3\@xl {
     width: calc(100% * 1 / 3.001);
   }
-  .uk-width-2-3\@xl {
+  .width-2-3\@xl {
     width: calc(100% * 2 / 3.001);
   }
   /* Quarters */
-  .uk-width-1-4\@xl {
+  .width-1-4\@xl {
     width: 25%;
   }
-  .uk-width-3-4\@xl {
+  .width-3-4\@xl {
     width: 75%;
   }
   /* Fifths */
-  .uk-width-1-5\@xl {
+  .width-1-5\@xl {
     width: 20%;
   }
-  .uk-width-2-5\@xl {
+  .width-2-5\@xl {
     width: 40%;
   }
-  .uk-width-3-5\@xl {
+  .width-3-5\@xl {
     width: 60%;
   }
-  .uk-width-4-5\@xl {
+  .width-4-5\@xl {
     width: 80%;
   }
   /* Sixths */
-  .uk-width-1-6\@xl {
+  .width-1-6\@xl {
     width: calc(100% * 1 / 6.001);
   }
-  .uk-width-5-6\@xl {
+  .width-5-6\@xl {
     width: calc(100% * 5 / 6.001);
   }
   /* Pixel */
-  .uk-width-small\@xl {
+  .width-small\@xl {
     width: 150px;
   }
-  .uk-width-medium\@xl {
+  .width-medium\@xl {
     width: 300px;
   }
-  .uk-width-large\@xl {
+  .width-large\@xl {
     width: 450px;
   }
-  .uk-width-xlarge\@xl {
+  .width-xlarge\@xl {
     width: 600px;
   }
-  .uk-width-xxlarge\@xl {
+  .width-xxlarge\@xl {
     width: 750px;
   }
   /* Auto */
-  .uk-width-auto\@xl {
+  .width-auto\@xl {
     width: auto;
   }
   /* Expand */
-  .uk-width-expand\@xl {
+  .width-expand\@xl {
     flex: 1;
     min-width: 1px;
   }
@@ -1449,41 +1449,41 @@ article ol > li > ul,
 /* ========================================================================
    Component: Height
  ========================================================================== */
-[class*='uk-height'] {
+[class*='height'] {
   box-sizing: border-box;
 }
 /*
  * Only works if parent element has a height set
  */
-.uk-height-1-1 {
+.height-1-1 {
   height: 100%;
 }
 /*
  * Useful to create image teasers
  */
-.uk-height-viewport {
+.height-viewport {
   min-height: 100vh;
 }
 /*
  * Pixel
  * Useful for `overflow: auto`
  */
-.uk-height-small {
+.height-small {
   height: 150px;
 }
-.uk-height-medium {
+.height-medium {
   height: 300px;
 }
-.uk-height-large {
+.height-large {
   height: 450px;
 }
-.uk-height-max-small {
+.height-max-small {
   max-height: 150px;
 }
-.uk-height-max-medium {
+.height-max-medium {
   max-height: 300px;
 }
-.uk-height-max-large {
+.height-max-large {
   max-height: 450px;
 }
 /* ========================================================================
@@ -1491,58 +1491,58 @@ article ol > li > ul,
  ========================================================================== */
 /* Style modifiers
  ========================================================================== */
-.uk-text-lead {
+.text-lead {
   font-size: 1.285rem;
   line-height: 1.5;
   color: #333;
 }
-.uk-text-meta {
+.text-meta {
   font-size: 0.875rem;
   line-height: 1.4;
   color: #bbb;
 }
 /* Size modifiers
  ========================================================================== */
-.uk-text-small {
+.text-small {
   font-size: 85%;
 }
-.uk-text-large {
+.text-large {
   font-size: 115%;
 }
 /* Weight modifier
  ========================================================================== */
-.uk-text-bold {
+.text-bold {
   font-weight: bolder;
 }
 /* Transform modifier
  ========================================================================== */
-.uk-text-uppercase {
+.text-uppercase {
   text-transform: uppercase !important;
 }
-.uk-text-capitalize {
+.text-capitalize {
   text-transform: capitalize !important;
 }
-.uk-text-lowercase {
+.text-lowercase {
   text-transform: lowercase !important;
 }
 /* Color modifiers
  ========================================================================== */
-.uk-text-muted {
+.text-muted {
   color: #bbb !important;
 }
-.uk-text-primary {
+.text-primary {
   color: #e2c083 !important;
 }
-.uk-text-success {
+.text-success {
   color: #32d296 !important;
 }
-.uk-text-warning {
+.text-warning {
   color: #faa05a !important;
 }
-.uk-text-danger {
+.text-danger {
   color: #f0506e !important;
 }
-.uk-text-white {
+.text-white {
   color: #fff !important;
 }
 /* Background modifier
@@ -1553,7 +1553,7 @@ article ol > li > ul,
  * 2. Container fits the text
  * 3. Fallback color for IE11
  */
-.uk-text-background {
+.text-background {
   /* 1 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1563,96 +1563,96 @@ article ol > li > ul,
   color: #e2c083 !important;
 }
 @supports (-webkit-background-clip: text) {
-  .uk-text-background {
+  .text-background {
     background-color: #e2c083;
   }
 }
 /* Alignment modifiers
  ========================================================================== */
-.uk-text-left {
+.text-left {
   text-align: left !important;
 }
-.uk-text-right {
+.text-right {
   text-align: right !important;
 }
-.uk-text-center {
+.text-center {
   text-align: center !important;
 }
-.uk-text-justify {
+.text-justify {
   text-align: justify !important;
 }
 /* Phone landscape and bigger */
 @media (max-width: 640px) {
-  .uk-text-left\@xs {
+  .text-left\@xs {
     text-align: left !important;
   }
-  .uk-text-right\@xs {
+  .text-right\@xs {
     text-align: right !important;
   }
-  .uk-text-center\@xs {
+  .text-center\@xs {
     text-align: center !important;
   }
 }
 @media (min-width: 640px) {
-  .uk-text-left\@s {
+  .text-left\@s {
     text-align: left !important;
   }
-  .uk-text-right\@s {
+  .text-right\@s {
     text-align: right !important;
   }
-  .uk-text-center\@s {
+  .text-center\@s {
     text-align: center !important;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-text-left\@m {
+  .text-left\@m {
     text-align: left !important;
   }
-  .uk-text-right\@m {
+  .text-right\@m {
     text-align: right !important;
   }
-  .uk-text-center\@m {
+  .text-center\@m {
     text-align: center !important;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-text-left\@l {
+  .text-left\@l {
     text-align: left !important;
   }
-  .uk-text-right\@l {
+  .text-right\@l {
     text-align: right !important;
   }
-  .uk-text-center\@l {
+  .text-center\@l {
     text-align: center !important;
   }
 }
 /* Large screen and bigger */
 @media (min-width: 1600px) {
-  .uk-text-left\@xl {
+  .text-left\@xl {
     text-align: left !important;
   }
-  .uk-text-right\@xl {
+  .text-right\@xl {
     text-align: right !important;
   }
-  .uk-text-center\@xl {
+  .text-center\@xl {
     text-align: center !important;
   }
 }
 /*
  * Vertical
  */
-.uk-text-top {
+.text-top {
   vertical-align: top !important;
 }
-.uk-text-middle {
+.text-middle {
   vertical-align: middle !important;
 }
-.uk-text-bottom {
+.text-bottom {
   vertical-align: bottom !important;
 }
-.uk-text-baseline {
+.text-baseline {
   vertical-align: baseline !important;
 }
 /* Wrap modifiers
@@ -1660,7 +1660,7 @@ article ol > li > ul,
 /*
  * Prevent text from wrapping onto multiple lines
  */
-.uk-text-nowrap {
+.text-nowrap {
   white-space: nowrap;
 }
 /*
@@ -1668,7 +1668,7 @@ article ol > li > ul,
  * 2. Prevent text from wrapping onto multiple lines, and truncate with an ellipsis
  * 3. Fix for table cells
  */
-.uk-text-truncate {
+.text-truncate {
   /* 1 */
   max-width: 100%;
   /* 2 */
@@ -1677,8 +1677,8 @@ article ol > li > ul,
   white-space: nowrap;
 }
 /* 2 */
-th.uk-text-truncate,
-td.uk-text-truncate {
+th.text-truncate,
+td.text-truncate {
   max-width: 0;
 }
 /*
@@ -1688,15 +1688,15 @@ td.uk-text-truncate {
  *    Must use `break-all` to support IE11 and Edge
  * Note: Not using `hyphens: auto;` because it hyphenates text even if not needed
  */
-.uk-text-break {
+.text-break {
   /* 1 */
   overflow-wrap: break-word;
   /* 2 */
   word-wrap: break-word;
 }
 /* 3 */
-th.uk-text-break,
-td.uk-text-break {
+th.text-break,
+td.text-break {
   word-break: break-all;
 }
 /* ========================================================================
@@ -1709,7 +1709,7 @@ td.uk-text-break {
  * Note: Percent values on the `top` property only works if this element
  *       is absolute positioned or if the container has a height
  */
-.uk-cover {
+.cover {
   /* 1 */
   max-width: none;
   /* 2 */
@@ -1718,7 +1718,7 @@ td.uk-text-break {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-iframe.uk-cover {
+iframe.cover {
   pointer-events: none;
 }
 /* Container
@@ -1727,7 +1727,7 @@ iframe.uk-cover {
  * 1. Parent container which clips resized object
  * 2. Needed if the child is positioned absolute. See note above
  */
-.uk-cover-container {
+.cover-container {
   /* 1 */
   overflow: hidden;
   /* 2 */
@@ -1738,76 +1738,76 @@ iframe.uk-cover {
  ========================================================================== */
 /* Color
  ========================================================================== */
-.uk-background-gray-darker {
+.background-gray-darker {
   background-color: #222;
 }
-.uk-background-gray-dark {
+.background-gray-dark {
   background-color: #333;
 }
-.uk-background-gray {
+.background-gray {
   background-color: #666;
 }
-.uk-background-gray-lighter {
+.background-gray-lighter {
   background-color: #bbb;
 }
-.uk-background-gray-lightest {
+.background-gray-lightest {
   background-color: #f5f5f5;
 }
-.uk-background-default {
+.background-default {
   background-color: #fff;
 }
-.uk-background-primary {
+.background-primary {
   background-color: #e2c083;
 }
-.uk-background-secondary,
-.uk-background-black {
+.background-secondary,
+.background-black {
   background-color: #000;
 }
 /* Size
  ========================================================================== */
-.uk-background-cover,
-.uk-background-contain {
+.background-cover,
+.background-contain {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-.uk-background-cover {
+.background-cover {
   background-size: cover;
 }
-.uk-background-contain {
+.background-contain {
   background-size: contain;
 }
 /* Position
  ========================================================================== */
-.uk-background-top-left {
+.background-top-left {
   background-position: 0 0;
 }
-.uk-background-top-center {
+.background-top-center {
   background-position: 50% 0;
 }
-.uk-background-top-right {
+.background-top-right {
   background-position: 100% 0;
 }
-.uk-background-center-left {
+.background-center-left {
   background-position: 0 50%;
 }
-.uk-background-center-center {
+.background-center-center {
   background-position: 50% 50%;
 }
-.uk-background-center-right {
+.background-center-right {
   background-position: 100% 50%;
 }
-.uk-background-bottom-left {
+.background-bottom-left {
   background-position: 0 100%;
 }
-.uk-background-bottom-center {
+.background-bottom-center {
   background-position: 50% 100%;
 }
-.uk-background-bottom-right {
+.background-bottom-right {
   background-position: 100% 100%;
 }
 /* Repeat
  ========================================================================== */
-.uk-background-norepeat {
+.background-norepeat {
   background-repeat: no-repeat;
 }
 /* Attachment
@@ -1815,7 +1815,7 @@ iframe.uk-cover {
 /*
  * 1. Fix bug introduced in Chrome 67: the background image is not visible if any element on the page uses `translate3d`
  */
-.uk-background-fixed {
+.background-fixed {
   background-attachment: fixed;
   /* 1 */
   backface-visibility: hidden;
@@ -1824,7 +1824,7 @@ iframe.uk-cover {
  * Exclude touch devices because `fixed` doesn't work on iOS and Android
  */
 @media (pointer: coarse) {
-  .uk-background-fixed {
+  .background-fixed {
     background-attachment: scroll;
   }
 }
@@ -1832,88 +1832,88 @@ iframe.uk-cover {
  ========================================================================== */
 /* Phone portrait and smaller */
 @media (max-width: 639px) {
-  .uk-background-image\@s {
+  .background-image\@s {
     background-image: none !important;
   }
 }
 /* Phone landscape and smaller */
 @media (max-width: 959px) {
-  .uk-background-image\@m {
+  .background-image\@m {
     background-image: none !important;
   }
 }
 /* Tablet landscape and smaller */
 @media (max-width: 1199px) {
-  .uk-background-image\@l {
+  .background-image\@l {
     background-image: none !important;
   }
 }
 /* Desktop and smaller */
 @media (max-width: 1599px) {
-  .uk-background-image\@xl {
+  .background-image\@xl {
     background-image: none !important;
   }
 }
 /* Blend modes
  ========================================================================== */
-.uk-background-blend-multiply {
+.background-blend-multiply {
   background-blend-mode: multiply;
 }
-.uk-background-blend-screen {
+.background-blend-screen {
   background-blend-mode: screen;
 }
-.uk-background-blend-overlay {
+.background-blend-overlay {
   background-blend-mode: overlay;
 }
-.uk-background-blend-darken {
+.background-blend-darken {
   background-blend-mode: darken;
 }
-.uk-background-blend-lighten {
+.background-blend-lighten {
   background-blend-mode: lighten;
 }
-.uk-background-blend-color-dodge {
+.background-blend-color-dodge {
   background-blend-mode: color-dodge;
 }
-.uk-background-blend-color-burn {
+.background-blend-color-burn {
   background-blend-mode: color-burn;
 }
-.uk-background-blend-hard-light {
+.background-blend-hard-light {
   background-blend-mode: hard-light;
 }
-.uk-background-blend-soft-light {
+.background-blend-soft-light {
   background-blend-mode: soft-light;
 }
-.uk-background-blend-difference {
+.background-blend-difference {
   background-blend-mode: difference;
 }
-.uk-background-blend-exclusion {
+.background-blend-exclusion {
   background-blend-mode: exclusion;
 }
-.uk-background-blend-hue {
+.background-blend-hue {
   background-blend-mode: hue;
 }
-.uk-background-blend-saturation {
+.background-blend-saturation {
   background-blend-mode: saturation;
 }
-.uk-background-blend-color {
+.background-blend-color {
   background-blend-mode: color;
 }
-.uk-background-blend-luminosity {
+.background-blend-luminosity {
   background-blend-mode: luminosity;
 }
-.uk-background-none {
+.background-none {
   background: none !important;
 }
-.uk-background-default-transparent {
+.background-default-transparent {
   background-color: rgba(255, 255, 255, 0.5);
 }
-.uk-background-light-black-transparent {
+.background-light-black-transparent {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.uk-background-primary-transparent {
+.background-primary-transparent {
   background-color: rgba(226, 192, 131, 0.5);
 }
-.uk-background-black-transparent {
+.background-black-transparent {
   background-color: rgba(0, 0, 0, 0.5);
 }
 /* ========================================================================
@@ -1922,41 +1922,41 @@ iframe.uk-cover {
 /*
  * Default
  */
-[class*='uk-align'] {
+[class*='align'] {
   display: block;
   margin-bottom: 25px;
 }
-* + [class*='uk-align'] {
+* + [class*='align'] {
   margin-top: 25px;
 }
 /*
  * Center
  */
-.uk-align-center {
+.align-center {
   margin-left: auto;
   margin-right: auto;
 }
 /*
  * Left/Right
  */
-.uk-align-left {
+.align-left {
   margin-top: 0;
   margin-right: 25px;
   float: left;
 }
-.uk-align-right {
+.align-right {
   margin-top: 0;
   margin-left: 25px;
   float: right;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
-  .uk-align-left\@s {
+  .align-left\@s {
     margin-top: 0;
     margin-right: 25px;
     float: left;
   }
-  .uk-align-right\@s {
+  .align-right\@s {
     margin-top: 0;
     margin-left: 25px;
     float: right;
@@ -1964,12 +1964,12 @@ iframe.uk-cover {
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-align-left\@m {
+  .align-left\@m {
     margin-top: 0;
     margin-right: 25px;
     float: left;
   }
-  .uk-align-right\@m {
+  .align-right\@m {
     margin-top: 0;
     margin-left: 25px;
     float: right;
@@ -1977,35 +1977,35 @@ iframe.uk-cover {
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-align-left\@l {
+  .align-left\@l {
     margin-top: 0;
     float: left;
   }
-  .uk-align-right\@l {
+  .align-right\@l {
     margin-top: 0;
     float: right;
   }
-  .uk-align-left,
-  .uk-align-left\@s,
-  .uk-align-left\@m,
-  .uk-align-left\@l {
+  .align-left,
+  .align-left\@s,
+  .align-left\@m,
+  .align-left\@l {
     margin-right: 35px;
   }
-  .uk-align-right,
-  .uk-align-right\@s,
-  .uk-align-right\@m,
-  .uk-align-right\@l {
+  .align-right,
+  .align-right\@s,
+  .align-right\@m,
+  .align-right\@l {
     margin-left: 35px;
   }
 }
 /* Large screen and bigger */
 @media (min-width: 1600px) {
-  .uk-align-left\@xl {
+  .align-left\@xl {
     margin-top: 0;
     margin-right: 35px;
     float: left;
   }
-  .uk-align-right\@xl {
+  .align-right\@xl {
     margin-top: 0;
     margin-left: 35px;
     float: right;
@@ -2016,31 +2016,31 @@ iframe.uk-cover {
  ========================================================================== */
 /* Panel
  ========================================================================== */
-.uk-panel {
+.panel {
   position: relative;
   box-sizing: border-box;
 }
 /*
  * Micro clearfix
  */
-.uk-panel::before,
-.uk-panel::after {
+.panel::before,
+.panel::after {
   content: "";
   display: table;
 }
-.uk-panel::after {
+.panel::after {
   clear: both;
 }
 /*
  * Remove margin from the last-child
  */
-.uk-panel > :last-child {
+.panel > :last-child {
   margin-bottom: 0;
 }
 /*
  * Scrollable
  */
-.uk-panel-scrollable {
+.panel-scrollable {
   height: 170px;
   padding: 10px;
   border: 1px solid #E6E6E6;
@@ -2056,12 +2056,18 @@ iframe.uk-cover {
  * Note: `display: block` with `overflow: hidden` is currently not working in the latest Safari
  */
 /* 1 */
-.uk-clearfix::before {
+.clearfix::before,
+.container::before,
+.container-fluid::before,
+.row::before {
   content: "";
   display: table-cell;
 }
 /* 2 */
-.uk-clearfix::after {
+.clearfix::after,
+.container::after,
+.container-fluid::after,
+.row::after {
   content: "";
   display: table;
   clear: both;
@@ -2071,49 +2077,49 @@ iframe.uk-cover {
 /*
  * 1. Prevent content overflow
  */
-.uk-float-left {
+.float-left {
   float: left;
 }
-.uk-float-right {
+.float-right {
   float: right;
 }
 /* 1 */
-[class*='uk-float-'] {
+[class*='float-'] {
   max-width: 100%;
 }
 /* Overfow
  ========================================================================== */
-.uk-overflow-hidden {
+.overflow-hidden {
   overflow: hidden;
 }
 /*
  * Enable scrollbars if content is clipped
  * Note: Firefox ignores `padding-bottom` for the scrollable overflow https://bugzilla.mozilla.org/show_bug.cgi?id=748518
  */
-.uk-overflow-auto {
+.overflow-auto {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.uk-overflow-auto > :last-child {
+.overflow-auto > :last-child {
   margin-bottom: 0;
 }
 /* Resize
  ========================================================================== */
-.uk-resize {
+.resize {
   resize: both;
 }
-.uk-resize-vertical {
+.resize-vertical {
   resize: vertical;
 }
 /* Display
  ========================================================================== */
-.uk-display-block {
+.display-block {
   display: block !important;
 }
-.uk-display-inline {
+.display-inline {
   display: inline !important;
 }
-.uk-display-inline-block {
+.display-inline-block {
   display: inline-block !important;
 }
 /* Inline
@@ -2127,7 +2133,7 @@ iframe.uk-cover {
  *    to fix 1px glitch when combined with overlays and transitions in Webkit
  * 6. Clip child elements
  */
-[class*='uk-inline'] {
+[class*='inline'] {
   /* 1 */
   display: inline-block;
   /* 2 */
@@ -2139,7 +2145,7 @@ iframe.uk-cover {
   /* 5 */
   -webkit-backface-visibility: hidden;
 }
-.uk-inline-clip {
+.inline-clip {
   /* 6 */
   overflow: hidden;
 }
@@ -2149,27 +2155,27 @@ iframe.uk-cover {
  * Preserve original dimensions
  * Because `img, `video`, `canvas` and  `audio` are already responsive by default, see Base component
  */
-.uk-preserve-width,
-.uk-preserve-width audio,
-.uk-preserve-width canvas,
-.uk-preserve-width img,
-.uk-preserve-width svg,
-.uk-preserve-width video {
+.preserve-width,
+.preserve-width audio,
+.preserve-width canvas,
+.preserve-width img,
+.preserve-width svg,
+.preserve-width video {
   max-width: none;
 }
 /*
  * Responsiveness
  * Corrects `max-width` and `max-height` behavior if padding and border are used
  */
-.uk-responsive-width,
-.uk-responsive-height {
+.responsive-width,
+.responsive-height {
   box-sizing: border-box;
 }
 /*
- * 1. Set a maximum width. `important` needed to override `uk-preserve-width img`
+ * 1. Set a maximum width. `important` needed to override `preserve-width img`
  * 2. Auto scale the height. Only needed if `height` attribute is present
  */
-.uk-responsive-width {
+.responsive-width {
   /* 1 */
   max-width: 100% !important;
   /* 2 */
@@ -2180,7 +2186,7 @@ iframe.uk-cover {
  * 2. Auto scale the width. Only needed if `width` attribute is present
  * 3. Reset max-width, which `img, `video`, `canvas` and  `audio` already have by default
  */
-.uk-responsive-height {
+.responsive-height {
   /* 1 */
   max-height: 100%;
   /* 2 */
@@ -2190,45 +2196,45 @@ iframe.uk-cover {
 }
 /* Border
  ========================================================================== */
-.uk-border-rounded {
+.border-rounded {
   border-radius: 5px;
 }
 /*
  * Fix `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
  */
-.uk-inline-clip[class*='uk-border-'] {
+.inline-clip[class*='border-'] {
   -webkit-transform: translateZ(0);
 }
 /* Box-shadow
  ========================================================================== */
-.uk-box-shadow-small {
+.box-shadow-small {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.uk-box-shadow-medium {
+.box-shadow-medium {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
-.uk-box-shadow-large {
+.box-shadow-large {
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
-.uk-box-shadow-xlarge {
+.box-shadow-xlarge {
   box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16);
 }
 /*
  * Hover
  */
-[class*='uk-box-shadow-hover'] {
+[class*='box-shadow-hover'] {
   transition: box-shadow 0.1s ease-in-out;
 }
-.uk-box-shadow-hover-small:hover {
+.box-shadow-hover-small:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.uk-box-shadow-hover-medium:hover {
+.box-shadow-hover-medium:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
-.uk-box-shadow-hover-large:hover {
+.box-shadow-hover-large:hover {
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
-.uk-box-shadow-hover-xlarge:hover {
+.box-shadow-hover-xlarge:hover {
   box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16);
 }
 /* Box-shadow bottom
@@ -2240,13 +2246,13 @@ iframe.uk-cover {
  *    Solved by using `before` and add position context to child elements.
  */
 @supports (filter: blur(0)) {
-  .uk-box-shadow-bottom {
+  .box-shadow-bottom {
     display: inline-block;
     position: relative;
     max-width: 100%;
     vertical-align: middle;
   }
-  .uk-box-shadow-bottom::before {
+  .box-shadow-bottom::before {
     content: '';
     /* 1 */
     position: absolute;
@@ -2260,7 +2266,7 @@ iframe.uk-cover {
     filter: blur(20px);
   }
   /* 3 */
-  .uk-box-shadow-bottom > * {
+  .box-shadow-bottom > * {
     position: relative;
   }
 }
@@ -2274,8 +2280,8 @@ iframe.uk-cover {
  * 3. Caused by 1.: Edge creates two nested `::first-letter` containers, one for each selector
  *    This doubles the `font-size` exponential when using the `em` unit.
  */
-.uk-dropcap::first-letter,
-.uk-dropcap > p:first-of-type::first-letter {
+.dropcap::first-letter,
+.dropcap > p:first-of-type::first-letter {
   display: block;
   margin-right: 10px;
   float: left;
@@ -2284,14 +2290,14 @@ iframe.uk-cover {
 }
 /* 2 */
 @-moz-document url-prefix() {
-  .uk-dropcap::first-letter,
-  .uk-dropcap > p:first-of-type::first-letter {
+  .dropcap::first-letter,
+  .dropcap > p:first-of-type::first-letter {
     margin-top: 1.1%;
   }
 }
 /* 3 */
 @supports (-ms-ime-align: auto) {
-  .uk-dropcap > p:first-of-type::first-letter {
+  .dropcap > p:first-of-type::first-letter {
     font-size: 1em;
   }
 }
@@ -2300,7 +2306,7 @@ iframe.uk-cover {
 /*
  * 1. Required for `a`
  */
-.uk-logo {
+.logo {
   font-size: 1.285rem;
   font-family: Arial, 'Times New Roman', 'Microsoft YaHei', SimHei, "宋体", sans-serif;
   color: #666;
@@ -2308,19 +2314,19 @@ iframe.uk-cover {
   text-decoration: none;
 }
 /* Hover + Focus */
-.uk-logo:hover,
-.uk-logo:focus {
+.logo:hover,
+.logo:focus {
   color: #666;
   outline: none;
   /* 1 */
   text-decoration: none;
 }
-.uk-logo-inverse {
+.logo-inverse {
   display: none;
 }
 /* Disabled State
  ========================================================================== */
-.uk-disabled {
+.disabled {
   pointer-events: none;
 }
 /* Drag State
@@ -2329,12 +2335,12 @@ iframe.uk-cover {
  * 1. Needed if moving over elements with have their own cursor on hover, e.g. links or buttons
  * 2. Fix dragging over iframes
  */
-.uk-drag,
-.uk-drag * {
+.drag,
+.drag * {
   cursor: move;
 }
 /* 2 */
-.uk-drag iframe {
+.drag iframe {
   pointer-events: none;
 }
 /* Dragover State
@@ -2342,103 +2348,103 @@ iframe.uk-cover {
 /*
  * Create a box-shadow when dragging a file over the upload area
  */
-.uk-dragover {
+.dragover {
   box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
 }
 /* Blend modes
  ========================================================================== */
-.uk-blend-multiply {
+.blend-multiply {
   mix-blend-mode: multiply;
 }
-.uk-blend-screen {
+.blend-screen {
   mix-blend-mode: screen;
 }
-.uk-blend-overlay {
+.blend-overlay {
   mix-blend-mode: overlay;
 }
-.uk-blend-darken {
+.blend-darken {
   mix-blend-mode: darken;
 }
-.uk-blend-lighten {
+.blend-lighten {
   mix-blend-mode: lighten;
 }
-.uk-blend-color-dodge {
+.blend-color-dodge {
   mix-blend-mode: color-dodge;
 }
-.uk-blend-color-burn {
+.blend-color-burn {
   mix-blend-mode: color-burn;
 }
-.uk-blend-hard-light {
+.blend-hard-light {
   mix-blend-mode: hard-light;
 }
-.uk-blend-soft-light {
+.blend-soft-light {
   mix-blend-mode: soft-light;
 }
-.uk-blend-difference {
+.blend-difference {
   mix-blend-mode: difference;
 }
-.uk-blend-exclusion {
+.blend-exclusion {
   mix-blend-mode: exclusion;
 }
-.uk-blend-hue {
+.blend-hue {
   mix-blend-mode: hue;
 }
-.uk-blend-saturation {
+.blend-saturation {
   mix-blend-mode: saturation;
 }
-.uk-blend-color {
+.blend-color {
   mix-blend-mode: color;
 }
-.uk-blend-luminosity {
+.blend-luminosity {
   mix-blend-mode: luminosity;
 }
 /* Transform
 ========================================================================== */
-.uk-transform-center {
+.transform-center {
   transform: translate(-50%, -50%);
 }
 /* Transform Origin
 ========================================================================== */
-.uk-transform-origin-top-left {
+.transform-origin-top-left {
   transform-origin: 0 0;
 }
-.uk-transform-origin-top-center {
+.transform-origin-top-center {
   transform-origin: 50% 0;
 }
-.uk-transform-origin-top-right {
+.transform-origin-top-right {
   transform-origin: 100% 0;
 }
-.uk-transform-origin-center-left {
+.transform-origin-center-left {
   transform-origin: 0 50%;
 }
-.uk-transform-origin-center-right {
+.transform-origin-center-right {
   transform-origin: 100% 50%;
 }
-.uk-transform-origin-bottom-left {
+.transform-origin-bottom-left {
   transform-origin: 0 100%;
 }
-.uk-transform-origin-bottom-center {
+.transform-origin-bottom-center {
   transform-origin: 50% 100%;
 }
-.uk-transform-origin-bottom-right {
+.transform-origin-bottom-right {
   transform-origin: 100% 100%;
 }
 /* ========================================================================
    Component: Flex
  ========================================================================== */
-.uk-flex {
+.flex {
   display: flex;
 }
-.uk-flex-inline {
+.flex-inline {
   display: inline-flex;
 }
 /*
  * Remove pseudo elements created by micro clearfix as precaution
  */
-.uk-flex::before,
-.uk-flex::after,
-.uk-flex-inline::before,
-.uk-flex-inline::after {
+.flex::before,
+.flex::after,
+.flex-inline::before,
+.flex-inline::after {
   display: none;
 }
 /* Alignment
@@ -2447,90 +2453,90 @@ iframe.uk-cover {
  * Align items along the main axis of the current line of the flex container
  * Row: Horizontal
  */
-.uk-flex-left {
+.flex-left {
   justify-content: flex-start;
 }
-.uk-flex-center {
+.flex-center {
   justify-content: center;
 }
-.uk-flex-right {
+.flex-right {
   justify-content: flex-end;
 }
-.uk-flex-between {
+.flex-between {
   justify-content: space-between;
 }
-.uk-flex-around {
+.flex-around {
   justify-content: space-around;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
-  .uk-flex-left\@s {
+  .flex-left\@s {
     justify-content: flex-start;
   }
-  .uk-flex-center\@s {
+  .flex-center\@s {
     justify-content: center;
   }
-  .uk-flex-right\@s {
+  .flex-right\@s {
     justify-content: flex-end;
   }
-  .uk-flex-between\@s {
+  .flex-between\@s {
     justify-content: space-between;
   }
-  .uk-flex-around\@s {
+  .flex-around\@s {
     justify-content: space-around;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-flex-left\@m {
+  .flex-left\@m {
     justify-content: flex-start;
   }
-  .uk-flex-center\@m {
+  .flex-center\@m {
     justify-content: center;
   }
-  .uk-flex-right\@m {
+  .flex-right\@m {
     justify-content: flex-end;
   }
-  .uk-flex-between\@m {
+  .flex-between\@m {
     justify-content: space-between;
   }
-  .uk-flex-around\@m {
+  .flex-around\@m {
     justify-content: space-around;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-flex-left\@l {
+  .flex-left\@l {
     justify-content: flex-start;
   }
-  .uk-flex-center\@l {
+  .flex-center\@l {
     justify-content: center;
   }
-  .uk-flex-right\@l {
+  .flex-right\@l {
     justify-content: flex-end;
   }
-  .uk-flex-between\@l {
+  .flex-between\@l {
     justify-content: space-between;
   }
-  .uk-flex-around\@l {
+  .flex-around\@l {
     justify-content: space-around;
   }
 }
 /* Large screen and bigger */
 @media (min-width: 1600px) {
-  .uk-flex-left\@xl {
+  .flex-left\@xl {
     justify-content: flex-start;
   }
-  .uk-flex-center\@xl {
+  .flex-center\@xl {
     justify-content: center;
   }
-  .uk-flex-right\@xl {
+  .flex-right\@xl {
     justify-content: flex-end;
   }
-  .uk-flex-between\@xl {
+  .flex-between\@xl {
     justify-content: space-between;
   }
-  .uk-flex-around\@xl {
+  .flex-around\@xl {
     justify-content: space-around;
   }
 }
@@ -2538,63 +2544,63 @@ iframe.uk-cover {
  * Align items in the cross axis of the current line of the flex container
  * Row: Vertical
  */
-.uk-flex-stretch {
+.flex-stretch {
   align-items: stretch;
 }
-.uk-flex-top {
+.flex-top {
   align-items: flex-start;
 }
-.uk-flex-middle {
+.flex-middle {
   align-items: center;
 }
-.uk-flex-bottom {
+.flex-bottom {
   align-items: flex-end;
 }
 /* Direction
  ========================================================================== */
-.uk-flex-row {
+.flex-row {
   flex-direction: row;
 }
-.uk-flex-row-reverse {
+.flex-row-reverse {
   flex-direction: row-reverse;
 }
-.uk-flex-column {
+.flex-column {
   flex-direction: column;
 }
-.uk-flex-column-reverse {
+.flex-column-reverse {
   flex-direction: column-reverse;
 }
 /* Wrap
  ========================================================================== */
-.uk-flex-nowrap {
+.flex-nowrap {
   flex-wrap: nowrap;
 }
-.uk-flex-wrap {
+.flex-wrap {
   flex-wrap: wrap;
 }
-.uk-flex-wrap-reverse {
+.flex-wrap-reverse {
   flex-wrap: wrap-reverse;
 }
 /*
  * Aligns items within the flex container when there is extra space in the cross-axis
  * Only works if there is more than one line of flex items
  */
-.uk-flex-wrap-stretch {
+.flex-wrap-stretch {
   align-content: stretch;
 }
-.uk-flex-wrap-top {
+.flex-wrap-top {
   align-content: flex-start;
 }
-.uk-flex-wrap-middle {
+.flex-wrap-middle {
   align-content: center;
 }
-.uk-flex-wrap-bottom {
+.flex-wrap-bottom {
   align-content: flex-end;
 }
-.uk-flex-wrap-between {
+.flex-wrap-between {
   align-content: space-between;
 }
-.uk-flex-wrap-around {
+.flex-wrap-around {
   align-content: space-around;
 }
 /* Item ordering
@@ -2602,45 +2608,45 @@ iframe.uk-cover {
 /*
  * Default is 0
  */
-.uk-flex-first {
+.flex-first {
   order: -1;
 }
-.uk-flex-last {
+.flex-last {
   order: 99;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
-  .uk-flex-first\@s {
+  .flex-first\@s {
     order: -1;
   }
-  .uk-flex-last\@s {
+  .flex-last\@s {
     order: 99;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-flex-first\@m {
+  .flex-first\@m {
     order: -1;
   }
-  .uk-flex-last\@m {
+  .flex-last\@m {
     order: 99;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-flex-first\@l {
+  .flex-first\@l {
     order: -1;
   }
-  .uk-flex-last\@l {
+  .flex-last\@l {
     order: 99;
   }
 }
 /* Large screen and bigger */
 @media (min-width: 1600px) {
-  .uk-flex-first\@xl {
+  .flex-first\@xl {
     order: -1;
   }
-  .uk-flex-last\@xl {
+  .flex-last\@xl {
     order: 99;
   }
 }
@@ -2654,21 +2660,21 @@ iframe.uk-cover {
  * No Flex: 0 0 auto
  * Content dimensions
  */
-.uk-flex-none {
+.flex-none {
   flex: none;
 }
 /*
  * Relative Flex: 1 1 auto
  * Space is allocated considering content
  */
-.uk-flex-auto {
+.flex-auto {
   flex: auto;
 }
 /*
  * Absolute Flex: 1 1 0%
  * Space is allocated solely based on flex
  */
-.uk-flex-1 {
+.flex-1 {
   flex: 1;
 }
 /* ========================================================================
@@ -2679,389 +2685,389 @@ iframe.uk-cover {
  */
 /* Small
  ========================================================================== */
-.uk-margin-smallest {
+.margin-smallest {
   margin-bottom: 5px;
 }
-* + .uk-margin-smallest {
+* + .margin-smallest {
   margin-top: 5px !important;
 }
-.uk-margin-top-smallest {
+.margin-top-smallest {
   margin-top: 5px !important;
 }
-.uk-margin-bottom-smallest {
+.margin-bottom-smallest {
   margin-bottom: 5px !important;
 }
-.uk-margin-left-smallest {
+.margin-left-smallest {
   margin-left: 5px !important;
 }
-.uk-margin-right-smallest {
+.margin-right-smallest {
   margin-right: 5px !important;
 }
-.uk-margin-smaller {
+.margin-smaller {
   margin-bottom: 10px;
 }
-* + .uk-margin-smaller {
+* + .margin-smaller {
   margin-top: 10px !important;
 }
-.uk-margin-top-smaller {
+.margin-top-smaller {
   margin-top: 10px !important;
 }
-.uk-margin-bottom-smaller {
+.margin-bottom-smaller {
   margin-bottom: 10px !important;
 }
-.uk-margin-left-smaller {
+.margin-left-smaller {
   margin-left: 10px !important;
 }
-.uk-margin-right-smaller {
+.margin-right-smaller {
   margin-right: 10px !important;
 }
-.uk-margin-small {
+.margin-small {
   margin-bottom: 20px;
 }
-* + .uk-margin-small {
+* + .margin-small {
   margin-top: 20px !important;
 }
-.uk-margin-top-small {
+.margin-top-small {
   margin-top: 20px !important;
 }
-.uk-margin-bottom-small {
+.margin-bottom-small {
   margin-bottom: 20px !important;
 }
-.uk-margin-left-small {
+.margin-left-small {
   margin-left: 20px !important;
 }
-.uk-margin-right-small {
+.margin-right-small {
   margin-right: 20px !important;
 }
-.uk-margin {
+.margin {
   margin-bottom: 35px;
 }
-* + .uk-margin {
+* + .margin {
   margin-top: 35px !important;
 }
-.uk-margin-top {
+.margin-top {
   margin-top: 35px !important;
 }
-.uk-margin-bottom {
+.margin-bottom {
   margin-bottom: 35px !important;
 }
-.uk-margin-left {
+.margin-left {
   margin-left: 35px !important;
 }
-.uk-margin-right {
+.margin-right {
   margin-right: 35px !important;
 }
 /* Medium
  ========================================================================== */
-.uk-margin {
+.margin {
   margin-bottom: 35px;
 }
-* + .uk-margin {
+* + .margin {
   margin-top: 35px !important;
 }
-.uk-margin-top {
+.margin-top {
   margin-top: 35px !important;
 }
-.uk-margin-bottom {
+.margin-bottom {
   margin-bottom: 35px !important;
 }
-.uk-margin-left {
+.margin-left {
   margin-left: 35px !important;
 }
-.uk-margin-right {
+.margin-right {
   margin-right: 35px !important;
 }
 /* Large
  ========================================================================== */
-.uk-margin-large {
+.margin-large {
   margin-bottom: 35px;
 }
-* + .uk-margin-large {
+* + .margin-large {
   margin-top: 35px !important;
 }
-.uk-margin-top-large {
+.margin-top-large {
   margin-top: 35px !important;
 }
-.uk-margin-bottom-large {
+.margin-bottom-large {
   margin-bottom: 35px !important;
 }
-.uk-margin-left-large {
+.margin-left-large {
   margin-left: 35px !important;
 }
-.uk-margin-right-large {
+.margin-right-large {
   margin-right: 35px !important;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-margin-large {
+  .margin-large {
     margin-bottom: 45px;
   }
-  * + .uk-margin-large {
+  * + .margin-large {
     margin-top: 45px !important;
   }
-  .uk-margin-top-large {
+  .margin-top-large {
     margin-top: 45px !important;
   }
-  .uk-margin-bottom-large {
+  .margin-bottom-large {
     margin-bottom: 45px !important;
   }
-  .uk-margin-left-large {
+  .margin-left-large {
     margin-left: 45px !important;
   }
-  .uk-margin-right-large {
+  .margin-right-large {
     margin-right: 45px !important;
   }
 }
 /* XLarge
  ========================================================================== */
-.uk-margin-larger {
+.margin-larger {
   margin-bottom: 45px;
 }
-* + .uk-margin-larger {
+* + .margin-larger {
   margin-top: 45px !important;
 }
-.uk-margin-top-larger {
+.margin-top-larger {
   margin-top: 45px !important;
 }
-.uk-margin-bottom-larger {
+.margin-bottom-larger {
   margin-bottom: 45px !important;
 }
-.uk-margin-left-larger {
+.margin-left-larger {
   margin-left: 45px !important;
 }
-.uk-margin-right-larger {
+.margin-right-larger {
   margin-right: 45px !important;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-margin-larger {
+  .margin-larger {
     margin-bottom: 70px;
   }
-  * + .uk-margin-larger {
+  * + .margin-larger {
     margin-top: 70px !important;
   }
-  .uk-margin-top-larger {
+  .margin-top-larger {
     margin-top: 70px !important;
   }
-  .uk-margin-bottom-larger {
+  .margin-bottom-larger {
     margin-bottom: 70px !important;
   }
-  .uk-margin-left-larger {
+  .margin-left-larger {
     margin-left: 70px !important;
   }
-  .uk-margin-right-larger {
+  .margin-right-larger {
     margin-right: 70px !important;
   }
 }
-.uk-margin-largest {
+.margin-largest {
   margin-bottom: 70px;
 }
-* + .uk-margin-largest {
+* + .margin-largest {
   margin-top: 70px !important;
 }
-.uk-margin-top-largest {
+.margin-top-largest {
   margin-top: 70px !important;
 }
-.uk-margin-bottom-largest {
+.margin-bottom-largest {
   margin-bottom: 70px !important;
 }
-.uk-margin-left-largest {
+.margin-left-largest {
   margin-left: 70px !important;
 }
-.uk-margin-right-largest {
+.margin-right-largest {
   margin-right: 70px !important;
 }
 /* Remove
  ========================================================================== */
-.uk-margin-remove {
+.margin-remove {
   margin: 0 !important;
 }
-.uk-margin-top-remove {
+.margin-top-remove {
   margin-top: 0 !important;
 }
-.uk-margin-bottom-remove {
+.margin-bottom-remove {
   margin-bottom: 0 !important;
 }
-.uk-margin-left-remove {
+.margin-left-remove {
   margin-left: 0 !important;
 }
-.uk-margin-right-remove {
+.margin-right-remove {
   margin-right: 0 !important;
 }
-.uk-margin-vertical-remove {
+.margin-vertical-remove {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.uk-margin-remove-adjacent + * {
+.margin-remove-adjacent + * {
   margin-top: 0 !important;
 }
 /* Auto
  ========================================================================== */
-.uk-margin-auto {
+.margin-auto {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.uk-margin-top-auto {
+.margin-top-auto {
   margin-top: auto !important;
 }
-.uk-margin-bottom-auto {
+.margin-bottom-auto {
   margin-bottom: auto !important;
 }
-.uk-margin-left-auto {
+.margin-left-auto {
   margin-left: auto !important;
 }
-.uk-margin-right-auto {
+.margin-right-auto {
   margin-right: auto !important;
 }
-.uk-margin-vertical-auto {
+.margin-vertical-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
 }
 /* ========================================================================
    Component: Padding
  ========================================================================== */
-.uk-padding {
+.padding {
   padding: 25px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-padding {
+  .padding {
     padding: 35px;
   }
 }
 /* Small
  ========================================================================== */
-.uk-padding-small {
+.padding-small {
   padding: 20px;
 }
 /* Small
  ========================================================================== */
-.uk-padding-smaller {
+.padding-smaller {
   padding: 10px;
 }
 /* Small
  ========================================================================== */
-.uk-padding-smallest {
+.padding-smallest {
   padding: 5px;
 }
 /* Large
  ========================================================================== */
-.uk-padding-large {
+.padding-large {
   padding: 35px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-padding-large {
+  .padding-large {
     padding: 70px;
   }
 }
-.uk-padding-largest {
+.padding-largest {
   padding: 70px;
 }
 /* Remove
  ========================================================================== */
-.uk-padding-remove {
+.padding-remove {
   padding: 0 !important;
 }
-.uk-padding-top-remove {
+.padding-top-remove {
   padding-top: 0 !important;
 }
-.uk-padding-bottom-remove {
+.padding-bottom-remove {
   padding-bottom: 0 !important;
 }
-.uk-padding-left-remove {
+.padding-left-remove {
   padding-left: 0 !important;
 }
-.uk-padding-right-remove {
+.padding-right-remove {
   padding-right: 0 !important;
 }
-.uk-padding-vertical-remove {
+.padding-vertical-remove {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.uk-padding-horizontal-remove {
+.padding-horizontal-remove {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.uk-padding-left-smaller {
+.padding-left-smaller {
   padding-left: 10px;
 }
-.uk-padding-left-small {
+.padding-left-small {
   padding-left: 20px;
 }
-.uk-padding-left {
+.padding-left {
   padding-left: 25px;
 }
-.uk-padding-left-large {
+.padding-left-large {
   padding-left: 35px;
 }
-.uk-padding-left-larger {
+.padding-left-larger {
   padding-left: 45px;
 }
-.uk-padding-left-largest {
+.padding-left-largest {
   padding-left: 70px;
 }
-.uk-padding-right-smallest {
+.padding-right-smallest {
   padding-right: 5px;
 }
-.uk-padding-right-smaller {
+.padding-right-smaller {
   padding-right: 10px;
 }
-.uk-padding-right-small {
+.padding-right-small {
   padding-right: 20px;
 }
-.uk-padding-right {
+.padding-right {
   padding-right: 25px;
 }
-.uk-padding-right-large {
+.padding-right-large {
   padding-right: 35px;
 }
-.uk-padding-right-larger {
+.padding-right-larger {
   padding-right: 45px;
 }
-.uk-padding-right-largest {
+.padding-right-largest {
   padding-right: 70px;
 }
-.uk-padding-top-smallest {
+.padding-top-smallest {
   padding-top: 5px;
 }
-.uk-padding-top-smaller {
+.padding-top-smaller {
   padding-top: 10px;
 }
-.uk-padding-top-small {
+.padding-top-small {
   padding-top: 20px;
 }
-.uk-padding-top {
+.padding-top {
   padding-top: 25px;
 }
-.uk-padding-top-large {
+.padding-top-large {
   padding-top: 35px;
 }
-.uk-padding-top-larger {
+.padding-top-larger {
   padding-top: 45px;
 }
-.uk-padding-top-largest {
+.padding-top-largest {
   padding-top: 70px;
 }
-.uk-padding-bottom-smallest {
+.padding-bottom-smallest {
   padding-bottom: 5px;
 }
-.uk-padding-bottom-smaller {
+.padding-bottom-smaller {
   padding-bottom: 10px;
 }
-.uk-padding-bottom-small {
+.padding-bottom-small {
   padding-bottom: 20px;
 }
-.uk-padding-bottom {
+.padding-bottom {
   padding-bottom: 25px;
 }
-.uk-padding-bottom-large {
+.padding-bottom-large {
   padding-bottom: 35px;
 }
-.uk-padding-bottom-larger {
+.padding-bottom-larger {
   padding-bottom: 45px;
 }
-.uk-padding-bottom-largest {
+.padding-bottom-largest {
   padding-bottom: 70px;
 }
 /* ========================================================================
@@ -3069,51 +3075,51 @@ iframe.uk-cover {
  ========================================================================== */
 /* Directions
  ========================================================================== */
-[class*='uk-position-top'],
-[class*='uk-position-bottom'],
-[class*='uk-position-left'],
-[class*='uk-position-right'],
-[class*='uk-position-center'] {
+[class*='position-top'],
+[class*='position-bottom'],
+[class*='position-left'],
+[class*='position-right'],
+[class*='position-center'] {
   position: absolute !important;
 }
 /* Edges
  ========================================================================== */
 /* Don't use `width: 100%` because it is wrong if the parent has padding. */
-.uk-position-top {
+.position-top {
   top: 0;
   left: 0;
   right: 0;
 }
-.uk-position-bottom {
+.position-bottom {
   bottom: 0;
   left: 0;
   right: 0;
 }
-.uk-position-left {
+.position-left {
   top: 0;
   bottom: 0;
   left: 0;
 }
-.uk-position-right {
+.position-right {
   top: 0;
   bottom: 0;
   right: 0;
 }
 /* Corners
  ========================================================================== */
-.uk-position-top-left {
+.position-top-left {
   top: 0;
   left: 0;
 }
-.uk-position-top-right {
+.position-top-right {
   top: 0;
   right: 0;
 }
-.uk-position-bottom-left {
+.position-bottom-left {
   bottom: 0;
   left: 0;
 }
-.uk-position-bottom-right {
+.position-bottom-right {
   bottom: 0;
   right: 0;
 }
@@ -3122,7 +3128,7 @@ iframe.uk-cover {
  * 1. Fix text wrapping if content is larger than 50% of the container (Not working in Firefox)
  * 2. Fix text wrapping for Firefox
  */
-.uk-position-center {
+.position-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -3134,28 +3140,28 @@ iframe.uk-cover {
   box-sizing: border-box;
 }
 /* Vertical */
-[class*='uk-position-center-left'],
-[class*='uk-position-center-right'] {
+[class*='position-center-left'],
+[class*='position-center-right'] {
   top: 50%;
   transform: translateY(-50%);
 }
-.uk-position-center-left {
+.position-center-left {
   left: 0;
 }
-.uk-position-center-right {
+.position-center-right {
   right: 0;
 }
-.uk-position-center-left-out {
+.position-center-left-out {
   right: 100%;
   width: max-content;
 }
-.uk-position-center-right-out {
+.position-center-right-out {
   left: 100%;
   width: max-content;
 }
 /* Horizontal */
-.uk-position-top-center,
-.uk-position-bottom-center {
+.position-top-center,
+.position-bottom-center {
   left: 50%;
   transform: translateX(-50%);
   /* 1 */
@@ -3165,15 +3171,15 @@ iframe.uk-cover {
   max-width: 100%;
   box-sizing: border-box;
 }
-.uk-position-top-center {
+.position-top-center {
   top: 0;
 }
-.uk-position-bottom-center {
+.position-bottom-center {
   bottom: 0;
 }
 /* Cover
  ========================================================================== */
-.uk-position-cover {
+.position-cover {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3182,16 +3188,16 @@ iframe.uk-cover {
 }
 /* Utility
  ========================================================================== */
-.uk-position-relative {
+.position-relative {
   position: relative !important;
 }
-.uk-position-absolute {
+.position-absolute {
   position: absolute !important;
 }
-.uk-position-fixed {
+.position-fixed {
   position: fixed !important;
 }
-.uk-position-z-index {
+.position-z-index {
   z-index: 1;
 }
 /* Margin modifier
@@ -3199,68 +3205,68 @@ iframe.uk-cover {
 /*
  * Small
  */
-.uk-position-small {
+.position-small {
   margin: 20px;
 }
-.uk-position-small.uk-position-center {
+.position-small.position-center {
   transform: translate(-50%, -50%) translate(-20px, -20px);
 }
-.uk-position-small[class*='uk-position-center-left'],
-.uk-position-small[class*='uk-position-center-right'] {
+.position-small[class*='position-center-left'],
+.position-small[class*='position-center-right'] {
   transform: translateY(-50%) translateY(-20px);
 }
-.uk-position-small.uk-position-top-center,
-.uk-position-small.uk-position-bottom-center {
+.position-small.position-top-center,
+.position-small.position-bottom-center {
   transform: translateX(-50%) translateX(-20px);
 }
 /*
  * Medium
  */
-.uk-position-medium {
+.position-medium {
   margin: 25px;
 }
-.uk-position-medium.uk-position-center {
+.position-medium.position-center {
   transform: translate(-50%, -50%) translate(-25px, -25px);
 }
-.uk-position-medium[class*='uk-position-center-left'],
-.uk-position-medium[class*='uk-position-center-right'] {
+.position-medium[class*='position-center-left'],
+.position-medium[class*='position-center-right'] {
   transform: translateY(-50%) translateY(-25px);
 }
-.uk-position-medium.uk-position-top-center,
-.uk-position-medium.uk-position-bottom-center {
+.position-medium.position-top-center,
+.position-medium.position-bottom-center {
   transform: translateX(-50%) translateX(-25px);
 }
 /*
  * Large
  */
-.uk-position-large {
+.position-large {
   margin: 25px;
 }
-.uk-position-large.uk-position-center {
+.position-large.position-center {
   transform: translate(-50%, -50%) translate(-25px, -25px);
 }
-.uk-position-large[class*='uk-position-center-left'],
-.uk-position-large[class*='uk-position-center-right'] {
+.position-large[class*='position-center-left'],
+.position-large[class*='position-center-right'] {
   transform: translateY(-50%) translateY(-25px);
 }
-.uk-position-large.uk-position-top-center,
-.uk-position-large.uk-position-bottom-center {
+.position-large.position-top-center,
+.position-large.position-bottom-center {
   transform: translateX(-50%) translateX(-25px);
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-position-large {
+  .position-large {
     margin: 50px;
   }
-  .uk-position-large.uk-position-center {
+  .position-large.position-center {
     transform: translate(-50%, -50%) translate(-50px, -50px);
   }
-  .uk-position-large[class*='uk-position-center-left'],
-  .uk-position-large[class*='uk-position-center-right'] {
+  .position-large[class*='position-center-left'],
+  .position-large[class*='position-center-right'] {
     transform: translateY(-50%) translateY(-50px);
   }
-  .uk-position-large.uk-position-top-center,
-  .uk-position-large.uk-position-bottom-center {
+  .position-large.position-top-center,
+  .position-large.position-bottom-center {
     transform: translateX(-50%) translateX(-50px);
   }
 }
@@ -3268,118 +3274,118 @@ iframe.uk-cover {
    Component: Transition
  ========================================================================== */
 /*
- * Using multiple selectors to exclude `uk-transition-toggle`
- * Note: Transitions don't work with `uk-postion-center-*` classes because they also use `transform`
+ * Using multiple selectors to exclude `transition-toggle`
+ * Note: Transitions don't work with `postion-center-*` classes because they also use `transform`
  *       Just put the transition in an extra `div`
  */
-.uk-transition-fade,
-[class*='uk-transition-scale'],
-[class*='uk-transition-slide'] {
+.transition-fade,
+[class*='transition-scale'],
+[class*='transition-slide'] {
   transition: 0.3s ease-out;
   transition-property: opacity, transform, filter;
 }
-.uk-transition-toggle:focus {
+.transition-toggle:focus {
   outline: none;
 }
 /*
  * Fade
  */
-.uk-transition-fade {
+.transition-fade {
   opacity: 0;
 }
 /* Show */
-.uk-transition-toggle:hover [class*='uk-transition-fade'],
-.uk-transition-toggle.uk-hover [class*='uk-transition-fade'],
-.uk-transition-toggle:focus [class*='uk-transition-fade'],
-.uk-transition-active.uk-active [class*='uk-transition-fade'] {
+.transition-toggle:hover [class*='transition-fade'],
+.transition-toggle.hover [class*='transition-fade'],
+.transition-toggle:focus [class*='transition-fade'],
+.transition-active.active [class*='transition-fade'] {
   opacity: 1;
 }
 /*
  * Scale
  * Note: Using `scale3d` for better image rendering
  */
-[class*='uk-transition-scale'] {
+[class*='transition-scale'] {
   opacity: 0;
 }
-.uk-transition-scale-up {
+.transition-scale-up {
   transform: scale3d(1, 1, 1);
 }
-.uk-transition-scale-down {
+.transition-scale-down {
   transform: scale3d(1.1, 1.1, 1);
 }
 /* Show */
-.uk-transition-toggle:hover .uk-transition-scale-up,
-.uk-transition-toggle.uk-hover .uk-transition-scale-up,
-.uk-transition-toggle:focus .uk-transition-scale-up,
-.uk-transition-active.uk-active .uk-transition-scale-up {
+.transition-toggle:hover .transition-scale-up,
+.transition-toggle.hover .transition-scale-up,
+.transition-toggle:focus .transition-scale-up,
+.transition-active.active .transition-scale-up {
   opacity: 1;
   transform: scale3d(1.1, 1.1, 1);
 }
-.uk-transition-toggle:hover .uk-transition-scale-down,
-.uk-transition-toggle.uk-hover .uk-transition-scale-down,
-.uk-transition-toggle:focus .uk-transition-scale-down,
-.uk-transition-active.uk-active .uk-transition-scale-down {
+.transition-toggle:hover .transition-scale-down,
+.transition-toggle.hover .transition-scale-down,
+.transition-toggle:focus .transition-scale-down,
+.transition-active.active .transition-scale-down {
   opacity: 1;
   transform: scale3d(1, 1, 1);
 }
 /*
  * Slide
  */
-[class*='uk-transition-slide'] {
+[class*='transition-slide'] {
   opacity: 0;
 }
-.uk-transition-slide-top {
+.transition-slide-top {
   transform: translateY(-100%);
 }
-.uk-transition-slide-bottom {
+.transition-slide-bottom {
   transform: translateY(100%);
 }
-.uk-transition-slide-left {
+.transition-slide-left {
   transform: translateX(-100%);
 }
-.uk-transition-slide-right {
+.transition-slide-right {
   transform: translateX(100%);
 }
-.uk-transition-slide-top-small {
+.transition-slide-top-small {
   transform: translateY(-10px);
 }
-.uk-transition-slide-bottom-small {
+.transition-slide-bottom-small {
   transform: translateY(10px);
 }
-.uk-transition-slide-left-small {
+.transition-slide-left-small {
   transform: translateX(-10px);
 }
-.uk-transition-slide-right-small {
+.transition-slide-right-small {
   transform: translateX(10px);
 }
-.uk-transition-slide-top-medium {
+.transition-slide-top-medium {
   transform: translateY(-50px);
 }
-.uk-transition-slide-bottom-medium {
+.transition-slide-bottom-medium {
   transform: translateY(50px);
 }
-.uk-transition-slide-left-medium {
+.transition-slide-left-medium {
   transform: translateX(-50px);
 }
-.uk-transition-slide-right-medium {
+.transition-slide-right-medium {
   transform: translateX(50px);
 }
 /* Show */
-.uk-transition-toggle:hover [class*='uk-transition-slide'],
-.uk-transition-toggle.uk-hover [class*='uk-transition-slide'],
-.uk-transition-toggle:focus [class*='uk-transition-slide'],
-.uk-transition-active.uk-active [class*='uk-transition-slide'] {
+.transition-toggle:hover [class*='transition-slide'],
+.transition-toggle.hover [class*='transition-slide'],
+.transition-toggle:focus [class*='transition-slide'],
+.transition-active.active [class*='transition-slide'] {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
 /* Opacity modifier
 ========================================================================== */
-.uk-transition-opaque {
+.transition-opaque {
   opacity: 1;
 }
 /* Duration modifiers
 ========================================================================== */
-.uk-transition-slow {
+.transition-slow {
   transition-duration: 0.7s;
 }
 /* ========================================================================
@@ -3390,35 +3396,35 @@ iframe.uk-cover {
  * `hidden` attribute also set here to make it stronger
  */
 [hidden],
-.uk-hidden {
+.hidden {
   display: none !important;
 }
 @media (max-width: 640px) {
-  .uk-hidden\@xs {
+  .hidden\@xs {
     display: none !important;
   }
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
-  .uk-hidden\@s {
+  .hidden\@s {
     display: none !important;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  .uk-hidden\@m {
+  .hidden\@m {
     display: none !important;
   }
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-hidden\@l {
+  .hidden\@l {
     display: none !important;
   }
 }
 /* Large screen and bigger */
 @media (min-width: 1600px) {
-  .uk-hidden\@xl {
+  .hidden\@xl {
     display: none !important;
   }
 }
@@ -3427,31 +3433,31 @@ iframe.uk-cover {
  */
 /* Phone portrait and smaller */
 @media (max-width: 639px) {
-  .uk-visible\@s {
+  .visible\@s {
     display: none !important;
   }
 }
 /* Phone landscape and smaller */
 @media (max-width: 959px) {
-  .uk-visible\@m {
+  .visible\@m {
     display: none !important;
   }
 }
 /* Tablet landscape and smaller */
 @media (max-width: 1199px) {
-  .uk-visible\@l {
+  .visible\@l {
     display: none !important;
   }
 }
 /* Desktop and smaller */
 @media (max-width: 1599px) {
-  .uk-visible\@xl {
+  .visible\@xl {
     display: none !important;
   }
 }
 /* Visibility
  ========================================================================== */
-.uk-invisible {
+.invisible {
   visibility: hidden !important;
 }
 /* Hover
@@ -3460,7 +3466,7 @@ iframe.uk-cover {
  * Hidden
  * Can't use `display: none` because it's not accessible through keyboard.
  */
-.uk-visible-toggle:not(:hover):not(.uk-hover) .uk-hidden-hover:not(:focus) {
+.visible-toggle:not(:hover):not(.hover) .hidden-hover:not(:focus) {
   position: absolute !important;
   width: 0 !important;
   height: 0 !important;
@@ -3472,7 +3478,7 @@ iframe.uk-cover {
  * Invisible
  * Can't use `visibility: hidden` because it's not accessible through keyboard.
  */
-.uk-visible-toggle:not(:hover):not(.uk-hover) .uk-invisible-hover:not(:focus) {
+.visible-toggle:not(:hover):not(.hover) .invisible-hover:not(:focus) {
   opacity: 0 !important;
 }
 /* Touch
@@ -3482,7 +3488,7 @@ iframe.uk-cover {
  * Works on mobile browsers: Safari, Chrome and Android browser
  */
 @media (pointer: coarse) {
-  .uk-hidden-touch {
+  .hidden-touch {
     display: none !important;
   }
 }
@@ -3492,11 +3498,11 @@ iframe.uk-cover {
  * 2. Reset if supported
  */
 /* 1 */
-.uk-hidden-notouch {
+.hidden-notouch {
   display: none !important;
 }
 @media (pointer: coarse) {
-  .uk-hidden-notouch {
+  .hidden-notouch {
     display: block !important;
   }
 }
@@ -3505,177 +3511,177 @@ iframe.uk-cover {
  ========================================================================== */
 /*
  * Implemented class depends on the general theme color
- * `uk-light` is for light colors on dark backgrounds
- * `uk-dark` is or dark colors on light backgrounds
+ * `light` is for light colors on dark backgrounds
+ * `dark` is or dark colors on light backgrounds
  */
-.uk-light .uk-heading-divider,
-.uk-card-primary.uk-card-body .uk-heading-divider,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-heading-divider,
-.uk-card-secondary.uk-card-body .uk-heading-divider,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-heading-divider,
-.uk-overlay-primary .uk-heading-divider {
+.light .heading-divider,
+.card-primary.card-body .heading-divider,
+.card-primary > :not([class*='card-media']) .heading-divider,
+.card-secondary.card-body .heading-divider,
+.card-secondary > :not([class*='card-media']) .heading-divider,
+.overlay-primary .heading-divider {
   border-bottom-color: rgba(255, 255, 255, 0.2);
 }
-.uk-light .uk-heading-bullet::before,
-.uk-card-primary.uk-card-body .uk-heading-bullet::before,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-heading-bullet::before,
-.uk-card-secondary.uk-card-body .uk-heading-bullet::before,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-heading-bullet::before,
-.uk-overlay-primary .uk-heading-bullet::before {
+.light .heading-bullet::before,
+.card-primary.card-body .heading-bullet::before,
+.card-primary > :not([class*='card-media']) .heading-bullet::before,
+.card-secondary.card-body .heading-bullet::before,
+.card-secondary > :not([class*='card-media']) .heading-bullet::before,
+.overlay-primary .heading-bullet::before {
   border-left-color: rgba(255, 255, 255, 0.2);
 }
-.uk-light .uk-heading-line > ::before,
-.uk-light .uk-heading-line > ::after,
-.uk-card-primary.uk-card-body .uk-heading-line > ::before,
-.uk-card-primary.uk-card-body .uk-heading-line > ::after,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-heading-line > ::before,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-heading-line > ::after,
-.uk-card-secondary.uk-card-body .uk-heading-line > ::before,
-.uk-card-secondary.uk-card-body .uk-heading-line > ::after,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-heading-line > ::before,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-heading-line > ::after,
-.uk-overlay-primary .uk-heading-line > ::before,
-.uk-overlay-primary .uk-heading-line > ::after {
+.light .heading-line > ::before,
+.light .heading-line > ::after,
+.card-primary.card-body .heading-line > ::before,
+.card-primary.card-body .heading-line > ::after,
+.card-primary > :not([class*='card-media']) .heading-line > ::before,
+.card-primary > :not([class*='card-media']) .heading-line > ::after,
+.card-secondary.card-body .heading-line > ::before,
+.card-secondary.card-body .heading-line > ::after,
+.card-secondary > :not([class*='card-media']) .heading-line > ::before,
+.card-secondary > :not([class*='card-media']) .heading-line > ::after,
+.overlay-primary .heading-line > ::before,
+.overlay-primary .heading-line > ::after {
   border-bottom-color: rgba(255, 255, 255, 0.2);
 }
-.uk-light .uk-text-lead,
-.uk-card-primary.uk-card-body .uk-text-lead,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-text-lead,
-.uk-card-secondary.uk-card-body .uk-text-lead,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-text-lead,
-.uk-overlay-primary .uk-text-lead {
+.light .text-lead,
+.card-primary.card-body .text-lead,
+.card-primary > :not([class*='card-media']) .text-lead,
+.card-secondary.card-body .text-lead,
+.card-secondary > :not([class*='card-media']) .text-lead,
+.overlay-primary .text-lead {
   color: rgba(255, 255, 255, 0.7);
 }
-.uk-light .uk-text-meta,
-.uk-card-primary.uk-card-body .uk-text-meta,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-text-meta,
-.uk-card-secondary.uk-card-body .uk-text-meta,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-text-meta,
-.uk-overlay-primary .uk-text-meta {
+.light .text-meta,
+.card-primary.card-body .text-meta,
+.card-primary > :not([class*='card-media']) .text-meta,
+.card-secondary.card-body .text-meta,
+.card-secondary > :not([class*='card-media']) .text-meta,
+.overlay-primary .text-meta {
   color: rgba(255, 255, 255, 0.5);
 }
-.uk-light .uk-text-muted,
-.uk-card-primary.uk-card-body .uk-text-muted,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-text-muted,
-.uk-card-secondary.uk-card-body .uk-text-muted,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-text-muted,
-.uk-overlay-primary .uk-text-muted {
+.light .text-muted,
+.card-primary.card-body .text-muted,
+.card-primary > :not([class*='card-media']) .text-muted,
+.card-secondary.card-body .text-muted,
+.card-secondary > :not([class*='card-media']) .text-muted,
+.overlay-primary .text-muted {
   color: rgba(255, 255, 255, 0.5) !important;
 }
-.uk-light .uk-text-primary,
-.uk-card-primary.uk-card-body .uk-text-primary,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-text-primary,
-.uk-card-secondary.uk-card-body .uk-text-primary,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-text-primary,
-.uk-overlay-primary .uk-text-primary {
+.light .text-primary,
+.card-primary.card-body .text-primary,
+.card-primary > :not([class*='card-media']) .text-primary,
+.card-secondary.card-body .text-primary,
+.card-secondary > :not([class*='card-media']) .text-primary,
+.overlay-primary .text-primary {
   color: rgba(255, 255, 255, 0.7) !important;
 }
-.uk-light .uk-logo,
-.uk-card-primary.uk-card-body .uk-logo,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-logo,
-.uk-card-secondary.uk-card-body .uk-logo,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-logo,
-.uk-overlay-primary .uk-logo {
+.light .logo,
+.card-primary.card-body .logo,
+.card-primary > :not([class*='card-media']) .logo,
+.card-secondary.card-body .logo,
+.card-secondary > :not([class*='card-media']) .logo,
+.overlay-primary .logo {
   color: rgba(255, 255, 255, 0.7);
 }
-.uk-light .uk-logo:hover,
-.uk-light .uk-logo:focus,
-.uk-card-primary.uk-card-body .uk-logo:hover,
-.uk-card-primary.uk-card-body .uk-logo:focus,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-logo:hover,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-logo:focus,
-.uk-card-secondary.uk-card-body .uk-logo:hover,
-.uk-card-secondary.uk-card-body .uk-logo:focus,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-logo:hover,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-logo:focus,
-.uk-overlay-primary .uk-logo:hover,
-.uk-overlay-primary .uk-logo:focus {
+.light .logo:hover,
+.light .logo:focus,
+.card-primary.card-body .logo:hover,
+.card-primary.card-body .logo:focus,
+.card-primary > :not([class*='card-media']) .logo:hover,
+.card-primary > :not([class*='card-media']) .logo:focus,
+.card-secondary.card-body .logo:hover,
+.card-secondary.card-body .logo:focus,
+.card-secondary > :not([class*='card-media']) .logo:hover,
+.card-secondary > :not([class*='card-media']) .logo:focus,
+.overlay-primary .logo:hover,
+.overlay-primary .logo:focus {
   color: rgba(255, 255, 255, 0.7);
 }
-.uk-light .uk-logo > :not(.uk-logo-inverse):not(:only-of-type),
-.uk-card-primary.uk-card-body .uk-logo > :not(.uk-logo-inverse):not(:only-of-type),
-.uk-card-primary > :not([class*='uk-card-media']) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type),
-.uk-card-secondary.uk-card-body .uk-logo > :not(.uk-logo-inverse):not(:only-of-type),
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-logo > :not(.uk-logo-inverse):not(:only-of-type),
-.uk-overlay-primary .uk-logo > :not(.uk-logo-inverse):not(:only-of-type) {
+.light .logo > :not(.logo-inverse):not(:only-of-type),
+.card-primary.card-body .logo > :not(.logo-inverse):not(:only-of-type),
+.card-primary > :not([class*='card-media']) .logo > :not(.logo-inverse):not(:only-of-type),
+.card-secondary.card-body .logo > :not(.logo-inverse):not(:only-of-type),
+.card-secondary > :not([class*='card-media']) .logo > :not(.logo-inverse):not(:only-of-type),
+.overlay-primary .logo > :not(.logo-inverse):not(:only-of-type) {
   display: none;
 }
-.uk-light .uk-logo-inverse,
-.uk-card-primary.uk-card-body .uk-logo-inverse,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-logo-inverse,
-.uk-card-secondary.uk-card-body .uk-logo-inverse,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-logo-inverse,
-.uk-overlay-primary .uk-logo-inverse {
+.light .logo-inverse,
+.card-primary.card-body .logo-inverse,
+.card-primary > :not([class*='card-media']) .logo-inverse,
+.card-secondary.card-body .logo-inverse,
+.card-secondary > :not([class*='card-media']) .logo-inverse,
+.overlay-primary .logo-inverse {
   display: inline;
 }
-.uk-shadow-smaller {
+.shadow-smaller {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.uk-shadow-small {
+.shadow-small {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
-.uk-shadow {
+.shadow {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
-.uk-shadow-large {
+.shadow-large {
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
-.uk-shadow-larger {
+.shadow-larger {
   box-shadow: 0 28px 50px rgba(0, 0, 0, 0.16);
 }
-.uk-translation {
+.translation {
   transition: all 0.5s;
 }
-.uk-translation-short {
+.translation-short {
   transition: all 0.2s;
 }
-.uk-translation-long {
+.translation-long {
   transition: all 1s;
 }
-.uk-img-border {
+.img-border {
   padding: 5px;
   line-height: 1.5;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.uk-border-top {
+.border-top {
   border-top: 1px solid #E6E6E6;
 }
-.uk-border-bottom {
+.border-bottom {
   border-bottom: 1px solid #E6E6E6;
 }
-.uk-border-left {
+.border-left {
   border-left: 1px solid #E6E6E6;
 }
-.uk-border-right {
+.border-right {
   border-right: 1px solid #E6E6E6;
 }
-.uk-border {
+.border {
   border: 1px solid #E6E6E6;
 }
-.uk-border-top-dark {
+.border-top-dark {
   border-top: 1px solid #333;
 }
-.uk-border-bottom-dark {
+.border-bottom-dark {
   border-bottom: 1px solid #333;
 }
-.uk-border-left-dark {
+.border-left-dark {
   border-left: 1px solid #333;
 }
-.uk-border-right-dark {
+.border-right-dark {
   border-right: 1px solid #333;
 }
-.uk-border-dark {
+.border-dark {
   border: 1px solid #333;
 }
-.uk-border-remove {
+.border-remove {
   border-width: 0 !important;
 }
 .border-radius {
   border-radius: 20px;
 }
-.uk-border-circle {
+.border-circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;

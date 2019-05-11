@@ -1,11 +1,11 @@
 // Name:            Container
 // Description:     Component to align and center your site and grid content
 //
-// Component:       `uk-container`
+// Component:       `container`
 //
-// Modifier:        `uk-container-small`
-//                  `uk-container-large`
-//                  `uk-container-expand`
+// Modifier:        `container-small`
+//                  `container-large`
+//                  `container-expand`
 //
 // ========================================================================
 
@@ -32,7 +32,7 @@
  *    unaffected by the padding on different breakpoints. It's important for the size modifiers.
  */
 
-.uk-container {
+.container {
     box-sizing: content-box; /* 1 */
     max-width: @container-max-width;
     margin-left: auto;
@@ -44,7 +44,7 @@
 /* Phone landscape and bigger */
 @media (min-width: @global-breakpoint-phone) {
 
-    .uk-container {
+    .container {
         padding-left: @container-padding-horizontal-s;
         padding-right: @container-padding-horizontal-s;
     }
@@ -54,7 +54,7 @@
 /* Tablet landscape and bigger */
 @media (min-width: @global-breakpoint-tablet) {
 
-    .uk-container {
+    .container {
         padding-left: @container-padding-horizontal-m;
         padding-right: @container-padding-horizontal-m;
     }
@@ -65,25 +65,25 @@
  * Micro clearfix
  */
 
-.uk-container::before,
-.uk-container::after {
+.container::before,
+.container::after {
     content: "";
     display: table;
 }
 
-.uk-container::after { clear: both; }
+.container::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-container > :last-child { margin-bottom: 0; }
+.container > :last-child { margin-bottom: 0; }
 
 /*
  * Remove padding from nested containers
  */
 
-.uk-container .uk-container {
+.container .container {
     padding-left: 0;
     padding-right: 0;
 }
@@ -92,13 +92,13 @@
 /* Size modifier
  ========================================================================== */
 
-.uk-container-xsmall { max-width: @container-xsmall-max-width; }
+.container-xsmall { max-width: @container-xsmall-max-width; }
 
-.uk-container-small { max-width: @container-small-max-width; }
+.container-small { max-width: @container-small-max-width; }
 
-.uk-container-large { max-width: @container-large-max-width; }
+.container-large { max-width: @container-large-max-width; }
 
-.uk-container-expand { max-width: none; }
+.container-expand { max-width: none; }
 
 
 // Hooks

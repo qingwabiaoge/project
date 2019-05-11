@@ -3,7 +3,7 @@
     <div
       v-if="value"
       :class="['transparent-lay',
-                type? 'uk-background-'+type+'-transparent':'']"
+                type? 'background-'+type+'-transparent':'']"
       @click="$emit('input', false)"
     >
       <div class="slot">

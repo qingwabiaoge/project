@@ -1,8 +1,8 @@
 <template>
 
 
-  <div class="uk-text-center">
-    <div class="uk-inline hover-underline hover-underline-scale uk-margin-xlarge-top  uk-margin-medium-bottom  uk-padding-bottom-sm">
+  <div class="text-center">
+    <div class="inline hover-underline hover-underline-scale margin-xlarge-top  margin-medium-bottom  padding-bottom-sm">
       <slot>.....</slot>
     </div>
   </div>

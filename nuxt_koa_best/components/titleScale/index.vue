@@ -1,22 +1,22 @@
 <template>
-  <div class="uk-text-center uk-padding-top-larger uk-padding-bottom-larger container uk-inverse "
+  <div class="text-center padding-top-larger padding-bottom-larger container inverse "
   style="background: none"
   >
     <nuxt-link v-if="href" :to="{path:href}" :class="$style.link">
       <h2><b>{{title}}</b>{{subTitle}}</h2>
-      <p class="uk-text-uppercase uk-text-light">
+      <p class="text-uppercase text-light">
         {{text}}
       </p>
     </nuxt-link>
     <div v-else :class="$style.link">
       <h2><b>{{title}}</b>{{subTitle}}</h2>
-      <p class="uk-text-uppercase uk-text-light">
+      <p class="text-uppercase text-light">
         {{text}}
       </p>
     </div>
 
 
-    <p v-if="description" class="uk-margin-top-small">{{description}}</p>
+    <p v-if="description" class="margin-top-small">{{description}}</p>
 
   </div>
 </template>

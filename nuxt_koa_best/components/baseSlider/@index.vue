@@ -25,10 +25,10 @@
 
             </transition-group>
         </div>
-        <div v-if="pagination" class="uk-text-center">
+        <div v-if="pagination" class="text-center">
             <div v-for="item in page+1"
                  @click="index=item-1"
-                 class="uk-border-circle uk-background-default-transparent uk-text-center uk-inline "
+                 class="border-circle background-default-transparent text-center inline "
                  style="width: 20px; height: 20px;line-height:20px;  margin-left: 5px"
                  :style="{marginTop:-paginationIndexBottom+'px'}"
                  :class="item-1===index? $style.active:''">

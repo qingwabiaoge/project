@@ -1,15 +1,15 @@
 <template>
 
 
-                <div class="uk-border uk-hover-inverse uk-inline uk-background-default">
+                <div class="border hover-inverse inline background-default">
                   <nuxt-link :to="{path:$route.fullPath+'/'+item._id}">
                     <img
                             style="margin-top:-50px; padding-right: 20px; "
                             v-lazy="item.image" :alt="item.title"/>
 
-                    <div class="uk-padding">
+                    <div class="padding">
                         <h3>{{item.title}}</h3>
-                        <p class="uk-padding-top uk-padding-bottom-large">{{item.description}}</p>
+                        <p class="padding-top padding-bottom-large">{{item.description}}</p>
                         <i>———— Read more</i>
 
                     </div>
