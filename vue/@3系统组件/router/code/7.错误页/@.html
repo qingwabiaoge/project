@@ -1,0 +1,56 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<style>
+    div {
+        border: 1px solid #0f0;
+        margin: 20px
+    }
+
+    div > div {
+        border: 1px solid #f00;
+    }
+
+    div > div > div {
+        border: 1px solid #00f;
+    }
+
+
+</style>
+<div id="app">
+
+
+
+
+
+    <router-view></router-view>
+
+</div>
+<script>
+
+    const err = {
+        template: '<div>404</div>',
+
+    }
+    const router = new VueRouter({
+            routes: [
+
+                {
+                    path: '*',
+                    name: 'err',
+                    component: err
+
+                }
+
+
+            ]
+        }
+    )
+    const vm = new Vue({
+        el: '#app',
+        router
+    })
+
+</script>

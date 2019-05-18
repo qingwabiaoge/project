@@ -19,9 +19,9 @@
                 >
       </titleScale>
 
-    <picScale :data="$store.state.componentDatas.picScale">
+    <pic-scale :data="$store.state.componentDatas.picScale">
 
-    </picScale>
+    </pic-scale>
 
 
       <titleScale title="品牌"
@@ -66,28 +66,11 @@
 
 <script>
 
-  import swiperFull from '@/components/swiperFull/index'
-  // import icolist from '@/components/icolist/index.vue'
-  import picFade from '@/components/picFade/index.vue'
-  import picScale from '@/components/picScale/index'
-  // import pictextSlider from '@/components/pictextSlider/index'
-  // import pictextHistory from '@/components/pictextHistory/index.vue'
-  import picA from '@/components/picA/index.vue'
 
 
   export default {
 
 
-    components: {
-      swiperFull,
-      // icolist,
-      picFade,
-      picScale,
-      // pictextSlider,
-      // pictextHistory,
-      picA
-
-    },
     head () {
       return {
         title:this.$store.state.config.global.title+'_'+this.$store.state.config.global.name,

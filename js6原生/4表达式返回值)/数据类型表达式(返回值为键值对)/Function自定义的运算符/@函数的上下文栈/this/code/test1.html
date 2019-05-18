@@ -1,0 +1,25 @@
+
+<script>
+
+        var a = 0
+        let obj1 = {
+            a: 1,
+            b: function () {
+                function c() {
+                    var a = 2
+                    console.log('a:'+a)//2 //局部变量
+                    console.log('this:'+this)//windows
+                    console.log('this.a:'+this.a)//window.a=0
+
+                }
+                c()
+            }
+        }
+        obj1.b()
+
+
+
+
+
+</script>
+

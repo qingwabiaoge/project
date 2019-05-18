@@ -9,7 +9,7 @@
       <div class=" padding padding-top-small padding-bottom-small  ">
         <div class=" float-left  padding-right " style="line-height: 1.2">
 
-         <i class="iconfont icon-view-grid" style="font-size: 70px"></i>
+          <i class="iconfont icon-view-grid" style="font-size: 70px"></i>
         </div>
         <div>
           <h3>{{item.title}}</h3>
@@ -23,5 +23,15 @@
   </el-row>
 
 </template>
+
+<script>
+
+  export default {
+    props: {
+      data:{type:Array,default:[]}
+    }
+  }
+
+</script>
 
 

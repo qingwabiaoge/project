@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <button v-for="item in arry" @click="curComponent=item">
+        {{item}}
+    </button>
+    <x :is="curComponent"></x>
+
+</div>
+
+<script>
+    Vue.component('first', {
+        template: `<div>first</div>`,
+        created() {
+            console.log('first加载')
+        },
+        destroyed() {
+            console.log('first销毁了')
+        }
+    })
+    Vue.component('second', {
+        template: `<div>second</div>`,
+
+        created() {
+            console.log('second加载')
+        },
+        destroyed() {
+            console.log('second销毁了')
+        }
+    })
+    Vue.component('three', {
+        template: `<div>three</div>`,
+        created() {
+            console.log('three加载')
+        },
+        destroyed() {
+            console.log('three销毁了')
+        }
+    })
+    const vm = new Vue({
+        el: '#app',
+
+        data: {
+            arry: ['first', 'second', 'three'],
+            curComponent: 'first',
+
+        }
+
+    })
+
+</script>

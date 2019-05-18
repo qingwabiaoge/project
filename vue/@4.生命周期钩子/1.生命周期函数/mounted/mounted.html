@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+<div id="app">
+    <img src="http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320" alt="">
+
+</div>
+
+
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        mounted() {
+
+            const height = document.getElementsByTagName('img')[0].offsetHeight
+            console.log(height)
+            const height2 = document.getElementById('app').offsetHeight
+            console.log(height2)
+        }
+
+    })
+
+</script>

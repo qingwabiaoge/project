@@ -6,7 +6,7 @@
 
       <el-col :span="8"><span class="padding-left">{{$store.state.global.sitename}}</span></el-col>
       <el-col :span="8" class="text-center">
-        <div class="h1 text-bold inline padding-right-smaller">{{$store.state.components.brand.etitle}}</div>
+        <div class="h1 text-bold inline padding-right-smaller">{{$store.state.components.brand.subtitle}}</div>
         <img v-lazy="$store.state.global.logo" :alt="$store.state.global.sitename">
       </el-col>
       <el-col :span="8" class="text-right ">
@@ -42,7 +42,7 @@
                    style="padding:30px 0; margin-right: 30px">首页
         </nuxt-link>
         <nuxt-link to="/brand" class="hover-underline inline "
-                   style="padding:30px 0; margin-right: 30px">关于{{$store.state.components.brand.etitle}}
+                   style="padding:30px 0; margin-right: 30px">关于{{$store.state.components.brand.subtitle}}
         </nuxt-link>
         <nuxt-link to="/join" class="hover-underline inline "
                    style="padding:30px 0; margin-right: 30px">加盟支持

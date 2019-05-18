@@ -1,0 +1,26 @@
+<script>
+    //函数中所有代码都是顺序运行的
+    function f() {
+       //new Promise异步了 拖出正常函数流
+        return new Promise((resolve, reject) => {
+
+            setTimeout(function () {
+                resolve(2)
+            }, 1000)
+        })
+    }
+
+    //这个函数异步了拖出正常函数流
+    async function f1() {
+        console.log(0)//这句不异步
+        const i = await f()//内部顺序执行,接受数据,网络堵塞等待,有点像for循环堵塞
+        console.log(i)//内部顺序执行
+        console.log(3)//内部顺序执行
+    }
+
+    //正常运行
+    f1()
+    console.log(1)//正常运行
+
+
+</script>

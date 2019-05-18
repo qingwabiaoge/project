@@ -1,0 +1,10 @@
+{
+  "name": "node-images",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "images": "^3.0.2",
+    "node-images": "^2.2.1"
+  }
+}

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "element-ui": "^2.5.4",
+    "element-ui": "^2.8.2",
     "install": "^0.12.2",
     "npm": "^6.8.0",
     "polished": "^3.2.0",

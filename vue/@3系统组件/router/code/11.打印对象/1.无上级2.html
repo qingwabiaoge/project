@@ -1,0 +1,93 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<style>
+    div {
+        border: 1px solid #0f0;
+        margin: 20px
+    }
+
+    div > div {
+        border: 1px solid #f00;
+    }
+
+    div > div > div {
+        border: 1px solid #00f;
+    }
+
+
+</style>
+<div id="app">
+    vm根组件
+
+<ul>
+
+    <router-link to="/fa/03?id=3">to="/fa/03?id=3"</router-link>
+    <br>
+
+
+    <router-link :to="{ path: '/fa/04?id=4'}">     <!-- 注path:不能param因为path里本身就有param-->
+        :to="{ path: '/fa/04?id=4'}
+    </router-link>
+    <br>
+
+    <router-link :to="{ path: '/fa/05',query:{id:5}}">     <!-- 注path:不能param因为path里本身就有param-->
+        :to="{ path: '/fa/05',query:{id:5}}"
+    </router-link>
+    <br>
+
+    <router-link :to="{name:'id',params:{id:01},query:{id:1}}">
+        :to="{name:'id',params:{id:01},query:{id:1}}"
+    </router-link>
+    <br>
+
+
+    <router-link :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}">
+        :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}
+    </router-link>
+    <br>
+
+    <button @click="$router.push({ name: 'id',params:{id: 02}, query: { id: 2 }})">
+        @click="$router.push({ name: 'id',params:{id: 02}, query: { id: 2 }})
+    </button>
+
+</ul>
+    <router-view></router-view>
+
+</div>
+<script>
+    const id = {
+        template: '<div>id组件: <br>{{$route.params.id}} <br>query:{{$route.query.id}}</div>',
+        created() {
+            console.log('02creat')
+        },
+        destroyed() {
+            console.log('02distroy')
+        }
+    }
+
+    const router = new VueRouter({
+            routes: [{
+
+                path: '/fa/:id',
+                name: 'id',
+                component: id
+            }
+            ]
+        }
+    )
+    const vm = new Vue({
+        el: '#app',
+        router,
+        created(){
+            console.log('router',this.$router)
+            console.log('push',this.$router.push)
+            console.log('go',this.$router.go)
+            console.log('$route',this.$route)
+
+        }
+    })
+
+</script>

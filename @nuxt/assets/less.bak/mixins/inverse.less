@@ -1,0 +1,16 @@
+.inverse-wrap() {
+
+  //不可用!important,嵌套权限太高
+  //必须放到最后 "inverse-wrap *"只是相当于一个下级标签的权限
+
+  /* &, *, *:hover {
+     color: @global-color-inverse;
+   }*/
+  svg {
+    fill: white;
+  }
+
+  &, h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, b, i, a, a:hover, .link, p, ul, li, div, button {
+    color: @global-color-inverse;
+  }
+}

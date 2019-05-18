@@ -1,23 +1,15 @@
 <template>
 
-  <el-row>
+  <el-row :gutter="20">
 
-    <el-col :md="6">
-      <picF :data="$store.state.test[0]">
-
-      </picF>
-    </el-col>
-
-    <el-col :md="6">
-      <picF :data="$store.state.test[0]" placement="top">
-
+    <el-col :md="12">
+      <picF :data="$store.state.test[1]">
 
       </picF>
     </el-col>
-
 
   </el-row>
 </template>
 <script>
-  export default {   layout: 'ui',}
+  export default {layout: 'ui',}
 </script>

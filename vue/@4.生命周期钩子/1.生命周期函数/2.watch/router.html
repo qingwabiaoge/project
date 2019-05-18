@@ -1,0 +1,41 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+<div id="app">
+    <router-link to="/02">02</router-link>
+    <router-link to="/03">03</router-link>
+
+
+    <router-view></router-view>
+</div>
+
+<script>
+
+    const id = {template: '<div>id:{{$route.params.id}}</div>'}
+
+    const router = new VueRouter({
+            routes: [{
+
+                path: '/:id',
+                name: 'id',
+                component: id,
+
+            }
+            ]
+        }
+    )
+    const vm = new Vue({
+
+        el: '#app',
+        router,
+        watch: {
+            '$route'(_new) {
+                console.log(_new)
+            }
+        }
+
+
+    })
+
+
+</script>

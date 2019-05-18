@@ -3,16 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 Vue.config.productionTip = false
-/*css*/
+/*css-----------------------------------------------------------------*/
 import './assets/css/index.css'
 
-/*router*/
+/*router-------------------------------------------------------------------*/
 import router from './router/'
 
-/*全局运行代码*/
+/*全局运行代码--------------------------------------------------------------*/
 console.log('main全局引入文件,自动运行一次')
 
-//global注入-------------------------------------------
+/*global注入---------------------------------------------------------------*/
 window.myglobal = {
   a: '这是一个window全局变量,并不会想vuex一样响应式', setMyGlobal(value) {
     this.a += value
@@ -30,15 +30,16 @@ store.$fn = function () {
   console.log('vm.$store.$fn运行')
 }
 
-/*Vue.use install---------------------------------------------------------------*/
-
-import $f from './prototype/install'
-Vue.use($f)
 
 /*Vue.prototype.xxx------------------------------------------------------------*/
 Vue.prototype.$fn = function () {
   console.log('Vue.prototype.$fn运行')
 }
+
+/*Vue.use install*/
+
+import $f from './prototype/install'
+Vue.use($f)
 
 import Message from './plus/Message/index'
 Vue.use(Message);
@@ -46,6 +47,10 @@ Vue.use(Message);
 
 //component------------------------------------------------------------------------
 Vue.component('mycomponent', {template: `<div>component</div>`})
+
+import baseButton from './components/baseButton'
+
+Vue.use(baseButton)
 
 //mixin---------------------------------------------------------------------------------
 Vue.mixin({
@@ -57,11 +62,6 @@ Vue.mixin({
 
 import mixin from './mixin/mixin'
 Vue.use(mixin)
-
-/*
-import baseButton from './components/baseButton'
-
-Vue.use(baseButton)*/
 
 
 //directive------------------------------------------------------------------------
@@ -78,20 +78,21 @@ Vue.directive('h', {
   }
 })
 
+
 import focus from './directive/focus'
 Vue.use(focus)
 
-//filter
+//filter-----------------------------------------------------------------------------------------
 import tocase from './filter/tocase'
 Vue.use(tocase)
 
 
 
 
-//成套插件----------------------------------------------------------------------------------------------------
+//成套插件----------------------------------------------------------------------------------------
 /*vue-i18n*/
 
-import './leiui'
+import './components'
 
 import VueI18n from 'vue-i18n'
 
@@ -126,7 +127,7 @@ Vue.use(VueTouchRipple,  {
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
-
+//----------------------------------------------------------------------------
 console.log('process',process.env)
 
 new Vue({

@@ -29,6 +29,8 @@ import titleMore from '../components/titleMore'
 
 
 import picFade from '@/components/picFade'
+
+import picA from '@/components/picA'
 import icolist from '@/components/icolist'
 import pictextSimple from '@/components/pictextSimple'
 import pictextThree from '@/components/pictextThree/'
@@ -36,7 +38,7 @@ import pictextHistory from '@/components/pictextHistory/'
 import pictextSlider from '@/components/pictextSlider'
 import carouselFull from '@/components/carouselFull'
 import pictextContact from '@/components/pictextContact'
-import picScale from '@/components/picScale'
+import picScale from '../components/picScale'
 import textList from '../components/textList'
 
 export default () => {
@@ -68,6 +70,7 @@ export default () => {
   Vue.use(pictextContact)
   Vue.use(picScale)
   Vue.use(textList)
+  Vue.use(picA)
 
 
 }

@@ -1,0 +1,26 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app" style="border: 1px solid #0f0">
+
+
+</div>
+
+<script>
+
+
+    //1.建立vue对象
+    const vm = new Vue({template: '<h1>Hello!</h1>'})
+
+
+    //2.$mount渲染虚拟dom,并得到dom对象
+    var dom = vm.$mount().$el
+
+
+    console.log(dom)
+
+
+    //手动把dom替换#app节点
+    document.getElementById('app').appendChild(dom)
+   //操作dom
+    document.getElementById('app').style.color='red'
+
+</script>

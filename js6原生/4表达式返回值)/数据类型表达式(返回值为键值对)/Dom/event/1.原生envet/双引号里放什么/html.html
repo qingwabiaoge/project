@@ -1,0 +1,40 @@
+<button onclick="fn2(event)">click</button>
+<script>
+
+    function fn2(e) {
+        console.log(e)
+    }
+</script>
+
+<button id="btn">addEventListener</button>
+<script>
+    function f(e) {
+        console.log(e)
+    }
+
+    const el = document.getElementById('btn')
+    el.addEventListener('click', function (event) {
+        //原理是function定义式内可以放任何表达式和语句
+        f(event)
+    })
+</script>
+
+<br><br><br><br><br>
+
+<!--windows任何表达式和语句-->
+<button onclick="a=10 ;console.log(a)">onclick="a=10"</button>
+<button onclick="a=10 ;console.log(a)">onclick="a=10"</button>
+<button onmousedown="console.log(event)">console.log(event)</button>
+<button onmousedown="window.console.log(event)">window.console.log(event)</button>
+<button onclick="getEventType(event)">getEventType(event)</button>
+<button onclick="getEventType">getEventType</button><!--//放函数定义式不运行,不会自动补全-->
+<script type="text/javascript">
+
+    var a
+    function getEventType(event) {
+        console.log(event)
+        console.log(1)
+    }
+</script>
+
+<br><br><br><br><br>

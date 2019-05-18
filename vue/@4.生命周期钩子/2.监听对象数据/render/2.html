@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <p>
+        <!--   $store也是注入到vue的对象变量 和data里设置的对象没区别-->
+        {{$store.state}}
+        <button @click="$store.commit('setObj')">setObj</button>
+        <button @click="$store.commit('setObj2')">setObj2</button>
+        <button @click="$store.commit('setObj3')">setObj</button>
+    </p>
+
+</div>
+<script>
+
+
+    const store = new Vuex.Store({
+            state: {},
+            mutations: {
+                //没改变地址
+                setObj: (state) => Object.assign(state, {a: 1}),
+                //  没改变地址
+                setObj2: state => state.b = 2,
+                //  没改变地址
+                setObj3: state => app.$set(state, 'c', 3),
+
+            }
+
+        }
+    )
+
+    const app = new Vue({
+        el: '#app',
+        store,
+    })
+</script>
+
+</body>
+</html>

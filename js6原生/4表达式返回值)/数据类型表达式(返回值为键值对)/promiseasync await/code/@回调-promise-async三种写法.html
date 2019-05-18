@@ -1,0 +1,146 @@
+<meta charset="utf-8">
+<script>
+
+    const i = 1;
+
+    /*回调函数原理实参传形参函数顺序执行-----------------------------------------------------*/
+    function f(callback) {
+        if (i > 0) {
+            setTimeout(() => {
+                console.log('在回调函数前运行')
+                callback(i)
+                console.log('在回调函数后运行')
+            }, 1000)
+
+        } else {
+            throw  new Error('err')
+        }
+    }
+
+    try {
+        f(function (i) {
+            console.log(i)
+        })
+    } catch (err) {
+        console.log(err)
+    }
+
+    /*promise-原理promise对象传递数据,then.catch接收---------------------------------------------------*/
+
+    new Promise((resolve, reject) => {
+        if (i > 0) {
+            setTimeout(() => {
+                resolve(i + 1)
+            }, 2000)
+        } else {
+            reject(new Error('err'))
+        }
+
+    }).then(
+        console.log('异步函数内部和普通函数一样顺序执行'),
+        res => console.log(res))
+        .catch(err => console.log(err))
+
+
+    /*promise await原理promise对象传递数据,async await接收----------------------------------------------------*/
+    function f3() {
+        return new Promise((resolve, reject) => {
+            if (i > 0) {
+                setTimeout(() => {
+                    resolve(i + 2)
+                }, 3000)
+            } else {
+                reject(new Error('err'))
+            }
+
+        })
+    }
+
+    async function f4() {
+
+        try {
+            console.log('异步函数内部和普通函数一样顺序执行')
+            const res = await f3()
+            console.log(res)
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
+
+    f4()
+
+
+    /*async await----------------------------------------------------*/
+
+    async function f1() {
+
+        if (i > 0) {
+            return i
+        } else {
+            throw new Error('err')
+        }
+    }
+
+    async function f2() {
+
+        try {
+
+            const res = await f1()
+            console.log(res)
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
+
+    f2()
+
+
+    /*,若不传入回调函数，则会返回一个 promise,mongose vue的$nexttick 都是这样做的------------------------------*/
+
+
+    function asynFn(callback) {
+
+        const promise = new Promise((resolve, reject) => {
+            if (i > 0) {
+                setTimeout(() => {
+                    resolve(i + 1)
+                }, 2000)
+            } else {
+                reject(new Error('err'))
+            }
+
+        })
+        if (callback) {
+
+            promise.then(res => {
+                callback(false, res)
+            })
+                .catch(err => {
+                    callback(err)
+                })
+        } else {
+            return promise
+        }
+    }
+
+    asynFn((err, res) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(res)
+
+
+        }
+
+    })
+
+    asynFn().then(res => console.log(res)).catch(err => {
+        console.log(err)
+    })
+
+
+</script>
+
+

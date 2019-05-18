@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app"></div>
+<script>
+
+
+
+    let options = {
+        template: '<p>{{firstName}} {{lastName}} 字: {{alias}}</p>',
+        data: function () {
+            return {
+                firstName: '李',
+                lastName: '白',
+                alias: '太白'
+            }
+        },
+        created() {
+            console.log('onCreated-0');
+        }
+    };
+
+    let type = 0.1
+    switch (type) {
+        case 0:  //默认组件构造器
+            new Vue(options).$mount('#app');
+            break;
+
+        case 0.1:
+            new Vue({mixins: [options]}).$mount('#app');
+            break;
+        case 0.2:  //默认组件构造器
+            new Vue({extends: options}).$mount('#app');
+            break;
+        case 0.3:    //新建组件构造器,写入一些常用配置项,然后新建实例事件补充
+            let MyComponent4 = Vue.extend(options);
+            new MyComponent4({}).$mount('#app');
+            break;
+
+        case 1:
+            let MyComponent1 = Vue.extend(options);
+            new MyComponent1({
+                template: `<div><h1>{{firstName}}</h1>
+                              <h2>{{lastName}}</h2>
+                              <p>字: {{alias}}</p>
+                              </div>`,
+                data: function () {
+                    return {
+                        alias: 'MyComponent'
+                    }
+                },
+                created() {
+                    console.log('onCreated-1');
+                }
+            }).$mount('#app');
+            break;
+        case 2: //第二种extend的写法
+            let MyComponent2 = Vue.extend({
+                extends: options, //extends類似mixin
+                data: function () {
+                    return {
+                        alias: 'MyComponent2'
+                    }
+                },
+                created() {
+                    console.log('onCreated-2');
+                }
+            });
+            new MyComponent2().$mount('#app');
+            break;
+        case 3:
+            let MyComponent3 = Vue.extend({
+                mixins: [options],
+                data: function () {
+                    return {
+                        alias: 'MyComponent3'
+                    }
+                },
+                created() {
+                    console.log('onCreated-2');
+                }
+            });
+            new MyComponent3().$mount('#app');
+            break;
+    }
+</script>

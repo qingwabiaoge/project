@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script>
+
+</script>
+<div id="app">
+    {{msg}}
+
+</div>
+
+<div id="app2">
+    {{msg}}
+</div>
+
+</body>
+<script>
+
+
+    //Vue的实例化对象app
+    const app = new Vue({
+        el: "#app",
+        data: {msg: 1},
+
+
+    });
+
+    const app2 = new Vue({
+        el: "#app2",
+        data: {msg: 2}
+    });
+
+
+</script>

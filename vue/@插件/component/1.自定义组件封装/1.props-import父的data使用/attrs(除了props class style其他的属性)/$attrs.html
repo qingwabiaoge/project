@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+    <ch :ch="1" simple  class="parentClass" style="margin-top: 50px" somexing="somexing">msg</ch> <!--ch属性默认不在根标签的属性里,class style simple somexing 默认在根标签的属性里-->
+
+</div>
+
+
+<script>
+    var ch = {
+        template: `<div><h1 v-bind="$attrs" ></h1>{{$attrs}}</div>`,
+        //inheritAttrs: false,//是否在根标签的属性里显示Attrs,( 默认在根标签的属性里显示), 就算禁止$attrs在子标签依然可用
+        data: function () {
+            return {
+                msg: 'msg'
+            }
+        },
+        props: ['ch']
+
+    }
+
+    var vm = new Vue({
+        el: '#app',
+
+        components: {ch},
+
+
+    })
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  //presets [英:预设]
+  //去掉 preset es2015 的模块处理，改由 webpack 来处理：
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+        //此目录爲\node_modules\element-ui\lib\theme-chalk
+      }
+    ],
+    "transform-runtime",
+    [
+      "transform-imports",
+      {
+        "vuetify": {
+          "transform": "vuetify/es5/components/${member}",
+          "preventFullImport": true
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <p>
+        <!--//router必须挂载在vue上才能用$store-->
+
+        <button @click="$store.commit('assign')">assign</button>
+        <button @click="$store.commit('set')">set</button>
+    </p>
+    <br>
+    <p>
+        {{$store.state.arr}}
+    </p>
+    <p>
+        {{$store.getters.arr10}}
+    </p>
+
+    <p>
+        {{$store.getters.arr100}}
+    </p>
+</div>
+<script>
+
+    const store = new Vuex.Store({
+        state: {
+            arr: {a: 1}
+        },
+        mutations: {
+            assign: state => Object.assign(state.arr, {b: 1}),
+            set: state => Vue.prototype.$set(state.arr, 'c', 3)
+        },
+        getters: {
+            arr10(state) {
+                return JSON.stringify(state.arr)
+            },
+            arr100(state, getters) {
+                return getters.arr10.length
+            }
+
+        }
+    })
+
+    const vm = new Vue({
+        el: '#app',
+        store,
+
+
+    })
+</script>
+
+</body>
+</html>

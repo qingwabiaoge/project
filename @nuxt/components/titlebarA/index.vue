@@ -10,7 +10,9 @@
     </div>
     <div>
       <h3 style="font-size: 12px">{{title}}</h3>
-      <h2 class="color-primary" style="font-size:18px ">{{subTitle}}</h2>
+
+      <h2 class="color-primary" style="font-size:18px; margin-top: 10px ">{{subTitle}}</h2>
+
     </div>
   </div>
 </template>

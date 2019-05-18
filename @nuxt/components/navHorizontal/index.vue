@@ -1,6 +1,6 @@
 <template>
   <div :class="$style['nav']">
-    <nuxt-link v-for="item in this.$store.getters.categorys[0].ul" :to="`/produces/${item.title}?page=1`||'#'" :key="item.title">
+    <nuxt-link v-for="item in $store.state.test" :to="`/produces/${item.title}?page=1`||'#'" :key="item.title">
       {{item.title}}
     </nuxt-link>
 

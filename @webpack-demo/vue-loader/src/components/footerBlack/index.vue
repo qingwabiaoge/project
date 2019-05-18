@@ -1,0 +1,86 @@
+<template>
+  <div>
+    <div class="uk-inverse  uk-padding-bottom uk-background-gray-darker "
+    >
+      <el-row class="container">
+        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+          <h3>艺术产品</h3>
+          <ul style="margin-top: 18px; margin-left: 6px">
+            <li v-for="item in $store.state.config.goodsCategory">
+              <nuxt-link :to="{path:`/goodss/${item.text}`}">
+                {{item.text}}
+              </nuxt-link>
+            </li>
+          </ul>
+        </el-col>
+        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+          <h3>百事得新闻</h3>
+          <ul style="margin-top: 18px; margin-left: 6px">
+            <li v-for="item in $store.state.config.articleCategory">
+              <nuxt-link
+                :to="{path:`/${item.text}`}">
+                {{item.text}}
+              </nuxt-link>
+            </li>
+          </ul>
+        </el-col>
+
+        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+          <h3>加盟支持</h3>
+          <ul style="margin-top: 18px; margin-left: 6px">
+            <li v-for="item in $store.state.articles.join">
+
+              <nuxt-link :to="{path:`/join/${item._id}`}">
+                {{item.title}}
+              </nuxt-link>
+            </li>
+          </ul>
+        </el-col>
+        <el-col  :md="5" class="uk-padding-top-larger uk-hidden@xs">
+          <h3>关于</h3>
+          <ul style="margin-top: 18px; margin-left: 6px">
+
+            <li>
+              <nuxt-link :to='{path:"/brand"}'>
+                关于百事得
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link :to="{path:'/contact'}">
+                联系我们
+              </nuxt-link>
+            </li>
+          </ul>
+        </el-col>
+
+
+        <el-col  :md="4" class="uk-text-right uk-padding-top-larger uk-text-center@xs">
+          <img v-lazy="$store.state.config.global.qcode" style="width: 200px" alt="二维码">
+        </el-col>
+
+      </el-row>
+    </div>
+    <div class="uk-inverse"
+         style=" line-height: 67px; color: #666">
+      <el-row class="container uk-text-center@xs">
+        <el-col :md="8" >
+          {{$store.state.config.global.address}}
+
+        </el-col>
+        <el-col :md="8">
+          <a href="http://www.miitbeian.gov.cn">
+            {{$store.state.config.global.beian}}
+          </a>
+        </el-col>
+        <el-col :md="8" class="uk-hidden@xs">友情链接:</el-col>
+      </el-row>
+    </div>
+  </div>
+</template>
+<script>
+
+  export default {
+    // async fetch({store, params}) {
+    //   await store.dispatch('getArticles', {componentName: "join", category: '代理加盟'});}
+  }
+</script>

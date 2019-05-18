@@ -1,0 +1,122 @@
+//
+// Component:       Variables
+// Description:     Defines common values which are used across all components
+//@global-radius-small;
+// ========================================================================
+
+// Breakpoints
+// ========================================================================
+
+// Phone Portrait:   Galaxy (360x640), iPhone 6 (375x667), iPhone 6+ (414x736)
+// Phone Landscape:  Galaxy (640x360), iPhone 6 (667x375), iPhone 6+ (736x414)
+// Tablet Portrait:  iPad (768x1024), Galaxy Tab (800x1280),
+// Tablet Landscape: iPad (1024x768), iPad Pro (1024x1366),
+// Desktop:          Galaxy Tab (1280x800), iPad Pro (1366x1024)
+
+@breakpoint-small: 640px; // Phone landscape
+@breakpoint-medium: 960px; // Tablet Landscape
+@breakpoint-large: 1200px; // Desktop
+@breakpoint-xlarge: 1600px; // Large Screens
+
+@breakpoint-xsmall-max: (@breakpoint-small - 1);
+@breakpoint-small-max: (@breakpoint-medium - 1);
+@breakpoint-medium-max: (@breakpoint-large - 1);
+@breakpoint-large-max: (@breakpoint-xlarge - 1);
+
+// Global variables
+// ========================================================================
+
+//
+// Typography
+//
+@global-font-family: Arial, 'Times New Roman', 'Microsoft YaHei', SimHei, "宋体", sans-serif; // -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+@global-font-size: 14px; //普通字体大小
+@global-line-height: 1.5; // 24px
+
+@global-font-size-h1: 2.28rem; // 32px
+@global-font-size-h2: 1.92rem; // 27px
+@global-font-size-h3: 1.285rem; // 18px
+@global-font-size-h4: 1.15rem; // 26px
+@global-font-size-h5: 1rem; //14px
+@global-font-size-h6: 0.875rem; // 12px
+//
+// grey
+//
+
+@global-color-black: #000;
+@global-color-gray-darker:  #222;//invert较黑背景
+@global-color-gray-dark: #333; //字体加重字体颜色,h1-h6,i,b链接,镂空button边框
+@global-color-gray: #666; //普通字体颜色
+@global-color-gray-light: #999; //次要字体颜色
+@global-color-gray-lighter: #bbb; //灰色背景
+@global-color-gray-lightest: #f5f5f5; //高亮背景
+@global-color-white: #fff; //普通背景,反色字体颜色
+@global-color-primary: #e2c083; //主色调
+@global-color-success: #32d296; //点睛色
+@global-color-warning: #faa05a;
+@global-color-danger: #f0506e;
+
+// Spacings
+
+@global-margin-smallest: 5px;
+@global-margin-smaller: 10px;
+@global-margin-small: 20px;
+@global-margin: 25px;
+@global-margin-large: 35px;
+@global-margin-larger: 45px;
+@global-margin-largest: 70px;
+
+// Used in grid, column, container, align, card, padding
+
+@global-gutter-smallest: 5px;
+@global-gutter-smaller: 10px;
+@global-gutter-small: 20px;
+@global-gutter: 25px;
+@global-gutter-large: 35px;
+@global-gutter-larger: 45px;
+@global-gutter-largest: 70px;
+
+// Controls
+
+@global-control-height: 40px;
+@global-control-small-height: 30px;
+@global-control-large-height: 55px;
+
+// Z-index
+
+@global-z-index: 1000;
+
+//
+// Borders
+//
+
+@global-border-width: 1px;
+@global-border-color: #E6E6E6;
+@global-border-color-dark: #333;
+//
+//弧度
+
+@global-radius-small: 2px;
+@global-radius: 20px;
+@global-radius-circle: 50%;
+
+//
+/*h-shadow	必需。水平阴影的位置。允许负值。
+v-shadow	必需。垂直阴影的位置。允许负值。
+blur	可选。模糊距离。
+spread	可选。阴影的尺寸。
+color	可选。阴影的颜色。请参阅 CSS 颜色值。
+inset	可选。将外部阴影 (outset) 改为内部阴影。*/
+//
+
+@global-shadow-smaller: 0 2px 8px rgba(0, 0, 0, 0.08);
+@global-shadow-small: 0 4px 15px rgba(0, 0, 0, 0.08);
+@global-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+@global-shadow-large: 0 14px 25px rgba(0, 0, 0, 0.16);
+@global-shadow-larger: 0 28px 50px rgba(0, 0, 0, 0.16);
+
+//过渡速度
+@global-translation-long: 1s;
+@global-translation: 0.5s;
+@global-translation-short: 0.2s;
+

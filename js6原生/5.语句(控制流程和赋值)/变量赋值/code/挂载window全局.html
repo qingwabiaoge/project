@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script>
+    function fn() {
+        //window语句,省去了window. 前缀
+        i = 1
+        f1 = function () {//临时挂载window
+            console.log(123)
+        }
+        // f1()
+        window.f1 = function () { //永久挂载window
+
+            console.log(this)
+        }
+
+        f1()
+    }
+
+    fn()
+
+    console.log(i)
+    console.log(f1)
+</script>

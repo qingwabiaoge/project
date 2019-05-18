@@ -15,39 +15,38 @@
         <ul class="nav pull-right">
           <li>
             <a href="" target="_blank">
-              <i class="iconfont ico-phone"></i>  访问手机版
+              <i class="iconfont ico-phone"></i> 访问手机版
             </a>
 
           </li>
 
-<li>
-  <a href="">
-    <popover>
-     <i class="iconfont icon-weixin
+          <li>
+            <a href="">
+              <popover>
+                <i class="iconfont icon-weixin
 "></i> 关注公众号
-      <div slot="popover"style="width: 200px">
-        <img src="~/assets/images/qcode.jpg" alt="">
-        <br>
-        长按关注公众号
-      </div>
-    </popover>
+                <div slot="popover" style="width: 200px">
+                  <img src="~/assets/images/qcode.jpg" alt="">
+                  <br>
+                  长按关注公众号
+                </div>
+              </popover>
 
-  </a>
+            </a>
 
 
-
-</li>
+          </li>
 
 
           <li>
             <a>
-            <v-tooltip top
+              <v-tooltip top
 
-              width="150"
-            ><i class="iconfont icon-weixin"></i>关注公众号
+                         width="150"
+              ><i class="iconfont icon-weixin"></i>关注公众号
 
-            <span > <img src="~/assets/images/qcode.jpg" alt="">  </span>
-            </v-tooltip>
+                <span> <img src="~/assets/images/qcode.jpg" alt="">  </span>
+              </v-tooltip>
             </a>
           </li>
 
@@ -63,9 +62,8 @@
 </template>
 
 
-
 <style lang="less" scoped>
-  @nav-link-padding :20px;
+  @nav-link-padding: 20px;
   .footer {
     margin-top: 50px;
     padding: 100px 0 50px;
@@ -73,9 +71,11 @@
     font-size: 12px;
     background: #fff;
     color: #636363;
+
     .nav {
 
       &:extend(.clearfix all);
+
       > li {
         float: left;
         position: relative;

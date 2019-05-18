@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+<div id="app">
+    {{value}} <br>
+    <ch :value.sync="value"></ch>
+    <!--等价于下边-->
+    <ch :value="value"
+        @update:value="data => value = data">
+
+    </ch>
+
+
+</div>
+
+<script>
+    var ch = {
+        template: `<input type="text"
+                            :value="value"
+                            @input="$emit('update:value', $event.target.value)" >`,
+        props: ["value"]
+
+    }
+    vm = new Vue({
+        el: '#app',
+        components: {ch},
+        data: {value: 'some'}
+    })
+
+</script>
+
+</body>
+</html>

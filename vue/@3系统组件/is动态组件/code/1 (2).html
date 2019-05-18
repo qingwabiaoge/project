@@ -1,0 +1,28 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<meta charset="utf-8">
+<div id="app">
+    <button @click="cur='cl'">标签1</button>
+    <button @click="cur='cl2'">标签2</button>
+    <component :is="cur">
+    </component>
+    cur:{{cur}}
+
+</div>
+
+<script>
+
+    const cl = {template: `<div>cl组件</div>`}
+    const cl2 = {template: `<div>cl2组件</div>`}
+    const vm = new Vue({
+
+        el: '#app',
+        data:{
+            cur: 'cl'
+        },
+        components: {cl, cl2},
+
+
+    })
+
+
+</script>

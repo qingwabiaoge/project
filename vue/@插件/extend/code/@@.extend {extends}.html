@@ -1,0 +1,95 @@
+<meta charset="UTF-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app1">
+
+</div>
+
+<div id="app2">
+    <apple></apple>
+</div>
+
+
+<script>
+    //配置文件
+    var green = {
+        beforeCreate() {
+            console.log('this is green')
+        }
+    }
+
+    //vue组件
+    var fruit = Vue.component('fruit', {
+        created() {
+            console.log('I am fruit')
+        }
+    })
+
+    //带模版的vue构造器
+    var plant = Vue.extend({
+        mounted() {
+            console.log('this is plant')
+        }
+    })
+
+
+
+    const n = 2
+    switch (n) {
+
+
+        case 1:
+            //生成实例>>>>>>>>>
+            new Vue({
+                el: "#app1",
+                extends: fruit, //fruit ,plant
+                mixins: [fruit, green, plant, Vue], //fruit
+                //后面的覆盖前面的
+                template: "<p>apple</p>",
+            });
+            break;
+
+
+        case 2:
+            //生成实例>>>>>>>>>
+            Vue.component('apple',
+                {
+
+                    extends: fruit, //fruit ,plant
+                    mixins: [fruit, green, plant, Vue], //fruit
+                    //后面的覆盖前面的
+                    template: "<p>apple</p>",
+                }
+            )
+
+            new Vue({
+                el: "#app2",
+            });
+            break;
+
+
+        case 3:
+
+            var apple = Vue.extend({
+                extends: fruit, //fruit ,plant
+                mixins: [fruit, green, plant, Vue], //fruit
+                //后面的覆盖前面的
+                template: "<p>apple</p>",
+            });
+
+            //生成实例>>>>>>>>>
+            new apple({
+                el: '#app1'
+            })
+
+            //生成实例>>>>>>>>>
+            Vue.component('apple', apple)
+            new Vue({
+                el: "#app2",
+            });
+            break;
+
+
+    }
+
+
+</script>

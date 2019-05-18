@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <title>Mixins Option Demo</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>
+        {{msg.msg1}}--{{msg.msg2}}
+    </h1>
+    <p>num:{{ num }}</p>
+    <P>
+        <button @click="add">增加数量</button>
+    </P>
+</div>
+
+<script type="text/javascript">
+    //额外临时加入时，用于显示日志
+    var addLog = {
+        template: '<h1>局部mixin模版</h1>',
+        data: {msg: {msg2: 'msg2'}},
+        updated: function () {
+            console.log("mixin混入  数据放生变化,变化成" + this.num + ".");
+        }
+    }
+    Vue.mixin({
+        updated() {
+            console.log('全局混入')
+        }
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            msg: {msg1: 'msg1'},
+            num: 1
+        },
+        methods: {
+            add: function () {
+                this.num++;
+            },
+
+        },
+        updated: function () {
+
+
+            console.log("构造器里的updated方法。")
+
+
+        },
+
+        mixins: [addLog]//混入
+    })
+
+</script>
+</body>
+</html>

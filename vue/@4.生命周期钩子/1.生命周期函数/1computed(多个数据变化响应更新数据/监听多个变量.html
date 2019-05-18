@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+    <input v-model="msg1" type="text">
+    <input v-model="msg2" type="text">
+    {{msg}}
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data() {
+           return{
+             msg1:'msg',
+               msg2:"msg2"
+           }
+        },
+        computed:{
+            msg:function () {
+                console.log('引发函数')
+                return this.msg1+10000+this.msg2
+            }
+
+        }
+
+    })
+
+</script>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <cl v-bind:msg.sync="msg">
+
+
+    </cl>
+    {{msg}}
+
+</div>
+<script>
+
+    Vue.component('cl', {
+        template: `<div> <input type="text" v-model="msg" ></div>`,         //不该在子组件设置prop,不用用v-model
+        props: ['msg'],
+        watch:{ msg:function () {
+                this.$emit('update:msg', this.msg)
+            }
+
+        }
+    })
+    var vm = new Vue(
+        {
+            el: '#app',
+            data: {
+                msg: 1,
+            },
+
+
+        }
+    )
+</script>
+
+
+</body>
+</html>

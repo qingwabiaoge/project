@@ -1,0 +1,74 @@
+// Name:            Drop
+// Description:     Component to position any element next to any other element.
+//
+// Component:       `drop`
+//
+// Modifiers:       `drop-top-*`
+//                  `drop-bottom-*`
+//                  `drop-left-*`
+//                  `drop-right-*`
+//                  `drop-stack`
+//                  `drop-grid`
+//
+// States:          `open`
+//
+// Uses:            Animation
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@drop-z-index:                              @global-z-index + 20;
+@drop-width:                                300px;
+@drop-margin:                               @global-margin;
+
+
+/* ========================================================================
+   Component: Drop
+ ========================================================================== */
+
+/*
+ * 1. Hide by default
+ * 2. Set position
+ * 3. Set a default width
+ */
+
+.drop {
+    /* 1 */
+    display: none;
+    /* 2 */
+    position: absolute;
+    z-index: @drop-z-index;
+    /* 3 */
+    box-sizing: border-box;
+    width: @drop-width;
+}
+
+/* Show */
+.drop.open { display: block; }
+
+
+/* Direction / Alignment modifiers
+ ========================================================================== */
+
+/* Direction */
+[class*='drop-top'] { margin-top: -@drop-margin; }
+[class*='drop-bottom'] { margin-top: @drop-margin; }
+[class*='drop-left'] { margin-left: -@drop-margin; }
+[class*='drop-right'] { margin-left: @drop-margin; }
+
+
+/* Grid modifiers
+ ========================================================================== */
+
+.drop-stack .drop-grid > * { width: 100% !important; }
+
+
+// Hooks
+// ========================================================================
+
+.hook-drop-misc;
+
+.hook-drop-misc() {}

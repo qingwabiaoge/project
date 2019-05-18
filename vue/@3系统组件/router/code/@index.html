@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+
+<div id="app">
+
+
+    <a @click="goBack">返回$router.go(-1)</a> &nbsp;| &nbsp; <a @click="$router.go(1)">前进$router.go(1)</a>
+
+    <br>
+
+    <router-link :to="{ name: 'sub2', params:{id: 03},query:{id:04}}">
+        :to="{ name: 'sub2', params:{id: 03},query:{id:04}}"
+    </router-link>
+
+    &nbsp;&nbsp; |&nbsp;&nbsp;
+
+    <router-link :to="{ path: '/father/02/sub1', query: { id: 2 }}">     <!-- 注path:不能param因为path里本身就有param-->
+        :to="{ path: '/father/02/sub1', query: { id: 2 }}"
+    </router-link>
+
+
+    &nbsp;&nbsp; |&nbsp;&nbsp;
+
+    <router-link :to="{ path: '/father/02/'}">     <!-- 注path:不能param因为path里本身就有param-->
+        :to="{ path: '/father/02/'}"
+    </router-link>
+
+
+    &nbsp;&nbsp; |&nbsp;&nbsp;
+
+    <button @click="$router.push({ name: 'sub2',params:{id: 03}, query: { id: 3 }})">$router.push({ name:
+        @click="$router.push({ name: 'sub2',params:{id: 03}, query: { id: 3 }})"
+    </button>
+
+
+    <router-view></router-view>
+</div>
+
+<script>
+    const err = {template: '<div>404</div>'}
+
+
+    const id = {
+        template: `
+                    <div style="background: #eee">
+                    id组件:
+                      params.id: {{ $route.params.id }}
+                  | query.id：{{$route.query.id}}
+                    |admin：{{$route.meta.admin}}
+
+                      <router-view style="border-top:1px dashed #ccc;  display: block"></router-view>
+                    </div>
+                  `
+    }
+
+    const index = {
+        template: '<div>index组件</div>'
+    }
+    const sub1 = {
+        template: '<div>sub1组件</div>'
+    }
+
+    const sub2 = {
+        template: '<div>sub2组件</div>'
+    }
+
+
+    const router = new VueRouter({
+            //mode:'history', //网址带不带#号
+            linkActiveClass: 'active',  //链接流加acitve
+            routes: [
+                {
+                    path: '*',
+                    name: '404',
+                    component: err
+
+                },
+                {   //顶级路径一定要加 "/"
+                    path: '/father/:id',//id是father的子级,这样写的好处是可以不写father模板,没有设置father模板 所以father在sub1,sub2中不显示
+                                         //和普通的路径没啥区别就是加了: 能在模板里通过{{ $route.params.id }}接收参数,而且参数在当前页面公用
+                                         // /father/3?cid=2为三个参数  显示路由,parame,query,
+                    name: 'id',
+                    component: id,
+                    children: [//这个是father的孙子,/father/:id的子级
+                        {
+                            path: '/',
+                            name: 'index',
+                            component: index, //设置首页 若不设置 这个路由显示只显示上级组件内容,若如此设置 route-link只能用path 不能用name
+                            // redirect:{name:'sub1'} //也可以设置redirect重定向
+                        },
+                        {path: 'sub1', name: 'sub1', component: sub1},
+                        {path: 'sub2', name: 'sub2', component: sub2, meta: {admin: true}},
+                    ]
+                },
+
+            ]
+        }
+    )
+
+    const vm = new Vue({
+            router,
+            methods: {
+
+                goBack() {
+                    window.history.length > 1
+                        ? this.$router.go(-1)   //this.$router类似一个数组,倒数第1个是现在的地址路径,寻找倒数第2个地址路径,此路径会在浏览器地址栏显示
+                        : this.$router.push('/')  //类似向this.$router数组push一个路径 此路径会在浏览器地址栏显示
+                }
+            },
+
+
+
+        },
+    ).$mount('#app')
+
+
+    router.beforeEach((to, from, next) => {//路由的声明周期 进入路由时间的钩子函数
+        console.log(from)//要离开路由的$route信息
+        console.log(to)//要加载的路由的$route信息
+
+        if (to.meta.admin === true) {
+            console.log('需要admin授权')
+        }
+        next()
+    })
+</script>
+
+<style>
+
+    .active {
+        color: red
+    }
+</style>
+</body>
+</html>

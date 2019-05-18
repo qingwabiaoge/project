@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+
+<body>
+<button onclick="history.go(-1);render()">history.go(-1)</button>
+<button onclick="history.go(1); render()">history.go(1)</button>
+<br>
+<!--路由meta 原理history.state-->
+<button onclick='history.pushState({state: 1}, "newtitle","1.html?b=1"); render()'>pushState添加一条历史记录</button>
+
+<button onclick='history.pushState({state: 2}, "newtitle","2.html?b=1"); render()'>pushState添加一条历史记录</button>
+<div id="app">
+
+</div>
+
+<script>
+
+    function render() {
+        document.getElementById('app').innerText = history.state.state
+        console.log(history)
+    }
+
+
+</script>
+</body>
+
+</html>

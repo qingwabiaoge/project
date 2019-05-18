@@ -6,21 +6,29 @@ import router from './router'
 import axios from '@/axios'
 import store from './store'
 Vue.config.productionTip = false
-import '@/plugin'
+
+
+import uniform from '@/components/uniform'
+Vue.component('uniform', uniform)
 
 
 
 import ElementUI from 'element-ui';
-
 Vue.use(ElementUI);
-import VueLazyload from 'vue-lazyload'
 
+
+
+import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload)
+
+
+
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/less/all/index.css'
 
 
 Vue.prototype.$axios = axios;
+
 
 store.$axios = axios
 store.dispatch('global/get')

@@ -310,7 +310,7 @@ body {
   -webkit-text-size-adjust: 100%;
   color: #666;
   /* 背景 */
-  background: #fff;
+  background: #f1f1f1;
   /* margin */
   margin: 0;
 }
@@ -606,193 +606,6 @@ sub {
   background: #fb00c9;
   color: #fff;
   text-shadow: none;
-}
-/* ========================================================================
-   Component: Card
- ========================================================================== */
-.card {
-  position: relative;
-  box-sizing: border-box;
-}
-/* Sections
- ========================================================================== */
-.card-body {
-  padding: 25px 25px;
-}
-.card-header {
-  padding: 13px 25px;
-}
-.card-footer {
-  padding: 12.5px 25px;
-}
-/* Desktop and bigger */
-@media (min-width: 1200px) {
-  .card-body {
-    padding: 35px 35px;
-  }
-  .card-header {
-    padding: 18px 35px;
-  }
-  .card-footer {
-    padding: 18px 35px;
-  }
-}
-/*
- * Micro clearfix
- */
-.card-body::before,
-.card-body::after,
-.card-header::before,
-.card-header::after,
-.card-footer::before,
-.card-footer::after {
-  content: "";
-  display: table;
-}
-.card-body::after,
-.card-header::after,
-.card-footer::after {
-  clear: both;
-}
-/*
- * Remove margin from the last-child
- */
-.card-body > :last-child,
-.card-header > :last-child,
-.card-footer > :last-child {
-  margin-bottom: 0;
-}
-/* Media
- ========================================================================== */
-/*
- * Reserved alignment modifier to style the media element, e.g. with `border-radius`
- * Implemented by the theme
- */
-/* Title
- ========================================================================== */
-.card-title {
-  font-size: 1.8rem;
-  line-height: 1.4;
-}
-/* Badge
- ========================================================================== */
-.card-badge {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  z-index: 1;
-}
-/*
- * Remove margin from adjacent element
- */
-.card-badge:first-child + * {
-  margin-top: 0;
-}
-/* Hover modifier
- ========================================================================== */
-.card-hover:not(.card-default):not(.card-primary):not(.card-secondary):hover {
-  background: #fff;
-}
-/* Style modifiers
- ========================================================================== */
-/*
- * Default
- * Note: Header and Footer are only implemented for the default style
- */
-.card-default {
-  background: #fff;
-  color: #666;
-}
-.card-default .card-title {
-  color: #333;
-}
-.card-default.card-hover:hover {
-  background-color: #f2f2f2;
-}
-/*
- * Primary
- */
-.card-primary {
-  background: #fb00c9;
-  color: #fff;
-}
-.card-primary .card-title {
-  color: #fff;
-}
-.card-primary.card-hover:hover {
-  background-color: #e200b5;
-}
-/*
- * Secondary
- */
-.card-secondary {
-  background: #222;
-  color: #fff;
-}
-.card-secondary .card-title {
-  color: #fff;
-}
-.card-secondary.card-hover:hover {
-  background-color: #151515;
-}
-/* Size modifier
- ========================================================================== */
-/*
- * Small
- */
-.card-small.card-body,
-.card-small .card-body {
-  padding: 25px 25px;
-}
-.card-small .card-header {
-  padding: 17px 25px;
-}
-.card-small .card-footer {
-  padding: 17px 25px;
-}
-/*
- * Large
- */
-/* Desktop and bigger */
-@media (min-width: 1200px) {
-  .card-large.card-body,
-  .card-large .card-body {
-    padding: 70px 70px;
-  }
-  .card-large .card-header {
-    padding: 35px 70px;
-  }
-  .card-large .card-footer {
-    padding: 35px 70px;
-  }
-}
-/* ========================================================================
-   Component: Overlay
- ========================================================================== */
-.overlay {
-  padding: 25px 25px;
-}
-/*
- * Remove margin from the last-child
- */
-.overlay > :last-child {
-  margin-bottom: 0;
-}
-/* Icon
- ========================================================================== */
-/* Style modifiers
- ========================================================================== */
-/*
- * Default
- */
-.overlay-default {
-  background: rgba(255, 255, 255, 0.8);
-}
-/*
- * Primary
- */
-.overlay-primary {
-  background: rgba(34, 34, 34, 0.8);
 }
 .color-inverse,
 .hover-color-inverse:hover {
@@ -3364,74 +3177,29 @@ iframe.cover {
  * `light` is for light colors on dark backgrounds
  * `dark` is or dark colors on light backgrounds
  */
-.light .text-lead,
-.card-primary.card-body .text-lead,
-.card-primary > :not([class*='card-media']) .text-lead,
-.card-secondary.card-body .text-lead,
-.card-secondary > :not([class*='card-media']) .text-lead,
-.overlay-primary .text-lead {
+.light .text-lead {
   color: rgba(255, 255, 255, 0.7);
 }
-.light .text-meta,
-.card-primary.card-body .text-meta,
-.card-primary > :not([class*='card-media']) .text-meta,
-.card-secondary.card-body .text-meta,
-.card-secondary > :not([class*='card-media']) .text-meta,
-.overlay-primary .text-meta {
+.light .text-meta {
   color: rgba(255, 255, 255, 0.5);
 }
-.light .text-muted,
-.card-primary.card-body .text-muted,
-.card-primary > :not([class*='card-media']) .text-muted,
-.card-secondary.card-body .text-muted,
-.card-secondary > :not([class*='card-media']) .text-muted,
-.overlay-primary .text-muted {
+.light .text-muted {
   color: rgba(255, 255, 255, 0.5) !important;
 }
-.light .text-primary,
-.card-primary.card-body .text-primary,
-.card-primary > :not([class*='card-media']) .text-primary,
-.card-secondary.card-body .text-primary,
-.card-secondary > :not([class*='card-media']) .text-primary,
-.overlay-primary .text-primary {
+.light .text-primary {
   color: rgba(255, 255, 255, 0.7) !important;
 }
-.light .logo,
-.card-primary.card-body .logo,
-.card-primary > :not([class*='card-media']) .logo,
-.card-secondary.card-body .logo,
-.card-secondary > :not([class*='card-media']) .logo,
-.overlay-primary .logo {
+.light .logo {
   color: rgba(255, 255, 255, 0.7);
 }
 .light .logo:hover,
-.light .logo:focus,
-.card-primary.card-body .logo:hover,
-.card-primary.card-body .logo:focus,
-.card-primary > :not([class*='card-media']) .logo:hover,
-.card-primary > :not([class*='card-media']) .logo:focus,
-.card-secondary.card-body .logo:hover,
-.card-secondary.card-body .logo:focus,
-.card-secondary > :not([class*='card-media']) .logo:hover,
-.card-secondary > :not([class*='card-media']) .logo:focus,
-.overlay-primary .logo:hover,
-.overlay-primary .logo:focus {
+.light .logo:focus {
   color: rgba(255, 255, 255, 0.7);
 }
-.light .logo > :not(.logo-inverse):not(:only-of-type),
-.card-primary.card-body .logo > :not(.logo-inverse):not(:only-of-type),
-.card-primary > :not([class*='card-media']) .logo > :not(.logo-inverse):not(:only-of-type),
-.card-secondary.card-body .logo > :not(.logo-inverse):not(:only-of-type),
-.card-secondary > :not([class*='card-media']) .logo > :not(.logo-inverse):not(:only-of-type),
-.overlay-primary .logo > :not(.logo-inverse):not(:only-of-type) {
+.light .logo > :not(.logo-inverse):not(:only-of-type) {
   display: none;
 }
-.light .logo-inverse,
-.card-primary.card-body .logo-inverse,
-.card-primary > :not([class*='card-media']) .logo-inverse,
-.card-secondary.card-body .logo-inverse,
-.card-secondary > :not([class*='card-media']) .logo-inverse,
-.overlay-primary .logo-inverse {
+.light .logo-inverse {
   display: inline;
 }
 .shadow-smaller {
@@ -4300,16 +4068,6 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
 }
-.justified {
-  display: table;
-  width: 100%;
-  padding: 0;
-}
-.justified > * {
-  display: table-cell;
-  text-align: center;
-  width: 1%;
-}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -4437,7 +4195,6 @@ button.swiper-pagination-bullet {
   -moz-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/*设置水平居中*/
 @font-face {
   font-family: "iconfont";
   src: url('../font/iconfont.eot?t=1554983612384');

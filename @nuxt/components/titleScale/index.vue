@@ -1,22 +1,15 @@
 <template>
   <div class="text-center padding-top-larger padding-bottom-larger container "
-  style="background: none"
+       style="background: none"
   >
-    <nuxt-link v-if="href" :to="{path:href}" :class="$style.link">
-      <h2><b>{{title}}</b>{{subTitle}}</h2>
+    <nuxt-link :to="data.href?data.href:'#'" :class="$style.link">
+      <h2>{{data.title}}{{data.subtitle}}</h2>
       <p class="text-uppercase text-light">
-        {{text}}
+        {{data.info}}
       </p>
     </nuxt-link>
-    <div v-else :class="$style.link">
-      <h2><b>{{title}}</b>{{subTitle}}</h2>
-      <p class="text-uppercase text-light">
-        {{text}}
-      </p>
-    </div>
 
-
-    <p v-if="description" class="margin-top-small">{{description}}</p>
+    <p v-if="data.description" class="margin-top-small">{{data.description}}</p>
 
   </div>
 </template>
@@ -24,11 +17,7 @@
 <script>
   export default {
     props: {
-      href: String,
-      title: String,
-      subTitle: String,
-      text: String,
-      description: String
+      data: {}
     }
 
   }
@@ -38,6 +27,7 @@
 <style lang="less" module>
   .link {
     display: inline-block;
+
     h2, p {
       transition: all @global-translation;
     }
@@ -45,8 +35,7 @@
 
   .link:hover h2,
   .link:hover p,
-  .link:hover b
-  {
+  .link:hover b {
     transform: translate(0, 5px);
     color: @global-color-primary;
   }

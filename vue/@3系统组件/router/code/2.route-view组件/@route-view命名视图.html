@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.8.2/lib/index.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+<link href="https://element.eleme.cn/2.8/docs.b8e65c4.css" rel="stylesheet">
+
+<!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+<div id="app">
+    <router-view name='mainheader'></router-view>
+    <router-view/>
+
+</div>
+
+<script>
+    const MainHeader = {template: `<div>MainHeader</div>`}
+    const Home = {template: `<div>home</div>`}
+    const router = new VueRouter({
+        routes: [
+            {
+                path: '/',
+                name: 'Home',
+                components: {
+                    default: Home,
+                    //可以选择是否有头部模块
+                    mainheader: MainHeader
+                }
+            },
+            {
+                path: '/login',
+                name: 'Home',
+                components: {
+                    //这里没有头部模块
+                    default: Home,
+                }
+            }
+        ]
+
+    })
+    new Vue({
+        el: '#app',
+        router
+    })
+
+</script>
+

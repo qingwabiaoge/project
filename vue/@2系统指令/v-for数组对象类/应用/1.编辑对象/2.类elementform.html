@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+
+    <!--  const cur=item
+           cui.i=formvalue
+
+    -->
+
+    <div v-for="(item,key) in obj">
+
+        <li type="text" @click="cur=item">{{item}}</li>
+    </div>
+
+    点击上面列表编辑 <br>
+    <input type="text" v-model="cur.i">
+    <br>
+    <input type="text" v-model="cur.m">
+
+    <br>
+ 编辑后的obj <br>
+    {{obj}}
+</div>
+
+
+<script>
+
+
+    const vm = new Vue({
+        el: '#app',
+
+        data: {
+            cur: {},
+            obj: {a: {i: 1, m: 2}, b: {i: 3, m: 4}, c: {i: 5, m: 6}}
+        },
+        methods: {}
+
+
+    })
+
+</script>
+
+

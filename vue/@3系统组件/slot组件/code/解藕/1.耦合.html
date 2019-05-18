@@ -1,0 +1,30 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+    <!--点击改变value的值,value改变dom自动更新-->
+    <ul>
+        <li v-for="item in 4" @click="value=item" :class="value===item?'active':''">
+           <button>{{item}}</button>
+        </li>
+    </ul>
+    <br>
+    {{value}}
+</div>
+
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                value: 1
+            }
+        }
+    })
+
+</script>
+
+<style>
+    .active {
+        color: red;
+    }
+
+</style>

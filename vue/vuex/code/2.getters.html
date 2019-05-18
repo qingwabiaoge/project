@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <p>
+        <!--//router必须挂载在vue上才能用$store-->
+
+        <button @click="$store.commit('add')">+</button>
+        <button @click="$store.commit('sub')">-</button>
+    </p>
+    <br>
+
+    <p>
+        {{$store.state.count}}
+    </p>
+    <p>
+        {{$store.getters.count10}}
+    </p>
+
+    <p>
+        {{$store.getters.count100}}
+    </p>
+</div>
+<script>
+
+    const store = new Vuex.Store({
+        state: {
+            count: 0
+        },
+        mutations: {
+            add: state => state.count++,
+            sub: state => state.count--
+        },
+        getters: {
+            count10(state) {
+
+                return state.count * 10
+            },
+            count100(state, getters) {
+                console.log('get')
+                return getters.count10 * 10
+            }
+
+        }
+    })
+
+    const vm = new Vue({
+        el: '#app',
+        store,
+
+
+    })
+</script>
+
+</body>
+</html>

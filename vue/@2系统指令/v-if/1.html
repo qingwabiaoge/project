@@ -1,0 +1,19 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <div v-if="type==='A'">A</div>
+    <div v-else-if="type==='B'">B</div>
+    <div v-else-if="type==='C'">C</div>
+    <div v-else>not A B C</div>
+
+
+</div>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {type: "B"}
+
+
+    })
+</script>

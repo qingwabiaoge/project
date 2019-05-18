@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="vapp-1"></div>
+<div class="vapp-2"></div>
+
+<script>
+  new Vue({
+    el: '.vapp-1',
+    render: function(h){
+      return h('h1',  '这是render属性方式渲染。')
+    }
+  })
+
+  new Vue({
+    el: '.vapp-2',
+    template: '<div><h1>这是template属性模板渲染。</h1></div>'
+  })
+
+ 
+</script>
+</body>
+</html>

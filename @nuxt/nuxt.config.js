@@ -12,7 +12,7 @@ module.exports = {
   env: {
     // HOST: process.env.HOST,
     HOST: '127.0.0.1',
-    PORT: 3000
+    PORT: 3003
   },
 
 

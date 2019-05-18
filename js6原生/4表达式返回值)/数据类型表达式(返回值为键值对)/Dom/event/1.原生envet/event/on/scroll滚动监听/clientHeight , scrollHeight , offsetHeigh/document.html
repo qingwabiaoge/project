@@ -1,0 +1,30 @@
+<!DOCTYPE html >
+<html lang="en">
+<body>
+<style>
+    html, body {
+        padding: 0;
+        margin: 0
+    }
+
+</style>
+<div id="app" style="height: 2000px">
+
+</div>
+<script>
+
+    console.log(' documentElement.clientHeight:' + document.documentElement.clientHeight)//视口的高度
+    console.log('documentElement.scrollHeight:' + document.documentElement.scrollHeight)//内容可滚动区域的高度
+    console.log('documentElement.offsetHeight:' + document.documentElement.offsetHeight) //html的css高度
+
+
+    console.log(' documentElement.clientTop:' + document.documentElement.clientTop)//视口距离顶部的高度
+    console.log('documentElement.offsetTop:' + document.documentElement.offsetTop) //html距离顶部的高度
+    window.addEventListener('scroll', function () {
+
+        console.log('documentElement.scrollHeight:' + document.documentElement.scrollTop)//滚动条距离顶部的高度
+    })
+</script>
+</body>
+
+</html>

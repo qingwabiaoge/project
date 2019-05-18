@@ -1,0 +1,22 @@
+<button onclick="mseeage({a: 'msg',isShow:true})">message</button>
+<button onclick="mseeage({a: 'msg2',isShow:true})">message</button>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script>
+
+
+    //1.建立vue对象
+    const vm = new Vue({template: '<h1 v-if="isShow">{{a}}</h1>', data: {a: 1, isShow: false}})
+
+
+    //2.$mount:  vue对象渲染虚拟dom,
+    const _vm = vm.$mount()
+    //得到虚拟dom
+    dom = _vm.$el
+
+    function mseeage(options) {
+        //手动把dom插入到body
+        document.body.appendChild(dom)
+        //更新数据实现更新dom
+        Object.assign(vm, options)
+    }
+</script>

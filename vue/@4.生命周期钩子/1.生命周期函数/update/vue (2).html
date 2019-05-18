@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+{{msg}}
+
+    <input type="text" v-model="msg.a">
+
+</div>
+
+
+<script>
+
+
+    const vm = new Vue({
+        el: '#app',
+
+        data: {
+
+            msg: {a: 1}
+        },
+        updated() {
+            console.log('updata运行')
+            this.msg.b = this.msg.a + 'update'
+
+        }
+
+    })
+
+</script>
+
+

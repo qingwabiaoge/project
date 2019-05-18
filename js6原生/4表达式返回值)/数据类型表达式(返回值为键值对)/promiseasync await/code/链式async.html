@@ -1,0 +1,40 @@
+    <meta charset="UTF-8">
+<script>
+
+    var i = 0;
+    //函数返回promise
+    function sleep(ms) {
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('我执行好了');
+                i++;
+                if (i >= 3) reject(new Error('i>=2'));
+                else resolve(i);
+            }, ms);
+        })
+    }
+    function sleep2(ms) {
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('我执行好了');
+                i++;
+                if (i >= 3) reject(new Error('i>=2'));
+                else resolve(i);
+            }, ms);
+        })
+    }
+    (async function () {
+        try {
+            var val;
+            val = await sleep(1000);
+            console.log(val);
+            val = await sleep(1001);
+            console.log(val);
+            val = await sleep2(1002);
+            console.log(val);
+        }
+        catch (err) {
+            console.log('出错啦:'+err.message);
+        }
+    } ())
+</script>

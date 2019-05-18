@@ -1,0 +1,30 @@
+<script>
+    function f() {
+
+        let i = 1
+
+        //函数在定义式的所在的作用域运行修改自由变量
+        function fn() {
+            i++
+            console.log(i)
+        }
+
+        //闭包暴漏---------------------------
+        return {i, fn}
+    }
+
+    //作为全局变量引入--------------------------
+    const fn = f().fn
+    const i = f().i
+
+    function f1() {
+        fn()
+        console.log(i)
+        fn()
+        console.log(i)
+        fn()
+        console.log(i)
+    }
+
+    f1()
+</script>

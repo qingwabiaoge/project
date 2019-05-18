@@ -1,0 +1,26 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <!--//组件内传参改变-->
+    <button v-for="item in arry" @click="curComponent=item">   <!--#3 click传参-->
+        {{item}}   <!--#2数组传参-->
+    </button>
+    <keep-alive>
+        <component :is="curComponent"></component>    <!--#4动态组件发生改变-->
+    </keep-alive>
+</div>
+
+<script>
+    Vue.component('first', {template: `<div>first</div>`})
+    Vue.component('second', {template: `<div>second</div>`})
+    Vue.component('three', {template: `<div>three</div>`})
+    const vm = new Vue({
+        el: '#app',
+
+        data: {
+            arry: ['first', 'second', 'three'],//#1
+            curComponent: 'first',//变量
+        }
+    })
+
+        </script>

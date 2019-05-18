@@ -1,6 +1,6 @@
 <template>
 
-    <articleA :data="articleAdata"></articleA>
+    <articleA :data="$store.state.test[0]"></articleA>
 </template>
 
 <script>
@@ -8,17 +8,7 @@
 
     export default {   layout: 'ui',
    
-        data() {
-            return {
-                articleAdata: {}
-            }
-        },
-        components: {articleA},
-        async mounted() {
-            const {article} = await this.$api.get('/getArticleById/5bbb45e2d1abc623c8649325');
-            this.articleAdata = article
 
-        }
     }
 
 

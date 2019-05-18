@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+    <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+<body>
+<script>
+    const a=0
+    var obj1 = {
+        a: 1,
+        b: function () {
+            console.log(a)
+            console.log(this.a)
+        }
+    }
+    obj2 = {a: 2}
+    obj2.b = obj1.b //函数表达式对内存地址赋值给了obj2.b
+
+    obj2.b()//this===obj2 跳转到既函数定义式判断自由变量的取值和看代码
+</script>
+</body>
+</html>

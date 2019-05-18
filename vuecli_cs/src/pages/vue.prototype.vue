@@ -6,7 +6,7 @@
 <script>
   export default {
     mounted() {
-      this.$f()
+    console.log(  this.$axios)
     }
 
   }

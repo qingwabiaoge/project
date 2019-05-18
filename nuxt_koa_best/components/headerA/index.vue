@@ -46,7 +46,7 @@
         <nuxt-link to="/brand" class="hover-underline inline "
         >关于{{$store.state.config.global.ename}}
         </nuxt-link>
-        <nuxt-link to="/baidu" class="hover-underline inline "
+        <nuxt-link to="/join" class="hover-underline inline "
         >加入百事得
         </nuxt-link>
         <nuxt-link :to="{ path: '/goodss/'}" class="hover-underline inline "

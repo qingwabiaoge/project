@@ -1,0 +1,24 @@
+
+
+<script>
+
+    obj = {
+        global: 0,
+        f() {
+            const i=10
+            this.global=i //3 this=obj
+        }
+        ,
+        f1() {
+            this.f() //2 this=obj ,obj.f()
+            const m = this.global
+            console.log(m)
+        }
+    }
+    obj.f1()//1 this=obj
+
+    console.log(obj)
+
+
+
+</script>
