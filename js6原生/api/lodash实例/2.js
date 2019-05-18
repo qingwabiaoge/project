@@ -1,0 +1,360 @@
+const _ =require('lodash')
+const componentDatas = [{
+    "_id": "5bba083c5bf45818c81faba4",
+    "componentName": "pictextSimple",
+    "imgurl": "http://leicdn.oss-cn-shenzhen.aliyuncs.com/20189114/1539479529502.70b1acd",
+    "title": "奔奔货车",
+    "text": "「电脑、平板、手机、微官网」同样美好 \n内容、图片支持可视化编辑，颜色风格可任意修改\n全面支持米拓企业建站系统，模板、后台均可以在线升级",
+    "info": "company introduction",
+    "__v": 0,
+    "subtitle": "benben",
+    "href": "/新闻"
+}, {
+    "_id": "5c0fe7c46c183e03bca92616",
+    "componentName": "sliderFull",
+    "imgurl": "/upload/1545893263777.jpeg",
+    "__v": 0,
+    "href": "/goodss",
+    "icon": "",
+    "phoneImgurl": "/upload/1545497068521.jpeg"
+}, {
+    "_id": "5c0fe7cf6c183e03bca92617",
+    "componentName": "sliderFull",
+    "imgurl": "/upload/1545893310882.jpeg",
+    "__v": 0,
+    "content": "",
+    "href": "/brand"
+}, {
+    "_id": "5c0fe8086c183e03bca92618",
+    "componentName": "sliderFull",
+    "phoneImageUrl": "/upload/1544546334390.jpeg",
+    "__v": 0,
+    "imgurl": "/upload/1545893316815.jpeg",
+    "href": "/join/5c1a6a4590d3e023a052d9aa"
+}, {
+    "_id": "5c0e5cdd7702d121089c1df1",
+    "create_time": "11/30/2018",
+    "imgurl": "/upload/1546969392168.jpeg",
+    "componentName": "picScale",
+    "enable": true,
+    "subtitle": "北京百事得石景山加盟店",
+    "title": "beijing shijingshan",
+    "__v": 0,
+    "url": "/水性底漆"
+}, {
+    "_id": "5c0e5d5b7702d121089c1df1",
+    "create_time": "11/30/2018",
+    "imgurl": "/upload/1544445170567.jpeg",
+    "componentName": "picScale",
+    "enable": true,
+    "subtitle": "天津武清区百事得加盟店",
+    "title": "tianjin",
+    "__v": 0
+}, {
+    "_id": "5c0e5d977702d121089c1df1",
+    "create_time": "11/30/2018",
+    "imgurl": "/upload/1546969446207.jpeg",
+    "componentName": "picScale",
+    "enable": true,
+    "subtitle": "上海宝山区百事得加盟店",
+    "title": "shanghai baoshan",
+    "__v": 0
+}, {
+    "_id": "5c0e5dd07702d121089c1df1",
+    "create_time": "11/30/2018",
+    "imgurl": "/upload/1544445386757.jpeg",
+    "componentName": "picScale",
+    "enable": true,
+    "subtitle": "内蒙古鄂尔多斯市加盟店",
+    "title": "neimenggu",
+    "__v": 0
+}, {
+    "_id": "5c0d3444afd6231860c066fe",
+    "componentName": "icolist",
+    "ico": "4",
+    "title": "始于2005年",
+    "subtitle": "来之意大利的古典艺术",
+    "__v": 0,
+    "content": "<p>1</p>",
+    "href": "",
+    "sort": 1,
+    "text": "文案"
+}, {
+    "_id": "5c0ff0076c183e03bca9261a",
+    "componentName": "pictextSlider",
+    "title": "BEST 百事得",
+    "description": "品牌名源于英文best\n力求完美做的更好—— 为了每一次精湛的服务。 \n    百事得成立于2005年，位于意大利Viadana-维亚达纳，作为房屋内部装饰涂料品牌，百事得着重于提高对人体居住环境的健康性，舒适性而努力。在意大利本土拥有1600家销售网点，产品涵盖了艺术涂料、内外墙建筑涂料、木器漆以及全线的民用涂料产品。\n     百事得BEST专注装饰涂料及配套产品（EIFS）的研发、生产业务，凭借先进的生产工艺，源于大自然的创意灵感，专属的施工团队，将独具魅力的产品和服务带给广大业主；经过多年的深耕，BEST在西欧、东欧、北非及中东市场享有较高地位。",
+    "__v": 0,
+    "sort": 1,
+    "subtitle": "",
+    "text": "2005年，意大利BEST百事得进驻中国，建立了专业化的生产基地旨在开拓中国大陆市场为大众提供欧洲品质的产品，让中国消费者不用走出国门就可以享受到意大利顶级的艺术涂料产品以及服务。",
+    "href": "/brand",
+    "content": "",
+    "button": "MORE+"
+}, {
+    "_id": "5c10a2d95749fb0c18bd0025",
+    "componentName": "pictextHistory",
+    "imgurl": "/upload/1544594123472.jpeg",
+    "sort": 1,
+    "__v": 0,
+    "title": "背景",
+    "description": ""
+}, {
+    "_id": "5c1503a13d627d21586254aa",
+    "sort": 1,
+    "componentName": "pictextContact",
+    "imgurl": "/upload/1544894192554.jpeg",
+    "title": "招商",
+    "subtitle": "加盟",
+    "text": "Business franchise",
+    "description": "和百事得一起缔造炫彩的梦想",
+    "__v": 0,
+    "href": "/join/5c1a6a4590d3e023a052d9aa"
+}, {
+    "_id": "5bb9de965bf45818c81faba1",
+    "sort": 2,
+    "componentName": "pictextThree",
+    "imgurl": "/upload/1545313661626.jpeg",
+    "ico": "",
+    "title": "BEST炫彩艺术",
+    "__v": 0,
+    "subtitle": "给您一个炫彩的世界,为色彩赋予灵魂.",
+    "text": "",
+    "background": "#000"
+}, {
+    "_id": "5c0d545cf98c992150c82261",
+    "componentName": "icolist",
+    "ico": "jiangbei",
+    "title": "\"意大利皇室奖\"获得者",
+    "subtitle": "应用于意大利皇室建筑",
+    "__v": 0,
+    "content": "",
+    "sort": 2
+}, {
+    "_id": "5c0fefbe6c183e03bca92619",
+    "componentName": "pictextSlider",
+    "imgurl": "/upload/1544548282664.jpeg",
+    "__v": 0,
+    "sort": 2
+}, {
+    "_id": "5c10a7485749fb0c18bd0026",
+    "componentName": "pictextHistory",
+    "sort": 2,
+    "title": "2005",
+    "description": "百事得成立于2005年，位于意大利Viadana-维亚达纳，作为房屋内部装饰涂料品牌，百事得着重于提高对人体居住环境的健康性，舒适性而努力。",
+    "__v": 0
+}, {
+    "_id": "5c1503f63d627d21586254ab",
+    "componentName": "pictextContact",
+    "sort": 2,
+    "imgurl": "/upload/1544881092728.png",
+    "ico": "",
+    "title": "联系",
+    "subtitle": "我们",
+    "text": "CONTACT US",
+    "description": "热线:400-800-0000",
+    "__v": 0,
+    "href": "/contact"
+}, {
+    "_id": "5c189c92f256d8120444f2d1",
+    "componentName": "picFade",
+    "sort": 2,
+    "imgurl": "/upload/1545116742214.jpeg",
+    "title": "幻彩漆",
+    "subtitle": "FANCY PAINT",
+    "__v": 0,
+    "href": "/goodss/幻彩漆"
+}, {
+    "_id": "5c1bcd08cb032922e49925a5",
+    "componentName": "pictextHistory",
+    "sort": 2,
+    "title": "2007",
+    "text": "",
+    "description": "百事得被指定为CCTV独家合作品牌,春晚涂料供应商,并在CCTV各大频道报道",
+    "__v": 0
+}, {
+    "_id": "5c1cd62667aeae14344ab3b2",
+    "sort": 2,
+    "componentName": "el-carousel",
+    "imgurl": "/upload/1545393698368.jpeg",
+    "__v": 0
+}, {
+    "_id": "5c1cd63267aeae14344ab3b3",
+    "componentName": "el-carousel",
+    "sort": 2,
+    "imgurl": "/upload/1545393712321.jpeg",
+    "__v": 0
+}, {
+    "_id": "5c1cd64767aeae14344ab3b4",
+    "componentName": "el-carousel",
+    "sort": 2,
+    "imgurl": "/upload/1545393733160.jpeg",
+    "__v": 0
+}, {
+    "_id": "5c1cd66667aeae14344ab3b5",
+    "componentName": "el-carousel",
+    "sort": 2,
+    "imgurl": "/upload/1545393763412.jpeg",
+    "__v": 0
+}, {
+    "_id": "5bba049c5bf45818c81faba3",
+    "sort": 3,
+    "componentName": "pictextThree",
+    "title": "意大利皇家工匠打造",
+    "info": "22222222222",
+    "text": "Italian Royal Craftsmen\n\n",
+    "imgurl": "/upload/1545314412353.jpeg",
+    "__v": 0,
+    "subtitle": "Italian Royal Craftsmen"
+}, {
+    "_id": "5c0d55b1f98c992150c82262",
+    "componentName": "icolist",
+    "ico": "cctv1193373easyiconnet",
+    "title": "CCTV指定合作品牌",
+    "subtitle": "CCTV春晚装饰合作伙伴",
+    "__v": 0,
+    "sort": 3
+}, {
+    "_id": "5c0e9397e114ac15ccd1e25b",
+    "componentName": "picFade",
+    "imgurl": "/upload/1544459105238.jpeg",
+    "title": "丽彩丝缎",
+    "subtitle": "Colorful silk",
+    "__v": 0,
+    "url": "/丽彩绸缎",
+    "href": "/goodss/丽彩丝缎",
+    "sort": 3
+}, {
+    "_id": "5c0ff1c86c183e03bca9261b",
+    "componentName": "pictextSlider",
+    "imgurl": "/upload/1544548805057.jpeg",
+    "__v": 0,
+    "sort": 3
+}, {
+    "_id": "5c10d6575749fb0c18bd0027",
+    "componentName": "pictextHistory",
+    "title": "2006",
+    "description": "百事得品牌全球化从此开始",
+    "__v": 0,
+    "sort": 3,
+    "content": ""
+}, {
+    "_id": "5bba04725bf45818c81faba2",
+    "sort": 4,
+    "componentName": "pictextThree",
+    "imgurl": "/upload/1545312836659.jpeg",
+    "__v": 0,
+    "ico": "",
+    "info": "22222",
+    "title": "意大利文艺复兴的艺术灵感",
+    "subtitle": "色彩都显得庄重典雅，纹理厚重而有质感，带有希腊罗马古典艺术的痕迹",
+    "text": "色彩都显得庄重典雅，纹理厚重而有质感，带有希腊罗马古典艺术的痕迹",
+    "content": ""
+}, {
+    "_id": "5c0d514ff98c992150c82260",
+    "componentName": "icolist",
+    "content": "",
+    "ico": "huanbao",
+    "title": "欧美环保标准",
+    "subtitle": "\"法国VOC监测A+认证\"",
+    "__v": 0,
+    "sort": 4
+}, {
+    "_id": "5c0e93efe114ac15ccd1e25c",
+    "componentName": "picFade",
+    "imgurl": "/upload/1544459210870.jpeg",
+    "title": "丽彩砂",
+    "subtitle": "Colorful sand",
+    "__v": 0,
+    "url": "/丽彩砂",
+    "href": "/goodss/丽彩砂",
+    "sort": 4
+}, {
+    "_id": "5c0ff1d16c183e03bca9261c",
+    "componentName": "pictextSlider",
+    "imgurl": "/upload/1544552147405.jpeg",
+    "__v": 0,
+    "sort": 4
+}, {
+    "_id": "5c1bcabfcb032922e499259e",
+    "componentName": "pictextHistory",
+    "sort": 4,
+    "title": "2007",
+    "description": "意大利BEST在中国构建艺术涂料运营网络",
+    "__v": 0
+}, {
+    "_id": "5c1bcaefcb032922e499259f",
+    "componentName": "pictextHistory",
+    "sort": 5,
+    "title": "2009",
+    "description": "百事得品牌全面进入中国市场",
+    "__v": 0
+}, {
+    "_id": "5c1bd9c1cb032922e49925a6",
+    "componentName": "picFade",
+    "sort": 5,
+    "title": "水性底漆",
+    "imgurl": "/upload/1545329073031.jpeg",
+    "href": "/goodss/水性底漆",
+    "__v": 0,
+    "subtitle": "Water base paints"
+}, {
+    "_id": "5c1bcb02cb032922e49925a0",
+    "componentName": "pictextHistory",
+    "sort": 6,
+    "title": "2011",
+    "description": "百事得集团收购中国涂料领域的霸主-南康涂料有限公司",
+    "__v": 0
+}, {
+    "_id": "5c1bd9f8cb032922e49925a7",
+    "componentName": "picFade",
+    "sort": 6,
+    "phoneImageUrl": "/upload/1545329111407.jpeg",
+    "title": "瓦格丝特",
+    "href": "/goodss/瓦格丝特",
+    "__v": 0,
+    "imgurl": "/upload/1545329151577.jpeg",
+    "subtitle": "Vags Te"
+}, {
+    "_id": "5c0e91f9e114ac15ccd1e25a",
+    "componentName": "picFade",
+    "imgurl": "/upload/1545329363584.jpeg",
+    "title": "印花水漆",
+    "subtitle": "Printing varnish",
+    "__v": 0,
+    "url": "/幻彩漆",
+    "href": "/goodss/印花水漆",
+    "sort": 7
+}, {
+    "_id": "5c1bcb58cb032922e49925a1",
+    "componentName": "pictextHistory",
+    "sort": 7,
+    "icon": "",
+    "title": "2012",
+    "__v": 0,
+    "description": "授权中山百事得涂料有限公司为BEST（中国）运营总部 "
+}, {
+    "_id": "5c1bcb7dcb032922e49925a2",
+    "componentName": "pictextHistory",
+    "sort": 8,
+    "title": "2014",
+    "description": "百事得（中国）全面启动全国招商加盟加盟商家突破400家",
+    "__v": 0
+}, {
+    "_id": "5c1bcb96cb032922e49925a3",
+    "componentName": "pictextHistory",
+    "sort": 9,
+    "title": "2016",
+    "text": "",
+    "description": "百事得集团战略调整，百事得品牌并入旗下子公司BEHR,共享其先进的生产研发体系和全球营销网络。",
+    "__v": 0
+}, {
+    "_id": "5c1bcbc3cb032922e49925a4",
+    "componentName": "pictextHistory",
+    "sort": 10,
+    "title": "2018",
+    "description": "签约客户在中国超过600家，实体开业门店超过500家，累计服务客户超过10万 ",
+    "__v": 0
+}]
+
+console.log(_.groupBy(componentDatas, 'componentName'))
