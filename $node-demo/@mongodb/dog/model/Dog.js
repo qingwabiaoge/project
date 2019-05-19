@@ -27,11 +27,11 @@ schema.methods.comment = function (obj) {
     this.comments.push(obj);
     this.save();
 }
-schema.methods.zhangyisui = function () {
+schema.methods.addOneAge = function () {
     this.age++;
     this.save();
 }
-schema.methods.zhaotonglei = function (callback) {
+schema.methods.findClass = function (callback) {
     this.model('Dog').find({"type": this.type}, callback);
     console.log(this)
 }

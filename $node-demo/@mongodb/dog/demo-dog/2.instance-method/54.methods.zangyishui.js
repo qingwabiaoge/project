@@ -5,7 +5,7 @@ Dog.findOne({"name": "小黑"}, function (err, result) {//返回寻找对象
     }
     else {
         const dog = result;
-        dog.zhangyisui(function (err, result) {
+        dog.addOneAge(function (err, result) {
             console.log(result);
         } );
         console.log(dog)

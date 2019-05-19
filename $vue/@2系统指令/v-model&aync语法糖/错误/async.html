@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="app">
-    <cl v-bind:msg.sync="msg">
+    <cl :msg.sync="msg">
 
 
     </cl>
@@ -20,7 +20,8 @@
     Vue.component('cl', {
         template: `<div> <input type="text" v-model="msg" ></div>`,         //不该在子组件设置prop,不用用v-model
         props: ['msg'],
-        watch:{ msg:function () {
+        watch: {
+            msg: function () {
                 this.$emit('update:msg', this.msg)
             }
 
