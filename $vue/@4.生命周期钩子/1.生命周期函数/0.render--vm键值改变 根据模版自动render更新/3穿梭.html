@@ -2,10 +2,13 @@
 <meta charset="utf-8"/>
 <div id="app">
 
-    <div v-if="ishas">存在</div>
+
     <ul style="background: #0ba3de">
+
         <li v-for="(item,index) in arr1" @click="arr1.splice(index,1); arr2.push(item)">{{item}}</li>
+
     </ul>
+
     <ul>
 
         <li v-for="(item,index) in arr2" @click="arr2.splice(index,1); arr1.push(item)">{{item}}</li>
@@ -24,7 +27,7 @@
     vm = new Vue({
         el: '#app',
         data: {
-            ishas: true,
+
             arr1: ["a", "b", "c", "d"],
             arr2: ["i", "m", "j", "k"],
 
@@ -35,3 +38,4 @@
 
 
 </script>
+

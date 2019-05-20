@@ -9,7 +9,7 @@
 
 >用符号{} ? + * 代表重复次数
 
-> g m i 代表匹配模式全局 多行 大小写不敏感
+> g m i 代表匹配模式全局 
 
 
 # 定义实例
@@ -22,26 +22,22 @@
 
     var re = new RegExp('hello','g');   //代替/xxxx/
 
-#匹配模式: 全局 多行 大小写 
-/g [英]globe  [例] ~ npm -g
+# 匹配模式: 全局 多行 大小写 
 
-
-
-````
-var str = 'run runoob、runooob、runoooooob';
-
-a=/runo*/g     //runo*/g 可以代表run，runo，runoo，runooo, ......
-
-console.log(str.match(a));
-````
 
 /m多行匹配 [英]multi- :多个
 
-/g
+/g [英]globe
 
 /i 对大小写不敏感
 
+````
+   var str = 'run runoob runooob runoooooob';
 
+    a=/runo*/g     //runo*/g 可以代表run，runo，runoo，runooo, ......
+
+    console.log(str.match(a));
+````
 
 
 # \  转意字符(单字符)
@@ -80,7 +76,7 @@ console.log(str.match(a));
 
 [a-z][A-Z],[0-9] [a-zA-z]表示相应位置的字符要匹配英文字符和数字。
 
-[^]表示排除  [^\s]
+[  ^ ]表示排除  [^ \s]
 
 [0-3]匹配0，1，2，3
 
@@ -228,16 +224,20 @@ qin$以'qin'结尾
 ```
 # 正则方法
 
-#### test
+#### test 返回booloen
 
+
+```javascript
     <script>
 
         var str = 'Chapter12,Chapter99 ,Chapter1';
       a=/Chapter\d/g
         console.log(a.test(str))
     </script>
+    
+```
 
-#### exec
+#### exec 返回数组
 
      <script>
 
@@ -250,7 +250,7 @@ qin$以'qin'结尾
 
 # 表单验证
 
-```
+```javascript
 
 匹配中文：[\u4e00-\u9fa5]
 行首行尾空格：^\s*|\s*$
