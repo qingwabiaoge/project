@@ -1,8 +1,13 @@
 module.exports = async (ctx, next) => {
 
 
-    ctx.response.body = {data:{msg:'msg'}, code: 0}
-    ctx.response.status=201
+    ctx.status = 200
+    ctx.state.code=0
+    ctx.state.msg='hello'
+    ctx.state.data='state.customData数据'
+
+
+
     console.log("ctx-----------")
     console.log(Object.keys(ctx))
 
@@ -32,6 +37,10 @@ module.exports = async (ctx, next) => {
 
     console.log('ctx.params---------')
     console.log(ctx.params)
+
+    console.log('ctx.request.header')
+
+    console.log(ctx.request.header)
 
 
 }

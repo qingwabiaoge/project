@@ -10,6 +10,7 @@ const koaBody = require('koa-body')
 
 const controller = require('./controller')
 
+const response = require('./middlewares/response')
 
 
 router
@@ -23,13 +24,12 @@ router
 
     .del('/request/', controller.request)
 
-
-app
+app.use(response)
     .use(cors())
     // .use(xmlParser())
 
     .use(koaBody({
-        parsedMethods: ['POST', 'PUT', 'PATCH','DELETE'],//允许解析delete
+        parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],//允许解析delete
         multipart: true,
         formidable: {
             maxFileSize: 1 * 1024 * 1024    // 设置上传文件大小最大限制，默认2M
