@@ -7,9 +7,7 @@ const router = new Router//ronter作用：koa根目录响应-》若干目录响�
 const cors = require('koa2-cors');
 const koaBody = require('koa-body')
 // const xmlParser = require('koa-xml-body')
-
 const controller = require('./controller')
-
 const response = require('./middlewares/response')
 
 
@@ -27,7 +25,6 @@ router
 app.use(response)
     .use(cors())
     // .use(xmlParser())
-
     .use(koaBody({
         parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],//允许解析delete
         multipart: true,
