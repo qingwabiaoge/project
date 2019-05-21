@@ -1,0 +1,15 @@
+{
+  "name": "koa-readfile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}

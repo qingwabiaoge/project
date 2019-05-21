@@ -1,0 +1,460 @@
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta charset="utf-8">
+
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<style>
+
+    img {
+        max-width: 100%
+    }
+
+    blockquote {
+        border-left: 5px solid #ccc;
+        padding: 10px;
+        margin-left: 0;
+    }
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+<h1><a href="#安装" id="安装">安装</a></h1>
+<!--
+koa版
+
+    vue init nuxt/koa nuxt
+普通版
+
+    vue init nuxt-community/starter-template <project-name>
+-->
+<pre><code>$ npx create-nuxt-app &lt;项目名&gt;
+
+</code></pre>
+<hr />
+<h1>nuxt流程</h1>
+<a href="./img/1.tif"><img src="./img/1.tif" alt="" /></p>
+<hr />
+<h1><a href="#生命周期钩子函数指定时间运行的函数" id="生命周期钩子函数指定时间运行的函数">生命周期钩子函数(指定时间运行的函数)</a></h1>
+<p><img src="./img/4.tif" alt="" /></p>
+<h1><a href="#解释" id="解释">解释</a></h1>
+<ol>
+    <li>通过网址 进入网站的第一个页面接受request信息,被node封装req中,nuxt构造函数把req注入到ctx</li>
+    <li>建立store action:{nuxtserverinit(){}} , route axios,注入到ctx</li>
+    <li>store.discsuss(nuxtserverinit)</li>
+    <li>接下来，将加载即将访问页面所依赖的任何中间件。Nuxt首先从nuxt.config.js这个文件中，加载全局依赖的中间件，之后检测每个相应页面对应的布局文件 ，最后，检测布局文件下子组件依赖的中间件。以上是中间件的加载顺序</li>
+    <li>此时访问到了页面组件,如果要访问的路由是一个动态路由, 且有一个相应的 validate() 方法路由的validate 方法，讲进行路由校验。</li>
+    <li>nuxt初始化实例app,nuxt构造函数调用asyncData(req res store axios route),fatch(ctx),在渲染页面之前加载异步数据。
+        <ul>
+            <li>asyncData() 方法用于异步获取数据，并将fetch回来的数据，在服务端渲染到页面。</li>
+            <li>用fetch() 方法取回的将数据在渲染页面之前填入store,</li>
+        </ul>
+    </li>
+       <li>
+        <p>nuxt作为koa的中间件,让koa用asyndata和store数据将所有数据render出html页面。</p>
+    </li>
+    <li>
+        <p>nuxt对象封装到vue对象</p>
+        <ul>
+            <li>asyndata-&gt;vm.data</li>
+            <li>head(){}-&gt;vm.data</li>
+            <li>$axios-&gt;vm.$axios</li>
+            <li>store-&gt;vm.$store</li>
+            <li>route-&gt;vm$route</li>
+        </ul>
+    </li>
+    <li>
+        <p>不能服务器渲染的,以json的形式下载到浏览器</p>
+        <ul>
+            <li>不能服务器渲染的js代码(写在vue对象外的dom操作等)</li>
+            <li>&lt; no-ssr &gt; 模版</li>
+            <li>vue钩子函数等</li>
+        </ul>
+    </li>
+    <li>
+        <p>nuxt-link点击链接的页面都是在客户端运行此时跟普通的spa没什么区别了vue使用的是对象,全局变量注入vue对象的键值,使用this调用</p>
+    </li>
+</ol>
+
+
+<hr />
+<h1><a href="#详解" id="详解">详解</a></h1>
+<h3><a href="#req" id="req">req</a></h3>
+<p><img src="./img/16.png" alt="" />
+    <img src="./img/17.png" alt="" /></p>
+<h3><a href="#上下文对象函数回调的参数" id="上下文对象函数回调的参数">上下文对象(函数回调的参数)</a></h3>
+<p><img src="./img/2.png" alt="" /></p>
+<h3><a href="#把自定义数据注入到上下文对象" id="把自定义数据注入到上下文对象">把自定义数据注入到上下文对象</a></h3>
+<h5><a href="#plugins-手动注入" id="plugins-手动注入">plugins 手动注入</a></h5>
+<pre><code>
+export default(ctx)=&gt; {
+//新建函数挂载在app上 app.fn
+//   console.log(ctx)
+
+  ctx.userAgent = process.server
+    ? ctx.req.headers[&quot;user-agent&quot;] //当是服务器进程时:从客户端的请求链接总获得userAgent
+    : navigator.userAgent;            //当是浏览器端时:从浏览器对象中获得浏览器uA
+
+
+
+</code></pre>
+<h5><a href="#inject联合注入" id="inject联合注入">inject联合注入</a></h5>
+<pre><code>export default ({ app }, inject) =&gt; {
+  inject('myCombinedInjectedFunction', (string) =&gt; console.log('app联合注入', string))
+  //注入到了 app  vm vm.store
+}
+</code></pre>
+<h5><a href="#nuxtconfigjs-注入到ctxenv只能注入变量" id="nuxtconfigjs-注入到ctxenv只能注入变量">nuxt.config.js 注入到ctx.env(只能注入变量)</a></h5>
+<pre><code>
+  env: {
+    HOST: process.env.HOST ,
+    PORT: 3333,
+
+</code></pre>
+<h3><a href="#vuex-nuxtserverinit-方法" id="vuex-nuxtserverinit-方法">vuex nuxtServerInit 方法</a></h3>
+<p>如果在状态树中指定了 nuxtServerInit 方法，Nuxt.js 调用它的时候会将页面的上下文对象作为第2个参数传给它（服务端调用时才会酱紫哟）。当我们想将服务端的一些数据传到客户端时，这个方法是灰常好用的。</p>
+<p>举个例子，假设我们服务端的会话状态树里可以通过 req.session.user 来访问当前登录的用户。将该登录用户信息传给客户端的状态树，我们只需更新 store/index.js 如下：</p>
+<pre><code>actions: {
+  nuxtServerInit ({ commit,dispatch }, { req }) {
+    if (req.session.user) {
+   //如果已登陆过可以通过req拿到request的文件头,文件头里有session信息以及token
+      commit('user', req.session.user)
+    }
+  }
+}
+</code></pre>
+<p>如果你使用状态树模块化的模式，只有主模块（即 store/index.js）适用设置该方法（其他模块设置了也不会被调用）。</p>
+<p>nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 context.redirect() 和 context.error()。</p>
+<h3><a href="#中间件路由钩子" id="中间件路由钩子">中间件路由钩子</a></h3>
+<h5><a href="#不同位置的中间件执行顺序" id="不同位置的中间件执行顺序">不同位置的中间件执行顺序</a></h5>
+<p>1.nuxt.config.js  //进入每个路由前使用的代码</p>
+<pre><code>
+module.exports = {
+  mode: 'universal',
+  router: {
+    //当前流和上级栏目
+    linkActiveClass: 'active',
+    //进入每个路由前使用中间件
+    middleware: 'route'
+  },
+
+</code></pre>
+<p>2.匹配布局</p>
+<p>3.匹配页面 进入页面前使用的代码</p>
+<pre><code>export default {
+  middleware: 'auth',
+</code></pre>
+<p>/middleware/auth.js</p>
+<pre><code>
+export default function ({ store, error, redirect, req }) {
+  if (!store.state.token) {
+    redirect('/login')
+  }
+}
+
+</code></pre>
+<h3><a href="#路由参数校验" id="路由参数校验">路由参数校验</a></h3>
+<p>Nuxt.js 可以让你在动态路由组件中定义参数校验方法。</p>
+<p>举个例子： pages/users/_id.vue</p>
+<pre><code>export default {
+  validate ({ params }) {
+    // 必须是number类型
+    return /^\d+$/.test(params.id)
+  }
+}
+</code></pre>
+<p>如果校验方法返回的值不为 true或Promise中resolve 解析为false或抛出Error ， Nuxt.js 将自动加载显示 404 错误页面或 500 错误页面。</p>
+<p>想了解关于路由参数校验的信息，请参考 页面校验API。</p>
+<h3><a href="#读取局部页面的vue文件" id="读取局部页面的vue文件">读取局部页面的vue文件</a></h3>
+<h5><a href="#page--fetch只能填充vuex" id="page--fetch只能填充vuex">page-&gt; fetch()只能填充vuex</a></h5>
+<p>如果页面组件设置了 fetch 方法，它会在组件每次加载前被调用__（在服务端或切换至目标路由之前）__。</p>
+<pre><code>fetch({ store, params }){}
+</code></pre>
+<h5><a href="#page--asyncdata可以填充vuex和data" id="page--asyncdata可以填充vuex和data">page-&gt; asyncData()可以填充vuex和data</a></h5>
+<p>在服务器端调用asyncData时，您可以访问用户请求的req和res对象。</p>
+<pre><code>export default {
+  async asyncData ({ req, res }) {
+    // 请检查您是否在服务器端
+    // 使用 req 和 res
+    if (process.server) {
+     return { host: req.headers.host }
+    }
+
+    return {}
+  }
+}
+
+
+</code></pre>
+<pre><code>   async asyncData({store}) {
+
+  await store.dispatch('getBanners', '')
+
+    }
+</code></pre>
+<h3><a href="#header设置" id="header设置">header设置</a></h3>
+<h5><a href="#nuxtconfigjs公共header" id="nuxtconfigjs公共header">nuxt.config.js公共header</a></h5>
+<p><img src="./img/7.png" alt="" /></p>
+<h5><a href="#页面pagevue" id="页面pagevue">页面page.vue</a></h5>
+<pre><code>
+&lt; template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+&lt; /template&gt;
+
+&lt; script&gt;
+export default {
+  data () {
+    return {
+      title: 'Hello World!'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  }
+}
+&lt; /script&gt;
+
+
+</code></pre>
+<h3><a href="#nuxt作为koa的中间件让koa用asyndata和store数据将所有数据render出html页面" id="nuxt作为koa的中间件让koa用asyndata和store数据将所有数据render出html页面">nuxt作为koa的中间件,让koa用asyndata和store数据将所有数据render出html页面。</a></h3>
+<pre><code>nuxt.render()
+</code></pre>
+<h3><a href="#不能服务器渲染的地方app数据生成vue对象开始进入vue生命周期钩子" id="不能服务器渲染的地方app数据生成vue对象开始进入vue生命周期钩子">不能服务器渲染的地方,App数据生成vue对象开始进入vue生命周期钩子</a></h3>
+<p><img src="./img/18.tif" alt="" /></p>
+<h5><a href="#appdata-vmdata并且改变data数据-html文档视图层会更新" id="appdata-vmdata并且改变data数据-html文档视图层会更新">app.data-&gt;vm.data,并且改变data数据 html文档视图层会更新</a></h5>
+<p><img src="./img/20.tif" alt="" /></p>
+<p><img src="./img/11.png" alt="" />
+    <img src="./img/12.png" alt="" /></p>
+<h3><a href="#beforecreated-created钩子-服务端和客户端都运行-代码以json下载到本地浏览器" id="beforecreated-created钩子-服务端和客户端都运行-代码以json下载到本地浏览器">所有代码(vue 插件 上下文对象)下载到浏览器,以后就在浏览器运行了</a></h3>
+<pre><code>beforeCreated
+
+created
+
+</code></pre>
+<h3><a href="#开始客户端其他vue生命周期钩子函数" id="开始客户端其他vue生命周期钩子函数">开始客户端其他vue生命周期钩子函数</a></h3>
+<p><img src="./img/9.png" alt="" />
+    <img src="./img/10.png" alt="" /></p>
+<h5><a href="#mouted后可以用windows方法" id="mouted后可以用windows方法">mouted()后可以用windows方法</a></h5>
+<p><img src="./img/8.png" alt="" /></p>
+<hr />
+<h1><a href="#插件" id="插件">插件</a></h1>
+<h3><a href="#设置全局运行和局部运行" id="设置全局运行和局部运行">设置全局运行和局部运行</a></h3>
+<h5><a href="#全局运行" id="全局运行">全局运行</a></h5>
+<p>nuxt.config.js里包含的代码都是全局的,相当于vue的main.js 打开网站就会调用</p>
+<ol>
+    <li>
+        <p>插件里的的函数调用代码</p>
+    </li>
+    <li>
+        <p>页面文件里的函数调用代码</p>
+    </li>
+    <li>
+        <p>全局的模版资源:</p>
+        <ul>
+            <li>全局component</li>
+            <li>全局指令</li>
+            <li>全局过滤器</li>
+            <li>全局mixin</li>
+            <li>vue.protype.xxx</li>
+        </ul>
+    </li>
+</ol>
+<h5><a href="#局部运行" id="局部运行">局部运行</a></h5>
+<p>局部页面的组件 指令 函数 过滤器 放到vue构造器里(切换到当前路由才会建立vue对象运行)</p>
+<h3><a href="#设置在什么设备运行" id="设置在什么设备运行">设置在什么设备运行</a></h3>
+<pre><code>export default {
+  plugins: [
+    { src: '~/plugins/both-sides.js' },  //both
+    { src: '~/plugins/client-only.js', mode: 'client' },
+    { src: '~/plugins/server-only.js', mode: 'server' }
+  ]
+}
+
+</code></pre>
+<h3><a href="#判断设备" id="判断设备">判断设备</a></h3>
+<h5><a href="#if-processserver" id="if-processserver">if (process.server)</a></h5>
+<pre><code> if (process.server) {}
+</code></pre>
+<h5><a href="#if-processclient" id="if-processclient">if (process.client)</a></h5>
+<pre><code> if (process.client) {}
+</code></pre>
+<h1><a href="#组件" id="组件">组件</a></h1>
+<h3><a href="#layout所有组件的父组件" id="layout所有组件的父组件">layout所有组件的父组件</a></h3>
+<p><img src="./img/19.png" alt="" /></p>
+<h1><a href="#按需加载element插件和css" id="按需加载element插件和css">按需加载element插件和css</a></h1>
+<h5><a href="#1下载依赖" id="1下载依赖">1下载依赖：</a></h5>
+<pre><code>先下载element-ui
+
+    npm install element-ui --save
+</code></pre>
+<h5><a href="#2-创建插件配置文件" id="2-创建插件配置文件">2 创建插件配置文件</a></h5>
+<p>安装好以后，按照nuxt.js中的规则，你需要在 plugins/ 目录下创建相应的插件文件</p>
+<p>在文件根目录创建(或已经存在)plugins/目录，创建名为：element-ui.js的文件，内容如下：</p>
+<pre><code>import Vue from 'vue'
+
+import { Button } from 'element-ui'    //引入Button按钮
+
+export default ()=&gt;{
+ Vue.use(Button)
+}
+</code></pre>
+<h5><a href="#3引入插件" id="3引入插件">3引入插件</a></h5>
+<pre><code>plugins:[
+'~/plugins/element-ui'
+]
+</code></pre>
+<p>ssr:false  只在客户端用</p>
+<pre><code>plugins:[
+ {
+    src:'~/plugins/element-ui',
+    ssr:false    //只在客户端用
+  }
+]
+</code></pre>
+<h5>4配置babel选项配置按需加载</h5>
+<p>如果使用按需引入，必须安装babel-plugin-component(官网有需要下载说明，此插件根据官网规则不	同，安装插件不同)</p>
+<pre><code>npm install babel-plugin-component --save-dev
+</code></pre>
+<p>在nuxt.config.js中，配置在build选项中，规则为官网规则：</p>
+<pre><code>	build: {
+
+
+
+  babel: {
+      &quot;plugins&quot;: [[&quot;component&quot;,
+        {
+          &quot;libraryName&quot;: &quot;element-ui&quot;,
+           &quot;styleLibraryName&quot;:&quot;theme-chalk&quot; //默认css分散包,按需加载,~theme&quot;为element et sass生成工具的目录
+
+        }
+     ]]
+    },
+
+
+
+
+ 	}
+</code></pre>
+<h5>5. element的sass编译器
+    解压<code>theme-chalk-master</code>到nuxt的根目录</p>
+<p><img src="./img/3.png" alt="" /></p>
+<p>修改gulpfile.js</p>
+<pre><code>
+gulp.task('compile', function() {
+  return gulp.src('./src/*.scss')
+    .pipe(sass.sync())
+    .pipe(autoprefixer({
+      browsers: ['ie &gt; 9', 'last 2 versions'],
+      cascade: false
+    }))
+    .pipe(cssmin())
+    .pipe(gulp.dest('../theme')); //这里修改必须是根目录下theme不知道是谁的坑
+});
+
+gulp.task('copyfont', function() {
+  return gulp.src('./src/fonts/**')
+    .pipe(cssmin())
+    .pipe(gulp.dest('../theme/fonts'));//这里修改必须是根目录下theme不知道是谁的坑
+});
+
+gulp.task('build', ['compile', 'copyfont']);
+
+</code></pre>
+<p>生成css命令</p>
+<p><code>npm run build</code></p>
+<hr />
+<h1><a href="#webpack选项" id="webpack选项">webpack选项</a></h1>
+<h3><a href="#less支持需要安装" id="less支持需要安装">less支持(需要安装)</a></h3>
+<pre><code>devDependencies&quot;: {
+    &quot;less&quot;: &quot;^3.8.1&quot;,
+    &quot;less-loader&quot;: &quot;^4.1.0&quot;,
+</code></pre>
+<h3><a href="#less全局变量" id="less全局变量">less全局变量</a></h3>
+<p><img src="./img/5.png" alt="" /></p>
+<h3><a href="#全局css" id="全局css">全局css</a></h3>
+<p>需要安装 cnpm i css-loader -S</p>
+<pre><code>
+css: [
+    './assets/css/index.css',
+  ]
+</code></pre>
+<h3><a href="#build打包钩子函数" id="build打包钩子函数">build打包钩子函数</a></h3>
+<pre><code>build: {
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
+    },
+    loaders: {
+      imgUrl: {limit: 20 * 1000},
+    },
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config, {isClient}) {
+
+      if (isClient) {
+        console.log('客户端打包时运行')
+
+      }
+    }
+
+  }
+</code></pre>
+<hr />
+<h1><a href="#配置主机和端口" id="配置主机和端口">配置主机和端口</a></h1>
+<p>linux永久设置系统变量HOST, NODE_ENV</p>
+<pre><code>见linux教程
+</code></pre>
+<p>nuxt.config.js配置context.env 注入到上下文对形象</p>
+<pre><code>//context里注入的env,機器設置永久的HOST環境變量,則個地方才方便
+  env: {
+    HOST: process.env.HOST ,
+    PORT: 3333
+
+  },
+
+</code></pre>
+<p>axios使用</p>
+<pre><code>export default function ({$axios,redirect,env}) {
+  let axios = $axios;
+  // 基本配置
+
+   axios.defaults.baseURL = `http://${env.HOST}:${env.PORT}/api`;
+</code></pre>
+<p>server/index.js使用</p>
+<pre><code>let config = require('../nuxt.config.js')
+const host= config.env.HOST
+const port= config.env.PORT
+</code></pre>
+<hr />
+<h1><a href="#nuxt-vuecli修改axios地址-再打包上传" id="nuxt-vuecli修改axios地址-再打包上传">nuxt vuecli修改axios地址 再打包上传</a></h1>
+<pre><code>  env: {
+    HOST: 47.107.170.105,
+    PORT: 3333
+
+  },
+
+</code></pre>
+<h1><a href="#线上pm2运行" id="线上pm2运行">线上pm2运行</a></h1>
+<pre><code> pm2 start npm --name &quot;demo&quot; -- run start
+
+ package.json-&gt;    &quot;start&quot;: &quot;cross-env NODE_ENV=production node server/index.js&quot;,
+
+</code></pre>
+<pre><code>NODE_ENV=production pm2 start server/index.js
+</code></pre>
+<pre><code>NODE_ENV=production pm2 start pm2.json
+
+</code></pre>
+

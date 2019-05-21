@@ -1,0 +1,2707 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://koa.bootcss.com/
+Subject: =?utf-8?Q?Koa=20(koajs)=20--=20=E5=9F=BA=E4=BA=8E=20Node.js=20=E5=B9=B3?=
+ =?utf-8?Q?=E5=8F=B0=E7=9A=84=E4=B8=8B=E4=B8=80=E4=BB=A3=20web=20=E5=BC=80?=
+ =?utf-8?Q?=E5=8F=91=E6=A1=86=E6=9E=B6=20|=20Koajs=20=E4=B8=AD=E6=96=87=E6?=
+ =?utf-8?Q?=96=87=E6=A1=A3?=
+Date: Fri, 19 Apr 2019 09:38:54 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----"
+
+
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----
+Content-Type: text/html
+Content-ID: <frame-8E2AF6836658D9BD99931DFF20B255D8@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://koa.bootcss.com/
+
+<!DOCTYPE html><html lang=3D"zh-CN"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><title>Koa (koajs) -- =E5=9F=BA=E4=
+=BA=8E Node.js =E5=B9=B3=E5=8F=B0=E7=9A=84=E4=B8=8B=E4=B8=80=E4=BB=A3 web =
+=E5=BC=80=E5=8F=91=E6=A1=86=E6=9E=B6 | Koajs =E4=B8=AD=E6=96=87=E6=96=87=E6=
+=A1=A3</title><meta name=3D"keywords" content=3D"koajs, koa, koa web framew=
+ork, Node, generator"><meta name=3D"description" content=3D"Koa (koajs) =E6=
+=98=AF=E4=B8=80=E4=B8=AA=E6=96=B0=E7=9A=84 web =E6=A1=86=E6=9E=B6=EF=BC=8C=
+=E7=94=B1 Express =E5=B9=95=E5=90=8E=E7=9A=84=E5=8E=9F=E7=8F=AD=E4=BA=BA=E9=
+=A9=AC=E6=89=93=E9=80=A0=EF=BC=8C=E8=87=B4=E5=8A=9B=E4=BA=8E=E6=88=90=E4=B8=
+=BA web =E5=BA=94=E7=94=A8=E5=92=8C API =E5=BC=80=E5=8F=91=E9=A2=86=E5=9F=
+=9F=E4=B8=AD=E7=9A=84=E4=B8=80=E4=B8=AA=E6=9B=B4=E5=B0=8F=E3=80=81=E6=9B=B4=
+=E5=AF=8C=E6=9C=89=E8=A1=A8=E7=8E=B0=E5=8A=9B=E3=80=81=E6=9B=B4=E5=81=A5=E5=
+=A3=AE=E7=9A=84=E5=9F=BA=E7=9F=B3=E3=80=82=E9=80=9A=E8=BF=87=E5=88=A9=E7=94=
+=A8 async =E5=87=BD=E6=95=B0=EF=BC=8CKoa =E5=B8=AE=E4=BD=A0=E4=B8=A2=E5=BC=
+=83=E5=9B=9E=E8=B0=83=E5=87=BD=E6=95=B0=EF=BC=8C=E5=B9=B6=E6=9C=89=E5=8A=9B=
+=E5=9C=B0=E5=A2=9E=E5=BC=BA=E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86=E3=80=82Koa=
+ =E5=B9=B6=E6=B2=A1=E6=9C=89=E6=8D=86=E7=BB=91=E4=BB=BB=E4=BD=95=E4=B8=AD=
+=E9=97=B4=E4=BB=B6=EF=BC=8C=E8=80=8C=E6=98=AF=E6=8F=90=E4=BE=9B=E4=BA=86=E4=
+=B8=80=E5=A5=97=E4=BC=98=E9=9B=85=E7=9A=84=E6=96=B9=E6=B3=95=EF=BC=8C=E5=B8=
+=AE=E5=8A=A9=E6=82=A8=E5=BF=AB=E9=80=9F=E8=80=8C=E6=84=89=E5=BF=AB=E5=9C=B0=
+=E7=BC=96=E5=86=99=E6=9C=8D=E5=8A=A1=E7=AB=AF=E5=BA=94=E7=94=A8=E7=A8=8B=E5=
+=BA=8F=E3=80=82"><link rel=3D"stylesheet" href=3D"https://koa.bootcss.com/p=
+ublic/style.css"><link rel=3D"stylesheet" href=3D"https://koa.bootcss.com/p=
+ublic/icons/css/slate.css"><link rel=3D"stylesheet" href=3D"https://cdn.boo=
+tcss.com/highlight.js/9.10.0/styles/github.min.css"><meta name=3D"viewport"=
+ content=3D"user-scalable=3Dno, width=3Ddevice-width, initial-scale=3D1.0, =
+maximum-scale=3D1.0"><style type=3D"text/css">:root a[href*=3D".com?intr=3D=
+"], :root .f-sign-cont[data-dysign-adid], :root .GKJYXHBF2 > .GKJYXHBE2 > .=
+GKJYXHBH5, :root a[href*=3D"mfroute.com/"], :root a[href^=3D"http://ffxitra=
+ck.com/"], :root a[href^=3D"http://ad-apac.doubleclick.net/"], :root a[href=
+^=3D"http://www.amazon.co.uk/exec/obidos/external-search?"], :root .content=
+-video > .ads-player, :root #\5f _mom_ad_2, :root #rhs_block .mod > .luhb-d=
+iv > div[data-async-type=3D"updateHotelBookingModule"], :root #\5f _admvnlb=
+_modal_container, :root #MAIN.ShowTopic > .ad, :root a[href^=3D"http://puba=
+ds.g.doubleclick.net/"], :root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-, :root=
+ #main_col > #center_col div[style=3D"font-size:14px;margin:0 4px;padding:1=
+px 5px;background:#fff7ed"], :root div[class*=3D"-storyBodyAd-"], :root #ce=
+nter_col > #main > .dfrd > .mnr-c > .c._oc._zs, :root a[href^=3D"http://ul.=
+to/ref/"], :root #\5f _nq__hh[style=3D"display:block!important"], :root a[h=
+ref^=3D"http://cdn.adstract.com/"], :root a[href^=3D"//tracking.content-rec=
+ommendation.net/"][href*=3D"/sponsored/click.html?"], :root a[href^=3D"http=
+s://hi.potvpn.com/?from=3D"], :root .heg > .div-list, :root div[class^=3D"a=
+ds-partner-"], :root #\5f _mom_ad_12, :root a[href^=3D"http://lp.ncdownload=
+er.com/"], :root a[href^=3D"https://fileboom.me/pr/"], :root .inlineNewslet=
+terSubscription + .inlineNewsletterSubscription div[class$=3D"_item"], :roo=
+t div[id^=3D"google_ads_iframe_"], :root #ads > .dose > .dosesingle, :root =
+a[href^=3D"http://3wr110.net/"], :root a[href^=3D"http://bestorican.com/"],=
+ :root div[id^=3D"ad_script_"], :root a[href^=3D"http://get.slickvpn.com/"]=
+, :root .gbfwa > div[class$=3D"_item"], :root a[href*=3D".wjLkj.com/"], :ro=
+ot #assetsListings[style=3D"display: block;"], :root #center_col > #\5f Emc=
+, :root a[href^=3D"http://marketgid.com"], :root a[href=3D"http://t.cn/Ex0c=
+Cbt"], :root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > .=
+_DJe > .luhb-div, :root AD-SLOT, :root a[href^=3D"http://go.mobisla.com/"],=
+ :root a[href^=3D"http://www.webtrackerplus.com/"], :root #center_col > #re=
+s > #topstuff + #search > div > #ires > #rso > #flun, :root a[href^=3D"http=
+s://watchmygirlfriend.tv/"], :root a[href^=3D"http://www.affbuzzads.com/aff=
+iliate/"], :root #center_col > #resultStats + #tads, :root #main-content > =
+[style=3D"padding:10px 0 0 0 !important;"], :root #center_col > #resultStat=
+s + #tads + #res + #tads, :root #cnt #center_col > #taw > #tvcap > .c._oc._=
+Lp, :root a[href^=3D"http://www.paddypower.com/?AFF_ID=3D"], :root a[onmous=
+edown^=3D"this.href=3D'http://staffpicks.outbrain.com/network/redir?"][targ=
+et=3D"_blank"], :root #center_col > #resultStats + div + #res + #tads, :roo=
+t div[id^=3D"crt-"][style], :root div[class^=3D"Ad__container"], :root a[hr=
+ef^=3D"http://centertrust.xyz/"], :root a[href^=3D"http://g1.v.fwmrm.net/ad=
+/"], :root a[href^=3D"http://www.fbooksluts.com/"], :root #center_col > #re=
+sultStats + div[style=3D"border:1px solid #dedede;margin-bottom:11px;paddin=
+g:5px 7px 5px 6px"], :root a[href^=3D"http://ads.integral-marketing.com/"],=
+ :root div[id^=3D"advads_"], :root a[data-obtrack^=3D"http://paid.outbrain.=
+com/network/redir?"], :root .__y_inner > .__y_item, :root div[id^=3D"ads300=
+_100-widget"], :root #center_col > #taw > #tvcap > .rscontainer, :root #cen=
+ter_col > div[style=3D"font-size:14px;margin-right:0;min-height:5px"] > div=
+[style=3D"font-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"],=
+ :root span[title=3D"neteasefooter"], :root div[id^=3D"MarketGid"], :root a=
+[href^=3D"https://www.financeads.net/tc.php?"], :root #cnt #center_col > #r=
+es > #topstuff > .ts, :root a[href^=3D"https://aaucwbe.com/"], :root a[href=
+^=3D"http://espn.zlbu.net/"], :root a[href^=3D"https://ads.trafficpoizon.co=
+m/"], :root #content > #center > .dose > .dosesingle, :root #content > #rig=
+ht > .dose > .dosesingle, :root #flowplayer > div[style=3D"position: absolu=
+te; width: 300px; height: 275px; left: 222.5px; top: 85px; z-index: 999;"],=
+ :root a[href^=3D"http://ads.betfair.com/redirect.aspx?"], :root #flowplaye=
+r > div[style=3D"z-index: 208; position: absolute; width: 300px; height: 27=
+5px; left: 222.5px; top: 85px;"], :root a[href*=3D"emprestimo.eu"], :root #=
+header + #content > #left > #rlblock_left, :root a[href^=3D"http://9amq5z4y=
+1y.com/"], :root a[href^=3D"https://traffic.bannerator.com/"], :root .__zin=
+it .__y_item, :root a[href^=3D"//40ceexln7929.com/"], :root #mbEnd[cellspac=
+ing=3D"0"][cellpadding=3D"0"], :root a[href^=3D"http://banners.victor.com/p=
+rocessing/"], :root #mn #center_col > div > h2.spon:first-child, :root .ch[=
+onclick=3D"ga(this,event)"], :root [class][data-sitename][data-header-versi=
+on] > div[id^=3D"detection-block"], :root a[href^=3D"//go.vedohd.org/"], :r=
+oot #mn #center_col > div > h2.spon:first-child + ol:last-child, :root a[hr=
+ef^=3D"http://affiliate.coral.co.uk/processing/"], :root a[href*=3D".com/Re=
+gister.aspx?aid=3D"], :root div[id^=3D"yandex_ad"], :root #mn div[style=3D"=
+position:relative"] > #center_col > ._Ak, :root a[href*=3D".clksite.com/"],=
+ :root script + #rbbox, :root #mn div[style=3D"position:relative"] > #cente=
+r_col > div > ._dPg, :root .__yinit .__y_item, :root a[href*=3D"/Register?a=
+=3D"], :root a[href^=3D"http://finaljuyu.com/"], :root div[id^=3D"mainads"]=
+, :root #rhs_block > .ts[cellspacing=3D"0"][cellpadding=3D"0"][style=3D"pad=
+ding:0"], :root #resultspanel > #topads, :root #rhs_block > #mbEnd, :root a=
+[href^=3D"http://traffic.tc-clicks.com/"], :root #rhs_block .mod > .gws-loc=
+al-hotels__booking-module, :root #rhs_block .xpdopen > ._OKe > div > .mod >=
+ ._yYf, :root a[href^=3D"http://data.ad.yieldmanager.net/"], :root .mw > #r=
+cnt > #center_col > #taw > #tvcap > .c, :root #rhs_block > script + .c._oc.=
+_Ve.rhsvw, :root a[data-redirect^=3D"https://paid.outbrain.com/network/redi=
+r?"], :root a[href*=3D"deliver.trafficfabrik.com"], :root a[href^=3D"http:/=
+/track.adform.net/"], :root #tads + div + .c, :root img[src*=3D".sinaimg."]=
+[style=3D"width:150px;height:300px"], :root div[class^=3D"ADTOPLB_"], :root=
+ #rhswrapper > #rhssection[border=3D"0"][bgcolor=3D"#ffffff"], :root a[href=
+^=3D"http://admingame.info/"], :root #ssmiwdiv[jsdisplay], :root a[href^=3D=
+"http://www.dealcent.com/register.php?affid=3D"], :root #topstuff > #tads, =
+:root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5, :root a[href^=3D"http://www.lin=
+kbucks.com/referral/"], :root a[href*=3D".hbjimin.com/"], :root .GHOFUQ5BG2=
+ > .GHOFUQ5BF2 > .GHOFUQ5BG5, :root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5, :=
+root a[href^=3D"https://ad.atdmt.com/"], :root .jobs-information-call-to-ac=
+tion + .jobs-information-call-to-action div[class$=3D"_item"], :root .__ywv=
+r .__y_item, :root a[href^=3D"//00ae8b5a9c1d597.com/"], :root a[href^=3D"ht=
+tp://www.terraclicks.com/"], :root a[href*=3D".qertewrt.com/"], :root .GJJK=
+PX2N1 > .GJJKPX2M1 > .GJJKPX2P4, :root a[href^=3D"http://s5prou7ulr.com/"],=
+ :root #body > #left-promotion, :root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XED=
+JBB, :root a[href^=3D"http://4c7og3qcob.com/"], :root a[href^=3D"http://aff=
+.ironsocket.com/"], :root .Mpopup + #Mad > #MadZone, :root aside[itemtype=
+=3D"https://schema.org/WPAdBlock"], :root .__y_elastic .__y_item, :root a[h=
+ref^=3D"http://www.adxpansion.com"], :root a[href^=3D"http://trk.mdrtrck.co=
+m/"], :root .__ywl .__y_item, :root .l-container > #fishtank, :root a[href^=
+=3D"https://a.adtng.com/"], :root .icons-rss-feed + .icons-rss-feed div[cla=
+ss$=3D"_item"], :root a[href^=3D"http://dethao.com/"], :root .lads[width=3D=
+"100%"][style=3D"background:#FFF8DD"], :root #right_couple + #left_float, :=
+root iframe[src^=3D"http://cdn2.adexprt.com/"], :root .mod > ._jH + .rscont=
+ainer, :root a[href^=3D"http://clicks.binarypromos.com/"], :root .mw > #rcn=
+t > #center_col > #taw > .c, :root .nrelate .nr_partner, :root a[href^=3D"h=
+ttp://tezfiles.com/pr/"], :root [lazy-ad=3D"leftbottom_banner"], :root .ob_=
+container .item-container-obpd, :root a[href^=3D"http://partner.sbaffiliate=
+s.com/"], :root a[href^=3D"http://www.firstload.com/affiliate/"], :root a[h=
+ref^=3D"http://www.myfreepaysite.com/sfw_int.php?aid"], :root a[href^=3D"//=
+srv.buysellads.com/"], :root a[href^=3D"http://click.payserve.com/"], :root=
+ a[href^=3D"http://pwrads.net/"], :root a[href=3D"http://www.yabovip5.cc/"]=
+, :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root .plistaList > .it=
+emLinkPET, :root a[href^=3D"http://www.download-provider.org/"], :root a[hr=
+ef^=3D"//88d7b6aa44fb8eb.com/"], :root .plistaList > .plista_widget_underAr=
+ticle_item[data-type=3D"pet"], :root .con_search + #carousel-example-generi=
+c[style^=3D"max-width: 1170px;"], :root .plista_widget_belowArticleRelaunch=
+_item[data-type=3D"pet"], :root a[href^=3D"http://www.pinkvisualgames.com/?=
+revid=3D"], :root .ra[align=3D"left"][width=3D"30%"], :root a[href^=3D"http=
+://ads.affbuzzads.com/"], :root a[href^=3D"http://promos.bwin.com/"], :root=
+ a[href^=3D"http://tracker.mybroadband.co.za/"], :root .ra[align=3D"right"]=
+[width=3D"30%"], :root a[href^=3D"http://bs.serving-sys.com/"], :root a[hre=
+f^=3D"http://api.content.ad/"], :root a[href^=3D"https://www.googleadservic=
+es.com/pagead/aclk?"], :root .ra[width=3D"30%"][align=3D"right"] + table[wi=
+dth=3D"70%"][cellpadding=3D"0"], :root a[href^=3D"http://n217adserv.com/"],=
+ :root .rc-cta[data-target], :root .rhsvw[style=3D"background-color:#fff;ma=
+rgin:0 0 14px;padding-bottom:1px;padding-top:1px;"], :root a[href^=3D"https=
+://land.rk.com/landing/"], :root .rscontainer > .ellip, :root a[href^=3D"ht=
+tp://refpaano.host/"], :root a[href*=3D".com/?p=3D"][target=3D"_blank"] > i=
+mg[src$=3D".gif"], :root .widget-pane-section-result[data-result-ad-type], =
+:root a[href^=3D"http://adserver.adtechus.com/"], :root .section-result[dat=
+a-result-ad-type], :root img[data-link][data-src*=3D"/u/"]:not([data-link*=
+=3D"/i/"]), :root .trc_rbox .syndicatedItem, :root .trc_rbox_border_elm .sy=
+ndicatedItem, :root a[href^=3D"http://taboola-"][href*=3D"/redirect.php?app=
+.type=3D"], :root a[href^=3D"https://topoffers.com/"][href*=3D"/?pid=3D"], =
+:root .trc_rbox_div .syndicatedItem, :root .trc_rbox_div .syndicatedItemUB,=
+ :root div[id^=3D"div_openx_ad_"], :root .trc_rbox_div a[target=3D"_blank"]=
+[href^=3D"http://tab"], :root a[href*=3D".irtyc.com/"], :root a[href^=3D"//=
+porngames.adult/?SID=3D"], :root a[href^=3D"http://engine.newsmaxfeednetwor=
+k.com/"], :root a[href^=3D"https://www.camsoda.com/enter.php?id=3D"], :root=
+ a[href*=3D"=3Dexoclick"], :root a[href^=3D"//zenhppyad.com/"], :root a[hre=
+f^=3D"http://ddownload39.club/"], :root a[href*=3D".yyk2.com/"], :root .trc=
+_related_container div[data-item-syndicated=3D"true"], :root .vi-lb-placeho=
+lder[title=3D"ADVERTISEMENT"], :root a[href^=3D"http://landingpagegenius.co=
+m/"], :root a[href*=3D".gsxzq.com/"], :root a[href^=3D"//api.ad-goi.com/"],=
+ :root a[href^=3D"https://dcs.adgear.com/clicks/"], :root a[href^=3D"http:/=
+/refer.webhostingbuzz.com/"], :root AD-TRIPLE-BOX, :root ADS-RIGHT, :root a=
+[href^=3D"http://campaign.bharatmatrimony.com/track/"], :root a[href*=3D"/a=
+dServe/banners?"], :root #player_banner[style*=3D"fixed;"], :root a[href^=
+=3D"https://www.secureupload.eu/suprerefid=3D"], :root AFS-AD, :root a[href=
+^=3D"http://www.myvpn.pro/"], :root a[href^=3D"http://www.elfdoll.cn/?=3D"]=
+, :root a[onmousedown^=3D"this.href=3D'http://paid.outbrain.com/network/red=
+ir?"][target=3D"_blank"], :root AMP-AD, :root [onclick^=3D"window.open('win=
+dow.open('//delivery.trafficfabrik.com/"], :root DFP-AD, :root FBS-AD, :roo=
+t a[href^=3D"http://clickandjoinyourgirl.com/"], :root div[id^=3D"advads-"]=
+, :root a[href^=3D"http://buysellads.com/"], :root LEADERBOARD-AD, :root a[=
+href^=3D"http://sharesuper.info/"], :root [ad-id^=3D"googlead"], :root [hre=
+f*=3D"//xml.revrtb.com/"], :root [id*=3D"MGWrap"], :root a[href^=3D"//ads.a=
+d-center.com/"], :root a[href^=3D"http://websitedhoome.com/"], :root [id*=
+=3D"MarketGid"], :root a[href^=3D"https://www.pornhat.com/"][rel=3D"nofollo=
+w"], :root [id*=3D"ScriptRoot"], :root a[href^=3D"http://secure.cbdpure.com=
+/aff/"], :root a[href^=3D"http://www.seekbang.com/cs/"], :root [id^=3D"buny=
+ad_ads_"], :root [lazy-ad=3D"leftthin_banner"], :root a[onmousedown^=3D"thi=
+s.href=3D'http://staffpicks.outbrain.com/network/redir?"][target=3D"_blank"=
+] + .ob_source, :root a[href^=3D"http://games.ucoz.ru/"][target=3D"_blank"]=
+, :root [lazy-ad=3D"lefttop_banner"], :root [lazy-ad=3D"top_banner"], :root=
+ a[href^=3D"http://go.gotourl.xyz/"], :root [onclick*=3D"content.ad/"], :ro=
+ot a[href^=3D"http://see-work.info/"], :root a[href^=3D"http://www.graboid.=
+com/affiliates/"], :root a[href^=3D"http://papi.mynativeplatform.com:80/pub=
+2/"], :root [onclick^=3D"window.open('http://adultfriendfinder.com/search/"=
+], :root a[href^=3D"http://www.ducksnetwork.com/"], :root [onclick^=3D"wind=
+ow.open('https://www.brazzersnetwork.com/landing/"], :root a[href^=3D"http:=
+//www.bet365.com/"][href*=3D"?affiliate=3D"], :root [src^=3D"/Redirect.a2b?=
+"], :root #container > #pic_container, :root a[data-oburl^=3D"http://paid.o=
+utbrain.com/network/redir?"], :root a[data-oburl^=3D"https://paid.outbrain.=
+com/network/redir?"], :root img[src*=3D".sinaimg."][style=3D"width:1025px;h=
+eight:80px"], :root a[data-redirect^=3D"http://click.plista.com/pets"], :ro=
+ot a[data-redirect^=3D"http://paid.outbrain.com/network/redir?"], :root a[h=
+ref^=3D"http://go.ad2up.com/"], :root a[href^=3D"http://adtransfer.net/"], =
+:root a[href^=3D"http://adclick.g.doubleclick.net/"], :root .tooltip > #tp,=
+ :root a[data-redirect^=3D"this.href=3D'http://paid.outbrain.com/network/re=
+dir?"], :root div[class*=3D"_AdInArticle_"], :root a[href^=3D"https://track=
+.clickmoi.xyz/"], :root a[data-url^=3D"http://paid.outbrain.com/network/red=
+ir?"], :root a[href*=3D".ahhxwavi.cn"], :root a[data-url^=3D"http://paid.ou=
+tbrain.com/network/redir?"] + .author, :root a[href^=3D"http://ad.yieldmana=
+ger.com/"], :root a[href^=3D"http://www.myfreepaysite.com/sfw.php?aid"], :r=
+oot a[href^=3D"//4f6b2af479d337cf.com/"], :root a[href^=3D"http://lp.ezdown=
+loadpro.info/"], :root a[data-widget-outbrain-redirect^=3D"http://paid.outb=
+rain.com/network/redir?"], :root a[href$=3D"/vghd.shtml"], :root a[href^=3D=
+"http://amzn.to/"] > img[src^=3D"data"], :root a[href*=3D".adk2x.com/"], :r=
+oot a[href^=3D"//z6naousb.com/"], :root a[href^=3D"//5e1fcb75b6d662d.com/"]=
+, :root a[href*=3D".adsrv.eacdn.com/"] > img, :root a[href^=3D"//www.mgid.c=
+om/"], :root a[href^=3D"http://www.clkads.com/adServe/"], :root a[href^=3D"=
+http://ad.doubleclick.net/"], :root a[href^=3D"http://googleads.g.doublecli=
+ck.net/pcs/click"], :root a[href^=3D"https://uncensored.game/"], :root a[hr=
+ef*=3D".approvallamp.club/"], :root a[href^=3D"http://connectlinking6.com/"=
+], :root div[id^=3D"ad-position-"], :root a[href*=3D".bang.com/"][href*=3D"=
+&aff=3D"], :root a[href*=3D".clkcln.com/"], :root a[href^=3D"http://guidewa=
+ys.info/"], :root a[href*=3D".ichlnk.com/"], :root div[class^=3D"largeRecta=
+ngleAd_"], :root a[href*=3D".inclk.com/"], :root a[href*=3D".intab.fun/"], =
+:root a[href*=3D".revimedia.com/"], :root a[href*=3D".trust.zone"], :root a=
+[href*=3D"//xml.revrtb.com/"], :root a[href^=3D"http://www.1clickmoviedownl=
+oader.info/"], :root a[href^=3D"https://www.friendlyduck.com/AF_"], :root a=
+[href^=3D"http://feeds1.validclick.com/"], :root a[href*=3D"//3wr110.xyz/"]=
+, :root a[href^=3D"http://eclkmpsa.com/"], :root div[id^=3D"dfp-ad-"], :roo=
+t a[href*=3D"/adrotate-out.php?"], :root a[href^=3D"https://servedbyadbutle=
+r.com/"], :root a[href*=3D"/cmd.php?ad=3D"], :root a[href*=3D"/servlet/clic=
+k/zone?"], :root a[href*=3D"5iclx7wa4q.com"], :root a[href^=3D"http://feeda=
+ds.g.doubleclick.net/"], :root div[style^=3D"width: 100%;"]:not([id]):not([=
+class]) > iframe[scrolling=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"]=
+[src*=3D"&"][width][height][frameborder=3D"0"], :root a[href*=3D"=3DAdtrack=
+er"], :root a[href^=3D"http://www.downloadweb.org/"], :root a[href^=3D"http=
+://affiliates.score-affiliates.com/"], :root a[href*=3D"=3Dadscript"], :roo=
+t div[id^=3D"ad_thread"], :root div > [class][onclick*=3D".updateAnalyticsE=
+vents"], :root a[href*=3D"?adlivk=3D"][href*=3D"&refer=3D"], :root a[href^=
+=3D"http://www.afco2go.com/srv.php?"], :root a[onmousedown^=3D"this.href=3D=
+'https://paid.outbrain.com/network/redir?"][target=3D"_blank"] + .ob_source=
+, :root a[href^=3D"http://betahit.click/"], :root a[href^=3D"http://hyperie=
+s.info/"], :root iframe[id^=3D"google_ads_frame"], :root a[href*=3D"a2g-sec=
+ure.com"], :root a[href*=3D"ad2upapp.com/"], :root a[href*=3D"delivery.traf=
+ficfabrik.com"], :root a[href^=3D"https://members.linkifier.com/public/affi=
+liateLanding?refCode=3D"], :root a[href^=3D"//www.pd-news.com/"], :root a[h=
+ref*=3D"googleme.eu"], :root a[href*=3D"letsadvertisetogether.com"], :root =
+a[href^=3D"http://bonusfapturbo.nmvsite.com/"], :root a[href^=3D"http://www=
+.streamtunerhd.com/signup?"], :root a[href*=3D"onclkds."], :root a[href*=3D=
+"pussl3.com"], :root a[href^=3D"https://iactrivago.ampxdirect.com/"], :root=
+ a[href^=3D" http://ads.ad-center.com/"], :root a[href^=3D" http://n47adsho=
+stnet.com/"], :root div[id^=3D"ads300_250-widget"], :root a[href^=3D" http:=
+//www.sex.com/"][href*=3D"&utm_"], :root a[href^=3D"//4c7og3qcob.com/"], :r=
+oot a[href^=3D"http://join3.bannedsextapes.com/track/"], :root a[href^=3D"/=
+/adbit.co/?a=3DAdvertise&"], :root a[href^=3D"http://secure.signup-way.com/=
+"], :root a[href^=3D"//bwnjijl7w.com/"], :root a[href^=3D"//db52cc91beabf7e=
+8.com/"], :root a[href^=3D"http://tracking.deltamediallc.com/"], :root a[hr=
+ef^=3D"//go.onclasrv.com/"], :root a[href^=3D"//healthaffiliate.center/"], =
+:root a[href^=3D"http://www.revenuehits.com/"], :root a[href^=3D"//jsmptjmp=
+.com/"], :root a[href^=3D"//look.djfiln.com/"], :root a[href^=3D"//medleyad=
+s.com/spot/"], :root a[href^=3D"http://onclickads.net/"], :root a[href^=3D"=
+//nlkdom.com/"], :root a[href^=3D"http://www.streamate.com/exports/"], :roo=
+t a[href^=3D"http://click.plista.com/pets"], :root a[href^=3D"//t.MtagMonet=
+izationA.com/"], :root a[href^=3D"http://spygasm.com/track?"], :root a[href=
+^=3D"//voyeurhit.com/cs/"], :root a[href^=3D"http://1phads.com/"], :root di=
+v[id^=3D"ads250_250-widget"], :root a[href^=3D"http://2pxg8bcf.top/"], :roo=
+t a[href^=3D"http://www.clickansave.net/"], :root a[href^=3D"http://360ads.=
+go2cloud.org/"], :root a[href^=3D"http://paid.outbrain.com/network/redir?"]=
+, :root a[href^=3D"http://track.affiliatenetwork.co.za/"], :root a[href^=3D=
+"http://45eijvhgj2.com/"], :root #fwin_popad_7ree + #fwin_dialog, :root a[h=
+ref^=3D"http://6kup12tgxx.com/"], :root a[href^=3D"http://9nl.es/"], :root =
+a[href^=3D"http://NowDownloadAll.com"], :root a[href^=3D"http://www.sex.com=
+/videos/?utm_"], :root a[href^=3D"http://www.mysuperpharm.com/"], :root a[h=
+ref^=3D"http://a.adquantix.com/"], :root a[href^=3D"http://a63t9o1azf.com/"=
+], :root a[href^=3D"http://abc2.mobile-10.com/"], :root #piao_div_1[style*=
+=3D"width:140px;"], :root a[href^=3D"http://ad-emea.doubleclick.net/"], :ro=
+ot a[href*=3D".wenpie.com/"], :root a[href^=3D"http://ad.au.doubleclick.net=
+/"], :root a[href^=3D"http://vo2.qrlsx.com/"], :root a[href^=3D"http://adex=
+prt.me/"], :root a[href^=3D"http://adf.ly/?id=3D"], :root a[href^=3D"http:/=
+/api.ringtonematcher.com/"], :root a[href^=3D"http://adfarm.mediaplex.com/"=
+], :root a[href^=3D"http://www.babylon.com/welcome/index?affID"], :root a[h=
+ref^=3D"http://adserving.unibet.com/"], :root a[href^=3D"https://secure.adn=
+xs.com/clktrb?"], :root a[href^=3D"http://adlev.neodatagroup.com/"], :root =
+a[href^=3D"http://adprovider.adlure.net/"], :root a[href^=3D"http://pan.adr=
+accoon.com?"], :root div[id^=3D"lazyad-"], :root a[href^=3D"http://bcp.crwd=
+cntrl.net/"], :root body[class|=3D"view"] > .ad-box, :root a[href^=3D"http:=
+//adrunnr.com/"], :root a[href^=3D"http://www.fpcTraffic2.com/blind/in.cgi?=
+"], :root a[href^=3D"http://ads.activtrades.com/"], :root a[href^=3D"http:/=
+/mmo123.co/"], :root div[class^=3D"index_adAfterContent_"], :root a[href^=
+=3D"http://ads.ad-center.com/"], :root a[href*=3D".123ch.cn"], :root a[href=
+^=3D"http://ads.sprintrade.com/"], :root a[href^=3D"http://zevera.com/afi.h=
+tml"], :root a[href^=3D"http://ads.expekt.com/affiliates/"], :root a[href^=
+=3D"http://ads.pheedo.com/"], :root a[href^=3D"http://ads2.williamhill.com/=
+redirect.aspx?"], :root a[href^=3D"http://cwcams.com/landing/click/"], :roo=
+t a[href^=3D"http://adserver.adreactor.com/"], :root a[href^=3D"http://adse=
+rver.adtech.de/"], :root a[href^=3D"http://www.1clickdownloader.com/"], :ro=
+ot a[href^=3D"http://cdn3.adbrau.com/"], :root #body > #right-promotion, :r=
+oot a[href^=3D"http://adserver.itsfogo.com/"], :root a[href*=3D".mieseng.co=
+m/"], :root a[href^=3D"http://adserving.liveuniversenetwork.com/"], :root .=
+listok > a > img[style^=3D"width:980px;height:"], :root a[href^=3D"http://a=
+dsrv.keycaptcha.com"], :root a[href^=3D"http://adtrack123.pl/"], :root a[hr=
+ef^=3D"http://green.trafficinvest.com/"], :root a[href^=3D"http://clickserv=
+.sitescout.com/"], :root a[href^=3D"http://www.adshost2.com/"], :root a[hre=
+f^=3D"http://adtrackone.eu/"], :root a[href^=3D"http://adultfriendfinder.co=
+m/p/register.cgi?pid=3D"], :root a[href^=3D"http://linksnappy.com/?ref=3D"]=
+, :root a[href^=3D"http://affiliate.glbtracker.com/"], :root a[href^=3D"htt=
+p://affiliate.godaddy.com/"], :root a[href^=3D"http://www.accuserveadsystem=
+.com/accuserve-go.php?"], :root #table1[width=3D"468"][height=3D"50"], :roo=
+t a[href^=3D"https://sexdatingz.live/"], :root a[href^=3D"http://lp.ilivid.=
+com/"], :root a[href^=3D"http://searchtabnew.com/"], :root a[href^=3D"http:=
+//affiliates.pinnaclesports.com/processing/"], :root div[id^=3D"block-views=
+-topheader-ad-block-"], :root a[href^=3D"http://www.gamebookers.com/cgi-bin=
+/intro.cgi?"], :root a[href^=3D"http://aflrm.com/"], :root a[href^=3D"http:=
+//anonymous-net.com/"], :root a[href^=3D"http://mojofun.info/"], :root a[hr=
+ef^=3D"http://findersocket.com/"], :root iframe[src^=3D"http://ad.yieldmana=
+ger.com/"], :root a[href^=3D"http://at.atwola.com/"], :root a[href^=3D"http=
+://record.sportsbetaffiliates.com.au/"], :root .container > a.mid-wrapper, =
+:root a[href^=3D"http://azmobilestore.co/"], :root a[href^=3D"http://easydo=
+wnload4you.com/"], :root a[href^=3D"http://www.moneyducks.com/"], :root a[h=
+ref^=3D"http://b.bestcompleteusa.info/"], :root a[href^=3D"http://bc.vc/?r=
+=3D"], :root a[href^=3D"http://bcntrack.com/"], :root a[href^=3D"http://pok=
+ershibes.com/index.php?ref=3D"], :root a[href^=3D"http://www.friendlyadvert=
+isements.com/"], :root a[href^=3D"http://bluehost.com/track/"], :root a[hre=
+f^=3D"https://jmp.awempire.com/"], :root a[href^=3D"http://databass.info/"]=
+, :root a[href^=3D"http://c.actiondesk.com/"], :root #navcontainer + .money=
+area, :root a[href^=3D"http://c.jumia.io/"], :root a[href^=3D"http://c.keta=
+ds.com/"], :root a[href^=3D"http://www.bet365.com/"][href*=3D"&affiliate=3D=
+"], :root a[href^=3D"http://callville.xyz/"], :root a[href^=3D"http://media=
+.paddypower.com/redirect.aspx?"], :root a[href^=3D"http://campaign.bharatma=
+trimony.com/cbstrack/"], :root a[href^=3D"http://campeeks.com/"][href*=3D"&=
+utm_"], :root a[href^=3D"http://casino-x.com/?partner"], :root #rightCouple=
+t + #leftFloat, :root a[href^=3D"http://cdn.adsrvmedia.net/"], :root a[href=
+*=3D".downok.com"], :root a[href^=3D"https://land.brazzersnetwork.com/landi=
+ng/"], :root a[href^=3D"http://web.adblade.com/"], :root div[data-subscript=
+=3D"Advertising"], :root a[href^=3D"http://cdn3.adexprts.com/"], :root a[hr=
+ef^=3D"http://go.oclaserver.com/"], :root a[href^=3D"http://chaturbate.com/=
+affiliates/"], :root script[src^=3D"http://free-shoutbox.net/app/webroot/sh=
+outbox/sb.php?shoutbox=3D"] + #freeshoutbox_content, :root div[itemtype=3D"=
+http://schema.org/WPAdBlock"], :root a[href^=3D"http://cinema.friendscout24=
+.de?"], :root a[href^=3D"http://click.guamwnvgashbkashawhgkhahshmashcas.pw/=
+"], :root a[href^=3D"http://www.down1oads.com/"], :root a[href^=3D"http://c=
+licks.guamwnvgashbkashawhgkhahshmashcas.pw/"], :root a[href^=3D"http://www.=
+pheedo.com/"], :root a[href^=3D"http://clk.directrev.com/"], :root a[href^=
+=3D"http://galleries.pinballpublishernetwork.com/"], :root div[class^=3D"li=
+feOnwerAd"], :root a[target=3D"_blank"][href^=3D"http://api.taboola.com/"],=
+ :root a[href^=3D"http://clkmon.com/adServe/"], :root a[href^=3D"http://hdp=
+lugin.flashplayer-updates.com/"], :root a[href^=3D"http://track.incognitovp=
+n.com/"], :root #img-txt-wrapper > #title_desc_div, :root div[id^=3D"acm-ad=
+-tag-"], :root a[href^=3D"https://www.brazzersnetwork.com/landing/"], :root=
+ a[href^=3D"http://codec.codecm.com/"], :root a[href^=3D"http://n.admagnet.=
+net/"], :root a[href^=3D"http://prochina.space/"], :root a[href^=3D"http://=
+contractallsticker.net/"], :root a[href^=3D"http://wgpartner.com/"], :root =
+a[href^=3D"https://go.stripchat.com/"][href*=3D"&campaignId=3D"], :root a[h=
+ref^=3D"http://cpaway.afftrack.com/"], :root a[href^=3D"http://d2.zedo.com/=
+"], :root div[id^=3D"advt-"], :root a[href^=3D"https://affiliates.bet-at-ho=
+me.com/processing/"], :root a[href^=3D"http://data.committeemenencyclopedic=
+repertory.info/"], :root div[class^=3D"Ad__bigBox"], :root a[href^=3D"http:=
+//data.linoleictanzaniatitanic.com/"], :root .top_box > #indextop, :root di=
+v[itemtype=3D"http://www.schema.org/WPAdBlock"], :root a[href^=3D"http://df=
+trck.com/"], :root a[href^=3D"http://down1oads.com/"], :root a[href^=3D"htt=
+p://download-performance.com/"], :root a[href^=3D"http://www.myfreecams.com=
+/?co_id=3D"][href*=3D"&track=3D"], :root a[href^=3D"https://bs.serving-sys.=
+com"], :root a[href^=3D"http://duckcash.eu/"], :root a[href^=3D"http://serv=
+er.cpmstar.com/click.aspx?poolid=3D"], :root a[href^=3D"https://track.thema=
+dtrcker.com/"], :root a[href^=3D"http://dwn.pushtraffic.net/"], :root a[hre=
+f^=3D"http://earandmarketing.com/"], :root a[href^=3D"https://gogoman.me/"]=
+, :root a[href^=3D"http://elite-sex-finder.com/?"], :root a[href^=3D"https:=
+//transfer.xe.com/signup/track/redirect?"], :root a[href^=3D"http://elitefu=
+ckbook.com/"], :root .player + .sponsor, :root a[href^=3D"http://ethfw0370q=
+.com/"], :root a[href^=3D"http://extra.bet365.com/"][href*=3D"?affiliate=3D=
+"], :root div#xinxi, :root a[href*=3D".gongnou.com/"], :root #leftFloat + #=
+rightFloat, :root a[href^=3D"http://farm.plista.com/pets"], :root a[href^=
+=3D"http://freesoftwarelive.com/"], :root div[data-mediatype=3D"advertising=
+"], :root a[href^=3D"http://webgirlz.online/landing/"], :root a[href^=3D"ht=
+tp://fileloadr.com/"], :root a[href*=3D"/mobads.php?"], :root a[href^=3D"ht=
+tps://secure.eveonline.com/ft/?aid=3D"], :root a[href^=3D"http://fileupnow.=
+rocks/"], :root a[href^=3D"http://prousa.work/"], :root a[href^=3D"http://f=
+soft4down.com/"], :root a[href^=3D"http://track.trkvluum.com/"], :root a[hr=
+ef^=3D"https://bullads.net/get/"], :root a[href^=3D"http://fusionads.net"],=
+ :root a[href^=3D"https://farm.plista.com/pets"], :root a[href^=3D"http://g=
+alleries.securewebsiteaccess.com/"], :root a[href^=3D"http://gca.sh/user/re=
+gister?ref=3D"], :root a[href^=3D"http://www.on2url.com/app/adtrack.asp"], =
+:root a[href^=3D"http://getlinksinaseconds.com/"], :root a[href^=3D"https:/=
+/bongacams2.com/track?"], :root a[href^=3D"http://go.seomojo.com/tracking20=
+2/"], :root a[href^=3D"http://go.trafficshop.com/"], :root a[href^=3D"http:=
+//www.getyourguide.com/?partner_id=3D"], :root a[href^=3D"http://goldmoney.=
+com/?gmrefcode=3D"], :root a[href^=3D"http://greensmoke.com/"], :root a[hre=
+f^=3D"http://hd-plugins.com/download/"], :root a[href^=3D"http://hpn.houzz.=
+com/"], :root a[href*=3D".com?aff=3D"], :root a[href^=3D"http://tracking.cr=
+azylead.com/"], :root a[href^=3D"http://hyperlinksecure.com/go/"], :root a[=
+href*=3D".com/?Extend=3D"], :root a[href^=3D"http://igromir.info/"], :root =
+a[href^=3D"https://awejmp.com/"], :root a[href^=3D"http://imads.integral-ma=
+rketing.com/"], :root a[href^=3D"http://install.securewebsiteaccess.com/"],=
+ :root a[href^=3D"http://secure.signup-page.com/"], :root a[href^=3D"http:/=
+/www.brightwheel.info/"], :root a[href^=3D"http://www.greenmangaming.com/?t=
+ap_a=3D"], :root a[href^=3D"http://intent.bingads.com/"], :root a[href^=3D"=
+http://internalredirect.site/"], :root a[href^=3D"http://istri.it/?"], :roo=
+t a[href^=3D"http://jobitem.org/"], :root a[href^=3D"http://liversely.com/"=
+], :root a[href^=3D"http://k2s.cc/code/"], :root a[href^=3D"http://tracking=
+.toroadvertising.com/"], :root a[href^=3D"http://k2s.cc/pr/"], :root a[href=
+^=3D"http://keep2share.cc/pr/"], :root a[href^=3D"http://latestdownloads.ne=
+t/download.php?"], :root div[id^=3D"ADV-SLOT-"], :root a[href^=3D"http://li=
+versely.net/"], :root a[href^=3D"http://t.mdn2015x2.com/"], :root a[href^=
+=3D"http://mgid.com/"], :root a[href^=3D"http://www.freefilesdownloader.com=
+/"], :root header#hdr + #main > div[data-hveid], :root a[href^=3D"http://ww=
+w.quick-torrent.com/download.html?aff"], :root a[href^=3D"http://mo8mwxi1.c=
+om/"], :root div[class^=3D"gemini-ad"], :root a[href^=3D"http://online.ladb=
+rokes.com/promoRedirect?"], :root a[href^=3D"https://redirect.ero-advertisi=
+ng.com/"], :root a[href^=3D"http://play4k.co/"], :root div[id^=3D"ad-div-"]=
+, :root a[href^=3D"http://popup.taboola.com/"], :root a[href^=3D"http://upl=
+oaded.net/ref/"], :root a[href^=3D"https://www.spyoff.com/"], :root a[href^=
+=3D"http://prochina.link/"], :root adblock-detect, :root a[href^=3D"http://=
+record.betsafe.com/"], :root a[href^=3D"http://record.commissionking.com/"]=
+, :root a[href^=3D"https://djtcollectorclub.org/"][href*=3D"?affiliate_id=
+=3D"], :root a[href^=3D"http://rekoverr.com/"], :root a[href^=3D"http://s9k=
+kremkr0.com/"], :root a[href^=3D"http://www.123-reg.co.uk/affiliate2.cgi"],=
+ :root a[href^=3D"http://secure.hostgator.com/~affiliat/"], :root a[href^=
+=3D"http://serve.williamhill.com/promoRedirect?"], :root a[href^=3D"http://=
+servicegetbook.net/"], :root a[href^=3D"http://srvpub.com/"], :root a[href^=
+=3D"https://porngames.adult/?SID=3D"], :root a[href^=3D"http://stateresolve=
+r.link/"], :root a[href^=3D"http://www.drowle.com/"], :root a[href*=3D".17y=
+yba.com/"], :root a[href^=3D"https://keep2share.cc/pr/"], :root a[href^=3D"=
+http://steel.starflavor.bid/"], :root a[href^=3D"https://www.adskeeper.co.u=
+k/"], :root a[href^=3D"http://syndication.exoclick.com/"], :root a[href^=3D=
+"https://www.firstload.com/affiliate/"], :root a[href^=3D"https://control.t=
+rafficfabrik.com/"], :root a[href^=3D"http://t.mdn2015x1.com/"], :root a[hr=
+ef^=3D"http://t.mdn2015x3.com/"], :root a[href^=3D"http://t.wowtrk.com/"], =
+:root a[href^=3D"http://tour.affbuzzads.com/"], :root a[href^=3D"http://us.=
+marketgid.com"], :root a[href^=3D"http://vinfdv6b4j.com/"], :root a[href^=
+=3D"http://webtrackerplus.com/"], :root a[href^=3D"http://wopertific.info/"=
+], :root div[id^=3D"cns_ads_"], :root a[href^=3D"http://www.twinplan.com/AF=
+_"], :root a[href^=3D"http://www.TwinPlan.com/AF_"], :root a[href^=3D"http:=
+//www.afgr3.com/"], :root a[href^=3D"http://www.adbrite.com/mb/commerce/pur=
+chase_form.php?"], :root a[href^=3D"http://www.adskeeper.co.uk/"], :root a[=
+href^=3D"https://understandsolar.com/signup/?lead_source=3D"][href*=3D"&tra=
+cking_code=3D"], :root a[href^=3D"http://www.affiliates1128.com/processing/=
+"], :root a[href^=3D"http://www.downloadplayer1.com/"], :root a[href^=3D"ht=
+tp://www.afgr2.com/"], :root a[href^=3D"http://www.badoink.com/go.php?"], :=
+root #toptb + div[align=3D"center"], :root a[href^=3D"http://www.bitlord.me=
+/share/"], :root a[href^=3D"http://www.bluehost.com/track/"] > img, :root b=
+ottomadblock, :root a[href^=3D"http://www.cash-duck.com/"], :root a[href^=
+=3D"http://www.friendlyduck.com/AF_"], :root a[href^=3D"https://windscribe.=
+com/promo/"], :root a[href^=3D"http://yads.zedo.com/"], :root a[href^=3D"ht=
+tp://www.cdjapan.co.jp/aff/click.cgi/"], :root a[href^=3D"http://www.coindu=
+cks.com/"], :root a[href^=3D"http://www.dl-provider.com/search/"], :root a[=
+href^=3D"http://www.downloadthesefiles.com/"], :root a[href^=3D"http://www.=
+duckcash.eu/"], :root a[href^=3D"http://www.duckssolutions.com/"], :root a[=
+href^=3D"http://www.easydownloadnow.com/"], :root a[href^=3D"http://www.epi=
+cgameads.com/"], :root a[href^=3D"http://www.faceporn.net/free?"], :root a[=
+href^=3D"http://www.fducks.com/"], :root a[href^=3D"https://torguard.net/af=
+f.php"], :root a[href^=3D"http://www.firstclass-download.com/"], :root a[hr=
+ef^=3D"http://www.firstload.de/affiliate/"], :root a[href^=3D"http://www.fo=
+nts.com/BannerScript/"], :root a[href^=3D"http://www.flashx.tv/downloadthis=
+"], :root a[href^=3D"http://www.fleshlight.com/"], :root a[href^=3D"http://=
+www.friendlyquacks.com/"], :root .ads > a > img[src*=3D".sinaimg."], :root =
+a[href^=3D"https://www.goldenfrog.com/vyprvpn?offer_id=3D"][href*=3D"&aff_i=
+d=3D"], :root a[href^=3D"http://www.hitcpm.com/"], :root a[href^=3D"https:/=
+/pubads.g.doubleclick.net/"], :root a[href^=3D"http://www.idownloadplay.com=
+/"], :root a[href^=3D"http://www.incredimail.com/?id=3D"], :root a[href^=3D=
+"https://tracking.truthfinder.com/?a=3D"], :root a[href^=3D"http://www.inst=
+allads.net/"], :root a[href^=3D"http://www.ireel.com/signup?ref"], :root a[=
+href^=3D"http://www.liutilities.com/"], :root div[id][style=3D"width: 100%;=
+"] > iframe[scrolling=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=
+=3D"&"][width][height][frameborder=3D"0"], :root a[href^=3D"http://www.pink=
+visualpad.com/?revid=3D"], :root a[href^=3D"http://www.liversely.net/"], :r=
+oot a[href^=3D"http://www.menaon.com/installs/"], :root a[href^=3D"http://w=
+ww.mobileandinternetadvertising.com/"], :root a[href^=3D"http://www.my-dirt=
+y-hobby.com/?sub=3D"], :root a[href^=3D"http://www.plus500.com/?id=3D"], :r=
+oot a[href^=3D"http://www.ragazzeinvendita.com/?rcid=3D"], :root a[href^=3D=
+"http://www.richducks.com/"], :root a[href^=3D"http://www.ringtonematcher.c=
+om/"], :root a[href^=3D"http://www.roboform.com/php/land.php"], :root a[hre=
+f^=3D"http://www.securegfm.com/"], :root a[href^=3D"http://www.sex.com/?utm=
+_"], :root a[href^=3D"http://www.sex.com/pics/?utm_"], :root div[class^=3D"=
+Ad__adContainer"], :root a[href^=3D"http://www.sexgangsters.com/?pid=3D"], =
+:root a[href*=3D".qpzqxz.com/"], :root a[href^=3D"http://www.sfippa.com/"],=
+ :root a[href^=3D"http://www.socialsex.com/"], :root a[href^=3D"http://www.=
+text-link-ads.com/"], :root a[href^=3D"http://www.tirerack.com/affiliates/"=
+], :root a[href^=3D"http://www.torntv-downloader.com/"], :root a[href^=3D"h=
+ttp://www.torntvdl.com/"], :root #table1[width=3D"812"][height=3D"50"], :ro=
+ot a[href^=3D"http://www.uniblue.com/cm/"], :root a[href^=3D"http://www.urm=
+ediazone.com/signup"], :root a[href^=3D"http://www.usearchmedia.com/signup?=
+"], :root a[href^=3D"https://secure.cbdpure.com/aff/"], :root a[href^=3D"ht=
+tp://www.wantstraffic.com/"], :root a[href^=3D"http://www.xmediaserve.com/"=
+], :root a[href^=3D"http://www.yourfuckbook.com/?"], :root a[href^=3D"http:=
+//www.zergnet.com/i/"], :root a[onclick*=3D"//m.economictimes.com/etmack/cl=
+ick.htm"], :root a[href^=3D"http://www1.clickdownloader.com/"], :root A[hre=
+f*=3D".com/?Agent=3D"], :root a[href^=3D"http://www5.smartadserver.com/call=
+/pubjumpi/"], :root a[href^=3D"http://wxdownloadmanager.com/dl/"], :root a[=
+href^=3D"http://xads.zedo.com/"], :root a[href^=3D"http://xtgem.com/click?"=
+], :root div[id^=3D"div-adtech-ad-"], :root div[id^=3D"ad-gpt-"], :root a[h=
+ref^=3D"http://y1jxiqds7v.com/"], :root div[id^=3D"div_ad_stack_"], :root a=
+[href^=3D"http://z1.zedo.com/"], :root a[href^=3D"https://ad.doubleclick.ne=
+t/"], :root a[href^=3D"https://adhealers.com/"], :root a[href^=3D"https://a=
+ds.ad4game.com/"], :root a[href^=3D"https://adserver.adreactor.com/"], :roo=
+t a[href^=3D"https://www.incontri-matura.com/"], :root a[href^=3D"https://a=
+dultfriendfinder.com/go/page/landing"], :root a[href^=3D"https://adswick.co=
+m/"], :root a[href^=3D"https://atomidownload.com/"], :root a[href^=3D"https=
+://awentw.com/"], :root a[href*=3D".tduou.com/"], :root #rightCouple + #lef=
+tFloat, :root a[href^=3D"https://betway.com/"][href*=3D"&a=3D"], :root a[hr=
+ef^=3D"https://chaturbate.com/in/?track=3D"], :root a[href^=3D"https://chat=
+urbate.com/affiliates/"], :root body[onload*=3D"u()"] > #x, :root a[href^=
+=3D"https://chaturbate.com/in/?tour=3D"], :root a[href^=3D"https://chaturba=
+te.jjgirls.com/"][href*=3D"?tour=3D"], :root a[href^=3D"https://chaturbate.=
+xyz/"], :root div[id][style=3D"width: 100%;"] > div > div > iframe[scrollin=
+g=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][heigh=
+t][frameborder=3D"0"], :root #piao_div_4[style*=3D"width:140px;"], :root a[=
+href^=3D"https://click.plista.com/pets"], :root a[href^=3D"https://clixtrac=
+.com/"], :root a[href^=3D"https://dediseedbox.com/clients/aff.php?"], :root=
+ a[href^=3D"https://dltags.com/"], :root a[href^=3D"https://evaporate.pw/"]=
+, :root .content-video > .ads, :root td[valign=3D"top"] > .mainmenu[style=
+=3D"padding:10px 0 0 0 !important;"], :root a[href^=3D"https://flirtaescopa=
+.com/"], :root a[href^=3D"https://freeadult.games/"], :root a[href^=3D"http=
+s://intrev.co/"], :root a[href^=3D"https://gamescarousel.com/"], :root a[hr=
+ef^=3D"https://m.do.co/c/"] > img, :root a[href^=3D"https://gghf.mobi/"], :=
+root a[href^=3D"https://go.ad2up.com/"], :root a[href^=3D"https://go.onclas=
+rv.com/"], :root a[href^=3D"https://go.trkclick2.com/"], :root a[href^=3D"h=
+ttps://googleads.g.doubleclick.net/pcs/click"], :root a[href^=3D"https://ia=
+c.ampxdirect.com/"], :root a[href^=3D"https://incisivetrk.cvtr.io/click?"],=
+ :root a[href^=3D"https://lingthatsparleso.info/"], :root a[href^=3D"https:=
+//medleyads.com/"], :root a[href^=3D"https://mk-ads.com/"], :root a[href^=
+=3D"https://mk-cdn.net/"], :root a[href^=3D"https://paid.outbrain.com/netwo=
+rk/redir?"], :root a[href^=3D"https://porndeals.com/?track=3D"], :root .mao=
+mi-content > .section-banner, :root a[href^=3D"https://prf.hn/click/"][href=
+*=3D"/adref:"], :root a[href^=3D"https://refpaano.host/"], :root a[href^=3D=
+"https://www.moscarossa.biz/"], :root a[href^=3D"https://rev.adsession.com/=
+"], :root a[href^=3D"https://secure.bstlnk.com/"], :root a[href^=3D"https:/=
+/squren.com/rotator/?atomid=3D"], :root a[href^=3D"https://syndication.exoc=
+lick.com/splash.php?"], :root a[href^=3D"https://t.mobtya.com/"], :root a[h=
+ref^=3D"https://track.52zxzh.com/"], :root a[href^=3D"https://track.adform.=
+net/"], :root a[href^=3D"https://track.healthtrader.com/"], :root a[href^=
+=3D"https://track.trkinator.com/"], :root div[id^=3D"ad-server-"], :root a[=
+href^=3D"https://trackjs.com/?utm_source"], :root a[href^=3D"https://trklvs=
+.com/"], :root a[href^=3D"https://trust.zone/go/r.php?RID=3D"], :root a[hre=
+f^=3D"https://www.oboom.com/ad/"], :root a[href^=3D"https://uncensored3d.co=
+m/"], :root p[id^=3D"div-gpt-ad-"], :root a[href^=3D"https://vodexor.us/"],=
+ :root a[href^=3D"https://www.adultempire.com/"][href*=3D"?partner_id=3D"],=
+ :root a[href^=3D"https://www.adxtro.com/"], :root a[href^=3D"https://www.b=
+ebi.com"], :root a[href^=3D"https://www.camyou.com/?cam=3D"][href*=3D"&trac=
+k=3D"], :root a[href^=3D"https://www.dsct1.com/"], :root a[href^=3D"https:/=
+/www.nutaku.net/signup/landing/"], :root a[href^=3D"https://www.popads.net/=
+users/"], :root a[href^=3D"https://www.share-online.biz/affiliate/"], :root=
+ a[onmousedown^=3D"this.href=3D'/wp-content/embed-ad-content/"], :root a[hr=
+ef*=3D".05cg.com/"], :root a[onmousedown^=3D"this.href=3D'http://paid.outbr=
+ain.com/network/redir?"][target=3D"_blank"] + .ob_source, :root a[onmousedo=
+wn^=3D"this.href=3D'https://paid.outbrain.com/network/redir?"][target=3D"_b=
+lank"], :root div[id^=3D"div-gpt-ad"], :root a[style=3D"display:block;width=
+:300px;min-height:250px"][href^=3D"http://li.cnet.com/click?"], :root a[tar=
+get=3D"_blank"][onmousedown=3D"this.href^=3D'http://paid.outbrain.com/netwo=
+rk/redir?"], :root aside[id^=3D"adrotate_widgets-"], :root div#ad_id, :root=
+ aside[id^=3D"advads_ad_widget-"], :root aside[id^=3D"div-gpt-ad"], :root a=
+[href*=3D"/?INTR=3D"], :root aside[id^=3D"tn_ads_widget-"], :root div[class=
+$=3D"dealnews"] > .dealnews, :root .footer > #box[style=3D"width:100%;heigh=
+t:100%;position:fixed;top:0"], :root div[class^=3D"AdhesionAd_"], :root div=
+[class^=3D"BlockAdvert-"], :root div[class^=3D"ResponsiveAd-"], :root div[c=
+lass^=3D"ad_border_"], :root div[class^=3D"ad_position_"], :root div[class^=
+=3D"adbanner_"], :root div[class^=3D"adpubs-"], :root div[class^=3D"awpcp-r=
+andom-ads"], :root div[class^=3D"backfill-taboola-home-slot-"], :root div[c=
+lass^=3D"block-openx-"], :root div[class^=3D"index_adBeforeContent_"], :roo=
+t div[class^=3D"index_displayAd_"], :root div[class^=3D"local-feed-banner-a=
+ds"], :root div[class^=3D"pane-google-admanager-"], :root div[class^=3D"pro=
+adszone-"], :root div[data-ad-underplayer], :root div[data-native_ad], :roo=
+t div[style^=3D"width: 100%;"][style$=3D"z-index: inherit;"] iframe[scrolli=
+ng=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height=
+][frameborder=3D"0"], :root div[data-spotim-slot], :root div[id^=3D"YFBMSN"=
+], :root div[id^=3D"ad-cid-"], :root div[id^=3D"proadszone-"], :root div[id=
+^=3D"ad_bigbox_"], :root div[id^=3D"adfox_"], :root div[id^=3D"adrotate_wid=
+gets-"], :root div[id^=3D"ads120_600-widget"], :root div[id^=3D"ads300_600-=
+widget"], :root div[id^=3D"adspot-"], :root div[id^=3D"dfp-slot-"], :root d=
+iv[id^=3D"div-ads-"], :root div[id^=3D"dmRosAdWrapper"], :root topadblock, =
+:root div[id^=3D"drudge-column-ads-"], :root div[id^=3D"google_dfp_"], :roo=
+t div[id^=3D"q1-adset-"], :root div[id^=3D"tms-ad-dfp-"], :root div[id^=3D"=
+zergnet-widget"], :root div[role=3D"navigation"] + c-wiz > div > .kxhcC, :r=
+oot div[role=3D"navigation"] + c-wiz > script + div > .kxhcC, :root iframe[=
+id^=3D"google_ads_iframe"], :root [style=3D"display:none"] + iframe[scrolli=
+ng=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height=
+][frameborder=3D"0"], :root iframe[src^=3D"http://cdn1.adexprt.com/"], :roo=
+t iframe[src^=3D"http://static.mozo.com.au/strips/"], :root img[alt^=3D"Fuc=
+kbook"], :root input[onclick^=3D"window.open('http://www.friendlyduck.com/"=
+], :root input[onclick^=3D"window.open('http://www.FriendlyDuck.com/"], :ro=
+ot #left_float + #right_float, :root #piao_div_0[style*=3D"width:140px;"], =
+:root #piao_div_2[style*=3D"width:140px;"], :root #piao_div_3[style*=3D"wid=
+th:140px;"], :root #piao_div_5[style*=3D"width:140px;"], :root #results.con=
+tent-main > .eLeft, :root #table1[width=3D"794"][height=3D"60"], :root #tab=
+le1[width=3D"812"][height=3D"60"], :root .ad[style=3D"margin-bottom: 10px; =
+width: 100%;"], :root .ad_top_close + .bd, :root .content > a > .topline, :=
+root .error > #qqs, :root a[href^=3D"/dasp.php?a=3D"], :root .his-sign-cont=
+[data-dysign-adid], :root .main[style=3D"border:#7D8C8E solid 1px;height: 2=
+3px;"], :root .subject_link[href$=3D"/thread-index-fid-1-tid-12848.htm"], :=
+root div:not([id]):not([class]):not([style]) > div:not([id]):not([class]):n=
+ot([style]) > iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D=
+"][src*=3D"&"][width][height][frameborder=3D"0"]:not([src^=3D"http://www.fa=
+cebook.com/"]), :root .top_box > #foot, :root a#wrapper_left_bg[target=3D"_=
+blank"], :root a#wrapper_right_bg[target=3D"_blank"], :root a[href*=3D".08a=
+n.com/"], :root a[href*=3D".222bz.com/"], :root a[href*=3D".41gw.com/"], :r=
+oot a[href*=3D".7wkw.com"], :root a[href*=3D".9xiazaiqi.com"], :root a[href=
+=3D"https://7449k.com/"], :root a[href*=3D".acuxrecv.cn"], :root a[href*=3D=
+".biwbmsyt.cn"], :root a[href*=3D".cangpie.com/"], :root a[href*=3D".com/Re=
+gister/?a=3D"], :root a[href*=3D".dpcpfw.com/"], :root a[href*=3D".guzaosf.=
+com/"], :root a[href*=3D".iziyo.com/"], :root a[href*=3D".qtj5.com/"], :roo=
+t a[href*=3D".ttz5.cn"], :root a[href*=3D".tudown.com/"], :root a[href*=3D"=
+/?Intr=3D"], :root a[href*=3D"/?intr=3D"], :root a[href=3D"http://t.cn/E2Pg=
+iG1"], :root a[href=3D"https://t.cn/Rr4eSOx"], :root a[href^=3D"http://172.=
+247.157.176/"], :root a[href^=3D"http://ad.moemoe."], :root a[href^=3D"http=
+://fa999.cn/"], :root a[href^=3D"http://pic.gunqiu.com/"], :root a[href^=3D=
+"http://www.upupoo.com"], :root div[class^=3D"hongbao_hd_"], :root table[st=
+yle=3D"border:#7D8C8E solid 1px;height: 30px;text-align: center;"], :root t=
+able[style=3D"border:#e8e8e8 1px solid;"] + div[style=3D"margin-top:5px"] >=
+ table[style=3D"width:100%;"][cellspacing=3D"0"][cellpadding=3D"1"][borderc=
+olor=3D"#22222"][border=3D"1"], :root div[style^=3D"width: 100%;"][style$=
+=3D"display: block;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src=
+*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root div[style^=
+=3D"width: 100%;"][style$=3D"margin: 0px;"] iframe[scrolling=3D"no"][src*=
+=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=
+=3D"0"], :root div[style^=3D"width: 100%;"][style$=3D"opacity: 100;"] ifram=
+e[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][widt=
+h][height][frameborder=3D"0"], :root div[style^=3D"width: 100%;"][style$=3D=
+"overflow: hidden;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=
+=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root div[style^=
+=3D"width: 100%;"][style$=3D"visibility: visible;"] iframe[scrolling=3D"no"=
+][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][framebo=
+rder=3D"0"], :root #container > .item.title_normal, :root .heg > .partner-l=
+ist, :root #container > .item.title_top, :root #container.container > a.ite=
+m, :root #container > .wrapper > .fl, :root #container > a.block, :root #wr=
+apper > div[style=3D"padding:3px;"] > #pic, :root div[id][style=3D"width: 1=
+00%;"] > div > iframe[scrolling=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=
+=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root div[style=3D"wid=
+th: 100%;"]:not([id]):not([class]) > iframe[scrolling=3D"no"][src*=3D"//"][=
+src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :r=
+oot a[href*=3D".gotourls.bid"], :root a[href^=3D"http://yunbofangbt."], :ro=
+ot a[href^=3D"https://uds24.com/"] { display: none !important; }</style></h=
+ead><body><section id=3D"top"><div id=3D"menu"><a id=3D"toggle" href=3D"htt=
+ps://koa.bootcss.com/#"><i class=3D"icon-menu"></i></a><ul><li><a href=3D"h=
+ttps://koa.bootcss.com/#introduction">=E7=AE=80=E4=BB=8B</a></li><li><a hre=
+f=3D"https://koa.bootcss.com/#application">=E5=BA=94=E7=94=A8=EF=BC=88Appli=
+cation=EF=BC=89</a></li><li><a href=3D"https://koa.bootcss.com/#context">=
+=E4=B8=8A=E4=B8=8B=E6=96=87=EF=BC=88Context=EF=BC=89</a></li><li><a href=3D=
+"https://koa.bootcss.com/#request">=E8=AF=B7=E6=B1=82=EF=BC=88Request=EF=BC=
+=89</a></li><li><a href=3D"https://koa.bootcss.com/#response">=E5=93=8D=E5=
+=BA=94=EF=BC=88Response=EF=BC=89</a></li><li><a href=3D"https://koa.bootcss=
+.com/#links">=E7=9B=B8=E5=85=B3=E8=B5=84=E6=BA=90</a></li></ul></div><div i=
+d=3D"heading"><h1 id=3D"logo">Koa<img src=3D"https://koa.bootcss.com/public=
+/images/koa-logo.png" width=3D"1020" height=3D"790"></h1><div id=3D"tagline=
+">Koa -- =E5=9F=BA=E4=BA=8E Node.js =E5=B9=B3=E5=8F=B0=E7=9A=84=E4=B8=8B=E4=
+=B8=80=E4=BB=A3 web =E5=BC=80=E5=8F=91=E6=A1=86=E6=9E=B6</div></div></secti=
+on><section><div class=3D"content"><h1 id=3D"introduction">=E7=AE=80=E4=BB=
+=8B</h1><p>Koa =E6=98=AF=E4=B8=80=E4=B8=AA=E6=96=B0=E7=9A=84 web =E6=A1=86=
+=E6=9E=B6=EF=BC=8C=E7=94=B1 Express =E5=B9=95=E5=90=8E=E7=9A=84=E5=8E=9F=E7=
+=8F=AD=E4=BA=BA=E9=A9=AC=E6=89=93=E9=80=A0=EF=BC=8C
+=E8=87=B4=E5=8A=9B=E4=BA=8E=E6=88=90=E4=B8=BA web =E5=BA=94=E7=94=A8=E5=92=
+=8C API =E5=BC=80=E5=8F=91=E9=A2=86=E5=9F=9F=E4=B8=AD=E7=9A=84=E4=B8=80=E4=
+=B8=AA=E6=9B=B4=E5=B0=8F=E3=80=81=E6=9B=B4=E5=AF=8C=E6=9C=89=E8=A1=A8=E7=8E=
+=B0=E5=8A=9B=E3=80=81=E6=9B=B4=E5=81=A5=E5=A3=AE=E7=9A=84=E5=9F=BA=E7=9F=B3=
+=E3=80=82
+=E9=80=9A=E8=BF=87=E5=88=A9=E7=94=A8 async =E5=87=BD=E6=95=B0=EF=BC=8CKoa =
+=E5=B8=AE=E4=BD=A0=E4=B8=A2=E5=BC=83=E5=9B=9E=E8=B0=83=E5=87=BD=E6=95=B0=EF=
+=BC=8C=E5=B9=B6=E6=9C=89=E5=8A=9B=E5=9C=B0=E5=A2=9E=E5=BC=BA=E9=94=99=E8=AF=
+=AF=E5=A4=84=E7=90=86=E3=80=82
+Koa =E5=B9=B6=E6=B2=A1=E6=9C=89=E6=8D=86=E7=BB=91=E4=BB=BB=E4=BD=95=E4=B8=
+=AD=E9=97=B4=E4=BB=B6=EF=BC=8C
+=E8=80=8C=E6=98=AF=E6=8F=90=E4=BE=9B=E4=BA=86=E4=B8=80=E5=A5=97=E4=BC=98=E9=
+=9B=85=E7=9A=84=E6=96=B9=E6=B3=95=EF=BC=8C=E5=B8=AE=E5=8A=A9=E6=82=A8=E5=BF=
+=AB=E9=80=9F=E8=80=8C=E6=84=89=E5=BF=AB=E5=9C=B0=E7=BC=96=E5=86=99=E6=9C=8D=
+=E5=8A=A1=E7=AB=AF=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E3=80=82
+</p></div></section><section><div class=3D"content"><h1 id=3D"-">=E5=AE=89=
+=E8=A3=85</h1>
+<p>Koa =E4=BE=9D=E8=B5=96 <strong>node v7.6.0</strong> =E6=88=96 ES2015=E5=
+=8F=8A=E6=9B=B4=E9=AB=98=E7=89=88=E6=9C=AC=E5=92=8C async =E6=96=B9=E6=B3=
+=95=E6=94=AF=E6=8C=81.</p>
+<p>=E4=BD=A0=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8=E8=87=AA=E5=B7=B1=E5=96=9C=
+=E6=AC=A2=E7=9A=84=E7=89=88=E6=9C=AC=E7=AE=A1=E7=90=86=E5=99=A8=E5=BF=AB=E9=
+=80=9F=E5=AE=89=E8=A3=85=E6=94=AF=E6=8C=81=E7=9A=84 node =E7=89=88=E6=9C=AC=
+=EF=BC=9A</p>
+<div id=3D"example-0"><pre><code class=3D"lang-bash">$ nvm install 7
+$ npm i koa
+$ node my-koa-app.js</code></pre></div><h2 id=3D"-babel-async-">=E4=BD=BF=
+=E7=94=A8 Babel =E5=AE=9E=E7=8E=B0 Async =E6=96=B9=E6=B3=95</h2>
+<p>=E8=A6=81=E5=9C=A8 node &lt; 7.6 =E7=89=88=E6=9C=AC=E7=9A=84 Koa =E4=B8=
+=AD=E4=BD=BF=E7=94=A8 <code>async</code> =E6=96=B9=E6=B3=95, =E6=88=91=E4=
+=BB=AC=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8 <a href=3D"https://www.babeljs.c=
+n/docs/usage/babel-register/">babel's require hook</a>.</p>
+<div id=3D"example-1"><pre><code class=3D"lang-js">require('babel-register'=
+);
+// =E5=BA=94=E7=94=A8=E7=9A=84=E5=85=B6=E4=BD=99 require =E9=9C=80=E8=A6=81=
+=E8=A2=AB=E6=94=BE=E5=88=B0 hook =E5=90=8E=E9=9D=A2
+const app =3D require('./app');</code></pre></div><p>=E8=A6=81=E8=A7=A3=E6=
+=9E=90=E5=92=8C=E7=BC=96=E8=AF=91 async =E6=96=B9=E6=B3=95, =E4=BD=A0=E8=87=
+=B3=E5=B0=91=E5=BA=94=E8=AF=A5=E6=9C=89 <a href=3D"https://www.babeljs.cn/d=
+ocs/plugins/transform-async-to-generator/">transform-async-to-generator</a>
+=E6=88=96 <a href=3D"https://www.babeljs.cn/docs/plugins/transform-async-to=
+-module-method/">transform-async-to-module-method</a> =E6=8F=92=E4=BB=B6.</=
+p>
+<p>=E4=BE=8B=E5=A6=82, =E5=9C=A8=E4=BD=A0=E7=9A=84 <code>.babelrc</code> =
+=E6=96=87=E4=BB=B6=E4=B8=AD, =E4=BD=A0=E5=BA=94=E8=AF=A5=E6=9C=89:</p>
+<div id=3D"example-2"><pre><code class=3D"lang-json">{
+  "plugins": ["transform-async-to-generator"]
+}</code></pre></div><p>=E4=BD=A0=E4=B9=9F=E5=8F=AF=E4=BB=A5=E7=94=A8 <a hre=
+f=3D"https://www.babeljs.cn/docs/plugins/preset-env/">env preset</a> =E7=9A=
+=84 target =E5=8F=82=E6=95=B0 <code>"node": "current"</code> =E6=9B=BF=E4=
+=BB=A3.</p>
+<h1 id=3D"-">=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F</h1>
+<p>Koa =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E6=98=AF=E4=B8=80=E4=B8=AA=E5=
+=8C=85=E5=90=AB=E4=B8=80=E7=BB=84=E4=B8=AD=E9=97=B4=E4=BB=B6=E5=87=BD=E6=95=
+=B0=E7=9A=84=E5=AF=B9=E8=B1=A1=EF=BC=8C=E5=AE=83=E6=98=AF=E6=8C=89=E7=85=A7=
+=E7=B1=BB=E4=BC=BC=E5=A0=86=E6=A0=88=E7=9A=84=E6=96=B9=E5=BC=8F=E7=BB=84=E7=
+=BB=87=E5=92=8C=E6=89=A7=E8=A1=8C=E7=9A=84=E3=80=82
+Koa =E7=B1=BB=E4=BC=BC=E4=BA=8E=E4=BD=A0=E5=8F=AF=E8=83=BD=E9=81=87=E5=88=
+=B0=E8=BF=87=E7=9A=84=E8=AE=B8=E5=A4=9A=E5=85=B6=E4=BB=96=E4=B8=AD=E9=97=B4=
+=E4=BB=B6=E7=B3=BB=E7=BB=9F=EF=BC=8C=E4=BE=8B=E5=A6=82 Ruby =E7=9A=84 Rack =
+=EF=BC=8CConnect =E7=AD=89=EF=BC=8C=E7=84=B6=E8=80=8C=EF=BC=8C=E4=B8=80=E4=
+=B8=AA=E5=85=B3=E9=94=AE=E7=9A=84=E8=AE=BE=E8=AE=A1=E7=82=B9=E6=98=AF=E5=9C=
+=A8=E5=85=B6=E4=BD=8E=E7=BA=A7=E4=B8=AD=E9=97=B4=E4=BB=B6=E5=B1=82=E4=B8=AD=
+=E6=8F=90=E4=BE=9B=E9=AB=98=E7=BA=A7=E2=80=9C=E8=AF=AD=E6=B3=95=E7=B3=96=E2=
+=80=9D=E3=80=82 =E8=BF=99=E6=8F=90=E9=AB=98=E4=BA=86=E4=BA=92=E6=93=8D=E4=
+=BD=9C=E6=80=A7=EF=BC=8C=E7=A8=B3=E5=81=A5=E6=80=A7=EF=BC=8C=E5=B9=B6=E4=BD=
+=BF=E4=B9=A6=E5=86=99=E4=B8=AD=E9=97=B4=E4=BB=B6=E6=9B=B4=E5=8A=A0=E6=84=89=
+=E5=BF=AB=E3=80=82</p>
+<p>=E8=BF=99=E5=8C=85=E6=8B=AC=E8=AF=B8=E5=A6=82=E5=86=85=E5=AE=B9=E5=8D=8F=
+=E5=95=86=EF=BC=8C=E7=BC=93=E5=AD=98=E6=B8=85=E7=90=86=EF=BC=8C=E4=BB=A3=E7=
+=90=86=E6=94=AF=E6=8C=81=E5=92=8C=E9=87=8D=E5=AE=9A=E5=90=91=E7=AD=89=E5=B8=
+=B8=E8=A7=81=E4=BB=BB=E5=8A=A1=E7=9A=84=E6=96=B9=E6=B3=95=E3=80=82 =E5=B0=
+=BD=E7=AE=A1=E6=8F=90=E4=BE=9B=E4=BA=86=E7=9B=B8=E5=BD=93=E5=A4=9A=E7=9A=84=
+=E6=9C=89=E7=94=A8=E7=9A=84=E6=96=B9=E6=B3=95 Koa =E4=BB=8D=E4=BF=9D=E6=8C=
+=81=E4=BA=86=E4=B8=80=E4=B8=AA=E5=BE=88=E5=B0=8F=E7=9A=84=E4=BD=93=E7=A7=AF=
+=EF=BC=8C=E5=9B=A0=E4=B8=BA=E6=B2=A1=E6=9C=89=E6=8D=86=E7=BB=91=E4=B8=AD=E9=
+=97=B4=E4=BB=B6=E3=80=82</p>
+<p>=E5=BF=85=E4=BF=AE=E7=9A=84 hello world =E5=BA=94=E7=94=A8:</p>
+<div id=3D"example-3"><pre><code class=3D"lang-js">const Koa =3D require('k=
+oa');
+const app =3D new Koa();
+
+app.use(async ctx =3D&gt; {
+  ctx.body =3D 'Hello World';
+});
+
+app.listen(3000);</code></pre></div><h2 id=3D"-">=E7=BA=A7=E8=81=94</h2>
+<p>Koa =E4=B8=AD=E9=97=B4=E4=BB=B6=E4=BB=A5=E6=9B=B4=E4=BC=A0=E7=BB=9F=E7=
+=9A=84=E6=96=B9=E5=BC=8F=E7=BA=A7=E8=81=94=EF=BC=8C=E6=82=A8=E5=8F=AF=E8=83=
+=BD=E4=B9=A0=E6=83=AF=E4=BD=BF=E7=94=A8=E7=B1=BB=E4=BC=BC=E7=9A=84=E5=B7=A5=
+=E5=85=B7 - =E4=B9=8B=E5=89=8D=E9=9A=BE=E4=BB=A5=E8=AE=A9=E7=94=A8=E6=88=B7=
+=E5=8F=8B=E5=A5=BD=E5=9C=B0=E4=BD=BF=E7=94=A8 node =E7=9A=84=E5=9B=9E=E8=B0=
+=83=E3=80=82=E7=84=B6=E8=80=8C=EF=BC=8C=E4=BD=BF=E7=94=A8 async =E5=8A=9F=
+=E8=83=BD=EF=BC=8C=E6=88=91=E4=BB=AC=E5=8F=AF=E4=BB=A5=E5=AE=9E=E7=8E=B0 =
+=E2=80=9C=E7=9C=9F=E5=AE=9E=E2=80=9D =E7=9A=84=E4=B8=AD=E9=97=B4=E4=BB=B6=
+=E3=80=82=E5=AF=B9=E6=AF=94 Connect =E7=9A=84=E5=AE=9E=E7=8E=B0=EF=BC=8C=E9=
+=80=9A=E8=BF=87=E4=B8=80=E7=B3=BB=E5=88=97=E5=8A=9F=E8=83=BD=E7=9B=B4=E6=8E=
+=A5=E4=BC=A0=E9=80=92=E6=8E=A7=E5=88=B6=EF=BC=8C=E7=9B=B4=E5=88=B0=E4=B8=80=
+=E4=B8=AA=E8=BF=94=E5=9B=9E=EF=BC=8CKoa =E8=B0=83=E7=94=A8=E2=80=9C=E4=B8=
+=8B=E6=B8=B8=E2=80=9D=EF=BC=8C=E7=84=B6=E5=90=8E=E6=8E=A7=E5=88=B6=E6=B5=81=
+=E5=9B=9E=E2=80=9C=E4=B8=8A=E6=B8=B8=E2=80=9D=E3=80=82</p>
+<p>=E4=B8=8B=E9=9D=A2=E4=BB=A5 =E2=80=9CHello World=E2=80=9D =E7=9A=84=E5=
+=93=8D=E5=BA=94=E4=BD=9C=E4=B8=BA=E7=A4=BA=E4=BE=8B=EF=BC=8C=E5=BD=93=E8=AF=
+=B7=E6=B1=82=E5=BC=80=E5=A7=8B=E6=97=B6=E9=A6=96=E5=85=88=E8=AF=B7=E6=B1=82=
+=E6=B5=81=E9=80=9A=E8=BF=87 <code>x-response-time</code> =E5=92=8C <code>lo=
+gging</code> =E4=B8=AD=E9=97=B4=E4=BB=B6=EF=BC=8C=E7=84=B6=E5=90=8E=E7=BB=
+=A7=E7=BB=AD=E7=A7=BB=E4=BA=A4=E6=8E=A7=E5=88=B6=E7=BB=99 <code>response</c=
+ode> =E4=B8=AD=E9=97=B4=E4=BB=B6=E3=80=82=E5=BD=93=E4=B8=80=E4=B8=AA=E4=B8=
+=AD=E9=97=B4=E4=BB=B6=E8=B0=83=E7=94=A8 <code>next()</code>  =E5=88=99=E8=
+=AF=A5=E5=87=BD=E6=95=B0=E6=9A=82=E5=81=9C=E5=B9=B6=E5=B0=86=E6=8E=A7=E5=88=
+=B6=E4=BC=A0=E9=80=92=E7=BB=99=E5=AE=9A=E4=B9=89=E7=9A=84=E4=B8=8B=E4=B8=80=
+=E4=B8=AA=E4=B8=AD=E9=97=B4=E4=BB=B6=E3=80=82=E5=BD=93=E5=9C=A8=E4=B8=8B=E6=
+=B8=B8=E6=B2=A1=E6=9C=89=E6=9B=B4=E5=A4=9A=E7=9A=84=E4=B8=AD=E9=97=B4=E4=BB=
+=B6=E6=89=A7=E8=A1=8C=E5=90=8E=EF=BC=8C=E5=A0=86=E6=A0=88=E5=B0=86=E5=B1=95=
+=E5=BC=80=E5=B9=B6=E4=B8=94=E6=AF=8F=E4=B8=AA=E4=B8=AD=E9=97=B4=E4=BB=B6=E6=
+=81=A2=E5=A4=8D=E6=89=A7=E8=A1=8C=E5=85=B6=E4=B8=8A=E6=B8=B8=E8=A1=8C=E4=B8=
+=BA=E3=80=82</p>
+<div id=3D"example-4"><pre><code class=3D"lang-js">const Koa =3D require('k=
+oa');
+const app =3D new Koa();
+
+// logger
+
+app.use(async (ctx, next) =3D&gt; {
+  await next();
+  const rt =3D ctx.response.get('X-Response-Time');
+  console.log(`${ctx.method} ${ctx.url} - ${rt}`);
+});
+
+// x-response-time
+
+app.use(async (ctx, next) =3D&gt; {
+  const start =3D Date.now();
+  await next();
+  const ms =3D Date.now() - start;
+  ctx.set('X-Response-Time', `${ms}ms`);
+});
+
+// response
+
+app.use(async ctx =3D&gt; {
+  ctx.body =3D 'Hello World';
+});
+
+app.listen(3000);</code></pre></div><h2 id=3D"-">=E8=AE=BE=E7=BD=AE</h2>
+<p>=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E8=AE=BE=E7=BD=AE=E6=98=AF <code>ap=
+p</code> =E5=AE=9E=E4=BE=8B=E4=B8=8A=E7=9A=84=E5=B1=9E=E6=80=A7=EF=BC=8C=E7=
+=9B=AE=E5=89=8D=E6=94=AF=E6=8C=81=E5=A6=82=E4=B8=8B=EF=BC=9A</p>
+<ul>
+<li><code>app.env</code> =E9=BB=98=E8=AE=A4=E6=98=AF <strong>NODE_ENV</stro=
+ng> =E6=88=96 "development"</li>
+<li><code>app.proxy</code> =E5=BD=93=E7=9C=9F=E6=AD=A3=E7=9A=84=E4=BB=A3=E7=
+=90=86=E5=A4=B4=E5=AD=97=E6=AE=B5=E5=B0=86=E8=A2=AB=E4=BF=A1=E4=BB=BB=E6=97=
+=B6</li>
+<li><code>app.subdomainOffset</code> =E5=AF=B9=E4=BA=8E=E8=A6=81=E5=BF=BD=
+=E7=95=A5=E7=9A=84 <code>.subdomains</code> =E5=81=8F=E7=A7=BB[2]</li>
+</ul>
+<h2 id=3D"app-listen-">app.listen(...)</h2>
+<p>Koa =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E4=B8=8D=E6=98=AF HTTP =E6=9C=
+=8D=E5=8A=A1=E5=99=A8=E7=9A=841=E5=AF=B91=E5=B1=95=E7=8E=B0=E3=80=82
+=E5=8F=AF=E4=BB=A5=E5=B0=86=E4=B8=80=E4=B8=AA=E6=88=96=E5=A4=9A=E4=B8=AA Ko=
+a =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E5=AE=89=E8=A3=85=E5=9C=A8=E4=B8=80=
+=E8=B5=B7=E4=BB=A5=E5=BD=A2=E6=88=90=E5=85=B7=E6=9C=89=E5=8D=95=E4=B8=AAHTT=
+P=E6=9C=8D=E5=8A=A1=E5=99=A8=E7=9A=84=E6=9B=B4=E5=A4=A7=E5=BA=94=E7=94=A8=
+=E7=A8=8B=E5=BA=8F=E3=80=82</p>
+<p>=E5=88=9B=E5=BB=BA=E5=B9=B6=E8=BF=94=E5=9B=9E HTTP =E6=9C=8D=E5=8A=A1=E5=
+=99=A8=EF=BC=8C=E5=B0=86=E7=BB=99=E5=AE=9A=E7=9A=84=E5=8F=82=E6=95=B0=E4=BC=
+=A0=E9=80=92=E7=BB=99 <code>Server#listen()</code>=E3=80=82=E8=BF=99=E4=BA=
+=9B=E5=86=85=E5=AE=B9=E9=83=BD=E8=AE=B0=E5=BD=95=E5=9C=A8 <a href=3D"http:/=
+/nodejs.org/api/http.html#http_server_listen_port_hostname_backlog_callback=
+">nodejs.org</a>. </p>
+<p>=E4=BB=A5=E4=B8=8B=E6=98=AF=E4=B8=80=E4=B8=AA=E6=97=A0=E4=BD=9C=E7=94=A8=
+=E7=9A=84 Koa =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E8=A2=AB=E7=BB=91=E5=AE=
+=9A=E5=88=B0 <code>3000</code> =E7=AB=AF=E5=8F=A3=EF=BC=9A</p>
+<div id=3D"example-5"><pre><code class=3D"lang-js">const Koa =3D require('k=
+oa');
+const app =3D new Koa();
+app.listen(3000);</code></pre></div><p>=E8=BF=99=E9=87=8C=E7=9A=84 <code>ap=
+p.listen(...)</code> =E6=96=B9=E6=B3=95=E5=8F=AA=E6=98=AF=E4=BB=A5=E4=B8=8B=
+=E6=96=B9=E6=B3=95=E7=9A=84=E8=AF=AD=E6=B3=95=E7=B3=96:</p>
+<div id=3D"example-6"><pre><code class=3D"lang-js">const http =3D require('=
+http');
+const Koa =3D require('koa');
+const app =3D new Koa();
+http.createServer(app.callback()).listen(3000);</code></pre></div><p>=E8=BF=
+=99=E6=84=8F=E5=91=B3=E7=9D=80=E6=82=A8=E5=8F=AF=E4=BB=A5=E5=B0=86=E5=90=8C=
+=E4=B8=80=E4=B8=AA=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E5=90=8C=E6=97=B6=E4=
+=BD=9C=E4=B8=BA HTTP =E5=92=8C HTTPS =E6=88=96=E5=A4=9A=E4=B8=AA=E5=9C=B0=
+=E5=9D=80=EF=BC=9A</p>
+<div id=3D"example-7"><pre><code class=3D"lang-js">const http =3D require('=
+http');
+const https =3D require('https');
+const Koa =3D require('koa');
+const app =3D new Koa();
+http.createServer(app.callback()).listen(3000);
+https.createServer(app.callback()).listen(3001);</code></pre></div><h2 id=
+=3D"app-callback-">app.callback()</h2>
+<p>=E8=BF=94=E5=9B=9E=E9=80=82=E7=94=A8=E4=BA=8E <code>http.createServer()<=
+/code> =E6=96=B9=E6=B3=95=E7=9A=84=E5=9B=9E=E8=B0=83=E5=87=BD=E6=95=B0=E6=
+=9D=A5=E5=A4=84=E7=90=86=E8=AF=B7=E6=B1=82=E3=80=82=E4=BD=A0=E4=B9=9F=E5=8F=
+=AF=E4=BB=A5=E4=BD=BF=E7=94=A8=E6=AD=A4=E5=9B=9E=E8=B0=83=E5=87=BD=E6=95=B0=
+=E5=B0=86 koa =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E6=8C=82=E8=BD=BD=E5=88=
+=B0 Connect/Express =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E4=B8=AD=E3=80=82<=
+/p>
+<h2 id=3D"app-use-function-">app.use(function)</h2>
+<p>=E5=B0=86=E7=BB=99=E5=AE=9A=E7=9A=84=E4=B8=AD=E9=97=B4=E4=BB=B6=E6=96=B9=
+=E6=B3=95=E6=B7=BB=E5=8A=A0=E5=88=B0=E6=AD=A4=E5=BA=94=E7=94=A8=E7=A8=8B=E5=
+=BA=8F=E3=80=82=E5=8F=82=E9=98=85 <a href=3D"https://github.com/koajs/koa/w=
+iki#middleware">Middleware</a> =E8=8E=B7=E5=8F=96=E6=9B=B4=E5=A4=9A=E4=BF=
+=A1=E6=81=AF.</p>
+<h2 id=3D"app-keys-">app.keys=3D</h2>
+<p>=E8=AE=BE=E7=BD=AE=E7=AD=BE=E5=90=8D=E7=9A=84 Cookie =E5=AF=86=E9=92=A5=
+=E3=80=82</p>
+<p>=E8=BF=99=E4=BA=9B=E8=A2=AB=E4=BC=A0=E9=80=92=E7=BB=99 <a href=3D"https:=
+//github.com/jed/keygrip">KeyGrip</a>=EF=BC=8C=E4=BD=86=E6=98=AF=E4=BD=A0=
+=E4=B9=9F=E5=8F=AF=E4=BB=A5=E4=BC=A0=E9=80=92=E4=BD=A0=E8=87=AA=E5=B7=B1=E7=
+=9A=84 <code>KeyGrip</code> =E5=AE=9E=E4=BE=8B=E3=80=82</p>
+<p>=E4=BE=8B=E5=A6=82=EF=BC=8C=E4=BB=A5=E4=B8=8B=E6=98=AF=E5=8F=AF=E4=BB=A5=
+=E6=8E=A5=E5=8F=97=E7=9A=84=EF=BC=9A</p>
+<div id=3D"example-8"><pre><code class=3D"lang-js">app.keys =3D ['im a newe=
+r secret', 'i like turtle'];
+app.keys =3D new KeyGrip(['im a newer secret', 'i like turtle'], 'sha256');=
+</code></pre></div><p>=E8=BF=99=E4=BA=9B=E5=AF=86=E9=92=A5=E5=8F=AF=E4=BB=
+=A5=E5=80=92=E6=8D=A2=EF=BC=8C=E5=B9=B6=E5=9C=A8=E4=BD=BF=E7=94=A8 <code>{ =
+signed: true }</code> =E5=8F=82=E6=95=B0=E7=AD=BE=E5=90=8D Cookie =E6=97=B6=
+=E4=BD=BF=E7=94=A8=E3=80=82</p>
+<div id=3D"example-9"><pre><code class=3D"lang-js">ctx.cookies.set('name', =
+'tobi', { signed: true });</code></pre></div><h2 id=3D"app-context">app.con=
+text</h2>
+<p><code>app.context</code> =E6=98=AF=E4=BB=8E=E5=85=B6=E5=88=9B=E5=BB=BA <=
+code>ctx</code> =E7=9A=84=E5=8E=9F=E5=9E=8B=E3=80=82=E6=82=A8=E5=8F=AF=E4=
+=BB=A5=E9=80=9A=E8=BF=87=E7=BC=96=E8=BE=91 <code>app.context</code> =E4=B8=
+=BA <code>ctx</code> =E6=B7=BB=E5=8A=A0=E5=85=B6=E4=BB=96=E5=B1=9E=E6=80=A7=
+=E3=80=82=E8=BF=99=E5=AF=B9=E4=BA=8E=E5=B0=86 <code>ctx</code> =E6=B7=BB=E5=
+=8A=A0=E5=88=B0=E6=95=B4=E4=B8=AA=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E4=B8=
+=AD=E4=BD=BF=E7=94=A8=E7=9A=84=E5=B1=9E=E6=80=A7=E6=88=96=E6=96=B9=E6=B3=95=
+=E9=9D=9E=E5=B8=B8=E6=9C=89=E7=94=A8=EF=BC=8C=E8=BF=99=E5=8F=AF=E8=83=BD=E4=
+=BC=9A=E6=9B=B4=E5=8A=A0=E6=9C=89=E6=95=88=EF=BC=88=E4=B8=8D=E9=9C=80=E8=A6=
+=81=E4=B8=AD=E9=97=B4=E4=BB=B6=EF=BC=89=E5=92=8C/=E6=88=96 =E6=9B=B4=E7=AE=
+=80=E5=8D=95=EF=BC=88=E6=9B=B4=E5=B0=91=E7=9A=84 <code>require()</code>=EF=
+=BC=89=EF=BC=8C=E8=80=8C=E6=9B=B4=E5=A4=9A=E5=9C=B0=E4=BE=9D=E8=B5=96=E4=BA=
+=8E<code>ctx</code>=EF=BC=8C=E8=BF=99=E5=8F=AF=E4=BB=A5=E8=A2=AB=E8=AE=A4=
+=E4=B8=BA=E6=98=AF=E4=B8=80=E7=A7=8D=E5=8F=8D=E6=A8=A1=E5=BC=8F=E3=80=82</p=
+>
+<p>=E4=BE=8B=E5=A6=82=EF=BC=8C=E8=A6=81=E4=BB=8E <code>ctx</code> =E6=B7=BB=
+=E5=8A=A0=E5=AF=B9=E6=95=B0=E6=8D=AE=E5=BA=93=E7=9A=84=E5=BC=95=E7=94=A8=EF=
+=BC=9A</p>
+<div id=3D"example-10"><pre><code class=3D"lang-js">app.context.db =3D db()=
+;
+
+app.use(async ctx =3D&gt; {
+  console.log(ctx.db);
+});</code></pre></div><p>=E6=B3=A8=E6=84=8F:</p>
+<ul>
+<li><code>ctx</code> =E4=B8=8A=E7=9A=84=E8=AE=B8=E5=A4=9A=E5=B1=9E=E6=80=A7=
+=E9=83=BD=E6=98=AF=E4=BD=BF=E7=94=A8 <code>getter</code> =EF=BC=8C<code>set=
+ter</code> =E5=92=8C <code>Object.defineProperty()</code> =E5=AE=9A=E4=B9=
+=89=E7=9A=84=E3=80=82=E4=BD=A0=E5=8F=AA=E8=83=BD=E9=80=9A=E8=BF=87=E5=9C=A8=
+ <code>app.context</code> =E4=B8=8A=E4=BD=BF=E7=94=A8 <code>Object.definePr=
+operty()</code> =E6=9D=A5=E7=BC=96=E8=BE=91=E8=BF=99=E4=BA=9B=E5=B1=9E=E6=
+=80=A7=EF=BC=88=E4=B8=8D=E6=8E=A8=E8=8D=90=EF=BC=89=E3=80=82=E6=9F=A5=E9=98=
+=85 <a href=3D"https://github.com/koajs/koa/issues/652">https://github.com/=
+koajs/koa/issues/652</a>.</li>
+<li>=E5=AE=89=E8=A3=85=E7=9A=84=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E7=9B=
+=AE=E5=89=8D=E4=BD=BF=E7=94=A8=E5=85=B6=E7=88=B6=E7=BA=A7=E7=9A=84 <code>ct=
+x</code> =E5=92=8C=E8=AE=BE=E7=BD=AE=E3=80=82 =E5=9B=A0=E6=AD=A4=EF=BC=8C=
+=E5=AE=89=E8=A3=85=E7=9A=84=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E5=8F=AA=E6=
+=98=AF=E4=B8=80=E7=BB=84=E4=B8=AD=E9=97=B4=E4=BB=B6=E3=80=82</li>
+</ul>
+<h2 id=3D"-">=E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86</h2>
+<p>=E9=BB=98=E8=AE=A4=E6=83=85=E5=86=B5=E4=B8=8B=EF=BC=8C=E5=B0=86=E6=89=80=
+=E6=9C=89=E9=94=99=E8=AF=AF=E8=BE=93=E5=87=BA=E5=88=B0 stderr=EF=BC=8C=E9=
+=99=A4=E9=9D=9E <code>app.silent</code> =E4=B8=BA <code>true</code>=E3=80=
+=82
+=E5=BD=93 <code>err.status</code> =E6=98=AF <code>404</code> =E6=88=96 <cod=
+e>err.expose</code> =E6=98=AF <code>true</code> =E6=97=B6=E9=BB=98=E8=AE=A4=
+=E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86=E7=A8=8B=E5=BA=8F=E4=B9=9F=E4=B8=8D=E4=
+=BC=9A=E8=BE=93=E5=87=BA=E9=94=99=E8=AF=AF=E3=80=82
+=E8=A6=81=E6=89=A7=E8=A1=8C=E8=87=AA=E5=AE=9A=E4=B9=89=E9=94=99=E8=AF=AF=E5=
+=A4=84=E7=90=86=E9=80=BB=E8=BE=91=EF=BC=8C=E5=A6=82=E9=9B=86=E4=B8=AD=E5=BC=
+=8F=E6=97=A5=E5=BF=97=E8=AE=B0=E5=BD=95=EF=BC=8C=E6=82=A8=E5=8F=AF=E4=BB=A5=
+=E6=B7=BB=E5=8A=A0=E4=B8=80=E4=B8=AA =E2=80=9Cerror=E2=80=9D =E4=BA=8B=E4=
+=BB=B6=E4=BE=A6=E5=90=AC=E5=99=A8=EF=BC=9A</p>
+<div id=3D"example-11"><pre><code class=3D"lang-js">app.on('error', err =3D=
+&gt; {
+  log.error('server error', err)
+});</code></pre></div><p>=E5=A6=82=E6=9E=9C req/res =E6=9C=9F=E9=97=B4=E5=
+=87=BA=E7=8E=B0=E9=94=99=E8=AF=AF=EF=BC=8C=E5=B9=B6=E4=B8=94 _=E6=97=A0=E6=
+=B3=95_ =E5=93=8D=E5=BA=94=E5=AE=A2=E6=88=B7=E7=AB=AF=EF=BC=8C<code>Context=
+</code>=E5=AE=9E=E4=BE=8B=E4=BB=8D=E7=84=B6=E8=A2=AB=E4=BC=A0=E9=80=92=EF=
+=BC=9A</p>
+<div id=3D"example-12"><pre><code class=3D"lang-js">app.on('error', (err, c=
+tx) =3D&gt; {
+  log.error('server error', err, ctx)
+});</code></pre></div><p>=E5=BD=93=E5=8F=91=E7=94=9F=E9=94=99=E8=AF=AF _=E5=
+=B9=B6=E4=B8=94_ =E4=BB=8D=E7=84=B6=E5=8F=AF=E4=BB=A5=E5=93=8D=E5=BA=94=E5=
+=AE=A2=E6=88=B7=E7=AB=AF=E6=97=B6=EF=BC=8C=E4=B9=9F=E6=B2=A1=E6=9C=89=E6=95=
+=B0=E6=8D=AE=E8=A2=AB=E5=86=99=E5=85=A5 socket =E4=B8=AD=EF=BC=8CKoa =E5=B0=
+=86=E7=94=A8=E4=B8=80=E4=B8=AA 500 =E2=80=9C=E5=86=85=E9=83=A8=E6=9C=8D=E5=
+=8A=A1=E5=99=A8=E9=94=99=E8=AF=AF=E2=80=9D =E8=BF=9B=E8=A1=8C=E9=80=82=E5=
+=BD=93=E7=9A=84=E5=93=8D=E5=BA=94=E3=80=82=E5=9C=A8=E4=BB=BB=E4=B8=80=E6=83=
+=85=E5=86=B5=E4=B8=8B=EF=BC=8C=E4=B8=BA=E4=BA=86=E8=AE=B0=E5=BD=95=E7=9B=AE=
+=E7=9A=84=EF=BC=8C=E9=83=BD=E4=BC=9A=E5=8F=91=E5=87=BA=E5=BA=94=E7=94=A8=E7=
+=BA=A7 =E2=80=9C=E9=94=99=E8=AF=AF=E2=80=9D=E3=80=82</p>
+</div></section><section><div class=3D"content"><h1 id=3D"-context-">=E4=B8=
+=8A=E4=B8=8B=E6=96=87(Context)</h1>
+<p>Koa Context =E5=B0=86 node =E7=9A=84 <code>request</code> =E5=92=8C <cod=
+e>response</code> =E5=AF=B9=E8=B1=A1=E5=B0=81=E8=A3=85=E5=88=B0=E5=8D=95=E4=
+=B8=AA=E5=AF=B9=E8=B1=A1=E4=B8=AD=EF=BC=8C=E4=B8=BA=E7=BC=96=E5=86=99 Web =
+=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E5=92=8C API =E6=8F=90=E4=BE=9B=E4=BA=
+=86=E8=AE=B8=E5=A4=9A=E6=9C=89=E7=94=A8=E7=9A=84=E6=96=B9=E6=B3=95=E3=80=82
+=E8=BF=99=E4=BA=9B=E6=93=8D=E4=BD=9C=E5=9C=A8 HTTP =E6=9C=8D=E5=8A=A1=E5=99=
+=A8=E5=BC=80=E5=8F=91=E4=B8=AD=E9=A2=91=E7=B9=81=E4=BD=BF=E7=94=A8=EF=BC=8C=
+=E5=AE=83=E4=BB=AC=E8=A2=AB=E6=B7=BB=E5=8A=A0=E5=88=B0=E6=AD=A4=E7=BA=A7=E5=
+=88=AB=E8=80=8C=E4=B8=8D=E6=98=AF=E6=9B=B4=E9=AB=98=E7=BA=A7=E5=88=AB=E7=9A=
+=84=E6=A1=86=E6=9E=B6=EF=BC=8C=E8=BF=99=E5=B0=86=E5=BC=BA=E5=88=B6=E4=B8=AD=
+=E9=97=B4=E4=BB=B6=E9=87=8D=E6=96=B0=E5=AE=9E=E7=8E=B0=E6=AD=A4=E9=80=9A=E7=
+=94=A8=E5=8A=9F=E8=83=BD=E3=80=82</p>
+<p>_=E6=AF=8F=E4=B8=AA_ =E8=AF=B7=E6=B1=82=E9=83=BD=E5=B0=86=E5=88=9B=E5=BB=
+=BA=E4=B8=80=E4=B8=AA <code>Context</code>=EF=BC=8C=E5=B9=B6=E5=9C=A8=E4=B8=
+=AD=E9=97=B4=E4=BB=B6=E4=B8=AD=E4=BD=9C=E4=B8=BA=E6=8E=A5=E6=94=B6=E5=99=A8=
+=E5=BC=95=E7=94=A8=EF=BC=8C=E6=88=96=E8=80=85 <code>ctx</code> =E6=A0=87=E8=
+=AF=86=E7=AC=A6=EF=BC=8C=E5=A6=82=E4=BB=A5=E4=B8=8B=E4=BB=A3=E7=A0=81=E7=89=
+=87=E6=AE=B5=E6=89=80=E7=A4=BA=EF=BC=9A</p>
+<div id=3D"example-13"><pre><code class=3D"lang-js">app.use(async ctx =3D&g=
+t; {
+  ctx; // =E8=BF=99=E6=98=AF Context
+  ctx.request; // =E8=BF=99=E6=98=AF koa Request
+  ctx.response; // =E8=BF=99=E6=98=AF koa Response
+});</code></pre></div><p>=E4=B8=BA=E6=96=B9=E4=BE=BF=E8=B5=B7=E8=A7=81=E8=
+=AE=B8=E5=A4=9A=E4=B8=8A=E4=B8=8B=E6=96=87=E7=9A=84=E8=AE=BF=E9=97=AE=E5=99=
+=A8=E5=92=8C=E6=96=B9=E6=B3=95=E7=9B=B4=E6=8E=A5=E5=A7=94=E6=89=98=E7=BB=99=
+=E5=AE=83=E4=BB=AC=E7=9A=84 <code>ctx.request</code>=E6=88=96 <code>ctx.res=
+ponse</code> =EF=BC=8C=E4=B8=8D=E7=84=B6=E7=9A=84=E8=AF=9D=E5=AE=83=E4=BB=
+=AC=E6=98=AF=E7=9B=B8=E5=90=8C=E7=9A=84=E3=80=82
+=E4=BE=8B=E5=A6=82 <code>ctx.type</code> =E5=92=8C <code>ctx.length</code> =
+=E5=A7=94=E6=89=98=E7=BB=99 <code>response</code> =E5=AF=B9=E8=B1=A1=EF=BC=
+=8C<code>ctx.path</code> =E5=92=8C <code>ctx.method</code> =E5=A7=94=E6=89=
+=98=E7=BB=99 <code>request</code>=E3=80=82</p>
+<h2 id=3D"api">API</h2>
+<p>  <code>Context</code> =E5=85=B7=E4=BD=93=E6=96=B9=E6=B3=95=E5=92=8C=E8=
+=AE=BF=E9=97=AE=E5=99=A8.</p>
+<h3 id=3D"ctx-req">ctx.req</h3>
+<p>  Node =E7=9A=84 <code>request</code> =E5=AF=B9=E8=B1=A1.</p>
+<h3 id=3D"ctx-res">ctx.res</h3>
+<p>  Node =E7=9A=84 <code>response</code> =E5=AF=B9=E8=B1=A1.</p>
+<p>  =E7=BB=95=E8=BF=87 Koa =E7=9A=84 response =E5=A4=84=E7=90=86=E6=98=AF =
+<strong>=E4=B8=8D=E8=A2=AB=E6=94=AF=E6=8C=81=E7=9A=84</strong>. =E5=BA=94=
+=E9=81=BF=E5=85=8D=E4=BD=BF=E7=94=A8=E4=BB=A5=E4=B8=8B node =E5=B1=9E=E6=80=
+=A7=EF=BC=9A</p>
+<ul>
+<li><code>res.statusCode</code></li>
+<li><code>res.writeHead()</code></li>
+<li><code>res.write()</code></li>
+<li><code>res.end()</code></li>
+</ul>
+<h3 id=3D"ctx-request">ctx.request</h3>
+<p>  koa =E7=9A=84 <code>Request</code> =E5=AF=B9=E8=B1=A1.</p>
+<h3 id=3D"ctx-response">ctx.response</h3>
+<p>  koa =E7=9A=84 <code>Response</code> =E5=AF=B9=E8=B1=A1.</p>
+<h3 id=3D"ctx-state">ctx.state</h3>
+<p>=E6=8E=A8=E8=8D=90=E7=9A=84=E5=91=BD=E5=90=8D=E7=A9=BA=E9=97=B4=EF=BC=8C=
+=E7=94=A8=E4=BA=8E=E9=80=9A=E8=BF=87=E4=B8=AD=E9=97=B4=E4=BB=B6=E4=BC=A0=E9=
+=80=92=E4=BF=A1=E6=81=AF=E5=92=8C=E4=BD=A0=E7=9A=84=E5=89=8D=E7=AB=AF=E8=A7=
+=86=E5=9B=BE=E3=80=82</p>
+<div id=3D"example-14"><pre><code class=3D"lang-js">ctx.state.user =3D awai=
+t User.find(id);</code></pre></div><h3 id=3D"ctx-app">ctx.app</h3>
+<p>  =E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E5=AE=9E=E4=BE=8B=E5=BC=95=E7=94=
+=A8</p>
+<h3 id=3D"ctx-app-emit">ctx.app.emit</h3>
+<p>  Koa =E5=BA=94=E7=94=A8=E6=89=A9=E5=B1=95=E4=BA=86=E5=86=85=E9=83=A8 <a=
+ href=3D"https://nodejs.org/dist/latest-v11.x/docs/api/events.html">EventEm=
+itter</a>=E3=80=82<code>ctx.app.emit</code> =E5=8F=91=E5=87=BA=E4=B8=80=E4=
+=B8=AA=E7=B1=BB=E5=9E=8B=E7=94=B1=E7=AC=AC=E4=B8=80=E4=B8=AA=E5=8F=82=E6=95=
+=B0=E5=AE=9A=E4=B9=89=E7=9A=84=E4=BA=8B=E4=BB=B6=E3=80=82=E5=AF=B9=E4=BA=8E=
+=E6=AF=8F=E4=B8=AA=E4=BA=8B=E4=BB=B6=EF=BC=8C=E6=82=A8=E5=8F=AF=E4=BB=A5=E8=
+=BF=9E=E6=8E=A5 "listeners"=EF=BC=8C=E8=BF=99=E6=98=AF=E5=9C=A8=E5=8F=91=E5=
+=87=BA=E4=BA=8B=E4=BB=B6=E6=97=B6=E8=B0=83=E7=94=A8=E7=9A=84=E5=87=BD=E6=95=
+=B0=E3=80=82=E6=9C=89=E5=85=B3=E6=9B=B4=E5=A4=9A=E4=BF=A1=E6=81=AF=EF=BC=8C=
+=E8=AF=B7=E5=8F=82=E9=98=85<a href=3D"https://koajs.com/#error-handling">=
+=E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86=E6=96=87=E6=A1=A3</a>=E3=80=82</p>
+<h3 id=3D"ctx-cookies-get-name-options-">ctx.cookies.get(name, [options])</=
+h3>
+<p>   =E9=80=9A=E8=BF=87 <code>options</code> =E8=8E=B7=E5=8F=96 cookie <co=
+de>name</code>:</p>
+<ul>
+<li><code>signed</code> =E6=89=80=E8=AF=B7=E6=B1=82=E7=9A=84cookie=E5=BA=94=
+=E8=AF=A5=E8=A2=AB=E7=AD=BE=E5=90=8D</li>
+</ul>
+<p>koa =E4=BD=BF=E7=94=A8 <a href=3D"https://github.com/jed/cookies">cookie=
+s</a> =E6=A8=A1=E5=9D=97=EF=BC=8C=E5=85=B6=E4=B8=AD=E5=8F=AA=E9=9C=80=E4=BC=
+=A0=E9=80=92=E5=8F=82=E6=95=B0=E3=80=82</p>
+<h3 id=3D"ctx-cookies-set-name-value-options-">ctx.cookies.set(name, value,=
+ [options])</h3>
+<p>  =E9=80=9A=E8=BF=87 <code>options</code> =E8=AE=BE=E7=BD=AE cookie <cod=
+e>name</code> =E7=9A=84 <code>value</code> :</p>
+<ul>
+<li><code>maxAge</code> =E4=B8=80=E4=B8=AA=E6=95=B0=E5=AD=97=E8=A1=A8=E7=A4=
+=BA=E4=BB=8E Date.now() =E5=BE=97=E5=88=B0=E7=9A=84=E6=AF=AB=E7=A7=92=E6=95=
+=B0</li>
+<li><code>signed</code> cookie =E7=AD=BE=E5=90=8D=E5=80=BC</li>
+<li><code>expires</code> cookie =E8=BF=87=E6=9C=9F=E7=9A=84 <code>Date</cod=
+e></li>
+<li><code>path</code> cookie =E8=B7=AF=E5=BE=84, =E9=BB=98=E8=AE=A4=E6=98=
+=AF<code>'/'</code></li>
+<li><code>domain</code> cookie =E5=9F=9F=E5=90=8D</li>
+<li><code>secure</code> =E5=AE=89=E5=85=A8 cookie</li>
+<li><code>httpOnly</code> =E6=9C=8D=E5=8A=A1=E5=99=A8=E5=8F=AF=E8=AE=BF=E9=
+=97=AE cookie,  =E9=BB=98=E8=AE=A4=E6=98=AF <strong>true</strong></li>
+<li><code>overwrite</code> =E4=B8=80=E4=B8=AA=E5=B8=83=E5=B0=94=E5=80=BC=EF=
+=BC=8C=E8=A1=A8=E7=A4=BA=E6=98=AF=E5=90=A6=E8=A6=86=E7=9B=96=E4=BB=A5=E5=89=
+=8D=E8=AE=BE=E7=BD=AE=E7=9A=84=E5=90=8C=E5=90=8D=E7=9A=84 cookie (=E9=BB=98=
+=E8=AE=A4=E6=98=AF <strong>false</strong>). =E5=A6=82=E6=9E=9C=E6=98=AF tru=
+e, =E5=9C=A8=E5=90=8C=E4=B8=80=E4=B8=AA=E8=AF=B7=E6=B1=82=E4=B8=AD=E8=AE=BE=
+=E7=BD=AE=E7=9B=B8=E5=90=8C=E5=90=8D=E7=A7=B0=E7=9A=84=E6=89=80=E6=9C=89 Co=
+okie=EF=BC=88=E4=B8=8D=E7=AE=A1=E8=B7=AF=E5=BE=84=E6=88=96=E5=9F=9F=EF=BC=
+=89=E6=98=AF=E5=90=A6=E5=9C=A8=E8=AE=BE=E7=BD=AE=E6=AD=A4Cookie =E6=97=B6=
+=E4=BB=8E Set-Cookie =E6=A0=87=E5=A4=B4=E4=B8=AD=E8=BF=87=E6=BB=A4=E6=8E=89=
+=E3=80=82</li>
+</ul>
+<p>koa =E4=BD=BF=E7=94=A8=E4=BC=A0=E9=80=92=E7=AE=80=E5=8D=95=E5=8F=82=E6=
+=95=B0=E7=9A=84 <a href=3D"https://github.com/jed/cookies">cookies</a> =E6=
+=A8=A1=E5=9D=97=E3=80=82</p>
+<h3 id=3D"ctx-throw-status-msg-properties-">ctx.throw([status], [msg], [pro=
+perties])</h3>
+<p>Helper =E6=96=B9=E6=B3=95=E6=8A=9B=E5=87=BA=E4=B8=80=E4=B8=AA <code>.sta=
+tus</code> =E5=B1=9E=E6=80=A7=E9=BB=98=E8=AE=A4=E4=B8=BA <code>500</code> =
+=E7=9A=84=E9=94=99=E8=AF=AF=EF=BC=8C=E8=BF=99=E5=B0=86=E5=85=81=E8=AE=B8 Ko=
+a =E5=81=9A=E5=87=BA=E9=80=82=E5=BD=93=E5=9C=B0=E5=93=8D=E5=BA=94=E3=80=82<=
+/p>
+<p>=E5=85=81=E8=AE=B8=E4=BB=A5=E4=B8=8B=E7=BB=84=E5=90=88=EF=BC=9A</p>
+<div id=3D"example-15"><pre><code class=3D"lang-js">ctx.throw(400);
+ctx.throw(400, 'name required');
+ctx.throw(400, 'name required', { user: user });</code></pre></div><p>  =E4=
+=BE=8B=E5=A6=82 <code>ctx.throw(400, 'name required')</code> =E7=AD=89=E6=
+=95=88=E4=BA=8E:</p>
+<div id=3D"example-16"><pre><code class=3D"lang-js">const err =3D new Error=
+('name required');
+err.status =3D 400;
+err.expose =3D true;
+throw err;</code></pre></div><p>=E8=AF=B7=E6=B3=A8=E6=84=8F=EF=BC=8C=E8=BF=
+=99=E4=BA=9B=E6=98=AF=E7=94=A8=E6=88=B7=E7=BA=A7=E9=94=99=E8=AF=AF=EF=BC=8C=
+=E5=B9=B6=E7=94=A8 <code>err.expose</code> =E6=A0=87=E8=AE=B0=EF=BC=8C=E8=
+=BF=99=E6=84=8F=E5=91=B3=E7=9D=80=E6=B6=88=E6=81=AF=E9=80=82=E7=94=A8=E4=BA=
+=8E=E5=AE=A2=E6=88=B7=E7=AB=AF=E5=93=8D=E5=BA=94=EF=BC=8C=E8=BF=99=E9=80=9A=
+=E5=B8=B8=E4=B8=8D=E6=98=AF=E9=94=99=E8=AF=AF=E6=B6=88=E6=81=AF=E7=9A=84=E5=
+=86=85=E5=AE=B9=EF=BC=8C=E5=9B=A0=E4=B8=BA=E6=82=A8=E4=B8=8D=E6=83=B3=E6=B3=
+=84=E6=BC=8F=E6=95=85=E9=9A=9C=E8=AF=A6=E7=BB=86=E4=BF=A1=E6=81=AF=E3=80=82=
+</p>
+<p>=E4=BD=A0=E5=8F=AF=E4=BB=A5=E6=A0=B9=E6=8D=AE=E9=9C=80=E8=A6=81=E5=B0=86=
+ <code>properties</code> =E5=AF=B9=E8=B1=A1=E4=BC=A0=E9=80=92=E5=88=B0=E9=
+=94=99=E8=AF=AF=E4=B8=AD=EF=BC=8C=E5=AF=B9=E4=BA=8E=E8=A3=85=E8=BD=BD=E4=B8=
+=8A=E4=BC=A0=E7=BB=99=E8=AF=B7=E6=B1=82=E8=80=85=E7=9A=84=E6=9C=BA=E5=99=A8=
+=E5=8F=8B=E5=A5=BD=E7=9A=84=E9=94=99=E8=AF=AF=E6=98=AF=E6=9C=89=E7=94=A8=E7=
+=9A=84=E3=80=82=E8=BF=99=E7=94=A8=E4=BA=8E=E4=BF=AE=E9=A5=B0=E5=85=B6=E4=BA=
+=BA=E6=9C=BA=E5=8F=8B=E5=A5=BD=E5=9E=8B=E9=94=99=E8=AF=AF=E5=B9=B6=E5=90=91=
+=E4=B8=8A=E6=B8=B8=E7=9A=84=E8=AF=B7=E6=B1=82=E8=80=85=E6=8A=A5=E5=91=8A=E9=
+=9D=9E=E5=B8=B8=E6=9C=89=E7=94=A8=E3=80=82</p>
+<div id=3D"example-17"><pre><code class=3D"lang-js">ctx.throw(401, 'access_=
+denied', { user: user });</code></pre></div><p>koa =E4=BD=BF=E7=94=A8 <a hr=
+ef=3D"https://github.com/jshttp/http-errors">http-errors</a> =E6=9D=A5=E5=
+=88=9B=E5=BB=BA=E9=94=99=E8=AF=AF=E3=80=82<code>status</code> =E5=8F=AA=E5=
+=BA=94=E4=BD=9C=E4=B8=BA=E7=AC=AC=E4=B8=80=E4=B8=AA=E5=8F=82=E6=95=B0=E4=BC=
+=A0=E9=80=92=E3=80=82</p>
+<h3 id=3D"ctx-assert-value-status-msg-properties-">ctx.assert(value, [statu=
+s], [msg], [properties])</h3>
+<p>=E5=BD=93 <code>!value</code> =E6=97=B6=EF=BC=8CHelper =E6=96=B9=E6=B3=
+=95=E6=8A=9B=E5=87=BA=E7=B1=BB=E4=BC=BC=E4=BA=8E <code>.throw()</code> =E7=
+=9A=84=E9=94=99=E8=AF=AF=E3=80=82=E8=BF=99=E4=B8=8E node =E7=9A=84 <a href=
+=3D"http://nodejs.org/api/assert.html">assert()</a> =E6=96=B9=E6=B3=95=E7=
+=B1=BB=E4=BC=BC.</p>
+<div id=3D"example-18"><pre><code class=3D"lang-js">ctx.assert(ctx.state.us=
+er, 401, 'User not found. Please login!');</code></pre></div><p>koa =E4=BD=
+=BF=E7=94=A8 <a href=3D"https://github.com/jshttp/http-assert">http-assert<=
+/a> =E4=BD=9C=E4=B8=BA=E6=96=AD=E8=A8=80=E3=80=82</p>
+<h3 id=3D"ctx-respond">ctx.respond</h3>
+<p>=E4=B8=BA=E4=BA=86=E7=BB=95=E8=BF=87 Koa =E7=9A=84=E5=86=85=E7=BD=AE res=
+ponse =E5=A4=84=E7=90=86=EF=BC=8C=E4=BD=A0=E5=8F=AF=E4=BB=A5=E6=98=BE=E5=BC=
+=8F=E8=AE=BE=E7=BD=AE <code>ctx.respond =3D false;</code>=E3=80=82 =E5=A6=
+=82=E6=9E=9C=E6=82=A8=E6=83=B3=E8=A6=81=E5=86=99=E5=85=A5=E5=8E=9F=E5=A7=8B=
+=E7=9A=84 <code>res</code> =E5=AF=B9=E8=B1=A1=E8=80=8C=E4=B8=8D=E6=98=AF=E8=
+=AE=A9 Koa =E5=A4=84=E7=90=86=E4=BD=A0=E7=9A=84 response=EF=BC=8C=E8=AF=B7=
+=E4=BD=BF=E7=94=A8=E6=AD=A4=E5=8F=82=E6=95=B0=E3=80=82</p>
+<p>=E8=AF=B7=E6=B3=A8=E6=84=8F=EF=BC=8CKoa _=E4=B8=8D_ =E6=94=AF=E6=8C=81=
+=E4=BD=BF=E7=94=A8=E6=AD=A4=E5=8A=9F=E8=83=BD=E3=80=82=E8=BF=99=E5=8F=AF=E8=
+=83=BD=E4=BC=9A=E7=A0=B4=E5=9D=8F Koa =E4=B8=AD=E9=97=B4=E4=BB=B6=E5=92=8C =
+Koa =E6=9C=AC=E8=BA=AB=E7=9A=84=E9=A2=84=E6=9C=9F=E5=8A=9F=E8=83=BD=E3=80=
+=82=E4=BD=BF=E7=94=A8=E8=BF=99=E4=B8=AA=E5=B1=9E=E6=80=A7=E8=A2=AB=E8=AE=A4=
+=E4=B8=BA=E6=98=AF=E4=B8=80=E4=B8=AA hack=EF=BC=8C=E5=8F=AA=E6=98=AF=E4=BE=
+=BF=E4=BA=8E=E9=82=A3=E4=BA=9B=E5=B8=8C=E6=9C=9B=E5=9C=A8 Koa =E4=B8=AD=E4=
+=BD=BF=E7=94=A8=E4=BC=A0=E7=BB=9F=E7=9A=84 <code>fn(req, res)</code> =E5=8A=
+=9F=E8=83=BD=E5=92=8C=E4=B8=AD=E9=97=B4=E4=BB=B6=E7=9A=84=E4=BA=BA=E3=80=82=
+</p>
+<h2 id=3D"request-">Request =E5=88=AB=E5=90=8D</h2>
+<p>=E4=BB=A5=E4=B8=8B=E8=AE=BF=E9=97=AE=E5=99=A8=E5=92=8C <a href=3D"https:=
+//koa.bootcss.com/#request">Request</a> =E5=88=AB=E5=90=8D=E7=AD=89=E6=95=
+=88=EF=BC=9A</p>
+<ul>
+<li><code>ctx.header</code></li>
+<li><code>ctx.headers</code></li>
+<li><code>ctx.method</code></li>
+<li><code>ctx.method=3D</code></li>
+<li><code>ctx.url</code></li>
+<li><code>ctx.url=3D</code></li>
+<li><code>ctx.originalUrl</code></li>
+<li><code>ctx.origin</code></li>
+<li><code>ctx.href</code></li>
+<li><code>ctx.path</code></li>
+<li><code>ctx.path=3D</code></li>
+<li><code>ctx.query</code></li>
+<li><code>ctx.query=3D</code></li>
+<li><code>ctx.querystring</code></li>
+<li><code>ctx.querystring=3D</code></li>
+<li><code>ctx.host</code></li>
+<li><code>ctx.hostname</code></li>
+<li><code>ctx.fresh</code></li>
+<li><code>ctx.stale</code></li>
+<li><code>ctx.socket</code></li>
+<li><code>ctx.protocol</code></li>
+<li><code>ctx.secure</code></li>
+<li><code>ctx.ip</code></li>
+<li><code>ctx.ips</code></li>
+<li><code>ctx.subdomains</code></li>
+<li><code><span class=3D"textlinkplus"><a class=3D"textlinkplus" href=3D"ht=
+tp://ctx.is/">ctx.is</a>()</span></code></li>
+<li><code>ctx.accepts()</code></li>
+<li><code>ctx.acceptsEncodings()</code></li>
+<li><code>ctx.acceptsCharsets()</code></li>
+<li><code>ctx.acceptsLanguages()</code></li>
+<li><code>ctx.get()</code></li>
+</ul>
+<h2 id=3D"response-">Response =E5=88=AB=E5=90=8D</h2>
+<p>=E4=BB=A5=E4=B8=8B=E8=AE=BF=E9=97=AE=E5=99=A8=E5=92=8C <a href=3D"https:=
+//koa.bootcss.com/#response">Response</a> =E5=88=AB=E5=90=8D=E7=AD=89=E6=95=
+=88=EF=BC=9A</p>
+<ul>
+<li><code>ctx.body</code></li>
+<li><code>ctx.body=3D</code></li>
+<li><code>ctx.status</code></li>
+<li><code>ctx.status=3D</code></li>
+<li><code>ctx.message</code></li>
+<li><code>ctx.message=3D</code></li>
+<li><code>ctx.length=3D</code></li>
+<li><code>ctx.length</code></li>
+<li><code>ctx.type=3D</code></li>
+<li><code>ctx.type</code></li>
+<li><code>ctx.headerSent</code></li>
+<li><code>ctx.redirect()</code></li>
+<li><code>ctx.attachment()</code></li>
+<li><code>ctx.set()</code></li>
+<li><code>ctx.append()</code></li>
+<li><code>ctx.remove()</code></li>
+<li><code>ctx.lastModified=3D</code></li>
+<li><code>ctx.etag=3D</code></li>
+</ul>
+</div></section><section><div class=3D"content"><h1 id=3D"-request-">=E8=AF=
+=B7=E6=B1=82(Request)</h1>
+<p>Koa <code>Request</code> =E5=AF=B9=E8=B1=A1=E6=98=AF=E5=9C=A8 node =E7=
+=9A=84 vanilla =E8=AF=B7=E6=B1=82=E5=AF=B9=E8=B1=A1=E4=B9=8B=E4=B8=8A=E7=9A=
+=84=E6=8A=BD=E8=B1=A1=EF=BC=8C=E6=8F=90=E4=BE=9B=E4=BA=86=E8=AF=B8=E5=A4=9A=
+=E5=AF=B9 HTTP =E6=9C=8D=E5=8A=A1=E5=99=A8=E5=BC=80=E5=8F=91=E6=9C=89=E7=94=
+=A8=E7=9A=84=E5=8A=9F=E8=83=BD=E3=80=82</p>
+<h2 id=3D"api">API</h2>
+<h3 id=3D"request-header">request.header</h3>
+<p>=E8=AF=B7=E6=B1=82=E6=A0=87=E5=A4=B4=E5=AF=B9=E8=B1=A1=E3=80=82</p>
+<h3 id=3D"request-header-">request.header=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E8=AF=B7=E6=B1=82=E6=A0=87=E5=A4=B4=E5=AF=B9=E8=B1=A1=
+=E3=80=82</p>
+<h3 id=3D"request-headers">request.headers</h3>
+<p>=E8=AF=B7=E6=B1=82=E6=A0=87=E5=A4=B4=E5=AF=B9=E8=B1=A1=E3=80=82=E5=88=AB=
+=E5=90=8D=E4=B8=BA <code>request.header</code>.</p>
+<h3 id=3D"request-headers-">request.headers=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E8=AF=B7=E6=B1=82=E6=A0=87=E5=A4=B4=E5=AF=B9=E8=B1=A1=
+=E3=80=82=E5=88=AB=E5=90=8D=E4=B8=BA <code>request.header=3D</code>.</p>
+<h3 id=3D"request-method">request.method</h3>
+<p>=E8=AF=B7=E6=B1=82=E6=96=B9=E6=B3=95=E3=80=82</p>
+<h3 id=3D"request-method-">request.method=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E8=AF=B7=E6=B1=82=E6=96=B9=E6=B3=95=EF=BC=8C=E5=AF=B9=
+=E4=BA=8E=E5=AE=9E=E7=8E=B0=E8=AF=B8=E5=A6=82 <code>methodOverride()</code>=
+ =E7=9A=84=E4=B8=AD=E9=97=B4=E4=BB=B6=E6=98=AF=E6=9C=89=E7=94=A8=E7=9A=84=
+=E3=80=82</p>
+<h3 id=3D"request-length">request.length</h3>
+<p>=E8=BF=94=E5=9B=9E=E4=BB=A5=E6=95=B0=E5=AD=97=E8=BF=94=E5=9B=9E=E8=AF=B7=
+=E6=B1=82=E7=9A=84 Content-Length=EF=BC=8C=E6=88=96 <code>undefined</code>=
+=E3=80=82</p>
+<h3 id=3D"request-url">request.url</h3>
+<p>=E8=8E=B7=E5=8F=96=E8=AF=B7=E6=B1=82 URL.</p>
+<h3 id=3D"request-url-">request.url=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E8=AF=B7=E6=B1=82 URL, =E5=AF=B9 url =E9=87=8D=E5=86=
+=99=E6=9C=89=E7=94=A8=E3=80=82</p>
+<h3 id=3D"request-originalurl">request.originalUrl</h3>
+<p>=E8=8E=B7=E5=8F=96=E8=AF=B7=E6=B1=82=E5=8E=9F=E5=A7=8BURL=E3=80=82</p>
+<h3 id=3D"request-origin">request.origin</h3>
+<p>=E8=8E=B7=E5=8F=96URL=E7=9A=84=E6=9D=A5=E6=BA=90=EF=BC=8C=E5=8C=85=E6=8B=
+=AC <code>protocol</code> =E5=92=8C <code>host</code>=E3=80=82</p>
+<div id=3D"example-19"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">ctx.request.origin
+// =3D&gt; <a class=3D"textlinkplus" href=3D"http://example.com/">http://ex=
+ample.com</a></span></code></pre></div><h3 id=3D"request-href">request.href=
+</h3>
+<p>=E8=8E=B7=E5=8F=96=E5=AE=8C=E6=95=B4=E7=9A=84=E8=AF=B7=E6=B1=82URL=EF=BC=
+=8C=E5=8C=85=E6=8B=AC <code>protocol</code>=EF=BC=8C<code>host</code> =E5=
+=92=8C <code>url</code>=E3=80=82</p>
+<div id=3D"example-20"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">ctx.request.href;
+// =3D&gt; <a class=3D"textlinkplus" href=3D"http://example.com/foo/bar?q=
+=3D1">http://example.com/foo/bar?q=3D1</a></span></code></pre></div><h3 id=
+=3D"request-path">request.path</h3>
+<p>=E8=8E=B7=E5=8F=96=E8=AF=B7=E6=B1=82=E8=B7=AF=E5=BE=84=E5=90=8D=E3=80=82=
+</p>
+<h3 id=3D"request-path-">request.path=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E8=AF=B7=E6=B1=82=E8=B7=AF=E5=BE=84=E5=90=8D=EF=BC=8C=
+=E5=B9=B6=E5=9C=A8=E5=AD=98=E5=9C=A8=E6=97=B6=E4=BF=9D=E7=95=99=E6=9F=A5=E8=
+=AF=A2=E5=AD=97=E7=AC=A6=E4=B8=B2=E3=80=82</p>
+<h3 id=3D"request-querystring">request.querystring</h3>
+<p>=E6=A0=B9=E6=8D=AE <code>?</code> =E8=8E=B7=E5=8F=96=E5=8E=9F=E5=A7=8B=
+=E6=9F=A5=E8=AF=A2=E5=AD=97=E7=AC=A6=E4=B8=B2.</p>
+<h3 id=3D"request-querystring-">request.querystring=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E5=8E=9F=E5=A7=8B=E6=9F=A5=E8=AF=A2=E5=AD=97=E7=AC=A6=
+=E4=B8=B2=E3=80=82</p>
+<h3 id=3D"request-search">request.search</h3>
+<p>=E4=BD=BF=E7=94=A8 <code>?</code> =E8=8E=B7=E5=8F=96=E5=8E=9F=E5=A7=8B=
+=E6=9F=A5=E8=AF=A2=E5=AD=97=E7=AC=A6=E4=B8=B2=E3=80=82</p>
+<h3 id=3D"request-search-">request.search=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E5=8E=9F=E5=A7=8B=E6=9F=A5=E8=AF=A2=E5=AD=97=E7=AC=A6=
+=E4=B8=B2=E3=80=82</p>
+<h3 id=3D"request-host">request.host</h3>
+<p>=E8=8E=B7=E5=8F=96=E5=BD=93=E5=89=8D=E4=B8=BB=E6=9C=BA=EF=BC=88hostname:=
+port=EF=BC=89=E3=80=82=E5=BD=93 <code>app.proxy</code> =E6=98=AF <strong>tr=
+ue</strong> =E6=97=B6=E6=94=AF=E6=8C=81 <code>X-Forwarded-Host</code>=EF=BC=
+=8C=E5=90=A6=E5=88=99=E4=BD=BF=E7=94=A8 <code>Host</code>=E3=80=82</p>
+<h3 id=3D"request-hostname">request.hostname</h3>
+<p>=E5=AD=98=E5=9C=A8=E6=97=B6=E8=8E=B7=E5=8F=96=E4=B8=BB=E6=9C=BA=E5=90=8D=
+=E3=80=82=E5=BD=93 <code>app.proxy</code> =E6=98=AF <strong>true</strong> =
+=E6=97=B6=E6=94=AF=E6=8C=81 <code>X-Forwarded-Host</code>=EF=BC=8C=E5=90=A6=
+=E5=88=99=E4=BD=BF=E7=94=A8 <code>Host</code>=E3=80=82</p>
+<p>=E5=A6=82=E6=9E=9C=E4=B8=BB=E6=9C=BA=E6=98=AF IPv6, Koa =E8=A7=A3=E6=9E=
+=90=E5=88=B0
+  <a href=3D"https://nodejs.org/dist/latest-v8.x/docs/api/url.html#url_the_=
+whatwg_url_api">WHATWG URL API</a>,
+  <em>=E6=B3=A8=E6=84=8F</em>  =E8=BF=99=E5=8F=AF=E8=83=BD=E4=BC=9A=E5=BD=
+=B1=E5=93=8D=E6=80=A7=E8=83=BD=E3=80=82</p>
+<h3 id=3D"request-url">request.URL</h3>
+<p>=E8=8E=B7=E5=8F=96 WHATWG =E8=A7=A3=E6=9E=90=E7=9A=84 URL =E5=AF=B9=E8=
+=B1=A1=E3=80=82</p>
+<h3 id=3D"request-type">request.type</h3>
+<p>=E8=8E=B7=E5=8F=96=E8=AF=B7=E6=B1=82 <code>Content-Type</code> =E4=B8=8D=
+=E5=90=AB=E5=8F=82=E6=95=B0 "charset"=E3=80=82</p>
+<div id=3D"example-21"><pre><code class=3D"lang-js">const ct =3D ctx.reques=
+t.type;
+// =3D&gt; "image/png"</code></pre></div><h3 id=3D"request-charset">request=
+.charset</h3>
+<p>=E5=9C=A8=E5=AD=98=E5=9C=A8=E6=97=B6=E8=8E=B7=E5=8F=96=E8=AF=B7=E6=B1=82=
+=E5=AD=97=E7=AC=A6=E9=9B=86=EF=BC=8C=E6=88=96=E8=80=85 <code>undefined</cod=
+e>=EF=BC=9A</p>
+<div id=3D"example-22"><pre><code class=3D"lang-js">ctx.request.charset;
+// =3D&gt; "utf-8"</code></pre></div><h3 id=3D"request-query">request.query=
+</h3>
+<p>=E8=8E=B7=E5=8F=96=E8=A7=A3=E6=9E=90=E7=9A=84=E6=9F=A5=E8=AF=A2=E5=AD=97=
+=E7=AC=A6=E4=B8=B2, =E5=BD=93=E6=B2=A1=E6=9C=89=E6=9F=A5=E8=AF=A2=E5=AD=97=
+=E7=AC=A6=E4=B8=B2=E6=97=B6=EF=BC=8C=E8=BF=94=E5=9B=9E=E4=B8=80=E4=B8=AA=E7=
+=A9=BA=E5=AF=B9=E8=B1=A1=E3=80=82=E8=AF=B7=E6=B3=A8=E6=84=8F=EF=BC=8C=E6=AD=
+=A4 getter _=E4=B8=8D_ =E6=94=AF=E6=8C=81=E5=B5=8C=E5=A5=97=E8=A7=A3=E6=9E=
+=90=E3=80=82</p>
+<p>=E4=BE=8B=E5=A6=82 "color=3Dblue&amp;size=3Dsmall":</p>
+<div id=3D"example-23"><pre><code class=3D"lang-js">{
+  color: 'blue',
+  size: 'small'
+}</code></pre></div><h3 id=3D"request-query-">request.query=3D</h3>
+<p>=E5=B0=86=E6=9F=A5=E8=AF=A2=E5=AD=97=E7=AC=A6=E4=B8=B2=E8=AE=BE=E7=BD=AE=
+=E4=B8=BA=E7=BB=99=E5=AE=9A=E5=AF=B9=E8=B1=A1=E3=80=82 =E8=AF=B7=E6=B3=A8=
+=E6=84=8F=EF=BC=8C=E6=AD=A4 setter _=E4=B8=8D_ =E6=94=AF=E6=8C=81=E5=B5=8C=
+=E5=A5=97=E5=AF=B9=E8=B1=A1=E3=80=82</p>
+<div id=3D"example-24"><pre><code class=3D"lang-js">ctx.query =3D { next: '=
+/login' };</code></pre></div><h3 id=3D"request-fresh">request.fresh</h3>
+<p>=E6=A3=80=E6=9F=A5=E8=AF=B7=E6=B1=82=E7=BC=93=E5=AD=98=E6=98=AF=E5=90=A6=
+=E2=80=9C=E6=96=B0=E9=B2=9C=E2=80=9D=EF=BC=8C=E4=B9=9F=E5=B0=B1=E6=98=AF=E5=
+=86=85=E5=AE=B9=E6=B2=A1=E6=9C=89=E6=94=B9=E5=8F=98=E3=80=82=E6=AD=A4=E6=96=
+=B9=E6=B3=95=E7=94=A8=E4=BA=8E <code>If-None-Match</code> / <code>ETag</cod=
+e>, =E5=92=8C <code>If-Modified-Since</code> =E5=92=8C <code>Last-Modified<=
+/code> =E4=B9=8B=E9=97=B4=E7=9A=84=E7=BC=93=E5=AD=98=E5=8D=8F=E5=95=86=E3=
+=80=82 =E5=9C=A8=E8=AE=BE=E7=BD=AE=E4=B8=80=E4=B8=AA=E6=88=96=E5=A4=9A=E4=
+=B8=AA=E8=BF=99=E4=BA=9B=E5=93=8D=E5=BA=94=E5=A4=B4=E5=90=8E=E5=BA=94=E8=AF=
+=A5=E5=BC=95=E7=94=A8=E5=AE=83=E3=80=82</p>
+<div id=3D"example-25"><pre><code class=3D"lang-js">// =E6=96=B0=E9=B2=9C=
+=E5=BA=A6=E6=A3=80=E6=9F=A5=E9=9C=80=E8=A6=81=E7=8A=B6=E6=80=8120x=E6=88=96=
+304
+ctx.status =3D 200;
+ctx.set('ETag', '123');
+
+// =E7=BC=93=E5=AD=98=E6=98=AF=E5=A5=BD=E7=9A=84
+if (ctx.fresh) {
+  ctx.status =3D 304;
+  return;
+}
+
+// =E7=BC=93=E5=AD=98=E6=98=AF=E9=99=88=E6=97=A7=E7=9A=84
+// =E8=8E=B7=E5=8F=96=E6=96=B0=E6=95=B0=E6=8D=AE
+ctx.body =3D await db.find('something');</code></pre></div><h3 id=3D"reques=
+t-stale">request.stale</h3>
+<p>=E7=9B=B8=E5=8F=8D=E4=B8=8E <code>request.fresh</code>.</p>
+<h3 id=3D"request-protocol">request.protocol</h3>
+<p>=E8=BF=94=E5=9B=9E=E8=AF=B7=E6=B1=82=E5=8D=8F=E8=AE=AE=EF=BC=8C=E2=80=9C=
+https=E2=80=9D =E6=88=96 =E2=80=9Chttp=E2=80=9D=E3=80=82=E5=BD=93 <code>app=
+.proxy</code> =E6=98=AF <strong>true</strong> =E6=97=B6=E6=94=AF=E6=8C=81  =
+<code>X-Forwarded-Proto</code>=E3=80=82</p>
+<h3 id=3D"request-secure">request.secure</h3>
+<p>=E9=80=9A=E8=BF=87 <code>ctx.protocol =3D=3D "https"</code> =E6=9D=A5=E6=
+=A3=80=E6=9F=A5=E8=AF=B7=E6=B1=82=E6=98=AF=E5=90=A6=E9=80=9A=E8=BF=87 TLS =
+=E5=8F=91=E5=87=BA=E3=80=82</p>
+<h3 id=3D"request-ip">request.ip</h3>
+<p>=E8=AF=B7=E6=B1=82=E8=BF=9C=E7=A8=8B=E5=9C=B0=E5=9D=80=E3=80=82 =E5=BD=
+=93 <code>app.proxy</code> =E6=98=AF <strong>true</strong> =E6=97=B6=E6=94=
+=AF=E6=8C=81  <code>X-Forwarded-Proto</code>=E3=80=82</p>
+<h3 id=3D"request-ips">request.ips</h3>
+<p>=E5=BD=93 <code>X-Forwarded-For</code> =E5=AD=98=E5=9C=A8=E5=B9=B6=E4=B8=
+=94 <code>app.proxy</code> =E8=A2=AB=E5=90=AF=E7=94=A8=E6=97=B6=EF=BC=8C=E8=
+=BF=99=E4=BA=9B ips =E7=9A=84=E6=95=B0=E7=BB=84=E8=A2=AB=E8=BF=94=E5=9B=9E=
+=EF=BC=8C=E4=BB=8E=E4=B8=8A=E6=B8=B8 - &gt;=E4=B8=8B=E6=B8=B8=E6=8E=92=E5=
+=BA=8F=E3=80=82 =E7=A6=81=E7=94=A8=E6=97=B6=E8=BF=94=E5=9B=9E=E4=B8=80=E4=
+=B8=AA=E7=A9=BA=E6=95=B0=E7=BB=84=E3=80=82</p>
+<h3 id=3D"request-subdomains">request.subdomains</h3>
+<p>=E5=B0=86=E5=AD=90=E5=9F=9F=E8=BF=94=E5=9B=9E=E4=B8=BA=E6=95=B0=E7=BB=84=
+=E3=80=82</p>
+<p>=E5=AD=90=E5=9F=9F=E6=98=AF=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E4=B8=BB=
+=E5=9F=9F=E4=B9=8B=E5=89=8D=E4=B8=BB=E6=9C=BA=E7=9A=84=E7=82=B9=E5=88=86=E9=
+=9A=94=E9=83=A8=E5=88=86=E3=80=82=E9=BB=98=E8=AE=A4=E6=83=85=E5=86=B5=E4=B8=
+=8B=EF=BC=8C=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=8F=E7=9A=84=E5=9F=9F=E5=90=8D=
+=E5=81=87=E5=AE=9A=E4=B8=BA=E4=B8=BB=E6=9C=BA=E7=9A=84=E6=9C=80=E5=90=8E=E4=
+=B8=A4=E4=B8=AA=E9=83=A8=E5=88=86=E3=80=82=E8=BF=99=E5=8F=AF=E4=BB=A5=E9=80=
+=9A=E8=BF=87=E8=AE=BE=E7=BD=AE <code>app.subdomainOffset</code> =E6=9D=A5=
+=E6=9B=B4=E6=94=B9=E3=80=82</p>
+<p><span class=3D"textlinkplus">=E4=BE=8B=E5=A6=82=EF=BC=8C=E5=A6=82=E6=9E=
+=9C=E5=9F=9F=E5=90=8D=E4=B8=BA=E2=80=9C<a class=3D"textlinkplus" href=3D"ht=
+tp://tobi.ferrets.example.com/">tobi.ferrets.example.com</a>=E2=80=9D=EF=BC=
+=9A</span></p>
+<p>=E5=A6=82=E6=9E=9C <code>app.subdomainOffset</code> =E6=9C=AA=E8=AE=BE=
+=E7=BD=AE, <code>ctx.subdomains</code> =E6=98=AF <code>["ferrets", "tobi"]<=
+/code>.
+=E5=A6=82=E6=9E=9C <code>app.subdomainOffset</code> =E6=98=AF 3, <code>ctx.=
+subdomains</code> =E6=98=AF <code>["tobi"]</code>.</p>
+<h3 id=3D"request-is-types-"><span class=3D"textlinkplus"><a class=3D"textl=
+inkplus" href=3D"http://request.is/">request.is</a>(types...)</span></h3>
+<p>=E6=A3=80=E6=9F=A5=E4=BC=A0=E5=85=A5=E8=AF=B7=E6=B1=82=E6=98=AF=E5=90=A6=
+=E5=8C=85=E5=90=AB <code>Content-Type</code> =E5=A4=B4=E5=AD=97=E6=AE=B5=EF=
+=BC=8C =E5=B9=B6=E4=B8=94=E5=8C=85=E5=90=AB=E4=BB=BB=E6=84=8F=E7=9A=84 mime=
+ <code>type</code>=E3=80=82
+=E5=A6=82=E6=9E=9C=E6=B2=A1=E6=9C=89=E8=AF=B7=E6=B1=82=E4=B8=BB=E4=BD=93=EF=
+=BC=8C=E8=BF=94=E5=9B=9E <code>null</code>=E3=80=82
+=E5=A6=82=E6=9E=9C=E6=B2=A1=E6=9C=89=E5=86=85=E5=AE=B9=E7=B1=BB=E5=9E=8B=EF=
+=BC=8C=E6=88=96=E8=80=85=E5=8C=B9=E9=85=8D=E5=A4=B1=E8=B4=A5=EF=BC=8C=E5=88=
+=99=E8=BF=94=E5=9B=9E <code>false</code>=E3=80=82
+=E5=8F=8D=E4=B9=8B=E5=88=99=E8=BF=94=E5=9B=9E=E5=8C=B9=E9=85=8D=E7=9A=84 co=
+ntent-type=E3=80=82 </p>
+<div id=3D"example-26"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">// =E4=BD=BF=E7=94=A8 Content-Type: text/html; charset=3Dutf-8
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('html'); // =
+=3D&gt; 'html'
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('text/html'); =
+// =3D&gt; 'text/html'
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('text/*', 'tex=
+t/html'); // =3D&gt; 'text/html'
+
+// =E5=BD=93 Content-Type =E6=98=AF application/json =E6=97=B6
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('json', 'urlen=
+coded'); // =3D&gt; 'json'
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('application/j=
+son'); // =3D&gt; 'application/json'
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('html', 'appli=
+cation/*'); // =3D&gt; 'application/json'
+
+<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('html'); // =
+=3D&gt; false</span></code></pre></div><p>=E4=BE=8B=E5=A6=82=EF=BC=8C=E5=A6=
+=82=E6=9E=9C=E8=A6=81=E7=A1=AE=E4=BF=9D=E4=BB=85=E5=B0=86=E5=9B=BE=E5=83=8F=
+=E5=8F=91=E9=80=81=E5=88=B0=E7=BB=99=E5=AE=9A=E8=B7=AF=E7=94=B1=EF=BC=9A</p=
+>
+<div id=3D"example-27"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">if (<a class=3D"textlinkplus" href=3D"http://ctx.is/">ctx.is</a>('ima=
+ge/*')) {
+  // =E5=A4=84=E7=90=86
+} else {
+  ctx.throw(415, 'images only!');
+}</span></code></pre></div><h3 id=3D"-">=E5=86=85=E5=AE=B9=E5=8D=8F=E5=95=
+=86</h3>
+<p>Koa=E7=9A=84 <code>request</code> =E5=AF=B9=E8=B1=A1=E5=8C=85=E6=8B=AC=
+=E7=94=B1 <a href=3D"http://github.com/expressjs/accepts">accepts</a> =E5=
+=92=8C <a href=3D"https://github.com/federomero/negotiator">negotiator</a> =
+=E6=8F=90=E4=BE=9B=E7=9A=84=E6=9C=89=E7=94=A8=E7=9A=84=E5=86=85=E5=AE=B9=E5=
+=8D=8F=E5=95=86=E5=AE=9E=E4=BD=93=E3=80=82</p>
+<p>=E8=BF=99=E4=BA=9B=E5=AE=9E=E7=94=A8=E7=A8=8B=E5=BA=8F=E6=98=AF=EF=BC=9A=
+</p>
+<ul>
+<li><code>request.accepts(types)</code></li>
+<li><code>request.acceptsEncodings(types)</code></li>
+<li><code>request.acceptsCharsets(charsets)</code></li>
+<li><code>request.acceptsLanguages(langs)</code></li>
+</ul>
+<p>=E5=A6=82=E6=9E=9C=E6=B2=A1=E6=9C=89=E6=8F=90=E4=BE=9B=E7=B1=BB=E5=9E=8B=
+=EF=BC=8C=E5=88=99=E8=BF=94=E5=9B=9E <strong>=E6=89=80=E6=9C=89</strong> =
+=E5=8F=AF=E6=8E=A5=E5=8F=97=E7=9A=84=E7=B1=BB=E5=9E=8B=E3=80=82</p>
+<p>=E5=A6=82=E6=9E=9C=E6=8F=90=E4=BE=9B=E5=A4=9A=E7=A7=8D=E7=B1=BB=E5=9E=8B=
+=EF=BC=8C=E5=B0=86=E8=BF=94=E5=9B=9E=E6=9C=80=E4=BD=B3=E5=8C=B9=E9=85=8D=E3=
+=80=82 =E5=A6=82=E6=9E=9C=E6=B2=A1=E6=9C=89=E6=89=BE=E5=88=B0=E5=8C=B9=E9=
+=85=8D=E9=A1=B9=EF=BC=8C=E5=88=99=E8=BF=94=E5=9B=9E=E4=B8=80=E4=B8=AA<code>=
+false</code>=EF=BC=8C=E4=BD=A0=E5=BA=94=E8=AF=A5=E5=90=91=E5=AE=A2=E6=88=B7=
+=E7=AB=AF=E5=8F=91=E9=80=81=E4=B8=80=E4=B8=AA<code>406 "Not Acceptable"</co=
+de> =E5=93=8D=E5=BA=94=E3=80=82</p>
+<p>=E5=A6=82=E6=9E=9C=E6=8E=A5=E6=94=B6=E5=88=B0=E4=BB=BB=E4=BD=95=E7=B1=BB=
+=E5=9E=8B=E7=9A=84=E6=8E=A5=E6=94=B6=E5=A4=B4=EF=BC=8C=E5=88=99=E4=BC=9A=E8=
+=BF=94=E5=9B=9E=E7=AC=AC=E4=B8=80=E4=B8=AA=E7=B1=BB=E5=9E=8B=E3=80=82 =E5=
+=9B=A0=E6=AD=A4=EF=BC=8C=E4=BD=A0=E6=8F=90=E4=BE=9B=E7=9A=84=E7=B1=BB=E5=9E=
+=8B=E7=9A=84=E9=A1=BA=E5=BA=8F=E5=BE=88=E9=87=8D=E8=A6=81=E3=80=82</p>
+<h3 id=3D"request-accepts-types-">request.accepts(types)</h3>
+<p>=E6=A3=80=E6=9F=A5=E7=BB=99=E5=AE=9A=E7=9A=84 <code>type(s)</code> =E6=
+=98=AF=E5=90=A6=E5=8F=AF=E4=BB=A5=E6=8E=A5=E5=8F=97=EF=BC=8C=E5=A6=82=E6=9E=
+=9C <code>true</code>=EF=BC=8C=E8=BF=94=E5=9B=9E=E6=9C=80=E4=BD=B3=E5=8C=B9=
+=E9=85=8D=EF=BC=8C=E5=90=A6=E5=88=99=E4=B8=BA <code>false</code>=E3=80=82 <=
+code>type</code> =E5=80=BC=E5=8F=AF=E8=83=BD=E6=98=AF=E4=B8=80=E4=B8=AA=E6=
+=88=96=E5=A4=9A=E4=B8=AA mime =E7=B1=BB=E5=9E=8B=E7=9A=84=E5=AD=97=E7=AC=A6=
+=E4=B8=B2=EF=BC=8C=E5=A6=82 <code>application/json</code>=EF=BC=8C=E6=89=A9=
+=E5=B1=95=E5=90=8D=E7=A7=B0=E5=A6=82 <code>json</code>=EF=BC=8C=E6=88=96=E6=
+=95=B0=E7=BB=84 <code>["json", "html", "text/plain"]</code>=E3=80=82</p>
+<div id=3D"example-28"><pre><code class=3D"lang-js">// Accept: text/html
+ctx.accepts('html');
+// =3D&gt; "html"
+
+// Accept: text/*, application/json
+ctx.accepts('html');
+// =3D&gt; "html"
+ctx.accepts('text/html');
+// =3D&gt; "text/html"
+ctx.accepts('json', 'text');
+// =3D&gt; "json"
+ctx.accepts('application/json');
+// =3D&gt; "application/json"
+
+// Accept: text/*, application/json
+ctx.accepts('image/png');
+ctx.accepts('png');
+// =3D&gt; false
+
+// Accept: text/*;q=3D.5, application/json
+ctx.accepts(['html', 'json']);
+ctx.accepts('html', 'json');
+// =3D&gt; "json"
+
+// No Accept header
+ctx.accepts('html', 'json');
+// =3D&gt; "html"
+ctx.accepts('json', 'html');
+// =3D&gt; "json"</code></pre></div><p>=E4=BD=A0=E5=8F=AF=E4=BB=A5=E6=A0=B9=
+=E6=8D=AE=E9=9C=80=E8=A6=81=E5=A4=9A=E6=AC=A1=E8=B0=83=E7=94=A8 <code>ctx.a=
+ccepts()</code>=EF=BC=8C=E6=88=96=E4=BD=BF=E7=94=A8 switch=EF=BC=9A</p>
+<div id=3D"example-29"><pre><code class=3D"lang-js">switch (ctx.accepts('js=
+on', 'html', 'text')) {
+  case 'json': break;
+  case 'html': break;
+  case 'text': break;
+  default: ctx.throw(406, 'json, html, or text only');
+}</code></pre></div><h3 id=3D"request-acceptsencodings-encodings-">request.=
+acceptsEncodings(encodings)</h3>
+<p>=E6=A3=80=E6=9F=A5 <code>encodings</code> =E6=98=AF=E5=90=A6=E5=8F=AF=E4=
+=BB=A5=E6=8E=A5=E5=8F=97=EF=BC=8C=E8=BF=94=E5=9B=9E=E6=9C=80=E4=BD=B3=E5=8C=
+=B9=E9=85=8D=E4=B8=BA <code>true</code>=EF=BC=8C=E5=90=A6=E5=88=99=E4=B8=BA=
+ <code>false</code>=E3=80=82 =E8=AF=B7=E6=B3=A8=E6=84=8F=EF=BC=8C=E6=82=A8=
+=E5=BA=94=E8=AF=A5=E5=B0=86<code>identity</code> =E4=BD=9C=E4=B8=BA=E7=BC=
+=96=E7=A0=81=E4=B9=8B=E4=B8=80=EF=BC=81</p>
+<div id=3D"example-30"><pre><code class=3D"lang-js">// Accept-Encoding: gzi=
+p
+ctx.acceptsEncodings('gzip', 'deflate', 'identity');
+// =3D&gt; "gzip"
+
+ctx.acceptsEncodings(['gzip', 'deflate', 'identity']);
+// =3D&gt; "gzip"</code></pre></div><p>=E5=BD=93=E6=B2=A1=E6=9C=89=E7=BB=99=
+=E5=87=BA=E5=8F=82=E6=95=B0=E6=97=B6=EF=BC=8C=E6=89=80=E6=9C=89=E6=8E=A5=E5=
+=8F=97=E7=9A=84=E7=BC=96=E7=A0=81=E5=B0=86=E4=BD=9C=E4=B8=BA=E6=95=B0=E7=BB=
+=84=E8=BF=94=E5=9B=9E=EF=BC=9A</p>
+<div id=3D"example-31"><pre><code class=3D"lang-js">// Accept-Encoding: gzi=
+p, deflate
+ctx.acceptsEncodings();
+// =3D&gt; ["gzip", "deflate", "identity"]</code></pre></div><p>=E8=AF=B7=
+=E6=B3=A8=E6=84=8F=EF=BC=8C=E5=A6=82=E6=9E=9C=E5=AE=A2=E6=88=B7=E7=AB=AF=E6=
+=98=BE=E5=BC=8F=E5=9C=B0=E5=8F=91=E9=80=81 <code>identity;q=3D0</code>=EF=
+=BC=8C=E9=82=A3=E4=B9=88 <code>identity</code> =E7=BC=96=E7=A0=81=EF=BC=88=
+=E8=BF=99=E6=84=8F=E5=91=B3=E7=9D=80=E6=B2=A1=E6=9C=89=E7=BC=96=E7=A0=81=EF=
+=BC=89=E5=8F=AF=E8=83=BD=E6=98=AF=E4=B8=8D=E5=8F=AF=E6=8E=A5=E5=8F=97=E7=9A=
+=84=E3=80=82 =E8=99=BD=E7=84=B6=E8=BF=99=E6=98=AF=E4=B8=80=E4=B8=AA=E8=BE=
+=B9=E7=BC=98=E7=9A=84=E6=83=85=E5=86=B5=EF=BC=8C=E4=BD=A0=E4=BB=8D=E7=84=B6=
+=E5=BA=94=E8=AF=A5=E5=A4=84=E7=90=86=E8=BF=99=E7=A7=8D=E6=96=B9=E6=B3=95=E8=
+=BF=94=E5=9B=9E <code>false</code> =E7=9A=84=E6=83=85=E5=86=B5=E3=80=82</p>
+<h3 id=3D"request-acceptscharsets-charsets-">request.acceptsCharsets(charse=
+ts)</h3>
+<p>=E6=A3=80=E6=9F=A5 <code>charsets</code> =E6=98=AF=E5=90=A6=E5=8F=AF=E4=
+=BB=A5=E6=8E=A5=E5=8F=97=EF=BC=8C=E5=9C=A8 <code>true</code> =E6=97=B6=E8=
+=BF=94=E5=9B=9E=E6=9C=80=E4=BD=B3=E5=8C=B9=E9=85=8D=EF=BC=8C=E5=90=A6=E5=88=
+=99=E4=B8=BA <code>false</code>=E3=80=82</p>
+<div id=3D"example-32"><pre><code class=3D"lang-js">// Accept-Charset: utf-=
+8, iso-8859-1;q=3D0.2, utf-7;q=3D0.5
+ctx.acceptsCharsets('utf-8', 'utf-7');
+// =3D&gt; "utf-8"
+
+ctx.acceptsCharsets(['utf-7', 'utf-8']);
+// =3D&gt; "utf-8"</code></pre></div><p>=E5=BD=93=E6=B2=A1=E6=9C=89=E5=8F=
+=82=E6=95=B0=E8=A2=AB=E8=B5=8B=E4=BA=88=E6=89=80=E6=9C=89=E8=A2=AB=E6=8E=A5=
+=E5=8F=97=E7=9A=84=E5=AD=97=E7=AC=A6=E9=9B=86=E5=B0=86=E4=BD=9C=E4=B8=BA=E6=
+=95=B0=E7=BB=84=E8=BF=94=E5=9B=9E=EF=BC=9A</p>
+<div id=3D"example-33"><pre><code class=3D"lang-js">// Accept-Charset: utf-=
+8, iso-8859-1;q=3D0.2, utf-7;q=3D0.5
+ctx.acceptsCharsets();
+// =3D&gt; ["utf-8", "utf-7", "iso-8859-1"]</code></pre></div><h3 id=3D"req=
+uest-acceptslanguages-langs-">request.acceptsLanguages(langs)</h3>
+<p>=E6=A3=80=E6=9F=A5 <code>langs</code> =E6=98=AF=E5=90=A6=E5=8F=AF=E4=BB=
+=A5=E6=8E=A5=E5=8F=97=EF=BC=8C=E5=A6=82=E6=9E=9C=E4=B8=BA <code>true</code>=
+=EF=BC=8C=E8=BF=94=E5=9B=9E=E6=9C=80=E4=BD=B3=E5=8C=B9=E9=85=8D=EF=BC=8C=E5=
+=90=A6=E5=88=99=E4=B8=BA <code>false</code>=E3=80=82</p>
+<div id=3D"example-34"><pre><code class=3D"lang-js">// Accept-Language: en;=
+q=3D0.8, es, pt
+ctx.acceptsLanguages('es', 'en');
+// =3D&gt; "es"
+
+ctx.acceptsLanguages(['en', 'es']);
+// =3D&gt; "es"</code></pre></div><p>=E5=BD=93=E6=B2=A1=E6=9C=89=E5=8F=82=
+=E6=95=B0=E8=A2=AB=E8=B5=8B=E4=BA=88=E6=89=80=E6=9C=89=E6=8E=A5=E5=8F=97=E7=
+=9A=84=E8=AF=AD=E8=A8=80=E5=B0=86=E4=BD=9C=E4=B8=BA=E6=95=B0=E7=BB=84=E8=BF=
+=94=E5=9B=9E=EF=BC=9A</p>
+<div id=3D"example-35"><pre><code class=3D"lang-js">// Accept-Language: en;=
+q=3D0.8, es, pt
+ctx.acceptsLanguages();
+// =3D&gt; ["es", "pt", "en"]</code></pre></div><h3 id=3D"request-idempoten=
+t">request.idempotent</h3>
+<p>=E6=A3=80=E6=9F=A5=E8=AF=B7=E6=B1=82=E6=98=AF=E5=90=A6=E6=98=AF=E5=B9=82=
+=E7=AD=89=E7=9A=84=E3=80=82</p>
+<h3 id=3D"request-socket">request.socket</h3>
+<p>=E8=BF=94=E5=9B=9E=E8=AF=B7=E6=B1=82=E5=A5=97=E6=8E=A5=E5=AD=97=E3=80=82=
+</p>
+<h3 id=3D"request-get-field-">request.get(field)</h3>
+<p>=E8=BF=94=E5=9B=9E=E8=AF=B7=E6=B1=82=E6=A0=87=E5=A4=B4=E3=80=82</p>
+</div></section><section><div class=3D"content"><h1 id=3D"-response-">=E5=
+=93=8D=E5=BA=94(Response)</h1>
+<p>Koa <code>Response</code> =E5=AF=B9=E8=B1=A1=E6=98=AF=E5=9C=A8 node =E7=
+=9A=84 vanilla =E5=93=8D=E5=BA=94=E5=AF=B9=E8=B1=A1=E4=B9=8B=E4=B8=8A=E7=9A=
+=84=E6=8A=BD=E8=B1=A1=EF=BC=8C=E6=8F=90=E4=BE=9B=E4=BA=86=E8=AF=B8=E5=A4=9A=
+=E5=AF=B9 HTTP =E6=9C=8D=E5=8A=A1=E5=99=A8=E5=BC=80=E5=8F=91=E6=9C=89=E7=94=
+=A8=E7=9A=84=E5=8A=9F=E8=83=BD=E3=80=82</p>
+<h2 id=3D"api">API</h2>
+<h3 id=3D"response-header">response.header</h3>
+<p>=E5=93=8D=E5=BA=94=E6=A0=87=E5=A4=B4=E5=AF=B9=E8=B1=A1=E3=80=82</p>
+<h3 id=3D"response-headers">response.headers</h3>
+<p>=E5=93=8D=E5=BA=94=E6=A0=87=E5=A4=B4=E5=AF=B9=E8=B1=A1=E3=80=82=E5=88=AB=
+=E5=90=8D=E6=98=AF <code>response.header</code>=E3=80=82</p>
+<h3 id=3D"response-socket">response.socket</h3>
+<p>=E8=AF=B7=E6=B1=82=E5=A5=97=E6=8E=A5=E5=AD=97=E3=80=82</p>
+<h3 id=3D"response-status">response.status</h3>
+<p>=E8=8E=B7=E5=8F=96=E5=93=8D=E5=BA=94=E7=8A=B6=E6=80=81=E3=80=82=E9=BB=98=
+=E8=AE=A4=E6=83=85=E5=86=B5=E4=B8=8B=EF=BC=8C<code>response.status</code> =
+=E8=AE=BE=E7=BD=AE=E4=B8=BA <code>404</code> =E8=80=8C=E4=B8=8D=E6=98=AF=E5=
+=83=8F node =E7=9A=84 <code>res.statusCode</code> =E9=82=A3=E6=A0=B7=E9=BB=
+=98=E8=AE=A4=E4=B8=BA <code>200</code>=E3=80=82</p>
+<h3 id=3D"response-status-">response.status=3D</h3>
+<p>  =E9=80=9A=E8=BF=87=E6=95=B0=E5=AD=97=E4=BB=A3=E7=A0=81=E8=AE=BE=E7=BD=
+=AE=E5=93=8D=E5=BA=94=E7=8A=B6=E6=80=81=EF=BC=9A</p>
+<ul>
+<li>100 "continue"</li>
+<li>101 "switching protocols"</li>
+<li>102 "processing"</li>
+<li>200 "ok"</li>
+<li>201 "created"</li>
+<li>202 "accepted"</li>
+<li>203 "non-authoritative information"</li>
+<li>204 "no content"</li>
+<li>205 "reset content"</li>
+<li>206 "partial content"</li>
+<li>207 "multi-status"</li>
+<li>208 "already reported"</li>
+<li>226 "im used"</li>
+<li>300 "multiple choices"</li>
+<li>301 "moved permanently"</li>
+<li>302 "found"</li>
+<li>303 "see other"</li>
+<li>304 "not modified"</li>
+<li>305 "use proxy"</li>
+<li>307 "temporary redirect"</li>
+<li>308 "permanent redirect"</li>
+<li>400 "bad request"</li>
+<li>401 "unauthorized"</li>
+<li>402 "payment required"</li>
+<li>403 "forbidden"</li>
+<li>404 "not found"</li>
+<li>405 "method not allowed"</li>
+<li>406 "not acceptable"</li>
+<li>407 "proxy authentication required"</li>
+<li>408 "request timeout"</li>
+<li>409 "conflict"</li>
+<li>410 "gone"</li>
+<li>411 "length required"</li>
+<li>412 "precondition failed"</li>
+<li>413 "payload too large"</li>
+<li>414 "uri too long"</li>
+<li>415 "unsupported media type"</li>
+<li>416 "range not satisfiable"</li>
+<li>417 "expectation failed"</li>
+<li>418 "I'm a teapot"</li>
+<li>422 "unprocessable entity"</li>
+<li>423 "locked"</li>
+<li>424 "failed dependency"</li>
+<li>426 "upgrade required"</li>
+<li>428 "precondition required"</li>
+<li>429 "too many requests"</li>
+<li>431 "request header fields too large"</li>
+<li>500 "internal server error"</li>
+<li>501 "not implemented"</li>
+<li>502 "bad gateway"</li>
+<li>503 "service unavailable"</li>
+<li>504 "gateway timeout"</li>
+<li>505 "http version not supported"</li>
+<li>506 "variant also negotiates"</li>
+<li>507 "insufficient storage"</li>
+<li>508 "loop detected"</li>
+<li>510 "not extended"</li>
+<li>511 "network authentication required"</li>
+</ul>
+<p><strong>=E6=B3=A8=E6=84=8F</strong>: =E4=B8=8D=E7=94=A8=E5=A4=AA=E5=9C=
+=A8=E6=84=8F=E8=AE=B0=E4=BD=8F=E8=BF=99=E4=BA=9B=E5=AD=97=E7=AC=A6=E4=B8=B2=
+, =E5=A6=82=E6=9E=9C=E4=BD=A0=E5=86=99=E9=94=99=E4=BA=86,=E5=8F=AF=E4=BB=A5=
+=E6=9F=A5=E9=98=85=E8=BF=99=E4=B8=AA=E5=88=97=E8=A1=A8=E9=9A=8F=E6=97=B6=E6=
+=9B=B4=E6=AD=A3.</p>
+<h3 id=3D"response-message">response.message</h3>
+<p>=E8=8E=B7=E5=8F=96=E5=93=8D=E5=BA=94=E7=9A=84=E7=8A=B6=E6=80=81=E6=B6=88=
+=E6=81=AF. =E9=BB=98=E8=AE=A4=E6=83=85=E5=86=B5=E4=B8=8B, <code>response.me=
+ssage</code> =E4=B8=8E <code>response.status</code> =E5=85=B3=E8=81=94.</p>
+<h3 id=3D"response-message-">response.message=3D</h3>
+<p>=E5=B0=86=E5=93=8D=E5=BA=94=E7=9A=84=E7=8A=B6=E6=80=81=E6=B6=88=E6=81=AF=
+=E8=AE=BE=E7=BD=AE=E4=B8=BA=E7=BB=99=E5=AE=9A=E5=80=BC=E3=80=82</p>
+<h3 id=3D"response-length-">response.length=3D</h3>
+<p>=E5=B0=86=E5=93=8D=E5=BA=94=E7=9A=84 Content-Length =E8=AE=BE=E7=BD=AE=
+=E4=B8=BA=E7=BB=99=E5=AE=9A=E5=80=BC=E3=80=82</p>
+<h3 id=3D"response-length">response.length</h3>
+<p>=E4=BB=A5=E6=95=B0=E5=AD=97=E8=BF=94=E5=9B=9E=E5=93=8D=E5=BA=94=E7=9A=84=
+ Content-Length=EF=BC=8C=E6=88=96=E8=80=85=E4=BB=8E<code>ctx.body</code>=E6=
+=8E=A8=E5=AF=BC=E5=87=BA=E6=9D=A5=EF=BC=8C=E6=88=96=E8=80=85<code>undefined=
+</code>=E3=80=82</p>
+<h3 id=3D"response-body">response.body</h3>
+<p>=E8=8E=B7=E5=8F=96=E5=93=8D=E5=BA=94=E4=B8=BB=E4=BD=93=E3=80=82</p>
+<h3 id=3D"response-body-">response.body=3D</h3>
+<p>=E5=B0=86=E5=93=8D=E5=BA=94=E4=BD=93=E8=AE=BE=E7=BD=AE=E4=B8=BA=E4=BB=A5=
+=E4=B8=8B=E4=B9=8B=E4=B8=80=EF=BC=9A</p>
+<ul>
+<li><code>string</code> =E5=86=99=E5=85=A5</li>
+<li><code>Buffer</code> =E5=86=99=E5=85=A5</li>
+<li><code>Stream</code> =E7=AE=A1=E9=81=93</li>
+<li><code>Object</code> || <code>Array</code> JSON-=E5=AD=97=E7=AC=A6=E4=B8=
+=B2=E5=8C=96</li>
+<li><code>null</code> =E6=97=A0=E5=86=85=E5=AE=B9=E5=93=8D=E5=BA=94</li>
+</ul>
+<p>=E5=A6=82=E6=9E=9C <code>response.status</code> =E6=9C=AA=E8=A2=AB=E8=AE=
+=BE=E7=BD=AE, Koa =E5=B0=86=E4=BC=9A=E8=87=AA=E5=8A=A8=E8=AE=BE=E7=BD=AE=E7=
+=8A=B6=E6=80=81=E4=B8=BA <code>200</code> =E6=88=96 <code>204</code>=E3=80=
+=82</p>
+<p>Koa =E6=B2=A1=E6=9C=89=E9=98=B2=E8=8C=83=E4=BD=9C=E4=B8=BA=E5=93=8D=E5=
+=BA=94=E4=BD=93=E7=9A=84=E6=89=80=E6=9C=89=E5=86=85=E5=AE=B9 - =E5=87=BD=E6=
+=95=B0=E6=B2=A1=E6=9C=89=E6=9C=89=E6=84=8F=E4=B9=89=E5=9C=B0=E5=BA=8F=E5=88=
+=97=E5=8C=96=EF=BC=8C=E8=BF=94=E5=9B=9E=E5=B8=83=E5=B0=94=E5=80=BC=E5=8F=AF=
+=E8=83=BD=E4=BC=9A=E6=A0=B9=E6=8D=AE=E6=82=A8=E7=9A=84=E5=BA=94=E7=94=A8=E7=
+=A8=8B=E5=BA=8F=E8=80=8C=E6=9C=89=E6=84=8F=E4=B9=89=E3=80=82=E5=B9=B6=E4=B8=
+=94=E5=BD=93=E9=94=99=E8=AF=AF=E7=94=9F=E6=95=88=E6=97=B6=EF=BC=8C=E5=AE=83=
+=E5=8F=AF=E8=83=BD=E6=97=A0=E6=B3=95=E6=AD=A3=E5=B8=B8=E5=B7=A5=E4=BD=9C =
+=E9=94=99=E8=AF=AF=E7=9A=84=E5=B1=9E=E6=80=A7=E6=97=A0=E6=B3=95=E6=9E=9A=E4=
+=B8=BE=E3=80=82 =E6=88=91=E4=BB=AC=E5=BB=BA=E8=AE=AE=E5=9C=A8=E6=82=A8=E7=
+=9A=84=E5=BA=94=E7=94=A8=E4=B8=AD=E6=B7=BB=E5=8A=A0=E4=B8=AD=E9=97=B4=E4=BB=
+=B6=EF=BC=8C=E4=BB=A5=E7=A1=AE=E5=AE=9A=E6=AF=8F=E4=B8=AA=E5=BA=94=E7=94=A8=
+=E7=9A=84=E6=AD=A3=E6=96=87=E7=B1=BB=E5=9E=8B=E3=80=82 =E7=A4=BA=E4=BE=8B=
+=E4=B8=AD=E9=97=B4=E4=BB=B6=E5=8F=AF=E8=83=BD=E6=98=AF=EF=BC=9A</p>
+<div id=3D"example-36"><pre><code class=3D"lang-undefined">app.use(async (c=
+tx, next) =3D&gt; {
+  await next()
+
+  ctx.assert.equal('object', typeof ctx, 500, '=E6=9F=90=E4=BA=9B=E5=BC=80=
+=E5=8F=91=E9=94=99=E8=AF=AF')
+})</code></pre></div><h4 id=3D"string">String</h4>
+<p>Content-Type =E9=BB=98=E8=AE=A4=E4=B8=BA <code>text/html</code> =E6=88=
+=96 <code>text/plain</code>, =E5=90=8C=E6=97=B6=E9=BB=98=E8=AE=A4=E5=AD=97=
+=E7=AC=A6=E9=9B=86=E6=98=AF utf-8=E3=80=82Content-Length =E5=AD=97=E6=AE=B5=
+=E4=B9=9F=E6=98=AF=E5=A6=82=E6=AD=A4=E3=80=82</p>
+<h4 id=3D"buffer">Buffer</h4>
+<p>Content-Type =E9=BB=98=E8=AE=A4=E4=B8=BA <code>application/octet-stream<=
+/code>, =E5=B9=B6=E4=B8=94 Content-Length =E5=AD=97=E6=AE=B5=E4=B9=9F=E6=98=
+=AF=E5=A6=82=E6=AD=A4=E3=80=82</p>
+<h4 id=3D"stream">Stream</h4>
+<p>Content-Type =E9=BB=98=E8=AE=A4=E4=B8=BA <code>application/octet-stream<=
+/code>=E3=80=82</p>
+<p> =E6=AF=8F=E5=BD=93=E6=B5=81=E8=A2=AB=E8=AE=BE=E7=BD=AE=E4=B8=BA=E5=93=
+=8D=E5=BA=94=E4=B8=BB=E4=BD=93=E6=97=B6=EF=BC=8C<code>.onerror</code> =E4=
+=BD=9C=E4=B8=BA=E4=BE=A6=E5=90=AC=E5=99=A8=E8=87=AA=E5=8A=A8=E6=B7=BB=E5=8A=
+=A0=E5=88=B0 <code>error</code> =E4=BA=8B=E4=BB=B6=E4=B8=AD=E4=BB=A5=E6=8D=
+=95=E8=8E=B7=E4=BB=BB=E4=BD=95=E9=94=99=E8=AF=AF=E3=80=82=E6=AD=A4=E5=A4=96=
+=EF=BC=8C=E6=AF=8F=E5=BD=93=E8=AF=B7=E6=B1=82=E5=85=B3=E9=97=AD=EF=BC=88=E7=
+=94=9A=E8=87=B3=E8=BF=87=E6=97=A9=EF=BC=89=E6=97=B6=EF=BC=8C=E6=B5=81=E9=83=
+=BD=E5=B0=86=E8=A2=AB=E9=94=80=E6=AF=81=E3=80=82=E5=A6=82=E6=9E=9C=E4=BD=A0=
+=E4=B8=8D=E6=83=B3=E8=A6=81=E8=BF=99=E4=B8=A4=E4=B8=AA=E5=8A=9F=E8=83=BD=EF=
+=BC=8C=E8=AF=B7=E5=8B=BF=E7=9B=B4=E6=8E=A5=E5=B0=86=E6=B5=81=E8=AE=BE=E4=B8=
+=BA=E4=B8=BB=E4=BD=93=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=8C=E5=BD=93=E5=B0=86=
+=E4=B8=BB=E4=BD=93=E8=AE=BE=E7=BD=AE=E4=B8=BA=E4=BB=A3=E7=90=86=E4=B8=AD=E7=
+=9A=84 HTTP =E6=B5=81=E6=97=B6=EF=BC=8C=E4=BD=A0=E5=8F=AF=E8=83=BD=E4=B8=8D=
+=E6=83=B3=E8=A6=81=E8=BF=99=E6=A0=B7=E5=81=9A=EF=BC=8C=E5=9B=A0=E4=B8=BA=E5=
+=AE=83=E4=BC=9A=E7=A0=B4=E5=9D=8F=E5=BA=95=E5=B1=82=E8=BF=9E=E6=8E=A5=E3=80=
+=82</p>
+<p>  =E5=8F=82=E9=98=85: <a href=3D"https://github.com/koajs/koa/pull/612">=
+https://github.com/koajs/koa/pull/612</a> =E8=8E=B7=E5=8F=96=E6=9B=B4=E5=A4=
+=9A=E4=BF=A1=E6=81=AF=E3=80=82</p>
+<p>=E4=BB=A5=E4=B8=8B=E6=98=AF=E6=B5=81=E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86=
+=E7=9A=84=E7=A4=BA=E4=BE=8B=EF=BC=8C=E8=80=8C=E4=B8=8D=E4=BC=9A=E8=87=AA=E5=
+=8A=A8=E7=A0=B4=E5=9D=8F=E6=B5=81=EF=BC=9A</p>
+<div id=3D"example-37"><pre><code class=3D"lang-js">const PassThrough =3D r=
+equire('stream').PassThrough;
+
+app.use(async ctx =3D&gt; {
+  ctx.body =3D someHTTPStream.on('error', ctx.onerror).pipe(PassThrough());
+});</code></pre></div><h4 id=3D"object">Object</h4>
+<p>Content-Type =E9=BB=98=E8=AE=A4=E4=B8=BA <code>application/json</code>. =
+=E8=BF=99=E5=8C=85=E6=8B=AC=E6=99=AE=E9=80=9A=E7=9A=84=E5=AF=B9=E8=B1=A1 <c=
+ode>{ foo: 'bar' }</code> =E5=92=8C=E6=95=B0=E7=BB=84 <code>['foo', 'bar']<=
+/code>=E3=80=82</p>
+<h3 id=3D"response-get-field-">response.get(field)</h3>
+<p>=E4=B8=8D=E5=8C=BA=E5=88=86=E5=A4=A7=E5=B0=8F=E5=86=99=E8=8E=B7=E5=8F=96=
+=E5=93=8D=E5=BA=94=E6=A0=87=E5=A4=B4=E5=AD=97=E6=AE=B5=E5=80=BC <code>field=
+</code>=E3=80=82</p>
+<div id=3D"example-38"><pre><code class=3D"lang-js">const etag =3D ctx.resp=
+onse.get('ETag');</code></pre></div><h3 id=3D"response-set-field-value-">re=
+sponse.set(field, value)</h3>
+<p>=E8=AE=BE=E7=BD=AE=E5=93=8D=E5=BA=94=E6=A0=87=E5=A4=B4 <code>field</code=
+> =E5=88=B0 <code>value</code>:</p>
+<div id=3D"example-39"><pre><code class=3D"lang-js">ctx.set('Cache-Control'=
+, 'no-cache');</code></pre></div><h3 id=3D"response-append-field-value-">re=
+sponse.append(field, value)</h3>
+<p>=E7=94=A8=E5=80=BC <code>val</code> =E9=99=84=E5=8A=A0=E9=A2=9D=E5=A4=96=
+=E7=9A=84=E6=A0=87=E5=A4=B4 <code>field</code>=E3=80=82</p>
+<div id=3D"example-40"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">ctx.append('Link', '&lt;<a class=3D"textlinkplus" href=3D"http://127.=
+0.0.1/">http://127.0.0.1</a>/&gt;');</span></code></pre></div><h3 id=3D"res=
+ponse-set-fields-">response.set(fields)</h3>
+<p>=E7=94=A8=E4=B8=80=E4=B8=AA=E5=AF=B9=E8=B1=A1=E8=AE=BE=E7=BD=AE=E5=A4=9A=
+=E4=B8=AA=E5=93=8D=E5=BA=94=E6=A0=87=E5=A4=B4<code>fields</code>:</p>
+<div id=3D"example-41"><pre><code class=3D"lang-js">ctx.set({
+  'Etag': '1234',
+  'Last-Modified': date
+});</code></pre></div><p>=E8=BF=99=E5=B0=86=E5=A7=94=E6=89=98=E7=BB=99 <a h=
+ref=3D"https://nodejs.org/dist/latest/docs/api/http.html#http_request_sethe=
+ader_name_value">setHeader</a> =EF=BC=8C=E5=AE=83=E9=80=9A=E8=BF=87=E6=8C=
+=87=E5=AE=9A=E7=9A=84=E9=94=AE=E8=AE=BE=E7=BD=AE=E6=88=96=E6=9B=B4=E6=96=B0=
+=E6=A0=87=E5=A4=B4=EF=BC=8C=E5=B9=B6=E4=B8=94=E4=B8=8D=E9=87=8D=E7=BD=AE=E6=
+=95=B4=E4=B8=AA=E6=A0=87=E5=A4=B4=E3=80=82</p>
+<h3 id=3D"response-remove-field-">response.remove(field)</h3>
+<p>=E5=88=A0=E9=99=A4=E6=A0=87=E5=A4=B4 <code>field</code>=E3=80=82</p>
+<h3 id=3D"response-type">response.type</h3>
+<p>=E8=8E=B7=E5=8F=96=E5=93=8D=E5=BA=94 <code>Content-Type</code> =E4=B8=8D=
+=E5=90=AB=E5=8F=82=E6=95=B0 "charset"=E3=80=82</p>
+<div id=3D"example-42"><pre><code class=3D"lang-js">const ct =3D ctx.type;
+// =3D&gt; "image/png"</code></pre></div><h3 id=3D"response-type-">response=
+.type=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E5=93=8D=E5=BA=94 <code>Content-Type</code> =E9=80=9A=
+=E8=BF=87 mime =E5=AD=97=E7=AC=A6=E4=B8=B2=E6=88=96=E6=96=87=E4=BB=B6=E6=89=
+=A9=E5=B1=95=E5=90=8D=E3=80=82</p>
+<div id=3D"example-43"><pre><code class=3D"lang-js">ctx.type =3D 'text/plai=
+n; charset=3Dutf-8';
+ctx.type =3D 'image/png';
+ctx.type =3D '.png';
+ctx.type =3D 'png';</code></pre></div><p>  =E6=B3=A8=E6=84=8F: =E5=9C=A8=E9=
+=80=82=E5=BD=93=E7=9A=84=E6=83=85=E5=86=B5=E4=B8=8B=E4=B8=BA=E4=BD=A0=E9=80=
+=89=E6=8B=A9 <code>charset</code>, =E6=AF=94=E5=A6=82 <code>response.type =
+=3D 'html'</code> =E5=B0=86=E9=BB=98=E8=AE=A4=E6=98=AF "utf-8". =E5=A6=82=
+=E6=9E=9C=E4=BD=A0=E6=83=B3=E8=A6=86=E7=9B=96 <code>charset</code>, =E4=BD=
+=BF=E7=94=A8 <code>ctx.set('Content-Type', 'text/html')</code> =E5=B0=86=E5=
+=93=8D=E5=BA=94=E5=A4=B4=E5=AD=97=E6=AE=B5=E8=AE=BE=E7=BD=AE=E4=B8=BA=E7=9B=
+=B4=E6=8E=A5=E5=80=BC=E3=80=82</p>
+<h3 id=3D"response-is-types-"><span class=3D"textlinkplus"><a class=3D"text=
+linkplus" href=3D"http://response.is/">response.is</a>(types...)</span></h3=
+>
+<p>  =E9=9D=9E=E5=B8=B8=E7=B1=BB=E4=BC=BC <code><span class=3D"textlinkplus=
+"><a class=3D"textlinkplus" href=3D"http://ctx.request.is/">ctx.request.is<=
+/a>()</span></code>. =E6=A3=80=E6=9F=A5=E5=93=8D=E5=BA=94=E7=B1=BB=E5=9E=8B=
+=E6=98=AF=E5=90=A6=E6=98=AF=E6=89=80=E6=8F=90=E4=BE=9B=E7=9A=84=E7=B1=BB=E5=
+=9E=8B=E4=B9=8B=E4=B8=80=E3=80=82=E8=BF=99=E5=AF=B9=E4=BA=8E=E5=88=9B=E5=BB=
+=BA=E6=93=8D=E7=BA=B5=E5=93=8D=E5=BA=94=E7=9A=84=E4=B8=AD=E9=97=B4=E4=BB=B6=
+=E7=89=B9=E5=88=AB=E6=9C=89=E7=94=A8=E3=80=82</p>
+<p>=E4=BE=8B=E5=A6=82, =E8=BF=99=E6=98=AF=E4=B8=80=E4=B8=AA=E4=B8=AD=E9=97=
+=B4=E4=BB=B6=EF=BC=8C=E5=8F=AF=E4=BB=A5=E5=89=8A=E5=87=8F=E9=99=A4=E6=B5=81=
+=E4=B9=8B=E5=A4=96=E7=9A=84=E6=89=80=E6=9C=89HTML=E5=93=8D=E5=BA=94=E3=80=
+=82</p>
+<div id=3D"example-44"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">const minify =3D require('html-minifier');
+
+app.use(async (ctx, next) =3D&gt; {
+  await next();
+
+  if (!<a class=3D"textlinkplus" href=3D"http://ctx.response.is/">ctx.respo=
+nse.is</a>('html')) return;
+
+  let body =3D ctx.body;
+  if (!body || body.pipe) return;
+
+  if (Buffer.isBuffer(body)) body =3D body.toString();
+  ctx.body =3D minify(body);
+});</span></code></pre></div><h3 id=3D"response-redirect-url-alt-">response=
+.redirect(url, [alt])</h3>
+<p>=E6=89=A7=E8=A1=8C [302] =E9=87=8D=E5=AE=9A=E5=90=91=E5=88=B0 <code>url<=
+/code>.</p>
+<p>=E5=AD=97=E7=AC=A6=E4=B8=B2 =E2=80=9Cback=E2=80=9D =E6=98=AF=E7=89=B9=E5=
+=88=AB=E6=8F=90=E4=BE=9BReferrer=E6=94=AF=E6=8C=81=E7=9A=84=EF=BC=8C=E5=BD=
+=93Referrer=E4=B8=8D=E5=AD=98=E5=9C=A8=E6=97=B6=EF=BC=8C=E4=BD=BF=E7=94=A8 =
+<code>alt</code> =E6=88=96=E2=80=9C/=E2=80=9D=E3=80=82</p>
+<div id=3D"example-45"><pre><code class=3D"lang-js"><span class=3D"textlink=
+plus">ctx.redirect('back');
+ctx.redirect('back', '/index.html');
+ctx.redirect('/login');
+ctx.redirect('<a class=3D"textlinkplus" href=3D"http://google.com/">http://=
+google.com</a>');</span></code></pre></div><p>=E8=A6=81=E6=9B=B4=E6=94=B9 =
+=E2=80=9C302=E2=80=9D =E7=9A=84=E9=BB=98=E8=AE=A4=E7=8A=B6=E6=80=81=EF=BC=
+=8C=E5=8F=AA=E9=9C=80=E5=9C=A8=E8=AF=A5=E8=B0=83=E7=94=A8=E4=B9=8B=E5=89=8D=
+=E6=88=96=E4=B9=8B=E5=90=8E=E5=88=86=E9=85=8D=E7=8A=B6=E6=80=81=E3=80=82=E8=
+=A6=81=E5=8F=98=E6=9B=B4=E4=B8=BB=E4=BD=93=E8=AF=B7=E5=9C=A8=E6=AD=A4=E8=B0=
+=83=E7=94=A8=E4=B9=8B=E5=90=8E:</p>
+<div id=3D"example-46"><pre><code class=3D"lang-js">ctx.status =3D 301;
+ctx.redirect('/cart');
+ctx.body =3D 'Redirecting to shopping cart';</code></pre></div><h3 id=3D"re=
+sponse-attachment-filename-options-">response.attachment([filename], [optio=
+ns])</h3>
+<p>=E5=B0=86 <code>Content-Disposition</code> =E8=AE=BE=E7=BD=AE=E4=B8=BA =
+=E2=80=9C=E9=99=84=E4=BB=B6=E2=80=9D =E4=BB=A5=E6=8C=87=E7=A4=BA=E5=AE=A2=
+=E6=88=B7=E7=AB=AF=E6=8F=90=E7=A4=BA=E4=B8=8B=E8=BD=BD=E3=80=82(=E5=8F=AF=
+=E9=80=89)=E6=8C=87=E5=AE=9A=E4=B8=8B=E8=BD=BD=E7=9A=84 <code>filename</cod=
+e> =E5=92=8C=E9=83=A8=E5=88=86 <a href=3D"https://github.com/jshttp/content=
+-disposition#options">=E5=8F=82=E6=95=B0</a>=E3=80=82</p>
+<h3 id=3D"response-headersent">response.headerSent</h3>
+<p>=E6=A3=80=E6=9F=A5=E6=98=AF=E5=90=A6=E5=B7=B2=E7=BB=8F=E5=8F=91=E9=80=81=
+=E4=BA=86=E4=B8=80=E4=B8=AA=E5=93=8D=E5=BA=94=E5=A4=B4=E3=80=82 =E7=94=A8=
+=E4=BA=8E=E6=9F=A5=E7=9C=8B=E5=AE=A2=E6=88=B7=E7=AB=AF=E6=98=AF=E5=90=A6=E5=
+=8F=AF=E8=83=BD=E4=BC=9A=E6=94=B6=E5=88=B0=E9=94=99=E8=AF=AF=E9=80=9A=E7=9F=
+=A5=E3=80=82</p>
+<h3 id=3D"response-lastmodified">response.lastModified</h3>
+<p>=E5=B0=86 <code>Last-Modified</code> =E6=A0=87=E5=A4=B4=E8=BF=94=E5=9B=
+=9E=E4=B8=BA <code>Date</code>, =E5=A6=82=E6=9E=9C=E5=AD=98=E5=9C=A8=E3=80=
+=82</p>
+<h3 id=3D"response-lastmodified-">response.lastModified=3D</h3>
+<p>  =E5=B0=86 <code>Last-Modified</code> =E6=A0=87=E5=A4=B4=E8=AE=BE=E7=BD=
+=AE=E4=B8=BA=E9=80=82=E5=BD=93=E7=9A=84 UTC =E5=AD=97=E7=AC=A6=E4=B8=B2=E3=
+=80=82=E6=82=A8=E5=8F=AF=E4=BB=A5=E5=B0=86=E5=85=B6=E8=AE=BE=E7=BD=AE=E4=B8=
+=BA <code>Date</code> =E6=88=96=E6=97=A5=E6=9C=9F=E5=AD=97=E7=AC=A6=E4=B8=
+=B2=E3=80=82</p>
+<div id=3D"example-47"><pre><code class=3D"lang-js">ctx.response.lastModifi=
+ed =3D new Date();</code></pre></div><h3 id=3D"response-etag-">response.eta=
+g=3D</h3>
+<p>=E8=AE=BE=E7=BD=AE=E5=8C=85=E5=90=AB <code>"</code> =E5=8C=85=E8=A3=B9=
+=E7=9A=84 ETag =E5=93=8D=E5=BA=94=EF=BC=8C
+=E8=AF=B7=E6=B3=A8=E6=84=8F=EF=BC=8C=E6=B2=A1=E6=9C=89=E7=9B=B8=E5=BA=94=E7=
+=9A=84 <code>response.etag</code> getter=E3=80=82</p>
+<div id=3D"example-48"><pre><code class=3D"lang-js">ctx.response.etag =3D c=
+rypto.createHash('md5').update(ctx.body).digest('hex');</code></pre></div><=
+h3 id=3D"response-vary-field-">response.vary(field)</h3>
+<p>=E5=9C=A8 <code>field</code> =E4=B8=8A=E5=8F=98=E5=8C=96=E3=80=82</p>
+<h3 id=3D"response-flushheaders-">response.flushHeaders()</h3>
+<p>=E5=88=B7=E6=96=B0=E4=BB=BB=E4=BD=95=E8=AE=BE=E7=BD=AE=E7=9A=84=E6=A0=87=
+=E5=A4=B4=EF=BC=8C=E5=B9=B6=E5=BC=80=E5=A7=8B=E4=B8=BB=E4=BD=93=E3=80=82</p=
+>
+</div></section><section><div class=3D"content"><h1 id=3D"join">=E5=8F=82=
+=E4=B8=8E=E7=BF=BB=E8=AF=91</h1><p>=E5=A6=82=E6=9E=9C=E6=82=A8=E5=B8=8C=E6=
+=9C=9B=E8=B4=A1=E7=8C=AE=E5=8A=9B=E9=87=8F=E5=AE=8C=E5=96=84=E6=9C=AC=E4=B8=
+=AD=E6=96=87=E6=96=87=E6=A1=A3=EF=BC=8C=E8=AF=B7=E5=89=8D=E5=BE=80 <a href=
+=3D"https://github.com/demopark/koa-docs-Zh-CN.git">https://github.com/demo=
+park/koa-docs-Zh-CN.git</a> =E4=BB=93=E5=BA=93=E3=80=82
+</p></div></section><section><div class=3D"content"><h1 id=3D"links">=E7=9B=
+=B8=E5=85=B3=E8=B5=84=E6=BA=90</h1><p>Community links to discover third-par=
+ty middleware for Koa, full runnable examples,
+thorough guides and more! If you have questions join us in IRC!
+</p><ul><li><a href=3D"https://github.com/koajs/koa">GitHub repository</a><=
+/li><li><a href=3D"https://github.com/koajs/examples">Examples</a></li><li>=
+<a href=3D"https://github.com/koajs/koa/wiki">Middleware</a></li><li><a hre=
+f=3D"https://github.com/koajs/koa/wiki">Wiki</a></li><li><a href=3D"https:/=
+/plus.google.com/communities/101845768320796750641">G+ Community</a></li><l=
+i><a href=3D"https://groups.google.com/forum/#!forum/koajs">Mailing list</a=
+></li><li><a href=3D"https://github.com/koajs/koa/blob/master/docs/guide.md=
+">Guide</a></li><li><a href=3D"https://github.com/koajs/koa/blob/master/doc=
+s/faq.md">FAQ</a></li><li><strong>#koajs</strong> on freenode</li></ul></di=
+v></section></body></html>
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://koa.bootcss.com/public/style.css
+
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+
+body, html { margin: 0px; padding: 0px; height: 100%; }
+
+body { font: 17px/1.5 "Lucida Grande", "Lucida Sans Unicode", Helvetica, Ar=
+ial, Verdana, sans-serif; background: white; margin: 0px; color: rgb(51, 51=
+, 61); overflow: hidden scroll; }
+
+a { color: rgb(51, 160, 192); }
+
+section { min-height: 50%; }
+
+section:not(:last-child) { border-bottom: 1px solid rgb(238, 238, 238); }
+
+section:not(#top) { padding: 150px 100px; text-align: center; }
+
+pre { background: white; border-top: 1px solid rgb(238, 238, 238); border-b=
+ottom: 1px solid rgb(238, 238, 238); padding: 25px; font-size: 0.9em; font-=
+family: monospace; overflow-x: auto; }
+
+pre .hljs { background-color: transparent; }
+
+.content img { width: 100%; }
+
+p { font-weight: 300; font-family: "Lucida Grande", "Lucida Sans Unicode", =
+Helvetica, Arial, Verdana, sans-serif; }
+
+code { font-family: monospace; font-size: 0.9em; }
+
+h1 { margin-top: 0px; font-size: 2em; }
+
+h1:not(:first-child) { margin-top: 50px; }
+
+h2 { margin-top: 80px; font-size: 1.2em; }
+
+h3 { margin-top: 40px; font-size: 1em; }
+
+ul li { font-size: 0.8em; }
+
+section:nth-child(2n) { background: rgb(253, 253, 253); box-shadow: white 0=
+px 1px 0px 0px inset; }
+
+.content { margin: 0px auto; max-width: 750px; text-align: left; }
+
+#top { height: 100%; }
+
+#heading { user-select: none; position: absolute; top: 50%; margin-top: -15=
+0px; text-align: center; width: 100%; }
+
+#logo { font: 150px Italiana, sans-serif; text-transform: lowercase; }
+
+#tagline { font-size: 16px; }
+
+#menu { position: fixed; top: 35px; right: 30px; z-index: 50; }
+
+#menu:hover ul { display: block; }
+
+#menu a { color: inherit; }
+
+#menu a#toggle { position: absolute; top: 0px; right: 0px; padding: 5px; ba=
+ckground: rgba(255, 255, 255, 0.9); border-radius: 2px; border: 1px solid t=
+ransparent; z-index: 5; }
+
+#menu:hover a#toggle { border-top: 1px solid rgb(239, 239, 239); border-rig=
+ht: 1px solid rgb(239, 239, 239); border-left: 1px solid rgb(239, 239, 239)=
+; border-image: initial; border-bottom: none; }
+
+#menu ul { display: none; position: absolute; top: 35px; right: 0px; margin=
+: 0px; border-width: 1px; border-style: solid; border-color: rgb(239, 239, =
+239) rgb(239, 239, 239) rgb(221, 221, 221); border-image: initial; border-r=
+adius: 2px; padding: 25px; background: rgba(255, 255, 255, 0.95); box-shado=
+w: rgb(238, 238, 238) 0px 1px 3px 0px; white-space: nowrap; }
+
+#menu ul li { list-style: none; }
+
+#menu ul li a { display: block; text-decoration: none; padding: 3px 0px; }
+
+#menu ul li a:hover { text-decoration: underline; }
+
+@media screen and (max-width: 700px) {
+  section:not(#top) { padding: 50px 25px; }
+  #heading { margin-top: -75px; }
+  #logo { font-size: 75px; }
+  #tagline { font-size: 12px; }
+}
+
+@media screen and (max-width: 500px) {
+  body { font-size: 13px; }
+}
+
+#logo { margin-bottom: 0px; }
+
+#logo img { display: none; }
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://koa.bootcss.com/public/icons/css/slate.css
+
+@charset "utf-8";
+
+@font-face { font-family: slate; src: url("../font/slate.eot?78386359#iefix=
+") format("embedded-opentype"), url("../font/slate.woff?78386359") format("=
+woff"), url("../font/slate.ttf?78386359") format("truetype"), url("../font/=
+slate.svg?78386359#slate") format("svg"); font-weight: normal; font-style: =
+normal; }
+
+[class^=3D"icon-"]::before, [class*=3D" icon-"]::before { font-family: slat=
+e; font-style: normal; font-weight: normal; speak: none; display: inline-bl=
+ock; text-decoration: inherit; width: 1em; margin-right: 0.2em; text-align:=
+ center; font-variant: normal; text-transform: none; line-height: 1em; marg=
+in-left: 0.2em; }
+
+.icon-cancel::before { content: "=EE=A0=83"; }
+
+.icon-menu-1::before { content: "=EE=A0=91"; }
+
+.icon-plus::before { content: "=EE=A0=84"; }
+
+.icon-plus-circled::before { content: "=EE=A0=85"; }
+
+.icon-minus::before { content: "=EE=A0=80"; }
+
+.icon-minus-circled::before { content: "=EE=A0=86"; }
+
+.icon-attention-alt::before { content: "=EE=A0=89"; }
+
+.icon-attention::before { content: "=EE=A0=88"; }
+
+.icon-attention-circled::before { content: "=EE=A0=8A"; }
+
+.icon-cancel-circled::before { content: "=EE=A0=82"; }
+
+.icon-cog::before { content: "=EE=A0=87"; }
+
+.icon-resize-full::before { content: "=EE=A0=90"; }
+
+.icon-signal::before { content: "=EE=A0=8B"; }
+
+.icon-smile::before { content: "=EE=A0=8C"; }
+
+.icon-frown::before { content: "=EE=A0=8D"; }
+
+.icon-meh::before { content: "=EE=A0=8E"; }
+
+.icon-github::before { content: "=EE=A0=8F"; }
+
+.icon-menu::before { content: "=EE=A0=81"; }
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----
+Content-Type: application/font-woff
+Content-Transfer-Encoding: base64
+Content-Location: https://koa.bootcss.com/public/icons/font/slate.woff?78386359
+
+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
+
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css
+
+@charset "utf-8";
+
+.hljs { display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51=
+, 51); background: rgb(248, 248, 248); }
+
+.hljs-comment, .hljs-quote { color: rgb(153, 153, 136); font-style: italic;=
+ }
+
+.hljs-keyword, .hljs-selector-tag, .hljs-subst { color: rgb(51, 51, 51); fo=
+nt-weight: bold; }
+
+.hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs=
+-tag .hljs-attr { color: rgb(0, 128, 128); }
+
+.hljs-string, .hljs-doctag { color: rgb(221, 17, 68); }
+
+.hljs-title, .hljs-section, .hljs-selector-id { color: rgb(153, 0, 0); font=
+-weight: bold; }
+
+.hljs-subst { font-weight: normal; }
+
+.hljs-type, .hljs-class .hljs-title { color: rgb(68, 85, 136); font-weight:=
+ bold; }
+
+.hljs-tag, .hljs-name, .hljs-attribute { color: rgb(0, 0, 128); font-weight=
+: normal; }
+
+.hljs-regexp, .hljs-link { color: rgb(0, 153, 38); }
+
+.hljs-symbol, .hljs-bullet { color: rgb(153, 0, 115); }
+
+.hljs-built_in, .hljs-builtin-name { color: rgb(0, 134, 179); }
+
+.hljs-meta { color: rgb(153, 153, 153); font-weight: bold; }
+
+.hljs-deletion { background: rgb(255, 221, 221); }
+
+.hljs-addition { background: rgb(221, 255, 221); }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: bold; }
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://koa.bootcss.com/public/images/koa-logo.png
+
+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
+1c6o7a6T1LXVp9a3HhlzpKnBt+HwLyN/2XHU7GjlMb1jy44zjy863nei+ERPo7yx62TWycdNU5ru
+nppw6nrz+OaW09Gnz50JP3PqbNDZE+f8zh0973P+yAWvC3UXPS7WXnK/dPhX918Pt3i01F72vFx/
+xftKQ+vo1uNXA66evBZ67cz1qOsXb4y70Xoz6ebtWxNvtd0W3e64k3vn5W9Fv/XenXePdq/0vtb9
+igdGD6p+t/t9X5tH27GHoQ8vPUp4dPex8PHzPwr++NS+6An7ScVT06fVHS4dRzvDO688++ZZ+3P5
+896ukj+1/9zwwvbFob8C/7rUPaG7/aXiZd+rJa8NXu944/amqSeu58HbvLe970rfG7zf+cHrw9mP
+KR+f9k77xPi09rPd54Yv0V/u9eX19ckFCoFqL0CgHs/MBHi1A4CdivYOVwCYnP4zl8oD6z8nIowN
+NIr+B+4/l1EGtIeAHYEASfMAYhoBNqFmhTAL3antd2Ig4K6uQw0x1FWQ6eqiAhhLgbYm7/v6XhsD
+MBoAPiv6+no39vV93ob26ncAGvP7z3qUN3WG/FF16DvfsmSeavzfuv8Bh2NqosmVyr8AAAAJcEhZ
+cwAAFiUAABYlAUlSJPAAAAGeaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8eDp4bXBtZXRhIHht
+bG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA1LjQuMCI+CiAgIDxyZGY6
+UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5z
+IyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5z
+OmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPGV4aWY6UGl4
+ZWxYRGltZW5zaW9uPjEwMjA8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQ
+aXhlbFlEaW1lbnNpb24+NzkwPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVz
+Y3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+ChGeXJAAAEAASURBVHgB7d1fzF31
+eSf6tqdSpQHnZjoF3LsWTK9yMHY0M2JCyBzNNAk4NznExURKIcQm6gk0tZHacBRsNDWRwElLpgp+
+IUCkwUBIbmKc0JuCTRl1hP/QdEaqDVNpZoRtejFHGpveVCrnsXezZ+f9u/dae+93ref5RFG63/dd
+/57P83P1XWv/1lo//8EHH/yc/xAgQIAAAQIECBAgkFfgF/KWpjICBAgQIECAAAECBC4JCP3GAQEC
+BAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQI
+CP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBA
+gAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9Cdv
+sPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQ
+SC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECA
+AAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQ
+bwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQI
+ECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYr
+jwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHk
+AkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQ
+IECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3G
+AAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAAB
+AgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPII
+ECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g
+9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAEC
+BAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQ
+IECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBA
+gIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwAB
+AgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/
+8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECA
+AIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAEC
+BAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQI
+CP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBA
+gAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9Cdv
+sPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQ
+SC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECA
+AAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQ
+bwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQI
+ECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYr
+jwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHk
+AkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQ
+IECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3G
+AAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAAB
+AgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPII
+ECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g
+9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAEC
+BAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQ
+IECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBA
+gIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwAB
+AgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/
+8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECA
+AIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAEC
+BAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQI
+CP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBA
+gAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9Cdv
+sPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQ
+SC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECA
+AAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQ
+bwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQI
+ECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYr
+jwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHk
+AkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQ
+IECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3G
+AAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAAB
+AgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPII
+ECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAECBAgQSC4g
+9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQIECAAAEC
+BAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBAgIDQbwwQ
+IECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwABAgQIECBA
+gIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/8gYrjwAB
+AgQIECBAgIDQbwwQIECAAAECBAgQSC4g9CdvsPIIECBAgAABAgQICP3GAAECBAgQIECAAIHkAkJ/
+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
+4n8AAAAASUVORK5CYII=
+
+------MultipartBoundary--5n2FDgcDvFR65LKRDZvPx9waI6CdFLtvbVTavvCXl9------
