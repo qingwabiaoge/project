@@ -1,0 +1,81 @@
+
+*, *:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari */
+}
+
+//兼容移动端的fix背景
+
+body {
+  margin: 0;
+  background: @global-color-gray-lightest;
+  &:after { //兼容移动端的fix背景
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+/*---------------------- 图片加载动画-----------------*/
+img {
+  & {
+    max-width: 100%;
+    // max-height: 100%
+  }
+  &[src$="jpg"] {
+    //background: data-uri() no-repeat center;
+  }
+
+}
+
+/*---------------------- 滚动条-----------------*/
+/*定义滚动条高宽及背景 高宽分别对应 横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #Fff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  background-color: #eee;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: @global-color-primary;
+}
+
+//选中文字的颜色
+::selection {
+  background: @global-color-primary;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: @global-color-primary;
+  color: #fff;
+}
+
+
+.container {
+
+}
+
+svg{
+  fill: currentColor;
+}

@@ -1,0 +1,14 @@
+// Alerts
+
+.alert-variant(@background; @border; @global-color-gray) {
+  background-color: @background;
+  border-color: @border;
+  color: @global-color-gray;
+
+  hr {
+    border-top-color: darken(@border, 5%);
+  }
+  .alert-link {
+    color: darken(@global-color-gray, 10%);
+  }
+}

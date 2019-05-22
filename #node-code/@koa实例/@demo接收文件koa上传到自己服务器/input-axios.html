@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+</head>
+<body>
+
+
+<input id="fileinput" type="file" accept="image/*" onchange="upload(event)">
+
+
+<script>
+
+    function  upload(event){
+       file = event.target.files[0];//获取文件
+
+
+        // <<图片预览本地文件------------------------------------------
+        var windowURL = window.URL || window.webkitURL;//兼容ie和谷歌写法
+
+        console.log(file)
+
+        this.src = windowURL.createObjectURL(event.target.files[0]);
+
+        // 图片预览本地文件------------------------------------------>>
+
+
+        let formdata = new FormData();
+        formdata.append('file', file);
+
+
+
+        let config = {
+
+            headers: {
+
+                headers: {'Content-Type': 'multipart/form-data;charset=UTF-8'} //之前说的以表单传数据的格式来传递fromdata
+
+            }
+
+        };
+        axios.post('http://localhost:3000/uploadfile', formdata, config).then((res) => {
+
+            //做处理
+
+        }).catch((error) => {
+
+
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.honor {
+  position: relative;
+}
+.honor .jb {
+  position: absolute;
+  right: 250px;
+  bottom: -30px;
+  z-index: 10;
+  height: 120px;
+}
+.honor .swiper-container {
+  margin-top: 60px;
+  height: 164px;
+  width: 60%;
+}
+.honor .swiper-slide,
+.honor .swiper-slide img {
+  height: 164px;
+  display: block;
+}
+/*# sourceMappingURL=piclistB.css.map */

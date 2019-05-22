@@ -1,0 +1,40 @@
+@keyframes animite-light {
+  from {
+    left: -100%;
+  }
+}
+.hover-light,
+.animation-light {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.hover-light:after,
+.animation-light:after {
+  position: absolute;
+  left: -100%;
+  /*改变left的值，让其相对box影藏*/
+  top: 0;
+  width: 40%;
+  height: 100%;
+  content: "";
+  /* Safari 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  /* 标准的语法 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-45deg);
+}
+.hover-light:hover:after,
+.animation-light:hover:after {
+  left: 150%;
+  transition: 1.5s ease;
+}
+.animation-light:after {
+  animation: animite-light 2s infinite;
+  left: 150%;
+}
+/*# sourceMappingURL=hover-light.css.map */

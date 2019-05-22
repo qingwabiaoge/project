@@ -90,7 +90,7 @@ export default ({ app }, inject) => {
 ### vuex nuxtServerInit 方法
 
 
-在服务器端运行vuex 不能从浏览器缓存中获得token , 改用req.session.user获取
+在服务器端运行vuex,因为在服务器端,所以浏览器缓存中获得token , 改用从req中获得数据
 
 ```
 actions: {
@@ -230,7 +230,7 @@ export default {
 
 ```
 
-##### 页面page.vue
+##### 页面page.vue和head
 
 ```
 
@@ -310,11 +310,15 @@ export default {
   watchQuery: ['page']
 }
 ````
-### 浏览器路由钩子检验
+### 浏览器端-路由钩子检验
 
-### 等待asyncData 的ajax请求完成
+validate()
 
-### ajax请求完成后,才开始vue生命周期(这点和vuecli不同)
+### 等待asyncData函数的异步请求完成
+
+
+
+### asyncData请求完成后,才开始vue的生命周期(这点和vuecli不同)
 
 ---------------------
 # 插件
@@ -345,7 +349,7 @@ export default {
 
 ```
 
-### 判断设备写代码
+### 判断设备运行代码
 
 
 
@@ -444,7 +448,7 @@ npm install babel-plugin-component --save-dev
 ````
 
 
-#####5. element的sass编译器
+##### 5. element的sass编译器
 解压`theme-chalk-master`到nuxt的根目录
 
 ![](./img/3.png)
