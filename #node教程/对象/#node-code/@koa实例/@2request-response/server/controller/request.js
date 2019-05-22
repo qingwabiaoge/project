@@ -38,10 +38,13 @@ module.exports = async (ctx, next) => {
     console.log('ctx.params---------')
     console.log(ctx.params)
 
+
+
     console.log('ctx.request.header----------------')
     console.log(ctx.request.header===ctx.header)
     console.log(ctx.req.header===ctx.header)
     console.log(ctx.request.header)
+
 
 
 }

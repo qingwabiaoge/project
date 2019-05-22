@@ -210,7 +210,7 @@ export default {
 
 ### header设置
 
-##### nuxt.config.js公共header
+##### nuxt.config.js公共header,本质估计是mixin
 
 ```
   head: {

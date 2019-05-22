@@ -14,5 +14,7 @@ export default {
     return cb(new Error(`要求是在${min}到${max}的正整数`))
   }
 
+
+
 }
 
