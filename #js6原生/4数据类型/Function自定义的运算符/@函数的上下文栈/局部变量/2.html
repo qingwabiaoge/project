@@ -1,0 +1,23 @@
+<script>
+    function f() {
+
+        var i = 1
+
+        function f2() {
+            console.log(i)
+        }
+
+        return f2
+    }
+
+    const fn = f()
+
+    function f1() {
+
+        var i = 10
+
+        fn()
+    }
+
+    f1()
+</script>

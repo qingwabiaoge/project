@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+
+    const obj = {a: 10}//省去了global
+    let x = 1
+
+    function f(p1,p2) {
+
+        var a = 1 //a在变量对象里而没有注入到window里
+        var b = obj.a  //先计算再赋值修正变量对象的键值
+        var o = {}
+        var fn2 = function () {
+            console.log(this)
+        }
+        console.log(x)//1,跨作用域链寻找,模仿栈内寻找变量对象
+
+        function fn() { //函数声明局部变量类似var,存储在变量对象
+            console.log(this)
+        }
+
+        i = 10    //省去了global,注入到了window里
+        m = fn    //省去了global,注入到了window里
+
+        console.log(a) //1
+        console.log(window.a)//undifine
+        console.log(window.fn)//undifine,未注入到了window里
+        console.log(window.fn2)//undefine
+        console.log(window.i)//10,
+        console.log(window.m)//[funcion]
+
+
+    }
+
+
+    console.log(window.i)// 10,因为注入过依然能输出
+
+    obj.fn = f
+    obj.fn(1,2)
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var i=1
+    var f=function () {
+        console.log(i)//自由变量在window作用域里取值
+    }
+
+    var f2=function () {
+        var i=2
+        f()//进入f内部 1
+    }
+    f2()
+</script>
+</body>
+</html>

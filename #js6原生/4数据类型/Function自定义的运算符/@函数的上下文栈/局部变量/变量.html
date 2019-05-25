@@ -1,0 +1,18 @@
+<script>
+    var a = 0
+    var obj = {
+        a: 10,
+        b() {
+
+            console.log(a) // 0,自由变量
+            var b = 1
+            console.log(b) //1,局部变量
+            console.log(obj.a) //10,表示obj里的a
+            console.log(this.a)//10, obj.b()调用 ,this===obj
+
+        }
+
+    }
+    obj.b()
+
+</script>

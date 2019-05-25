@@ -1,0 +1,26 @@
+<script>
+
+    //引入的文件
+    const obj2 = {
+        f1:undefined,
+        f2(n) {
+            this.f1(n)
+        }
+
+    }
+
+
+    {
+
+        //当前要试验的作用域
+        let i
+        obj2.f1 = function (n) {
+            i = n
+            console.log(i)
+        }
+
+    }
+
+    obj2.f2(1)
+
+</script>

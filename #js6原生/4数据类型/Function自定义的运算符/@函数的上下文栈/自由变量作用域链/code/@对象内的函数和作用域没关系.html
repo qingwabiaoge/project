@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 0 //位置1
+    obj = {
+        a: 1,//位置2
+        b: function () {
+            //全局函数所以可以改变obj
+            function f() {
+                obj.a = 2 //对位置2 obj下a:1进行修改
+
+                a = 3 //对位置1 var a=0进行修改
+
+            }
+
+            f()
+        }
+
+
+    }
+    obj.b()
+    console.log(a) //取位置1变量的值
+    console.log(obj) //取位置2变量的值
+</script>
+</body>
+</html>

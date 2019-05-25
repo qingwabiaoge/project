@@ -7,5 +7,5 @@ export default (ctx) => {
   const userAgent = process.server ? ctx.req.headers["user-agent"]
     : navigator.userAgent;
 
-  ctx.userAgent = tool.deviceType(userAgent).type
+  ctx.userAgent = tool.deviceType(userAgent)
 }

@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<script>
+    function add(a, b) {
+        return a + b;
+    }
+
+    //函数只能传一个参数时候实现加法
+    function  curry(a) {
+        return function(b) {
+            return a + b;
+        }
+    }
+    var add2 = curry(2); //add2也就是第一个参数为2的add版本
+    console.log(add2(3))//5
+</script>

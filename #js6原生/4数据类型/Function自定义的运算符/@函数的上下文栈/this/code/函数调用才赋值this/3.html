@@ -1,0 +1,29 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app" ref="app">
+
+</div>
+<script>
+    const father = {
+        fafn() {
+            console.log(this)
+
+        },
+        i: 1
+    }
+    const child = {
+        $father: father,
+        //表达式立即计算
+        fn: father.fafn,
+        //f()未进栈执行之前下边代码不初始化,this也不会赋值
+        f() {
+            //fafn(),进栈给this赋值
+            this.$father.fafn()
+            this.fn()
+        },
+
+
+    }
+    child.f()
+
+</script>

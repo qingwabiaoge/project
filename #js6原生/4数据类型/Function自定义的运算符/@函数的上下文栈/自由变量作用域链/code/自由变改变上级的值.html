@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-10</title>
+    <!-- 引入Vue -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="external nofollow"
+          rel="external nofollow" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+</head>
+
+<body>
+
+<script>
+    var a = 1
+
+    function b() {
+        var a = 2  //变成了a=3
+
+        function f() {
+            a = 3//修改自由变量    修改局部变量var a=2为var a=3
+            window.a=0//前置修改window变量
+
+        }
+
+        f()
+        console.log(a)//3,var a=3取值
+    }
+
+    b()
+    console.log(a)//1
+</script>
+</body>
+
+</body>
+</html>

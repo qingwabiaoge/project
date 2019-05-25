@@ -1,0 +1,33 @@
+<div id="app">
+    <!--＃１　v-bｉｎｄ允许子组件使用-->
+    <cl :msg="msg">
+        <!--＃３　scope允许下级ｄｏｍ使用数据-->
+        <template scope="{xx}">
+            <!--＃４　对ｆｉｌｅｔｅｒ对｛｛｝｝最终处理-->
+            {{xx|tocase(1)}}
+        </template>
+    </cl>
+
+</div>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script>
+    const cl = {
+
+        template: '<div> <slot :xx="msg.a"></slot></div>',
+        props: ['msg']
+    }
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            msg: {a: 'msg'}
+        },
+        filters: {
+            tocase(value, n) {
+                return value.toUpperCase() + 1
+            }
+        },
+        components: {
+            cl
+        }
+    })
+</script>

@@ -1,0 +1,18 @@
+<script>
+    a = 0//#5
+    obj = {
+        a: 1,
+        fn() {
+            this.a += 1//#3 this=obj ,obj.a+=1
+            a += 1 //#4修改自由变量#5
+        }
+    }
+    obj2 = {
+        a: 1,
+        fn() {
+            obj.fn()//#2
+        }
+    }
+    obj2.fn()//#1
+
+</script>

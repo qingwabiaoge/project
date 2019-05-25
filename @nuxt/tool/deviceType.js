@@ -1,5 +1,4 @@
-// 这里的判断类型是自己整理的,覆盖面只涵盖我工作领域的
-// 可以按需追加
+
 /**
  *
  * @param {*} UA ,就是userAgent
@@ -33,7 +32,7 @@ function isAndroid(UA) {
   return /Android/i.test(UA) ? true : false;
 }
 
-module.exports =(UA)=> {
+module.exports = (UA) => {
   if (isMoible(UA)) {
     if (isIOS(UA)) {
       if (isWechat(UA)) {

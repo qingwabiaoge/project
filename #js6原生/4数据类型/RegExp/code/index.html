@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    {
+
+        var str = 'Chapter12,Chapter99 ,Chapter1';
+        const a = /Chapter/
+        console.log(a.test(str))
+    }
+
+    {
+
+        var str = 'Chapter12,Chapter99 ,Chapter1';
+        const a = /Chapter\d/g
+        console.log(a.test(str))
+    }
+
+    {
+        console.log(`//a.exec(str)`)
+        var str = 'Chapter00,Chapter1,Chapter99'
+        const a = /Chapter[1-9]{1,2}/g
+        console.log(a.exec(str))
+    }
+
+    {
+
+        console.log(`//str.match(a)`)
+        var str = 'Chapter00,Chapter1,Chapter99'
+        a = /Chapter[1-9]{1,2}/g
+        console.log(str.match(a))
+    }
+
+    {
+        var str = '01234567899 0-9'
+        a = /(0-9)/g  //(0-9)不会匹配0123456789 而是匹配 0-9
+        console.log(str.match(a))
+    }
+
+    {
+        var str = 'shi,leiqin,'
+        a = /(qin|shi)/g
+        console.log(str.search(a))
+    }
+
+
+    {
+        var str = 'shi,lei qin,'
+        a = /(qin|shi)/
+        console.log(str.replace(a, 1111))
+
+    }
+
+    {
+        var str = 'qinshilei'
+        a = 'lei'
+        b = str.indexOf(a)
+        console.log(b)
+
+    }
+
+</script>
+</body>
+</html>

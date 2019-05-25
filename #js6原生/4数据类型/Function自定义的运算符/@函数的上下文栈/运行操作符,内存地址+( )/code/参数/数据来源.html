@@ -1,0 +1,15 @@
+<script>
+    const i = 10
+
+    const obj = {
+        i: 1,
+        f(a) {
+            console.log(a)
+            console.log(i)
+            console.log(this.i)
+        }
+    }
+
+    obj.f(100)
+
+</script>

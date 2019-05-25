@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script>
+
+    function fn(i) {
+        return new Promise((resolve, reject) => {
+                if (i > 0) {
+                    resolve(i)
+                } else {
+
+                    reject(new Error('不能输入小于等于0的值'))
+                }
+            }
+        )
+    }
+
+    function fn2(i) {
+        return new Promise((resolve, reject) => {
+                if (i > 0) {
+                    resolve(i)
+                } else {
+
+                    reject(new Error('不能输入小于等于0的值'))
+                }
+            }
+        )
+    }
+
+
+    async function f() {
+        try {
+
+            const m = await fn(2)
+            console.log(m)
+            const n = await fn2(1)
+            console.log(n)
+
+
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
+
+    f()
+</script>

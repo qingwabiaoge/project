@@ -1,0 +1,9 @@
+<script>
+    var a=1
+    function fn(i) {
+        var a=2
+        console.log(i)
+    }
+    fn(this.a)//this===window此处this为window,,,()不会间隔作用域
+
+</script>

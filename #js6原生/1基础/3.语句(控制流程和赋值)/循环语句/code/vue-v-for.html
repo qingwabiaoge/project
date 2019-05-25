@@ -1,0 +1,47 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-10</title>
+    <!-- 引入Vue -->
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+
+<body>
+<div id="app">
+
+
+        <ol  v-for="(todo,index) in todos" @click="fn(todo.text,index)" >
+           <button>{{todo.text}}-{{index}}</button>
+        </ol>
+
+
+</div>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            todos: [
+                {text: 1},
+                {text: 2},
+                {text: 3}
+            ],
+
+        },
+        methods: {
+            fn(item,index){
+                console.log(item,index)
+            }
+
+        }
+
+    })
+
+
+</script>
+</body>
+
+</body>
+</html>

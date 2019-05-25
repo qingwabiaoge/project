@@ -1,0 +1,52 @@
+<html>
+<meta charset="utf-8">
+<body>
+<div>
+    <button onclick="creat()">
+        切换路由新建对象
+    </button>
+    <button onclick="handerClick()">
+        click
+    </button>
+</div>
+<script>
+    //运行log函数
+    console.log('log函数运行')
+    //初始化{...}到堆内存 堆内存地址赋值给obj
+    const obj = {
+        a: 1,
+        fn() {
+            console.log(this.a)
+        },
+        created() {
+            console.log('created钩子函数运行')
+        }
+    }
+
+    // 函数地址复制给F
+    function F({a, fn, created}) {
+        this.a = a;
+        this.fn = fn;
+        created()
+    }
+
+    //构造函数调用事件,vue的是路由切换激发的这个函数
+    //运行钩子函数
+    let f
+
+    function creat() {
+        f = new F(obj)
+        console.log(f)
+
+    }
+
+    //事件驱动运行函数,onclick等等
+    function handerClick() {
+
+        f.fn()
+    }
+
+
+</script>
+</body>
+</html>
