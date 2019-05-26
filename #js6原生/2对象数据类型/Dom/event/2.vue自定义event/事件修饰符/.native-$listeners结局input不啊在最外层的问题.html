@@ -22,20 +22,22 @@
                 return Object.assign({},
                     // 我们从父级添加所有的监听器
                     this.$listeners,
-                    // 然后我们添加自定义监听器，
-                    // 或覆写一些监听器的行为
+
                     {
-                        // 这里确保组件配合 `v-model` 的工作
+                        // 这里是第一个input带处理函数,和第二个无关
                         input: function (event) {
                             vm.$emit('input', event.target.value)
+
                         }
                     }
                 )
             }
         },
+        //v-on=''绑定多个事件 v-on='{mouseenter:onEnter,mouseleave:onOut}' v-on:click="onClick"
         template: `
     <label>
       {{ label }}
+
       <input
         v-bind="$attrs"
         v-bind:value="value"

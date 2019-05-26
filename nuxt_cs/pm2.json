@@ -1,0 +1,20 @@
+
+
+{
+  "apps": [
+    {
+      "name": "server",
+      "script": "./server/index.js",
+      "cwd": "./",
+      "watch": [
+        "controller",
+        "middlewares",
+        "model",
+        "router"
+      ],
+      "error_file": "./logs/website-err.log",
+      "out_file": "./logs/website-out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}

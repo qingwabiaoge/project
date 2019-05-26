@@ -50,7 +50,7 @@
 
 
         case 2:
-            //生成实例>>>>>>>>>
+            //生成组件>>>>>
             Vue.component('apple',
                 {
 
@@ -68,7 +68,7 @@
 
 
         case 3:
-
+            //生成构造器>>>>>>>>>
             var apple = Vue.extend({
                 extends: fruit, //fruit ,plant
                 mixins: [fruit, green, plant, Vue], //fruit
@@ -76,12 +76,12 @@
                 template: "<p>apple</p>",
             });
 
-            //生成实例>>>>>>>>>
+          //实例化
             new apple({
                 el: '#app1'
             })
 
-            //生成实例>>>>>>>>>
+            //实例化
             Vue.component('apple', apple)
             new Vue({
                 el: "#app2",

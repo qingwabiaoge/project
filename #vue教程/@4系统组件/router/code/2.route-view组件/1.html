@@ -1,0 +1,74 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<style>
+    div {
+        border: 1px solid #0f0;
+        margin: 20px
+    }
+
+    div > div {
+        border: 1px solid #f00;
+    }
+
+    div > div > div {
+        border: 1px solid #00f;
+    }
+
+
+</style>
+<div id="app">
+    vm跟组件:
+    <ul>
+
+        <li>
+            <router-link to="/fa/">/fa/</router-link>
+
+        </li>
+        <li>
+            <router-link :to="{name:'cs'}">name="cs"</router-link>
+        </li>
+
+    </ul>
+------------------------------
+    <!--这个router-view容易忘记-->
+    <router-view></router-view>
+
+</div>
+<script>
+    /**************************************** 这个router-view非常容易忘记*/
+    const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
+
+    const fa_index = {template: '<div>/fa/cs</div>'}
+
+    //route配置其实是配置router-view组件的
+    const router = new VueRouter({
+
+            routes: [{//配置最顶级的<route-view/>
+                path: '/fa/',
+                name: 'fa',
+                component: fa,
+                children: [ //每个children对应一个<route-view/>
+                    {
+                        path: '/cs',
+                        name: 'cs',
+                        component: fa_index,
+                    }
+
+                ]
+            },
+
+            ]
+        }
+    )
+    const vm = new Vue({
+        el: '#app',
+        router,
+        created() {
+            console.log(this)
+        }
+    })
+
+</script>

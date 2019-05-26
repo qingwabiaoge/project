@@ -9,6 +9,8 @@
 <body>
 <button onclick="history.go(-1);render()">history.go(-1)</button>
 <button onclick="history.go(1); render()">history.go(1)</button>
+
+
 <br>
 <!--路由meta 原理history.state-->
 <button onclick='history.pushState({state: 1}, "newtitle","1.html?b=1"); render()'>pushState添加一条历史记录</button>

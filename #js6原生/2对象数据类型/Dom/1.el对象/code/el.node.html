@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html >
+<head>
+    <title>index.html</title>
+
+<meta charset="utf-8">
+
+
+</head>
+
+<body>
+<a href="#" name="a2" id="el">百度一下</a>
+
+
+
+
+<div id="newBoy">王健林</div>
+
+<div id="boys">
+    <div>马云</div>
+    <div>马化腾</div>
+    <div>李彦宏</div>
+    <div>刘强东</div>
+</div>
+
+<script type="text/javascript">
+    function log(data) {
+        console.log(data);
+    }
+
+    window.onload = function () {
+        var el = document.getElementById("el");
+        console.log({el:el})
+        //元素节点
+        log(el.nodeName);//A
+        log(el.nodeValue);//null
+        log(el.nodeType);//1
+
+        log("--------------------------");
+        //属性节点
+        var a2 = el.attributes["href"];
+        log(a2.nodeName);
+        log(a2.nodeValue);
+        log(a2.nodeType);
+
+        //文本节点
+        log("--------------------------");
+        log({a: el.firstChild});
+        log(el.firstChild.nodeValue);
+        log(el.firstChild.nodeType);
+
+         log("-------------增加/删除/修改-------------");
+         //------DOM增加/删除/修改
+         var boys = document.getElementById("boys");
+         log(boys.childNodes);
+         log(boys.lastChild);//最后一个
+         log(boys.lastChild.previousSibling);//指向上一个
+         log(boys.lastChild.previousSibling.nextSibling.hasChildNodes());
+
+         //需求:把"王健林"添加到"刘强东"后
+         var newBoy = document.getElementById("newBoy");
+
+         boys.appendChild(newBoy);//添加
+         //boys.removeChild(newBoy);//删除
+
+         //js创建一个新的div标签
+
+         //王健林  修改   马龙
+         var newdiv = document.createElement("div");//创建一个新的标签
+         newdiv.innerHTML="马龙";
+
+         boys.replaceChild(newdiv, newBoy);//修改
+
+    };
+
+</script>
+</body>
+</html>

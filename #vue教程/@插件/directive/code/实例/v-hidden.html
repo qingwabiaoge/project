@@ -3,8 +3,9 @@
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
 <div id="app">
+    <button @click="display=false">显示</button>
+
     <input v-h="true" type="text">
-    <input v-h="false" type="text">
 
 </div>
 
@@ -25,7 +26,8 @@
     })
     var app = new Vue({
         el: "#app",
-        data: {msg: 1},
+        data: {msg: 1, display: true},
+
 
     });
 
