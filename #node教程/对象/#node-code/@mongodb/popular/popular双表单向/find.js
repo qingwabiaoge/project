@@ -1,4 +1,6 @@
-const Author=require('./model/Author')
+
+require('./model/Author') //这句必须有
+
 const Story=require('./model/Story')
 
 

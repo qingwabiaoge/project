@@ -24,15 +24,15 @@
     Vue.directive('h', {
 
         bind: function (el, binding, vnode, oldVnode) {
-            console.log('bind运行')
+            console.log('1-bind运行')
             console.log({el})//指令el
-            console.log(binding)// 返回对象，用户设置的信息
-            console.log(vnode)//Vue编译生成的虚拟节点。
-            console.log(oldVnode)
+            console.log('binding',binding)// 返回对象，用户设置的信息
+            console.log('vnode:',vnode)//Vue编译生成的虚拟节点。
+            console.log('oldVnode',oldVnode)
 
         },
         inserted: function (el, binding) {
-            console.log('inserted运行')
+            console.log('2-inserted运行')
             console.log(binding.value)
             toogleShow(el,binding)
         },

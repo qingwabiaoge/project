@@ -1,0 +1,14 @@
+<button onmouseover="fn(event)" id="btn">btn</button>
+
+<script>
+    function fn(event) {
+        console.log(event)
+    }
+
+    const el = document.getElementById('btn')
+
+
+    el.onmousedown = fn
+    el.addEventListener('click', fn)
+
+</script>

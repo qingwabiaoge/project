@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 /*----------------新建Schema ,类似构造函数 ,this.name=name--------------------------------*/
 const schema = new mongoose.Schema({
+    //和vue的属性的配置类似
     name: {type: String, default: 'xxx'},
     id: {type: Number, unique: true, ropDups: true},
     age: {type: Number, default: 0},

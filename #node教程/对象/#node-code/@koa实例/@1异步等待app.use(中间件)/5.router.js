@@ -4,7 +4,7 @@ const Router = require('koa-router')
 
 
 router = new Router()
-router.get('/', async (ctx, next) => {
+router.get('/cs', async (ctx, next) => {
     ctx.body = 'routeBefore'
     await next()
     ctx.body += 'routeAfter'

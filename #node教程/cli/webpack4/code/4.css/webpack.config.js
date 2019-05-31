@@ -15,8 +15,6 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-
-
                     {loader: "style-loader"},//解析css文件成style标签插入到js
                     {loader: 'css-loader'}//可以引入 .css文件
                 ]

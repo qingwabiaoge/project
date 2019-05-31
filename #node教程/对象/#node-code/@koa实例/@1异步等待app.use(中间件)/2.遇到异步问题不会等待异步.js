@@ -1,5 +1,12 @@
 const Koa = require('koa')
 const app = new Koa()
+
+function fn(ctx) {
+    setTimeout(() => {
+        ctx.body += 4
+    }, 1000)  //还未输出 app程序已运行完毕
+}
+
 app.use((ctx, next) => {
     ctx.body = '1',
         next()
@@ -9,9 +16,7 @@ app.use((ctx, next) => {
 app.use((ctx, next) => {
     ctx.body += '3',
         next()
-    setTimeout(() => {
-        ctx.body += 4
-    }, 1000)  //还未输出 app程序已运行完毕
+    fn(ctx)
 
 })
 app.use((ctx, next) => {
