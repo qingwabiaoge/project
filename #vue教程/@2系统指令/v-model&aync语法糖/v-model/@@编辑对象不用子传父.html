@@ -7,7 +7,7 @@
 
 <div id="app">
 
-    <!--    对象的地址没有变-->
+    <!--    对象的地址没有变,-->
     <cl :data="obj"></cl>
     {{obj}}
 
@@ -21,6 +21,10 @@
 <script>
 
     Vue.component('cl', {template: ` <input type="text" v-model="data.a">`, props: ['data']})
+
+
+
+
     Vue.component('cl2', {
         template: ` <input type="text" :value="data" @input="$parent.i=$event.target.value">`,
         props: ['data']

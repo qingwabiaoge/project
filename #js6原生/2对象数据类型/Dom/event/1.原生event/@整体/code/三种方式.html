@@ -1,3 +1,5 @@
+
+<!--方式1-->
 <button onmouseover="fn(event)" id="btn">btn</button>
 
 <script>
@@ -7,8 +9,10 @@
 
     const el = document.getElementById('btn')
 
-
+    //方式2
     el.onmousedown = fn
+
+    //方式3
     el.addEventListener('click', fn)
 
 </script>

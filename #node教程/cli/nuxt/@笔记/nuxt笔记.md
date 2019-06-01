@@ -41,14 +41,16 @@ $ npx create-nuxt-app <项目名>
 
 # 详解流程
 
-### ctx.req.headers
-
-![](./img/17.png)
 
 
 ### 上下文对象(函数回调的参数)
 
 ![](./img/2.png)
+
+### ctx.req.headers
+
+![](./img/17.png)
+
 
 ### 把自定义数据注入到上下文对象
 ##### ctx.xxx注入

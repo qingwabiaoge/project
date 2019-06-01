@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    function Person() {}
+    Person.prototype = {
+        name: 'iwen',
+        run: function () {
+            console.log('run')
+        }
+    }
+
+    function Man() {}
+    Man.prototype = new Person()
+    Man.prototype.superClass = new Person()
+    Man.prototype.name = 'iwen2'
+    Man.prototype.run = function () {
+        console.log('run2')
+    }
+
+    function Son() {}
+    Son.prototype = new Man()
+    Son.prototype.superClass = new Man()
+    Son.prototype.name = 'iwen3'
+    Son.prototype.run = function () {
+        console.log('run3')
+    }
+    var child = new Son()
+    console.log(child.superClass)
+    console.log(child.superClass.superClass)
+
+</script>
+</body>
+</html>
