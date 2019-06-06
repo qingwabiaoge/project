@@ -4,6 +4,7 @@ const app = new Koa()
 function fn(ctx) {
     setTimeout(() => {
         ctx.body += 4
+        console.log('测试')
     }, 1000)  //还未输出 app程序已运行完毕
 }
 
