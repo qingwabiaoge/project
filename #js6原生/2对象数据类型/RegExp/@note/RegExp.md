@@ -120,11 +120,28 @@ qin$以'qin'结尾
 
 ```
 
-#() 分组操作符和或操作 | 和捕获
+# 分组和捕获
 
 
-### 多字符匹配(分组操作符)
 
+ 几种正则的reg.test(str)的值都是一致的只是reg.exec(str)的值是不同的
+
+
+
+
+
+### 普通正则不捕获:
+
+```
+  const reg = /kid is a doubi/
+    console.log(reg.exec('kid is a doubi'))// [0:kid is a doubi]
+```
+
+
+### ()的作用: 分组+捕获
+
+
+##### 多字符
 一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
 ```
@@ -132,41 +149,32 @@ qin$以'qin'结尾
 /hahaha/
 
 ```
+##### 或操作
 
+或操作（|）或操作
 
-### （|）或操作
-
-
+```
 （a|b）匹配a或者b
+```
 
-
-
-
-
-### 普通正则 捕获() 非捕获(?:) 前瞻(?=) 前瞻否定(!=)
-
- 几种正则的reg.test(str)的值都是一致的
- 
- reg.exec(str)的值是不同的
+##### ()捕获作用
 
  捕获的含义:
-   * 捕获到reg.exec('xxx')[1],
-   * 可以通过RegExp.$1访问,
-   * 在表达式里通过/1访问
+ 
+捕获到reg.exec('xxx')[1],
    
-##### 普通
+可以通过RegExp.$1访问,
 
-```
-  const reg = /kid is a doubi/
-    console.log(reg.exec('kid is a doubi'))// [0:kid is a doubi]
-```
+在表达式里通过/1访问
+   
 
-##### 捕获()
+
+
 
 ```
     const reg = /(doubi) is a doubi/
     console.log(reg.exec('doubi is a doubi'))// [0: "doubi is a doubi" 1: "doubi"]
-    console.log(RegExp.$1 )//doubi,记忆窍门:和$1表达式的返回值的是一致的
+    console.log(RegExp.$1 )//doubi,记忆窍门:和$1===reg.exec('xxx')[1}
 ```
 
 ```
@@ -176,6 +184,8 @@ qin$以'qin'结尾
     console.log(RegExp.$1 )//doubi
 
 ```
+
+### (?)非捕获
 
 ##### 非捕获(?:)
 
@@ -189,16 +199,27 @@ qin$以'qin'结尾
 
 ```
 
-##### 前瞻(?=)  
+##### 非捕获前瞻(?=)  
 
   前瞻的含义是往前看一下,但不捕获
+
+
 
 ```
    const reg = /kid is a (?=doubi)/
    console.log(reg.exec('kid is a doubi'))// [0:kid is a] 返回值和上面普通型的不同
 ```
 
-##### 前瞻否定(?!)   
+ 开头就前瞻
+```
+const reg = /^(?=haha)/
+const str = "hahahamimimi"
+
+
+console.log(reg.test(str))//true
+```  
+
+##### 非捕获前瞻否定(?!)   
 
 前瞻意思是往前看一下,不捕获
 

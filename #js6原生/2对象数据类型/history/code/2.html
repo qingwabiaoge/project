@@ -8,6 +8,7 @@
 <div>
     <button onclick="history.go(-1)">history.go(-1)</button>
     <button onclick="history.go(1)">history.go(1)</button>
+
     <br>
     <button class="btn" onclick="btnFun();">点击新增一条历史记录</button>
 </div>
@@ -16,7 +17,7 @@
     function btnFun() {//点击事件
         // 增加一个历史记录
         history.pushState('a',null,'2.html?b=1');
-        console.log('增加历史记录后 state的值：',history.state); // a
+        console.log('state的值',history.state); // a
     };
     window.addEventListener('popstate',function() {
         var state = history.state;//取出state值

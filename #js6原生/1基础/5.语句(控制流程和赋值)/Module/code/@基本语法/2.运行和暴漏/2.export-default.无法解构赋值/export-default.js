@@ -4,3 +4,14 @@ export default {
         console.log(this.a++)
     }
 }
+
+
+/*
+*   module.exports={
+*     default:{
+*      a:1,
+*      fn(){}
+*             }
+*                    }
+*
+* */
