@@ -41,8 +41,8 @@ module.exports = async (ctx, next) => {
 
 
     console.log('ctx.request.header----------------')
-    console.log(ctx.request.header===ctx.header)
-    console.log(ctx.req.header===ctx.header)
+    console.log(ctx.request.header===ctx.header) //true
+    console.log(ctx.req.header===ctx.header)  //false
     console.log(ctx.request.header)
 
 

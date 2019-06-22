@@ -75,9 +75,8 @@ module.exports = {
     //vuex持久化
     "~/plugins/vuex-persistedstate.client.js",
     //test----------------------
-    "~/plugins/import",
+    "~/plugins/process",
     "~/plugins/combined-inject",
-
 
   ],
   /*

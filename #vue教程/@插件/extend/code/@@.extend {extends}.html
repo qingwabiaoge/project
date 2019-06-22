@@ -10,7 +10,7 @@
 
 
 <script>
-    //配置文件
+    //配置文件对象
     var green = {
         beforeCreate() {
             console.log('this is green')
@@ -32,8 +32,7 @@
     })
 
 
-
-    const n = 2
+    const n = 6
     switch (n) {
 
 
@@ -41,7 +40,7 @@
             //生成实例>>>>>>>>>
             new Vue({
                 el: "#app1",
-                extends: fruit, //fruit ,plant
+
                 mixins: [fruit, green, plant, Vue], //fruit
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
@@ -54,7 +53,6 @@
             Vue.component('apple',
                 {
 
-                    extends: fruit, //fruit ,plant
                     mixins: [fruit, green, plant, Vue], //fruit
                     //后面的覆盖前面的
                     template: "<p>apple</p>",
@@ -70,13 +68,13 @@
         case 3:
             //生成构造器>>>>>>>>>
             var apple = Vue.extend({
-                extends: fruit, //fruit ,plant
+
                 mixins: [fruit, green, plant, Vue], //fruit
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
             });
 
-          //实例化
+            //实例化
             new apple({
                 el: '#app1'
             })
@@ -89,6 +87,56 @@
             break;
 
 
+        case 4:
+            //生成实例>>>>>>>>>
+            new Vue({
+                el: "#app1",
+
+                extends: fruit,
+                //后面的覆盖前面的
+                template: "<p>apple</p>",
+            });
+            break;
+
+
+        case 5:
+            //生成组件>>>>>
+            Vue.component('apple',
+                {
+                    extends: green,
+                    //后面的覆盖前面的
+                    template: "<p>apple</p>",
+                }
+            )
+
+            new Vue({
+                el: "#app2",
+            });
+            break;
+
+
+        case 6:
+            //生成构造器>>>>>>>>>
+            var apple = Vue.extend({
+
+                extends: plant,
+                //后面的覆盖前面的
+                template: "<p>apple</p>",
+            });
+
+            //实例化
+            new apple({
+                el: '#app1'
+            })
+
+         //-----------------------------------------
+            //组件化
+            Vue.component('apple', apple)
+            //实例化
+            new Vue({
+                el: "#app2",
+            });
+            break;
     }
 
 

@@ -1,0 +1,33 @@
+/* Headings
+ ========================================================================== */
+.artile,
+article {
+  padding: 30px auto;
+}
+.artile h1,
+article h1,
+.artile .h1,
+article .h1,
+.artile h2,
+article h2,
+.artile .h2,
+article .h2,
+.artile h3,
+article h3,
+.artile .h3,
+article .h3,
+.artile h4,
+article h4,
+.artile .h4,
+article .h4,
+.artile h5,
+article h5,
+.artile .h5,
+article .h5,
+.artile h6,
+article h6,
+.artile .h6,
+article .h6 {
+  margin: 0 0 50px 0;
+}
+/*# sourceMappingURL=article.css.map */

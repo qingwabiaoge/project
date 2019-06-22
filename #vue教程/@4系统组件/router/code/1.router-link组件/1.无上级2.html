@@ -24,10 +24,11 @@
 
     <ul>
 
+        <!-------------------字符串形式----------------------------------------------------->
         <router-link to="/fa/03?id={a:1}">to="/fa/03?id={a:1}"</router-link>
         <br>
 
-
+        <!-------------------对象形式----------------------------------------------------->
         <router-link :to="{ path: '/fa/04?id=4'}">     <!-- 注path:不能param因为path里本身就有param-->
             :to="{ path: '/fa/04?id=4'}
         </router-link>
@@ -38,19 +39,20 @@
         </router-link>
         <br>
 
-        <router-link :to="{name:'id',params:{id:01},query:{id:1}}">
-            :to="{name:'id',params:{id:01},query:{id:1}}"
+        <router-link :to="{name:'id',params:{id1},query:{q:1}}">
+            :to="{name:'id',params:{id1},query:{q:1"
         </router-link>
         <br>
-
 
         <router-link :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}">
             :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}
         </router-link>
         <br>
 
-        <button @click="$router.push({ name: 'id',params:{id: 02}, query: { id: 2 }})">
-          $router.push()替代to
+
+        <!-------------------程序形式----------------------------------------------------->
+        <button @click="$router.push({ name: 'id',params:{id: 2}, query: { q: 2 }})">
+            $router.push()替代to
         </button>
 
     </ul>

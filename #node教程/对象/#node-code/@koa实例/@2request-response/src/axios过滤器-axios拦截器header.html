@@ -12,7 +12,7 @@
     // 添加请求拦截器,请求数据前做些什么
     axios.interceptors.request.use(
         config => {
-            // 在发送请求之前1做些什么：每次发送请求之前检测都vuex存有token,那么都要放在请求头发送给服务器
+            // 在headers里加入数据
             if (store.state.token.token) {
                 config.headers.Authorization = `token ${store.state.token.token}`;
             }

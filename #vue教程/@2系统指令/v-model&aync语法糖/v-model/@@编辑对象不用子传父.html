@@ -20,7 +20,7 @@
 
 <script>
 
-    Vue.component('cl', {template: ` <input type="text" v-model="data.a">`, props: ['data']})
+    Vue.component('cl', {template: `<div><input type="text" v-model="data.a"><input type="text" v-model="data.b"></div> `, props: ['data']})
 
 
 
@@ -29,12 +29,15 @@
         template: ` <input type="text" :value="data" @input="$parent.i=$event.target.value">`,
         props: ['data']
     })
+
+
+
     const vm = new Vue({
         el: '#app',
 
         data: {
 
-            obj: {a: 1},
+            obj: {a: 1,b:2},
 
             i: 1
 

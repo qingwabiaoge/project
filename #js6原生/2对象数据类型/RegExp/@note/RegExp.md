@@ -11,23 +11,49 @@
 
     var re = new RegExp('hello','g');   //代替/xxxx/
 
-# 匹配模式: 全局 多行 大小写 
 
 
+# 修饰符:
 /m多行匹配 [英]multi- :多个
 
 /g [英]globe
 
 /i 对大小写不敏感
 
+
+### 对str.match(reg)适用  
+
+
+
 ````
-   var str = 'run runoob runooob runoooooob';
+  var str = 'run runoob runooob runoooooob';
 
-    a=/runo*/g     //runo*/g 可以代表run，runo，runoo，runooo, ......
+ a=/runo*/g   
 
-    console.log(str.match(a));
+console.log(str.match(a)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
+
 ````
+### str.search(reg)
 
+```
+   var str = '1111shi,leiqin11qin111,'
+    const reg = /(qin|shi)/
+    console.log(str.search(reg)) //4
+    console.log(str.indexOf('qin')) //11
+    console.log(str.lastIndexOf('qin')) //6
+    
+```
+### str.repalce(reg)
+
+```
+  var str='秦石磊是个好人,秦石磊是个好男人'
+    reg1=/(好)/
+    reg2=/(好)/g
+    console.log(str.replace(reg1,'坏'))
+    console.log(str.replace(reg2,'坏'))
+
+
+```
 
 # \  转意字符(单字符)
 ```
@@ -58,7 +84,7 @@
 
 #  [-] 自定义匹配范围 (单字符) [^ ]排除后的范围匹配
 
-[a-z][A-Z],[0-9] [a-zA-z]表示相应位置的字符要匹配英文字符和数字。
+[a-zA-z]匹配英文大小写
 
 [  ^ ]表示排除  [^ \s]
 
@@ -120,9 +146,26 @@ qin$以'qin'结尾
 
 ```
 
-# 分组和捕获
+
+# 正则方法reg.test(str),reg.exec(str)
+
+```
+const reg = /[1-2]/
+
+const str = 'a123'
+
+//reg匹配部分字符串就为ture
+
+const i = reg.test(str) //true
+
+//reg匹配部分字符串 并把匹配的部分放到返回值的数组裏
 
 
+const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
+```
+
+
+# ()的作用: 分组捕获, 分组非捕获
 
  几种正则的reg.test(str)的值都是一致的只是reg.exec(str)的值是不同的
 
@@ -130,18 +173,12 @@ qin$以'qin'结尾
 
 
 
-### 普通正则不捕获:
-
-```
-  const reg = /kid is a doubi/
-    console.log(reg.exec('kid is a doubi'))// [0:kid is a doubi]
-```
 
 
-### ()的作用: 分组+捕获
 
 
-##### 多字符
+
+### 多字符
 一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
 ```
@@ -149,7 +186,7 @@ qin$以'qin'结尾
 /hahaha/
 
 ```
-##### 或操作
+### 或操作
 
 或操作（|）或操作
 
@@ -157,7 +194,7 @@ qin$以'qin'结尾
 （a|b）匹配a或者b
 ```
 
-##### ()捕获作用
+### ()捕获
 
  捕获的含义:
  
@@ -234,7 +271,7 @@ console.log(reg.test(str))//true
 ```
 
 
-# 贪婪模式和惰性模式 
+# 贪婪模式和惰性模式 (匹配尽可能多还是匹配尽可能少)
 
 " * "限定符和" + "限定符都是__贪婪的__，因为它们会尽可能多的匹配文字，
 
@@ -256,31 +293,8 @@ console.log(reg.test(str))//true
 
 
 ```
-# 正则方法
-
-#### test 返回booloen
 
 
-```javascript
-    <script>
-
-        var str = 'Chapter12,Chapter99 ,Chapter1';
-      a=/Chapter\d/g
-        console.log(a.test(str))
-    </script>
-    
-```
-
-#### exec 返回数组
-
-     <script>
-
-        var str = 'Chapter12,Chapter99 ,Chapter1';
-        const a=/Chapter\d/g
-        console.log(a.exec(str))
-
-
-     </script>
 
 # 表单验证
 

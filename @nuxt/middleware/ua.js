@@ -8,4 +8,5 @@ export default (ctx) => {
     : navigator.userAgent;
 
   ctx.userAgent = tool.deviceType(userAgent)
+
 }

@@ -97,48 +97,7 @@
     f2()
 
 
-    /*,若不传入回调函数，则会返回一个 promise,mongose vue的$nexttick 都是这样做的------------------------------*/
-
-
-    function asynFn(callback) {
-
-        const promise = new Promise((resolve, reject) => {
-            if (i > 0) {
-                setTimeout(() => {
-                    resolve(i + 1)
-                }, 2000)
-            } else {
-                reject(new Error('err'))
-            }
-
-        })
-        if (callback) {
-
-            promise.then(res => {
-                callback(false, res)
-            })
-                .catch(err => {
-                    callback(err)
-                })
-        } else {
-            return promise
-        }
-    }
-
-    asynFn((err, res) => {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log(res)
-
-
-        }
-
-    })
-
-    asynFn().then(res => console.log(res)).catch(err => {
-        console.log(err)
-    })
+   
 
 
 </script>

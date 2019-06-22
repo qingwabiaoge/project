@@ -8,32 +8,9 @@
 |lastIndexOf()|✓|✓||
 |concat()|✓|✓||
 |截取|sclice|slice;substring(a,b) b>a||
-|填充|padStart(7,'111111')|fill(’qsl’,1,4))|
+|填充|fill(’qsl’,1,4))|padStart(7,'111111')|
 
-# String的匹配方法
 
-#### match
-
-    <script>
-        var str = 'Chapter00,Chapter1,Chapter99'
-        a = /Chapter[1-9]{1,2}/g
-        console.log(str.match(a))
-    </script>
-#### search
-
-    <script>
-        var str='shi,leiqin,'
-        a=/(qin|shi)/
-        console.log(str.search(a))
-    </script>
-
-#### replace
-    <script>
-        var str='shi,lei qin,'
-        a=/(qin|shi)/
-        console.log(str.replace(a,1111))
-
-    </script>
 # 截取
 #### substring
 ```

@@ -7,9 +7,9 @@
 <body>
 
 
-<!--vm下的任何表达式和语句-->
-<div id="app">
 
+<div id="app">
+    <!--注入到vm下的任何表达式和语句-->
     <button @click="a+=10">@click="a+=10"</button>
     <button @click="fn($event)">@click="fn()"</button>
     <button @click="fn">@click="fn"</button>    <!--放函数定义式可运行,原理是vue会自动补全($event)-->
