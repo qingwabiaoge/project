@@ -1,47 +1,43 @@
 <meta charset="UTF-8">
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
-<div id="app1">
+<div id="app">
 
-</div>
-
-<div id="app2">
-    <apple></apple>
 </div>
 
 
 <script>
     //配置文件对象
-    var green = {
+    var leaves = {
         beforeCreate() {
-            console.log('this is green')
+            console.log('green leaves')
         }
     }
 
-    //vue组件
+    //vue组件工厂函数
     var fruit = Vue.component('fruit', {
         created() {
-            console.log('I am fruit')
+            console.log('yellow fruit')
         }
     })
 
-    //带配置的vue构造器
-    var plant = Vue.extend({
+    //带配置的Vue工厂函数
+    var flowers = Vue.extend({
         mounted() {
-            console.log('this is plant')
+            console.log('red flowers')
         }
     })
 
 
-    const n = 6
+    const n = 1
     switch (n) {
 
 
         case 1:
             //生成实例>>>>>>>>>
             new Vue({
-                el: "#app1",
+                el: "#app",
 
-                mixins: [fruit, green, plant, Vue], //fruit
+                mixins: [fruit, leaves, flowers, Vue], //fruit
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
             });
@@ -50,18 +46,17 @@
 
         case 2:
             //生成组件>>>>>
-            Vue.component('apple',
+            var apple = Vue.component('apple',
                 {
-
-                    mixins: [fruit, green, plant, Vue], //fruit
+                    mixins: [fruit, leaves, flowers, Vue], //fruit
                     //后面的覆盖前面的
                     template: "<p>apple</p>",
                 }
             )
 
-            new Vue({
-                el: "#app2",
-            });
+            var vm = new apple()
+            var dom = vm.$mount().$el
+            document.getElementById('app').appendChild(dom)
             break;
 
 
@@ -69,30 +64,23 @@
             //生成构造器>>>>>>>>>
             var apple = Vue.extend({
 
-                mixins: [fruit, green, plant, Vue], //fruit
+                mixins: [fruit, leaves, flowers, Vue], //fruit
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
             });
 
-            //实例化
-            new apple({
-                el: '#app1'
-            })
-
-            //实例化
-            Vue.component('apple', apple)
-            new Vue({
-                el: "#app2",
-            });
+            var vm = new apple()
+            var dom = vm.$mount().$el
+            document.getElementById('app').appendChild(dom)
             break;
 
-
+//--------------------------------------------------------------------------------
         case 4:
             //生成实例>>>>>>>>>
             new Vue({
-                el: "#app1",
+                el: "#app",
 
-                extends: fruit,
+                extends: fruit,//leaves,flowers
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
             });
@@ -101,41 +89,32 @@
 
         case 5:
             //生成组件>>>>>
-            Vue.component('apple',
+            var apple = Vue.component('apple',
                 {
-                    extends: green,
+                    extends: leaves,
                     //后面的覆盖前面的
                     template: "<p>apple</p>",
                 }
             )
 
-            new Vue({
-                el: "#app2",
-            });
+            var vm = new apple()
+            var dom = vm.$mount().$el
+            document.getElementById('app').appendChild(dom)
             break;
 
 
         case 6:
-            //生成构造器>>>>>>>>>
+            //生成vue构造器>>>>>>>>>
             var apple = Vue.extend({
 
-                extends: plant,
+                extends: flowers,
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
             });
 
-            //实例化
-            new apple({
-                el: '#app1'
-            })
-
-         //-----------------------------------------
-            //组件化
-            Vue.component('apple', apple)
-            //实例化
-            new Vue({
-                el: "#app2",
-            });
+            var vm = new apple()
+            var dom = vm.$mount().$el
+            document.getElementById('app').appendChild(dom)
             break;
     }
 
