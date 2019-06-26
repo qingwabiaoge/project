@@ -21,9 +21,9 @@
     const Hello = {
         template: `<div><h2 class="hello"> {{name}}</h2>
                           <hr>
-                                <p> <  router-view/>标签可以用class <br>
-                              < router-view/>标签可以用attrs: {{$attrs}}<br>
-                               <  router-view/> 标签上不能添加props, 需要写在new VueRouter()的配置里,  name:<b>{{name}}</b>
+                                <p> router-view标签可以用class <br>
+                                    router-view标签可以用attrs: {{$attrs}}<br>
+                                    router-view标签上不能添加props, 需要写在new VueRouter()的配置里属性默认值,或者函数动态返回值,  name:<b>{{name}}</b>
                                 </p>
                                 </div>`,
         props: {

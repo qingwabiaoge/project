@@ -33,27 +33,30 @@
         <li>
             <router-link to="/fa/01">/fa/01</router-link>
         </li>
+        <!-- 网址传递参数->history栈顶-> <route-view>is属性值   -->
         <li>
             <router-link to="/fa/02">/fa/02</router-link>
         </li>
     </ul>
-    <!--这个router-view容易忘记-->
+    <!--router-view1-->
     <router-view></router-view>
 
 </div>
 <script>
-    /* 这个router-view容易忘记*/
+
+    // router-view配置文件2
     const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
+
     const id = {template: '<div>id组件:{{$route.params.id}}</div>'}
     const fa_index = {template: '<div>fa_index组件</div>'}
 
     const router = new VueRouter({
-            //route配置其实是配置router-view的
-            routes: [{
+
+            routes: [{  <!--router-view配置文件1-->
                 path: '/fa/',
                 name: 'fa',
                 component: fa,
-                children: [
+                children: [ // router-view配置文件2
                     {
                         path: '/',
                         name: 'fa_index',

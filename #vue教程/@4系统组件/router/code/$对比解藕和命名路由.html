@@ -20,15 +20,15 @@
 
 
 <script>
-    const def = {template: '<div>defalt-{{prop}}</div>', props: ['prop']}
+    const defaultComponent = {template: '<div>defalt-{{prop}}</div>', props: ['prop']}
     const cl = {template: '<div>{{prop}}</div>', props: ['prop']}
 
 
 
     const routeView = {
         template: `<div><component :is="name" :prop="prop"></component>   </div>`,
-        props: {name: {type: String, default: 'def'}, prop: String},
-        components: {cl, def}
+        props: {name: {type: String, default: 'defaultComponent'}, prop: String},
+        components: {cl, defaultComponent}
     }
 
     const vm = new Vue({
