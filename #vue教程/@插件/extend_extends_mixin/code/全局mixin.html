@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <title>Mixins Option Demo</title>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script type="text/javascript">
+    //相当于每一个实例都加mixins:['']
+
+    Vue.mixin({
+        created() {
+            console.log('全局混入')
+        }
+    })
+
+
+    var app = new Vue({
+
+    })
+
+</script>
+</body>
+</html>

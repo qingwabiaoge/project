@@ -17,7 +17,7 @@
 substring(0,30) //参数2的值要比参数1大
 ```
 
-####slice
+#### slice
 
 ```
 var str='abcdefg'; 
