@@ -30,19 +30,24 @@ Array.from(ArrayLike)
 
 2. arr instanceof Array //操作符不用.和括号
   
+# 属性
+### 数组的hasOwnrops属性
 
-# 数组的hasOwnrops属性
-
-
+```
 1. 有长度 arr.length
 2. 有顺序arr[index]
 
          arr[arr.length-1]  //数组最后一项
          arr[arr.length]=           添加一项
 
+```
 
 
+### propertyIsEnumerable的属性
 
+```
+arr[index]
+```
 
 # 栈方法修改数组(改变原数组)
 
@@ -77,12 +82,10 @@ push  pop  unshift shift
      instance.fill(’qsl’,1,4) //填充qsl在位置2到5不包含5
      
 
-
-# 截取不改变原数组)
-
+# 和string相同的方法(不改变原数组)
 
 
-
+### slice截取
 
 ```
 instance.slice（1，4）\\截取数组2到5不包含5
@@ -90,9 +93,8 @@ instance.slice（1，4）\\截取数组2到5不包含5
 instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ```
 
-# 数组合并
 
-##### contact(不改变原数组)
+### contact(不改变原数组)
 ```
 
 //arr和类数组拥有
@@ -104,21 +106,54 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ```
 
 
-##### Object.assign()(改变原数组)
+
+### 判断是否包含某基本类型数据
+
+```
+ arr.includes(1)  //判断arr是否包含1 返回boolen,
+
+ arr.includes({a:1})  //不能判断深层次包含
+```
+
+
+### 返回数组中基本类型数据的索引
+
+
+```
+1. arr.indexOf(1)  //从前往后数第一个1的索引
+2. arr.lastindexOf(1’) //从后往前数第一个1的索引
+3. arr.indexOf({a: 10}) //无法使用,返回-1
+```
 
 
 
 
-# 数组迭代方法
+#  Object.assign()合并数组(改变原数组)
+
+```
+Object.assign()
+```
+
+
+
+# 数组迭代方法(不改变原数组)
 
 
 
 ### 判断所有项符合某条件 返回boolen
+
+```
  instance.every
+ 
+```
 ### 判断是否有符合某条件的项 返回boolen
+```
  instance.some
+ 
+```
 
 ###排序
+
 ````
 arr.sort((a,b)=>b-a)
 
@@ -128,12 +163,17 @@ reverse()//反转
 
 
 ### 映射—>按照某条件返回数组
+
+
+```
  map
+ 
+```
 
-### 过滤—>符合某条件的元素 返回数组
+### filter过滤—>符合某条件的元素 返回数组
 
 
-filter
+
 
 ```
   const arr = ["apple", "banner", "pear", "banner", "aaa"]
@@ -178,25 +218,7 @@ reduce
 ```
 
 
-### 判断是否包含某基本类型数据
 
-```
- arr.includes(1)  //判断arr是否包含1 返回boolen,
-
- arr.includes({a:1})  //不能判断深层次包含
-```
-
-
-### 返回数组中基本类型数据的索引
-
-
-```
-1. arr.indexOf(1)  //从前往后数第一个1的索引
-2. arr.lastindexOf(1’) //从后往前数第一个1的索引
-
-
-3. arr.indexOf({a: 10}) //无法使用,返回-1
-```
 ### 数组搜索
 
 ```

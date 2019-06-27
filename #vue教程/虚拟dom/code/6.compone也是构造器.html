@@ -21,10 +21,10 @@
 
 <script>
 
-    const VueA = Vue.component('cl', {
-        template: `<div  id="cl" @click="$emit('cs',1)">{{prop}}</div>`,
+    const VueCoponent = Vue.component('cl', {
+        template: `<div >{{prop}}</div>`,
         props: {prop: {default: 10}}
     })
-    const vm = new VueA({el: '#app', props: {prop: {default: 100}}})
+    const vm = new VueCoponent({el: '#app', props: {prop: {default: 100}}})
 
 </script>

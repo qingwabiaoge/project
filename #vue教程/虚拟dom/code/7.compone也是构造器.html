@@ -22,10 +22,10 @@
 <script>
 
     const VueA = Vue.component('cl', {
-        template: `<div  id="cl" @click="$emit('cs',1)">{{prop}}</div>`,
+        template: `<div>{{prop}}</div>`,
         props: {prop: {default: 10}}
     })
-    const vm = new VueA({ props: {prop: {default: 100}}})
+    const vm = new VueA({props: {prop: {default: 100}}})
     const dom = vm.$mount().$el
     document.getElementById('app').appendChild(dom)
 </script>

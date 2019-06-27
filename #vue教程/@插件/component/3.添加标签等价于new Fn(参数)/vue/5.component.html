@@ -16,7 +16,7 @@
 
 <div id="app">
 <!-- 实例化并选择挂载位置-->
-    <cl prop="100"></cl>
+    <cl></cl>
 
 </div>
 
@@ -24,9 +24,11 @@
 
     const VueA = Vue.component('cl', {
 
-        template: `<div  >{{prop}}</div>`,
-
-        props: ['prop']
+        template: `<div  id="cl" @click="$emit('cs',1)">cl</div>`,
+        data() {
+            return {a: 1}
+        },
+        props: ['display']
     })
    new Vue({
        el:'#app'

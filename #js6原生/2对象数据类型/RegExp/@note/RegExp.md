@@ -33,17 +33,8 @@
 console.log(str.match(a)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
 
 ````
-### str.search(reg)
 
-```
-   var str = '1111shi,leiqin11qin111,'
-    const reg = /(qin|shi)/
-    console.log(str.search(reg)) //4
-    console.log(str.indexOf('qin')) //11
-    console.log(str.lastIndexOf('qin')) //6
-    
-```
-### str.repalce(reg)
+### 对str.repalce(reg)适用
 
 ```
   var str='秦石磊是个好人,秦石磊是个好男人'
@@ -54,6 +45,18 @@ console.log(str.match(a)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
 
 
 ```
+
+### str.search(reg)
+
+```
+   var str = '1111shi,leiqin11qin111,'
+    const reg = /(qin|shi)/
+    console.log(str.search(reg)) //4
+    console.log(str.indexOf('qin')) //11
+    console.log(str.lastIndexOf('qin')) //6
+    
+```
+
 
 # \  转意字符(单字符)
 ```
@@ -128,21 +131,21 @@ o{,3}
 
 # 匹配位置$ ^
 
-^ 箭头-开头
+
 
 匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。要匹配 $ 字符本身，请使用 \$。
 
-qin$以'qin'结尾
 
-^\w以一个字符开始
 
 
 ```
-  var str = 'my name is shilei'
+var str = 'my name is shilei'
 
-    const reg = /^my.*lei$/
+const reg = /lei$/
 
-    const i = reg.test(str) //判断
+console.log(reg.test(str)) //true
+
+console.log(reg.exec(str)) //['lei']
 
 ```
 
@@ -167,17 +170,6 @@ const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 
 # ()的作用: 分组捕获, 分组非捕获
 
- 几种正则的reg.test(str)的值都是一致的只是reg.exec(str)的值是不同的
-
-
-
-
-
-
-
-
-
-
 ### 多字符
 一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
@@ -196,23 +188,28 @@ const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 
 ### ()捕获
 
- 捕获的含义:
+##### 对reg.test()的影响: 
+
+可以用括号分组
+
+##### 对reg.exec()的影响:
  
 捕获到reg.exec('xxx')[1],
    
 可以通过RegExp.$1访问,
-
-在表达式里通过/1访问
-   
-
-
-
 
 ```
     const reg = /(doubi) is a doubi/
     console.log(reg.exec('doubi is a doubi'))// [0: "doubi is a doubi" 1: "doubi"]
     console.log(RegExp.$1 )//doubi,记忆窍门:和$1===reg.exec('xxx')[1}
 ```
+
+
+
+在表达式里通过/1访问
+   
+
+
 
 ```
 
@@ -226,29 +223,38 @@ const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 
 ##### 非捕获(?:)
 
-和普通正则的区别是使用了括号可以多字符匹配(qin)*
+对reg.test()的影响: 可以用括号分组
+
+对reg.exec()的影响: 括号部分不捕获
+
+
 ```
 
-    const reg = /kid is (a) (?:doubi)/
-    console.log(reg.exec('kid is a doubi'))// [0:kid is a doubi,1:"a"] 
-    console.log(RegExp.$1)//a,
-    console.log(RegExp.$2)//空
+const reg = /kid is (?:doubi)*/
+
+const str='kid is  doubidoubidoubi'
+console.log(reg.test(str))// true
+console.log(reg.exec(str))// [0:kid is]
+
 
 ```
 
 ##### 非捕获前瞻(?=)  
 
-  前瞻的含义是往前看一下,但不捕获
+###### 前瞻的含义是:
 
+对reg.test()的影响:往前看一下是否有相等的值,有则返回true
 
+对reg.exec()的影响:(?=)部分不捕获
 
 ```
    const reg = /kid is a (?=doubi)/
-   console.log(reg.exec('kid is a doubi'))// [0:kid is a] 返回值和上面普通型的不同
+   console.log(reg.exec('kid is a doubi'))// [0:kid is a] 
 ```
 
- 开头就前瞻
+
 ```
+//开头就前瞻
 const reg = /^(?=haha)/
 const str = "hahahamimimi"
 
@@ -258,7 +264,12 @@ console.log(reg.test(str))//true
 
 ##### 非捕获前瞻否定(?!)   
 
-前瞻意思是往前看一下,不捕获
+###### 前瞻的含义是:
+
+对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
+
+对reg.exec()的影响: (?=)部分不捕获
+
 
 ```
 
@@ -271,30 +282,35 @@ console.log(reg.test(str))//true
 ```
 
 
-# 贪婪模式和惰性模式 (匹配尽可能多还是匹配尽可能少)
+# 贪婪模式和惰性模式 
 
 " * "限定符和" + "限定符都是__贪婪的__，因为它们会尽可能多的匹配文字，
 
-在它们的后面加上一个?就可以实现__非贪婪或最小匹配__。
+### 在它们的后面加上一个?就可以实现__非贪婪或最小匹配__。
+
+
+如：`<img src="test.jpg" width="60px" height="80px"/>`如果用正则匹配src中内容非懒惰模式匹配`/src=".*"/`
+
+匹配结果是：`src="test.jpg" width="60px" height="80px"`意思是从="往后匹配，直到最后一个"匹配结束
+
+### 懒惰模式正则：
+
+`/src=".*?"/`
+
+结果：`src="test.jpg"`因为匹配到第一个"就结束了一次匹配。不会继续向后匹配。因为他懒惰嘛。
+
+
 
 
 ```
-如：<img src="test.jpg" width="60px" height="80px"/>
-如果用正则匹配src中内容非懒惰模式匹配
-/src=".*"/
+const str = `<img src="test.jpg" width="60px" height="80px"/>`
 
-匹配结果是：src="test.jpg" width="60px" height="80px"
-意思是从="往后匹配，直到最后一个"匹配结束
+const reg = /src=".*?"/
 
-懒惰模式正则：
-/src=".*?"/
-结果：src="test.jpg"
-因为匹配到第一个"就结束了一次匹配。不会继续向后匹配。因为他懒惰嘛。
-
+console.log(reg.test(str))
+console.log(reg.exec(str))
 
 ```
-
-
 
 # 表单验证
 
