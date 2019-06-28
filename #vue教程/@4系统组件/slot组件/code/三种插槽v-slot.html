@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
 </head>
 <body>
 <div id="app">
     <ch>
         默认插槽
-        <h5 slot="hasname">具名插槽</h5>
-        <h3 slot="scope" slot-scope="{xx}">
+        <br>
+        <template v-slot:hasname>具名插槽</template>
+        <br>
 
+        <template v-slot:scope="{xx}">
             <button>{{xx}}</button>
-        </h3>
+        </template>
     </ch>
 </div>
 <script>
@@ -27,7 +29,7 @@
         components: {ch},
 
     })
-
+console.log(vm)
 </script>
 </body>
 </html>
