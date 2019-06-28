@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS垂直居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        html, body {
+            height: 100%;
+            text-align: center;
+        }
+
+        .box {
+
+            background-color: deepskyblue;
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .help {
+            width: 0;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 100%">
+    <div class="box">111111111</div>
+    <div class="help"></div>
+</div>
+
+</body>
+</html>

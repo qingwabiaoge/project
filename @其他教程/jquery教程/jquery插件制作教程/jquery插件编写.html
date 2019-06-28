@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+      <script src="http://cdn.http6.net/jquery.min.js"></script>
+</head>
+<body>
+
+<div>111111</div>
+<p style="height: 600px;">11222</p>
+<script>
+
+    (function (i) {
+
+
+        $.fn.maxHeight = function () {
+            var max = 0;
+            this.each(function () {
+                max = $(this).height()
+            });
+            this.css({"color":"yellow"});
+            return max;
+        };
+    })(jQuery);
+
+
+</script>
+<script>
+    $('p').maxHeight("#0f0"); // 返回最高 div 的高度
+    alert($('p').maxHeight())
+
+</script>
+</body>
+</html>

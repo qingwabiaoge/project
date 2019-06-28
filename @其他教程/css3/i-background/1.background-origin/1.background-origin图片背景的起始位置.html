@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+
+
+
+</head>
+
+<body>
+<h1>background-origin图片背景的起始位置</h1>
+
+<b>.padding-box 默认</b>
+<div class="padding-box">正文部分文字内容......</div>
+.content-box
+<div class="content-box">正文部分文字内容......</div>
+
+.border-box
+<div class="border-box">正文部分文字内容......</div>
+<style type="text/css">
+
+    div{
+
+        width:300px;
+        height:200px;
+        color: yellow;
+
+
+
+        border:10px dashed #0f0;
+        padding:20px;
+        margin: 20px;
+
+        background:url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') #ccc no-repeat;
+        background-size: 70% 90%;
+    }
+    .padding-box {
+        background-origin:padding-box;   /* 描述图片背景 图片的起始位置border-box content-box padding-box;*/
+    }
+
+    .content-box {
+        background-origin:content-box;
+
+    }
+
+    .border-box {
+        background-origin:border-box;
+
+    }
+
+</style>
+</body>
+
+</html>

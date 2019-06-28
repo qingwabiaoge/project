@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+</head>
+<body>
+<h1>标题一</h1>
+<h2>标题2</h2>
+<h3>title3</h3>
+<h4>title4</h4>
+<h5>title4</h5>
+<h6>title4</h6>
+
+<p style="height: 10px"></p>
+
+<ul>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+
+</ul>
+<div class="list">
+    <ul>
+        <li class="li">列表</li>
+        <li>列表</li>
+        <li>列表</li>
+        <li>列表</li>
+        <li>列表</li>
+
+    </ul>
+</div>
+
+<div style="position: relative">
+
+    <div class="pos">1</div>
+</div>
+
+<div class="list2">
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+
+    </ul>
+
+</div>
+<a href="">link</a> <br>
+<a href="">link</a> <br>
+<a href="#">link</a> <br>
+<a href="1.jpg">link</a> <br>
+<a href="http">link</a> <br>
+
+<section>
+    你好你好你好
+
+</section>
+
+<script>
+
+    $(':header').not('h1').css('textDecoration', 'underline')
+    $('h2').add('h3').css('color', 'blue')
+    $('h3').next().andSelf().css('color', 'yellow')
+    $('li').closest('ul').css('textDecoration', 'underline')
+    $('li').parents('.list').css('color', 'gray')
+    $('li.li').parentsUntil('.list').css('background', 'red')
+    $('.pos').offsetParent().css('background', 'yellow')
+    $('.list2').find('li').css('background', 'yellow')
+    $('.list2').children('ul').css('border', '1px solid')
+    $("ul").has(".li").css('border', '1px solid')
+
+</script>
+
+</body>
+</html>

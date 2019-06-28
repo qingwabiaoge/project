@@ -1,0 +1,2002 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://docs.jinkan.org/docs/flask/
+Subject: =?utf-8?Q?=E6=AC=A2=E8=BF=8E=E4=BD=BF=E7=94=A8=20Flask=20=E2=80=94=20Flas?=
+ =?utf-8?Q?k=200.10.1=20=E6=96=87=E6=A1=A3?=
+Date: Sat, 11 Aug 2018 12:46:04 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----"
+
+
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----
+Content-Type: text/html
+Content-ID: <frame-512F489DA5890F11B1482BE7823BEBEB@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.jinkan.org/docs/flask/
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head><meta http-equiv=3D"Content-Type" content=3D"text/htm=
+l; charset=3DUTF-8">
+   =20
+   =20
+    <title>=E6=AC=A2=E8=BF=8E=E4=BD=BF=E7=94=A8 Flask =E2=80=94 Flask 0.10.=
+1 =E6=96=87=E6=A1=A3</title>
+   =20
+    <link rel=3D"stylesheet" href=3D"http://docs.jinkan.org/docs/flask/_sta=
+tic/flasky.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"http://docs.jinkan.org/docs/flask/_sta=
+tic/pygments.css" type=3D"text/css">
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+    <link rel=3D"top" title=3D"Flask 0.10.1 =E6=96=87=E6=A1=A3" href=3D"htt=
+p://docs.jinkan.org/docs/flask/#">
+    <link rel=3D"next" title=3D"=E5=89=8D=E8=A8=80" href=3D"http://docs.jin=
+kan.org/docs/flask/foreword.html">
+  =20
+ =20
+  <link rel=3D"apple-touch-icon" href=3D"http://docs.jinkan.org/docs/flask/=
+_static/touch-icon.png">
+ =20
+  <link media=3D"only screen and (max-device-width: 480px)" href=3D"http://=
+docs.jinkan.org/docs/flask/_static/small_flask.css" type=3D"text/css" rel=
+=3D"stylesheet">
+ =20
+
+  </head>
+  <body>
+ =20
+ =20
+  <div class=3D"indexwrapper">
+ =20
+
+    <div class=3D"related">
+      <h3>=E5=AF=BC=E8=88=AA</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"http://docs.jinkan.org/docs/flask/genindex.html" title=
+=3D"=E6=80=BB=E7=9B=AE=E5=BD=95" accesskey=3D"I">=E7=B4=A2=E5=BC=95</a></li=
+>
+        <li class=3D"right">
+          <a href=3D"http://docs.jinkan.org/docs/flask/foreword.html" title=
+=3D"=E5=89=8D=E8=A8=80" accesskey=3D"N">=E4=B8=8B=E4=B8=80=E9=A1=B5</a> |</=
+li>
+        <li><a href=3D"http://docs.jinkan.org/docs/flask/#">Flask 0.10.1 =
+=E6=96=87=E6=A1=A3</a> =C2=BB</li>=20
+      </ul>
+    </div> =20
+
+    <div class=3D"document">
+      <div class=3D"documentwrapper">
+        <div class=3D"bodywrapper">
+          <div class=3D"body">
+           =20
+  <div class=3D"section" id=3D"flask">
+<h1>=E6=AC=A2=E8=BF=8E=E4=BD=BF=E7=94=A8 Flask<a class=3D"headerlink" href=
+=3D"http://docs.jinkan.org/docs/flask/#flask" title=3D"=E6=B0=B8=E4=B9=85=
+=E9=93=BE=E6=8E=A5=E8=87=B3=E6=A0=87=E9=A2=98">=C2=B6</a></h1>
+<img alt=3D"Flask: web development, one drop at a time" class=3D"floatingfl=
+ask" src=3D"http://docs.jinkan.org/docs/flask/_images/logo-full.png">
+<p>=E6=AC=A2=E8=BF=8E=E9=98=85=E8=AF=BB Flask =E6=96=87=E6=A1=A3=E3=80=82  =
+=E6=9C=AC=E6=96=87=E6=A1=A3=E5=88=86=E4=B8=BA=E5=87=A0=E4=B8=AA=E9=83=A8=E5=
+=88=86=E3=80=82=E6=88=91=E6=8E=A8=E8=8D=90=E6=82=A8=E5=85=88=E4=BB=8E
+<a class=3D"reference internal" href=3D"http://docs.jinkan.org/docs/flask/i=
+nstallation.html#installation"><em>=E5=AE=89=E8=A3=85</em></a> =E5=BC=80=E5=
+=A7=8B=EF=BC=8C=E4=B9=8B=E5=90=8E=E5=86=8D=E6=B5=8F=E8=A7=88 <a class=3D"re=
+ference internal" href=3D"http://docs.jinkan.org/docs/flask/quickstart.html=
+#quickstart"><em>=E5=BF=AB=E9=80=9F=E5=85=A5=E9=97=A8</em></a> =E7=AB=A0=E8=
+=8A=82=E3=80=82
+<a class=3D"reference internal" href=3D"http://docs.jinkan.org/docs/flask/t=
+utorial/index.html#tutorial"><em>=E6=95=99=E7=A8=8B</em></a> =E6=AF=94=E5=
+=BF=AB=E9=80=9F=E5=85=A5=E9=97=A8=E6=9B=B4=E8=AF=A6=E7=BB=86=E5=9C=B0=E4=BB=
+=8B=E7=BB=8D=E4=BA=86=E5=A6=82=E4=BD=95=E7=94=A8 Flask =E5=88=9B=E5=BB=BA=
+=E4=B8=80=E4=B8=AA=E5=AE=8C=E6=95=B4=E7=9A=84=E5=BA=94=E7=94=A8=EF=BC=88=E8=
+=99=BD=E7=84=B6=E5=BE=88=E5=B0=8F=EF=BC=89=E3=80=82
+=E6=83=B3=E8=A6=81=E6=B7=B1=E5=85=A5=E4=BA=86=E8=A7=A3 Flask =E5=86=85=E9=
+=83=A8=E7=BB=86=E8=8A=82=EF=BC=8C=E8=AF=B7=E6=9F=A5=E9=98=85 <a class=3D"re=
+ference internal" href=3D"http://docs.jinkan.org/docs/flask/api.html#api"><=
+em>API</em></a> =E6=96=87=E6=A1=A3=E3=80=82
+<a class=3D"reference internal" href=3D"http://docs.jinkan.org/docs/flask/p=
+atterns/index.html#patterns"><em>Flask =E4=BB=A3=E7=A0=81=E6=A8=A1=E5=BC=8F=
+</em></a> =E7=AB=A0=E8=8A=82=E4=BB=8B=E7=BB=8D=E4=BA=86=E4=B8=80=E4=BA=9B=
+=E5=B8=B8=E8=A7=81=E6=A8=A1=E5=BC=8F=E3=80=82</p>
+<p>Flask =E4=BE=9D=E8=B5=96=E4=B8=A4=E4=B8=AA=E5=A4=96=E9=83=A8=E5=BA=93=EF=
+=BC=9A <a class=3D"reference external" href=3D"http://jinja.pocoo.org/2/">J=
+inja2</a> =E6=A8=A1=E6=9D=BF=E5=BC=95=E6=93=8E=E5=92=8C <a class=3D"referen=
+ce external" href=3D"http://werkzeug.pocoo.org/">Werkzeug</a> WSGI =E5=B7=
+=A5=E5=85=B7=E9=9B=86=E3=80=82=E6=AD=A4=E6=96=87=E6=A1=A3=E4=B8=8D=E5=8C=85=
+=E5=90=AB=E8=BF=99=E4=B8=A4=E4=B8=AA=E5=BA=93=E7=9A=84=E6=96=87=E6=A1=A3=E3=
+=80=82=E8=A6=81=E7=BB=86=E8=AF=BB=E5=AE=83=E4=BB=AC=E7=9A=84=E6=96=87=E6=A1=
+=A3=EF=BC=8C=E8=AF=B7=E7=82=B9=E5=87=BB=E4=B8=8B=E9=9D=A2=E7=9A=84=E9=93=BE=
+=E6=8E=A5=EF=BC=9A</p>
+<ul class=3D"simple">
+<li><a class=3D"reference external" href=3D"http://jinja.pocoo.org/2/docume=
+ntation/">Jinja2 =E6=96=87=E6=A1=A3</a></li>
+<li><a class=3D"reference external" href=3D"http://werkzeug.pocoo.org/docum=
+entation/">Werkzeug =E6=96=87=E6=A1=A3</a></li>
+</ul>
+<div class=3D"section" id=3D"id3">
+<h2>=E7=94=A8=E6=88=B7=E6=8C=87=E5=8D=97<a class=3D"headerlink" href=3D"htt=
+p://docs.jinkan.org/docs/flask/#id3" title=3D"=E6=B0=B8=E4=B9=85=E9=93=BE=
+=E6=8E=A5=E8=87=B3=E6=A0=87=E9=A2=98">=C2=B6</a></h2>
+<p>=E8=BF=99=E9=83=A8=E5=88=86=E6=96=87=E6=A1=A3=E5=BE=88=E6=9E=AF=E7=87=A5=
+=EF=BC=8C=E4=BB=A5=E4=BB=8B=E7=BB=8D Flask =E7=9A=84=E8=83=8C=E6=99=AF=E5=
+=BC=80=E5=A7=8B=EF=BC=8C=E7=84=B6=E5=90=8E=E6=B3=A8=E9=87=8D=E8=AF=B4=E6=98=
+=8E Flask =E7=9A=84 Web =E5=BC=80=E5=8F=91=E7=9A=84=E5=90=84=E4=B8=AA=E6=AD=
+=A5=E9=AA=A4=E3=80=82</p>
+<div class=3D"toctree-wrapper compound">
+<ul>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/foreword.html">=E5=89=8D=E8=A8=80</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/foreword.html#id2">=E2=80=9C=E5=BE=AE=E2=80=9D =E6=
+=98=AF=E4=BB=80=E4=B9=88=E6=84=8F=E6=80=9D=EF=BC=9F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/foreword.html#id3">=E9=85=8D=E7=BD=AE=E4=B8=8E=E6=
+=83=AF=E4=BE=8B</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/foreword.html#flask">=E4=B8=8E Flask =E5=85=B1=E6=
+=88=90=E9=95=BF</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/advanced_foreword.html">=E7=BB=99=E6=9C=89=E7=BB=8F=
+=E9=AA=8C=E7=A8=8B=E5=BA=8F=E5=91=98=E7=9A=84=E5=89=8D=E8=A8=80</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/advanced_foreword.html#flask">Flask =E4=B8=AD=E7=9A=
+=84=E7=BA=BF=E7=A8=8B=E5=B1=80=E9=83=A8=E5=8F=98=E9=87=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/advanced_foreword.html#web">Web =E5=BC=80=E5=8F=91=
+=E5=8D=B1=E6=9C=BA=E5=9B=9B=E4=BC=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/advanced_foreword.html#python-3">Python 3 =E7=9A=84=
+=E7=8A=B6=E6=80=81</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/installation.html">=E5=AE=89=E8=A3=85</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/installation.html#virtualenv">virtualenv</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/installation.html#system-wide-installation">=E5=85=
+=A8=E5=B1=80=E5=AE=89=E8=A3=85</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/installation.html#living-on-the-edge">=E6=B4=BB=E5=
+=9C=A8=E8=BE=B9=E7=BC=98</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/installation.html#windows-pip-distribute">Windows =
+=E4=B8=8B=E7=9A=84 <cite>pip</cite> =E5=92=8C <cite>distribute</cite></a></=
+li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html">=E5=BF=AB=E9=80=9F=E5=85=A5=E9=97=
+=A8</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#a-minimal-application">=E4=B8=80=E4=
+=B8=AA=E6=9C=80=E5=B0=8F=E7=9A=84=E5=BA=94=E7=94=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#debug-mode">=E8=B0=83=E8=AF=95=E6=
+=A8=A1=E5=BC=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#routing">=E8=B7=AF=E7=94=B1</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#static-files">=E9=9D=99=E6=80=81=E6=
+=96=87=E4=BB=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#id7">=E6=A8=A1=E6=9D=BF=E6=B8=B2=E6=
+=9F=93</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#accessing-request-data">=E8=AE=BF=
+=E9=97=AE=E8=AF=B7=E6=B1=82=E6=95=B0=E6=8D=AE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#redirects-and-errors">=E9=87=8D=E5=
+=AE=9A=E5=90=91=E5=92=8C=E9=94=99=E8=AF=AF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#about-responses">=E5=85=B3=E4=BA=8E=
+=E5=93=8D=E5=BA=94</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#sessions">=E4=BC=9A=E8=AF=9D</a></l=
+i>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#id19">=E6=B6=88=E6=81=AF=E9=97=AA=
+=E7=8E=B0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#logging">=E6=97=A5=E5=BF=97=E8=AE=
+=B0=E5=BD=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#wsgi">=E6=95=B4=E5=90=88 WSGI =E4=
+=B8=AD=E9=97=B4=E4=BB=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/quickstart.html#web">=E9=83=A8=E7=BD=B2=E5=88=B0 We=
+b =E6=9C=8D=E5=8A=A1=E5=99=A8</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/index.html">=E6=95=99=E7=A8=8B</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/introduction.html">=E4=BB=8B=E7=BB=8D Flas=
+kr</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/folders.html">=E6=AD=A5=E9=AA=A4 0: =E5=88=
+=9B=E5=BB=BA=E6=96=87=E4=BB=B6=E5=A4=B9</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/schema.html">=E6=AD=A5=E9=AA=A4 1: =E6=95=
+=B0=E6=8D=AE=E5=BA=93=E6=A8=A1=E5=BC=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/setup.html">=E6=AD=A5=E9=AA=A4 2: =E5=BA=
+=94=E7=94=A8=E8=AE=BE=E7=BD=AE=E4=BB=A3=E7=A0=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/dbcon.html">=E6=AD=A5=E9=AA=A4 3: =E6=95=
+=B0=E6=8D=AE=E5=BA=93=E8=BF=9E=E6=8E=A5</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/dbinit.html">=E6=AD=A5=E9=AA=A4 4: =E5=88=
+=9B=E5=BB=BA=E6=95=B0=E6=8D=AE=E5=BA=93</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/views.html">=E6=AD=A5=E9=AA=A4 5: =E8=A7=
+=86=E5=9B=BE=E5=87=BD=E6=95=B0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/templates.html">=E6=AD=A5=E9=AA=A4 6: =E6=
+=A8=A1=E6=9D=BF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/css.html">=E6=AD=A5=E9=AA=A4 7: =E6=B7=BB=
+=E5=8A=A0=E6=A0=B7=E5=BC=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/tutorial/testing.html">=E7=A6=8F=E5=88=A9: =E5=BA=
+=94=E7=94=A8=E6=B5=8B=E8=AF=95</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html">=E6=A8=A1=E6=9D=BF</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html#jinja">Jinja =E9=85=8D=E7=BD=AE</a>=
+</li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html#id2">=E6=A0=87=E5=87=86=E4=B8=8A=E4=
+=B8=8B=E6=96=87</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html#id3">=E6=A0=87=E5=87=86=E8=BF=87=E6=
+=BB=A4=E5=99=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html#id4">=E6=8E=A7=E5=88=B6=E8=87=AA=E5=
+=8A=A8=E8=BD=AC=E4=B9=89</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html#registering-filters">=E6=B3=A8=E5=
+=86=8C=E8=BF=87=E6=BB=A4=E5=99=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/templating.html#id6">=E4=B8=8A=E4=B8=8B=E6=96=87=E5=
+=A4=84=E7=90=86=E5=99=A8</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html">=E6=B5=8B=E8=AF=95 Flask =E5=BA=94=E7=
+=94=A8</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id1">=E5=BA=94=E7=94=A8=E7=A8=8B=E5=BA=
+=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id3">=E6=B5=8B=E8=AF=95=E7=9A=84=E5=A4=
+=A7=E6=A1=86=E6=9E=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id4">=E7=AC=AC=E4=B8=80=E4=B8=AA=E6=B5=
+=8B=E8=AF=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id5">=E7=99=BB=E9=99=86=E5=92=8C=E7=99=
+=BB=E5=87=BA</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id6">=E6=B5=8B=E8=AF=95=E6=B6=88=E6=81=
+=AF=E7=9A=84=E6=B7=BB=E5=8A=A0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id7">=E5=85=B6=E4=BB=96=E6=B5=8B=E8=AF=
+=95=E6=8A=80=E5=B7=A7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#faking-resources">=E4=BC=AA=E9=80=A0=
+=E8=B5=84=E6=BA=90=E5=92=8C=E4=B8=8A=E4=B8=8B=E6=96=87</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#id9">=E4=BF=9D=E5=AD=98=E4=B8=8A=E4=B8=
+=8B=E6=96=87</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/testing.html#sessions">=E8=AE=BF=E9=97=AE=E5=92=8C=
+=E4=BF=AE=E6=94=B9 Sessions</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html">=E8=AE=B0=E5=BD=95=E5=BA=94=E7=
+=94=A8=E9=94=99=E8=AF=AF</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#id2">=E9=94=99=E8=AF=AF=E9=82=AE=
+=E4=BB=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#id3">=E8=AE=B0=E5=BD=95=E5=88=B0=
+=E6=96=87=E4=BB=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#logformat">=E6=8E=A7=E5=88=B6=E6=
+=97=A5=E5=BF=97=E6=A0=BC=E5=BC=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#id8">=E5=85=B6=E5=AE=83=E7=9A=84=
+=E5=BA=93</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#id9">=E8=B0=83=E8=AF=95=E5=BA=94=
+=E7=94=A8=E9=94=99=E8=AF=AF</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#id10">=E6=9C=89=E7=96=91=E9=97=
+=AE=E6=97=B6=EF=BC=8C=E6=89=8B=E5=8A=A8=E8=BF=90=E8=A1=8C</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/errorhandling.html#working-with-debuggers">=E8=B0=
+=83=E8=AF=95=E5=99=A8=E6=93=8D=E4=BD=9C</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html">=E9=85=8D=E7=BD=AE=E5=A4=84=E7=90=86</=
+a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html#id2">=E9=85=8D=E7=BD=AE=E5=9F=BA=E7=A1=
+=80</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html#id3">=E5=86=85=E7=BD=AE=E7=9A=84=E9=85=
+=8D=E7=BD=AE=E5=80=BC</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html#id5">=E4=BB=8E=E6=96=87=E4=BB=B6=E9=85=
+=8D=E7=BD=AE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html#id6">=E9=85=8D=E7=BD=AE=E7=9A=84=E6=9C=
+=80=E4=BD=B3=E5=AE=9E=E8=B7=B5</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html#id7">=E5=BC=80=E5=8F=91 / =E7=94=9F=E4=
+=BA=A7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/config.html#instance-folders">=E5=AE=9E=E4=BE=8B=E6=
+=96=87=E4=BB=B6=E5=A4=B9</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html">=E4=BF=A1=E5=8F=B7</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html#id2">=E8=AE=A2=E9=98=85=E4=BF=A1=E5=8F=
+=B7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html#id3">=E5=88=9B=E5=BB=BA=E4=BF=A1=E5=8F=
+=B7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html#signals-sending">=E5=8F=91=E9=80=81=E4=
+=BF=A1=E5=8F=B7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html#flask">=E4=BF=A1=E5=8F=B7=E4=B8=8E Fla=
+sk =E7=9A=84=E8=AF=B7=E6=B1=82=E4=B8=8A=E4=B8=8B=E6=96=87</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html#id5">=E5=9F=BA=E4=BA=8E=E8=A3=85=E9=A5=
+=B0=E5=99=A8=E7=9A=84=E4=BF=A1=E5=8F=B7=E8=AE=A2=E9=98=85</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/signals.html#id6">=E6=A0=B8=E5=BF=83=E4=BF=A1=E5=8F=
+=B7</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/views.html">=E5=8D=B3=E6=8F=92=E8=A7=86=E5=9B=BE</a=
+><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/views.html#id2">=E5=9F=BA=E6=9C=AC=E5=8E=9F=E5=88=
+=99</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/views.html#id3">=E6=96=B9=E6=B3=95=E6=8F=90=E7=A4=
+=BA</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/views.html#id4">=E5=9F=BA=E4=BA=8E=E8=B0=83=E5=BA=
+=A6=E7=9A=84=E6=96=B9=E6=B3=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/views.html#id5">=E8=A3=85=E9=A5=B0=E8=A7=86=E5=9B=
+=BE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/views.html#api">=E7=94=A8=E4=BA=8E API =E7=9A=84=E6=
+=96=B9=E6=B3=95=E8=A7=86=E5=9B=BE</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/appcontext.html">=E5=BA=94=E7=94=A8=E4=B8=8A=E4=B8=
+=8B=E6=96=87</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/appcontext.html#id2">=E5=BA=94=E7=94=A8=E4=B8=8A=E4=
+=B8=8B=E6=96=87=E7=9A=84=E4=BD=9C=E7=94=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/appcontext.html#id3">=E5=88=9B=E5=BB=BA=E5=BA=94=E7=
+=94=A8=E4=B8=8A=E4=B8=8B=E6=96=87</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/appcontext.html#id4">=E5=BA=94=E7=94=A8=E4=B8=8A=E4=
+=B8=8B=E6=96=87=E5=B1=80=E9=83=A8=E5=8F=98=E9=87=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/appcontext.html#id5">=E4=B8=8A=E4=B8=8B=E6=96=87=E7=
+=94=A8=E6=B3=95</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html">=E8=AF=B7=E6=B1=82=E4=B8=8A=E4=B8=
+=8B=E6=96=87</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html#id2">=E6=B7=B1=E5=85=A5=E4=B8=8A=E4=
+=B8=8B=E6=96=87=E4=BD=9C=E7=94=A8=E5=9F=9F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html#id3">=E4=B8=8A=E4=B8=8B=E6=96=87=E5=
+=A6=82=E4=BD=95=E5=B7=A5=E4=BD=9C</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html#callbacks-and-errors">=E5=9B=9E=E8=
+=B0=83=E5=92=8C=E9=94=99=E8=AF=AF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html#id5">=E9=94=80=E6=AF=81=E5=9B=9E=E8=
+=B0=83</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html#notes-on-proxies">=E7=95=99=E6=84=
+=8F=E4=BB=A3=E7=90=86</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/reqcontext.html#id7">=E9=94=99=E8=AF=AF=E6=97=B6=E7=
+=9A=84=E4=B8=8A=E4=B8=8B=E6=96=87=E4=BF=9D=E6=8A=A4</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html">=E7=94=A8=E8=93=9D=E5=9B=BE=E5=AE=
+=9E=E7=8E=B0=E6=A8=A1=E5=9D=97=E5=8C=96=E7=9A=84=E5=BA=94=E7=94=A8</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html#id2">=E4=B8=BA=E4=BB=80=E4=B9=88=E4=
+=BD=BF=E7=94=A8=E8=93=9D=E5=9B=BE=EF=BC=9F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html#id3">=E8=93=9D=E5=9B=BE=E7=9A=84=E8=
+=AE=BE=E6=83=B3</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html#id4">=E6=88=91=E7=9A=84=E7=AC=AC=E4=
+=B8=80=E4=B8=AA=E8=93=9D=E5=9B=BE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html#id5">=E6=B3=A8=E5=86=8C=E8=93=9D=E5=
+=9B=BE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html#id6">=E8=93=9D=E5=9B=BE=E8=B5=84=E6=
+=BA=90</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/blueprints.html#url">=E6=9E=84=E9=80=A0 URL</a></li=
+>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensions.html">Flask =E6=89=A9=E5=B1=95</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensions.html#id1">=E5=AF=BB=E6=89=BE=E6=89=A9=E5=
+=B1=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensions.html#id2">=E4=BD=BF=E7=94=A8=E6=89=A9=E5=
+=B1=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensions.html#flask-0-8">Flask 0.8 =E4=BB=A5=E5=
+=89=8D</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/shell.html">=E4=B8=8E Shell =E5=85=B1=E8=88=9E</a><=
+ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/shell.html#id2">=E5=88=9B=E5=BB=BA=E4=B8=80=E4=B8=
+=AA=E8=AF=B7=E6=B1=82=E4=B8=8A=E4=B8=8B=E6=96=87</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/shell.html#id3">=E6=BF=80=E5=8F=91=E8=AF=B7=E6=B1=
+=82=E5=8F=91=E9=80=81=E5=89=8D=E5=90=8E=E7=9A=84=E8=B0=83=E7=94=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/shell.html#id4">=E8=BF=9B=E4=B8=80=E6=AD=A5=E6=8F=
+=90=E5=8D=87 Shell =E4=BD=BF=E7=94=A8=E4=BD=93=E9=AA=8C</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/index.html">Flask =E4=BB=A3=E7=A0=81=E6=A8=
+=A1=E5=BC=8F</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/packages.html">=E5=A4=A7=E5=9E=8B=E5=BA=94=
+=E7=94=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/appfactories.html">=E5=BA=94=E7=94=A8=E7=
+=A8=8B=E5=BA=8F=E7=9A=84=E5=B7=A5=E5=8E=82=E5=87=BD=E6=95=B0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/appdispatch.html">=E5=BA=94=E7=94=A8=E8=B0=
+=83=E5=BA=A6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/urlprocessors.html">=E4=BD=BF=E7=94=A8 URL=
+ =E5=A4=84=E7=90=86=E5=99=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/distribute.html">=E9=83=A8=E7=BD=B2=E5=92=
+=8C=E5=88=86=E5=8F=91</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/fabric.html">=E4=BD=BF=E7=94=A8 Fabric =E9=
+=83=A8=E7=BD=B2</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/sqlite3.html">=E5=9C=A8 Flask =E4=B8=AD=E4=
+=BD=BF=E7=94=A8 SQLite 3</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/sqlalchemy.html">=E5=9C=A8 Flask =E4=B8=AD=
+=E4=BD=BF=E7=94=A8 SQLAlchemy</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/fileuploads.html">=E4=B8=8A=E4=BC=A0=E6=96=
+=87=E4=BB=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/caching.html">=E7=BC=93=E5=AD=98</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/viewdecorators.html">=E8=A7=86=E5=9B=BE=E8=
+=A3=85=E9=A5=B0=E5=99=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/wtforms.html">=E4=BD=BF=E7=94=A8 WTForms =
+=E8=BF=9B=E8=A1=8C=E8=A1=A8=E5=8D=95=E9=AA=8C=E8=AF=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/templateinheritance.html">=E6=A8=A1=E6=9D=
+=BF=E7=BB=A7=E6=89=BF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/flashing.html">=E6=B6=88=E6=81=AF=E9=97=AA=
+=E7=8E=B0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/jquery.html">=E7=94=A8 jQuery =E5=AE=9E=E7=
+=8E=B0 Ajax</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/errorpages.html">=E8=87=AA=E5=AE=9A=E4=B9=
+=89=E9=94=99=E8=AF=AF=E9=A1=B5=E9=9D=A2</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/lazyloading.html">=E5=BB=B6=E8=BF=9F=E5=8A=
+=A0=E8=BD=BD=E8=A7=86=E5=9B=BE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/mongokit.html">=E5=9C=A8 Flask =E4=B8=AD=
+=E4=BD=BF=E7=94=A8 MongoKit</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/favicon.html">=E6=B7=BB=E5=8A=A0 Favicon</=
+a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/streaming.html">=E6=95=B0=E6=8D=AE=E6=B5=
+=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/deferredcallbacks.html">=E5=BB=B6=E8=BF=9F=
+=E8=AF=B7=E6=B1=82=E5=9B=9E=E8=B0=83</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/methodoverrides.html">=E6=B7=BB=E5=8A=A0 H=
+TTP Method Overrides</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/requestchecksum.html">=E8=AF=B7=E6=B1=82=
+=E5=86=85=E5=AE=B9=E6=A0=A1=E9=AA=8C=E7=A0=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/patterns/celery.html">=E5=9F=BA=E4=BA=8E Celery =E7=
+=9A=84=E5=90=8E=E5=8F=B0=E4=BB=BB=E5=8A=A1</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/deploying/index.html">=E9=83=A8=E7=BD=B2=E9=80=89=
+=E6=8B=A9</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/deploying/mod_wsgi.html">mod_wsgi (Apache)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/deploying/wsgi-standalone.html">=E7=8B=AC=E7=AB=8B =
+WSGI =E5=AE=B9=E5=99=A8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/deploying/uwsgi.html">uWSGI</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/deploying/fastcgi.html">FastCGI</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/deploying/cgi.html">CGI</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html">=E8=81=9A=E6=B2=99=E6=88=90=E5=A1=
+=94</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id2">=E9=98=85=E8=AF=BB=E6=BA=90=
+=E7=A0=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id3">=E9=92=A9=E5=AD=90=EF=BC=8C=
+=E7=BB=A7=E6=89=BF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id6">=E7=BB=A7=E6=89=BF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id7">=E7=94=A8=E4=B8=AD=E9=97=B4=
+=E4=BB=B6=E5=8C=85=E8=A3=85</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id9">=E5=88=86=E6=94=AF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id10">=E5=83=8F=E4=B8=93=E5=AE=B6=
+=E4=B8=80=E6=A0=B7=E6=89=A9=E5=A4=A7=E8=A7=84=E6=A8=A1</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/becomingbig.html#id11">=E4=B8=8E=E7=A4=BE=E5=8C=BA=
+=E5=AF=B9=E8=AF=9D</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=3D"section" id=3D"api">
+<h2>API =E5=8F=82=E8=80=83<a class=3D"headerlink" href=3D"http://docs.jinka=
+n.org/docs/flask/#api" title=3D"=E6=B0=B8=E4=B9=85=E9=93=BE=E6=8E=A5=E8=87=
+=B3=E6=A0=87=E9=A2=98">=C2=B6</a></h2>
+<p>=E5=A6=82=E6=9E=9C=E4=BD=A0=E5=9C=A8=E5=AF=BB=E6=89=BE=E4=B8=80=E4=B8=AA=
+=E7=89=B9=E5=AE=9A=E5=87=BD=E6=95=B0=E3=80=81=E7=B1=BB=E6=88=96=E6=96=B9=E6=
+=B3=95=E7=9A=84=E4=BF=A1=E6=81=AF=EF=BC=8C=E9=82=A3=E4=B9=88=E8=BF=99=E9=83=
+=A8=E5=88=86=E6=96=87=E6=A1=A3=E5=B0=B1=E6=98=AF=E7=BB=99=E4=BD=A0=E5=87=86=
+=E5=A4=87=E7=9A=84=E3=80=82</p>
+<div class=3D"toctree-wrapper compound">
+<ul>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html">API</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id2">=E5=BA=94=E7=94=A8=E5=AF=B9=E8=B1=A1<=
+/a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id3">=E8=93=9D=E5=9B=BE=E5=AF=B9=E8=B1=A1<=
+/a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id4">=E8=BF=9B=E5=85=A5=E7=9A=84=E8=AF=B7=
+=E6=B1=82=E5=AF=B9=E8=B1=A1</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id5">=E5=93=8D=E5=BA=94=E5=AF=B9=E8=B1=A1<=
+/a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id6">=E4=BC=9A=E8=AF=9D</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id7">=E4=BC=9A=E8=AF=9D=E6=8E=A5=E5=8F=A3<=
+/a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id8">=E6=B5=8B=E8=AF=95=E5=AE=A2=E6=88=B7=
+=E7=AB=AF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id9">=E5=BA=94=E7=94=A8=E5=85=A8=E5=B1=80=
+=E5=8F=98=E9=87=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id10">=E6=9C=89=E7=94=A8=E7=9A=84=E5=87=BD=
+=E6=95=B0=E5=92=8C=E7=B1=BB</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id11">=E6=B6=88=E6=81=AF=E9=97=AA=E7=8E=B0=
+</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#module-flask.json">JSON =E6=94=AF=E6=8C=81=
+</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id12">=E6=A8=A1=E6=9D=BF=E6=B8=B2=E6=9F=93=
+</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id13">=E9=85=8D=E7=BD=AE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id14">=E6=89=A9=E5=B1=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id15">=E6=B5=81=E7=9A=84=E8=BE=85=E5=8A=A9=
+=E5=87=BD=E6=95=B0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id16">=E6=9C=89=E7=94=A8=E7=9A=84=E5=86=85=
+=E6=9E=84=E4=BB=B6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id17">=E4=BF=A1=E5=8F=B7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#id18">=E5=9F=BA=E4=BA=8E=E7=B1=BB=E7=9A=84=
+=E8=A7=86=E5=9B=BE</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#url">URL =E8=B7=AF=E7=94=B1=E6=B3=A8=E5=86=
+=8C</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/api.html#view-func-options">=E8=A7=86=E5=9B=BE=E5=
+=87=BD=E6=95=B0=E9=80=89=E9=A1=B9</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=3D"section" id=3D"id4">
+<h2>=E9=A2=9D=E5=A4=96=E8=AF=B4=E6=98=8E<a class=3D"headerlink" href=3D"htt=
+p://docs.jinkan.org/docs/flask/#id4" title=3D"=E6=B0=B8=E4=B9=85=E9=93=BE=
+=E6=8E=A5=E8=87=B3=E6=A0=87=E9=A2=98">=C2=B6</a></h2>
+<p>=E8=BF=99=E9=83=A8=E5=88=86=E7=9A=84=E8=AE=BE=E8=AE=A1=E8=AF=B4=E6=98=8E=
+=EF=BC=8C=E6=B3=95=E5=BE=8B=E4=BF=A1=E6=81=AF=E5=92=8C=E5=8F=98=E6=9B=B4=E8=
+=AE=B0=E5=BD=95=E4=B8=BA=E6=9C=89=E5=85=B4=E8=B6=A3=E7=9A=84=E4=BA=BA=E5=87=
+=86=E5=A4=87=E3=80=82</p>
+<div class=3D"toctree-wrapper compound">
+<ul>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html">Flask =E4=B8=AD=E7=9A=84=E8=AE=BE=E8=
+=AE=A1=E5=86=B3=E7=AD=96</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html#id1">=E6=98=BE=E5=BC=8F=E7=9A=84=E5=BA=
+=94=E7=94=A8=E5=AF=B9=E8=B1=A1</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html#id2">=E8=B7=AF=E7=94=B1=E7=B3=BB=E7=BB=
+=9F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html#id3">=E6=9F=90=E4=B8=AA=E6=A8=A1=E6=9D=
+=BF=E5=BC=95=E6=93=8E</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html#id4">=E5=BE=AE=E4=B8=8E=E4=BE=9D=E8=B5=
+=96</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html#id5">=E7=BA=BF=E7=A8=8B=E5=B1=80=E5=9F=
+=9F=E5=8F=98=E9=87=8F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/design.html#id6">Flask =E6=98=AF=E4=BB=80=E4=B9=88=
+=EF=BC=8C=E4=B8=8D=E6=98=AF=E4=BB=80=E4=B9=88=EF=BC=9F</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html">HTML/XHTML =E5=B8=B8=E8=A7=81=E9=97=
+=AE=E9=A2=98</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html#xhtml">XHTML =E7=9A=84=E5=8E=86=E5=8F=
+=B2</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html#html5">HTML5 =E7=9A=84=E5=8E=86=E5=8F=
+=B2</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html#html-vs-xhtml">HTML vs. XHTML</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html#id7">=E2=80=9C=E4=B8=A5=E6=A0=BC=E2=80=
+=9D=E6=84=8F=E5=91=B3=E7=9D=80=E4=BB=80=E4=B9=88=EF=BC=9F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html#id8">HTML5 =E4=B8=AD=E7=9A=84=E6=96=B0=
+=E6=8A=80=E6=9C=AF</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/htmlfaq.html#id9">=E5=BA=94=E8=AF=A5=E4=BD=BF=E7=94=
+=A8=E4=BB=80=E4=B9=88=EF=BC=9F</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/security.html">=E5=AE=89=E5=85=A8=E6=B3=A8=E6=84=8F=
+=E4=BA=8B=E9=A1=B9</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/security.html#xss">=E8=B7=A8=E7=AB=99=E8=84=9A=E6=
+=9C=AC=E6=94=BB=E5=87=BB=EF=BC=88XSS=EF=BC=89</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/security.html#csrf">=E8=B7=A8=E7=AB=99=E8=AF=B7=E6=
+=B1=82=E4=BC=AA=E9=80=A0=EF=BC=88CSRF=EF=BC=89</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/security.html#json">JSON =E5=AE=89=E5=85=A8</a></li=
+>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/unicode.html">Flask =E4=B8=AD=E7=9A=84 Unicode</a><=
+ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/unicode.html#id1">=E8=87=AA=E5=8A=A8=E8=BD=AC=E6=8D=
+=A2</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/unicode.html#id2">=E9=87=91=E7=A7=91=E7=8E=89=E5=BE=
+=8B</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/unicode.html#id3">=E8=87=AA=E8=A1=8C=E7=BC=96=E8=A7=
+=A3=E7=A0=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/unicode.html#id4">=E9=85=8D=E7=BD=AE=E7=BC=96=E8=BE=
+=91=E5=99=A8</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html">Flask =E6=89=A9=E5=B1=95=E5=BC=
+=80=E5=8F=91</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#id1">=E5=89=96=E6=9E=90=E6=89=A9=
+=E5=B1=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#hello-flaskext">=E2=80=9CHello Fl=
+askext!=E2=80=9D</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#id2">=E5=88=9D=E5=A7=8B=E5=8C=96=
+=E6=89=A9=E5=B1=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#id3">=E6=89=A9=E5=B1=95=E7=9A=84=
+=E4=BB=A3=E7=A0=81</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#app-ctx-stack">=E4=BD=BF=E7=94=A8=
+ _app_ctx_stack</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#id4">=E9=94=80=E6=AF=81=E8=A1=8C=
+=E4=B8=BA</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#id5">=E4=BB=96=E5=B1=B1=E4=B9=8B=
+=E7=9F=B3=EF=BC=8C=E5=8F=AF=E4=BB=A5=E6=94=BB=E7=8E=89</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#id6">=E5=B7=B2=E5=AE=A1=E6=A0=B8=
+=E7=9A=84=E6=89=A9=E5=B1=95</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/extensiondev.html#ext-import-transition">=E6=89=A9=
+=E5=B1=95=E5=AF=BC=E5=85=A5=E7=9A=84=E8=BF=87=E6=B8=A1</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/styleguide.html">Pocoo =E9=A3=8E=E6=A0=BC=E6=8C=87=
+=E5=BC=95</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/styleguide.html#id1">=E6=80=BB=E4=BD=93=E5=B8=83=E5=
+=B1=80</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/styleguide.html#id2">=E8=A1=A8=E8=BE=BE=E5=BC=8F=E5=
+=92=8C=E8=AF=AD=E5=8F=A5</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/styleguide.html#id3">=E5=91=BD=E5=90=8D=E7=BA=A6=E5=
+=AE=9A</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/styleguide.html#id4">=E6=96=87=E6=A1=A3=E6=B3=A8=E9=
+=87=8A</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/styleguide.html#id5">=E6=B3=A8=E9=87=8A</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/python3.html">Python 3 =E6=94=AF=E6=8C=81</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/python3.html#id1">=E9=9C=80=E6=B1=82</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/python3.html#api">API =E7=A8=B3=E5=AE=9A=E6=80=A7</=
+a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/python3.html#id2">=E5=B0=91=E6=95=B0=E6=B4=BE</a></=
+li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/python3.html#id3">=E5=B0=8F=E7=94=9F=E6=80=81=E7=B3=
+=BB=E7=BB=9F</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/python3.html#id4">=E5=BB=BA=E8=AE=AE</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html">=E5=8D=87=E7=BA=A7=E5=88=B0=E6=9C=
+=80=E6=96=B0=E7=89=88=E6=9C=AC</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-10">Version 0.10</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-9">Version 0.9</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-8">Version 0.8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-7">Version 0.7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-6">Version 0.6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-5">Version 0.5</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-4">Version 0.4</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/upgrading.html#version-0-3">Version 0.3</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html">Flask Changelog</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-1-0">Version 1.0</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-10-2">Version 0.10.2</a></=
+li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-10-1">Version 0.10.1</a></=
+li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-10">Version 0.10</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-9">Version 0.9</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-8-1">Version 0.8.1</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-8">Version 0.8</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-7-3">Version 0.7.3</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-7-2">Version 0.7.2</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-7-1">Version 0.7.1</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-7">Version 0.7</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-6-1">Version 0.6.1</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-6">Version 0.6</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-5-2">Version 0.5.2</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-5-1">Version 0.5.1</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-5">Version 0.5</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-4">Version 0.4</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-3-1">Version 0.3.1</a></li=
+>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-3">Version 0.3</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-2">Version 0.2</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/changelog.html#version-0-1">Version 0.1</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/license.html">=E8=AE=B8=E5=8F=AF=E8=AF=81</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/license.html#authors">=E4=BD=9C=E8=80=85</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/license.html#id3">=E9=80=9A=E7=94=A8=E8=AE=B8=E5=8F=
+=AF=E8=AF=81=E5=AE=9A=E4=B9=89</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/license.html#flask-license">Flask License</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/license.html#flask-artwork-license">Flask Artwork L=
+icense</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"http://doc=
+s.jinkan.org/docs/flask/glossary.html">=E6=9C=AF=E8=AF=AD=E8=A1=A8</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class=3D"sphinxsidebar">
+        <div class=3D"sphinxsidebarwrapper"><h3>=E5=85=B3=E4=BA=8E Flask</h=
+3>
+<p>
+  Flask =E6=98=AF=E4=B8=80=E4=B8=AA Python =E5=AE=9E=E7=8E=B0=E7=9A=84 Web =
+=E5=BC=80=E5=8F=91=E5=BE=AE=E6=A1=86=E6=9E=B6=E3=80=82=E4=BD=A0=E6=AD=A3=E5=
+=9C=A8=E9=98=85=E8=AF=BB=E7=9A=84=E6=98=AF=E5=BC=80=E5=8F=91=E7=89=88=E6=9C=
+=AC=E7=9A=84=E6=96=87=E6=A1=A3=E3=80=82
+</p>
+<h3>=E8=AF=91=E8=80=85</h3>
+<p>
+  <strong>=E4=BA=A6=E5=BF=B5</strong><br>
+  <a href=3D"mailto:yinian@jinkan.org">yinian@jinkan.org</a>
+
+</p><p>
+  <strong>=E4=BA=91=E5=B0=94</strong><br>
+  <a href=3D"mailto:yun.er.run@gmail.com">yun.er.run@gmail.com</a>
+</p>
+<p>
+  <strong>atupal</strong><br>
+  <a href=3D"mailto:me@atupal.org">me@atupal.org</a>
+</p>
+<h3>=E5=85=B6=E5=AE=83=E6=A0=BC=E5=BC=8F</h3>
+<p>
+  =E4=BD=A0=E5=90=8C=E6=A0=B7=E5=8F=AF=E4=BB=A5=E4=B8=8B=E8=BD=BD=E5=85=B6=
+=E5=AE=83=E6=A0=BC=E5=BC=8F=E7=9A=84=E6=96=87=E6=A1=A3:
+</p>
+<ul>
+  <li><a href=3D"https://media.readthedocs.org/epub/flask-chs/latest/flask-=
+chs.epub">ePub=EF=BC=88=E7=AE=80=E4=BD=93=E4=B8=AD=E6=96=87=EF=BC=89</a>
+  </li><li><a href=3D"https://media.readthedocs.org/htmlzip/flask-chs/lates=
+t/flask-chs.zip">zip =E5=8E=8B=E7=BC=A9=E7=9A=84 HTML=EF=BC=88=E7=AE=80=E4=
+=BD=93=E4=B8=AD=E6=96=87=EF=BC=89</a>
+  </li><li><a href=3D"http://flask.pocoo.org/docs/flask-docs.pdf">PDF=EF=BC=
+=88=E8=8B=B1=E6=96=87=EF=BC=89</a>
+  </li><li><a href=3D"http://flask.pocoo.org/docs/flask-docs.epub">ePub=EF=
+=BC=88=E8=8B=B1=E6=96=87=EF=BC=89</a>
+  </li><li><a href=3D"http://flask.pocoo.org/docs/flask-docs.mobi">.mobi=EF=
+=BC=88=E8=8B=B1=E6=96=87=EF=BC=89</a>
+  </li><li><a href=3D"http://flask.pocoo.org/docs/flask-docs.zip">zip =E5=
+=8E=8B=E7=BC=A9=E7=9A=84 HTML=EF=BC=88=E8=8B=B1=E6=96=87=EF=BC=89</a>
+</li></ul>
+<h3>=E9=93=BE=E6=8E=A5</h3>
+<ul>
+  <li><a href=3D"http://flask.pocoo.org/">Flask =E5=AE=98=E6=96=B9=E7=BD=91=
+=E7=AB=99</a></li>
+  <li><a href=3D"http://pypi.python.org/pypi/Flask">Flask @ PyPI</a></li>
+  <li><a href=3D"http://github.com/mitsuhiko/flask">Flask @ github</a></li>
+  <li><a href=3D"http://github.com/mitsuhiko/flask/issues">=E9=97=AE=E9=A2=
+=98=E8=B7=9F=E8=B8=AA</a></li>
+</ul>
+  <h3>=E6=9C=AC=E9=A1=B5</h3>
+  <ul class=3D"this-page-menu">
+    <li><a href=3D"http://docs.jinkan.org/docs/flask/_sources/index.txt" re=
+l=3D"nofollow">=E6=98=BE=E7=A4=BA=E6=BA=90=E4=BB=A3=E7=A0=81</a></li>
+  </ul>
+<div id=3D"searchbox" style=3D"">
+  <h3>=E5=BF=AB=E9=80=9F=E6=90=9C=E7=B4=A2</h3>
+    <form class=3D"search" action=3D"http://docs.jinkan.org/docs/flask/sear=
+ch.html" method=3D"get">
+      <input type=3D"text" name=3D"q">
+      <input type=3D"submit" value=3D"=E8=BD=AC=E5=90=91">
+     =20
+     =20
+    </form>
+    <p class=3D"searchtip" style=3D"font-size: 90%">
+    =E8=BE=93=E5=85=A5=E7=9B=B8=E5=85=B3=E7=9A=84=E6=9C=AF=E8=AF=AD=EF=BC=
+=8C=E6=A8=A1=E5=9D=97=EF=BC=8C=E7=B1=BB=E6=88=96=E8=80=85=E5=87=BD=E6=95=B0=
+=E5=90=8D=E7=A7=B0=E8=BF=9B=E8=A1=8C=E6=90=9C=E7=B4=A2
+    </p>
+</div>
+
+        </div>
+      </div>
+      <div class=3D"clearer"></div>
+    </div>
+  <div class=3D"footer">
+    =C2=A9 Copyright 2013, Armin Ronacher.
+    Created using <a href=3D"http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+ =20
+  </div>
+ =20
+ =20
+</body><template shadowmode=3D"v0"><shadow></shadow><style></style></templa=
+te></html>
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.jinkan.org/docs/flask/_static/flasky.css
+
+@charset "utf-8";
+
+@import url("basic.css");
+
+body { font-family: Georgia, serif; font-size: 17px; background-color: whit=
+e; color: rgb(0, 0, 0); margin: 0px; padding: 0px; }
+
+div.document { width: 940px; margin: 30px auto 0px; }
+
+div.documentwrapper { float: left; width: 100%; }
+
+div.bodywrapper { margin: 0px 0px 0px 220px; }
+
+div.sphinxsidebar { width: 220px; }
+
+hr { border: 1px solid rgb(177, 180, 182); }
+
+div.body { background-color: rgb(255, 255, 255); color: rgb(62, 67, 73); pa=
+dding: 0px 30px; }
+
+img.floatingflask { padding: 0px 0px 10px 10px; float: right; }
+
+div.footer { width: 940px; margin: 20px auto 30px; font-size: 14px; color: =
+rgb(136, 136, 136); text-align: right; }
+
+div.footer a { color: rgb(136, 136, 136); }
+
+div.related { display: none; }
+
+div.sphinxsidebar a { color: rgb(68, 68, 68); text-decoration: none; border=
+-bottom: 1px dotted rgb(153, 153, 153); }
+
+div.sphinxsidebar a:hover { border-bottom: 1px solid rgb(153, 153, 153); }
+
+div.sphinxsidebar { font-size: 14px; line-height: 1.5; }
+
+div.sphinxsidebarwrapper { padding: 18px 10px; }
+
+div.sphinxsidebarwrapper p.logo { padding: 0px 0px 20px; margin: 0px; text-=
+align: center; }
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 { font-family: Garamond, Georgia=
+, serif; color: rgb(68, 68, 68); font-size: 24px; font-weight: normal; marg=
+in: 0px 0px 5px; padding: 0px; }
+
+div.sphinxsidebar h4 { font-size: 20px; }
+
+div.sphinxsidebar h3 a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar p.logo a, div.sphinxsidebar h3 a, div.sphinxsidebar p.log=
+o a:hover, div.sphinxsidebar h3 a:hover { border: none; }
+
+div.sphinxsidebar p { color: rgb(85, 85, 85); margin: 10px 0px; }
+
+div.sphinxsidebar ul { margin: 10px 0px; padding: 0px; color: rgb(0, 0, 0);=
+ }
+
+div.sphinxsidebar input { border: 1px solid rgb(204, 204, 204); font-family=
+: Georgia, serif; font-size: 1em; }
+
+a { color: rgb(0, 75, 107); text-decoration: underline; }
+
+a:hover { color: rgb(109, 65, 0); text-decoration: underline; }
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h=
+6 { font-family: Garamond, Georgia, serif; font-weight: normal; margin: 30p=
+x 0px 10px; padding: 0px; }
+
+div.body h1 { margin-top: 0px; padding-top: 0px; font-size: 240%; }
+
+div.body h2 { font-size: 180%; }
+
+div.body h3 { font-size: 150%; }
+
+div.body h4 { font-size: 130%; }
+
+div.body h5 { font-size: 100%; }
+
+div.body h6 { font-size: 100%; }
+
+a.headerlink { color: rgb(221, 221, 221); padding: 0px 4px; text-decoration=
+: none; }
+
+a.headerlink:hover { color: rgb(68, 68, 68); background: rgb(234, 234, 234)=
+; }
+
+div.body p, div.body dd, div.body li { line-height: 1.4em; }
+
+div.admonition { background: rgb(250, 250, 250); margin: 20px -30px; paddin=
+g: 10px 30px; border-top: 1px solid rgb(204, 204, 204); border-bottom: 1px =
+solid rgb(204, 204, 204); }
+
+div.admonition tt.xref, div.admonition a tt { border-bottom: 1px solid rgb(=
+250, 250, 250); }
+
+dd div.admonition { margin-left: -60px; padding-left: 60px; }
+
+div.admonition p.admonition-title { font-family: Garamond, Georgia, serif; =
+font-weight: normal; font-size: 24px; margin: 0px 0px 10px; padding: 0px; l=
+ine-height: 1; }
+
+div.admonition p.last { margin-bottom: 0px; }
+
+div.highlight { background-color: white; }
+
+dt:target, .highlight { background: rgb(250, 243, 232); }
+
+div.note { background-color: rgb(238, 238, 238); border: 1px solid rgb(204,=
+ 204, 204); }
+
+div.seealso { background-color: rgb(255, 255, 204); border: 1px solid rgb(2=
+55, 255, 102); }
+
+div.topic { background-color: rgb(238, 238, 238); }
+
+p.admonition-title { display: inline; }
+
+p.admonition-title::after { content: ":"; }
+
+pre, tt { font-family: Consolas, Menlo, "Deja Vu Sans Mono", "Bitstream Ver=
+a Sans Mono", monospace; font-size: 0.9em; }
+
+img.screenshot { }
+
+tt.descname, tt.descclassname { font-size: 0.95em; }
+
+tt.descname { padding-right: 0.08em; }
+
+img.screenshot { box-shadow: rgb(238, 238, 238) 2px 2px 4px; }
+
+table.docutils { border: 1px solid rgb(136, 136, 136); box-shadow: rgb(238,=
+ 238, 238) 2px 2px 4px; }
+
+table.docutils td, table.docutils th { border: 1px solid rgb(136, 136, 136)=
+; padding: 0.25em 0.7em; }
+
+table.field-list, table.footnote { border: none; box-shadow: none; }
+
+table.footnote { margin: 15px 0px; width: 100%; border: 1px solid rgb(238, =
+238, 238); background: rgb(253, 253, 253); font-size: 0.9em; }
+
+table.footnote + table.footnote { margin-top: -15px; border-top: none; }
+
+table.field-list th { padding: 0px 0.8em 0px 0px; }
+
+table.field-list td { padding: 0px; }
+
+table.footnote td.label { width: 0px; padding: 0.3em 0px 0.3em 0.5em; }
+
+table.footnote td { padding: 0.3em 0.5em; }
+
+dl { margin: 0px; padding: 0px; }
+
+dl dd { margin-left: 30px; }
+
+blockquote { margin: 0px 0px 0px 30px; padding: 0px; }
+
+ul, ol { margin: 10px 0px 10px 30px; padding: 0px; }
+
+pre { background: rgb(238, 238, 238); padding: 7px 30px; margin: 15px -30px=
+; line-height: 1.3em; }
+
+dl pre, blockquote pre, li pre { margin-left: -60px; padding-left: 60px; }
+
+dl dl pre { margin-left: -90px; padding-left: 90px; }
+
+tt { background-color: rgb(236, 240, 243); color: rgb(34, 34, 34); }
+
+tt.xref, a tt { background-color: rgb(251, 251, 251); border-bottom: 1px so=
+lid white; }
+
+a.reference { text-decoration: none; border-bottom: 1px dotted rgb(0, 75, 1=
+07); }
+
+a.reference:hover { border-bottom: 1px solid rgb(109, 65, 0); }
+
+a.footnote-reference { text-decoration: none; font-size: 0.7em; vertical-al=
+ign: top; border-bottom: 1px dotted rgb(0, 75, 107); }
+
+a.footnote-reference:hover { border-bottom: 1px solid rgb(109, 65, 0); }
+
+a:hover tt { background: rgb(238, 238, 238); }
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.jinkan.org/docs/flask/_static/basic.css
+
+@charset "utf-8";
+
+div.clearer { clear: both; }
+
+div.related { width: 100%; font-size: 90%; }
+
+div.related h3 { display: none; }
+
+div.related ul { margin: 0px; padding: 0px 0px 0px 10px; list-style: none; =
+}
+
+div.related li { display: inline; }
+
+div.related li.right { float: right; margin-right: 5px; }
+
+div.sphinxsidebarwrapper { padding: 10px 5px 0px 10px; }
+
+div.sphinxsidebar { float: left; width: 230px; margin-left: -100%; font-siz=
+e: 90%; }
+
+div.sphinxsidebar ul { list-style: none; }
+
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points { margin-left: 20=
+px; list-style: square; }
+
+div.sphinxsidebar ul ul { margin-top: 0px; margin-bottom: 0px; }
+
+div.sphinxsidebar form { margin-top: 10px; }
+
+div.sphinxsidebar input { border: 1px solid rgb(152, 219, 204); font-family=
+: sans-serif; font-size: 1em; }
+
+div.sphinxsidebar #searchbox input[type=3D"text"] { width: 170px; }
+
+div.sphinxsidebar #searchbox input[type=3D"submit"] { width: 30px; }
+
+img { border: 0px; max-width: 100%; }
+
+ul.search { margin: 10px 0px 0px 20px; padding: 0px; }
+
+ul.search li { padding: 5px 0px 5px 20px; background-image: url("file.png")=
+; background-repeat: no-repeat; background-position: 0px 7px; }
+
+ul.search li a { font-weight: bold; }
+
+ul.search li div.context { color: rgb(136, 136, 136); margin: 2px 0px 0px 3=
+0px; text-align: left; }
+
+ul.keywordmatches li.goodmatch a { font-weight: bold; }
+
+table.contentstable { width: 90%; }
+
+table.contentstable p.biglink { line-height: 150%; }
+
+a.biglink { font-size: 1.3em; }
+
+span.linkdescr { font-style: italic; padding-top: 5px; font-size: 90%; }
+
+table.indextable { width: 100%; }
+
+table.indextable td { text-align: left; vertical-align: top; }
+
+table.indextable dl, table.indextable dd { margin-top: 0px; margin-bottom: =
+0px; }
+
+table.indextable tr.pcap { height: 10px; }
+
+table.indextable tr.cap { margin-top: 10px; background-color: rgb(242, 242,=
+ 242); }
+
+img.toggler { margin-right: 3px; margin-top: 3px; cursor: pointer; }
+
+div.modindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+div.genindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+a.headerlink { visibility: hidden; }
+
+h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, =
+h4:hover > a.headerlink, h5:hover > a.headerlink, h6:hover > a.headerlink, =
+dt:hover > a.headerlink { visibility: visible; }
+
+div.body p.caption { text-align: inherit; }
+
+div.body td { text-align: left; }
+
+.field-list ul { padding-left: 1em; }
+
+.first { margin-top: 0px !important; }
+
+p.rubric { margin-top: 30px; font-weight: bold; }
+
+img.align-left, .figure.align-left, object.align-left { clear: left; float:=
+ left; margin-right: 1em; }
+
+img.align-right, .figure.align-right, object.align-right { clear: right; fl=
+oat: right; margin-left: 1em; }
+
+img.align-center, .figure.align-center, object.align-center { display: bloc=
+k; margin-left: auto; margin-right: auto; }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-right { text-align: right; }
+
+div.sidebar { margin: 0px 0px 0.5em 1em; border: 1px solid rgb(221, 221, 18=
+7); padding: 7px 7px 0px; background-color: rgb(255, 255, 238); width: 40%;=
+ float: right; }
+
+p.sidebar-title { font-weight: bold; }
+
+div.topic { border: 1px solid rgb(204, 204, 204); padding: 7px 7px 0px; mar=
+gin: 10px 0px; }
+
+p.topic-title { font-size: 1.1em; font-weight: bold; margin-top: 10px; }
+
+div.admonition { margin-top: 10px; margin-bottom: 10px; padding: 7px; }
+
+div.admonition dt { font-weight: bold; }
+
+div.admonition dl { margin-bottom: 0px; }
+
+p.admonition-title { margin: 0px 10px 5px 0px; font-weight: bold; }
+
+div.body p.centered { text-align: center; margin-top: 25px; }
+
+table.docutils { border: 0px; border-collapse: collapse; }
+
+table.docutils td, table.docutils th { padding: 1px 8px 1px 5px; border-wid=
+th: 0px 0px 1px; border-top-style: initial; border-top-color: initial; bord=
+er-left-style: initial; border-left-color: initial; border-right-style: ini=
+tial; border-right-color: initial; border-bottom-style: solid; border-botto=
+m-color: rgb(170, 170, 170); }
+
+table.field-list td, table.field-list th { border: 0px !important; }
+
+table.footnote td, table.footnote th { border: 0px !important; }
+
+th { text-align: left; padding-right: 5px; }
+
+table.citation { border-left: 1px solid gray; margin-left: 1px; }
+
+table.citation td { border-bottom: none; }
+
+ol.arabic { list-style: decimal; }
+
+ol.loweralpha { list-style: lower-alpha; }
+
+ol.upperalpha { list-style: upper-alpha; }
+
+ol.lowerroman { list-style: lower-roman; }
+
+ol.upperroman { list-style: upper-roman; }
+
+dl { margin-bottom: 15px; }
+
+dd p { margin-top: 0px; }
+
+dd ul, dd table { margin-bottom: 10px; }
+
+dd { margin-top: 3px; margin-bottom: 10px; margin-left: 30px; }
+
+dt:target, .highlighted { background-color: rgb(251, 229, 78); }
+
+dl.glossary dt { font-weight: bold; font-size: 1.1em; }
+
+.field-list ul { margin: 0px; padding-left: 1em; }
+
+.field-list p { margin: 0px; }
+
+.optional { font-size: 1.3em; }
+
+.versionmodified { font-style: italic; }
+
+.system-message { background-color: rgb(255, 221, 170); padding: 5px; borde=
+r: 3px solid red; }
+
+.footnote:target { background-color: rgb(255, 255, 170); }
+
+.line-block { display: block; margin-top: 1em; margin-bottom: 1em; }
+
+.line-block .line-block { margin-top: 0px; margin-bottom: 0px; margin-left:=
+ 1.5em; }
+
+.guilabel, .menuselection { font-family: sans-serif; }
+
+.accelerator { text-decoration: underline; }
+
+.classifier { font-style: oblique; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+pre { overflow: auto hidden; }
+
+td.linenos pre { padding: 5px 0px; border: 0px; background-color: transpare=
+nt; color: rgb(170, 170, 170); }
+
+table.highlighttable { margin-left: 0.5em; }
+
+table.highlighttable td { padding: 0px 0.5em; }
+
+tt.descname { background-color: transparent; font-weight: bold; font-size: =
+1.2em; }
+
+tt.descclassname { background-color: transparent; }
+
+tt.xref, a tt { background-color: transparent; font-weight: bold; }
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt { background-color: transparent; }
+
+.viewcode-link { float: right; }
+
+.viewcode-back { float: right; font-family: sans-serif; }
+
+div.viewcode-block:target { margin: -1px -10px; padding: 0px 10px; }
+
+img.math { vertical-align: middle; }
+
+div.body div.math p { text-align: center; }
+
+span.eqno { float: right; }
+
+@media print {
+  div.document, div.documentwrapper, div.bodywrapper { width: 100%; margin:=
+ 0px !important; }
+  div.sphinxsidebar, div.related, div.footer, #top-link { display: none; }
+}
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.jinkan.org/docs/flask/_static/pygments.css
+
+@charset "utf-8";
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(248, 248, 248); }
+
+.highlight .c { color: rgb(143, 89, 2); font-style: italic; }
+
+.highlight .err { color: rgb(164, 0, 0); border: 1px solid rgb(239, 41, 41)=
+; }
+
+.highlight .g { color: rgb(0, 0, 0); }
+
+.highlight .k { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .l { color: rgb(0, 0, 0); }
+
+.highlight .n { color: rgb(0, 0, 0); }
+
+.highlight .o { color: rgb(88, 40, 0); }
+
+.highlight .x { color: rgb(0, 0, 0); }
+
+.highlight .p { color: rgb(0, 0, 0); font-weight: bold; }
+
+.highlight .cm { color: rgb(143, 89, 2); font-style: italic; }
+
+.highlight .cp { color: rgb(143, 89, 2); }
+
+.highlight .c1 { color: rgb(143, 89, 2); font-style: italic; }
+
+.highlight .cs { color: rgb(143, 89, 2); font-style: italic; }
+
+.highlight .gd { color: rgb(164, 0, 0); }
+
+.highlight .ge { color: rgb(0, 0, 0); font-style: italic; }
+
+.highlight .gr { color: rgb(239, 41, 41); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 160, 0); }
+
+.highlight .go { color: rgb(136, 136, 136); }
+
+.highlight .gp { color: rgb(116, 83, 52); }
+
+.highlight .gs { color: rgb(0, 0, 0); font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(164, 0, 0); font-weight: bold; }
+
+.highlight .kc { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .kr { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .kt { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .ld { color: rgb(0, 0, 0); }
+
+.highlight .m { color: rgb(153, 0, 0); }
+
+.highlight .s { color: rgb(78, 154, 6); }
+
+.highlight .na { color: rgb(196, 160, 0); }
+
+.highlight .nb { color: rgb(0, 68, 97); }
+
+.highlight .nc { color: rgb(0, 0, 0); }
+
+.highlight .no { color: rgb(0, 0, 0); }
+
+.highlight .nd { color: rgb(136, 136, 136); }
+
+.highlight .ni { color: rgb(206, 92, 0); }
+
+.highlight .ne { color: rgb(204, 0, 0); font-weight: bold; }
+
+.highlight .nf { color: rgb(0, 0, 0); }
+
+.highlight .nl { color: rgb(245, 121, 0); }
+
+.highlight .nn { color: rgb(0, 0, 0); }
+
+.highlight .nx { color: rgb(0, 0, 0); }
+
+.highlight .py { color: rgb(0, 0, 0); }
+
+.highlight .nt { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .nv { color: rgb(0, 0, 0); }
+
+.highlight .ow { color: rgb(0, 68, 97); font-weight: bold; }
+
+.highlight .w { color: rgb(248, 248, 248); text-decoration: underline; }
+
+.highlight .mf { color: rgb(153, 0, 0); }
+
+.highlight .mh { color: rgb(153, 0, 0); }
+
+.highlight .mi { color: rgb(153, 0, 0); }
+
+.highlight .mo { color: rgb(153, 0, 0); }
+
+.highlight .sb { color: rgb(78, 154, 6); }
+
+.highlight .sc { color: rgb(78, 154, 6); }
+
+.highlight .sd { color: rgb(143, 89, 2); font-style: italic; }
+
+.highlight .s2 { color: rgb(78, 154, 6); }
+
+.highlight .se { color: rgb(78, 154, 6); }
+
+.highlight .sh { color: rgb(78, 154, 6); }
+
+.highlight .si { color: rgb(78, 154, 6); }
+
+.highlight .sx { color: rgb(78, 154, 6); }
+
+.highlight .sr { color: rgb(78, 154, 6); }
+
+.highlight .s1 { color: rgb(78, 154, 6); }
+
+.highlight .ss { color: rgb(78, 154, 6); }
+
+.highlight .bp { color: rgb(52, 101, 164); }
+
+.highlight .vc { color: rgb(0, 0, 0); }
+
+.highlight .vg { color: rgb(0, 0, 0); }
+
+.highlight .vi { color: rgb(0, 0, 0); }
+
+.highlight .il { color: rgb(153, 0, 0); }
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.jinkan.org/docs/flask/_static/small_flask.css
+
+@charset "utf-8";
+
+body { margin: 0px; padding: 20px 30px; }
+
+div.documentwrapper { float: none; background: white; }
+
+div.sphinxsidebar { display: block; float: none; width: 102.5%; margin: 50p=
+x -30px -20px; padding: 10px 20px; background: rgb(51, 51, 51); color: whit=
+e; }
+
+div.sphinxsidebar h3, div.sphinxsidebar h4, div.sphinxsidebar p, div.sphinx=
+sidebar h3 a { color: white; }
+
+div.sphinxsidebar a { color: rgb(170, 170, 170); }
+
+div.sphinxsidebar p.logo { display: none; }
+
+div.document { width: 100%; margin: 0px; }
+
+div.related { display: block; margin: 0px; padding: 10px 0px 20px; }
+
+div.related ul, div.related ul li { margin: 0px; padding: 0px; }
+
+div.footer { display: none; }
+
+div.bodywrapper { margin: 0px; }
+
+div.body { min-height: 0px; padding: 0px; }
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://docs.jinkan.org/docs/flask/_images/logo-full.png
+
+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
+gg==
+
+------MultipartBoundary--V4H1H2sSE5UG2gCqA1CBYiaPtWBwSjiDq8vXu6PE52------

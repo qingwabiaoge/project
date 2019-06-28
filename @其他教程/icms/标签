@@ -1,0 +1,9 @@
+index判断
+    <!--{$iCMS.APP.NAME}-->
+
+    首页链接
+    <!--{$site.url}-->
+
+    图片总张数怎么调用
+
+    $article.pics|count

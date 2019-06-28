@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>标题一</h1>
+<h2>标题2</h2>
+<h3>title3</h3>
+<h4>title4</h4>
+
+<p style="height: 10px"></p>
+
+<ul>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+
+</ul>
+<ul>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+
+</ul>
+
+<a href="">link</a> <br>
+<a href="">link</a> <br>
+<a href="#">link</a> <br>
+<a href="1.jpg">link</a> <br>
+<a href="http">link</a> <br>
+<style>
+    p:empty {
+        background: #B2E0FF
+    }
+
+    :not(p) {
+        background: #eee
+    }
+    /*html ul li 下的第1个li*/
+    ul li:nth-child(1) {
+        color: red
+    }
+    /*html ul li 下的第2个li*/
+    ul li:nth-of-type(2) {
+        color: blue;
+    }
+    /*html ul li 下的偶数li*/
+    ul li:nth-of-type(even){
+
+        font-weight: bold;
+
+    }
+    a[href=""]{
+        color: red;
+    }
+
+    a[href^="http"]{
+        color: green;
+    }
+    h1+*{
+        color: red;
+    }
+    h3~h4{color: blue}
+
+</style>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.http6.net/loaders.min.css">
+
+    <link rel="stylesheet" href="../../style/ui/ui.css">
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+<!--背景部分-->
+<div id="loading"
+     style="">
+
+    <-动画部分开始—>
+    <div class="loader-inner ball-clip-rotate  text-center center-middle-block">
+        <div></div>
+        <p style="color: #fff"> 正在加载</p>
+    </div>
+
+</div>
+
+<!--背景部分样式 可以添加动画背景-->
+<style>
+
+    #loading {
+        background: #000;
+        opacity: 1;
+        position: fixed;
+        z-index: 10;
+        top: 0px;
+        width: 100%;
+        height: 1600px;
+    }
+
+</style>
+<!--居中程序-->
+<script>
+    $(function () {
+        $(".center-middle-block").css({"display": " inline-block"})
+        var _width = $(".center-middle-block").width();
+        var _height = $(".center-middle-block").height();
+        var win_height = $(window).height();
+        $(".center-middle-block").css({
+            "width": _width,
+            "height": _height,
+            "margin": " auto",
+            "display": "block",
+            "margin-top": (win_height - _height) / 2
+        })
+
+    })
+</script>
+<!--居中程序-->
+
+<!--加载完成去除加载div-->
+
+<script>
+
+    $(window).load(function () {
+        setTimeout(function () {
+            $("#loading").remove();
+        }, 1000);
+
+    });
+</script>
+
+<!--加载完成去除加载div-->
+
+
+</body>
+<img src="http://old.bz55.com/uploads/allimg/150820/140-150R0093H2.jpg" width="100px;" alt="">
+</html>

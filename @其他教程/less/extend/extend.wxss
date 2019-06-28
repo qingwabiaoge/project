@@ -1,0 +1,10 @@
+.cheshi,
+.cheshi2,
+.cheshi3 {
+  color: #0ba3de;
+}
+.cheshi a,
+.cheshi3 a {
+  color: #0f0;
+}
+/*# sourceMappingURL=extend.wxss.map */

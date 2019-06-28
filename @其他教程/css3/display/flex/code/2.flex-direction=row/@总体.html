@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src=""></script>
+</head>
+<body>
+
+<div class="container">
+    <span class="item" style="background-color: #0a76a4">1</span>
+    <div class="item" style="background-color: red">2</div>
+    <div class="item" style="background-color: blueviolet">3</div>
+    <div class="item" style="background-color: blue">4</div>
+
+</div>
+
+
+<style>
+    body, html {
+        height: 100%;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: row; /*主轴方向*/
+        justify-content: flex-start; /*主轴方向排序*/
+                          /*  flex-start | flex-end | center | space-between | space-around;*/
+        align-items: center; /*主轴垂直方向的位置  设置了就消除了100%的特性*/
+                                /* flex-start | flex-end | center | baseline | stretch;*/
+
+        /*flex-wrap: wrap;*/   /*是否换行*/
+        /* align-content:center ;*/ /*依赖flex-wrap,换行垂直方向才能排布*/
+    }
+
+    /* 以下为辅助样式 */
+
+    .container {
+        background-color: #F0f0f0;
+    }
+
+    .item {/* 设置元素大小*/
+
+        /*flex-shrink,
+          shrink [英:收缩],
+          1:当所有元素width相加超过100%,集体缩小填满，
+          0:当所有元素width相加超过100%,不缩小*/
+        flex: 1 1 200px;
+        height: 300px;
+
+    }
+
+
+    .item:last-child {   /*对特定元素设置垂直排布和大小*/
+        align-self: flex-start; /*item主轴垂直方向排序*/
+                       /* flex-start | flex-end | center | baseline | stretch | auto;*/
+        flex:0 0 100px;
+
+    }
+
+</style>
+<script>
+</script>
+</body>
+</html>

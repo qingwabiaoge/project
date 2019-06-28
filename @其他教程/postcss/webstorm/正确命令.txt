@@ -1,0 +1,3 @@
+C:\Users\Administrator\AppData\Roaming\npm\postcss.cmd
+
+-u postcss-import  -u postcss-cssnext -u autoprefixer -o $FileDir$\$FileNameWithoutAllExtensions$.css $FileDir$\$FileName$

@@ -1,0 +1,41 @@
+
+
+<div class="container" >
+    <div class="item" >1</div>
+    <div class="item" >2</div>
+    <div class="item" >3</div>
+    <div class="item" >4</div>
+
+</div>
+
+<style>
+    div{border: 1px solid #00f}
+    .container {
+        height: 50%;
+        display: flex;
+        border: 1px solid #000;
+    }
+    /*----------------------------------------------------------------------*/
+    .item {
+
+        /* max-width, min-width优先级最高*/
+        max-width:300px;
+        min-width: 100px;
+
+        /*优先级高于flex-basis, width ,flex-grow保持现有宽度 ,然后所有元素以拉伸相同的宽度填满*/
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        /*flex-basis优先级高于width*/
+        flex-basis: 200px;
+
+
+        /*width优先级最低*/
+        width: 50px;
+
+    }
+    .item:last-of-type{
+        width:500px;
+
+    }
+</style>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<div class="container">
+
+    <div class="item" >1</div>
+    <div class="item" >2</div>
+    <div class="item" >3</div>
+</div>
+
+
+<style>
+
+    .container{
+        height: 100%;
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .item{ border: 10px solid #000; flex: 1 1 500px}
+    .item:first-child{
+        flex: 1 1 800px;
+        align-self: stretch;
+    }
+
+</style>
+</body>
+
+</html>

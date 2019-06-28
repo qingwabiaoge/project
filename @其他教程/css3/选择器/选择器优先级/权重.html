@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body div ul li {
+            color: #000
+            /*权重4*/
+        }
+
+        div div ul li {
+            color: #ccc
+            /*顺序在后 权重4+*/
+        }
+
+        .green li {
+            color: green;
+            /*//权重10*/
+        }
+
+        .blue ul li {
+            color: blue
+            /*权重12*/
+        }
+
+        .yellow-important li {
+            color: yellow !important;
+            /*//权重1001*/
+        }
+
+        .pink-important div ul {
+            color: pink;
+            /*//权重1002但是针对ul的 ， li继承上级最弱*/
+        }
+    </style>
+</head>
+<body>
+
+!important > 行内样式>ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性 <br>
+首先确定要编写样式的标签 li <br>
+
+和代码的顺 <br>
+
+<div >
+    <div>
+        <ul >
+            <li>grey</li>
+        </ul>
+    </div>
+</div>
+
+
+和选择器的种类有关<br>
+
+<b>在html中和选择器离最终标签的位置无关</b> <br>
+
+<b>在html中同级别选择器前后顺序无关</b>
+
+
+<div class="  yellow-important   pink-important">
+    <div>
+        <ul class="blue green">
+            <li>import高于class</li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

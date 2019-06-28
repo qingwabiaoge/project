@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../style/ui/ui.css">
+    <style>
+        div a {
+            display: none
+        }
+
+        .active {
+
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="hd">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<div class="bd">
+    <a href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+</div>
+
+<script>
+
+    var i = 0
+    $(".hd>*").hover(function () {
+        i = $(this).index();
+        $(".bd>*:eq(" + i + ")").addClass("active").siblings().removeClass("active")
+
+    })
+
+</script>
+</body>
+</html>

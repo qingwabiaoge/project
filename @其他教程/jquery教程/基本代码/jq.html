@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+</head>
+<body>
+<h1>标题一</h1>
+<h2>标题2</h2>
+<h3>title3</h3>
+<h4>title4</h4>
+<h5>title4</h5>
+<h6>title4</h6>
+
+<p style="height: 10px"></p>
+
+<ul>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+
+</ul>
+<ul>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+    <li>列表</li>
+
+</ul>
+
+<a href="">link</a> <br>
+<a href="">link</a> <br>
+<a href="#">link</a> <br>
+<a href="1.jpg">link</a> <br>
+<a href="http">link</a> <br>
+
+<section>
+    你好你好你好
+
+</section>
+<style>
+/*p{font-weight: bold; background: #0c0c0c}*/
+
+</style>
+<script>
+$(":header").css("color","red")
+$('h5,h6').css('color','blue')
+$("p:empty").css("background-color","#B2E0FF");
+//$(":contains('title')").css("color",'green')
+$(":not(p)").css("background-color",'#eee')
+
+//html ul 中的第一个li
+$('ul li:first').css("color",'red')
+//html ul 中的最后一个li
+$('ul li:last').css('color','blue')
+//html ul 中第7个li
+$("ul li:eq(7)").css('color','green')
+//html ul 中偶数的li
+$('ul li:even').css('fontWeight','bold')
+//html ul 中>8的li
+$("ul li:gt(7)").css('fontSize','20px') //grow
+//html ul 中<6的li
+$("ul li:lt(3)").css('textDecoration','underline')
+
+$("[href]").css('textDecoration','none')
+$("[href='']").css('color','green')
+$("[href='#']").css('color','blue')
+$("[href$='.jpg']").css('color','red')
+$("[href^='http']").css('color','yellow')
+$('section:first-line').css('color','red')
+
+
+
+
+
+
+</script>
+<style>
+    section:first-letter{color: red}
+</style>
+</body>
+</html>

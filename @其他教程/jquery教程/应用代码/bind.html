@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+ <script type="text/javascript" src="http://cdn.http6.net/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("p").bind("click mouseout",function(){
+                $("p").toggleClass("intro");
+            });
+        });
+    </script>
+    <style type="text/css">
+        .intro
+        {
+            font-size:150%;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+<p>将鼠标移动到该段落上。</p>
+
+</body>
+</html>

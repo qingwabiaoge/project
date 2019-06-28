@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    .vertical-align{ text-align: inherit}    /*设置水平居中*/
+
+    .vertical-align:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+
+    }
+
+    .vertical-align-bottom, .vertical-align-middle {
+        display: inline-block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .vertical-align-middle {
+        vertical-align: middle;
+    }
+
+    .vertical-align-bottom {
+
+        vertical-align: bottom;
+    }
+
+</style>
+
+<div class="vertical-align" style="height:150px;border:1px dashed #ddd;">
+    <div class="vertical-align-middle">一定要设置vertical-align高度</div>
+
+</div>
+<br>
+
+<div class="vertical-align" style="height:150px;border:1px dashed #ddd">
+    <div class="vertical-align-bottom">一定要设置vertical-align高度</div>
+
+</div>
+
+</body>
+</html>

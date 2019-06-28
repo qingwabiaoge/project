@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $.ajax({url:"1.txt",success:function(result){
+        $("body").html(result);
+    }});
+
+</script>
+</body>
+</html>

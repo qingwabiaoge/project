@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+<body>
+
+<div id="user-info"></div>
+<script>
+
+    (function ($) {
+        $.fn.userInfo = function (options) { //定义插件方法名
+            var dft = {
+                //定义一个对象，设置默认值
+                name: 'Steven Zhu', //名
+                email: 'zhuttymore@126.com', //链接
+                size: '14px', //文字大小
+                align: 'center '//文字位置，left || center || right
+            };
+            var opt = $.extend(dft, options);//这个很关键，待会跟你说。
+            var style = 'style="font-size:' + opt.size + ';text-align:' + opt.align + ';"'; //调用默认的样式
+            var name = '<p' + ' ' + style + '>name:<a target="_blank" >' + opt.name + '</a></p>';
+            var email = '<p' + ' ' + style + '>name:<a target="_blank">' + opt.email + '</a></p>';
+            this.append(name);
+            this.append(email);
+        }
+    })(window.jQuery);
+</script>
+
+
+<script>
+
+    $('#user-info').userInfo({
+        name: 'Sun Zhu',
+        email: '734271284@qq.com',
+        size: '16px',
+        align: 'right'
+    });
+    var i =
+            alert("")
+</script>
+
+</body>
+</html>

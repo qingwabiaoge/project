@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.http6.net/animate.min.css">
+
+
+</head>
+<body style="height: 5000px">
+<div class="navbar-default navbar-fixed-top animated bounceInDown" style="height: 400px;">
+    1111111111111111111111111111111111111111111
+</div>
+
+
+<script>
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            $(".navbar-default").removeClass("bounceInDown")
+            $(".navbar-default").addClass("bounceOutUp")
+        } else {
+            $(".navbar-default").removeClass("bounceOutUp")
+            $(".navbar-default").addClass("bounceInDown")
+        }
+        lastScrollTop = st;
+    });
+
+</script>
+</body>
+</html>

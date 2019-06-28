@@ -1,0 +1,80 @@
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+<style>
+
+    @media screen and (min-width: 320px) {
+        html {
+            font-size: 100px;
+        }
+    }
+
+    @media screen and (min-width: 360px) {
+        html {
+            font-size: 112.5px;
+        }
+    }
+
+    @media screen and (min-width: 400px) {
+        html {
+            font-size: 125px;
+        }
+    }
+
+    @media screen and (min-width: 440px) {
+        html {
+            font-size: 137.5px;
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+        html {
+            font-size: 150px;
+        }
+    }
+
+    @media screen and (min-width: 640px) {
+        html {
+            font-size: 200px;
+        }
+    }
+
+    html {
+        font-size: 31.25vw;
+    }
+</style>
+
+
+<style>
+    html{
+        font-size:100px;
+    }
+    div{
+        width:.2rem;
+        height:.2rem;
+    }
+    img{
+        width:1.65rem;
+        height:1.65rem;
+    }
+</style>
+<div>20*20<div>
+    <!--这个图片是165px*165px-->
+    <img src="http://www.zhufengpeixun.cn/themes/jianmo2/images/pic_04.png" />
+
+    <div class="musicBox">musicBox</div>
+
+<script>
+
+    (function () {
+        var winW = document.documentElement.clientWidth, desW = 640, htmlFont = winW / desW * 100;
+        if (winW >= 640) {//当屏幕的宽度大于设计稿的宽度是，整个区域最宽640
+            $('.musicBox').css({//可在css中写
+                width: desW,
+                margin: "0 auto"
+            });
+            window.htmlFont = 100;
+            return;
+        }
+        window.htmlFont = htmlFont;//将变量转为全局变量传递出函数作用域
+        document.documentElement.style.fontSize = htmlFont + "px";//设置html根元素的字体大小
+    })();
+</script>

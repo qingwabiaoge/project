@@ -1,0 +1,68 @@
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta charset="utf-8">
+
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+<h1>小程序data method,生命周期钩子函数</h1>
+
+
+<pre>
+    <code>
+App({
+        //data
+globalData: 1,
+//methods
+setData:(){},
+//生命周期钩子
+attached: function () { }
+moved: function () { }
+detached: function () {}
+onTap: function () {
+
+}
+})
+</code></pre>
+
+
+<pre> <code>
+Page({
+//data
+data: {
+msg:""
+},
+// 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+attached: function () { }
+moved: function () { }
+detached: function () {}
+onTap: function () {
+
+}
+})
+</code>
+</pre>
+<pre> <code>
+Component({
+//data
+data: {
+msg:""
+},
+// 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+attached: function () { }
+moved: function () { }
+detached: function () {}
+//methods
+methods: {
+onTap: function () {
+
+}
+}
+})
+</code>
+</pre>

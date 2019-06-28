@@ -1,0 +1,3 @@
+if (tag == 'xx')ет
+
+ enterTag:'br'

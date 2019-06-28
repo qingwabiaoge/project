@@ -1,0 +1,17 @@
+
+.color{
+background-color: #CC00FF;                /*所有浏览器都会显示为紫色*/
+background-color: #FF0000\9;        /*IE6、IE7、IE8会显示红色*/
+*background-color: #0066FF;                /*IE6、IE7会变为蓝色*/
+_background-color: #009933;                /*IE6会变为绿色*/
+}
+
+
+\9　\9可以区别所有IE和FireFox.
+*　IE6、IE7可以识别.IE8、FireFox不能.
+_　IE6可以识别"_",IE7、IE8、FireFox不能.
+
+这样就可以完全区分开IE6、IE7、IE8、FireFox了，但是个人觉得ie8还是很好搞定的。。。能不用hack尽量不用，一般写法规范一点，IE8就没有大问题
+
+另外这里有一种强制ie8变ie7的方法，
+<meta http-equiv="X-UA-Compatible" content="IE=7" />

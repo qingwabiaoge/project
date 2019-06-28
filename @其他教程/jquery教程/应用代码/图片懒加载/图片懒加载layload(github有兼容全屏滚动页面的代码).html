@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <script src="http://cdn.http6.net/jquery.lazyload.min.js"></script>
+
+</head>
+<body>
+<style>
+    img{ width: 100%;/*必须设置图片尺寸*/}
+</style>
+必须设置图片宽度或者高度
+必须去掉src
+
+<p>
+    <img  data-original="http://pic.http6.net/201708/e483b550a030315ba7fa86041bef3df4.jpg" style=""/>
+</p>
+<p>
+    <img data-original="http://pic.http6.net/201708/cb9a036e22c53574a9ca2fb01813e96f.jpg" style=""/>
+</p>
+<p>
+    <img data-original="http://pic.http6.net/201708/e20bd5207eb80b88469a78b474b258af.jpg" style=""/>
+</p>
+<p>
+    <img data-original="http://pic.http6.net/201708/21b93fb49c7008016a0307e3935b3c42.jpg" style=""/>
+</p>
+<p>
+    <img data-original="http://pic.http6.net/201708/18f0b6816a0e67d7b7edccb40e39a6c2.jpg" style=""/>
+</p>
+<p>
+    <img   data-original="http://pic.http6.net/201708/9772064fd3497d967095dc5980f1d470.jpg"  style=""/>
+</p>
+<p>
+
+</p>
+<p>
+    <br/>
+</p>
+
+<script type="text/javascript">
+    $("img")
+
+            .lazyload({
+                effect: "fadeIn",
+                //等待动画
+
+            });
+//页面打开5s后加载其他图片
+    $(function() {
+        $("img:below-the-fold").lazyload({
+            threshold : 200,
+            event : "sporty"
+        });
+    });
+    $(window).bind("load", function() {
+        var timeout = setTimeout(function() {$("img").trigger("sporty")}, 5000);
+    });
+</script>
+
+</body>
+</html>

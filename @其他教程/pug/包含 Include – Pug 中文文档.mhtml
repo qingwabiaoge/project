@@ -1,0 +1,2696 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://pug.bootcss.com/language/includes.html
+Subject: =?utf-8?Q?=E5=8C=85=E5=90=AB=20Include=20=E2=80=93=20Pug=20=E4=B8=AD=E6?=
+ =?utf-8?Q?=96=87=E6=96=87=E6=A1=A3?=
+Date: Tue, 6 Nov 2018 08:42:39 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--P13IqhZjQpXSPDALlwNcuYBZm7TwugNSPLt9Zffqig----"
+
+
+------MultipartBoundary--P13IqhZjQpXSPDALlwNcuYBZm7TwugNSPLt9Zffqig----
+Content-Type: text/html
+Content-ID: <frame-BD8ABD2CE9F0BA038E52EB38CF354F13@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pug.bootcss.com/language/includes.html
+
+<!DOCTYPE html><html lang=3D"zh-cn"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"=
+width=3Ddevice-width, initial-scale=3D1.0"><meta name=3D"msapplication-conf=
+ig" content=3D"/images/browserconfig.xml"><meta name=3D"theme-color" conten=
+t=3D"#ffffff"><link rel=3D"apple-touch-icon" sizes=3D"180x180" href=3D"http=
+s://pug.bootcss.com/images/apple-touch-icon.png"><link rel=3D"icon" type=3D=
+"image/png" sizes=3D"32x32" href=3D"https://pug.bootcss.com/images/favicon-=
+32x32.png"><link rel=3D"icon" type=3D"image/png" sizes=3D"16x16" href=3D"ht=
+tps://pug.bootcss.com/images/favicon-16x16.png"><link rel=3D"manifest" href=
+=3D"https://pug.bootcss.com/images/manifest.json"><link rel=3D"mask-icon" h=
+ref=3D"https://pug.bootcss.com/images/safari-pinned-tab.svg" color=3D"#5bba=
+d5"><link rel=3D"shortcut icon" href=3D"https://pug.bootcss.com/images/favi=
+con.ico"><link rel=3D"stylesheet" href=3D"https://fonts.googleapis.bootcss.=
+com/css?family=3DArvo:400,400italic,700,700italic|PT+Sans:400,400italic,700=
+,700italic"><link rel=3D"stylesheet" href=3D"https://pug.bootcss.com/css/st=
+yle.css"><title>=E5=8C=85=E5=90=AB Include =E2=80=93 Pug =E4=B8=AD=E6=96=87=
+=E6=96=87=E6=A1=A3</title><meta name=3D"description" content=3D"Pug =E6=98=
+=AF=E4=B8=80=E6=AC=BE=E5=81=A5=E5=A3=AE=E3=80=81=E7=81=B5=E6=B4=BB=E3=80=81=
+=E5=8A=9F=E8=83=BD=E4=B8=B0=E5=AF=8C=E7=9A=84=E6=A8=A1=E6=9D=BF=E5=BC=95=E6=
+=93=8E=EF=BC=8C=E4=B8=93=E9=97=A8=E4=B8=BA Node.js =E5=B9=B3=E5=8F=B0=E5=BC=
+=80=E5=8F=91=E3=80=82Pug =E6=98=AF=E7=94=B1 Jade =E6=94=B9=E5=90=8D=E8=80=
+=8C=E6=9D=A5=E3=80=82"><style type=3D"text/css">:root a[href*=3D".com?intr=
+=3D"], :root .f-sign-cont[data-dysign-adid], :root .GKJYXHBF2 > .GKJYXHBE2 =
+> .GKJYXHBH5, :root a[href^=3D"http://ffxitrack.com/"], :root a[href^=3D"ht=
+tp://ad-apac.doubleclick.net/"], :root a[href^=3D"http://www.amazon.co.uk/e=
+xec/obidos/external-search?"], :root .content-video > .ads-player, :root #\=
+5f _mom_ad_2, :root #rhs_block .mod > .luhb-div > div[data-async-type=3D"up=
+dateHotelBookingModule"], :root #\5f _admvnlb_modal_container, :root #MAIN.=
+ShowTopic > .ad, :root a[href^=3D"http://pubads.g.doubleclick.net/"], :root=
+ #wrapper_right_bg[target=3D"_blank"], :root .GB3L-QEDGY .GB3L-QEDF- > .GB3=
+L-QEDE-, :root #main_col > #center_col div[style=3D"font-size:14px;margin:0=
+ 4px;padding:1px 5px;background:#fff7ed"], :root div[class*=3D"-storyBodyAd=
+-"], :root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs, :root a[href^=
+=3D"http://ul.to/ref/"], :root #\5f _nq__hh[style=3D"display:block!importan=
+t"], :root a[href^=3D"http://cdn.adstract.com/"], :root a[href^=3D"//tracki=
+ng.content-recommendation.net/"][href*=3D"/sponsored/click.html?"], :root a=
+[href^=3D"https://hi.potvpn.com/?from=3D"], :root .heg > .div-list, :root d=
+iv[class^=3D"ads-partner-"], :root #\5f _mom_ad_12, :root a[href^=3D"http:/=
+/lp.ncdownloader.com/"], :root a[href^=3D"https://fileboom.me/pr/"], :root =
+.inlineNewsletterSubscription + .inlineNewsletterSubscription div[class$=3D=
+"_item"], :root div[id^=3D"google_ads_iframe_"], :root #ads > .dose > .dose=
+single, :root a[href^=3D"http://3wr110.net/"], :root a[href^=3D"http://best=
+orican.com/"], :root div[id^=3D"ad_script_"], :root a[href^=3D"http://get.s=
+lickvpn.com/"], :root .gbfwa > div[class$=3D"_item"], :root a[href*=3D".wjL=
+kj.com/"], :root #assetsListings[style=3D"display: block;"], :root #center_=
+col > #\5f Emc, :root a[href^=3D"http://marketgid.com"], :root #rhs_block >=
+ ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > .luhb-div, :root a=
+[href^=3D"http://go.mobisla.com/"], :root #center_col > #res > #topstuff + =
+#search > div > #ires > #rso > #flun, :root a[href^=3D"http://www.webtracke=
+rplus.com/"], :root a[href^=3D"http://www.affbuzzads.com/affiliate/"], :roo=
+t #center_col > #resultStats + #tads, :root #main-content > [style=3D"paddi=
+ng:10px 0 0 0 !important;"], :root #center_col > #resultStats + #tads + #re=
+s + #tads, :root #cnt #center_col > #taw > #tvcap > .c._oc._Lp, :root a[hre=
+f^=3D"http://www.paddypower.com/?AFF_ID=3D"], :root a[onmousedown^=3D"this.=
+href=3D'http://staffpicks.outbrain.com/network/redir?"][target=3D"_blank"],=
+ :root #center_col > #resultStats + div + #res + #tads, :root div[id^=3D"cr=
+t-"][style], :root div[class^=3D"Ad__container"], :root a[href^=3D"http://c=
+entertrust.xyz/"], :root a[href^=3D"http://g1.v.fwmrm.net/ad/"], :root a[hr=
+ef^=3D"http://www.fbooksluts.com/"], :root #center_col > #resultStats + div=
+[style=3D"border:1px solid #dedede;margin-bottom:11px;padding:5px 7px 5px 6=
+px"], :root a[href^=3D"http://ads.integral-marketing.com/"], :root div[id^=
+=3D"advads_"], :root a[data-obtrack^=3D"http://paid.outbrain.com/network/re=
+dir?"], :root .__y_inner > .__y_item, :root div[id^=3D"ads300_100-widget"],=
+ :root #center_col > #taw > #tvcap > .rscontainer, :root #center_col > div[=
+style=3D"font-size:14px;margin-right:0;min-height:5px"] > div[style=3D"font=
+-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"], :root div[id^=
+=3D"MarketGid"], :root a[href^=3D"https://www.financeads.net/tc.php?"], :ro=
+ot #cnt #center_col > #res > #topstuff > .ts, :root #content > #center > .d=
+ose > .dosesingle, :root a[href^=3D"http://www.text-link-ads.com/"], :root =
+#content > #right > .dose > .dosesingle, :root #flowplayer > div[style=3D"p=
+osition: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px; z=
+-index: 999;"], :root a[href^=3D"http://ads.betfair.com/redirect.aspx?"], :=
+root #flowplayer > div[style=3D"z-index: 208; position: absolute; width: 30=
+0px; height: 275px; left: 222.5px; top: 85px;"], :root a[href*=3D"emprestim=
+o.eu"], :root #header + #content > #left > #rlblock_left, :root a[href^=3D"=
+http://9amq5z4y1y.com/"], :root .__zinit .__y_item, :root a[href^=3D"//40ce=
+exln7929.com/"], :root #mbEnd[cellspacing=3D"0"][cellpadding=3D"0"], :root =
+a[href^=3D"http://banners.victor.com/processing/"], :root #mn #center_col >=
+ div > h2.spon:first-child, :root .ch[onclick=3D"ga(this,event)"], :root [c=
+lass][data-sitename][data-header-version] > div[id^=3D"detection-block"], :=
+root a[href^=3D"//go.vedohd.org/"], :root #mn #center_col > div > h2.spon:f=
+irst-child + ol:last-child, :root a[href^=3D"http://affiliate.coral.co.uk/p=
+rocessing/"], :root a[href*=3D".com/Register.aspx?aid=3D"], :root div[id^=
+=3D"yandex_ad"], :root #mn div[style=3D"position:relative"] > #center_col >=
+ ._Ak, :root a[href*=3D".clksite.com/"], :root script + #rbbox, :root #mn d=
+iv[style=3D"position:relative"] > #center_col > div > ._dPg, :root .__yinit=
+ .__y_item, :root a[href*=3D"/Register?a=3D"], :root a[href^=3D"http://fina=
+ljuyu.com/"], :root div[id^=3D"mainads"], :root #rhs_block > .ts[cellspacin=
+g=3D"0"][cellpadding=3D"0"][style=3D"padding:0"], :root #resultspanel > #to=
+pads, :root #rhs_block > #mbEnd, :root #rhs_block .mod > .gws-local-hotels_=
+_booking-module, :root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf, :r=
+oot a[href^=3D"http://data.ad.yieldmanager.net/"], :root .mw > #rcnt > #cen=
+ter_col > #taw > #tvcap > .c, :root #rhs_block > script + .c._oc._Ve.rhsvw,=
+ :root a[data-redirect^=3D"https://paid.outbrain.com/network/redir?"], :roo=
+t a[href*=3D"deliver.trafficfabrik.com"], :root a[href^=3D"http://track.adf=
+orm.net/"], :root #tads + div + .c, :root img[src*=3D".sinaimg."][style=3D"=
+width:150px;height:300px"], :root div[class^=3D"ADTOPLB_"], :root #rhswrapp=
+er > #rhssection[border=3D"0"][bgcolor=3D"#ffffff"], :root a[href^=3D"http:=
+//admingame.info/"], :root #ssmiwdiv[jsdisplay], :root a[href^=3D"http://ww=
+w.dealcent.com/register.php?affid=3D"], :root #topstuff > #tads, :root .GFY=
+Y1SVD2 > .GFYY1SVC2 > .GFYY1SVF5, :root a[href^=3D"http://www.linkbucks.com=
+/referral/"], :root a[href*=3D".hbjimin.com/"], :root .GHOFUQ5BG2 > .GHOFUQ=
+5BF2 > .GHOFUQ5BG5, :root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5, :root a[hre=
+f^=3D"https://ad.atdmt.com/"], :root .jobs-information-call-to-action + .jo=
+bs-information-call-to-action div[class$=3D"_item"], :root .__ywvr .__y_ite=
+m, :root a[href^=3D"//00ae8b5a9c1d597.com/"], :root a[href*=3D".qertewrt.co=
+m/"], :root a[href^=3D"http://www.terraclicks.com/"], :root .GJJKPX2N1 > .G=
+JJKPX2M1 > .GJJKPX2P4, :root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB, :roo=
+t a[href^=3D"http://4c7og3qcob.com/"], :root a[href^=3D"http://aff.ironsock=
+et.com/"], :root .Mpopup + #Mad > #MadZone, :root aside[itemtype=3D"https:/=
+/schema.org/WPAdBlock"], :root .__y_elastic .__y_item, :root a[href^=3D"htt=
+p://www.adxpansion.com"], :root .__ywl .__y_item, :root .l-container > #fis=
+htank, :root .icons-rss-feed + .icons-rss-feed div[class$=3D"_item"], :root=
+ a[href^=3D"http://dethao.com/"], :root .lads[width=3D"100%"][style=3D"back=
+ground:#FFF8DD"], :root #right_couple + #left_float, :root iframe[src^=3D"h=
+ttp://cdn2.adexprt.com/"], :root .mod > ._jH + .rscontainer, :root a[href^=
+=3D"http://clicks.binarypromos.com/"], :root .mw > #rcnt > #center_col > #t=
+aw > .c, :root .nrelate .nr_partner, :root a[href^=3D"http://tezfiles.com/p=
+r/"], :root .ob_container .item-container-obpd, :root a[href^=3D"http://par=
+tner.sbaffiliates.com/"], :root a[href^=3D"http://www.firstload.com/affilia=
+te/"], :root a[href^=3D"http://www.myfreepaysite.com/sfw_int.php?aid"], :ro=
+ot a[href^=3D"//srv.buysellads.com/"], :root a[href^=3D"http://pwrads.net/"=
+], :root a[href=3D"http://www.yabovip5.cc/"], :root .ob_dual_right > .ob_ad=
+s_header ~ .odb_div, :root .plistaList > .itemLinkPET, :root a[href^=3D"htt=
+p://www.download-provider.org/"], :root a[href^=3D"//88d7b6aa44fb8eb.com/"]=
+, :root .plistaList > .plista_widget_underArticle_item[data-type=3D"pet"], =
+:root .plista_widget_belowArticleRelaunch_item[data-type=3D"pet"], :root a[=
+href^=3D"http://www.pinkvisualgames.com/?revid=3D"], :root .ra[align=3D"lef=
+t"][width=3D"30%"], :root a[href^=3D"http://ads.affbuzzads.com/"], :root a[=
+href^=3D"http://promos.bwin.com/"], :root a[href^=3D"http://tracker.mybroad=
+band.co.za/"], :root .ra[align=3D"right"][width=3D"30%"], :root a[href^=3D"=
+http://bs.serving-sys.com/"], :root a[href^=3D"http://api.content.ad/"], :r=
+oot a[href^=3D"https://www.googleadservices.com/pagead/aclk?"], :root .ra[w=
+idth=3D"30%"][align=3D"right"] + table[width=3D"70%"][cellpadding=3D"0"], :=
+root a[href^=3D"http://n217adserv.com/"], :root .rc-cta[data-target], :root=
+ .rhsvw[style=3D"background-color:#fff;margin:0 0 14px;padding-bottom:1px;p=
+adding-top:1px;"], :root a[href*=3D".com/?p=3D"][target=3D"_blank"] > img[s=
+rc$=3D".gif"], :root .widget-pane-section-result[data-result-ad-type], :roo=
+t a[href^=3D"http://adserver.adtechus.com/"], :root .rscontainer > .ellip, =
+:root .section-result[data-result-ad-type], :root .trc_rbox .syndicatedItem=
+, :root .trc_rbox_border_elm .syndicatedItem, :root a[href^=3D"http://taboo=
+la-"][href*=3D"/redirect.php?app.type=3D"], :root .trc_rbox_div .syndicated=
+Item, :root .trc_rbox_div .syndicatedItemUB, :root div[id^=3D"div_openx_ad_=
+"], :root .trc_rbox_div a[target=3D"_blank"][href^=3D"http://tab"], :root a=
+[href^=3D"//porngames.adult/?SID=3D"], :root a[href^=3D"http://engine.newsm=
+axfeednetwork.com/"], :root a[href^=3D"https://www.camsoda.com/enter.php?id=
+=3D"], :root a[href*=3D"=3Dexoclick"], :root a[href^=3D"//zenhppyad.com/"],=
+ :root a[href^=3D"http://ddownload39.club/"], :root a[href*=3D".yyk2.com/"]=
+, :root .trc_related_container div[data-item-syndicated=3D"true"], :root .v=
+i-lb-placeholder[title=3D"ADVERTISEMENT"], :root a[href^=3D"http://landingp=
+agegenius.com/"], :root a[href^=3D"//api.ad-goi.com/"], :root a[href^=3D"ht=
+tps://dcs.adgear.com/clicks/"], :root a[href^=3D"http://refer.webhostingbuz=
+z.com/"], :root AD-TRIPLE-BOX, :root ADS-RIGHT, :root a[href^=3D"http://cam=
+paign.bharatmatrimony.com/track/"], :root a[href*=3D"/adServe/banners?"], :=
+root #player_banner[style*=3D"fixed;"], :root a[href^=3D"https://www.secure=
+upload.eu/suprerefid=3D"], :root AFS-AD, :root a[href^=3D"http://www.myvpn.=
+pro/"], :root a[href^=3D"http://www.elfdoll.cn/?=3D"], :root a[onmousedown^=
+=3D"this.href=3D'http://paid.outbrain.com/network/redir?"][target=3D"_blank=
+"], :root AMP-AD, :root A[href^=3D"https://www.friendlyduck.com/AF_"], :roo=
+t a[href^=3D"http://server.cpmstar.com/click.aspx?poolid=3D"], :root a[href=
+^=3D"http://dwn.pushtraffic.net/"], :root [onclick^=3D"window.open('window.=
+open('//delivery.trafficfabrik.com/"], :root DFP-AD, :root FBS-AD, :root a[=
+href^=3D"http://clickandjoinyourgirl.com/"], :root div[id^=3D"advads-"], :r=
+oot a[href^=3D"http://buysellads.com/"], :root LEADERBOARD-AD, :root a[href=
+^=3D"http://sharesuper.info/"], :root [ad-id^=3D"googlead"], :root a[href^=
+=3D"http://www.ringtonematcher.com/"], :root [id*=3D"MGWrap"], :root a[href=
+^=3D"//ads.ad-center.com/"], :root a[href^=3D"http://websitedhoome.com/"], =
+:root [id*=3D"MarketGid"], :root [id*=3D"ScriptRoot"], :root a[href=3D"http=
+://track.freemmo2017.com/"], :root [id^=3D"bunyad_ads_"], :root a[href^=3D"=
+http://www.seekbang.com/cs/"], :root a[onmousedown^=3D"this.href=3D'http://=
+staffpicks.outbrain.com/network/redir?"][target=3D"_blank"] + .ob_source, :=
+root a[href^=3D"http://games.ucoz.ru/"][target=3D"_blank"], :root [lazy-ad=
+=3D"lefttop_banner"], :root a[href^=3D"http://go.gotourl.xyz/"], :root [onc=
+lick*=3D"content.ad/"], :root a[href^=3D"http://see-work.info/"], :root a[h=
+ref^=3D"http://www.graboid.com/affiliates/"], :root a[href^=3D"http://papi.=
+mynativeplatform.com:80/pub2/"], :root [onclick^=3D"window.open('http://adu=
+ltfriendfinder.com/search/"], :root a[href^=3D"http://www.ducksnetwork.com/=
+"], :root #container > #pic_container, :root a[data-oburl^=3D"http://paid.o=
+utbrain.com/network/redir?"], :root a[data-oburl^=3D"https://paid.outbrain.=
+com/network/redir?"], :root img[src*=3D".sinaimg."][style=3D"width:1025px;h=
+eight:80px"], :root a[data-redirect^=3D"http://click.plista.com/pets"], :ro=
+ot a[data-redirect^=3D"http://paid.outbrain.com/network/redir?"], :root a[h=
+ref^=3D"http://go.ad2up.com/"], :root a[href^=3D"http://adtransfer.net/"], =
+:root a[href^=3D"http://adclick.g.doubleclick.net/"], :root a[data-redirect=
+^=3D"this.href=3D'http://paid.outbrain.com/network/redir?"], :root div[clas=
+s*=3D"_AdInArticle_"], :root a[href^=3D"https://track.clickmoi.xyz/"], :roo=
+t a[data-url^=3D"http://paid.outbrain.com/network/redir?"], :root a[href*=
+=3D".ahhxwavi.cn"], :root a[data-url^=3D"http://paid.outbrain.com/network/r=
+edir?"] + .author, :root a[href^=3D"http://ad.yieldmanager.com/"], :root a[=
+href^=3D"http://www.myfreepaysite.com/sfw.php?aid"], :root a[href^=3D"http:=
+//lp.ezdownloadpro.info/"], :root a[data-widget-outbrain-redirect^=3D"http:=
+//paid.outbrain.com/network/redir?"], :root a[href$=3D"/vghd.shtml"], :root=
+ a[href^=3D"http://amzn.to/"] > img[src^=3D"data"], :root a[href*=3D".adk2x=
+.com/"], :root a[href^=3D"//z6naousb.com/"], :root a[href^=3D"//5e1fcb75b6d=
+662d.com/"], :root a[href*=3D".adsrv.eacdn.com/"] > img, :root a[href^=3D"/=
+/www.mgid.com/"], :root a[href^=3D"http://www.clkads.com/adServe/"], :root =
+a[href^=3D"http://ad.doubleclick.net/"], :root a[href*=3D".approvallamp.clu=
+b/"], :root a[href^=3D"http://connectlinking6.com/"], :root div[id^=3D"ad-p=
+osition-"], :root a[href*=3D".bang.com/"][href*=3D"&aff=3D"], :root a[href*=
+=3D".clkcln.com/"], :root a[href^=3D"http://guideways.info/"], :root a[href=
+*=3D".ichlnk.com/"], :root a[href*=3D".inclk.com/"], :root a[href*=3D".inta=
+b.fun/"], :root a[href*=3D".revimedia.com/"], :root a[href*=3D".trust.zone"=
+], :root a[href^=3D"http://www.1clickmoviedownloader.info/"], :root a[href^=
+=3D"http://feeds1.validclick.com/"], :root div[id^=3D"dfp-ad-"], :root a[hr=
+ef*=3D"/adrotate-out.php?"], :root a[href^=3D"http://xtgem.com/click?"], :r=
+oot a[href^=3D"https://servedbyadbutler.com/"], :root a[href*=3D"/cmd.php?a=
+d=3D"], :root a[href*=3D"/servlet/click/zone?"], :root a[href^=3D"http://ry=
+ushare.com/affiliate.python"], :root a[href*=3D"5iclx7wa4q.com"], :root a[h=
+ref^=3D"http://feedads.g.doubleclick.net/"], :root div[style^=3D"width: 100=
+%;"]:not([id]):not([class]) > iframe[scrolling=3D"no"][src^=3D"http"][src*=
+=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root =
+a[href*=3D"=3DAdtracker"], :root a[href^=3D"http://www.downloadweb.org/"], =
+:root a[href^=3D"http://affiliates.score-affiliates.com/"], :root a[href*=
+=3D"=3Dadscript"], :root iframe[id^=3D"google_ads_frame"], :root a[href*=3D=
+"a2g-secure.com"], :root a[href*=3D"ad2upapp.com/"], :root a[href*=3D"deliv=
+ery.trafficfabrik.com"], :root a[href^=3D"https://members.linkifier.com/pub=
+lic/affiliateLanding?refCode=3D"], :root a[href^=3D"//www.pd-news.com/"], :=
+root a[href*=3D"googleme.eu"], :root a[href*=3D"letsadvertisetogether.com"]=
+, :root a[href*=3D"onclkds."], :root a[href^=3D"http://www.streamtunerhd.co=
+m/signup?"], :root a[href^=3D"http://bonusfapturbo.nmvsite.com/"], :root a[=
+href*=3D"pussl3.com"], :root a[href^=3D" http://ads.ad-center.com/"], :root=
+ a[href^=3D" http://n47adshostnet.com/"], :root div[id^=3D"ads300_250-widge=
+t"], :root a[href^=3D" http://www.sex.com/"][href*=3D"&utm_"], :root a[href=
+^=3D"//adbit.co/?a=3DAdvertise&"], :root a[href^=3D"http://secure.signup-wa=
+y.com/"], :root a[href^=3D"//bwnjijl7w.com/"], :root a[href^=3D"//db52cc91b=
+eabf7e8.com/"], :root a[href^=3D"http://tracking.deltamediallc.com/"], :roo=
+t a[href^=3D"//go.onclasrv.com/"], :root a[href^=3D"//jsmptjmp.com/"], :roo=
+t a[href^=3D"http://www.revenuehits.com/"], :root a[href^=3D"//medleyads.co=
+m/spot/"], :root a[href^=3D"http://onclickads.net/"], :root a[href^=3D"//nl=
+kdom.com/"], :root a[href^=3D"http://click.plista.com/pets"], :root a[href^=
+=3D"http://www.streamate.com/exports/"], :root a[href^=3D"//t.MtagMonetizat=
+ionA.com/"], :root a[href^=3D"http://1phads.com/"], :root div[id^=3D"ads250=
+_250-widget"], :root a[href^=3D"http://2pxg8bcf.top/"], :root a[href^=3D"ht=
+tp://www.clickansave.net/"], :root a[href^=3D"http://360ads.go2cloud.org/"]=
+, :root a[href^=3D"http://9nl.es/"], :root a[href^=3D"http://NowDownloadAll=
+.com"], :root a[href^=3D"http://www.mysuperpharm.com/"], :root a[href^=3D"h=
+ttp://www.sex.com/videos/?utm_"], :root a[href^=3D"http://a.adquantix.com/"=
+], :root a[href^=3D"http://abc2.mobile-10.com/"], :root #piao_div_1[style*=
+=3D"width:140px;"], :root a[href^=3D"http://ad-emea.doubleclick.net/"], :ro=
+ot a[href*=3D".wenpie.com/"], :root a[href^=3D"http://ad.au.doubleclick.net=
+/"], :root a[href^=3D"http://adexprt.me/"], :root a[href^=3D"http://adf.ly/=
+?id=3D"], :root a[href^=3D"http://api.ringtonematcher.com/"], :root a[href^=
+=3D"http://adfarm.mediaplex.com/"], :root a[href^=3D"http://www.babylon.com=
+/welcome/index?affID"], :root a[href^=3D"http://adserving.unibet.com/"], :r=
+oot a[href^=3D"https://secure.adnxs.com/clktrb?"], :root a[href^=3D"http://=
+adlev.neodatagroup.com/"], :root a[href^=3D"http://adprovider.adlure.net/"]=
+, :root a[href^=3D"http://pan.adraccoon.com?"], :root div[id^=3D"lazyad-"],=
+ :root a[href^=3D"http://bcp.crwdcntrl.net/"], :root body[class|=3D"view"] =
+> .ad-box, :root a[href^=3D"http://adrunnr.com/"], :root a[href^=3D"http://=
+www.fpcTraffic2.com/blind/in.cgi?"], :root a[href^=3D"http://ads.activtrade=
+s.com/"], :root a[href^=3D"http://mmo123.co/"], :root a[href^=3D"http://ads=
+.ad-center.com/"], :root a[href*=3D".123ch.cn"], :root a[href^=3D"http://ad=
+s.sprintrade.com/"], :root a[href^=3D"http://zevera.com/afi.html"], :root a=
+[href^=3D"http://ads.expekt.com/affiliates/"], :root a[href^=3D"http://ads.=
+pheedo.com/"], :root a[href^=3D"http://ads2.williamhill.com/redirect.aspx?"=
+], :root a[href^=3D"http://cwcams.com/landing/click/"], :root a[href^=3D"ht=
+tp://adserver.adreactor.com/"], :root a[href^=3D"http://adserver.adtech.de/=
+"], :root a[href^=3D"http://www.1clickdownloader.com/"], :root a[href^=3D"h=
+ttp://cdn3.adbrau.com/"], :root a[href^=3D"http://adserver.itsfogo.com/"], =
+:root a[href^=3D"http://adserving.liveuniversenetwork.com/"], :root .listok=
+ > a > img[style^=3D"width:980px;height:"], :root a[href^=3D"http://adsrv.k=
+eycaptcha.com"], :root a[href^=3D"http://adtrack123.pl/"], :root a[href^=3D=
+"http://green.trafficinvest.com/"], :root a[href^=3D"http://clickserv.sites=
+cout.com/"], :root a[href^=3D"http://www.adshost2.com/"], :root a[href^=3D"=
+http://adtrackone.eu/"], :root a[href^=3D"http://adultfriendfinder.com/p/re=
+gister.cgi?pid=3D"], :root a[href^=3D"http://linksnappy.com/?ref=3D"], :roo=
+t a[href^=3D"http://affiliate.glbtracker.com/"], :root a[href^=3D"http://af=
+filiate.godaddy.com/"], :root a[href^=3D"http://www.accuserveadsystem.com/a=
+ccuserve-go.php?"], :root #table1[width=3D"468"][height=3D"50"], :root a[hr=
+ef^=3D"http://lp.ilivid.com/"], :root a[href^=3D"http://searchtabnew.com/"]=
+, :root a[href^=3D"http://affiliates.pinnaclesports.com/processing/"], :roo=
+t div[id^=3D"block-views-topheader-ad-block-"], :root a[href^=3D"http://www=
+.gamebookers.com/cgi-bin/intro.cgi?"], :root a[href^=3D"http://aflrm.com/"]=
+, :root a[href^=3D"http://anonymous-net.com/"], :root a[href^=3D"http://moj=
+ofun.info/"], :root a[href^=3D"http://findersocket.com/"], :root iframe[src=
+^=3D"http://ad.yieldmanager.com/"], :root a[href^=3D"http://at.atwola.com/"=
+], :root a[href^=3D"http://record.sportsbetaffiliates.com.au/"], :root a[hr=
+ef^=3D"http://b.bestcompleteusa.info/"], :root a[href^=3D"http://bc.vc/?r=
+=3D"], :root a[href^=3D"http://bcntrack.com/"], :root a[href^=3D"http://pok=
+ershibes.com/index.php?ref=3D"], :root a[href^=3D"http://www.friendlyadvert=
+isements.com/"], :root div[id^=3D"ad_thread"], :root div > [class][onclick*=
+=3D".updateAnalyticsEvents"], :root a[href^=3D"http://www.afco2go.com/srv.p=
+hp?"], :root a[onmousedown^=3D"this.href=3D'https://paid.outbrain.com/netwo=
+rk/redir?"][target=3D"_blank"] + .ob_source, :root a[href^=3D"http://betahi=
+t.click/"], :root a[href^=3D"http://hyperies.info/"], :root a[href^=3D"http=
+://bluehost.com/track/"], :root a[href^=3D"http://databass.info/"], :root a=
+[href^=3D"http://c.actiondesk.com/"], :root #navcontainer + .moneyarea, :ro=
+ot a[href^=3D"http://c.jumia.io/"], :root a[href^=3D"http://c.ketads.com/"]=
+, :root a[href^=3D"http://www.bet365.com/"][href*=3D"&affiliate=3D"], :root=
+ a[href^=3D"http://callville.xyz/"], :root a[href^=3D"http://media.paddypow=
+er.com/redirect.aspx?"], :root a[href^=3D"http://campaign.bharatmatrimony.c=
+om/cbstrack/"], :root a[href^=3D"http://campeeks.com/"][href*=3D"&utm_"], :=
+root a[href^=3D"http://casino-x.com/?partner"], :root #rightCouplet + #left=
+Float, :root a[href^=3D"http://cdn.adsrvmedia.net/"], :root a[href*=3D".dow=
+nok.com"], :root a[href^=3D"http://web.adblade.com/"], :root div[data-subsc=
+ript=3D"Advertising"], :root a[href^=3D"http://cdn3.adexprts.com/"], :root =
+a[href^=3D"http://go.oclaserver.com/"], :root a[href^=3D"http://chaturbate.=
+com/affiliates/"], :root script[src^=3D"http://free-shoutbox.net/app/webroo=
+t/shoutbox/sb.php?shoutbox=3D"] + #freeshoutbox_content, :root div[itemtype=
+=3D"http://schema.org/WPAdBlock"], :root a[href^=3D"http://cinema.friendsco=
+ut24.de?"], :root a[href^=3D"http://click.guamwnvgashbkashawhgkhahshmashcas=
+.pw/"], :root a[href^=3D"http://www.down1oads.com/"], :root a[href^=3D"http=
+://clicks.guamwnvgashbkashawhgkhahshmashcas.pw/"], :root a[href^=3D"http://=
+www.pheedo.com/"], :root a[href^=3D"http://clk.directrev.com/"], :root a[hr=
+ef^=3D"http://galleries.pinballpublishernetwork.com/"], :root div[class^=3D=
+"lifeOnwerAd"], :root a[target=3D"_blank"][href^=3D"http://api.taboola.com/=
+"], :root a[href^=3D"http://clkmon.com/adServe/"], :root a[href^=3D"http://=
+hdplugin.flashplayer-updates.com/"], :root a[href^=3D"http://track.incognit=
+ovpn.com/"], :root #img-txt-wrapper > #title_desc_div, :root div[id^=3D"acm=
+-ad-tag-"], :root a[href^=3D"http://codec.codecm.com/"], :root a[href^=3D"h=
+ttp://n.admagnet.net/"], :root a[href^=3D"http://prochina.space/"], :root a=
+[href^=3D"http://contractallsticker.net/"], :root a[href^=3D"http://wgpartn=
+er.com/"], :root a[href^=3D"https://go.stripchat.com/"][href*=3D"&campaignI=
+d=3D"], :root a[href^=3D"http://cpaway.afftrack.com/"], :root a[href^=3D"ht=
+tp://d2.zedo.com/"], :root div[id^=3D"advt-"], :root a[href^=3D"https://aff=
+iliates.bet-at-home.com/processing/"], :root a[href^=3D"http://data.committ=
+eemenencyclopedicrepertory.info/"], :root div[class^=3D"Ad__bigBox"], :root=
+ a[href^=3D"http://data.linoleictanzaniatitanic.com/"], :root div[itemtype=
+=3D"http://www.schema.org/WPAdBlock"], :root a[href^=3D"http://dftrck.com/"=
+], :root a[href^=3D"http://down1oads.com/"], :root a[href^=3D"http://downlo=
+ad-performance.com/"], :root a[href^=3D"http://www.myfreecams.com/?co_id=3D=
+"][href*=3D"&track=3D"], :root a[href^=3D"https://bs.serving-sys.com"], :ro=
+ot a[href^=3D"http://duckcash.eu/"], :root .container > a.mid-wrapper, :roo=
+t a[href^=3D"http://easydownload4you.com/"], :root a[href^=3D"http://www.mo=
+neyducks.com/"], :root a[href^=3D"http://eclkmpsa.com/"], :root a[href^=3D"=
+http://elite-sex-finder.com/?"], :root a[href^=3D"http://elitefuckbook.com/=
+"], :root .player + .sponsor, :root a[href^=3D"http://ethfw0370q.com/"], :r=
+oot a[href^=3D"http://extra.bet365.com/"][href*=3D"?affiliate=3D"], :root a=
+[href*=3D".gongnou.com/"], :root #leftFloat + #rightFloat, :root a[href^=3D=
+"http://farm.plista.com/pets"], :root a[href^=3D"http://freesoftwarelive.co=
+m/"], :root a[href^=3D"http://webgirlz.online/landing/"], :root a[href^=3D"=
+http://fileloadr.com/"], :root a[href*=3D"/mobads.php?"], :root a[href^=3D"=
+https://secure.eveonline.com/ft/?aid=3D"], :root a[href^=3D"http://fileupno=
+w.rocks/"], :root a[href^=3D"http://prousa.work/"], :root a[href^=3D"http:/=
+/fsoft4down.com/"], :root a[href^=3D"http://track.trkvluum.com/"], :root a[=
+href^=3D"http://fusionads.net"], :root a[href^=3D"https://farm.plista.com/p=
+ets"], :root a[href^=3D"http://galleries.securewebsiteaccess.com/"], :root =
+a[href^=3D"http://gca.sh/user/register?ref=3D"], :root a[href^=3D"http://ww=
+w.on2url.com/app/adtrack.asp"], :root a[href^=3D"http://getlinksinaseconds.=
+com/"], :root a[href^=3D"http://go.seomojo.com/tracking202/"], :root a[href=
+^=3D"http://www.getyourguide.com/?partner_id=3D"], :root a[href^=3D"http://=
+goldmoney.com/?gmrefcode=3D"], :root a[href^=3D"http://greensmoke.com/"], :=
+root a[href^=3D"http://hd-plugins.com/download/"], :root a[href^=3D"http://=
+hpn.houzz.com/"], :root a[href*=3D".com?aff=3D"], :root a[href^=3D"http://t=
+racking.crazylead.com/"], :root a[href^=3D"http://hyperlinksecure.com/go/"]=
+, :root a[href*=3D".com/?Extend=3D"], :root a[href^=3D"http://igromir.info/=
+"], :root a[href^=3D"http://imads.integral-marketing.com/"], :root a[href^=
+=3D"http://www.tirerack.com/affiliates/"], :root a[href^=3D"http://install.=
+securewebsiteaccess.com/"], :root a[href^=3D"http://secure.signup-page.com/=
+"], :root a[href^=3D"http://www.brightwheel.info/"], :root a[href^=3D"http:=
+//internalredirect.site/"], :root a[href^=3D"http://istri.it/?"], :root a[h=
+ref^=3D"http://jobitem.org/"], :root a[href^=3D"http://liversely.com/"], :r=
+oot a[href^=3D"http://join3.bannedsextapes.com/track/"], :root a[href^=3D"h=
+ttp://k2s.cc/code/"], :root a[href^=3D"http://tracking.toroadvertising.com/=
+"], :root a[href^=3D"http://k2s.cc/pr/"], :root a[href^=3D"http://keep2shar=
+e.cc/pr/"], :root a[href^=3D"http://latestdownloads.net/download.php?"], :r=
+oot div[id^=3D"ADV-SLOT-"], :root a[href^=3D"http://liversely.net/"], :root=
+ a[href^=3D"http://t.mdn2015x2.com/"], :root a[href^=3D"http://mgid.com/"],=
+ :root a[href^=3D"http://www.freefilesdownloader.com/"], :root a[href^=3D"h=
+ttp://www.quick-torrent.com/download.html?aff"], :root a[href^=3D"http://mo=
+8mwxi1.com/"], :root div[class^=3D"gemini-ad"], :root a[href^=3D"http://onl=
+ine.ladbrokes.com/promoRedirect?"], :root a[href^=3D"http://paid.outbrain.c=
+om/network/redir?"], :root a[href^=3D"http://track.affiliatenetwork.co.za/"=
+], :root a[href^=3D"https://www.spyoff.com/"], :root a[href^=3D"http://proc=
+hina.link/"], :root a[href^=3D"http://record.betsafe.com/"], :root a[href^=
+=3D"http://record.commissionking.com/"], :root a[href^=3D"http://rekoverr.c=
+om/"], :root a[href^=3D"http://s9kkremkr0.com/"], :root a[href^=3D"http://w=
+ww.123-reg.co.uk/affiliate2.cgi"], :root a[href^=3D"http://secure.hostgator=
+.com/~affiliat/"], :root a[href^=3D"http://serve.williamhill.com/promoRedir=
+ect?"], :root a[href^=3D"http://servicegetbook.net/"], :root table[style=3D=
+"border:#e8e8e8 1px solid;"] + div[style=3D"margin-top:5px"] > table[style=
+=3D"width:100%;"][cellspacing=3D"0"][cellpadding=3D"1"][bordercolor=3D"#999=
+999"][border=3D"1"], :root a[href^=3D"http://srvpub.com/"], :root a[href^=
+=3D"http://stateresolver.link/"], :root a[href^=3D"http://www.drowle.com/"]=
+, :root a[href*=3D".17yyba.com/"], :root a[href^=3D"https://keep2share.cc/p=
+r/"], :root a[href^=3D"http://steel.starflavor.bid/"], :root a[href^=3D"htt=
+ps://www.adskeeper.co.uk/"], :root a[href^=3D"http://syndication.exoclick.c=
+om/"], :root a[href^=3D"https://www.firstload.com/affiliate/"], :root a[hre=
+f^=3D"https://control.trafficfabrik.com/"], :root a[href^=3D"http://t.mdn20=
+15x1.com/"], :root a[href^=3D"http://t.mdn2015x3.com/"], :root a[href^=3D"h=
+ttp://t.wowtrk.com/"], :root a[href^=3D"http://tour.affbuzzads.com/"], :roo=
+t div[id^=3D"ad-div-"], :root a[href^=3D"http://uploaded.net/ref/"], :root =
+a[href^=3D"http://us.marketgid.com"], :root a[href^=3D"http://webtrackerplu=
+s.com/"], :root a[href^=3D"http://wopertific.info/"], :root div[id^=3D"cns_=
+ads_"], :root a[href^=3D"http://www.TwinPlan.com/AF_"], :root a[href^=3D"ht=
+tp://www.afgr3.com/"], :root a[href^=3D"http://www.twinplan.com/AF_"], :roo=
+t a[href^=3D"http://www.adbrite.com/mb/commerce/purchase_form.php?"], :root=
+ a[href^=3D"http://www.adskeeper.co.uk/"], :root a[href^=3D"http://www.want=
+straffic.com/"], :root a[href^=3D"https://understandsolar.com/signup/?lead_=
+source=3D"][href*=3D"&tracking_code=3D"], :root a[href^=3D"http://www.affil=
+iates1128.com/processing/"], :root a[href^=3D"http://www.downloadplayer1.co=
+m/"], :root a[href^=3D"http://www.badoink.com/go.php?"], :root a[href^=3D"h=
+ttp://www.bet365.com/"][href*=3D"?affiliate=3D"], :root #toptb + div[align=
+=3D"center"], :root a[href^=3D"http://www.bitlord.me/share/"], :root a[href=
+^=3D"http://www.bluehost.com/track/"] > img, :root bottomadblock, :root a[h=
+ref^=3D"http://www.cash-duck.com/"], :root a[href^=3D"https://windscribe.co=
+m/promo/"], :root a[href^=3D"http://www.cdjapan.co.jp/aff/click.cgi/"], :ro=
+ot a[href^=3D"http://yads.zedo.com/"], :root a[href^=3D"http://www.coinduck=
+s.com/"], :root a[href^=3D"http://www.dl-provider.com/search/"], :root a[hr=
+ef^=3D"http://www.downloadthesefiles.com/"], :root a[href^=3D"http://www.du=
+ckcash.eu/"], :root a[href^=3D"http://www.duckssolutions.com/"], :root a[hr=
+ef^=3D"http://www.easydownloadnow.com/"], :root a[href^=3D"http://www.epicg=
+ameads.com/"], :root a[href^=3D"http://www.faceporn.net/free?"], :root a[hr=
+ef^=3D"http://www.fducks.com/"], :root a[href^=3D"https://torguard.net/aff.=
+php"], :root a[href^=3D"http://www.firstclass-download.com/"], :root a[href=
+^=3D"http://www.firstload.de/affiliate/"], :root a[href^=3D"http://www.font=
+s.com/BannerScript/"], :root a[href^=3D"http://www.flashx.tv/downloadthis"]=
+, :root a[href^=3D"http://www.fleshlight.com/"], :root a[href^=3D"http://ww=
+w.friendlyquacks.com/"], :root a[href^=3D"http://www.greenmangaming.com/?ta=
+p_a=3D"], :root .ads > a > img[src*=3D".sinaimg."], :root a[href^=3D"https:=
+//www.goldenfrog.com/vyprvpn?offer_id=3D"][href*=3D"&aff_id=3D"], :root a[h=
+ref^=3D"http://www.hitcpm.com/"], :root a[href^=3D"https://pubads.g.doublec=
+lick.net/"], :root a[href^=3D"http://www.idownloadplay.com/"], :root a[href=
+^=3D"http://www.incredimail.com/?id=3D"], :root a[href^=3D"https://tracking=
+.truthfinder.com/?a=3D"], :root a[href^=3D"http://www.installads.net/"], :r=
+oot a[href^=3D"http://www.ireel.com/signup?ref"], :root a[href^=3D"http://w=
+ww.liutilities.com/"], :root div[id][style=3D"width: 100%;"] > iframe[scrol=
+ling=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][he=
+ight][frameborder=3D"0"], :root a[href^=3D"http://www.pinkvisualpad.com/?re=
+vid=3D"], :root a[href^=3D"http://www.liversely.net/"], :root a[href^=3D"ht=
+tp://www.menaon.com/installs/"], :root a[href^=3D"http://www.mobileandinter=
+netadvertising.com/"], :root a[href^=3D"http://www.my-dirty-hobby.com/?sub=
+=3D"], :root a[href^=3D"http://www.plus500.com/?id=3D"], :root a[href^=3D"h=
+ttp://www.ragazzeinvendita.com/?rcid=3D"], :root a[href^=3D"http://www.rich=
+ducks.com/"], :root a[href^=3D"http://www.roboform.com/php/land.php"], :roo=
+t a[href^=3D"http://www.securegfm.com/"], :root a[href^=3D"http://www.sex.c=
+om/?utm_"], :root a[href^=3D"http://www.sex.com/pics/?utm_"], :root a[href^=
+=3D"http://www.urmediazone.com/signup"], :root div[class^=3D"Ad__adContaine=
+r"], :root a[href^=3D"http://www.sexgangsters.com/?pid=3D"], :root a[href*=
+=3D".qpzqxz.com/"], :root a[href^=3D"http://www.sfippa.com/"], :root a[href=
+^=3D"http://www.socialsex.com/"], :root a[href^=3D"http://www.torntv-downlo=
+ader.com/"], :root a[href^=3D"http://www.torntvdl.com/"], :root #table1[wid=
+th=3D"812"][height=3D"50"], :root a[href^=3D"http://www.uniblue.com/cm/"], =
+:root a[href^=3D"http://www.usearchmedia.com/signup?"], :root a[href^=3D"ht=
+tp://www.xmediaserve.com/"], :root a[href^=3D"http://www.yourfuckbook.com/?=
+"], :root a[href^=3D"http://www.zergnet.com/i/"], :root a[onclick*=3D"//m.e=
+conomictimes.com/etmack/click.htm"], :root a[href^=3D"http://www1.clickdown=
+loader.com/"], :root A[href*=3D".com/?Agent=3D"], :root a[href^=3D"http://w=
+ww5.smartadserver.com/call/pubjumpi/"], :root a[href^=3D"http://wxdownloadm=
+anager.com/dl/"], :root a[href^=3D"http://xads.zedo.com/"], :root div[id^=
+=3D"div-adtech-ad-"], :root a[href^=3D"http://y1jxiqds7v.com/"], :root div[=
+id^=3D"div_ad_stack_"], :root a[href^=3D"http://z1.zedo.com/"], :root a[hre=
+f^=3D"https://aaucwbe.com/"], :root a[href^=3D"https://ad.doubleclick.net/"=
+], :root a[href^=3D"https://adhealers.com/"], :root a[href^=3D"https://ads.=
+ad4game.com/"], :root a[href^=3D"https://adswick.com/"], :root a[href^=3D"h=
+ttps://atomidownload.com/"], :root a[href^=3D"https://awentw.com/"], :root =
+a[href*=3D".tduou.com/"], :root #rightCouple + #leftFloat, :root a[href^=3D=
+"https://betway.com/"][href*=3D"&a=3D"], :root a[href^=3D"https://chaturbat=
+e.com/in/?track=3D"], :root a[href^=3D"https://chaturbate.com/affiliates/"]=
+, :root body[onload*=3D"u()"] > #x, :root a[href^=3D"https://chaturbate.com=
+/in/?tour=3D"], :root div[id][style=3D"width: 100%;"] > div > div > iframe[=
+scrolling=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][widt=
+h][height][frameborder=3D"0"], :root #piao_div_4[style*=3D"width:140px;"], =
+:root a[href^=3D"https://click.plista.com/pets"], :root a[href^=3D"https://=
+dediseedbox.com/clients/aff.php?"], :root a[href^=3D"https://dltags.com/"],=
+ :root a[href^=3D"https://evaporate.pw/"], :root a[href^=3D"https://go.ad2u=
+p.com/"], :root a[href^=3D"https://go.onclasrv.com/"], :root a[href^=3D"htt=
+ps://intrev.co/"], :root a[href^=3D"https://mk-ads.com/"], :root a[href^=3D=
+"https://paid.outbrain.com/network/redir?"], :root a[href^=3D"https://pornd=
+eals.com/?track=3D"], :root .maomi-content > .section-banner, :root a[href^=
+=3D"https://prf.hn/click/"][href*=3D"/adref:"], :root a[href^=3D"https://re=
+direct.ero-advertising.com/"], :root a[href^=3D"https://syndication.exoclic=
+k.com/splash.php?"], :root a[href^=3D"https://t.mobtya.com/"], :root a[href=
+^=3D"https://track.adform.net/"], :root a[href^=3D"https://track.healthtrad=
+er.com/"], :root div[id^=3D"ad-server-"], :root a[href^=3D"https://trackjs.=
+com/?utm_source"], :root a[href^=3D"https://trklvs.com/"], :root a[href^=3D=
+"https://trust.zone/go/r.php?RID=3D"], :root a[href^=3D"https://www.adultem=
+pire.com/"][href*=3D"?partner_id=3D"], :root a[href^=3D"https://www.bebi.co=
+m"], :root a[href^=3D"https://www.camyou.com/?cam=3D"][href*=3D"&track=3D"]=
+, :root a[href^=3D"https://www.dsct1.com/"], :root a[href^=3D"https://www.o=
+boom.com/ad/"], :root a[href^=3D"https://www.popads.net/users/"], :root a[h=
+ref^=3D"https://www.share-online.biz/affiliate/"], :root a[onmousedown^=3D"=
+this.href=3D'/wp-content/embed-ad-content/"], :root a[href*=3D".05cg.com/"]=
+, :root a[onmousedown^=3D"this.href=3D'http://paid.outbrain.com/network/red=
+ir?"][target=3D"_blank"] + .ob_source, :root a[onmousedown^=3D"this.href=3D=
+'https://paid.outbrain.com/network/redir?"][target=3D"_blank"], :root div[i=
+d^=3D"div-gpt-ad"], :root a[style=3D"display:block;width:300px;min-height:2=
+50px"][href^=3D"http://li.cnet.com/click?"], :root a[target=3D"_blank"][onm=
+ousedown=3D"this.href^=3D'http://paid.outbrain.com/network/redir?"], :root =
+aside[id^=3D"adrotate_widgets-"], :root div#ad_id, :root aside[id^=3D"advad=
+s_ad_widget-"], :root aside[id^=3D"div-gpt-ad"], :root div[class$=3D"dealne=
+ws"] > .dealnews, :root .footer > #box[style=3D"width:100%;height:100%;posi=
+tion:fixed;top:0"], :root div[class^=3D"AdhesionAd_"], :root div[class^=3D"=
+BlockAdvert-"], :root div[class^=3D"ResponsiveAd-"], :root div[class^=3D"ad=
+_border_"], :root div[class^=3D"ad_position_"], :root div[class^=3D"adbanne=
+r_"], :root div[class^=3D"adpubs-"], :root div[class^=3D"awpcp-random-ads"]=
+, :root div[class^=3D"block-openx-"], :root div[class^=3D"local-feed-banner=
+-ads"], :root div[class^=3D"pane-google-admanager-"], :root div[class^=3D"p=
+roadszone-"], :root div[data-native_ad], :root div[style^=3D"width: 100%;"]=
+[style$=3D"z-index: inherit;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=
+=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root =
+div[data-spotim-slot], :root div[id^=3D"YFBMSN"], :root div[id^=3D"ad-cid-"=
+], :root div[id^=3D"proadszone-"], :root div[id^=3D"ad_bigbox_"], :root div=
+[id^=3D"adfox_"], :root div[id^=3D"adrotate_widgets-"], :root div[id^=3D"ad=
+s120_600-widget"], :root div[id^=3D"ads300_600-widget"], :root div[id^=3D"a=
+dspot-"], :root div[id^=3D"dfp-slot-"], :root div[id^=3D"div-ads-"], :root =
+div[id^=3D"dmRosAdWrapper"], :root topadblock, :root div[id^=3D"drudge-colu=
+mn-ads-"], :root div[id^=3D"google_dfp_"], :root div[id^=3D"q1-adset-"], :r=
+oot div[id^=3D"zergnet-widget"], :root iframe[id^=3D"google_ads_iframe"], :=
+root [style=3D"display:none"] + iframe[scrolling=3D"no"][src*=3D"//"][src*=
+=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root =
+iframe[src^=3D"http://cdn1.adexprt.com/"], :root iframe[src^=3D"http://stat=
+ic.mozo.com.au/strips/"], :root img[alt^=3D"Fuckbook"], :root #container > =
+a.item, :root input[onclick^=3D"window.open('http://www.friendlyduck.com/"]=
+, :root input[onclick^=3D"window.open('http://www.FriendlyDuck.com/"], :roo=
+t p[id^=3D"div-gpt-ad-"], :root .content-video > .ads, :root td[valign=3D"t=
+op"] > .mainmenu[style=3D"padding:10px 0 0 0 !important;"], :root #fwin_pop=
+ad_7ree + #fwin_dialog, :root #left_float + #right_float, :root #piao_div_0=
+[style*=3D"width:140px;"], :root #piao_div_2[style*=3D"width:140px;"], :roo=
+t #piao_div_3[style*=3D"width:140px;"], :root #piao_div_5[style*=3D"width:1=
+40px;"], :root #results.content-main > .eLeft, :root #table1[width=3D"794"]=
+[height=3D"60"], :root #table1[width=3D"812"][height=3D"60"], :root .ad[sty=
+le=3D"margin-bottom: 10px; width: 100%;"], :root .content > a > .topline, :=
+root .error > #qqs, :root a[href^=3D"/dasp.php?a=3D"], :root .his-sign-cont=
+[data-dysign-adid], :root .main[style=3D"border:#7D8C8E solid 1px;height: 2=
+3px;"], :root a[href*=3D".08an.com/"], :root a[href*=3D".222bz.com/"], :roo=
+t a[href*=3D".7wkw.com"], :root a[href*=3D".9xiazaiqi.com"], :root a[href*=
+=3D".acuxrecv.cn"], :root a[href*=3D".biwbmsyt.cn"], :root a[href*=3D".cang=
+pie.com/"], :root a[href*=3D".com/Register/?a=3D"], :root a[href*=3D".dpcpf=
+w.com/"], :root a[href*=3D".guzaosf.com/"], :root a[href*=3D".iziyo.com/"],=
+ :root a[href*=3D".qtj5.com/"], :root a[href*=3D".tudown.com/"], :root a[hr=
+ef*=3D"/?INTR=3D"], :root a[href*=3D"/?Intr=3D"], :root a[href*=3D"/?intr=
+=3D"], :root a[href=3D"https://t.cn/Rr4eSOx"], :root a[href^=3D"http://172.=
+247.157.176/"], :root a[href^=3D"http://ad.moemoe."], :root a[href^=3D"http=
+://fa999.cn/"], :root a[href^=3D"http://pic.gunqiu.com/"], :root a[href^=3D=
+"http://www.upupoo.com"], :root div:not([id]):not([class]):not([style]) > d=
+iv:not([id]):not([class]):not([style]) > iframe[scrolling=3D"no"][src*=3D"/=
+/"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"]=
+:not([src^=3D"http://www.facebook.com/"]), :root div[style^=3D"width: 100%;=
+"][style$=3D"display: block;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=
+=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root =
+div[style^=3D"width: 100%;"][style$=3D"margin: 0px;"] iframe[scrolling=3D"n=
+o"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frame=
+border=3D"0"], :root div[style^=3D"width: 100%;"][style$=3D"opacity: 100;"]=
+ iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"=
+][width][height][frameborder=3D"0"], :root div[style^=3D"width: 100%;"][sty=
+le$=3D"overflow: hidden;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"=
+][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root div[st=
+yle^=3D"width: 100%;"][style$=3D"visibility: visible;"] iframe[scrolling=3D=
+"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][fra=
+meborder=3D"0"], :root #container > .item.title_normal, :root .heg > .partn=
+er-list, :root #container > .item.title_top, :root #container > .wrapper > =
+.fl, :root #container > a.block, :root #wrapper > div[style=3D"padding:3px;=
+"] > #pic, :root div[id][style=3D"width: 100%;"] > div > iframe[scrolling=
+=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height=
+][frameborder=3D"0"], :root div[style=3D"width: 100%;"]:not([id]):not([clas=
+s]) > iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=
+=3D"&"][width][height][frameborder=3D"0"], :root a[href*=3D".gotourls.bid"]=
+, :root a[href^=3D"http://yunbofangbt."], :root a[href^=3D"https://uds24.co=
+m/"] { display: none !important; }</style></head><body><aside class=3D"menu=
+ outside"><!-- CSS gurus requested--><a class=3D"toggle"><img src=3D"https:=
+//pug.bootcss.com/images/menu-tab.svg"></a><!-- nav placeholder--><nav clas=
+s=3D"nav nav-pills nav-stacked"><!--.advert--><a class=3D"nav-link">API</a>=
+<ul class=3D"nav nav-pills nav-stacked"><a class=3D"nav-link" href=3D"https=
+://pug.bootcss.com/api/getting-started.html">=E5=85=A5=E9=97=A8=E6=8C=87=E5=
+=8D=97</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/api/express=
+.html">=E4=B8=8E Express =E9=9B=86=E6=88=90</a><a class=3D"nav-link" href=
+=3D"https://pug.bootcss.com/api/reference.html">API =E5=8F=82=E8=80=83=E6=
+=96=87=E6=A1=A3</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/ap=
+i/migration-v2.html">=E8=BF=81=E7=A7=BB=E5=88=B0 Pug v2</a></ul><a class=3D=
+"nav-link">=E8=AF=AD=E6=B3=95</a><ul class=3D"nav nav-pills nav-stacked"><a=
+ class=3D"nav-link" href=3D"https://pug.bootcss.com/language/attributes.htm=
+l">=E5=B1=9E=E6=80=A7</a><a class=3D"nav-link" href=3D"https://pug.bootcss.=
+com/language/case.html">=E5=88=86=E6=94=AF=E6=9D=A1=E4=BB=B6</a><a class=3D=
+"nav-link" href=3D"https://pug.bootcss.com/language/code.html">=E4=BB=A3=E7=
+=A0=81</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/co=
+mments.html">=E6=B3=A8=E9=87=8A</a><a class=3D"nav-link" href=3D"https://pu=
+g.bootcss.com/language/conditionals.html">=E6=9D=A1=E4=BB=B6</a><a class=3D=
+"nav-link" href=3D"https://pug.bootcss.com/language/doctype.html">Doctype</=
+a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/filters.ht=
+ml">=E8=BF=87=E6=BB=A4=E5=99=A8</a><a class=3D"nav-link active" href=3D"htt=
+ps://pug.bootcss.com/language/includes.html">=E5=8C=85=E5=90=AB</a><a class=
+=3D"nav-link" href=3D"https://pug.bootcss.com/language/inheritance.html">=
+=E7=BB=A7=E6=89=BF=E4=B8=8E=E6=89=A9=E5=B1=95</a><a class=3D"nav-link" href=
+=3D"https://pug.bootcss.com/language/interpolation.html">=E5=B5=8C=E5=85=A5=
+</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/iteratio=
+n.html">=E8=BF=AD=E4=BB=A3</a><a class=3D"nav-link" href=3D"https://pug.boo=
+tcss.com/language/mixins.html">Mixin</a><a class=3D"nav-link" href=3D"https=
+://pug.bootcss.com/language/plain-text.html">=E7=BA=AF=E6=96=87=E6=9C=AC</a=
+><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/tags.html">=
+=E6=A0=87=E7=AD=BE</a></ul><!--.nav-link Sponsors--><!--  a.sponsor(href=3D=
+"https://icons8.com/icon")--><!--    img(src=3D"https://png.icons8.com/colo=
+r/icons8/100" width=3D"50" height=3D"50" alt=3D"Icons8, a free icon pack")-=
+-><!--    | Icons8--><!--  - for (var i =3D 0; i < 5; i++)--><!--    a.spon=
+sor(href=3D`https://opencollective.com/pug/sponsor/${i}/website` target=3D"=
+_blank")--><!--      img(src=3D`https://opencollective.com/pug/sponsor/${i}=
+/avatar.svg` height=3D"64")--></nav></aside><nav class=3D"navbar navbar-ful=
+l navbar-dark bg-primary"><div class=3D"container"><a class=3D"navbar-brand=
+" href=3D"https://pug.bootcss.com/">Pug =E4=B8=AD=E6=96=87=E6=96=87=E6=A1=
+=A3</a><ul class=3D"nav navbar-nav"><li class=3D"nav-item active"><a class=
+=3D"nav-link" href=3D"https://pug.bootcss.com/api/getting-started.html">=E6=
+=96=87=E6=A1=A3</a></li><li class=3D"nav-item"><a class=3D"nav-link" href=
+=3D"https://github.com/pugjs/pug">GitHub</a></li></ul></div></nav><div clas=
+s=3D"container"><nav class=3D"menu inside"><!-- nav placeholder--><nav clas=
+s=3D"nav nav-pills nav-stacked"><!--.advert--><a class=3D"nav-link">API</a>=
+<ul class=3D"nav nav-pills nav-stacked"><a class=3D"nav-link" href=3D"https=
+://pug.bootcss.com/api/getting-started.html">=E5=85=A5=E9=97=A8=E6=8C=87=E5=
+=8D=97</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/api/express=
+.html">=E4=B8=8E Express =E9=9B=86=E6=88=90</a><a class=3D"nav-link" href=
+=3D"https://pug.bootcss.com/api/reference.html">API =E5=8F=82=E8=80=83=E6=
+=96=87=E6=A1=A3</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/ap=
+i/migration-v2.html">=E8=BF=81=E7=A7=BB=E5=88=B0 Pug v2</a></ul><a class=3D=
+"nav-link">=E8=AF=AD=E6=B3=95</a><ul class=3D"nav nav-pills nav-stacked"><a=
+ class=3D"nav-link" href=3D"https://pug.bootcss.com/language/attributes.htm=
+l">=E5=B1=9E=E6=80=A7</a><a class=3D"nav-link" href=3D"https://pug.bootcss.=
+com/language/case.html">=E5=88=86=E6=94=AF=E6=9D=A1=E4=BB=B6</a><a class=3D=
+"nav-link" href=3D"https://pug.bootcss.com/language/code.html">=E4=BB=A3=E7=
+=A0=81</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/co=
+mments.html">=E6=B3=A8=E9=87=8A</a><a class=3D"nav-link" href=3D"https://pu=
+g.bootcss.com/language/conditionals.html">=E6=9D=A1=E4=BB=B6</a><a class=3D=
+"nav-link" href=3D"https://pug.bootcss.com/language/doctype.html">Doctype</=
+a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/filters.ht=
+ml">=E8=BF=87=E6=BB=A4=E5=99=A8</a><a class=3D"nav-link active" href=3D"htt=
+ps://pug.bootcss.com/language/includes.html">=E5=8C=85=E5=90=AB</a><a class=
+=3D"nav-link" href=3D"https://pug.bootcss.com/language/inheritance.html">=
+=E7=BB=A7=E6=89=BF=E4=B8=8E=E6=89=A9=E5=B1=95</a><a class=3D"nav-link" href=
+=3D"https://pug.bootcss.com/language/interpolation.html">=E5=B5=8C=E5=85=A5=
+</a><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/iteratio=
+n.html">=E8=BF=AD=E4=BB=A3</a><a class=3D"nav-link" href=3D"https://pug.boo=
+tcss.com/language/mixins.html">Mixin</a><a class=3D"nav-link" href=3D"https=
+://pug.bootcss.com/language/plain-text.html">=E7=BA=AF=E6=96=87=E6=9C=AC</a=
+><a class=3D"nav-link" href=3D"https://pug.bootcss.com/language/tags.html">=
+=E6=A0=87=E7=AD=BE</a></ul><!--.nav-link Sponsors--><!--  a.sponsor(href=3D=
+"https://icons8.com/icon")--><!--    img(src=3D"https://png.icons8.com/colo=
+r/icons8/100" width=3D"50" height=3D"50" alt=3D"Icons8, a free icon pack")-=
+-><!--    | Icons8--><!--  - for (var i =3D 0; i < 5; i++)--><!--    a.spon=
+sor(href=3D`https://opencollective.com/pug/sponsor/${i}/website` target=3D"=
+_blank")--><!--      img(src=3D`https://opencollective.com/pug/sponsor/${i}=
+/avatar.svg` height=3D"64")--></nav></nav><article class=3D"main"><h1>=E5=
+=8C=85=E5=90=AB Include</h1>
+<p>=E5=8C=85=E5=90=AB=EF=BC=88include=EF=BC=89=E5=8A=9F=E8=83=BD=E5=85=81=
+=E8=AE=B8=E6=82=A8=E6=8A=8A=E5=8F=A6=E5=A4=96=E7=9A=84=E6=96=87=E4=BB=B6=E5=
+=86=85=E5=AE=B9=E6=8F=92=E5=85=A5=E8=BF=9B=E6=9D=A5=E3=80=82</p>
+<div class=3D"preview-wrapper" data-control=3D"interactive" data-index=3D"0=
+"><div class=3D"row" data-reactroot=3D"" data-reactid=3D"1" data-react-chec=
+ksum=3D"-2051171330"><div class=3D"col-lg-6" data-reactid=3D"2"><div data-r=
+eactid=3D"3"><textarea data-reactid=3D"4" style=3D"display: none;">//- inde=
+x.pug
+doctype html
+html
+  include includes/head.pug
+  body
+    h1 =E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99
+    p =E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=E6=88=91=E8=BF=99=E7=AE=80=E9=99=
+=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=AE=80=E9=99=8B=E7=9A=84=E7=BD=91=
+=E7=AB=99=E3=80=82
+    include includes/foot.pug</textarea><div class=3D"CodeMirror cm-s-defau=
+lt"><div style=3D"overflow: hidden; position: relative; width: 3px; height:=
+ 0px; top: 8px; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D=
+"off" spellcheck=3D"false" style=3D"position: absolute; bottom: -1em; paddi=
+ng: 0px; width: 1000px; height: 1em; outline: none;" tabindex=3D"0"></texta=
+rea></div><div class=3D"CodeMirror-vscrollbar" cm-not-content=3D"true"><div=
+ style=3D"min-width: 1px; height: 0px;"></div></div><div class=3D"CodeMirro=
+r-hscrollbar" cm-not-content=3D"true"><div style=3D"height: 100%; min-heigh=
+t: 1px; width: 0px;"></div></div><div class=3D"CodeMirror-scrollbar-filler"=
+ cm-not-content=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-n=
+ot-content=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1">=
+<div class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: -=
+17px; border-right-width: 13px; min-height: 180px; min-width: 238.563px; pa=
+dding-right: 0px; padding-bottom: 0px;"><div style=3D"position: relative; t=
+op: 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation"><div role=
+=3D"presentation" style=3D"position: relative; outline: none;"><div class=
+=3D"CodeMirror-measure"></div><div class=3D"CodeMirror-measure"></div><div =
+style=3D"position: relative; z-index: 1;"></div><div class=3D"CodeMirror-cu=
+rsors"><div class=3D"CodeMirror-cursor" style=3D"left: 6px; top: 0px; heigh=
+t: 21px;">&nbsp;</div></div><div class=3D"CodeMirror-code" role=3D"presenta=
+tion" style=3D""><pre class=3D" CodeMirror-line " role=3D"presentation"><sp=
+an role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-=
+comment">//- index.pug</span></span></pre><pre class=3D" CodeMirror-line " =
+role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0=
+.1px;"><span class=3D"cm-meta">doctype html</span></span></pre><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;"><span class=3D"cm-tag">html</span></span></pr=
+e><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pres=
+entation" style=3D"padding-right: 0.1px;"><span class=3D"cm-indent">  </spa=
+n><span class=3D"cm-keyword">include</span><span class=3D"cm-string"> inclu=
+des/head.pug</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pr=
+esentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><sp=
+an class=3D"cm-indent">  </span><span class=3D"cm-tag">body</span></span></=
+pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pr=
+esentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-indent">    <=
+/span><span class=3D"cm-tag">h1</span><span class=3D"cm-string"> =E6=88=91=
+=E7=9A=84=E7=BD=91=E7=AB=99</span></span></pre><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;"><span class=3D"cm-indent">    </span><span class=3D"cm-tag">p</=
+span><span class=3D"cm-string"> =E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=E6=88=
+=91=E8=BF=99=E7=AE=80=E9=99=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=AE=80=
+=E9=99=8B=E7=9A=84=E7=BD=91=E7=AB=99=E3=80=82</span></span></pre><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;"><span class=3D"cm-indent">    </span><span cl=
+ass=3D"cm-keyword">include</span><span class=3D"cm-string"> includes/foot.p=
+ug</span></span></pre></div></div></div></div></div><div style=3D"position:=
+ absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; =
+top: 180px;"></div><div class=3D"CodeMirror-gutters" style=3D"display: none=
+; height: 193px;"></div></div></div></div><div data-reactid=3D"5"><textarea=
+ data-reactid=3D"6" style=3D"display: none;">//- includes/head.pug
+head
+  title =E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99
+  script(src=3D'/javascripts/jquery.js')
+  script(src=3D'/javascripts/app.js')</textarea><div class=3D"CodeMirror cm=
+-s-default"><div style=3D"overflow: hidden; position: relative; width: 3px;=
+ height: 0px; top: 8px; left: 8px;"><textarea autocorrect=3D"off" autocapit=
+alize=3D"off" spellcheck=3D"false" style=3D"position: absolute; bottom: -1e=
+m; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex=3D"0"=
+></textarea></div><div class=3D"CodeMirror-vscrollbar" cm-not-content=3D"tr=
+ue"><div style=3D"min-width: 1px; height: 0px;"></div></div><div class=3D"C=
+odeMirror-hscrollbar" cm-not-content=3D"true"><div style=3D"height: 100%; m=
+in-height: 1px; width: 0px;"></div></div><div class=3D"CodeMirror-scrollbar=
+-filler" cm-not-content=3D"true"></div><div class=3D"CodeMirror-gutter-fill=
+er" cm-not-content=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=
+=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-b=
+ottom: -17px; border-right-width: 13px; min-height: 117px; min-width: 309.7=
+97px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"position: rel=
+ative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation"><di=
+v role=3D"presentation" style=3D"position: relative; outline: none;"><div c=
+lass=3D"CodeMirror-measure"></div><div class=3D"CodeMirror-measure"></div><=
+div style=3D"position: relative; z-index: 1;"></div><div class=3D"CodeMirro=
+r-cursors"><div class=3D"CodeMirror-cursor" style=3D"left: 6px; top: 0px; h=
+eight: 21px;">&nbsp;</div></div><div class=3D"CodeMirror-code" role=3D"pres=
+entation" style=3D""><pre class=3D" CodeMirror-line " role=3D"presentation"=
+><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D=
+"cm-comment">//- includes/head.pug</span></span></pre><pre class=3D" CodeMi=
+rror-line " role=3D"presentation"><span role=3D"presentation" style=3D"padd=
+ing-right: 0.1px;"><span class=3D"cm-tag">head</span></span></pre><pre clas=
+s=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" s=
+tyle=3D"padding-right: 0.1px;"><span class=3D"cm-indent">  </span><span cla=
+ss=3D"cm-tag">title</span><span class=3D"cm-string"> =E6=88=91=E7=9A=84=E7=
+=BD=91=E7=AB=99</span></span></pre><pre class=3D" CodeMirror-line " role=3D=
+"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">=
+<span class=3D"cm-indent">  </span><span class=3D"cm-tag">script</span><spa=
+n class=3D"cm-punctuation">(</span><span class=3D"cm-attribute">src</span><=
+span class=3D"cm-operator">=3D</span><span class=3D"cm-string">'/javascript=
+s/jquery.js'</span><span class=3D"cm-punctuation">)</span></span></pre><pre=
+ class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentati=
+on" style=3D"padding-right: 0.1px;"><span class=3D"cm-indent">  </span><spa=
+n class=3D"cm-tag">script</span><span class=3D"cm-punctuation">(</span><spa=
+n class=3D"cm-attribute">src</span><span class=3D"cm-operator">=3D</span><s=
+pan class=3D"cm-string">'/javascripts/app.js'</span><span class=3D"cm-punct=
+uation">)</span></span></pre></div></div></div></div></div><div style=3D"po=
+sition: absolute; height: 13px; width: 1px; border-bottom: 0px solid transp=
+arent; top: 117px;"></div><div class=3D"CodeMirror-gutters" style=3D"displa=
+y: none; height: 130px;"></div></div></div></div><div data-reactid=3D"7"><t=
+extarea data-reactid=3D"8" style=3D"display: none;">//- includes/foot.pug
+footer#footer
+  p Copyright (c) foobar</textarea><div class=3D"CodeMirror cm-s-default"><=
+div style=3D"overflow: hidden; position: relative; width: 3px; height: 0px;=
+ top: 8px; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off"=
+ spellcheck=3D"false" style=3D"position: absolute; bottom: -1em; padding: 0=
+px; width: 1000px; height: 1em; outline: none;" tabindex=3D"0"></textarea><=
+/div><div class=3D"CodeMirror-vscrollbar" cm-not-content=3D"true"><div styl=
+e=3D"min-width: 1px; height: 0px;"></div></div><div class=3D"CodeMirror-hsc=
+rollbar" cm-not-content=3D"true"><div style=3D"height: 100%; min-height: 1p=
+x; width: 0px;"></div></div><div class=3D"CodeMirror-scrollbar-filler" cm-n=
+ot-content=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-co=
+ntent=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div =
+class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: -17px;=
+ border-right-width: 13px; min-height: 75px; min-width: 198.984px; padding-=
+right: 0px; padding-bottom: 0px;"><div style=3D"position: relative; top: 0p=
+x;"><div class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"pres=
+entation" style=3D"position: relative; outline: none;"><div class=3D"CodeMi=
+rror-measure"></div><div class=3D"CodeMirror-measure"></div><div style=3D"p=
+osition: relative; z-index: 1;"></div><div class=3D"CodeMirror-cursors"><di=
+v class=3D"CodeMirror-cursor" style=3D"left: 6px; top: 0px; height: 21px;">=
+&nbsp;</div></div><div class=3D"CodeMirror-code" role=3D"presentation"><pre=
+ class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentati=
+on" style=3D"padding-right: 0.1px;"><span class=3D"cm-comment">//- includes=
+/foot.pug</span></span></pre><pre class=3D" CodeMirror-line " role=3D"prese=
+ntation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span =
+class=3D"cm-tag">footer</span><span class=3D"cm-builtin">#footer</span></sp=
+an></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-indent"=
+>  </span><span class=3D"cm-tag">p</span><span class=3D"cm-string"> Copyrig=
+ht (c) foobar</span></span></pre></div></div></div></div></div><div style=
+=3D"position: absolute; height: 13px; width: 1px; border-bottom: 0px solid =
+transparent; top: 75px;"></div><div class=3D"CodeMirror-gutters" style=3D"d=
+isplay: none; height: 88px;"></div></div></div></div></div><div class=3D"co=
+l-lg-6" data-reactid=3D"9"><div data-reactid=3D"10"><textarea readonly=3D""=
+ data-reactid=3D"11" style=3D"display: none;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;=E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99&lt;/title&gt;
+  &lt;script src=3D"/javascripts/jquery.js"&gt;&lt;/script&gt;
+  &lt;script src=3D"/javascripts/app.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;=E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99&lt;/h1&gt;
+  &lt;p&gt;=E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=E6=88=91=E8=BF=99=E7=AE=80=
+=E9=99=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=AE=80=E9=99=8B=E7=9A=84=E7=
+=BD=91=E7=AB=99=E3=80=82&lt;/p&gt;
+  &lt;footer id=3D"footer"&gt;
+    &lt;p&gt;Copyright (c) foobar&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</textarea><div class=3D"CodeMirror cm-s-default"><div style=
+=3D"overflow: hidden; position: relative; width: 3px; height: 0px; top: 8px=
+; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off" spellche=
+ck=3D"false" style=3D"position: absolute; bottom: -1em; padding: 0px; width=
+: 1000px; height: 1em; outline: none;" tabindex=3D"0"></textarea></div><div=
+ class=3D"CodeMirror-vscrollbar" cm-not-content=3D"true"><div style=3D"min-=
+width: 1px; height: 0px;"></div></div><div class=3D"CodeMirror-hscrollbar" =
+cm-not-content=3D"true"><div style=3D"height: 100%; min-height: 1px; width:=
+ 0px;"></div></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-conten=
+t=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"=
+true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"=
+CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: -17px; border-r=
+ight-width: 13px; min-height: 390px; min-width: 388.953px; padding-right: 0=
+px; padding-bottom: 0px;"><div style=3D"position: relative; top: 0px;"><div=
+ class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"presentation=
+" style=3D"position: relative; outline: none;"><div class=3D"CodeMirror-mea=
+sure"><span><span>=E2=80=8B</span>x</span></div><div class=3D"CodeMirror-me=
+asure"></div><div style=3D"position: relative; z-index: 1;"></div><div clas=
+s=3D"CodeMirror-cursors"><div class=3D"CodeMirror-cursor" style=3D"left: 6p=
+x; top: 0px; height: 21px;">&nbsp;</div></div><div class=3D"CodeMirror-code=
+" role=3D"presentation" style=3D""><pre class=3D" CodeMirror-line " role=3D=
+"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">=
+<span class=3D"cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;"><span class=3D"cm-tag cm-bracket">&lt;</span>=
+<span class=3D"cm-tag">html</span><span class=3D"cm-tag cm-bracket">&gt;</s=
+pan></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><sp=
+an role=3D"presentation" style=3D"padding-right: 0.1px;"><span cm-text=3D""=
+>=E2=80=8B</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pres=
+entation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span=
+ class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">head</span><=
+span class=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre class=3D" Cod=
+eMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"p=
+adding-right: 0.1px;">  <span class=3D"cm-tag cm-bracket">&lt;</span><span =
+class=3D"cm-tag">title</span><span class=3D"cm-tag cm-bracket">&gt;</span>=
+=E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99<span class=3D"cm-tag cm-bracket">&lt;/=
+</span><span class=3D"cm-tag">title</span><span class=3D"cm-tag cm-bracket"=
+>&gt;</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentat=
+ion"><span role=3D"presentation" style=3D"padding-right: 0.1px;">  <span cl=
+ass=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">script</span> <=
+span class=3D"cm-attribute">src</span>=3D<span class=3D"cm-string">"/javasc=
+ripts/jquery.js"</span><span class=3D"cm-tag cm-bracket">&gt;&lt;/</span><s=
+pan class=3D"cm-tag">script</span><span class=3D"cm-tag cm-bracket">&gt;</s=
+pan></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><sp=
+an role=3D"presentation" style=3D"padding-right: 0.1px;">  <span class=3D"c=
+m-tag cm-bracket">&lt;</span><span class=3D"cm-tag">script</span> <span cla=
+ss=3D"cm-attribute">src</span>=3D<span class=3D"cm-string">"/javascripts/ap=
+p.js"</span><span class=3D"cm-tag cm-bracket">&gt;&lt;/</span><span class=
+=3D"cm-tag">script</span><span class=3D"cm-tag cm-bracket">&gt;</span></spa=
+n></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-tag cm-=
+bracket">&lt;/</span><span class=3D"cm-tag">head</span><span class=3D"cm-ta=
+g cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span cm-text=3D"">=E2=80=8B</span></span></pre><pre class=3D" CodeMirro=
+r-line " role=3D"presentation"><span role=3D"presentation" style=3D"padding=
+-right: 0.1px;"><span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D=
+"cm-tag">body</span><span class=3D"cm-tag cm-bracket">&gt;</span></span></p=
+re><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pre=
+sentation" style=3D"padding-right: 0.1px;">  <span class=3D"cm-tag cm-brack=
+et">&lt;</span><span class=3D"cm-tag">h1</span><span class=3D"cm-tag cm-bra=
+cket">&gt;</span>=E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99<span class=3D"cm-tag =
+cm-bracket">&lt;/</span><span class=3D"cm-tag">h1</span><span class=3D"cm-t=
+ag cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirror-line " rol=
+e=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1p=
+x;">  <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">p=
+</span><span class=3D"cm-tag cm-bracket">&gt;</span>=E6=AC=A2=E8=BF=8E=E6=
+=9D=A5=E5=88=B0=E6=88=91=E8=BF=99=E7=AE=80=E9=99=8B=E5=BE=97=E4=B8=8D=E8=83=
+=BD=E5=86=8D=E7=AE=80=E9=99=8B=E7=9A=84=E7=BD=91=E7=AB=99=E3=80=82<span cla=
+ss=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">p</span><span c=
+lass=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirro=
+r-line " role=3D"presentation"><span role=3D"presentation" style=3D"padding=
+-right: 0.1px;">  <span class=3D"cm-tag cm-bracket">&lt;</span><span class=
+=3D"cm-tag">footer</span> <span class=3D"cm-attribute">id</span>=3D<span cl=
+ass=3D"cm-string">"footer"</span><span class=3D"cm-tag cm-bracket">&gt;</sp=
+an></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><spa=
+n role=3D"presentation" style=3D"padding-right: 0.1px;">    <span class=3D"=
+cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">p</span><span class=3D=
+"cm-tag cm-bracket">&gt;</span>Copyright (c) foobar<span class=3D"cm-tag cm=
+-bracket">&lt;/</span><span class=3D"cm-tag">p</span><span class=3D"cm-tag =
+cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;">  <span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">f=
+ooter</span><span class=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre =
+class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentatio=
+n" style=3D"padding-right: 0.1px;"><span class=3D"cm-tag cm-bracket">&lt;/<=
+/span><span class=3D"cm-tag">body</span><span class=3D"cm-tag cm-bracket">&=
+gt;</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span cm-tex=
+t=3D"">=E2=80=8B</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">htm=
+l</span><span class=3D"cm-tag cm-bracket">&gt;</span></span></pre></div></d=
+iv></div></div></div><div style=3D"position: absolute; height: 13px; width:=
+ 1px; border-bottom: 0px solid transparent; top: 390px;"></div><div class=
+=3D"CodeMirror-gutters" style=3D"display: none; height: 403px;"></div></div=
+></div></div></div></div></div>
+<p>=E8=A2=AB=E5=8C=85=E5=90=AB=E7=9A=84=E6=96=87=E4=BB=B6=E7=9A=84=E8=B7=AF=
+=E5=BE=84=EF=BC=8C=E5=A6=82=E6=9E=9C=E6=98=AF=E4=B8=80=E4=B8=AA=E7=BB=9D=E5=
+=AF=B9=E8=B7=AF=E5=BE=84=EF=BC=88=E5=A6=82 <code>include /root.pug</code>=
+=EF=BC=89=EF=BC=8C=E9=82=A3=E4=B9=88=E5=89=8D=E9=9D=A2=E4=BC=9A=E5=8A=A0=E4=
+=B8=8A <code>options.basedir</code> =E9=80=89=E9=A1=B9=E5=B1=9E=E6=80=A7=E6=
+=9D=A5=E8=BF=9B=E8=A1=8C=E8=A7=A3=E6=9E=90=E3=80=82=E5=90=A6=E5=88=99=EF=BC=
+=8C=E8=B7=AF=E5=BE=84=E5=BA=94=E8=AF=A5=E7=9B=B8=E5=AF=B9=E4=BA=8E=E6=AD=A3=
+=E5=9C=A8=E8=A2=AB=E7=BC=96=E8=AF=91=E7=9A=84=E5=BD=93=E5=89=8D=E6=96=87=E4=
+=BB=B6=E3=80=82</p>
+<p>=E5=9C=A8 Pug v1 =E9=87=8C=EF=BC=8C=E5=A6=82=E6=9E=9C=E6=B2=A1=E6=9C=89=
+=E7=BB=99=E5=87=BA=E6=96=87=E4=BB=B6=E6=89=A9=E5=B1=95=E5=90=8D=EF=BC=8C=E4=
+=BC=9A=E8=87=AA=E5=8A=A8=E5=8A=A0=E4=B8=8A <code>.pug</code>=E3=80=82=E4=BD=
+=86=E6=98=AF=E8=BF=99=E4=B8=AA=E7=89=B9=E6=80=A7=E5=9C=A8 Pug v2 =E4=B8=AD<=
+em>=E8=BF=99=E6=98=AF=E4=B8=8D=E8=B5=9E=E6=88=90=E4=BD=BF=E7=94=A8=E7=9A=84=
+</em>=E3=80=82</p>
+<h2 id=3D"including-plain-text">=E5=8C=85=E5=90=AB=E7=BA=AF=E6=96=87=E6=9C=
+=AC <a class=3D"header-anchor" href=3D"https://pug.bootcss.com/language/inc=
+ludes.html#including-plain-text" aria-hidden=3D"true">=C2=B6</a></h2>
+<p>=E8=A2=AB=E5=8C=85=E5=90=AB=E7=9A=84=E5=A6=82=E6=9E=9C=E4=B8=8D=E6=98=AF=
+ Pug =E6=96=87=E4=BB=B6=EF=BC=8C=E9=82=A3=E4=B9=88=E5=B0=B1=E5=8F=AA=E4=BC=
+=9A=E5=BD=93=E4=BD=9C=E6=96=87=E6=9C=AC=E5=86=85=E5=AE=B9=E6=9D=A5=E5=BC=95=
+=E5=85=A5=E3=80=82</p>
+<div class=3D"preview-wrapper" data-control=3D"interactive" data-index=3D"1=
+"><div class=3D"row" data-reactroot=3D"" data-reactid=3D"1" data-react-chec=
+ksum=3D"1027859402"><div class=3D"col-lg-6" data-reactid=3D"2"><div data-re=
+actid=3D"3"><textarea data-reactid=3D"4" style=3D"display: none;">//- index=
+.pug
+doctype html
+html
+  head
+    style
+      include style.css
+  body
+    h1 =E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99
+    p =E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=E6=88=91=E8=BF=99=E7=AE=80=E9=99=
+=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=AE=80=E9=99=8B=E7=9A=84=E7=BD=91=
+=E7=AB=99=E3=80=82
+    script
+      include script.js</textarea><div class=3D"CodeMirror cm-s-default"><d=
+iv style=3D"overflow: hidden; position: relative; width: 3px; height: 0px; =
+top: 8px; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off" =
+spellcheck=3D"false" style=3D"position: absolute; bottom: -1em; padding: 0p=
+x; width: 1000px; height: 1em; outline: none;" tabindex=3D"0"></textarea></=
+div><div class=3D"CodeMirror-vscrollbar" cm-not-content=3D"true"><div style=
+=3D"min-width: 1px; height: 0px;"></div></div><div class=3D"CodeMirror-hscr=
+ollbar" cm-not-content=3D"true"><div style=3D"height: 100%; min-height: 1px=
+; width: 0px;"></div></div><div class=3D"CodeMirror-scrollbar-filler" cm-no=
+t-content=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-con=
+tent=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div c=
+lass=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: -17px; =
+border-right-width: 13px; min-height: 243px; min-width: 315.672px; padding-=
+right: 0px; padding-bottom: 0px;"><div style=3D"position: relative; top: 0p=
+x;"><div class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"pres=
+entation" style=3D"position: relative; outline: none;"><div class=3D"CodeMi=
+rror-measure"></div><div class=3D"CodeMirror-measure"></div><div style=3D"p=
+osition: relative; z-index: 1;"></div><div class=3D"CodeMirror-cursors"><di=
+v class=3D"CodeMirror-cursor" style=3D"left: 6px; top: 0px; height: 21px;">=
+&nbsp;</div></div><div class=3D"CodeMirror-code" role=3D"presentation" styl=
+e=3D""><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D=
+"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-comment">/=
+/- index.pug</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pr=
+esentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><sp=
+an class=3D"cm-meta">doctype html</span></span></pre><pre class=3D" CodeMir=
+ror-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddi=
+ng-right: 0.1px;"><span class=3D"cm-tag">html</span></span></pre><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;"><span class=3D"cm-indent">  </span><span clas=
+s=3D"cm-tag">head</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span class=3D"cm-indent">    </span><span class=3D"cm-tag">style</span>=
+</span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span r=
+ole=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-inde=
+nt">      </span><span class=3D"cm-keyword">include</span><span class=3D"cm=
+-string"> style.css</span></span></pre><pre class=3D" CodeMirror-line " rol=
+e=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1p=
+x;"><span class=3D"cm-indent">  </span><span class=3D"cm-tag">body</span></=
+span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span rol=
+e=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-indent=
+">    </span><span class=3D"cm-tag">h1</span><span class=3D"cm-string"> =E6=
+=88=91=E7=9A=84=E7=BD=91=E7=AB=99</span></span></pre><pre class=3D" CodeMir=
+ror-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddi=
+ng-right: 0.1px;"><span class=3D"cm-indent">    </span><span class=3D"cm-ta=
+g">p</span><span class=3D"cm-string"> =E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=
+=E6=88=91=E8=BF=99=E7=AE=80=E9=99=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=
+=AE=80=E9=99=8B=E7=9A=84=E7=BD=91=E7=AB=99=E3=80=82</span></span></pre><pre=
+ class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentati=
+on" style=3D"padding-right: 0.1px;"><span class=3D"cm-indent">    </span><s=
+pan class=3D"cm-tag">script</span></span></pre><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;"><span class=3D"cm-indent">      </span><span class=3D"cm-keywor=
+d">include</span><span class=3D"cm-string"> script.js</span></span></pre></=
+div></div></div></div></div><div style=3D"position: absolute; height: 13px;=
+ width: 1px; border-bottom: 0px solid transparent; top: 243px;"></div><div =
+class=3D"CodeMirror-gutters" style=3D"display: none; height: 256px;"></div>=
+</div></div></div><div data-reactid=3D"5"><textarea data-reactid=3D"6" styl=
+e=3D"display: none;">/* style.css */
+h1 {
+  color: red;
+}</textarea><div class=3D"CodeMirror cm-s-default"><div style=3D"overflow: =
+hidden; position: relative; width: 3px; height: 0px; top: 8px; left: 8px;">=
+<textarea autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"false" s=
+tyle=3D"position: absolute; bottom: -1em; padding: 0px; width: 1000px; heig=
+ht: 1em; outline: none;" tabindex=3D"0"></textarea></div><div class=3D"Code=
+Mirror-vscrollbar" cm-not-content=3D"true"><div style=3D"min-width: 1px; he=
+ight: 0px;"></div></div><div class=3D"CodeMirror-hscrollbar" cm-not-content=
+=3D"true"><div style=3D"height: 100%; min-height: 1px; width: 0px;"></div><=
+/div><div class=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"true"></d=
+iv><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"></div><d=
+iv class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-siz=
+er" style=3D"margin-left: 0px; margin-bottom: -17px; border-right-width: 13=
+px; min-height: 96px; min-width: 127.75px; padding-right: 0px; padding-bott=
+om: 0px;"><div style=3D"position: relative; top: 0px;"><div class=3D"CodeMi=
+rror-lines" role=3D"presentation"><div role=3D"presentation" style=3D"posit=
+ion: relative; outline: none;"><div class=3D"CodeMirror-measure"></div><div=
+ class=3D"CodeMirror-measure"></div><div style=3D"position: relative; z-ind=
+ex: 1;"></div><div class=3D"CodeMirror-cursors"><div class=3D"CodeMirror-cu=
+rsor" style=3D"left: 6px; top: 0px; height: 21px;">&nbsp;</div></div><div c=
+lass=3D"CodeMirror-code" role=3D"presentation"><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;"><span class=3D"cm-comment">/* style.css */</span></span></pre><=
+pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"present=
+ation" style=3D"padding-right: 0.1px;"><span class=3D"cm-tag">h1</span> {</=
+span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span rol=
+e=3D"presentation" style=3D"padding-right: 0.1px;">  <span class=3D"cm-prop=
+erty">color</span>: <span class=3D"cm-keyword">red</span>;</span></pre><pre=
+ class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentati=
+on" style=3D"padding-right: 0.1px;">}</span></pre></div></div></div></div><=
+/div><div style=3D"position: absolute; height: 13px; width: 1px; border-bot=
+tom: 0px solid transparent; top: 96px;"></div><div class=3D"CodeMirror-gutt=
+ers" style=3D"display: none; height: 109px;"></div></div></div></div><div d=
+ata-reactid=3D"7"><textarea data-reactid=3D"8" style=3D"display: none;">// =
+script.js
+console.log('=E7=9C=9F=E4=BA=86=E4=B8=8D=E8=B5=B7=EF=BC=81');</textarea><di=
+v class=3D"CodeMirror cm-s-default"><div style=3D"overflow: hidden; positio=
+n: relative; width: 3px; height: 0px; top: 8px; left: 8px;"><textarea autoc=
+orrect=3D"off" autocapitalize=3D"off" spellcheck=3D"false" style=3D"positio=
+n: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outlin=
+e: none;" tabindex=3D"0"></textarea></div><div class=3D"CodeMirror-vscrollb=
+ar" cm-not-content=3D"true"><div style=3D"min-width: 1px; height: 0px;"></d=
+iv></div><div class=3D"CodeMirror-hscrollbar" cm-not-content=3D"true"><div =
+style=3D"height: 100%; min-height: 1px; width: 0px;"></div></div><div class=
+=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"true"></div><div class=
+=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"></div><div class=3D"C=
+odeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"=
+margin-left: 0px; margin-bottom: -17px; border-right-width: 13px; min-heigh=
+t: 54px; min-width: 207.625px; padding-right: 0px; padding-bottom: 0px;"><d=
+iv style=3D"position: relative; top: 0px;"><div class=3D"CodeMirror-lines" =
+role=3D"presentation"><div role=3D"presentation" style=3D"position: relativ=
+e; outline: none;"><div class=3D"CodeMirror-measure"></div><div class=3D"Co=
+deMirror-measure"></div><div style=3D"position: relative; z-index: 1;"></di=
+v><div class=3D"CodeMirror-cursors"><div class=3D"CodeMirror-cursor" style=
+=3D"left: 6px; top: 0px; height: 21px;">&nbsp;</div></div><div class=3D"Cod=
+eMirror-code" role=3D"presentation"><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span class=3D"cm-comment">// script.js</span></span></pre><pre class=3D=
+" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" style=
+=3D"padding-right: 0.1px;"><span class=3D"cm-variable">console</span>.<span=
+ class=3D"cm-property">log</span>(<span class=3D"cm-string">'=E7=9C=9F=E4=
+=BA=86=E4=B8=8D=E8=B5=B7=EF=BC=81'</span>);</span></pre></div></div></div><=
+/div></div><div style=3D"position: absolute; height: 13px; width: 1px; bord=
+er-bottom: 0px solid transparent; top: 54px;"></div><div class=3D"CodeMirro=
+r-gutters" style=3D"display: none; height: 67px;"></div></div></div></div><=
+/div><div class=3D"col-lg-6" data-reactid=3D"9"><div data-reactid=3D"10"><t=
+extarea readonly=3D"" data-reactid=3D"11" style=3D"display: none;">&lt;!DOC=
+TYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;style&gt;
+    /* style.css */
+
+    h1 {
+      color: red;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;=E6=88=91=E7=9A=84=E7=BD=91=E7=AB=99&lt;/h1&gt;
+  &lt;p&gt;=E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=E6=88=91=E8=BF=99=E7=AE=80=
+=E9=99=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=AE=80=E9=99=8B=E7=9A=84=E7=
+=BD=91=E7=AB=99=E3=80=82&lt;/p&gt;
+  &lt;script&gt;
+    // script.js
+    console.log('=E7=9C=9F=E4=BA=86=E4=B8=8D=E8=B5=B7=EF=BC=81');
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</textarea><div class=3D"CodeMirror cm-s-default"><div style=
+=3D"overflow: hidden; position: relative; width: 3px; height: 0px; top: 8px=
+; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off" spellche=
+ck=3D"false" style=3D"position: absolute; bottom: -1em; padding: 0px; width=
+: 1000px; height: 1em; outline: none;" tabindex=3D"0"></textarea></div><div=
+ class=3D"CodeMirror-vscrollbar" cm-not-content=3D"true"><div style=3D"min-=
+width: 1px; height: 0px;"></div></div><div class=3D"CodeMirror-hscrollbar" =
+cm-not-content=3D"true"><div style=3D"height: 100%; min-height: 1px; width:=
+ 0px;"></div></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-conten=
+t=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"=
+true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"=
+CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: -17px; border-r=
+ight-width: 13px; min-height: 495px; min-width: 339.375px; padding-right: 0=
+px; padding-bottom: 0px;"><div style=3D"position: relative; top: 0px;"><div=
+ class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"presentation=
+" style=3D"position: relative; outline: none;"><div class=3D"CodeMirror-mea=
+sure"></div><div class=3D"CodeMirror-measure"></div><div style=3D"position:=
+ relative; z-index: 1;"></div><div class=3D"CodeMirror-cursors"><div class=
+=3D"CodeMirror-cursor" style=3D"left: 6px; top: 0px; height: 21px;">&nbsp;<=
+/div></div><div class=3D"CodeMirror-code" role=3D"presentation" style=3D"">=
+<pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presen=
+tation" style=3D"padding-right: 0.1px;"><span class=3D"cm-meta">&lt;!DOCTYP=
+E html&gt;</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pres=
+entation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span=
+ class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">html</span><=
+span class=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre class=3D" Cod=
+eMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"p=
+adding-right: 0.1px;"><span cm-text=3D"">=E2=80=8B</span></span></pre><pre =
+class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentatio=
+n" style=3D"padding-right: 0.1px;"><span class=3D"cm-tag cm-bracket">&lt;</=
+span><span class=3D"cm-tag">head</span><span class=3D"cm-tag cm-bracket">&g=
+t;</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation=
+"><span role=3D"presentation" style=3D"padding-right: 0.1px;">  <span class=
+=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">style</span><span =
+class=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirr=
+or-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddin=
+g-right: 0.1px;">    <span class=3D"cm-comment">/* style.css */</span></spa=
+n></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span cm-text=3D"">=E2=80=
+=8B</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;">    <span cl=
+ass=3D"cm-tag">h1</span> {</span></pre><pre class=3D" CodeMirror-line " rol=
+e=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1p=
+x;">      <span class=3D"cm-property">color</span>: <span class=3D"cm-keywo=
+rd">red</span>;</span></pre><pre class=3D" CodeMirror-line " role=3D"presen=
+tation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">    }</=
+span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span rol=
+e=3D"presentation" style=3D"padding-right: 0.1px;">  <span class=3D"cm-tag =
+cm-bracket">&lt;/</span><span class=3D"cm-tag">style</span><span class=3D"c=
+m-tag cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirror-line " =
+role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0=
+.1px;"><span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag"=
+>head</span><span class=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre =
+class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentatio=
+n" style=3D"padding-right: 0.1px;"><span cm-text=3D"">=E2=80=8B</span></spa=
+n></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-tag cm-=
+bracket">&lt;</span><span class=3D"cm-tag">body</span><span class=3D"cm-tag=
+ cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;">  <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">h1=
+</span><span class=3D"cm-tag cm-bracket">&gt;</span>=E6=88=91=E7=9A=84=E7=
+=BD=91=E7=AB=99<span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D=
+"cm-tag">h1</span><span class=3D"cm-tag cm-bracket">&gt;</span></span></pre=
+><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"prese=
+ntation" style=3D"padding-right: 0.1px;">  <span class=3D"cm-tag cm-bracket=
+">&lt;</span><span class=3D"cm-tag">p</span><span class=3D"cm-tag cm-bracke=
+t">&gt;</span>=E6=AC=A2=E8=BF=8E=E6=9D=A5=E5=88=B0=E6=88=91=E8=BF=99=E7=AE=
+=80=E9=99=8B=E5=BE=97=E4=B8=8D=E8=83=BD=E5=86=8D=E7=AE=80=E9=99=8B=E7=9A=84=
+=E7=BD=91=E7=AB=99=E3=80=82<span class=3D"cm-tag cm-bracket">&lt;/</span><s=
+pan class=3D"cm-tag">p</span><span class=3D"cm-tag cm-bracket">&gt;</span><=
+/span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span ro=
+le=3D"presentation" style=3D"padding-right: 0.1px;">  <span class=3D"cm-tag=
+ cm-bracket">&lt;</span><span class=3D"cm-tag">script</span><span class=3D"=
+cm-tag cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMirror-line "=
+ role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: =
+0.1px;">    <span class=3D"cm-comment">// script.js</span></span></pre><pre=
+ class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentati=
+on" style=3D"padding-right: 0.1px;">    <span class=3D"cm-variable">console=
+</span>.<span class=3D"cm-property">log</span>(<span class=3D"cm-string">'=
+=E7=9C=9F=E4=BA=86=E4=B8=8D=E8=B5=B7=EF=BC=81'</span>);</span></pre><pre cl=
+ass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation"=
+ style=3D"padding-right: 0.1px;">  <span class=3D"cm-tag cm-bracket">&lt;/<=
+/span><span class=3D"cm-tag">script</span><span class=3D"cm-tag cm-bracket"=
+>&gt;</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentat=
+ion"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span clas=
+s=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">body</span><span=
+ class=3D"cm-tag cm-bracket">&gt;</span></span></pre><pre class=3D" CodeMir=
+ror-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddi=
+ng-right: 0.1px;"><span cm-text=3D"">=E2=80=8B</span></span></pre><pre clas=
+s=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" s=
+tyle=3D"padding-right: 0.1px;"><span class=3D"cm-tag cm-bracket">&lt;/</spa=
+n><span class=3D"cm-tag">html</span><span class=3D"cm-tag cm-bracket">&gt;<=
+/span></span></pre></div></div></div></div></div><div style=3D"position: ab=
+solute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top=
+: 495px;"></div><div class=3D"CodeMirror-gutters" style=3D"display: none; h=
+eight: 508px;"></div></div></div></div></div></div></div>
+<h2 id=3D"including-filtered-text">=E4=BD=BF=E7=94=A8=E8=BF=87=E6=BB=A4=E5=
+=99=A8=E5=8C=85=E5=90=AB=E6=96=87=E6=9C=AC <a class=3D"header-anchor" href=
+=3D"https://pug.bootcss.com/language/includes.html#including-filtered-text"=
+ aria-hidden=3D"true">=C2=B6</a></h2>
+<p>=E6=82=A8=E5=8F=AF=E4=BB=A5=E5=90=88=E5=B9=B6=E8=BF=87=E6=BB=A4=E5=99=A8=
+=E5=92=8C=E5=8C=85=E5=90=AB=E8=AF=AD=E5=8F=A5=EF=BC=8C=E4=BB=8E=E8=80=8C=E5=
+=81=9A=E5=88=B0=E5=BC=95=E5=85=A5=E6=96=87=E4=BB=B6=E5=86=85=E5=AE=B9=E5=B9=
+=B6=E7=9B=B4=E6=8E=A5=E7=94=A8=E8=BF=87=E6=BB=A4=E5=99=A8=E5=A4=84=E7=90=86=
+=E5=AE=83=E4=BB=AC=E3=80=82</p>
+<div><div class=3D"row"><div class=3D"col-lg-6"><pre class=3D"cm-s-default"=
+><code><span class=3D"cm-comment">//- index.pug</span>
+<span class=3D"cm-meta">doctype html</span>
+<span class=3D"cm-tag">html</span>
+<span class=3D"cm-indent">  </span><span class=3D"cm-tag">head</span>
+<span class=3D"cm-indent">    </span><span class=3D"cm-tag">title</span><sp=
+an class=3D"cm-string"> =E4=B8=80=E7=AF=87=E6=96=87=E7=AB=A0</span>
+<span class=3D"cm-indent">  </span><span class=3D"cm-tag">body</span>
+<span class=3D"cm-indent">    </span><span class=3D"cm-keyword">include</sp=
+an><span class=3D"cm-string">:markdown-it article.md</span></code></pre><pr=
+e class=3D"cm-s-default"><code><span class=3D"cm-header cm-header-1"># </sp=
+an><span class=3D"cm-header cm-header-1">article.md</span>
+
+=E8=BF=99=E6=98=AF=E4=B8=80=E7=AF=87=E7=94=A8 Markdown =E5=86=99=E7=9A=84=
+=E6=96=87=E7=AB=A0=E3=80=82</code></pre></div><div class=3D"col-lg-6"><pre =
+class=3D"cm-s-default"><code><span class=3D"cm-meta">&lt;!DOCTYPE html&gt;<=
+/span>
+<span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">html</s=
+pan><span class=3D"cm-tag cm-bracket">&gt;</span>
+  <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">head<=
+/span><span class=3D"cm-tag cm-bracket">&gt;</span>
+    <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">tit=
+le</span><span class=3D"cm-tag cm-bracket">&gt;</span>=E4=B8=80=E7=AF=87=E6=
+=96=87=E7=AB=A0<span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D=
+"cm-tag">title</span><span class=3D"cm-tag cm-bracket">&gt;</span>
+  <span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">head=
+</span><span class=3D"cm-tag cm-bracket">&gt;</span>
+  <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">body<=
+/span><span class=3D"cm-tag cm-bracket">&gt;</span>
+    <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">h1<=
+/span><span class=3D"cm-tag cm-bracket">&gt;</span>article.md<span class=3D=
+"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">h1</span><span class=
+=3D"cm-tag cm-bracket">&gt;</span>
+    <span class=3D"cm-tag cm-bracket">&lt;</span><span class=3D"cm-tag">p</=
+span><span class=3D"cm-tag cm-bracket">&gt;</span>=E8=BF=99=E6=98=AF=E4=B8=
+=80=E7=AF=87=E7=94=A8 Markdown =E5=86=99=E7=9A=84=E6=96=87=E7=AB=A0=E3=80=
+=82<span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">p</=
+span><span class=3D"cm-tag cm-bracket">&gt;</span>
+  <span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">body=
+</span><span class=3D"cm-tag cm-bracket">&gt;</span>
+<span class=3D"cm-tag cm-bracket">&lt;/</span><span class=3D"cm-tag">html</=
+span><span class=3D"cm-tag cm-bracket">&gt;</span></code></pre></div></div>=
+</div>
+</article></div></body></html>
+------MultipartBoundary--P13IqhZjQpXSPDALlwNcuYBZm7TwugNSPLt9Zffqig----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.bootcss.com/css?family=Arvo:400,400italic,700,700italic|PT+Sans:400,400italic,700,700italic
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--P13IqhZjQpXSPDALlwNcuYBZm7TwugNSPLt9Zffqig----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pug.bootcss.com/css/style.css
+
+@charset "utf-8";
+
+.CodeMirror { font-family: monospace; height: 300px; color: rgb(0, 0, 0); d=
+irection: ltr; }
+
+.CodeMirror-lines { padding: 4px 0px; }
+
+.CodeMirror pre { padding: 0px 4px; }
+
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color:=
+ rgb(255, 255, 255); }
+
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); backgroun=
+d-color: rgb(247, 247, 247); white-space: nowrap; }
+
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; min-width: 20px; text-al=
+ign: right; color: rgb(153, 153, 153); white-space: nowrap; }
+
+.CodeMirror-guttermarker { color: rgb(0, 0, 0); }
+
+.CodeMirror-guttermarker-subtle { color: rgb(153, 153, 153); }
+
+.CodeMirror-cursor { border-left: 1px solid rgb(0, 0, 0); border-right: non=
+e; width: 0px; }
+
+.CodeMirror div.CodeMirror-secondarycursor { border-left: 1px solid silver;=
+ }
+
+.cm-fat-cursor .CodeMirror-cursor { width: auto; background: rgb(119, 238, =
+119); border: 0px !important; }
+
+.cm-fat-cursor div.CodeMirror-cursors { z-index: 1; }
+
+.cm-fat-cursor-mark { background-color: rgba(20, 255, 20, 0.5); animation: =
+blink 1.06s steps(1, end) 0s infinite normal none running; }
+
+.cm-animate-fat-cursor { width: auto; border: 0px; animation: blink 1.06s s=
+teps(1, end) 0s infinite normal none running; background-color: rgb(119, 23=
+8, 119); }
+
+@-webkit-keyframes blink {=20
+  50% { background-color: transparent; }
+}
+
+@keyframes blink {=20
+  50% { background-color: transparent; }
+}
+
+.cm-tab { display: inline-block; text-decoration: inherit; }
+
+.CodeMirror-rulers { position: absolute; left: 0px; right: 0px; top: -50px;=
+ bottom: -20px; overflow: hidden; }
+
+.CodeMirror-ruler { border-left: 1px solid rgb(204, 204, 204); top: 0px; bo=
+ttom: 0px; position: absolute; }
+
+.cm-s-default .cm-header { color: rgb(0, 0, 255); }
+
+.cm-s-default .cm-quote { color: rgb(0, 153, 0); }
+
+.cm-negative { color: rgb(221, 68, 68); }
+
+.cm-positive { color: rgb(34, 153, 34); }
+
+.cm-header, .cm-strong { font-weight: 700; }
+
+.cm-em { font-style: italic; }
+
+.cm-link { text-decoration: underline; }
+
+.cm-strikethrough { text-decoration: line-through; }
+
+.cm-s-default .cm-keyword { color: rgb(119, 0, 136); }
+
+.cm-s-default .cm-atom { color: rgb(34, 17, 153); }
+
+.cm-s-default .cm-number { color: rgb(17, 102, 68); }
+
+.cm-s-default .cm-def { color: rgb(0, 0, 255); }
+
+.cm-s-default .cm-variable-2 { color: rgb(0, 85, 170); }
+
+.cm-s-default .cm-type, .cm-s-default .cm-variable-3 { color: rgb(0, 136, 8=
+5); }
+
+.cm-s-default .cm-comment { color: rgb(170, 85, 0); }
+
+.cm-s-default .cm-string { color: rgb(170, 17, 17); }
+
+.cm-s-default .cm-string-2 { color: rgb(255, 85, 0); }
+
+.cm-s-default .cm-meta { color: rgb(85, 85, 85); }
+
+.cm-s-default .cm-qualifier { color: rgb(85, 85, 85); }
+
+.cm-s-default .cm-builtin { color: rgb(51, 0, 170); }
+
+.cm-s-default .cm-bracket { color: rgb(153, 153, 119); }
+
+.cm-s-default .cm-tag { color: rgb(17, 119, 0); }
+
+.cm-s-default .cm-attribute { color: rgb(0, 0, 204); }
+
+.cm-s-default .cm-hr { color: rgb(153, 153, 153); }
+
+.cm-s-default .cm-link { color: rgb(0, 0, 204); }
+
+.cm-s-default .cm-error { color: red; }
+
+.cm-invalidchar { color: red; }
+
+.CodeMirror-composing { border-bottom: 2px solid; }
+
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 187, 0); }
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(170, 34, 34)=
+; }
+
+.CodeMirror-matchingtag { background: rgba(255, 150, 0, 0.3); }
+
+.CodeMirror-activeline-background { background: rgb(232, 242, 255); }
+
+.CodeMirror { position: relative; overflow: hidden; background: rgb(255, 25=
+5, 255); }
+
+.CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bot=
+tom: 30px; height: 100%; outline: 0px; position: relative; overflow: scroll=
+ !important; }
+
+.CodeMirror-sizer { position: relative; border-right: 30px solid transparen=
+t; }
+
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-fi=
+ller, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: non=
+e; }
+
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden scroll; }
+
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: scroll hidden; }
+
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; min-height: =
+100%; z-index: 3; }
+
+.CodeMirror-gutter { white-space: normal; height: 100%; display: inline-blo=
+ck; vertical-align: top; margin-bottom: -30px; }
+
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0p=
+x 0px !important; border: none !important; }
+
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; =
+z-index: 4; }
+
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+
+.CodeMirror-gutter-wrapper ::selection { background-color: transparent; }
+
+.CodeMirror-lines { cursor: text; min-height: 1px; }
+
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0p=
+x; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre;=
+ overflow-wrap: normal; line-height: inherit; color: inherit; z-index: 2; p=
+osition: relative; overflow: visible; -webkit-tap-highlight-color: transpar=
+ent; font-variant-ligatures: contextual; }
+
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; wo=
+rd-break: normal; }
+
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top=
+: 0px; bottom: 0px; z-index: 0; }
+
+.CodeMirror-linewidget { position: relative; z-index: 2; padding: 0.1px; }
+
+.CodeMirror-rtl pre { direction: rtl; }
+
+.CodeMirror-code { outline: 0px; }
+
+.CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber, .CodeMirro=
+r-scroll, .CodeMirror-sizer { box-sizing: content-box; }
+
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflo=
+w: hidden; visibility: hidden; }
+
+.CodeMirror-cursor { position: absolute; pointer-events: none; }
+
+.CodeMirror-measure pre { position: static; }
+
+div.CodeMirror-cursors { visibility: hidden; position: relative; z-index: 3=
+; }
+
+div.CodeMirror-dragcursors { visibility: visible; }
+
+.CodeMirror-focused div.CodeMirror-cursors { visibility: visible; }
+
+.CodeMirror-selected { background: rgb(217, 217, 217); }
+
+.CodeMirror-focused .CodeMirror-selected { background: rgb(215, 212, 240); =
+}
+
+.CodeMirror-crosshair { cursor: crosshair; }
+
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirro=
+r-line > span > span::selection { background: rgb(215, 212, 240); }
+
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+
+.cm-force-border { padding-right: 0.1px; }
+
+@media print {
+  .CodeMirror div.CodeMirror-cursors { visibility: hidden; }
+}
+
+.cm-tab-wrap-hack::after { content: ""; }
+
+span.CodeMirror-selectedtext { background: 0px 0px; }
+
+body { margin: 0px; }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, na=
+v, section, summary { display: block; }
+
+audio, canvas, progress, video { display: inline-block; }
+
+audio:not([controls]) { display: none; height: 0px; }
+
+progress { vertical-align: baseline; }
+
+[hidden], template { display: none; }
+
+a { background-color: transparent; }
+
+a:active, a:hover { outline-width: 0px; }
+
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+b, strong { font-weight: inherit; }
+
+b, strong { font-weight: bolder; }
+
+dfn { font-style: italic; }
+
+h1 { font-size: 2em; margin: 0.67em 0px; }
+
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
+gn: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+img { border-style: none; }
+
+svg:not(:root) { overflow: hidden; }
+
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+figure { margin: 1em 40px; }
+
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+
+button, input, optgroup, select, textarea { font: inherit; margin: 0px; }
+
+optgroup { font-weight: 700; }
+
+button, input { overflow: visible; }
+
+button, select { text-transform: none; }
+
+[type=3D"reset"], [type=3D"submit"], button, html [type=3D"button"] { -webk=
+it-appearance: button; }
+
+fieldset { border: 1px solid silver; margin: 0px 2px; padding: 0.35em 0.625=
+em 0.75em; }
+
+legend { box-sizing: border-box; color: inherit; display: table; max-width:=
+ 100%; padding: 0px; white-space: normal; }
+
+textarea { overflow: auto; }
+
+[type=3D"checkbox"], [type=3D"radio"] { box-sizing: border-box; padding: 0p=
+x; }
+
+[type=3D"number"]::-webkit-inner-spin-button, [type=3D"number"]::-webkit-ou=
+ter-spin-button { height: auto; }
+
+[type=3D"search"] { -webkit-appearance: textfield; outline-offset: -2px; }
+
+[type=3D"search"]::-webkit-search-cancel-button, [type=3D"search"]::-webkit=
+-search-decoration { -webkit-appearance: none; }
+
+::-webkit-input-placeholder { color: inherit; opacity: 0.54; }
+
+::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
+
+html { box-sizing: border-box; }
+
+*, ::after, ::before { box-sizing: inherit; }
+
+html { font-size: 16px; -webkit-tap-highlight-color: transparent; }
+
+body { font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI=
+", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 1rem; line-heigh=
+t: 1.5; color: rgb(55, 58, 60); background-color: rgb(255, 255, 255); }
+
+[tabindex=3D"-1"]:focus { outline: 0px !important; }
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0.5rem; }
+
+p { margin-top: 0px; margin-bottom: 1rem; }
+
+abbr[data-original-title], abbr[title] { cursor: help; border-bottom: 1px d=
+otted rgb(129, 138, 145); }
+
+address { margin-bottom: 1rem; font-style: normal; line-height: inherit; }
+
+dl, ol, ul { margin-top: 0px; margin-bottom: 1rem; }
+
+ol ol, ol ul, ul ol, ul ul { margin-bottom: 0px; }
+
+dt { font-weight: 700; }
+
+dd { margin-bottom: 0.5rem; margin-left: 0px; }
+
+blockquote { margin: 0px 0px 1rem; }
+
+a { color: rgb(168, 100, 84); text-decoration: none; }
+
+a:focus, a:hover { color: rgb(117, 70, 59); text-decoration: underline; }
+
+a:focus { outline: -webkit-focus-ring-color auto 5px; outline-offset: -2px;=
+ }
+
+a:not([href]):not([tabindex]) { color: inherit; text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover { =
+color: inherit; text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus { outline: 0px; }
+
+pre { margin-top: 0px; margin-bottom: 1rem; overflow: auto; }
+
+figure { margin: 0px 0px 1rem; }
+
+img { vertical-align: middle; }
+
+[role=3D"button"] { cursor: pointer; }
+
+[role=3D"button"], a, area, button, input, label, select, summary, textarea=
+ { touch-action: manipulation; }
+
+table { border-collapse: collapse; background-color: transparent; }
+
+caption { padding-top: 0.75rem; padding-bottom: 0.75rem; color: rgb(129, 13=
+8, 145); text-align: left; caption-side: bottom; }
+
+th { text-align: left; }
+
+label { display: inline-block; margin-bottom: 0.5rem; }
+
+button:focus { outline: -webkit-focus-ring-color auto 5px; }
+
+button, input, select, textarea { line-height: inherit; }
+
+input[type=3D"checkbox"]:disabled, input[type=3D"radio"]:disabled { cursor:=
+ not-allowed; }
+
+input[type=3D"date"], input[type=3D"datetime-local"], input[type=3D"month"]=
+, input[type=3D"time"] { -webkit-appearance: listbox; }
+
+textarea { resize: vertical; }
+
+fieldset { min-width: 0px; padding: 0px; margin: 0px; border: 0px; }
+
+legend { display: block; width: 100%; padding: 0px; margin-bottom: 0.5rem; =
+font-size: 1.5rem; line-height: inherit; }
+
+input[type=3D"search"] { -webkit-appearance: none; }
+
+output { display: inline-block; }
+
+[hidden] { display: none !important; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { margin-bottom: 1rem;=
+ font-family: Arvo, Georgia, "Times New Roman", Times, serif; font-weight: =
+700; line-height: 1.1; color: inherit; }
+
+.h1, h1 { font-size: 2.5rem; }
+
+.h2, h2 { font-size: 2rem; }
+
+.h3, h3 { font-size: 1.75rem; }
+
+.h4, h4 { font-size: 1.5rem; }
+
+.h5, h5 { font-size: 1.25rem; }
+
+.h6, h6 { font-size: 1rem; }
+
+.lead { font-size: 1.25rem; font-weight: 300; }
+
+.display-1 { font-size: 6rem; font-weight: 300; }
+
+.display-2 { font-size: 5.5rem; font-weight: 300; }
+
+.display-3 { font-size: 4.5rem; font-weight: 300; }
+
+.display-4 { font-size: 3.5rem; font-weight: 300; }
+
+hr { margin-top: 1rem; margin-bottom: 1rem; border-width: 1px 0px 0px; bord=
+er-right-style: initial; border-bottom-style: initial; border-left-style: i=
+nitial; border-right-color: initial; border-bottom-color: initial; border-l=
+eft-color: initial; border-image: initial; border-top-style: solid; border-=
+top-color: rgba(0, 0, 0, 0.1); }
+
+.small, small { font-size: 80%; font-weight: 400; }
+
+.mark, mark { padding: 0.2em; background-color: rgb(252, 248, 227); }
+
+.list-unstyled { padding-left: 0px; list-style: none; }
+
+.list-inline { padding-left: 0px; list-style: none; }
+
+.list-inline-item { display: inline-block; }
+
+.list-inline-item:not(:last-child) { margin-right: 5px; }
+
+.initialism { font-size: 90%; text-transform: uppercase; }
+
+.blockquote { padding: 0.5rem 1rem; margin-bottom: 1rem; font-size: 1.25rem=
+; border-left: 0.25rem solid rgb(236, 238, 239); }
+
+.blockquote-footer { display: block; font-size: 80%; color: rgb(129, 138, 1=
+45); }
+
+.blockquote-footer::before { content: "=E2=80=94=C2=A0"; }
+
+.blockquote-reverse { padding-right: 1rem; padding-left: 0px; text-align: r=
+ight; border-right: 0.25rem solid rgb(236, 238, 239); border-left: 0px; }
+
+.blockquote-reverse .blockquote-footer::before { content: ""; }
+
+.blockquote-reverse .blockquote-footer::after { content: "=C2=A0=E2=80=94";=
+ }
+
+dl.row > dd + dt { clear: left; }
+
+code, kbd, pre, samp { font-family: Menlo, Monaco, Consolas, "Roboto Mono",=
+ "Ubuntu Mono", "DejaVu Sans Mono", "Courier New", monospace; }
+
+code { padding: 0.2rem 0.4rem; font-size: 90%; color: rgb(189, 65, 71); bac=
+kground-color: rgb(247, 247, 249); border-radius: 0.25rem; }
+
+kbd { padding: 0.2rem 0.4rem; font-size: 90%; color: rgb(255, 255, 255); ba=
+ckground-color: rgb(51, 51, 51); border-radius: 0.2rem; }
+
+kbd kbd { padding: 0px; font-size: 100%; font-weight: 700; }
+
+pre { display: block; margin-top: 0px; margin-bottom: 1rem; font-size: 90%;=
+ color: rgb(55, 58, 60); }
+
+pre code { padding: 0px; font-size: inherit; color: inherit; background-col=
+or: transparent; border-radius: 0px; }
+
+.pre-scrollable { max-height: 340px; overflow-y: scroll; }
+
+.container { margin-left: auto; margin-right: auto; padding-left: 15px; pad=
+ding-right: 15px; }
+
+.container::after { content: ""; display: table; clear: both; }
+
+@media (min-width: 544px) {
+  .container { width: 576px; max-width: 100%; }
+}
+
+@media (min-width: 768px) {
+  .container { width: 720px; max-width: 100%; }
+}
+
+@media (min-width: 992px) {
+  .container { width: 940px; max-width: 100%; }
+}
+
+@media (min-width: 1200px) {
+  .container { width: 1140px; max-width: 100%; }
+}
+
+.container-fluid { margin-left: auto; margin-right: auto; padding-left: 15p=
+x; padding-right: 15px; }
+
+.container-fluid::after { content: ""; display: table; clear: both; }
+
+.row { margin-right: -15px; margin-left: -15px; }
+
+.row::after { content: ""; display: table; clear: both; }
+
+@media (min-width: 544px) {
+  .row { margin-right: -15px; margin-left: -15px; }
+}
+
+@media (min-width: 768px) {
+  .row { margin-right: -15px; margin-left: -15px; }
+}
+
+@media (min-width: 992px) {
+  .row { margin-right: -15px; margin-left: -15px; }
+}
+
+@media (min-width: 1200px) {
+  .row { margin-right: -15px; margin-left: -15px; }
+}
+
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-=
+3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-m=
+d, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .co=
+l-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm, .co=
+l-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4=
+, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl, .col-xl-1=
+, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col=
+-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs, .col-xs-1, .col=
+-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5,=
+ .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { position: relative; min-heigh=
+t: 1px; padding-right: 15px; padding-left: 15px; }
+
+@media (min-width: 544px) {
+  .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-l=
+g-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col=
+-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .=
+col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm, .=
+col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm=
+-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl, .col-xl=
+-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .c=
+ol-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs, .col-xs-1, .c=
+ol-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-=
+5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { padding-right: 15px; paddin=
+g-left: 15px; }
+}
+
+@media (min-width: 768px) {
+  .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-l=
+g-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col=
+-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .=
+col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm, .=
+col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm=
+-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl, .col-xl=
+-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .c=
+ol-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs, .col-xs-1, .c=
+ol-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-=
+5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { padding-right: 15px; paddin=
+g-left: 15px; }
+}
+
+@media (min-width: 992px) {
+  .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-l=
+g-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col=
+-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .=
+col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm, .=
+col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm=
+-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl, .col-xl=
+-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .c=
+ol-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs, .col-xs-1, .c=
+ol-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-=
+5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { padding-right: 15px; paddin=
+g-left: 15px; }
+}
+
+@media (min-width: 1200px) {
+  .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-l=
+g-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col=
+-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .=
+col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm, .=
+col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm=
+-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xl, .col-xl=
+-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .c=
+ol-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xs, .col-xs-1, .c=
+ol-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-=
+5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 { padding-right: 15px; paddin=
+g-left: 15px; }
+}
+
+.col-xs-1 { float: left; width: 8.33333%; }
+
+.col-xs-2 { float: left; width: 16.6667%; }
+
+.col-xs-3 { float: left; width: 25%; }
+
+.col-xs-4 { float: left; width: 33.3333%; }
+
+.col-xs-5 { float: left; width: 41.6667%; }
+
+.col-xs-6 { float: left; width: 50%; }
+
+.col-xs-7 { float: left; width: 58.3333%; }
+
+.col-xs-8 { float: left; width: 66.6667%; }
+
+.col-xs-9 { float: left; width: 75%; }
+
+.col-xs-10 { float: left; width: 83.3333%; }
+
+.col-xs-11 { float: left; width: 91.6667%; }
+
+.col-xs-12 { float: left; width: 100%; }
+
+.pull-xs-0 { right: auto; }
+
+.pull-xs-1 { right: 8.33333%; }
+
+.pull-xs-2 { right: 16.6667%; }
+
+.pull-xs-3 { right: 25%; }
+
+.pull-xs-4 { right: 33.3333%; }
+
+.pull-xs-5 { right: 41.6667%; }
+
+.pull-xs-6 { right: 50%; }
+
+.pull-xs-7 { right: 58.3333%; }
+
+.pull-xs-8 { right: 66.6667%; }
+
+.pull-xs-9 { right: 75%; }
+
+.pull-xs-10 { right: 83.3333%; }
+
+.pull-xs-11 { right: 91.6667%; }
+
+.pull-xs-12 { right: 100%; }
+
+.push-xs-0 { left: auto; }
+
+.push-xs-1 { left: 8.33333%; }
+
+.push-xs-2 { left: 16.6667%; }
+
+.push-xs-3 { left: 25%; }
+
+.push-xs-4 { left: 33.3333%; }
+
+.push-xs-5 { left: 41.6667%; }
+
+.push-xs-6 { left: 50%; }
+
+.push-xs-7 { left: 58.3333%; }
+
+.push-xs-8 { left: 66.6667%; }
+
+.push-xs-9 { left: 75%; }
+
+.push-xs-10 { left: 83.3333%; }
+
+.push-xs-11 { left: 91.6667%; }
+
+.push-xs-12 { left: 100%; }
+
+.offset-xs-1 { margin-left: 8.33333%; }
+
+.offset-xs-2 { margin-left: 16.6667%; }
+
+.offset-xs-3 { margin-left: 25%; }
+
+.offset-xs-4 { margin-left: 33.3333%; }
+
+.offset-xs-5 { margin-left: 41.6667%; }
+
+.offset-xs-6 { margin-left: 50%; }
+
+.offset-xs-7 { margin-left: 58.3333%; }
+
+.offset-xs-8 { margin-left: 66.6667%; }
+
+.offset-xs-9 { margin-left: 75%; }
+
+.offset-xs-10 { margin-left: 83.3333%; }
+
+.offset-xs-11 { margin-left: 91.6667%; }
+
+@media (min-width: 544px) {
+  .col-sm-1 { float: left; width: 8.33333%; }
+  .col-sm-2 { float: left; width: 16.6667%; }
+  .col-sm-3 { float: left; width: 25%; }
+  .col-sm-4 { float: left; width: 33.3333%; }
+  .col-sm-5 { float: left; width: 41.6667%; }
+  .col-sm-6 { float: left; width: 50%; }
+  .col-sm-7 { float: left; width: 58.3333%; }
+  .col-sm-8 { float: left; width: 66.6667%; }
+  .col-sm-9 { float: left; width: 75%; }
+  .col-sm-10 { float: left; width: 83.3333%; }
+  .col-sm-11 { float: left; width: 91.6667%; }
+  .col-sm-12 { float: left; width: 100%; }
+  .pull-sm-0 { right: auto; }
+  .pull-sm-1 { right: 8.33333%; }
+  .pull-sm-2 { right: 16.6667%; }
+  .pull-sm-3 { right: 25%; }
+  .pull-sm-4 { right: 33.3333%; }
+  .pull-sm-5 { right: 41.6667%; }
+  .pull-sm-6 { right: 50%; }
+  .pull-sm-7 { right: 58.3333%; }
+  .pull-sm-8 { right: 66.6667%; }
+  .pull-sm-9 { right: 75%; }
+  .pull-sm-10 { right: 83.3333%; }
+  .pull-sm-11 { right: 91.6667%; }
+  .pull-sm-12 { right: 100%; }
+  .push-sm-0 { left: auto; }
+  .push-sm-1 { left: 8.33333%; }
+  .push-sm-2 { left: 16.6667%; }
+  .push-sm-3 { left: 25%; }
+  .push-sm-4 { left: 33.3333%; }
+  .push-sm-5 { left: 41.6667%; }
+  .push-sm-6 { left: 50%; }
+  .push-sm-7 { left: 58.3333%; }
+  .push-sm-8 { left: 66.6667%; }
+  .push-sm-9 { left: 75%; }
+  .push-sm-10 { left: 83.3333%; }
+  .push-sm-11 { left: 91.6667%; }
+  .push-sm-12 { left: 100%; }
+  .offset-sm-0 { margin-left: 0px; }
+  .offset-sm-1 { margin-left: 8.33333%; }
+  .offset-sm-2 { margin-left: 16.6667%; }
+  .offset-sm-3 { margin-left: 25%; }
+  .offset-sm-4 { margin-left: 33.3333%; }
+  .offset-sm-5 { margin-left: 41.6667%; }
+  .offset-sm-6 { margin-left: 50%; }
+  .offset-sm-7 { margin-left: 58.3333%; }
+  .offset-sm-8 { margin-left: 66.6667%; }
+  .offset-sm-9 { margin-left: 75%; }
+  .offset-sm-10 { margin-left: 83.3333%; }
+  .offset-sm-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 768px) {
+  .col-md-1 { float: left; width: 8.33333%; }
+  .col-md-2 { float: left; width: 16.6667%; }
+  .col-md-3 { float: left; width: 25%; }
+  .col-md-4 { float: left; width: 33.3333%; }
+  .col-md-5 { float: left; width: 41.6667%; }
+  .col-md-6 { float: left; width: 50%; }
+  .col-md-7 { float: left; width: 58.3333%; }
+  .col-md-8 { float: left; width: 66.6667%; }
+  .col-md-9 { float: left; width: 75%; }
+  .col-md-10 { float: left; width: 83.3333%; }
+  .col-md-11 { float: left; width: 91.6667%; }
+  .col-md-12 { float: left; width: 100%; }
+  .pull-md-0 { right: auto; }
+  .pull-md-1 { right: 8.33333%; }
+  .pull-md-2 { right: 16.6667%; }
+  .pull-md-3 { right: 25%; }
+  .pull-md-4 { right: 33.3333%; }
+  .pull-md-5 { right: 41.6667%; }
+  .pull-md-6 { right: 50%; }
+  .pull-md-7 { right: 58.3333%; }
+  .pull-md-8 { right: 66.6667%; }
+  .pull-md-9 { right: 75%; }
+  .pull-md-10 { right: 83.3333%; }
+  .pull-md-11 { right: 91.6667%; }
+  .pull-md-12 { right: 100%; }
+  .push-md-0 { left: auto; }
+  .push-md-1 { left: 8.33333%; }
+  .push-md-2 { left: 16.6667%; }
+  .push-md-3 { left: 25%; }
+  .push-md-4 { left: 33.3333%; }
+  .push-md-5 { left: 41.6667%; }
+  .push-md-6 { left: 50%; }
+  .push-md-7 { left: 58.3333%; }
+  .push-md-8 { left: 66.6667%; }
+  .push-md-9 { left: 75%; }
+  .push-md-10 { left: 83.3333%; }
+  .push-md-11 { left: 91.6667%; }
+  .push-md-12 { left: 100%; }
+  .offset-md-0 { margin-left: 0px; }
+  .offset-md-1 { margin-left: 8.33333%; }
+  .offset-md-2 { margin-left: 16.6667%; }
+  .offset-md-3 { margin-left: 25%; }
+  .offset-md-4 { margin-left: 33.3333%; }
+  .offset-md-5 { margin-left: 41.6667%; }
+  .offset-md-6 { margin-left: 50%; }
+  .offset-md-7 { margin-left: 58.3333%; }
+  .offset-md-8 { margin-left: 66.6667%; }
+  .offset-md-9 { margin-left: 75%; }
+  .offset-md-10 { margin-left: 83.3333%; }
+  .offset-md-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 992px) {
+  .col-lg-1 { float: left; width: 8.33333%; }
+  .col-lg-2 { float: left; width: 16.6667%; }
+  .col-lg-3 { float: left; width: 25%; }
+  .col-lg-4 { float: left; width: 33.3333%; }
+  .col-lg-5 { float: left; width: 41.6667%; }
+  .col-lg-6 { float: left; width: 50%; }
+  .col-lg-7 { float: left; width: 58.3333%; }
+  .col-lg-8 { float: left; width: 66.6667%; }
+  .col-lg-9 { float: left; width: 75%; }
+  .col-lg-10 { float: left; width: 83.3333%; }
+  .col-lg-11 { float: left; width: 91.6667%; }
+  .col-lg-12 { float: left; width: 100%; }
+  .pull-lg-0 { right: auto; }
+  .pull-lg-1 { right: 8.33333%; }
+  .pull-lg-2 { right: 16.6667%; }
+  .pull-lg-3 { right: 25%; }
+  .pull-lg-4 { right: 33.3333%; }
+  .pull-lg-5 { right: 41.6667%; }
+  .pull-lg-6 { right: 50%; }
+  .pull-lg-7 { right: 58.3333%; }
+  .pull-lg-8 { right: 66.6667%; }
+  .pull-lg-9 { right: 75%; }
+  .pull-lg-10 { right: 83.3333%; }
+  .pull-lg-11 { right: 91.6667%; }
+  .pull-lg-12 { right: 100%; }
+  .push-lg-0 { left: auto; }
+  .push-lg-1 { left: 8.33333%; }
+  .push-lg-2 { left: 16.6667%; }
+  .push-lg-3 { left: 25%; }
+  .push-lg-4 { left: 33.3333%; }
+  .push-lg-5 { left: 41.6667%; }
+  .push-lg-6 { left: 50%; }
+  .push-lg-7 { left: 58.3333%; }
+  .push-lg-8 { left: 66.6667%; }
+  .push-lg-9 { left: 75%; }
+  .push-lg-10 { left: 83.3333%; }
+  .push-lg-11 { left: 91.6667%; }
+  .push-lg-12 { left: 100%; }
+  .offset-lg-0 { margin-left: 0px; }
+  .offset-lg-1 { margin-left: 8.33333%; }
+  .offset-lg-2 { margin-left: 16.6667%; }
+  .offset-lg-3 { margin-left: 25%; }
+  .offset-lg-4 { margin-left: 33.3333%; }
+  .offset-lg-5 { margin-left: 41.6667%; }
+  .offset-lg-6 { margin-left: 50%; }
+  .offset-lg-7 { margin-left: 58.3333%; }
+  .offset-lg-8 { margin-left: 66.6667%; }
+  .offset-lg-9 { margin-left: 75%; }
+  .offset-lg-10 { margin-left: 83.3333%; }
+  .offset-lg-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-1 { float: left; width: 8.33333%; }
+  .col-xl-2 { float: left; width: 16.6667%; }
+  .col-xl-3 { float: left; width: 25%; }
+  .col-xl-4 { float: left; width: 33.3333%; }
+  .col-xl-5 { float: left; width: 41.6667%; }
+  .col-xl-6 { float: left; width: 50%; }
+  .col-xl-7 { float: left; width: 58.3333%; }
+  .col-xl-8 { float: left; width: 66.6667%; }
+  .col-xl-9 { float: left; width: 75%; }
+  .col-xl-10 { float: left; width: 83.3333%; }
+  .col-xl-11 { float: left; width: 91.6667%; }
+  .col-xl-12 { float: left; width: 100%; }
+  .pull-xl-0 { right: auto; }
+  .pull-xl-1 { right: 8.33333%; }
+  .pull-xl-2 { right: 16.6667%; }
+  .pull-xl-3 { right: 25%; }
+  .pull-xl-4 { right: 33.3333%; }
+  .pull-xl-5 { right: 41.6667%; }
+  .pull-xl-6 { right: 50%; }
+  .pull-xl-7 { right: 58.3333%; }
+  .pull-xl-8 { right: 66.6667%; }
+  .pull-xl-9 { right: 75%; }
+  .pull-xl-10 { right: 83.3333%; }
+  .pull-xl-11 { right: 91.6667%; }
+  .pull-xl-12 { right: 100%; }
+  .push-xl-0 { left: auto; }
+  .push-xl-1 { left: 8.33333%; }
+  .push-xl-2 { left: 16.6667%; }
+  .push-xl-3 { left: 25%; }
+  .push-xl-4 { left: 33.3333%; }
+  .push-xl-5 { left: 41.6667%; }
+  .push-xl-6 { left: 50%; }
+  .push-xl-7 { left: 58.3333%; }
+  .push-xl-8 { left: 66.6667%; }
+  .push-xl-9 { left: 75%; }
+  .push-xl-10 { left: 83.3333%; }
+  .push-xl-11 { left: 91.6667%; }
+  .push-xl-12 { left: 100%; }
+  .offset-xl-0 { margin-left: 0px; }
+  .offset-xl-1 { margin-left: 8.33333%; }
+  .offset-xl-2 { margin-left: 16.6667%; }
+  .offset-xl-3 { margin-left: 25%; }
+  .offset-xl-4 { margin-left: 33.3333%; }
+  .offset-xl-5 { margin-left: 41.6667%; }
+  .offset-xl-6 { margin-left: 50%; }
+  .offset-xl-7 { margin-left: 58.3333%; }
+  .offset-xl-8 { margin-left: 66.6667%; }
+  .offset-xl-9 { margin-left: 75%; }
+  .offset-xl-10 { margin-left: 83.3333%; }
+  .offset-xl-11 { margin-left: 91.6667%; }
+}
+
+.nav { padding-left: 0px; margin-bottom: 0px; list-style: none; }
+
+.nav-link { display: inline-block; }
+
+.nav-link:focus, .nav-link:hover { text-decoration: none; }
+
+.nav-link.disabled { color: rgb(129, 138, 145); }
+
+.nav-link.disabled, .nav-link.disabled:focus, .nav-link.disabled:hover { co=
+lor: rgb(129, 138, 145); cursor: not-allowed; background-color: transparent=
+; }
+
+.nav-inline .nav-item { display: inline-block; }
+
+.nav-inline .nav-item + .nav-item, .nav-inline .nav-link + .nav-link { marg=
+in-left: 1rem; }
+
+.nav-tabs { border-bottom: 1px solid rgb(221, 221, 221); }
+
+.nav-tabs::after { content: ""; display: table; clear: both; }
+
+.nav-tabs .nav-item { float: left; margin-bottom: -1px; }
+
+.nav-tabs .nav-item + .nav-item { margin-left: 0.2rem; }
+
+.nav-tabs .nav-link { display: block; padding: 0.5em 1em; border: 1px solid=
+ transparent; border-top-right-radius: 0.25rem; border-top-left-radius: 0.2=
+5rem; }
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover { border-color: rgb(23=
+6, 238, 239) rgb(236, 238, 239) rgb(221, 221, 221); }
+
+.nav-tabs .nav-link.disabled, .nav-tabs .nav-link.disabled:focus, .nav-tabs=
+ .nav-link.disabled:hover { color: rgb(129, 138, 145); background-color: tr=
+ansparent; border-color: transparent; }
+
+.nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focu=
+s, .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active, .n=
+av-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover { color: r=
+gb(85, 89, 92); background-color: rgb(255, 255, 255); border-color: rgb(221=
+, 221, 221) rgb(221, 221, 221) transparent; }
+
+.nav-tabs .dropdown-menu { margin-top: -1px; border-top-right-radius: 0px; =
+border-top-left-radius: 0px; }
+
+.nav-pills::after { content: ""; display: table; clear: both; }
+
+.nav-pills .nav-item { float: left; }
+
+.nav-pills .nav-item + .nav-item { margin-left: 0.2rem; }
+
+.nav-pills .nav-link { display: block; padding: 0.5em 1em; border-radius: 0=
+.25rem; }
+
+.nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link:fo=
+cus, .nav-pills .nav-item.open .nav-link:hover, .nav-pills .nav-link.active=
+, .nav-pills .nav-link.active:focus, .nav-pills .nav-link.active:hover { co=
+lor: rgb(255, 255, 255); cursor: default; background-color: rgb(168, 100, 8=
+4); }
+
+.nav-stacked .nav-item { display: block; float: none; }
+
+.nav-stacked .nav-item + .nav-item { margin-top: 0.2rem; margin-left: 0px; =
+}
+
+.tab-content > .tab-pane { display: none; }
+
+.tab-content > .active { display: block; }
+
+.navbar { position: relative; padding: 0.5rem 1rem; }
+
+.navbar::after { content: ""; display: table; clear: both; }
+
+@media (min-width: 544px) {
+  .navbar { border-radius: 0.25rem; }
+}
+
+.navbar-full { z-index: 1000; }
+
+@media (min-width: 544px) {
+  .navbar-full { border-radius: 0px; }
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top { position: fixed; right: 0px; left=
+: 0px; z-index: 1030; }
+
+@media (min-width: 544px) {
+  .navbar-fixed-bottom, .navbar-fixed-top { border-radius: 0px; }
+}
+
+.navbar-fixed-top { top: 0px; }
+
+.navbar-fixed-bottom { bottom: 0px; }
+
+.navbar-sticky-top { position: sticky; top: 0px; z-index: 1030; width: 100%=
+; }
+
+@media (min-width: 544px) {
+  .navbar-sticky-top { border-radius: 0px; }
+}
+
+.navbar-brand { float: left; padding-top: 0.25rem; padding-bottom: 0.25rem;=
+ margin-right: 1rem; font-size: 1.25rem; line-height: inherit; }
+
+.navbar-brand:focus, .navbar-brand:hover { text-decoration: none; }
+
+.navbar-divider { float: left; width: 1px; padding-top: 0.425rem; padding-b=
+ottom: 0.425rem; margin-right: 1rem; margin-left: 1rem; overflow: hidden; }
+
+.navbar-divider::before { content: "=C2=A0"; }
+
+.navbar-text { display: inline-block; padding-top: 0.425rem; padding-bottom=
+: 0.425rem; }
+
+.navbar-toggler { width: 2.5em; height: 2em; padding: 0.5rem 0.75rem; font-=
+size: 1.25rem; line-height: 1; background: center center / 24px 24px no-rep=
+eat transparent; border: 1px solid transparent; border-radius: 0.25rem; }
+
+.navbar-toggler:focus, .navbar-toggler:hover { text-decoration: none; }
+
+.navbar-toggleable-xs::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 543px) {
+  .navbar-toggleable-xs .navbar-brand { display: block; float: none; margin=
+-top: 0.5rem; margin-right: 0px; }
+  .navbar-toggleable-xs .navbar-nav { margin-top: 0.5rem; margin-bottom: 0.=
+5rem; }
+  .navbar-toggleable-xs .navbar-nav .dropdown-menu { position: static; floa=
+t: none; }
+}
+
+@media (min-width: 544px) {
+  .navbar-toggleable-xs { display: block; }
+}
+
+.navbar-toggleable-sm::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 767px) {
+  .navbar-toggleable-sm .navbar-brand { display: block; float: none; margin=
+-top: 0.5rem; margin-right: 0px; }
+  .navbar-toggleable-sm .navbar-nav { margin-top: 0.5rem; margin-bottom: 0.=
+5rem; }
+  .navbar-toggleable-sm .navbar-nav .dropdown-menu { position: static; floa=
+t: none; }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggleable-sm { display: block; }
+}
+
+.navbar-toggleable-md::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 991px) {
+  .navbar-toggleable-md .navbar-brand { display: block; float: none; margin=
+-top: 0.5rem; margin-right: 0px; }
+  .navbar-toggleable-md .navbar-nav { margin-top: 0.5rem; margin-bottom: 0.=
+5rem; }
+  .navbar-toggleable-md .navbar-nav .dropdown-menu { position: static; floa=
+t: none; }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggleable-md { display: block; }
+}
+
+.navbar-toggleable-lg::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 1199px) {
+  .navbar-toggleable-lg .navbar-brand { display: block; float: none; margin=
+-top: 0.5rem; margin-right: 0px; }
+  .navbar-toggleable-lg .navbar-nav { margin-top: 0.5rem; margin-bottom: 0.=
+5rem; }
+  .navbar-toggleable-lg .navbar-nav .dropdown-menu { position: static; floa=
+t: none; }
+}
+
+@media (min-width: 1200px) {
+  .navbar-toggleable-lg { display: block; }
+}
+
+.navbar-toggleable-xl { display: block; }
+
+.navbar-toggleable-xl::after { content: ""; display: table; clear: both; }
+
+.navbar-toggleable-xl .navbar-brand { display: block; float: none; margin-t=
+op: 0.5rem; margin-right: 0px; }
+
+.navbar-toggleable-xl .navbar-nav { margin-top: 0.5rem; margin-bottom: 0.5r=
+em; }
+
+.navbar-toggleable-xl .navbar-nav .dropdown-menu { position: static; float:=
+ none; }
+
+.navbar-nav .nav-item { float: left; }
+
+.navbar-nav .nav-link { display: block; padding-top: 0.425rem; padding-bott=
+om: 0.425rem; }
+
+.navbar-nav .nav-link + .nav-link { margin-left: 1rem; }
+
+.navbar-nav .nav-item + .nav-item { margin-left: 1rem; }
+
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler { color: rgba(0,=
+ 0, 0, 0.8); }
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover, .navb=
+ar-light .navbar-toggler:focus, .navbar-light .navbar-toggler:hover { color=
+: rgba(0, 0, 0, 0.8); }
+
+.navbar-light .navbar-nav .nav-link { color: rgba(0, 0, 0, 0.3); }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-l=
+ink:hover { color: rgba(0, 0, 0, 0.6); }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .a=
+ctive > .nav-link:focus, .navbar-light .navbar-nav .active > .nav-link:hove=
+r, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .n=
+av-link.active:focus, .navbar-light .navbar-nav .nav-link.active:hover, .na=
+vbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.=
+open:focus, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .=
+navbar-nav .open > .nav-link, .navbar-light .navbar-nav .open > .nav-link:f=
+ocus, .navbar-light .navbar-nav .open > .nav-link:hover { color: rgba(0, 0,=
+ 0, 0.8); }
+
+.navbar-light .navbar-toggler { background-image: url("data:image/svg+xml;c=
+harset=3Dutf8,%3Csvg viewBox=3D'0 0 32 32' xmlns=3D'http://www.w3.org/2000/=
+svg'%3E%3Cpath stroke=3D'rgba(0, 0, 0, 0.3)' stroke-width=3D'2' stroke-line=
+cap=3D'round' stroke-miterlimit=3D'10' d=3D'M4 8h24M4 16h24M4 24h24'/%3E%3C=
+/svg%3E"); border-color: rgba(0, 0, 0, 0.1); }
+
+.navbar-light .navbar-divider { background-color: rgba(0, 0, 0, 0.075); }
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-toggler { color: rgb(255, =
+255, 255); }
+
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover, .navbar=
+-dark .navbar-toggler:focus, .navbar-dark .navbar-toggler:hover { color: rg=
+b(255, 255, 255); }
+
+.navbar-dark .navbar-nav .nav-link { color: rgba(255, 255, 255, 0.5); }
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-lin=
+k:hover { color: rgba(255, 255, 255, 0.75); }
+
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .act=
+ive > .nav-link:focus, .navbar-dark .navbar-nav .active > .nav-link:hover, =
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-li=
+nk.active:focus, .navbar-dark .navbar-nav .nav-link.active:hover, .navbar-d=
+ark .navbar-nav .nav-link.open, .navbar-dark .navbar-nav .nav-link.open:foc=
+us, .navbar-dark .navbar-nav .nav-link.open:hover, .navbar-dark .navbar-nav=
+ .open > .nav-link, .navbar-dark .navbar-nav .open > .nav-link:focus, .navb=
+ar-dark .navbar-nav .open > .nav-link:hover { color: rgb(255, 255, 255); }
+
+.navbar-dark .navbar-toggler { background-image: url("data:image/svg+xml;ch=
+arset=3Dutf8,%3Csvg viewBox=3D'0 0 32 32' xmlns=3D'http://www.w3.org/2000/s=
+vg'%3E%3Cpath stroke=3D'rgba(255, 255, 255, 0.5)' stroke-width=3D'2' stroke=
+-linecap=3D'round' stroke-miterlimit=3D'10' d=3D'M4 8h24M4 16h24M4 24h24'/%=
+3E%3C/svg%3E"); border-color: rgba(255, 255, 255, 0.1); }
+
+.navbar-dark .navbar-divider { background-color: rgba(255, 255, 255, 0.075)=
+; }
+
+.navbar-toggleable-xs::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 543px) {
+  .navbar-toggleable-xs .navbar-nav .nav-item { float: none; margin-left: 0=
+px; }
+}
+
+@media (min-width: 544px) {
+  .navbar-toggleable-xs { display: block !important; }
+}
+
+.navbar-toggleable-sm::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 767px) {
+  .navbar-toggleable-sm .navbar-nav .nav-item { float: none; margin-left: 0=
+px; }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggleable-sm { display: block !important; }
+}
+
+.navbar-toggleable-md::after { content: ""; display: table; clear: both; }
+
+@media (max-width: 991px) {
+  .navbar-toggleable-md .navbar-nav .nav-item { float: none; margin-left: 0=
+px; }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggleable-md { display: block !important; }
+}
+
+.alert { padding: 0.75rem 1.25rem; margin-bottom: 1rem; border: 1px solid t=
+ransparent; border-radius: 0.25rem; }
+
+.alert-heading { color: inherit; }
+
+.alert-link { font-weight: 700; }
+
+.alert-dismissible { padding-right: 2.5rem; }
+
+.alert-dismissible .close { position: relative; top: -0.125rem; right: -1.2=
+5rem; color: inherit; }
+
+.alert-success { background-color: rgb(223, 240, 216); border-color: rgb(20=
+8, 233, 198); color: rgb(60, 118, 61); }
+
+.alert-success hr { border-top-color: rgb(193, 226, 179); }
+
+.alert-success .alert-link { color: rgb(43, 84, 44); }
+
+.alert-info { background-color: rgb(217, 237, 247); border-color: rgb(188, =
+223, 241); color: rgb(49, 112, 143); }
+
+.alert-info hr { border-top-color: rgb(166, 213, 236); }
+
+.alert-info .alert-link { color: rgb(36, 82, 105); }
+
+.alert-warning { background-color: rgb(252, 248, 227); border-color: rgb(25=
+0, 242, 204); color: rgb(138, 109, 59); }
+
+.alert-warning hr { border-top-color: rgb(247, 236, 181); }
+
+.alert-warning .alert-link { color: rgb(102, 81, 44); }
+
+.alert-danger { background-color: rgb(242, 222, 222); border-color: rgb(235=
+, 204, 204); color: rgb(169, 68, 66); }
+
+.alert-danger hr { border-top-color: rgb(228, 185, 185); }
+
+.alert-danger .alert-link { color: rgb(132, 53, 52); }
+
+.bg-faded { background-color: rgb(247, 247, 249); }
+
+.bg-primary { background-color: rgb(168, 100, 84) !important; }
+
+a.bg-primary:focus, a.bg-primary:hover { background-color: rgb(134, 80, 67)=
+ !important; }
+
+.bg-success { background-color: rgb(92, 184, 92) !important; }
+
+a.bg-success:focus, a.bg-success:hover { background-color: rgb(68, 157, 68)=
+ !important; }
+
+.bg-info { background-color: rgb(91, 192, 222) !important; }
+
+a.bg-info:focus, a.bg-info:hover { background-color: rgb(49, 176, 213) !imp=
+ortant; }
+
+.bg-warning { background-color: rgb(240, 173, 78) !important; }
+
+a.bg-warning:focus, a.bg-warning:hover { background-color: rgb(236, 151, 31=
+) !important; }
+
+.bg-danger { background-color: rgb(217, 83, 79) !important; }
+
+a.bg-danger:focus, a.bg-danger:hover { background-color: rgb(201, 48, 44) !=
+important; }
+
+.bg-inverse { background-color: rgb(55, 58, 60) !important; }
+
+a.bg-inverse:focus, a.bg-inverse:hover { background-color: rgb(31, 32, 33) =
+!important; }
+
+.container { margin-left: auto; margin-right: auto; padding-left: 15px; pad=
+ding-right: 15px; }
+
+.container::after { content: ""; display: table; clear: both; }
+
+@media (min-width: 544px) {
+  .container { width: 576px; max-width: 100%; }
+}
+
+@media (min-width: 768px) {
+  .container { width: 720px; max-width: 100%; }
+}
+
+@media (min-width: 992px) {
+  .container { width: 940px; max-width: 100%; }
+}
+
+@media (min-width: 1200px) {
+  .container { width: 1140px; max-width: 100%; }
+}
+
+.header-anchor { font-size: 80%; }
+
+@media (min-width: 992px) {
+  .header-anchor { opacity: 0; transition: opacity 0.5s ease-out 0s; }
+  :hover > .header-anchor { opacity: 1; }
+}
+
+code { white-space: pre-wrap; }
+
+pre { background-color: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0);=
+ padding: 6px; margin-left: -8px; margin-right: -8px; }
+
+.preview-wrapper { margin-top: 16px; margin-bottom: 16px; }
+
+.preview-wrapper textarea { width: 100%; min-height: 140px; font-family: Me=
+nlo, Monaco, Consolas, "Roboto Mono", "Ubuntu Mono", "DejaVu Sans Mono", "C=
+ourier New", monospace; font-size: 90%; color: rgb(55, 58, 60); background-=
+color: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0); padding: 6px; ma=
+rgin-left: -8px; margin-right: -8px; overflow-x: scroll; white-space: pre; =
+overflow-wrap: normal; -webkit-appearance: none; }
+
+.CodeMirror { height: auto; border: 2px solid rgb(0, 0, 0); margin: 0px -8p=
+x 1rem; font-family: Menlo, Monaco, Consolas, "Roboto Mono", "Ubuntu Mono",=
+ "DejaVu Sans Mono", "Courier New", monospace; }
+
+.CodeMirror pre { font-size: 90%; padding: 0px 6px; }
+
+.CodeMirror-lines { padding: 6px 0px; }
+
+.main { position: relative; min-height: 1px; padding-right: 15px; padding-l=
+eft: 15px; float: left; width: 75%; }
+
+@media (min-width: 544px) {
+  .main { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (min-width: 768px) {
+  .main { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (min-width: 992px) {
+  .main { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (min-width: 1200px) {
+  .main { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (max-width: 991px) {
+  .main { float: left; width: 100%; }
+}
+
+.nav-pills.nav-stacked .nav-pills.nav-stacked { padding-left: 1rem; }
+
+.menu.inside { position: relative; min-height: 1px; padding-right: 15px; pa=
+dding-left: 15px; width: 25%; float: right !important; }
+
+@media (min-width: 544px) {
+  .menu.inside { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (min-width: 768px) {
+  .menu.inside { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (min-width: 992px) {
+  .menu.inside { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (min-width: 1200px) {
+  .menu.inside { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (max-width: 991px) {
+  .menu.inside { display: none; }
+}
+
+.menu.outside { position: fixed; left: 0px; transform: translate3d(calc(100=
+% - 48px), 0px, 0px); z-index: 9999; width: 100%; height: 100%; transition:=
+ transform 0.3s ease-in-out 0s, -webkit-transform 0.3s ease-in-out 0s; }
+
+@media (min-width: 992px) {
+  .menu.outside { visibility: hidden; }
+}
+
+.menu.outside > .toggle { position: fixed; bottom: 10px; cursor: pointer; }
+
+.menu.outside > nav { background: rgb(255, 255, 255); margin-left: 48px; ma=
+rgin-right: 30px; overflow: hidden auto; height: 100%; padding-right: 1rem;=
+ }
+
+.menu.outside > nav::after { position: absolute; top: 0px; z-index: -1; wid=
+th: 100%; height: 100%; opacity: 0; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px =
+75px 0px; transition: opacity 0.3s ease-in-out 0s; }
+
+@media (max-width: 991px) {
+  .menu.outside.show { transform: translate3d(30px, 0px, 0px); }
+  .menu.outside.show > nav::after { opacity: 1; }
+}
+
+.sponsor { margin-left: 16px; margin-top: 16px; display: block; color: rgb(=
+130, 130, 130); }
+
+.advert { margin-left: 16px; min-height: 180px; }
+
+.menu.outside .advert { min-height: auto; }
+
+#carbonads { font-size: 10px; font-family: Verdana; }
+
+#carbonads > span { display: flex; -webkit-box-orient: vertical; -webkit-bo=
+x-direction: normal; flex-direction: column; border: 1px solid rgb(168, 100=
+, 84); border-radius: 4px; background: rgb(255, 255, 255); margin: 0px auto=
+; }
+
+.carbon-poweredby { display: block; order: -1; background: rgb(168, 100, 84=
+); border-color: rgb(168, 100, 84); border-top-right-radius: 3px; border-to=
+p-left-radius: 3px; padding: 5px 10px; color: rgb(255, 255, 255) !important=
+; text-decoration: none !important; }
+
+.carbon-wrap { padding: 5px 10px; }
+
+.carbon-img { display: block; text-align: center; }
+
+.carbon-text { color: rgb(0, 0, 0) !important; text-decoration: none !impor=
+tant; }
+
+.navbar { margin-bottom: 20px; }
+
+.navbar .navbar-brand { font-family: Arvo, Georgia, "Times New Roman", Time=
+s, serif; font-weight: 700; font-size: 30px; margin-top: -11.25px; margin-b=
+ottom: -3.75px; }
+
+.navbar .navbar-nav { float: right !important; }
+
+.parameter-list dt { font-family: Menlo, Monaco, Consolas, "Roboto Mono", "=
+Ubuntu Mono", "DejaVu Sans Mono", "Courier New", monospace; font-size: 1rem=
+; }
+
+.parameter-list dd { margin-left: 1rem; }
+
+.parameter-list .type { color: rgb(129, 138, 145); }
+------MultipartBoundary--P13IqhZjQpXSPDALlwNcuYBZm7TwugNSPLt9Zffqig----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pug.bootcss.com/images/menu-tab.svg
+
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"48" height=3D"28"><path =
+d=3D"M0 14L7.357 0H48v28H7.357z" fill=3D"#a86454"/><path fill=3D"#fff" d=3D=
+"M20.983 18.194h12.374V22H20.983zM15.357 6h3.751v3.806h-3.75zM20.983 12.097=
+h12.374v3.806H20.983zM20.983 6h12.374v3.806H20.983zM15.357 12.097h3.751v3.8=
+06h-3.75zM15.357 18.194h3.751V22h-3.75z"/></svg>
+------MultipartBoundary--P13IqhZjQpXSPDALlwNcuYBZm7TwugNSPLt9Zffqig------

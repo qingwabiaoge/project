@@ -1,0 +1,24 @@
+<html>
+<head>
+
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+
+                if ($("#a").offset().top - $(document).scrollTop() <= 0) {
+                    alert("300");
+                }
+
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+
+<p id="a" style="margin-top: 1800px; margin-bottom: 1800px;">11111111111</p>
+
+</body>
+</html>

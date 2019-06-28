@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+<P class="navbar-fixed-top"></P>
+<div class="a" style="margin-top: 900px; margin-bottom: 1000px;">111</div>
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var n = 60-($(".a").offset().top - $(document).scrollTop())/25 ;
+            $(".a").css("font-size",n+"px");
+            $(".a").css("color","#0000"+n);
+        });})
+</script>
+</body>
+</html>
