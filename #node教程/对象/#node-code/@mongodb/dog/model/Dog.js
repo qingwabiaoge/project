@@ -1,8 +1,9 @@
 require('../db')
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 
 /*----------------新建Schema ,类似构造函数 ,this.name=name--------------------------------*/
-const schema = new mongoose.Schema({
+const schema = new Schema({
     //和vue的属性的配置类似
     name: {type: String, default: 'xxx'},
     id: {type: Number, unique: true, ropDups: true},
@@ -14,7 +15,8 @@ const schema = new mongoose.Schema({
     meta: {
         votes: Number,
         favs: Number
-    }
+    },
+    master: {type: Schema.Types.ObjectId, ref: 'master'}
 })
 /*-------------------实例化对象的方法 ,类似protype---------------------------------------*/
 //this我实例化对象
