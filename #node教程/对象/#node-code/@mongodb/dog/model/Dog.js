@@ -16,7 +16,7 @@ const schema = new Schema({
         votes: Number,
         favs: Number
     },
-    master: {type: Schema.Types.ObjectId, ref: 'master'}
+    master: {type: Schema.Types.ObjectId, ref: 'Master'}
 })
 /*-------------------实例化对象的方法 ,类似protype---------------------------------------*/
 //this我实例化对象

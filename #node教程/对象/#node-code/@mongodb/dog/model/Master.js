@@ -1,11 +1,12 @@
+require('../db')
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 const schema = new Schema({
-
+    // _id: Schema.Types.ObjectId,
     name: {type: String, default: ''},
     age: {type: Number}
 
 })
 
-const Master = mongoose.model('Master', schema)
+var Master = mongoose.model('Master', schema)
 module.exports = Master

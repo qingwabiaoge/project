@@ -1,24 +1,27 @@
 const Master = require('../../model/Master')
 const Dog = require('../../model/Dog')
-var dog = new Dog({
-    "name": "Ð¡»¨",
-    age: 10,
-    "type": "´Æ"
-});
 
-dog.save(err => {
+const master = new Master({
+    name: "shilei",
+    age: 35
+
+})
+
+master.save(err => {
 
     if (err) {
         console.log(err)
     } else {
 
-        const master = new Master({
-            name: "Ê¯ÀÚ",
-            age: 35
+        var dog = new Dog({
+            "name": "å…«å…¬",
+            age: 10,
+            "type": "é›Œ",
+            master: master._id
+        });
 
-        })
 
-        master.save(
+        dog.save(
             err => {
                 if (err) {
                     console.log(err)
