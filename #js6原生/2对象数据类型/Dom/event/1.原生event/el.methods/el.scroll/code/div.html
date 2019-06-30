@@ -35,18 +35,18 @@
     console.log('scrollHeight',el.scrollHeight) //可滚动的区域的高度
     console.log('offsetHeight',el.offsetHeight)//csss高度        (height+border)
 
-
+    console.log('-----------------------')
     //局部顶部的高度-----------------xxxTop------------------------------------------------------
     console.log('clientTop',el.clientTop)//10 //border
     console.log('offsetTop',el.offsetTop)//50 app的离docment顶部的真实距离
 
-
+    console.log('-----------------------')
 
     //局部顶部的高度--------------------------xxxLeft---------------------------------------------
     console.log('clientLeft',el.clientLeft)//10 //border
     console.log('offsetLeft',el.offsetLeft)//50 app的离docmentz左边的真实距离
 
-
+    console.log('-----------------------')
     // onscroll事件当然也可以写到dom里
     el.onscroll = function (event) {
         console.log('scrollTop',event.target.scrollTop)//滚动离顶部的距离

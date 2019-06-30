@@ -21,10 +21,11 @@
 
 <script>
 
-    const VueCoponent = Vue.component('cl', {
-        template: `<div >{{prop}}</div>`,
+    const VueComponent = Vue.component('cl', {
+        template: `<div>{{prop}}</div>`,
         props: {prop: {default: 10}}
     })
-    const vm = new VueCoponent({el: '#app', props: {prop: {default: 100}}})
-
+    const vm = new VueComponent({props: {prop: {default: 100}}})
+    const dom = vm.$mount().$el
+    document.getElementById('app').appendChild(dom)
 </script>
