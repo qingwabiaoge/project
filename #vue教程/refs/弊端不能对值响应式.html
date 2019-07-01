@@ -8,7 +8,7 @@
 
     <cl ref="cl"></cl>
     <!--   只能用在一次性的methods方法   prop的原理是import-->
-    <button @click="$refs.cl.msg=456">按钮</button>
+    <button @click="$refs.cl.msg=msg">按钮</button>
 
 </div>
 <script>
@@ -19,8 +19,9 @@
     })
     const vm = new Vue({
         el: '#app',
-
-
+        data: {
+            msg: 'msg'
+        }
     })
 
 </script>
