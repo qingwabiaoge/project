@@ -8,23 +8,20 @@
 </div>
 
 <script>
-    function log(data) {
-        console.log(data);
-    }
-    log("-------------增加/删除/修改下级节点-------------");
+   
     //------DOM增加/删除/修改
     var boys = document.getElementById("boys");
-    log(boys.childNodes);
-    log(boys.lastChild);//最后一个
-    log(boys.lastChild.previousSibling);//指向上一个
-    log(boys.lastChild.previousSibling.nextSibling.hasChildNodes());
+    console.log('childNodes',boys.childNodes);
+    console.log('lastChild',boys.lastChild);//最后一个
+    console.log('lastChild.previousSibling',boys.lastChild.previousSibling);//倒数第二个
+    console.log('hasChildNodes:',boys.lastChild.previousSibling.nextSibling.hasChildNodes());
 
     //需求:把"王健林"添加到"刘强东"后
     var newBoy = document.getElementById("newBoy");
 
     boys.appendChild(newBoy);//添加
-    //boys.removeChild(newBoy);//删除
-
+    boys.removeChild(newBoy);//删除
+    boys.appendChild(newBoy);//添加
     //js创建一个新的div标签
 
     //王健林  修改   马龙

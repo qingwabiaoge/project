@@ -1,0 +1,38 @@
+<html>
+
+<meta charset="utf-8">
+
+</html>
+
+<button id="submit">submit</button>
+<button id="reset">reset</button>
+<script>
+
+    /*
+    * method@fn
+    * params@{dom对象}  例:确定按钮dom对象 取消按钮dom对象
+    * rerurn@{boolen} true false
+    * */
+    function f(el, el2) {
+        return new Promise((resolve, reject) => {
+
+            el.addEventListener('click', function () {
+                resolve(true)
+            })
+            el2.addEventListener('click', function () {
+                resolve(false)
+            })
+        })
+    }
+
+    const submitBtn = document.getElementById('submit')
+    const resetBtn = document.getElementById('reset')
+
+
+    f(submitBtn, resetBtn).then(_ => {
+        console.log(_)
+    }).catch(_ => {
+        console.log(_)
+    })
+
+</script>
