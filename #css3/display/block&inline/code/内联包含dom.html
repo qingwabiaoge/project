@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+</head>
+<style>
+    div {
+        background: #e1e1e1
+    }
+
+    a {
+        border: 5px solid blue
+    }
+
+</style>
+
+
+<body style="padding:10px 500px">
+
+<h1>a可以包含住文字</h1>
+
+
+<div><a>首页</a></div>
+
+
+<h1>a包裹不住img 不设置边框看不出来</h1>
+<div><a href="#"><img src="http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320"
+                      width="300" height="214"/></a>
+</div>
+
+<h1>a包裹div,不设置边框看不出来</h1>
+<a href="">
+    <div>
+        div正文
+
+    </div>
+</a>
+
+
+<h1>
+    结论：内联元素包含元素时间 不能设置他自身的任何属性，因为他的高度会暴露出来
+</h1>
+</body>
+</html>

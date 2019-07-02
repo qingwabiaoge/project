@@ -3,6 +3,7 @@ const app = new Koa();
 
 const main = ctx => {
     ctx.throw(500);
+    //ctx.status=500
 };
 
 app.on('error', (err, ctx) => {

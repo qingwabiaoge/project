@@ -47,7 +47,7 @@ $ npx create-nuxt-app <项目名>
 
 ![](./img/2.png)
 
-### ctx.req.headers
+##### ctx.req.headers
 
 ![](./img/17.png)
 

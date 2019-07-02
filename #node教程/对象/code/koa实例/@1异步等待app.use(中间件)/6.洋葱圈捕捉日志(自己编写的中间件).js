@@ -5,6 +5,7 @@ const app = new Koa()
 const logger = async (ctx, next) => {
     console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
     await  next();
+    console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
 }
 app.use(logger);
 
