@@ -34,7 +34,7 @@ console.log(str.match(a)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
 
 ````
 
-### 对str.repalce(reg)适用
+### 对str.repalce(reg,'')适用
 
 ```
   var str='秦石磊是个好人,秦石磊是个好男人'
@@ -43,6 +43,19 @@ console.log(str.match(a)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
     console.log(str.replace(reg1,'坏'))
     console.log(str.replace(reg2,'坏'))
 
+
+```
+str.repalce(reg,fn(item){})
+```
+    function replaceReg(reg, str) {
+        return str.replace(reg, function (item) {
+            return `<a href="item">${item}</a>`;
+        })
+    }
+
+    var reg = /http:\/\/[\w-]*(\.[\w-]*)+/ig;
+    var str = '将一个用户输入的一段文字中的url替换成可以点击的link地址。测试一下：http://www.ablanxue.com紧接着中文，还有    http://www.baidu.com';
+    document.write(replaceReg(reg, str));
 
 ```
 
