@@ -1,6 +1,6 @@
 <div style="border: 1px solid #ccc">
 
-    <span class="padding-margin">margin-left,margin-right,padding-left,padding-right可以用 ,padding-top padding-bottom不好用,会冲破容器</span>1
+    <span class="padding-margin">margin-left,margin-right,padding-left,padding-right border-left,border-right可以用 padding-top padding-bottom border-top border-bottom不好用,会冲破容器</span>1
 </div>
 <style>
     .padding-margin {
@@ -13,7 +13,7 @@
         padding-right: 50px; /*可用*/
         padding-top: 50px; /*不好用会冲破容器*/
         padding-bottom: 50px; /*不好用会冲破容器*/
-        border:10px solid #000; /*可用,上下border也会冲破容器*/
+        border: 10px solid #000; /*可用,上下border也会冲破容器*/
         width: 300px; /*不可用*/
         height: 300px; /*不可用*/
         background: #ccc;
