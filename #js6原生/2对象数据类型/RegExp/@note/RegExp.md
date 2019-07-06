@@ -1,7 +1,7 @@
 
 
 
-# 定义实例
+# 实例
 
 直面量
 
@@ -21,21 +21,21 @@
 /i 对大小写不敏感
 
 
-### 对str.match(reg)适用  
+### 对match适用  
 
-
+str.match(reg)
 
 ````
   var str = 'run runoob runooob runoooooob';
 
- a=/runo*/g   
+ reg=/runo*/g   
 
-console.log(str.match(a)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
+console.log(str.match(reg)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
 
 ````
 
-### 对str.repalce(reg,'')适用
-
+### 对replace适用
+str.repalce(reg,'xxx')
 ```
   var str='秦石磊是个好人,秦石磊是个好男人'
     reg1=/(好)/
@@ -59,7 +59,9 @@ str.repalce(reg,fn(item){})
 
 ```
 
-### str.search(reg)
+### str.search(reg)&indexOf('str')
+
+返回第一个匹配的字符串的索引
 
 ```
    var str = '1111shi,leiqin11qin111,'
@@ -163,22 +165,6 @@ console.log(reg.exec(str)) //['lei']
 ```
 
 
-# 正则方法reg.test(str),reg.exec(str)
-
-```
-const reg = /[1-2]/
-
-const str = 'a123'
-
-//reg匹配部分字符串就为ture
-
-const i = reg.test(str) //true
-
-//reg匹配部分字符串 并把匹配的部分放到返回值的数组裏
-
-
-const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
-```
 
 
 # ()的作用: 分组捕获, 分组非捕获
@@ -295,18 +281,18 @@ console.log(reg.test(str))//true
 ```
 
 
-# 贪婪模式和惰性模式 
-
+# 贪婪模式和懒惰模式
+### 贪婪模式
 " * "限定符和" + "限定符都是__贪婪的__，因为它们会尽可能多的匹配文字，
-
-### 在它们的后面加上一个?就可以实现__非贪婪或最小匹配__。
-
 
 如：`<img src="test.jpg" width="60px" height="80px"/>`如果用正则匹配src中内容非懒惰模式匹配`/src=".*"/`
 
 匹配结果是：`src="test.jpg" width="60px" height="80px"`意思是从="往后匹配，直到最后一个"匹配结束
 
 ### 懒惰模式正则：
+
+
+在它们的后面加上一个?就可以实现非贪婪或最少匹配。
 
 `/src=".*?"/`
 
@@ -325,7 +311,27 @@ console.log(reg.exec(str))
 
 ```
 
-# 表单验证
+
+# 正则方法reg.test(str),reg.exec(str)
+
+```
+const reg = /[1-2]/
+
+const str = 'a123'
+
+//reg匹配部分字符串就为ture
+
+const i = reg.test(str) //true
+
+//reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组key0,括号捕获放到数组key1
+
+
+const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
+```
+
+
+
+# 常用正则
 
 ```javascript
 

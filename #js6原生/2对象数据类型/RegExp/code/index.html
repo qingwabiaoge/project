@@ -10,56 +10,51 @@
 
         var str = 'Chapter12,Chapter99 ,Chapter1';
         const a = /Chapter/
-        console.log(a.test(str))
+        console.log(a.test(str)) //true
     }
 
     {
 
         var str = 'Chapter12,Chapter99 ,Chapter1';
-        const a = /Chapter\d/g
-        console.log(a.test(str))
+        const a = /Chapter\d/
+        console.log(a.test(str))//true
     }
 
     {
-        console.log(`//a.exec(str)`)
+
         var str = 'Chapter00,Chapter1,Chapter99'
-        const a = /Chapter[1-9]{1,2}/g
-        console.log(a.exec(str))
+        const a = /Chapter[1-9]{1,2}/g  //["Chapter1", index: 10, input: "Chapter00,Chapter1,Chapter99", groups: undefined]
+        console.log('exec', a.exec(str))
     }
 
     {
 
-        console.log(`//str.match(a)`)
+
         var str = 'Chapter00,Chapter1,Chapter99'
         a = /Chapter[1-9]{1,2}/g
-        console.log(str.match(a))
+        console.log('match', str.match(a)) //["Chapter1", "Chapter99"]
     }
 
     {
         var str = '01234567899 0-9'
-        a = /(0-9)/g  //(0-9)不会匹配0123456789 而是匹配 0-9
-        console.log(str.match(a))
-    }
-
-    {
-        var str = 'shi,leiqin,'
-        a = /(qin|shi)/g
-        console.log(str.search(a))
+        reg = /[0-9]/g  //
+        console.log('match2', str.match(reg)) //["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "9", "0", "9"]
     }
 
 
     {
         var str = 'shi,lei qin,'
         a = /(qin|shi)/
-        console.log(str.replace(a, 1111))
+        console.log('replace', str.replace(a, 1111))
 
     }
 
     {
-        var str = 'qinshilei'
-        a = 'lei'
-        b = str.indexOf(a)
-        console.log(b)
+        var str = '1111shi,leiqin11qin111,'
+        const reg = /(qin|shi)/
+        console.log('search', str.search(reg)) //4
+        console.log('indexOf', str.indexOf('shi')) //4
+        console.log('lastIndexOf', str.lastIndexOf('qin')) //6
 
     }
 

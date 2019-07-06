@@ -1,0 +1,34 @@
+<!--img内外补丁都可以用,因为img是文本级元素而不是内联布局元素-->
+<div style="border: 1px solid #ccc">
+
+    <img class="padding-margin"
+         src="http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320">
+
+</div>
+
+
+
+<br>
+
+<div style="border: 1px solid #ccc">
+<span class="padding-margin">
+
+       <img class=""
+            src="http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320">
+</span>
+
+
+</div>
+
+<style>
+    .padding-margin {
+        display: inline;
+        margin: 50px;
+        padding: 20px;
+        width: 300px;
+        height: 300px;
+        background: #F00;
+        border: 1px solid #000;
+        line-height: 1;
+    }
+</style>
