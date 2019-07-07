@@ -34,6 +34,42 @@ console.log(str.match(reg)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
 
 ````
 
+多行匹配
+
+```javascript
+
+    {
+    const str="This is an\n antzone good";
+    const reg=/an$/;
+    console.log(str.match(reg));   //null
+
+    }
+    {
+
+        const str="This is an\n antzone good";
+        const reg=/an$/m;
+        console.log(str.match(reg));//[...........]
+    }
+
+    {
+        const reg = /^b/;
+        const str = 'test\nbbs';
+       console.log(str.match(reg)) //null
+
+    }
+
+    {
+        const reg = /^b/m;
+        const str = 'test\nbbs';
+        console.log(str.match(reg))//[...........]
+
+
+    }
+
+```
+
+
+
 ### 对replace适用
 str.repalce(reg,'xxx')
 ```
@@ -59,6 +95,7 @@ str.repalce(reg,fn(item){})
 
 ```
 
+
 ### str.search(reg)&indexOf('str')
 
 返回第一个匹配的字符串的索引
@@ -71,6 +108,7 @@ str.repalce(reg,fn(item){})
     console.log(str.lastIndexOf('qin')) //6
     
 ```
+
 
 
 # \  转意字符(单字符)
@@ -333,7 +371,7 @@ const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 
 # 常用正则
 
-```javascript
+``` javascript
 
 匹配中文：[\u4e00-\u9fa5]
 行首行尾空格：^\s*|\s*$

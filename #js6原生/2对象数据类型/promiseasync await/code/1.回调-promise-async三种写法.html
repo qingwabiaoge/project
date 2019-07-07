@@ -7,9 +7,9 @@
     function f(callback) {
         if (i > 0) {
             setTimeout(() => {
-                console.log('在回调函数前运行')
+                console.log('callback前运行')
                 callback(i)
-                console.log('在回调函数后运行')
+                console.log('callback后运行')
             }, 1000)
 
         } else {
@@ -19,7 +19,7 @@
 
     try {
         f(function (i) {
-            console.log(i)
+            console.log('callback返回值')
         })
     } catch (err) {
         console.log(err)
@@ -30,15 +30,16 @@
     new Promise((resolve, reject) => {
         if (i > 0) {
             setTimeout(() => {
-                resolve(i + 1)
+                resolve('promise返回值')
             }, 2000)
         } else {
             reject(new Error('err'))
         }
 
     }).then(
-        console.log('异步函数内部和普通函数一样顺序执行'),
-        res => console.log(res))
+        console.log('这句不异步'),
+        res => console.log(res),
+        console.log('这句不异步'))
         .catch(err => console.log(err))
 
 
@@ -47,7 +48,7 @@
         return new Promise((resolve, reject) => {
             if (i > 0) {
                 setTimeout(() => {
-                    resolve(i + 2)
+                    resolve('promise返回值')
                 }, 3000)
             } else {
                 reject(new Error('err'))
@@ -59,9 +60,10 @@
     async function f4() {
 
         try {
-            console.log('异步函数内部和普通函数一样顺序执行')
+            console.log('这句不异步')
             const res = await f3()
             console.log(res)
+            console.log('这句异步')
         } catch (err) {
             console.log(err)
         }
@@ -76,7 +78,7 @@
     async function f1() {
 
         if (i > 0) {
-            return i
+            return 'asyncFn返回值'
         } else {
             throw new Error('err')
         }
@@ -95,9 +97,6 @@
     }
 
     f2()
-
-
-   
 
 
 </script>
