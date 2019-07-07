@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
 <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
@@ -7,7 +8,7 @@
 <div id="app">
 
     <cl @input="fn($event)">自定义$event</cl>
-    <cl @click.native="fn" data-src="10">禁用自定义$event使用原生的$event</cl>
+    <cl @click.native="fn($event)" data-src="10">禁用自定义$event使用原生的$event</cl>
 
 </div>
 

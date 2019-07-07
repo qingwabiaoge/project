@@ -11,7 +11,7 @@
 <script type="text/javascript">
     function Person() {}
     Person.prototype = {
-        name: 'iwen',
+        name: 'grandfather',
         run: function () {
             console.log('run')
         }
@@ -20,7 +20,7 @@
     function Man() {}
     Man.prototype = new Person()
     Man.prototype.superClass = new Person()
-    Man.prototype.name = 'iwen2'
+    Man.prototype.name = 'father'
     Man.prototype.run = function () {
         console.log('run2')
     }
@@ -32,9 +32,9 @@
     Son.prototype.run = function () {
         console.log('run3')
     }
-    var child = new Son()
-    console.log(child.superClass)
-    console.log(child.superClass.superClass)
+    var xiaomin = new Son()
+    console.log(xiaomin.superClass)
+    console.log(xiaomin.superClass.superClass)
 
 </script>
 </body>

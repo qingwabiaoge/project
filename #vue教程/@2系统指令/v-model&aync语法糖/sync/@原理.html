@@ -8,11 +8,11 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 
 <div id="app">
-    {{props1}} <br>
-    <ch :props1.sync="props1"></ch>
+    {{prop1}} <br>
+    <ch :prop1.sync="prop1"></ch>
     <!--等价于下边-->
-    <ch :props1="props1"
-        @update:props1="data => props1 = data">
+    <ch :prop1="prop1"
+        @update:prop1="data => prop1 = data">
 
     </ch>
 
@@ -22,15 +22,15 @@
 <script>
     var ch = {
         template: `<input type="text"
-                            :value="props1"
-                            @input="$emit('update:props1', $event.target.value)" >`,
-        props: ["props1"]
+                            :value="prop1"
+                            @input="$emit('update:prop1', $event.target.value)" >`,
+        props: ["prop1"]
 
     }
     vm = new Vue({
         el: '#app',
         components: {ch},
-        data: {props1: 'some'}
+        data: {prop1: 'some'}
     })
 
 </script>

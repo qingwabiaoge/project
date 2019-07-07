@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<div id="app">
+    <div>
+        <input type="text" v-model="name">
+        <button @click="add">add</button>
+
+    </div>
+    <ul>
+        <li v-for="(item, i) in list">
+            <input type="checkbox"> {{item.name}}
+        </li>
+    </ul>
+    <ul>
+        <li v-for="(item, i) in list" :key="item.id">
+            <input type="checkbox"> {{item.name}}
+        </li>
+    </ul>
+
+</div>
+
+<script>
+    // 创建 Vue 实例，得到 ViewModel
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: '',
+            newId: 3,
+            list: [
+                {id: 1, name: 'aa'},
+                {id: 2, name: 'bb'},
+                {id: 3, name: 'cc'}
+            ]
+        },
+        methods: {
+            add() {
+                //注意这里是unshift
+                this.list.unshift({id: ++this.newId, name: this.name})
+                this.name = ''
+            }
+        }
+    });
+</script>
