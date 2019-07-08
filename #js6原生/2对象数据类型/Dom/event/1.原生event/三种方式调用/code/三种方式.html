@@ -1,8 +1,10 @@
-<!--方式1-->
-<button onmouseover="fn(event),console.log('mouseover-event ')" id="btn">btn</button>
+<!--方式1，双引号里可以放任何语句,this===当前dom-->
+<button onmouseover="fn(),console.log(this)" id="btn">btn</button>
 
 
 <script>
+
+    console.log(event) //undifine也不是err 说明event声明过,事件操作只是为event赋值
     function fn() {
         console.log(event)
     }
@@ -14,7 +16,6 @@
 
     //方式3
     el.addEventListener('click', fn, false)
-
 
     setTimeout(() => {
             el.removeEventListener("click", fn, false);  //有效！
