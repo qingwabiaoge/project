@@ -10,8 +10,7 @@
 
     <!--  obj.a=value-->
 
-    <input type="text" v-model="obj.a">
-    <input type="text" v-model="obj.b">
+    <input type="text" v-for="(item,key) in obj" v-model="obj[key]">
 
 
     {{obj}}
@@ -27,7 +26,7 @@
 
         data: {
 
-            obj: {a: 1,b:2},
+            obj: {a: 1, b: 2},
 
         }
 

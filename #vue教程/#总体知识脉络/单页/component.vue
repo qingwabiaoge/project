@@ -13,9 +13,6 @@
 
     //  vue构造器的配置文件  es6-module输出
     export default {
-
-
-
     }
 
 </script>
