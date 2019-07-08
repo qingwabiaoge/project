@@ -1,0 +1,30 @@
+<html>
+
+<meta charset="utf-8">
+
+</html>
+
+<script>
+    const store = {}
+    const obj = {
+        fn() {
+
+            this.store.i = 10
+
+        },
+        store
+
+    }
+    obj.fn()
+
+    const obj2 = {
+        fn() {
+
+            this.m = this.store.i
+
+        },
+        store
+    }
+    obj2.fn()
+    console.log(obj2)
+</script>
