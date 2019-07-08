@@ -18,7 +18,7 @@
         @input="fn"
         @xx="fn"
         @input.native="fn2"
-        >
+    >
 
     </cl>
     {{paValue}}
@@ -41,8 +41,8 @@
                 this.fn(value)
 
                 this.$emit('update:value', value)
-                this.$emit('input',value)
-                this.$emit('xx',value)
+                this.$emit('input', value)
+                this.$emit('xx', value)
 
 
             }
@@ -56,10 +56,10 @@
             fn(value) {
 
                 this.paValue = value
-                console.log('触发',value)
-           
+                console.log('触发', value)
+
             },
-            fn2(e){
+            fn2(e) {
                 console.log(e)
             }
         }
