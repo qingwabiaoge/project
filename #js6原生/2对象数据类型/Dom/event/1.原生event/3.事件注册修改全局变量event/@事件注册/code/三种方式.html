@@ -5,23 +5,28 @@
 <script>
 
     console.log(event) //undifine也不是err 说明event声明过,事件操作只是为event赋值
+
+
+
     function fn() {
-        console.log(event)
+        //event 其实是window全局变量,注意不是global
+        console.log(window.event)
     }
 
     const el = document.getElementById('btn')
 
+
+
     //方式2
     el.onmousedown = fn
 
+
+
     //方式3
     el.addEventListener('click', fn, false)
-
     setTimeout(() => {
             el.removeEventListener("click", fn, false);  //有效！
-        }
-
-        , 3000
+        }, 3000
     )
 
 </script>

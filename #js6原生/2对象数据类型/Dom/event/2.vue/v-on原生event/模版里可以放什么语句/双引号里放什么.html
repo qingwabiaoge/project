@@ -9,7 +9,7 @@
 
 
 <div id="app">
-    <!--注入到vm下的任何表达式和语句-->
+    <!--和dom相同 this===vm,模板内省去了this,可使用省去this的任何表达式,变量和语句-->
     <button @click="a+=10">@click="a+=10"</button>
     <button @click="fn($event)">@click="fn()"</button>
     <button @click="fn">@click="fn"</button>    <!--放函数定义式可运行,原理是vue会自动补全($event)-->

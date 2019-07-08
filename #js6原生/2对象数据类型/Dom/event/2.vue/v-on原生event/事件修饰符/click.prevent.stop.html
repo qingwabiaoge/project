@@ -18,7 +18,7 @@
 
     ------------vue的 .prevent阻止默认行为 ------------------------<br>
 
-    <a href="http://www.baidu.com" @click.prevent.stop="prevent">vue-prevent阻止默认行为</a>
+    <a href="http://www.baidu.com" @click.prevent.stop="preventFn">vue-prevent阻止默认行为</a>
 
 
 
@@ -40,7 +40,7 @@
             a: 1
         },
         methods: {
-            prevent(){console.log('链接的默认行为被阻止')},
+            preventFn(){console.log('链接的默认行为被阻止')},
         }
     })
 

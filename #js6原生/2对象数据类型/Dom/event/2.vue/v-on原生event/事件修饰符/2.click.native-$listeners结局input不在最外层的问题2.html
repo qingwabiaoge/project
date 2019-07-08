@@ -19,6 +19,7 @@
         computed: {
             inputListeners: function () {
 
+                 //deep copy
                 return Object.assign({},
                     this.$listeners,
                 )
@@ -32,7 +33,7 @@
                   <input
                     v-bind:value="value"
                     v-on="inputListeners" >
-<!--// v-on='{mouseenter:onEnter,mouseleave:onOut}'绑定对象事件-多事件  -->
+<!--// inputListeners='{mouseenter:onEnter,mouseleave:onOut}'绑定对象事件-多事件  -->
 
                 </label>
                `
