@@ -1,3 +1,4 @@
+[[_toc_]]
 # 安装
 <!--
 koa版
@@ -23,12 +24,12 @@ $ npx create-nuxt-app <项目名>
 
 # nuxt流程
 
-![](./img/1.tif)
+![](./img/1.png)
 
 
 # 生命周期
 
-![](./img/4.tif)
+![](./img/4.png)
 
 
 
@@ -265,7 +266,7 @@ export default {
 
 ### ctx数据作为vue实例app的初始化数据
 
-![](./img/18.tif)
+![](./img/18.png)
 
 
 
