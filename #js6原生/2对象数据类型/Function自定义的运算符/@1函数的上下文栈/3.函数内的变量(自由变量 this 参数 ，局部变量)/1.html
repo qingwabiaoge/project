@@ -6,12 +6,15 @@
 
         i: 1,
         f(a) {
+            var b=0
             //来之参数的全局变量
             console.log(a)
             //来之作用域链全局变量
             console.log(i)
-            //来之this的全局变量
+            //this对象的变量
             console.log(this.i)
+            //局部变量
+            console.log(0)
         }
     }
 
