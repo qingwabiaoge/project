@@ -4,10 +4,12 @@ const app = new Koa()
 
 const logger = async (ctx, next) => {
     console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
-    await  next();
+    await next();
     console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
 }
 app.use(logger);
 
-app.use(ctx=>{ctx.body=1})
+app.use(ctx => {
+    ctx.body = 1
+})
 app.listen(3000)

@@ -1,6 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-//压缩js
+
 
 module.exports = {
     // 入口文件路径，__dirname是根目录
@@ -88,8 +88,8 @@ module.exports = {
                     {//nuxt就用的这个东西引入全局变量的
                         loader: 'style-resources-loader',
                         options: {
-                            patterns: [path.resolve(__dirname, './src/assets/less/variables.less'),
-                                path.resolve(__dirname, './src/assets/less/leiui/mixins/_mixins.less')],
+                            patterns: [path.resolve(__dirname, './src/assets/variables.less'),
+                                path.resolve(__dirname, './src/assets/mixin.less')],
                             injector: 'append'
                         }
                     }
