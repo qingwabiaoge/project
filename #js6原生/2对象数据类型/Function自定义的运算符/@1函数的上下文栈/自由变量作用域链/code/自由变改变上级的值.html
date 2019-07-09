@@ -13,23 +13,23 @@
 <body>
 
 <script>
-    var a = 1
+    var a = 1 //#1
 
-    function b() {
-        var a = 2  //变成了a=3
+    function fn() {
+        var a = 2  //#2
 
         function f() {
-            a = 3//修改自由变量    修改局部变量var a=2为var a=3
-            window.a=0//前置修改window变量
+            a = 3//修改2
+            window.a = 0//修改1
 
         }
 
         f()
-        console.log(a)//3,var a=3取值
+        console.log(a)//输出#2
     }
 
-    b()
-    console.log(a)//1
+    fn()
+    console.log(a)//输出#1 //0
 </script>
 </body>
 

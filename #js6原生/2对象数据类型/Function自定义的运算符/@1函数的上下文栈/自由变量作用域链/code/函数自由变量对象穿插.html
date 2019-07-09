@@ -8,19 +8,19 @@
 <script>
     var i = 1
     var obj = {
-        i:2,
+        i: 2,
         f: function () {
             console.log(i)//1 ,window下的变量
         },
-        f1:function () {
-            console.log(obj.i)//2 ,obj里封装的i
-            console.log(this.i)//2 this指向obj
+        f1: function () {
+            console.log(obj.i)//2
+            console.log(this.i)//2 this===obj
         }
     }
 
     var f2 = function () {
         var i = 3 //f2里的局部变量
-        obj.f()   // obj.f只是寻址罢了，跳到obj.a()的位置分析函数作用域
+        obj.f()
         obj.f1()
     }
     f2()

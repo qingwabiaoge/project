@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+
+
+<script>
+    function f(a, b) {
+        function f(a=10) {
+            console.log(a, b) //undefined ,2
+        }
+
+        f()
+    }
+
+    f(1, 2)
+
+</script>
+</body>
+</html>

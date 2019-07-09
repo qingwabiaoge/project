@@ -23,7 +23,10 @@
 
     const VueCoponent = Vue.component('cl', {
         template: `<div >{{prop}}</div>`,
-        props: {prop: {default: 10}}
+        props: {prop: {default: 10}},
+        mounted(){
+            console.log(this)
+        }
     })
     //el–Œ Ωπ“‘ÿ
     const vm = new VueCoponent({el: '#app', props: {prop: {default: 100}}})
