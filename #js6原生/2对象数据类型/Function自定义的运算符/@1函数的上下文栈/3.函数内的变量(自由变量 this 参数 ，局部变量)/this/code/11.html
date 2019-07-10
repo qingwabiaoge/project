@@ -1,17 +1,20 @@
 <script>
-    a = 0//
+    a = 0//#1
     obj = {
         a: 10,
         fn() {
-            console.log(this.a) //10 ,100
-            a += 1 //window.a 两次加1
+            // obj.fn()运行时,this===obj
+            // obj.fn.call(obj2)运行时, this===obj2
+            console.log(this.a)
+            a += 1 //修改#1
         }
     }
     obj2 = {
         a: 100,
         fn() {
+            //this===obj2
             obj.fn()
-            obj.fn.call(this)//this===obj2
+            obj.fn.call(this)
         }
     }
     obj2.fn()

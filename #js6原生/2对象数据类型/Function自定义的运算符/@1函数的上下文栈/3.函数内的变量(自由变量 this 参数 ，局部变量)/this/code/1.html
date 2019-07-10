@@ -1,5 +1,6 @@
 <script>
-    var i=1
+    var i = 1
+
     function f() {
         console.log(i)
         console.log(this.i)
@@ -7,7 +8,7 @@
 
     f() //1,1 this===window
 
-    obj={i:10,f:f}
+    obj = {i: 10, f: f}
     obj.f() //1,10  this===obj
 
 </script>

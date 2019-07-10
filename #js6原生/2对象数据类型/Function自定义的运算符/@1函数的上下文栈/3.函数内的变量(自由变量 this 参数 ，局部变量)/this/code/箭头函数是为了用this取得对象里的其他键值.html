@@ -2,8 +2,8 @@
     const obj = {
         i: 1,
         fn() {
-
-            const f=() => console.log(this.i)
+              //this===obj
+            const f=() => console.log(this.i) //箭头函数继承上级作用域的this
 
 
             f()

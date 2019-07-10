@@ -9,21 +9,15 @@
 <script>
     var a = 1
     var e = function () {
+        //this===obj,
         return this.a //20
     }
 
     obj = {a: 20, b: e}
-    console.log(obj.b())  //obj.b(), this===obj,
+    console.log(obj)
+    console.log(obj.b())
 </script>
 
-<script>
-    var a = 1
-    var e = function () {
-        return this.a
-    }
-    obj = {a: 20, b: e()}
-    console.log(obj)   //{a: 20, b: 1}
 
-</script>
 </body>
 </html>

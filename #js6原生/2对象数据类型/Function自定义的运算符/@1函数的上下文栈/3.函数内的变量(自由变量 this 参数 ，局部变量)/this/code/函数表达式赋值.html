@@ -13,8 +13,10 @@
     var obj1 = {
         a: 1,
         b: function () {
-            console.log(a)
+            //this===obj2
             console.log(this.a)
+            console.log(a)
+
         }
     }
     obj2 = {a: 2}

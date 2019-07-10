@@ -8,42 +8,23 @@
 //可以看出 函数操作自由变量 是直接对作用域链中最近的变量就行操作
 <script>
 
-    var a = 1//不会被操作
+    var a = 1 //#1
 
     function f() {
-        var a = 2 //#1
+        var a = 2 //#2
 
         function f1() {
-            a++//为#1赋值
-
+            a++//为#2赋值
         }
 
         f1()
-        console.log(a)//#1的值
+        console.log(a)//#2的值
     }
 
     f()
-    console.log(a)//1
+    console.log(a)//输出#1
 
 
-
-
-    var b = 1 //将会被b++操作 @位置1
-
-    function f3() {
-
-
-        function f1() {
-            b++  // 对var b = 1 操作
-
-        }
-
-        f1()
-        console.log(b)//2 , 取 @位置1 b 的值
-    }
-
-    f3()
-    console.log(b)//2,@位置1 b的值
 </script>
 </body>
 </html>

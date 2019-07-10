@@ -1,13 +1,13 @@
 
 <script>
 
-        var a = 0
+        var a = 0//#1
         let obj1 = {
             a: 1,
             b: function () {
                 function c() {
-                    var a = 2
-                    console.log('a:'+a)//2 //局部变量
+                    var a = 2 //#2
+                    console.log('a:'+a)//输出#2
                     console.log('this:'+this)//windows
                     console.log('this.a:'+this.a)//window.a=0
 

@@ -11,7 +11,9 @@
 <script>
     var a = 0
     var obj = {
-        a: 1, b: this.a + 10//此处this在window作用域下
+
+        //this===window
+        a: 1, b: this.a + 10
     }
     console.log(obj)
 

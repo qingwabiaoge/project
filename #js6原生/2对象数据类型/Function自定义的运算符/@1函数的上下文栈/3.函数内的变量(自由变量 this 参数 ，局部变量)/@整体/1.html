@@ -6,7 +6,7 @@
 
         i: 1,
         f(a) {
-            var b=0
+            var b = 0
             //来之参数的全局变量
             console.log(a)
             //来之作用域链全局变量
@@ -14,10 +14,12 @@
             //this对象的变量
             console.log(this.i)
             //局部变量
-            console.log(0)
+            console.log(b)
+            return a + i + this.i + b
         }
     }
 
-    obj.f(100)
+    const res = obj.f(100)
+    console.log(res)
 
 </script>
