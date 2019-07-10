@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-10</title>
+    <!-- 引入Vue -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="external nofollow"
+          rel="external nofollow" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+</head>
+
+<body>
+
+<script>
+    var a = 1 //#1
+
+    function fn() {
+        var a = 2  //#2
+
+        function f() {
+            a = 3//修改2
+            window.a = 0//修改1
+
+        }
+
+        f()
+        console.log(a)//输出#2
+    }
+
+    fn()
+    console.log(a)//输出#1 //0
+</script>
+</body>
+
+</body>
+</html>

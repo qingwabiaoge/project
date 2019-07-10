@@ -1,0 +1,20 @@
+<script>
+
+    function f2(n) {
+        //export作用域 回调函数通信
+        f1(n)
+    }
+
+    f2(1)
+
+
+    //当前作用域
+    var i
+
+    function f1(n) {
+
+        i = n
+    }
+
+
+</script>

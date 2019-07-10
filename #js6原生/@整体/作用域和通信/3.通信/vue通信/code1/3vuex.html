@@ -1,0 +1,45 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <!--点击改变value的值,value改变dom自动更新-->
+    <ul>
+        <li v-for="item in 4" @click="$store.commit('setValue',item)" :class="item===$store.state.value?'active':''">
+            {{item}}
+        </li>
+    </ul>
+    <br>
+    {{$store.state.value}}
+</div>
+
+<script>
+    const store = new Vuex.Store({
+
+        state: {
+            value: 1
+        },
+        mutations: {
+            setValue(state, n) {
+                state.value = n
+
+            }
+        }
+    })
+
+    const vm = new Vue({
+        el: '#app',
+        store,
+        data() {
+            return {
+                value: 1
+            }
+        }
+    })
+
+</script>
+
+<style>
+    .active {
+        color: red;
+    }
+
+</style>

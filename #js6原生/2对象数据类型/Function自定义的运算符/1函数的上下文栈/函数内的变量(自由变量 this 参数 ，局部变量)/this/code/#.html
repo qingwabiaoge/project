@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const obj = {
+        fn() {
+            console.log(this)
+        }
+
+    }
+
+    const f = obj.fn //只是赋值了内存地址,没运行和this没什么关系
+
+    f()
+
+
+</script>
+</body>
+</html>

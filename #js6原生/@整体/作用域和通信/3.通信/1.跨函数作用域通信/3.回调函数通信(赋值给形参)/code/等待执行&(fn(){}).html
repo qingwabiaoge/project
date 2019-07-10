@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function f(i, fn) {
+        setTimeout(() => {
+            console.log("等待我执行完后你再执行回调函数")
+            fn(i)
+        }, 2000)
+    }
+
+    f('回调函数开始执行', (i) => console.log(i))
+    console.log('主程序没有堵塞')
+
+
+</script>
+</body>
+</html>

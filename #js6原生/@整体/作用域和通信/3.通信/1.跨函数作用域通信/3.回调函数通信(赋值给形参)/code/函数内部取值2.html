@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    obj = {
+        a: 2,
+
+        fn: function (callback) {
+
+            callback(this.a) //this===obj
+
+        }
+    }
+
+    obj.fn((i) => {
+        console.log(this)
+        console.log(i)
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//可以看出 函数操作自由变量 是直接对作用域链中最近的变量就行操作
+<script>
+
+    var a = 1 //#1
+
+    function f() {
+        var a = 2 //#2
+
+        function f1() {
+            a++//为#2赋值
+        }
+
+        f1()
+        console.log(a)//#2的值
+    }
+
+    f()
+    console.log(a)//输出#1
+
+
+</script>
+</body>
+</html>
