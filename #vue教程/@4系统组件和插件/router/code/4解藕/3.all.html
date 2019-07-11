@@ -41,6 +41,7 @@
         routes: [
             {path: '/', component: Hello}, // No props, no nothing
             {path: '/hello/:name', component: Hello, props: true}, // Pass route.params to props
+
             {path: '/static', component: Hello, props: {name: 'world'}}, // static values
 
             //函数生成静态props作为router-view的属性

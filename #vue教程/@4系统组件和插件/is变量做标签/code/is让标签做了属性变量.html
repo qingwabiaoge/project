@@ -18,9 +18,14 @@
 
 <script>
 
-    const cl = {template: '<div>{{prop}}</div>', props:['prop']}
+    const cl = {template: '<div>{{prop}}</div>', props: ['prop']}
 
-    const routeView = {template: '<div><component :is="name" :prop="prop"></component>   </div>', props: ['name','prop'], components: {cl}}
+    const routeView = {
+        //'cl'即可以做is的变量值又可以做标签
+        template: '<div><component :is="name" :prop="prop"></component>  <cl prop="props2"></cl> </div>',
+        props: ['name', 'prop'],
+        components: {cl}
+    }
 
     const vm = new Vue({
         el: "#app",

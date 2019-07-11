@@ -21,11 +21,11 @@
 
 <script>
 
-    const VueA = Vue.component('cl', {
+    const Cl = Vue.component('cl', {
         template: `<div  id="cl" @click="$emit('cs',1)">{{prop}}</div>`,
-        props: {prop: {default: 10}}
+        props: ['prop']
     })
-    const vm = new VueA({ props: {prop: {default: 100}}})
+    const vm = new Cl({ props: {prop: {default: 100}}})
     const dom = vm.$mount().$el
     document.getElementById('app').appendChild(dom)
 </script>

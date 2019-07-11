@@ -23,12 +23,16 @@
     const defaultComponent = {template: '<div>defalt-{{prop}}</div>', props: ['prop']}
     const cl = {template: '<div>{{prop}}</div>', props: ['prop']}
 
+    const myroute = {
+        props: {name: {type: String, default: 'default'}},
+        template: `<div><component :is="name" :prop="prop"></component></div>`,
+    }
 
 
     const routeView = {
-        template: `<div><component :is="name" :prop="prop"></component>   </div>`,
-        props: {name: {type: String, default: 'defaultComponent'}, prop: String},
-        components: {cl, defaultComponent}
+        extends: myroute,
+        props: {prop: String},
+        components: {cl, default: defaultComponent}
     }
 
     const vm = new Vue({

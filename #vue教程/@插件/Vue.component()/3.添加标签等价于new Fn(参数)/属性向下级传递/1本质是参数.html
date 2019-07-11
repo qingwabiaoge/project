@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+<div id="app">
+    <fa msg="1"></fa>
+
+</div>
+
+<script>
+    //能获得fa的属性值,本质可能是函数作用域嵌套
+
+    const fa = {template: '<div>msg</div>', props: ['msg']}
+    const vm = new Vue({el: '#app', components: {fa}})
+
+</script>

@@ -32,7 +32,7 @@
         </li>
 
     </ul>
-------------------------------
+    ------------------------------
     <!--这个router-view容易忘记-->
     <router-view></router-view>
 
@@ -43,13 +43,13 @@
 
     const fa_index = {template: '<div>/fa/cs</div>'}
 
-    //route配置其实是配置router-view组件的
+    //route配置其实是配置router-view组件和route-link组件
     const router = new VueRouter({
 
             routes: [{//配置最顶级的<route-view/>
-                path: '/fa/',
-                name: 'fa',
-                component: fa,
+                path: '/fa/', //<router-link/> 用什么path可以访问
+                name: 'fa', //<router-link/> 用什么name可以访问
+                component: fa, //is的默认值
                 children: [ //每个children对应一个<route-view/>
                     {
                         path: '/cs',

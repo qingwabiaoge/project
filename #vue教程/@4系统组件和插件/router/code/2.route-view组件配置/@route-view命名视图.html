@@ -9,8 +9,7 @@
 
 
 <div id="app">
-<!--    类似slot命名视图-->
-
+    <!-- 类似is命名视图-->
     <router-view name='mainheader'></router-view>
     <router-view/>
 
@@ -22,17 +21,19 @@
     const router = new VueRouter({
         routes: [
             {
-                path: '/',
-                name: 'Home',
+                //配置<router-link/> <router-view/>组件
+                path: '/',  //<router-link/> 用什么path可以访问
+                name: 'Home', //<router-link/> 用什么name可以访问
                 components: {
+                    //:is="name",name默认值未default,
                     default: Home,
-                    //可以选择是否有头部模块
                     mainheader: MainHeader
                 }
             },
             {
                 path: '/login',
                 name: 'Home',
+                //is用的什么组件
                 component: Home,
 
             }
