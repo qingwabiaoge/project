@@ -5,7 +5,6 @@
 
         let i = 1
 
-        //函数在定义式的所在的作用域运行修改自由变量
         function fn() {
             i++
             console.log('fn内部的i:', i)
@@ -15,7 +14,7 @@
         return {i, fn}
     }
 
-    //作为全局变量引入--------------------------
+
     const obj = f()
 
     function f1() {

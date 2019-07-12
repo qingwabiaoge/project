@@ -1,0 +1,32 @@
+<script>
+
+    //作用域1
+    const obj2 = {
+        i: 1,
+        f1: undefined,
+        f2() {
+            this.f1(this.i)
+        }
+
+    }
+
+
+
+
+
+    function f() {
+        //作用域2,引入obj2
+        let i
+        obj2.f1 = function (n) {
+            //作用域3 引入了n
+            i = n
+            console.log(i)
+        }
+
+
+    }
+
+    f()
+
+    obj2.f2()
+</script>
