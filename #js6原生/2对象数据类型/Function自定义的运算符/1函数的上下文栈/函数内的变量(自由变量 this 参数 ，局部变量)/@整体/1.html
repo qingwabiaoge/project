@@ -2,6 +2,10 @@
 
     const i = 10
 
+    function fn(n) {
+        console.log(n)
+    }
+
     const obj = {
 
         i: 1,
@@ -15,11 +19,16 @@
             console.log(this.i)
             //局部变量
             console.log(b)
+
+            const i=a + i + this.i + b
+            //作用域内数据传出
+            fn(i)
+            //函数计算值
             return a + i + this.i + b
         }
     }
 
     const res = obj.f(100)
-    console.log(res)
+
 
 </script>
