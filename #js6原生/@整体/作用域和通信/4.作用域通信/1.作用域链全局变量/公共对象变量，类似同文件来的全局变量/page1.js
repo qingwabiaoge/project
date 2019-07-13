@@ -1,4 +1,4 @@
-import $store from './vuex'
+import $store from './store'
 
 $store.setState()
 console.log(`全局变量:${$store.state}`)

@@ -6,7 +6,9 @@ export default {
 }
 
 
-/*
+
+
+/*µÈ¼ÛÓÚ
 *   module.exports={
 *     default:{
 *      a:1,
@@ -15,3 +17,4 @@ export default {
 *                    }
 *
 * */
+

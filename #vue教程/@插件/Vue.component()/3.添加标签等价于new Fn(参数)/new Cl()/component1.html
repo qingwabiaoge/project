@@ -23,12 +23,13 @@
 <script>
 
     const VueA = Vue.component('cl', {
-
-        template: `<div  id="cl" @click="$emit('cs',1)">cl</div>`,
+        //局部变量
         data() {
             return {a: 1}
         },
-        props: ['display']
+        //参数变量,默认undifine或者设置函数的默认参数值
+        props: ['display'],
+        template: `<div  id="cl" @click="$emit('cs',1)">cl</div>`
     })
    new Vue({
        el:'#app'

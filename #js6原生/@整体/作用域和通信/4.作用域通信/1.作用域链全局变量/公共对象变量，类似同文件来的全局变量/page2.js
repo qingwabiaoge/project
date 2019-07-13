@@ -1,4 +1,4 @@
-import $store from './vuex'
+import $store from './store'
 
 
 

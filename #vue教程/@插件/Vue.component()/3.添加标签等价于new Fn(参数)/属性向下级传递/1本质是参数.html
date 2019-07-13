@@ -14,7 +14,7 @@
 </div>
 
 <script>
-    //能获得fa的属性值,本质可能是函数作用域嵌套
+    //本质可是通过函数参数传递给子组件的作用域
 
     const fa = {template: '<div>msg</div>', props: ['msg']}
     const vm = new Vue({el: '#app', components: {fa}})
