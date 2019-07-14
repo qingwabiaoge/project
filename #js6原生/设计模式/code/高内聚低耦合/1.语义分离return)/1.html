@@ -1,0 +1,65 @@
+<script>
+    function f() {
+        let i = 0
+        i++
+        i *= 50
+        console.log(i)
+    }
+
+    f()
+</script>
+// err ouhe
+<script>
+    function add() {
+        let i = 0
+        i++
+        return i
+    }
+
+    function chengfa() {
+        let i = add()
+        i *= 50
+        console.log(i)
+    }
+
+    chengfa()
+</script>
+
+
+// right
+<script>
+    function add() {
+        let i = 0
+        i++
+        return i
+    }
+
+    function chengfa(i) {
+
+        i *= 50
+        console.log(i)
+    }
+let i= add()
+    chengfa(i)
+</script>
+-----------------------------------------
+<script>
+    new Promise((resolve, reject) => {
+        resolve(1)
+
+    }).then(res => console.log(res))
+
+</script>
+
+<script>
+    function fn() {
+
+        return new Promise((resolve, reject) => {
+            resolve(1)
+
+        })
+    }
+
+    fn().then(res => console.log(res))
+
+</script>

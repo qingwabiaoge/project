@@ -1,0 +1,20 @@
+<script>
+    //作用域1
+    var i
+
+    function f1(n) {
+        i = n
+    }
+
+    f2(10)
+
+    function f2(n) {
+        //作用域2,传入了 f1 ,n,i
+
+        //传出n+10
+        f1(n + 10)
+        console.log(i)
+    }
+
+
+</script>

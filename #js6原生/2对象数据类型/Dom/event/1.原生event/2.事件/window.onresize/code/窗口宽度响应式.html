@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+
+    {{screenWidth}}
+
+</div>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                a: 1,
+                screenWidth: document.body.clientWidth
+            }
+        },
+        mounted() {
+
+            window.onresize =($event)=> {
+                console.log($event)
+                this.screenWidth = document.body.clientWidth
+            }
+        },
+        watch:{
+            screenHeight(_new){
+                console.log(_new)
+            }
+        }
+    })
+</script>

@@ -13,8 +13,8 @@
 <div id="app">
 
 
-        <ol  v-for="(todo,index) in todos" @click="fn(todo.text,index)" >
-           <button>{{todo.text}}-{{index}}</button>
+        <ol  v-for="(item,key) in items" @click="fn(item.text,key)" >
+           <button>{{item.text}}-{{key}}</button>
         </ol>
 
 
@@ -23,7 +23,7 @@
     const vm = new Vue({
         el: '#app',
         data: {
-            todos: [
+            items: [
                 {text: 1},
                 {text: 2},
                 {text: 3}
@@ -31,8 +31,8 @@
 
         },
         methods: {
-            fn(item,index){
-                console.log(item,index)
+            fn(item,key){
+                console.log(item,key)
             }
 
         }

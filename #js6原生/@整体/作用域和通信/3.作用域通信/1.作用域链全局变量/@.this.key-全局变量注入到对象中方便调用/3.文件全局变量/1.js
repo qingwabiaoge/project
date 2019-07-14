@@ -8,3 +8,5 @@ const obj = {
 }
 
 obj.fn()
+
+

@@ -21,7 +21,7 @@
 /i 对大小写不敏感
 
 
-### 对match适用  
+### 对match适用  (返回匹配的字符串放到数组里)
 
 str.match(reg)
 
@@ -70,7 +70,7 @@ console.log(str.match(reg)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
 
 
 
-### 对replace适用
+### 对replace适用(返回被替换后的字符串)
 str.repalce(reg,'xxx')
 ```
   var str='秦石磊是个好人,秦石磊是个好男人'
@@ -96,9 +96,7 @@ str.repalce(reg,fn(item){})
 ```
 
 
-### str.search(reg)&indexOf('str')
-
-返回第一个匹配的字符串的索引
+### str.search(reg)&indexOf('str')(返回第一个匹配的字符串的索引)
 
 ```
    var str = '1111shi,leiqin11qin111,'
@@ -108,7 +106,39 @@ str.repalce(reg,fn(item){})
     console.log(str.lastIndexOf('qin')) //6
     
 ```
+修饰符
 
+```
+  const reg = /(ab){2}$/mi
+    const str = 'Abab\n1111'
+    console.log(str.search(reg))
+
+```
+
+### 对正则方法test(str)适用对exec(str)不适用
+
+```
+const reg = /[1-2]/
+const str = 'a123'
+
+
+
+
+//1.reg匹配部分字符串就为ture
+const i = reg.test(str) //true
+
+
+
+
+//2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
+const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
+```
+
+```
+   const reg = /ab$/mi
+    const str = 'Ab\n1111'
+    console.log(reg.exec(str))
+```
 
 
 # \  转意字符(单字符)
@@ -205,9 +235,11 @@ console.log(reg.exec(str)) //['lei']
 
 
 
-# ()的作用: 分组捕获, 分组非捕获
+# ()的作用: 分组+捕获, 分组+不捕获
 
-### 多字符
+### 分组
+
+##### 多字符
 一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
 ```
@@ -215,13 +247,14 @@ console.log(reg.exec(str)) //['lei']
 /hahaha/
 
 ```
-### 或操作
+##### 或操作
 
 或操作（|）或操作
 
 ```
 （a|b）匹配a或者b
 ```
+
 
 ### ()捕获
 
@@ -240,14 +273,8 @@ console.log(reg.exec(str)) //['lei']
     console.log(reg.exec('doubi is a doubi'))// [0: "doubi is a doubi" 1: "doubi"]
     console.log(RegExp.$1 )//doubi,记忆窍门:和$1===reg.exec('xxx')[1}
 ```
-
-
-
 在表达式里通过/1访问
    
-
-
-
 ```
 
    const reg = /(doubi) is a \1/
@@ -282,7 +309,7 @@ console.log(reg.exec(str))// [0:kid is]
 
 对reg.test()的影响:往前看一下是否有相等的值,有则返回true
 
-对reg.exec()的影响:(?=)部分不捕获
+对reg.exec()的影响:不捕获
 
 ```
    const reg = /kid is a (?=doubi)/
@@ -305,7 +332,7 @@ console.log(reg.test(str))//true
 
 对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
 
-对reg.exec()的影响: (?=)部分不捕获
+对reg.exec()的影响: 不捕获
 
 
 ```
@@ -349,23 +376,6 @@ console.log(reg.exec(str))
 
 ```
 
-
-# 正则方法reg.test(str),reg.exec(str)
-
-```
-const reg = /[1-2]/
-
-const str = 'a123'
-
-//reg匹配部分字符串就为ture
-
-const i = reg.test(str) //true
-
-//reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组key0,括号捕获放到数组key1
-
-
-const m = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
-```
 
 
 

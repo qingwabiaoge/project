@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    function f() {
+
+        let i = 1
+
+        function fn(n) {
+            console.log(n)
+        }
+
+        //闭包暴漏---------------------------
+        return {i, fn}
+    }
+
+
+    const obj = f() //作为全局变量
+
+    function f1() {
+        //回调输出
+        obj.fn(obj.i + 10)
+
+    }
+
+    f1()
+</script>
