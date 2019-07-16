@@ -41,7 +41,7 @@
     /**************************************** 这个router-view非常容易忘记*/
     const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
 
-    const fa_index = {template: '<div>/fa/cs</div>'}
+    const cs = {template: '<div>/fa/cs</div>'}
 
     //route配置其实是配置router-view组件和route-link组件
     const router = new VueRouter({
@@ -54,7 +54,7 @@
                     {
                         path: '/cs',
                         name: 'cs',
-                        component: fa_index,
+                        component: cs,
                     }
 
                 ]

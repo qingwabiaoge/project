@@ -28,7 +28,7 @@
     })
 
 
-    const n = 1
+    const n =2
 
 
     switch (n) {
@@ -48,7 +48,7 @@
 
         case 2:
             //生成组件>>>>>
-            var apple = Vue.component('apple',
+            var apple = Vue.component('Apple',
                 {
                     mixins: [fruit, leaves, flowers, Vue], //fruit
                     //后面的覆盖前面的
@@ -64,14 +64,14 @@
 
         case 3:
             //生成构造器>>>>>>>>>
-            var apple = Vue.extend({
+            var Apple = Vue.extend({
 
                 mixins: [fruit, leaves, flowers, Vue], //fruit
                 //后面的覆盖前面的
                 template: "<p>apple</p>",
             });
 
-            var vm = new apple()
+            var vm = new Apple()
             var dom = vm.$mount().$el
             document.getElementById('app').appendChild(dom)
             break;
