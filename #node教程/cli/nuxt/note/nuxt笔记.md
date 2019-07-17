@@ -71,14 +71,7 @@ export default(ctx)=> {
 ```
 
 
-#####  inject联合注入
 
-```
-export default ({ app }, inject) => {
-  inject('myCombinedInjectedFunction', (string) => console.log('app联合注入', string))
-  //注入到了 app  vm vm.store
-}
-```
 
 ##### nuxt.config.js 注入到ctx.env(只能注入变量)
 
@@ -89,7 +82,14 @@ export default ({ app }, inject) => {
     PORT: 3333,
 
 ```
+#####  inject联合注入到實例
 
+```
+export default ({ app }, inject) => {
+  inject('myCombinedInjectedFunction', (string) => console.log('app联合注入', string))
+  //注入到了 app  vm vm.store
+}
+```
 ### vuex nuxtServerInit 方法
 
 

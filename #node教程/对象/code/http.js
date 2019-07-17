@@ -1,6 +1,6 @@
 var http = require('http');
 const fs = require('fs')
-const callback=require('./fs/callback')
+const callback=require('./callback')
 
 http.createServer(function (req, res) {
 
@@ -9,8 +9,8 @@ http.createServer(function (req, res) {
     // 内容类型: text/plain
 
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    fs.appendFile('./fs/test/req.json', JSON.stringify(Object.keys(req)),callback)
-    fs.appendFile('./fs/test/res.json', JSON.stringify(Object.keys(res)),callback)
+    fs.appendFile('./assets/req.json', JSON.stringify(Object.keys(req)),callback)
+    fs.appendFile('./assets/res.json', JSON.stringify(Object.keys(res)),callback)
     // 发送响应数据 "Hello World"
     res.end('123');
 }).listen(8888);

@@ -7,15 +7,14 @@
 </head>
 <body>
 <script>
-    var a = 1
-    var e = function () {
-        //this===obj,
-        return this.a //20
+
+    function fn() {
+        console.log(this)
     }
 
-    obj = {a: 20, b: e}
-    console.log(obj)
-    console.log(obj.b())
+    obj = {a: 20, fn}
+
+    obj.fn()
 </script>
 
 

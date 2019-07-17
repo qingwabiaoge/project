@@ -3,9 +3,8 @@
     obj = {
         a: 10,
         fn() {
-            // obj.fn()运行时,this===obj
-            // obj.fn.call(obj2)运行时, this===obj2
-            console.log(this.a)
+
+            console.log(this)
             a += 1 //修改#1
         }
     }
@@ -13,8 +12,8 @@
         a: 100,
         fn() {
             //this===obj2
-            obj.fn()
-            obj.fn.call(this)
+            obj.fn()   // obj.fn()运行时,this===obj
+            obj.fn.call(this)   // obj.fn.call(obj2)运行时, this===obj2
         }
     }
     obj2.fn()

@@ -12,14 +12,15 @@ const response = require('./middlewares/response')
 
 
 router
+    //node的req对象
     .get('/req', controller.req)
+    //node的res对象
     .get('/res', controller.res)
 
+    //koa的request对象
     .get('/request/', controller.request)
     .get('/request/:id', controller.request)
-
     .post('/request/', controller.request)
-
     .del('/request/', controller.request)
 
 app.use(response)

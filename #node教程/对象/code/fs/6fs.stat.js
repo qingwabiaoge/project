@@ -1,7 +1,7 @@
 console.log(`-------文件信息-------`)
 
 const fs = require('fs')
-const callback=require('./callback')
+const callback=require('../callback')
 
 
 fs.stat('./assets/1.jpg', function (err, stats) {
