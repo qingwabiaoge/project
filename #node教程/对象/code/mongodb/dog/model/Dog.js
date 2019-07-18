@@ -35,13 +35,15 @@ schema.methods.addOneAge = function () {
     this.save();
 }
 schema.methods.findClass = function (callback) {
+    //this.model('Dog')指的是当前这个类
     this.model('Dog').find({"type": this.type}, callback);
     console.log(this)
 }
 
 /*--------------------类的静态方法-----------------------------------*/
-//this.model('Dog')指的是当前这个类
+
 schema.statics.findDog = function (name, callback) {
+    //this===Dog,   Dog.finddog(),对象调用函数 this===Dog
     this.find({name: name}, callback);
 };
 //创建修改的静态方法

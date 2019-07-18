@@ -3,14 +3,34 @@
 
 # 实例
 
-直面量
+### 直面量
 
     var re = /hello/g;
 
-构造函数
+### 构造函数
 
     var re = new RegExp('hello','g');   //代替/xxxx/
 
+
+
+### 实例方法
+
+test(str) exec(str)匹配第一个就结束
+
+```
+const reg = /[1-2]/
+const str = 'a123'
+
+
+
+
+//1.reg匹配部分字符串就为ture
+const i = reg.test(str) //true
+
+
+//2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
+const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
+```
 
 
 # 修饰符:
@@ -96,7 +116,7 @@ str.repalce(reg,fn(item){})
 ```
 
 
-### str.search(reg)&indexOf('str')(返回第一个匹配的字符串的索引)
+### str.search(reg)&indexOf('str')(返回第一个匹配的字符串的索引 所以只有  i m适用)
 
 ```
    var str = '1111shi,leiqin11qin111,'
@@ -117,24 +137,9 @@ str.repalce(reg,fn(item){})
 
 
 
-### 对正则方法test(str) exec(str)适用
-
-##### test(str) exec(str)
-```
-const reg = /[1-2]/
-const str = 'a123'
+### 对正则方法test(str) exec(str)适用,因为正则方法值匹配第一个 所以只有  i m适用
 
 
-
-
-//1.reg匹配部分字符串就为ture
-const i = reg.test(str) //true
-
-
-//2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
-const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
-```
-##### 适用
 
 ```
   const reg = /ab$/mi
