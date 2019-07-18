@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,9 +13,9 @@
 <div id="app">
 
 
-        <ol  v-for="(item,key) in items" @click="fn(item.text,key)" >
-           <button>{{item.text}}-{{key}}</button>
-        </ol>
+    <ol v-for="(item,key) in items" @click="fn(item,key)">
+        <button>{{item.text}}-{{key}}</button>
+    </ol>
 
 
 </div>
@@ -31,8 +31,8 @@
 
         },
         methods: {
-            fn(item,key){
-                console.log(item,key)
+            fn(item, key) {
+                console.log(item, key)
             }
 
         }

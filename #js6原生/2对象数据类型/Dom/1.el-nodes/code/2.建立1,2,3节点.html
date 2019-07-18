@@ -1,0 +1,23 @@
+<body>
+
+<hr id="hr">
+</body>
+
+<meta charset="uft-8">
+<script>
+    function addElement() {
+
+        var newA = document.createElement("A");
+        var newText = document.createTextNode("Hi there and greetings!");
+        newA.setAttribute('href', '#')
+        newA.getAttribute('href')//»ñµÃhref
+        newA.appendChild(newText);
+        newA.target = '_black'
+
+
+        var hr = document.getElementById("hr")
+        document.body.insertBefore(newA, hr)
+    }
+
+    addElement()
+</script>

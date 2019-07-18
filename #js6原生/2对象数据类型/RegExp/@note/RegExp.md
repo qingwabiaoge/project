@@ -115,8 +115,11 @@ str.repalce(reg,fn(item){})
 
 ```
 
-### 对正则方法test(str)适用对exec(str)不适用
 
+
+### 对正则方法test(str) exec(str)适用
+
+##### test(str) exec(str)
 ```
 const reg = /[1-2]/
 const str = 'a123'
@@ -128,16 +131,16 @@ const str = 'a123'
 const i = reg.test(str) //true
 
 
-
-
 //2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
 const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 ```
+##### 适用
 
 ```
-   const reg = /ab$/mi
+  const reg = /ab$/mi
     const str = 'Ab\n1111'
-    console.log(reg.exec(str))
+    console.log(reg.test(str)) //true`
+    console.log(reg.exec(str))//["Ab"]
 ```
 
 
