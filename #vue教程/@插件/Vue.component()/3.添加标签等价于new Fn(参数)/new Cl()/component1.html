@@ -15,23 +15,26 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
 
 <div id="app">
-<!-- 实例化并选择挂载位置-->
+    <!-- 实例化并选择挂载位置-->
     <cl></cl>
 
 </div>
 
 <script>
-
+    //构造函数
     const VueA = Vue.component('cl', {
-        //局部变量
+
         data() {
+            //局部变量
             return {a: 1}
         },
-        //参数变量,默认undifine或者设置函数的默认参数值
+        //参数变量,默认undifine因为构造函数的默认参数值undefined
         props: ['display'],
         template: `<div  id="cl" @click="$emit('cs',1)">cl</div>`
     })
-   new Vue({
-       el:'#app'
-   })
+
+
+    new Vue({
+        el: '#app'
+    })
 </script>
