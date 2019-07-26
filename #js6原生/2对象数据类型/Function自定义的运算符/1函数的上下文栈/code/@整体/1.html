@@ -11,14 +11,15 @@
         i: 1,
         f(a) {
             var b = 0
-            //来之参数的全局变量
+            //来之参数的变量
             console.log(a)
-            //来之作用域链全局变量
+            //来之作用域链的变量
             console.log(i)
+            //局部变量,给下级作用域提供变量
+            console.log(b)
             //this对象的变量
             console.log(this.i)
-            //局部变量
-            console.log(b)
+
 
             const i=a + i + this.i + b
             //作用域内数据传出
