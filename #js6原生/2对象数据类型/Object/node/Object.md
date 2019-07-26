@@ -1,3 +1,5 @@
+[[toc]]
+
 # 创建新对象
 
 
@@ -71,7 +73,7 @@ new Array(1,2,3)
 
 # 属性
 
-
+### 属性分类
 
 > __所有属性:__  判断:in 列出: obj  
 
@@ -84,9 +86,11 @@ new Array(1,2,3)
 
 >>> __不可枚举的own属性__
 
+注:只有属性判断组用的对Object的实例方法
 
-### 判断某个属性所在范围(只有这个栏目是prototype方法)
-##### in操作符 判断是否有此属性
+
+### 所有属性 in操作符 判断对象是否有此属性
+
 判断对象是否有某属性(返回Boolean) (in操作符是针对key的)
 
 ````
@@ -103,6 +107,12 @@ new Array(1,2,3)
 
 
 
+
+
+
+
+### 1.原型属性
+
 ##### 判断prototype是否是对象的原型
 
 
@@ -115,29 +125,8 @@ Person.prototype.isprototypeof(person)
  person instanceof(Person)
 ```
 
-#####  .hasOwnProperty 
-通过构造函数里this.xx创建的键(语法糖{xx:1})+属性定义器定义的键
-
-````
-obj.hasOwnProperty(a) 返回boolen 
-
-````
-
-#####  .propertyIsEnumerable 判断对象的某个属性是否可枚举
 
 
-````
-obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可以枚举
-````
-
-
-
-
-
-
-
-
-### 列出属性
 
 
 
@@ -159,88 +148,41 @@ Object.getPrototypeOf(obj)              //和obj._proto_功能相同
 
 
 
-##### 列出自己的属性 
+##### Object.protype
 
+一切皆是对象,继承对象的protype所以所有对象都可以用以下方法
+![](./object.prototype.png)
+##### Funciont.protype
 
-
-构造函数this生成的属性+属性定义器对对象的扩展
-
-```
-Object.getOwnPropertyNames(obj)//返回数组getOwnPropertyNames末尾带s
-```
-
-##### 枚举出可枚举的属性
-for循环语句+in操作符 列出可枚举的key,并对其操作 (in操作符是针对key的)
-
-```
-	for....in
+```javascript
+{
+    apply(){},
+    bind() { },
+   call() { }
+}
 ```
 
-for....of 枚举出可枚举的value,用于可迭代类型(array)
-
-```
-	for....of
-```
-
-
-  Object.keys(obj) 列出可枚举的key返回数组
-
-````
-    Object.keys(obj)
-  
-````
-Object.values(obj)列出可枚举的value返回数组
-
-```
-  Object.values(obj)
-
-```
+##### Array.protype
 
 
 ```javascript
-      //函数----------------------------------------------------------
-       const fn = function () {
-       }
-       fn.a = 10
-   
-       //可枚举属性 ,用户扩展的静态变量
-       console.log(Object.keys(fn)) //['a']
-   
-   
-       //Own属性,估计是Function构造函数生成
-       console.log(Object.getOwnPropertyNames(fn))//(6)?["length", "name", "arguments", "caller", "prototype", "a"]
-   
-   
-       //原型属性
-       console.log(Object.getPrototypeOf(fn))    //function () { [native code] }
-       console.log(fn.call, fn.apply, fn.bind) //function call() { [native code] }
-       console.log(fn.call === Function.prototype.call,
-           fn.apply === Function.prototype.apply,
-           fn.bind === Function.prototype.bind) //true
-   
-       //数组-------------------------------------------------
-       const arr = [1]
-   
-       console.log({arr})
-       console.log(Object.getPrototypeOf(arr)) //[constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
-       console.log(Object.getOwnPropertyNames(arr)) //["0", "length"]
-       console.log(Object.keys(arr)) //["0"]
-       //对象--------------------------------------------------
-       const obj = {a: 1}
-       console.log(Object.getPrototypeOf(obj)) //{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
-       console.log(Object.getOwnPropertyNames(obj)) //["a"]
-       console.log(Object.keys(obj)) //["a"]
-
-
+{}
 
 ```
 
 
 
+### 2.OwnProperty
 
-# OwnProperty
+#####  .hasOwnProperty 
+通过构造函数里this.xx创建的键(语法糖{xx:1})+属性定义器定义的键
 
-### 构造函数this创建的属性(包括枚举型和不可枚举型),以及以后扩展的属性
+````
+obj.hasOwnProperty(a) 返回boolen 
+
+````
+
+##### 构造函数this创建的属性(包括枚举型和不可枚举型),以及以后扩展的属性
 
 ```javascript
     function Fn(name, age) {
@@ -258,7 +200,7 @@ Object.values(obj)列出可枚举的value返回数组
 ```
 
  
-### obj.a的本质,赋值obj和'a'计算后的返回值(地址或普通值)
+##### obj.a的本质,赋值obj和'a'计算后的返回值(地址或普通值)
 
 ```
 
@@ -286,10 +228,10 @@ console.log(obj.b)//获得地址
 
 
 
-### 创建 修改Own属性
+##### 创建 修改Own属性
 
 
-##### json直面量表示法(键都是json字符串):
+ json直面量表示法(键都是json字符串):
 
 ```
 
@@ -348,7 +290,7 @@ str['1']
 
 
 
-##### 先定义obj 才能用obj.a,没赋值默认都是undifine
+先定义obj 才能用obj.a,没赋值默认都是undifine
 
 ```
    let obj = {}//要先定义obj再设置obj.a才行
@@ -409,15 +351,52 @@ arr=[] 才能用arr[0],没赋值默认都是undifine
 
 
 
-### 删除键
+##### 删除键
 
 ```
 delate(obj.a)
 ```
 
 
-# enumerable
-枚举属性影响一下函数
+### 3.enumerableProperty
+
+
+#####  .propertyIsEnumerable 判断对象的某个属性是否可枚举
+
+
+````
+obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可以枚举
+````
+
+
+##### 枚举出可枚举的属性
+for循环语句+in操作符 列出可枚举的key,并对其操作 (in操作符是针对key的)
+
+```
+	for....in
+```
+
+for....of 枚举出可枚举的value,用于可迭代类型(array)
+
+```
+	for....of
+```
+
+
+  Object.keys(obj) 列出可枚举的key返回数组
+
+````
+    Object.keys(obj)
+  
+````
+Object.values(obj)列出可枚举的value返回数组
+
+```
+  Object.values(obj)
+
+```
+
+##### 枚举属性影响一下函数
 ```javascript
 
 for...in
@@ -428,28 +407,6 @@ Object.assign()//会忽略掉不可枚举的属性
  
 
 
-# Fn.protype
-### Object.protype
-
-一切皆是对象,继承对象的protype所以所有对象都可以用以下方法
-![](./object.prototype.png)
-### Funciont.protype
-
-```javascript
-{
-    apply(){},
-    bind() { },
-   call() { }
-}
-```
-
-### Array.protype
-
-
-```javascript
-下边有个图
-
-```
 
 # ...操作符 对象解构赋值
  
@@ -458,8 +415,6 @@ let {..obj}={a,...rest}={a,b,c,d}={a:1,b:2}
 let [...array]=[a,..rest]=[a,,c]=[a,b,c,d]=[1,2,3]//d的值为underline
 let { ...obj}='123'  //这种情况字符串会自动封装对象类型                                       
 ```
-
-
 
 
 
