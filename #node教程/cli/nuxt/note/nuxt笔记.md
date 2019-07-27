@@ -46,6 +46,8 @@ $ npx create-nuxt-app <项目名>
 
 ### 上下文对象(函数回调的参数)
 
+有些键值在客户端存在有些在服务端存在
+
 ![](./img/2.png)
 
 ##### ctx.req.headers
