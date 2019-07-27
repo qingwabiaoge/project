@@ -8,7 +8,7 @@
 
 
 ##### new 操作符
-```javascript 1.8
+```javascript
 
     //模拟new new都做了什么
     var obj = new Object();
@@ -30,7 +30,7 @@
 
 ##### new Fn()
 
-```
+```javascript
  new Fn() 等价于Fn.call(new Object,1,2,3)
  
 new Object({a:1,b:2})
@@ -166,23 +166,46 @@ Object.getPrototypeOf(obj)              //和obj._proto_功能相同
 
 
 ```javascript
-{}
+Array.protype={
+    pop(){},
+    push(){},
+    shift(){},
+    unshift(){},
+    every(){},
+    some(){},
+    sort(){},
+    map(){},
+    fileter(){},
+    reduce(){},
+    find(){},
+    forEach(){},
+    slice(){},
+    contact(){},
+    includes(){},
+    indexOf(){},
+    lastIndexOf(){}
+    
+    
+}
 
 ```
 
 
 
 ### 2.OwnProperty
+自己创造的属性,不是从原型copy的
 
-#####  .hasOwnProperty 
-通过构造函数里this.xx创建的键(语法糖{xx:1})+属性定义器定义的键
+#####   判断是否是own属性
 
 ````
 obj.hasOwnProperty(a) 返回boolen 
 
 ````
+##### 创造own属性
 
-##### 构造函数this创建的属性(包括枚举型和不可枚举型),以及以后扩展的属性
+
+
+###### 1. 构造函数this创建的属性(包括枚举型和不可枚举型),以及以后扩展的属性
 
 ```javascript
     function Fn(name, age) {
@@ -200,7 +223,9 @@ obj.hasOwnProperty(a) 返回boolen
 ```
 
  
-##### obj.a的本质,赋值obj和'a'计算后的返回值(地址或普通值)
+###### 2.obj.a
+
+* 本质:赋值obj和'a'计算后的返回值(地址或普通值)
 
 ```
 
@@ -211,7 +236,7 @@ obj.b={i:1}//赋值地址
 console.log(obj.b)//获得地址
 
 ```
- obj.a 和obj 无上下级关系 都是平级
+*  obj.a 和obj 无上下级关系 都是平级
 
 ![](6.png)
 
@@ -228,7 +253,7 @@ console.log(obj.b)//获得地址
 
 
 
-##### 创建 修改Own属性
+* 创建 修改 删除obj.a_
 
 
  json直面量表示法(键都是json字符串):
@@ -307,10 +332,15 @@ arr=[] 才能用arr[0],没赋值默认都是undifine
   console.log( arr[0],arr[1])
 ```
 
+* 删除键
+
+```
+delate(obj.a)
+```
 
 
 
-##### 属性定义器 键值也是字符串
+###### 3.属性定义器 键值也是字符串
 
 
 ````
@@ -345,17 +375,6 @@ arr=[] 才能用arr[0],没赋值默认都是undifine
 ````
 
 
-
-
-
-
-
-
-##### 删除键
-
-```
-delate(obj.a)
-```
 
 
 ### 3.enumerableProperty
@@ -396,7 +415,7 @@ Object.values(obj)列出可枚举的value返回数组
 
 ```
 
-##### 枚举属性影响一下函数
+##### 枚举属性影响以下函数
 ```javascript
 
 for...in
@@ -408,82 +427,22 @@ Object.assign()//会忽略掉不可枚举的属性
 
 
 
-# ...操作符 对象解构赋值
- 
-```
-let {..obj}={a,...rest}={a,b,c,d}={a:1,b:2}
-let [...array]=[a,..rest]=[a,,c]=[a,b,c,d]=[1,2,3]//d的值为underline
-let { ...obj}='123'  //这种情况字符串会自动封装对象类型                                       
-```
 
 
 
-# 对象合并
-
-
-##### 合并后改变了内存地址
-
-```
-    const obj = {a: 1}, obj2 = {a:10,b: 20}
-   console.log({...obj,...obj2}) //{a:10,b: 20}
-
-```
-
-```
-  const obj = [10], obj2 =[10,20]
-   console.log([...obj,...obj2]) //[10,10,20]
-```
-
-##### 合并而不改变内存地址
-
-```
- Object.assign({a: 1}, {a:10,b: 20})//{a: 10,b: 22}
- Object.assign({a: 1}, [1, 2, 3])//{0: 1, 1: 2, 2: 3, a: 1}
-Object.assign({a: 1}, '123') //{0: "1", 1: "2", 2: "3", a: 1}
-```
-```
-Object.assign([1,2,3],[4,5,6]//[1,2,3]
-Object.assign([1,2,3],'456') //["4", "5", "6"]
-```
-
-
-
-
-
-
-# Object.is()比较是否相等
-
-
-##### 引用类型:必须是同一地址的对象
-```
-
-Object.is([],[]) //false
-   
-[]===[]//false
-
-object
-```
-
-##### 普通类型
-
-值相等就相等
-
-
- Object.is()，其行为与===基本一致，不过有两处不同：
-
-```
-+0 === -0 //true
-NaN === NaN // false
-
-Object.is(+0, -0) // false
-Object.is(NaN, NaN) // true
-```
 
 
 # 表达式和实际对象
 
 
 ### obj
+
+##### 构造函数生成
+
+```javascript
+
+new Object({a:1})
+```
 
 ##### 直面量语法糖
 
@@ -498,16 +457,22 @@ console.log(obj)//{a:1,b;2}  打印出来的只是直面量表达式
 
 ![1](3.png)
 
-##### 无法和运行操作符()进行计算操作 obj()错误
+##### 无法和运行操作符()进行计算操作 obj( )错误
 
 ### function,带函数定义式 可以和()计算的对象
-
 继承于对象还能创造新对象
+##### 构造函数生成
+```javascript
+
+new Function('a', 'b', 'return a + b');
+```
+
+
 ##### 直面量语法糖
 
 
 ```
-  function f(a,b) {return a + b}//语法糖等价new Function('a', 'b', 'return a + b');
+  function f(a,b) {return a + b}//语法糖等价上面的构造函数生成
 
     f.a = 1
     f.b = 2
@@ -540,6 +505,15 @@ console.log(obj)//{a:1,b;2}  打印出来的只是直面量表达式
 
 ### array
 
+
+##### 构造函数生成
+
+```javascript
+new Array(3) //[null(3)]
+Array.of(3)//[3]
+new Array(1,2,3)
+```
+
 ##### 直面量语法糖
 
 ```
@@ -571,6 +545,90 @@ console.log(arr)//[1,2] 打印出来的只是表达式
 ##### 真实对象
 
 ![](5.png)
+
+
+### reg
+
+```javascript
+    const reg = /\w{3}/i
+    reg.a = 10
+    console.log({reg})
+```
+
+##### 构造函数生成
+
+```javascript
+new RegExp('\d','i')
+``` 
+
+##### 字面量
+
+```javascript
+
+/\w{3}/i
+```
+
+##### 实际对象
+
+![](./7.png)
+# 对象合并
+
+
+##### 合并后改变了内存地址
+
+```
+    const obj = {a: 1}, obj2 = {a:10,b: 20}
+   console.log({...obj,...obj2}) //{a:10,b: 20}
+
+```
+
+```
+  const obj = [10], obj2 =[10,20]
+   console.log([...obj,...obj2]) //[10,10,20]
+```
+
+##### 合并而不改变内存地址
+
+```
+ Object.assign({a: 1}, {a:10,b: 20})//{a: 10,b: 22}
+ Object.assign({a: 1}, [1, 2, 3])//{0: 1, 1: 2, 2: 3, a: 1}
+Object.assign({a: 1}, '123') //{0: "1", 1: "2", 2: "3", a: 1}
+```
+```
+Object.assign([1,2,3],[4,5,6]//[1,2,3]
+Object.assign([1,2,3],'456') //["4", "5", "6"]
+```
+
+
+# Object.is()比较是否相等
+
+
+##### 引用类型:必须是同一地址的对象
+```
+
+Object.is([],[]) //false
+   
+[]===[]//false
+
+object
+```
+
+##### 普通类型
+
+值相等就相等
+
+
+ Object.is()，其行为与===基本一致，不过有两处不同：
+
+```
++0 === -0 //true
+NaN === NaN // false
+
+Object.is(+0, -0) // false
+Object.is(NaN, NaN) // true
+```
+
+
 
 # 对象间的函数通信
 

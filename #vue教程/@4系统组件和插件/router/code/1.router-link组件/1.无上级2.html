@@ -25,29 +25,29 @@
     <ul>
 
         <!-------------------path----------------------------------------------------->
-        <router-link to="/fa/03?id={a:1}">to="/fa/03?id={a:1}"</router-link>
+        <router-link to="/fa/1?q=2">to</router-link>
         <br>
 
-        <router-link :to="{ path: '/fa/04?id=4'}">     <!-- 注path:不能param因为path里本身就有param-->
-            :to="{ path: '/fa/04?id=4'}
+        <router-link :to="{ path: '/fa/1?q=2'}">     <!-- 注path:不能param因为path里本身就有param-->
+            path
         </router-link>
         <br>
 
         <!-------------------path+query----------------------------------------------------->
-        <router-link :to="{ path: '/fa/05',query:{id:5}}">     <!-- 注path:不能param因为path里本身就有param-->
-            :to="{ path: '/fa/05',query:{id:5}}"
+        <router-link :to="{ path: '/fa/1',query:{q:2}}">     <!-- 注path:不能param因为path里本身就有param-->
+            path+query
         </router-link>
         <br>
 
 
         <!-------------------name+params+query----------------------------------------------------->
-        <router-link :to="{name:'id',params:{id1},query:{q:1}}">
-            :to="{name:'id',params:{id1},query:{q:1"
+        <router-link :to="{name:'id',params:{id:1},query:{q:2}}">
+            name
         </router-link>
         <br>
 
         <router-link :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}">
-            :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}
+            传递对象
         </router-link>
         <br>
 
@@ -63,7 +63,7 @@
 </div>
 <script>
     const id = {
-        template: '<div>id组件: <br>{{$route.params.id}} <br>query:{{$route.query.id}}</div>',
+        template: '<div>params: <br>{{$route.params}} <br>query:{{$route.query}}</div>',
     }
 
     const router = new VueRouter({
