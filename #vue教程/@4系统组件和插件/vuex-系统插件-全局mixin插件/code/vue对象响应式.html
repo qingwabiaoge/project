@@ -11,39 +11,25 @@
     <p>
         <!--//router必须挂载在vue上才能用$store-->
 
-        <button @click="$store.commit('assign')">assign</button>
-        <button @click="$store.commit('set')">set</button>
+        <button @click="$store.commit('assign')">Object.assign</button>
+        <button @click="$store.commit('set')">Vue.prototype.$set</button>
     </p>
     <br>
     <p>
-        {{$store.state.arr}}
-    </p>
-    <p>
-        {{$store.getters.arr10}}
+        {{$store.state.obj}}
     </p>
 
-    <p>
-        {{$store.getters.arr100}}
-    </p>
+
 </div>
 <script>
 
     const store = new Vuex.Store({
         state: {
-            arr: {a: 1}
+            obj: {a: 1}
         },
         mutations: {
-            assign: state => Object.assign(state.arr, {b: 1}),
-            set: state => Vue.prototype.$set(state.arr, 'c', 3)
-        },
-        getters: {
-            arr10(state) {
-                return JSON.stringify(state.arr)
-            },
-            arr100(state, getters) {
-                return getters.arr10.length
-            }
-
+            assign: state => Object.assign(state.obj, {b: 1}),
+            set: state => Vue.prototype.$set(state.obj, 'c', 3)
         }
     })
 

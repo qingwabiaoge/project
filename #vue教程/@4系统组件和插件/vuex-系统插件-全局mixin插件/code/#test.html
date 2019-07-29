@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +8,14 @@
 <body>
 
 <div id="app">
+
+    <div>
+        <button @click="$store.commit('add',1)">add</button>
+    </div>
+    <div>
+        <button @click="$store.dispatch('addAction',1)">addAction</button>
+        <button @click="$store.dispatch('reduceAction',1)">reduceAction</button>
+    </div>
     {{$store.state.a}}-{{$store.getters.b}}-{{$store.getters.c}}
 
 </div>
@@ -27,6 +34,29 @@
             c(state, getter) {
 
                 return getter.b + 10
+            }
+
+        },
+        mutations: {
+            add(state, n) {
+                state.a += n
+            },
+            reduce(state, n) {
+                state.a -= n
+            }
+        },
+        actions: {
+            addAction(ctx, n) {
+
+                ctx.commit('add', n)
+
+            },
+            reduceAction({commit, state,getters}, n) {
+
+                setTimeout(() => {
+                    console.log(getters)
+                    commit('reduce', n)
+                }, 500)
             }
 
         }

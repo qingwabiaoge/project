@@ -11,7 +11,12 @@
 <script>
     //构造函数的参数
     const store = new Vuex.Store({
-        state: {n: 1},
+        state: {m: 1},
+        getters: {
+            n(state) {
+                return m + 1
+            }
+        },
         modules: {
             moduleA: {
                 namespaced: true,
@@ -36,7 +41,7 @@
 
     })
     //打印出构造函数
-    console.log('instrust',Vuex.Store)
+    console.log('instrust', Vuex.Store)
     //打印出构造函数的静态函数,和protorype
     console.log({class: Vuex.Store})
     //打印出实例(protorype)
