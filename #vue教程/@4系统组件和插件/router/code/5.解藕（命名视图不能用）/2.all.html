@@ -3,7 +3,24 @@
 <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
 
 <div id="app">
+    <h1>Route props</h1>
+    <ul>
+        <li>
+            <router-link to="/">/</router-link>
+        </li>
+        <li>
+            <router-link to="/hello/you">/hello/you</router-link>
+        </li>
+        <li>
+            <router-link to="/static">/static</router-link>
+        </li>
+        <li>
+            <router-link to="/dynamic/1">/dynamic/1</router-link>
+        </li>
 
+    </ul>
+
+    <router-view class="red" attr="$attrs属性"></router-view>
 </div>
 
 
@@ -51,19 +68,7 @@
 
     new Vue({
         router,
-        template: `
-                    <div id="app">
-                    <h1>Route props</h1>
-                    <ul>
-                        <li><router-link to="/">/</router-link></li>
-                        <li><router-link to="/hello/you">/hello/you</router-link></li>
-                        <li><router-link to="/static">/static</router-link></li>
-                        <li><router-link to="/dynamic/1">/dynamic/1</router-link></li>
 
-                    </ul>
-
-                    <router-view class="view" foo="$attrs属性" ></router-view>
-                   </div>`
 
     }).$mount('#app')
 

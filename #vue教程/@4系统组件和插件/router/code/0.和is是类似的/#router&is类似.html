@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+
+    <component is="cs" prop="myprop"></component>
+</div>
+
+<script>
+
+    const cs = {template: `<div>{{prop}}--{{prop2}}</div>`, props: ['prop', 'prop2']}
+    const vm = new Vue({ //vue组件构造参数
+        el: "#app",
+        components: {cs}
+    })
+
+
+</script>
+
+
+<div id="router">
+    <!--和is用法基本一样,只不过多了默认项-->
+    <router-view></router-view>
+    <router-view name="cs" prop="myprop"></router-view>
+
+</div>
+
+<script>
+
+    const def = {template: `<div>defalut</div>`}
+
+    const router = new VueRouter({
+        routes: [// <router-view/>组件构造参数
+            {
+                path: '/',
+                name: 'cs',
+                props: {prop2: '2'},
+                component: cs
+            }
+        ]
+    })
+    const vm2 = new Vue({
+        el: '#router',
+        router
+    })
+
+</script>

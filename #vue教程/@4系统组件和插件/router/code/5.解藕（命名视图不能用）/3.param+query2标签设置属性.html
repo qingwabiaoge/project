@@ -13,33 +13,29 @@
         </li>
     </ul>
     <!--读取组件信息-->
-    <router-view></router-view>
+    <router-view :id="$route.params.id" :query="$route.query.q" :prop="$route.query.q-1"></router-view>
 </div>
 
 <script>
     const mybutton = {
-        template: `<button>{{id}}</button>`,
-        props: ['id'],
+        template: `<button style="background: red"><slot></slot></button>`,
+
     }
 
     const mycomponent = {
         //向非页面级的组件传递
-        template: `<div> <mybutton :id="id" ></mybutton>{{query}}</div>`,
-        props: ['id', 'query'],
+        template: `<div> <mybutton>{{id}}</mybutton>{{query}}-{{prop}}</div>`,
+        props: ['id', 'query','prop'],
         components: {mybutton}
     }
 
     const router = new VueRouter({
         linkActiveClass: 'active',
         routes: [
-
             {
                 path: '/:id',
                 name: 'id',
                 // 路由解耦，parame作为组件的属性值像data一样
-                props: function (route) {
-                    return {id: route.params.id, query: route.query.q}
-                },
                 component: mycomponent
             }]
     })
