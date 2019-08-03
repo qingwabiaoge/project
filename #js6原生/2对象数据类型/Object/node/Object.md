@@ -205,7 +205,16 @@ obj.hasOwnProperty(a) 返回boolen
 
 
 
-###### 1. 构造函数this创建的属性(包括枚举型和不可枚举型),以及以后扩展的属性
+ 
+###### obj.a
+
+
+
+* 创建 修改 obj.a
+
+
+
+构造函数this创建的属性(包括枚举型和不可枚举型),以及以后扩展的属性
 
 ```javascript
     function Fn(name, age) {
@@ -222,8 +231,74 @@ obj.hasOwnProperty(a) 返回boolen
     console.log(Object.keys(i))
 ```
 
- 
-###### 2.obj.a
+
+
+ json直面量表示法(键都是json字符串):
+
+```
+
+obj={
+
+        'fn'() {
+            console.log('fn')
+        },
+        '0'(){
+            console.log(0)
+        }
+
+}
+obj[”a”]
+obj.a等价于 obj[”a”]
+obj[’0’]
+obj[0]  等价于 obj[’0’]
+const i='color'  obj[i+'primary'],变量做键值
+   
+
+ //数组
+arry[0]
+arry['0']
+
+
+
+ //类数组对象
+let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
+ArrayLike[2]
+ArrayLike['2']
+
+
+ //字符串(类数组)
+
+
+let str = 'abc'
+
+str[1]
+str['1']
+
+
+
+
+//先定义obj 才能用obj.a,没赋值默认都是undifine
+
+
+   let obj = {}//要先定义obj再设置obj.a才行
+
+    console.log(obj.a)
+    console.log(obj.b)
+    console.log(obj.c)
+
+
+//arr=[] 才能用arr[0],没赋值默认都是undifine
+
+
+  let arr=[]
+  console.log( arr[0],arr[1])
+```
+
+* 删除键
+
+```
+delate(obj.a)
+```
 
 * 本质:赋值obj和'a'计算后的返回值(地址或普通值)
 
@@ -253,94 +328,7 @@ console.log(obj.b)//获得地址
 
 
 
-* 创建 修改 删除obj.a_
-
-
- json直面量表示法(键都是json字符串):
-
-```
-
-obj={
-
-        'fn'() {
-            console.log('fn')
-        },
-        '0'(){
-            console.log(0)
-        }
-
-}
-obj[”a”]
-obj.a等价于 obj[”a”]
-obj[’0’]
-obj[0]  等价于 obj[’0’]
-const i='color'  obj[i+'primary'],变量做键值
-   
-
-
-```
-
-
-
-
- 数组
-
-
-
-```
-arry[0]
-arry['0']
-
-```
-
- 类数组对象
-
-
-
-```
-let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
-
-ArrayLike[2]
-ArrayLike['2']
-```
-
- 字符串(类数组)
-
-```
-let str = 'abc'
-
-str[1]
-str['1']
-```
-
-
-
-先定义obj 才能用obj.a,没赋值默认都是undifine
-
-```
-   let obj = {}//要先定义obj再设置obj.a才行
-
-    console.log(obj.a)
-    console.log(obj.b)
-    console.log(obj.c)
-```
-
-arr=[] 才能用arr[0],没赋值默认都是undifine
-
-```
-  let arr=[]
-  console.log( arr[0],arr[1])
-```
-
-* 删除键
-
-```
-delate(obj.a)
-```
-
-
-
-###### 3.属性定义器 键值也是字符串
+###### 属性定义器 键值也是字符串
 
 
 ````
@@ -457,6 +445,26 @@ console.log(obj)//{a:1,b;2}  打印出来的只是直面量表达式
 
 ![1](3.png)
 
+##### 获得实际对象
+
+```javascript
+    const obj = {a: 1, b: 2}
+
+    console.log(Object.prototype.isPrototypeOf(obj))
+    console.log(Object.getPrototypeOf(obj))
+
+    console.log(obj.hasOwnProperty('a'))
+    console.log(Object.getOwnPropertyNames(obj))//["a", "b"]
+
+    console.log(obj.propertyIsEnumerable('a'))
+    console.log(Object.keys(obj)) //["a", "b"]
+    for(item in obj){
+        console.log(obj[item])
+    }
+
+
+```
+
 ##### 无法和运行操作符()进行计算操作 obj( )错误
 
 ### function,带函数定义式 可以和()计算的对象
@@ -484,17 +492,41 @@ new Function('a', 'b', 'return a + b');
 
 ![1](2.png)
 
-  for..in还能枚举出 
 
-```
-  
+
+##### 判断和取得实际对象
+
+```javascript
+
+    const Fn = function () {
+    }
+    Fn.a = 10
+    
+
+
+  //原型属性Function.prototype
+    console.log(Object.getPrototypeOf(Fn))    //function () { [native code] }
+    console.log(Fn.call,Fn.apply,Fn.bind) //function call() { [native code] }
+    console.log(Fn.call === Function.prototype.call,
+                 Fn.apply===Function.prototype.apply,
+                 Fn.bind===Function.prototype.bind) //true
+
+
+    
+    //Own属性,Function构造生成    
+    console.log(Object.getOwnPropertyNames(Fn))//(6)["length", "name", "arguments", "caller", "prototype", "a"]
+
+    //可枚举属性:静态变量,静态方法
+        console.log(Object.keys(Fn)) //['a']
+
+
+  //for..in还能枚举出 
 
     for (item in f) {
         console.log(item) //a,b
+
     }
-
 ```
-
 
 
 
@@ -527,6 +559,34 @@ console.log(arr)//[1,2] 打印出来的只是表达式
 
 ![](4.png)
 
+##### 取得实际对象的键值
+
+
+```javascript
+  const arr = [1, 2, 3]
+
+    console.log(Array.prototype.isPrototypeOf(arr))
+    console.log(Object.getPrototypeOf(arr)) //concat: ƒ concat()     constructor: ƒ Array()  copyWithin: ƒ copyWithin().....
+
+
+    console.log(arr.hasOwnProperty(length))
+    console.log(Object.getOwnPropertyNames(arr))//["0", "1", "2", "length"]
+
+    console.log(arr.propertyIsEnumerable((0)))
+    console.log(Object.keys(arr)) //["0", "1", "2"]
+    console.log(Object.values(arr))// [1, 2, 3]
+    for(item in arr){
+        console.log(item)
+    }
+    for(item of arr){
+        console.log(item)
+    }
+
+
+
+```
+
+
 ##### 无法和运行操作符()进行计算操作 arr()错误
 
 
@@ -546,6 +606,25 @@ console.log(arr)//[1,2] 打印出来的只是表达式
 
 ![](5.png)
 
+
+##### 获得对象
+
+```javascript
+    const el = document.getElementById('app')
+    el.a=1
+
+
+
+    console.log(Object.getPrototypeOf('el'))
+
+
+    console.log(el.hasOwnProperty('a'))//true
+    console.log(Object.getOwnPropertyNames(el))//['a']
+
+    console.log(el.propertyIsEnumerable('a'))//true
+    console.log(Object.keys(el))//['a']
+
+```
 
 ### reg
 
@@ -568,9 +647,32 @@ new RegExp('\d','i')
 /\w{3}/i
 ```
 
-##### 实际对象
+##### 实际对象(显示不准确,看下边)
 
 ![](./7.png)
+
+##### 获得实际对象信息
+
+```javascript
+   const reg = /\w{3}/i
+    reg.a = 10
+    console.log({reg})
+
+    console.log(RegExp.prototype.isPrototypeOf(reg))
+    console.log(Object.getPrototypeOf(reg))
+
+
+    console.log(reg.hasOwnProperty('lastIndex'))//true
+    console.log(Object.getOwnPropertyNames(reg))//["lastIndex", "a"]
+
+
+    console.log(reg.propertyIsEnumerable('a'))//true
+    console.log(Object.keys(reg))//['a']
+
+```
+
+
+
 # 对象合并
 
 
@@ -661,3 +763,4 @@ Object.is(NaN, NaN) // true
 >_原型 :[英]prototype_  
 
 >_属性: [英]Property_
+
