@@ -1,0 +1,33 @@
+<body>
+
+<hr id="hr">
+</body>
+
+<meta charset="uft-8">
+<script>
+    function addElement() {
+
+        var newA = document.createElement("A");
+        var newText = document.createTextNode("Hi there and greetings!");
+
+        //通过.设置设置属性
+        newA.id='app'
+        
+        //设置 查询 移除自定义属性和系统属性
+        newA.setAttribute('href', '#')
+        newA.getAttribute('href')//获得href
+        newA.setAttribute('someattr', '123')
+        newA.removeAttribute('id')
+
+
+        newA.appendChild(newText);
+        newA.target = '_black'
+
+
+
+        var hr = document.getElementById("hr")
+        document.body.insertBefore(newA, hr)
+    }
+
+    addElement()
+</script>

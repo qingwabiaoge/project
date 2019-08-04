@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+</head>
+<body>
+
+<div id="App">
+    <li>1</li>
+    <li>2</li>
+    <a href="baidu">3</a>4
+</div>
+
+<script>
+    const el = document.getElementById('App')
+
+
+    console.log('el.parentNode', el.parentNode)
+
+    //ie有兼容问题,换行也算text
+    console.log('el.hasChildNodes', el.hasChildNodes())
+    console.log('el.childNodes', el.childNodes)
+    console.log(' el.firstChild', el.firstChild);//第一个
+    console.log(' el.lastChild', el.lastChild);//最后一个
+    console.log('el.firstChild.nextSibling', el.firstChild.nextSibling)
+    console.log(' el.lastChild.previousSibling', el.lastChild.previousSibling);//倒数第二个
+
+
+    //只列出下级标签节点
+    console.log(el.children)
+
+
+    // 列出下级的li节点
+    console.log(el.querySelectorAll('li'))
+
+
+    //列出下级的文本节点
+    console.log(el.querySelectorAll('li')[0].childNodes)
+
+</script>
+</body>
+</html>

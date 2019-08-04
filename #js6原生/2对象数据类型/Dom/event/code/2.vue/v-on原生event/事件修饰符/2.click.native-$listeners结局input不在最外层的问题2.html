@@ -1,0 +1,53 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+
+<!--本实例可以和子传父做个对比-->
+<div id="app">
+
+
+    <base-input @input.native="fn" label="mylabel" value="cs"></base-input>
+
+</div>
+
+
+<script>
+    Vue.component('base-input', {
+
+        props: ['label', 'value'],
+        computed: {
+            inputListeners: function () {
+
+                 //deep copy
+                return Object.assign({},
+                    this.$listeners,
+                )
+            }
+        },
+
+        template: `
+                 <label>
+                  {{ label }}
+
+                  <input
+                    v-bind:value="value"
+                    v-on="inputListeners" >
+<!--// inputListeners='{mouseenter:onEnter,mouseleave:onOut}'绑定对象事件-多事件  -->
+
+                </label>
+               `
+    })
+
+    new Vue({
+        el: '#app',
+        methods: {
+            fn(e) {
+                console.log(e)
+            }
+        },
+
+    })
+
+
+</script>

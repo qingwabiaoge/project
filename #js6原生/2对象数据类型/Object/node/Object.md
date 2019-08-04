@@ -590,7 +590,7 @@ console.log(arr)//[1,2] 打印出来的只是表达式
 ##### 无法和运行操作符()进行计算操作 arr()错误
 
 
-### dom
+### dom节点
 
 ##### 直面量
 ```
@@ -607,22 +607,15 @@ console.log(arr)//[1,2] 打印出来的只是表达式
 ![](5.png)
 
 
-##### 获得对象
+##### 获得document对象
 
 ```javascript
-    const el = document.getElementById('app')
-    el.a=1
 
-
-
-    console.log(Object.getPrototypeOf('el'))
-
-
-    console.log(el.hasOwnProperty('a'))//true
-    console.log(Object.getOwnPropertyNames(el))//['a']
-
-    console.log(el.propertyIsEnumerable('a'))//true
-    console.log(Object.keys(el))//['a']
+    console.log(Object.getPrototypeOf(document))//HTMLDocument {Symbol(Symbol.toStringTag): "HTMLDocument", constructor: ƒ}
+      console.log(Object.getOwnPropertyNames(document))//["location"]
+      console.log(Object.keys(document))//["location"]
+      
+      console.log({app: document.body.childNodes[1]})
 
 ```
 
