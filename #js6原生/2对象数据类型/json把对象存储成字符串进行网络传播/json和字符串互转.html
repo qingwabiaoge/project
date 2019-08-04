@@ -2,10 +2,8 @@
 
 
 <script>
-    var arr = new Array();
-    arr[0] = "pika";
-    arr[1] = "hello";
-    arr[2] = 1;
+    var arr = new Array("pika",'hello',1);
+
     var json = JSON.stringify(arr);
     console.log(json);
     var arr = JSON.parse(json)

@@ -4,7 +4,7 @@
 > event本质上window的全局变量
 
 
-# 3种事件注册:修改全局变量event
+# 3种事件注册和事件运行触发函数修改全局变量event
 
 ```html
 
@@ -85,5 +85,5 @@ this===当前dom对象
 ###  vue组件上可以使用原生dom的event
 
 ```
-加click.native即可
+@click.native即可
 ```
