@@ -20,7 +20,9 @@
 
     </ul>
 
-    <router-view class="red" attr="$attrs属性"></router-view>
+    <hr>
+
+    <router-view class="red" attr="自定义属性"></router-view>
 </div>
 
 
@@ -36,13 +38,12 @@
 
 
     const Hello = {
-        template: `<div><h2 class="hello"> {{name}}</h2>
-                          <hr>
-                                <p> router-view标签可以用class <br>
-                                    router-view标签可以用attrs: {{$attrs}}<br>
-                                    router-view标签上不能添加props, 需要写在new VueRouter()的配置里属性默认值,或者函数动态返回值,  name:<b>{{name}}</b>
-                                </p>
-                                </div>`,
+        template: `<div>
+                       <p>
+                        name:<b>{{name}}</b> <br>
+                        attrs: {{$attrs}}
+                        </p>
+                    </div>`,
         props: {
             name: {
                 type: String,
@@ -73,3 +74,9 @@
     }).$mount('#app')
 
 </script>
+
+<style>
+    .hello {
+        color: red
+    }
+</style>

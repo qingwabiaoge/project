@@ -14,9 +14,9 @@ router.get('/cs', async (ctx, next) => {
 app.use(router.routes())
     .use(router.allowedMethods())
     .use(async (ctx, next) => {
-        ctx.body += '1',
-            await next(),
-            ctx.body += 2
+        ctx.body += '1';
+        await next();
+        ctx.body += 2;
 
     })
 

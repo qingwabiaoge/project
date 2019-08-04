@@ -35,7 +35,6 @@
 
             {
                 path: '/:id',
-                name: 'id',
                 // 路由解耦，parame作为组件的属性值像data一样
                 props: function (route) {
                     return {id: route.params.id, query: route.query.q}
