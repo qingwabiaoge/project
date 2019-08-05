@@ -1,0 +1,60 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<div id="app">
+
+    <ul>
+        <li v-for="item in 4">
+            <!--传数据给$router-->
+            <router-link :to="{path:`/${item}?q=${item*10}`}">
+
+                {{item}}
+            </router-link>
+
+        </li>
+    </ul>
+
+    <!-- 写到这里不太好因为router-view代表的是下级组件,而下级组件不止一种类型的,有的是不需要这些属性的-->
+    <router-view :id="$route.params.id" :query="$route.query.q" :prop="$route.query.q-1"></router-view>
+</div>
+
+<script>
+    const mybutton = {
+        template: `<button style="background: red"><slot></slot></button>`,
+
+    }
+
+    const mycomponent = {
+        //向非页面级的组件传递
+        template: `<div> <mybutton>{{id}}</mybutton>{{query}}-{{prop}}</div>`,
+        props: ['id', 'query', 'prop'],
+        components: {mybutton}
+    }
+
+    const router = new VueRouter({
+        linkActiveClass: 'active',
+        routes: [
+            {
+                path: '/:id',
+                name: 'id',
+                // 路由解耦，parame作为组件的属性值像data一样
+                component: mycomponent
+            }]
+    })
+    const vm = new Vue({
+        el: '#app',
+        router,
+        data() {
+            return {
+                value: 1
+            }
+        }
+    })
+
+</script>
+
+<style>
+    .active {
+        color: red;
+    }
+
+</style>

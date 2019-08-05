@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function outer() {
+        var obj = {a: 1} //地址可以销毁,obj.a不依赖obj变量只是个地址
+
+        return function () {
+            //obj使用堆内存地址,允许出栈
+            console.log(obj.a)
+        };
+
+    }
+
+    var outObj = outer();
+    outObj();
+
+
+</script>
+
+
+</body>
+</html>

@@ -11,32 +11,42 @@
 <div id="app">
 
     <!-- 和is类似-->
-    <router-view name='mainheader'></router-view>
+    <!-- 没有navbar这个routerview就不显示-->
+    <router-view name='navbar'></router-view>
+
+    <!--再加一个-->
+    <router-view name='navbar'></router-view>
+
+
     <!-- 和is类似,is没有默认值-->
     <router-view/>
 
 </div>
 
 <script>
-    const MainHeader = {template: `<div>MainHeader</div>`}
-    const Home = {template: `<div>home</div>`}
+    const NavBar = {
+        template: `<div><router-link to="/login">login</router-link></div>`
+    }
+    const Admin = {template: `<div>home</div>`}
+    const Login = {template: `<div>name:<input type="text"></div>`}
     const router = new VueRouter({
         routes: [
             {
                 //配置<router-link/> <router-view/>组件
                 path: '/',  //<router-link/> 用什么path可以访问
-                name: 'Home', //<router-link/> 用什么name可以访问
+                name: 'Admin', //<router-link/> 用什么name可以访问
                 components: {
                     //:is="name",name默认值未default,
-                    default: Home,
-                    mainheader: MainHeader
+                    default: Admin,
+                    navbar: NavBar
                 }
+
             },
             {
                 path: '/login',
-                name: 'Home',
+                name: 'login',
                 //is用的什么组件
-                component: Home,
+                component: Login,
 
             }
         ]

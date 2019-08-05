@@ -43,12 +43,14 @@ schema.methods.findClass = function (callback) {
 /*--------------------类的静态方法-----------------------------------*/
 
 schema.statics.findDog = function (name, callback) {
-    //this===Dog,   Dog.finddog(),对象调用函数 this===Dog
+    //this===Dog,   因为Dog.finddog(),对象调用函数 this被赋值Dog
     this.find({name: name}, callback);
 };
 //创建修改的静态方法
-schema.statics.modifyDog = function (conditions, update, options, callback) {
-    this.update(conditions, update, options, callback);
+schema.statics.modifyDogAge = function (conditions, age) {
+    this.update(conditions, {$set : {"age":age}}, {}, function () {
+        console.log("更改成功");
+    });
 }
 /*--------------------建立类--------------------------------------*/
 const Dog = mongoose.model('Dog', schema) //两个Dog都是类名，不是数据库名字

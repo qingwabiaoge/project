@@ -201,7 +201,7 @@ shell下输入source /etc/profile 立马生效
 
 ```
 ln -s /alidata/node/bin/node /usr/local/bin/node
-ln -s /alidata/node/bin/node /usr/local/bin/npm
+ln -s /alidata/node/bin/npm /usr/local/bin/npm
 ```
 软连接到 /usr/local/bin/node
 
@@ -288,7 +288,7 @@ echo $HOST
 
 ![](./8.png)
 
-因为npm配置了path   npm下方的运行文件也可以命令行全局运行
+因为npm配置了path   , npm下方的运行文件也可以命令行全局运行,npm i -g xxx 安装到了npm下级文件夹
 
 ![](./9.png)
 
@@ -333,7 +333,7 @@ set path
 set HOST
 ```
 
-### 命令行运行其他程序
+### 命令行运行程序
 
 ```
 node
@@ -351,7 +351,7 @@ webpack
 
 # 安装软件
 
- 命令全局访问 软件目录必须是path里有目录或其下级目录
+ 命令全局访问 软件目录必须是path里有的目录或其下级目录
 
 ### yum市场安装
 ```
@@ -376,7 +376,7 @@ wget http://cn.wordpress.org/wordpress-3.1-zh_CN.zip
 3. make install
 
 
-### 安装免安装包
+### 安装免编译安装包
 
 
 ##### 下载
@@ -399,12 +399,10 @@ vim /etc/profile
 #在文件结尾加入以下内容
 export PATH=$PATH:/var/local/yarn/yarn-1.7.0/bin
 
-```
-##### 立马生效
+ #立马生效 source /etc/profile
 
 ```
-source /etc/profile
-```
+
 
 # vim
 
@@ -477,34 +475,35 @@ WantedBy=multi-user.target
 `chmod 754 mongodb.service`
 
 
+### 操作服务
 
-###启动服务  
+#####启动服务  
 `systemctl start mongodb.service  `
-###关闭服务  
+#####关闭服务  
 `systemctl stop mongodb.service  `
 
-### 重启服务
+##### 重启服务
 
 `systemctl restart mongodb.service`
 
-### 查看服务当前状态
+##### 查看服务当前状态
 
 `systemctl status mongodb.service`
 
-### 参看所有服务的状态
+##### 参看所有服务的状态
 
 `systemctl list-unit-files`
-###开机启动  
+##### 开机启动  
 ```
 systemctl enable mongodb.service 
 
 让/lib/systemd/system/supervisord.service文件开机启动
 ````
-### 取消开机启动
+##### 取消开机启动
 
 `systemctl disable`
 
-#参数的意义
+# 参数的意义
 -R  递归
 
 

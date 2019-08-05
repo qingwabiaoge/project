@@ -1,0 +1,62 @@
+<script>
+    // Master类
+    function Master(name){
+        this.nam=name;
+        //方法[给动物喂食物]
+    }
+    //原型法添加成员函数
+    Master.prototype.feed=function (animal,food){
+        window.alert("给"+animal.name+" 喂"+ food.name);
+    }
+    function Food(name){
+        this.name=name;
+    }
+    //鱼类
+    function Fish(name){
+        this.food=Food;
+        this.food(name);
+    }
+    //骨头
+    function Bone(name){
+        this.food=Food;
+        this.food(name);
+    }
+    function Peach(name){
+        this.food=Food;
+        this.food(name);
+    }
+    //动物类
+    function Animal(name){
+        this.name=name;
+    }
+    //猫猫
+    function Cat(name){
+        this.animal=Animal;
+        this.animal(name);
+    }
+    //狗狗
+    function Dog(name){
+        this.animal=Animal;
+        this.animal(name);
+    }
+    //猴子
+    function Monkey(name){
+        this.animal=Animal;
+        this.animal(name);
+    }
+    var cat=new Cat("猫");
+    var fish=new Fish("鱼");
+
+    var dog=new Dog("狗");
+    var bone=new Bone("骨头");
+
+    var monkey=new Monkey("猴");
+    var peach=new Peach("桃");
+
+    //创建一个主人
+    var master=new Master("zs");
+    master.feed(dog,bone);
+    master.feed(cat,fish);
+    master.feed(monkey,peach);
+
+</script>

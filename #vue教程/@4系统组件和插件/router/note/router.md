@@ -1,14 +1,20 @@
-<meta charset="utf-8">
+# 路由嵌套和普通父子组件嵌套
 
-# 父子路由关系
+路由父子关系和普通父子关系一样也是携带关系  
+### 路由嵌套
+* 用于嵌套布局基本的组件比如<navbar>
 
-父子关系和普通父子关系一样也是携带关系  
+* 用于嵌套页面级别的组件 /new  切换至  /company
 
+### 普通父子组件嵌套
 
+  模块之间的嵌套
 
+# 路由和is
    .     |路由           | 动态组件     |  
 ---|---|---     
 标签        |< route-view/>  |< component />
+作用        /嵌套布局组件,切换页面级别的组件/切换模块级别的组件
 设置组件参数| history栈的值   |is的值     
 组件生命周期|切换运行distroyed|切换运行distroyed
 keeplive   | 切换运行activate deactivate| 切换运行activate deactivate        transition | 可用            |可用      
