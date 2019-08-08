@@ -48,12 +48,12 @@ new Array(1,2,3)
 
 ### Object.creat()
 
-```
+```javascript
     var obj = Object.create({})
 ```
 
 
-```
+```javascript
     var obj = Object.create({},{
         "a":{value :1,congigurable :false,enumerable :true,writable:true},
         "b":{value :2,congigurable :false,enumerable :true,writable:true},
@@ -93,7 +93,7 @@ new Array(1,2,3)
 
 判断对象是否有某属性(返回Boolean) (in操作符是针对key的)
 
-````
+````javascript
 'constructor' in {a:1}
 
 '__proto__' in {a:1}
@@ -205,7 +205,7 @@ obj.hasOwnProperty(a) 返回boolen
 
 
 
- 
+
 ###### obj.a
 
 
@@ -411,7 +411,7 @@ Object.keys()
 JSON.stringify()
 Object.assign()//会忽略掉不可枚举的属性
 ```
- 
+
 
 
 
@@ -631,7 +631,7 @@ console.log(arr)//[1,2] 打印出来的只是表达式
 
 ```javascript
 new RegExp('\d','i')
-``` 
+```
 
 ##### 字面量
 

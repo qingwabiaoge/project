@@ -1,3 +1,7 @@
+
+
+
+
 # 路由嵌套和普通父子组件嵌套
 
 路由父子关系和普通父子关系一样也是携带关系  
@@ -11,13 +15,14 @@
   模块之间的嵌套
 
 # 路由和is
-   .     |路由           | 动态组件     |  
+   .     |路由           | 动态组件     
 ---|---|---     
-标签        |< route-view/>  |< component />
-作用        /嵌套布局组件,切换页面级别的组件/切换模块级别的组件
-设置组件参数| history栈的值   |is的值     
-组件生命周期|切换运行distroyed|切换运行distroyed
-keeplive   | 切换运行activate deactivate| 切换运行activate deactivate        transition | 可用            |可用      
+标签        | < route-view/>  |<  component />
+作用        | 嵌套布局组件,切换页面级别的组件| 切换模块级别的组件
+设置组件参数 | history栈的值   | is的值     
+组件生命周期 |切换运行distroyed|切换运行distroyed
+keeplive    | 切换运行activate deactivate| 切换运行activate deactivate        
+transition | 可用            |可用      
 
 
 # 创建路由实例 const router=new Router({})
@@ -46,6 +51,7 @@ keeplive   | 切换运行activate deactivate| 切换运行activate deactivate   
 </div>
 <script>
     /**************************************** 这个router-view非常容易忘记*/
+    
     const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
 
     const cs = {template: '<div>/fa/cs</div>'}
@@ -90,7 +96,8 @@ keeplive   | 切换运行activate deactivate| 切换运行activate deactivate   
 
 ##### 路由守卫  router.beforeEach
 
-```
+```javascript
+
 
   router.beforeEach((to, from, next) => {//路由的声明周期 进入路由时间的钩子函数
         console.log(from)//要离开路由的$route信息
