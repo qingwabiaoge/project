@@ -7,10 +7,10 @@
 <body>
 <script>
     function outer() {
-        var obj = {a: 1} //地址可以销毁,obj.a不依赖obj变量只是个地址
+        var obj = {a: 1}
 
         return function () {
-            //obj使用堆内存地址,允许出栈
+
             console.log(obj.a)
         };
 
