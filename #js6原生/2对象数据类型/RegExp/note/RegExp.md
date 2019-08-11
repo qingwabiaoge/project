@@ -2,122 +2,82 @@
 
 
 
-# 字面量建立实例
+# 构造函数建立实例
+
+```
+var re = new RegExp('hello','g');   //代替/xxxx/
+```
 
 
-### 修饰符:
+
+# 实例方法
+
+### test(str) exec(str)匹配第一个就结束
+
+```
+const reg = /[1-2]/
+const str = 'a123'
+
+
+
+
+//1.reg匹配部分字符串就为ture
+const i = reg.test(str) //true
+
+
+//2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
+const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
+```
+
+### reg.test判定为true, reg.exe(str)才不是undifined 
+
+```
+ reg.test&reg.exec
+
+reg.test判定为true, reg.exe(str)才不是undifined 
+```
+
+
+
+# 字面量表达式
+
+
+
+### gmi修饰符:
+
 /m多行匹配 [英]multi- :多个
 
 /g [英]globe
 
 /i 对大小写不敏感
 
-
-##### 对match适用  (返回匹配的字符串放到数组里)
-
-str.match(reg)
-
-````
-  var str = 'run runoob runooob runoooooob';
-
- reg=/runo*/g   
-
-console.log(str.match(reg)); //[ 'run', 'runoo', 'runooo', 'runoooooo']
-
-````
-
-多行匹配
-
 ```javascript
+    const str = 'qinshilei\nqinshiwei'
 
-    {
-    const str="This is an\n antzone good";
-    const reg=/an$/;
-    console.log(str.match(reg));   //null
+    const reg = /qin/
+    const reg_ = /^QIN/gmi
 
-    }
-    {
-
-        const str="This is an\n antzone good";
-        const reg=/an$/m;
-        console.log(str.match(reg));//[...........]
-    }
-
-    {
-        const reg = /^b/;
-        const str = 'test\nbbs';
-       console.log(str.match(reg)) //null
-
-    }
-
-    {
-        const reg = /^b/m;
-        const str = 'test\nbbs';
-        console.log(str.match(reg))//[...........]
+    //#1
+    console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined]
+    console.log(str.match(reg_))//["qin", "qin"]
 
 
-    }
-
-```
-
-
-
-##### 对replace适用(返回被替换后的字符串)
-str.repalce(reg,'xxx')
-```
-  var str='秦石磊是个好人,秦石磊是个好男人'
-    reg1=/(好)/
-    reg2=/(好)/g
-    console.log(str.replace(reg1,'坏'))
-    console.log(str.replace(reg2,'坏'))
+    console.log(str.replace(reg, 'wang')) //wangshilei↵qinshiwei
+    console.log(str.replace(reg_, 'wang'))//wangshilei↵wangshiwei
+    console.log(str.replace(reg, item => item.toUpperCase())) //QINshilei↵qinshiwei
+    console.log(str.replace(reg_, item => item.toUpperCase()))//QINshilei↵QINshiwei
 
 
-```
-str.repalce(reg,fn(item){})
-```
-    function replaceReg(reg, str) {
-        return str.replace(reg, function (item) {
-            return `<a href="item">${item}</a>`;
-        })
-    }
-
-    var reg = /http:\/\/[\w-]*(\.[\w-]*)+/ig;
-    var str = '将一个用户输入的一段文字中的url替换成可以点击的link地址。测试一下：http://www.ablanxue.com紧接着中文，还有    http://www.baidu.com';
-    document.write(replaceReg(reg, str));
-
-```
+    console.log(str.search(reg)) //0
+    console.log(str.search(reg_))//0   //不响应global,为搜索的第一个词
 
 
-##### str.search(reg)(返回第一个匹配的字符串的索引 所以只有  i m适用)
-
-```
-   var str = '1111shi,leiqin11qin111,'
-    const reg = /(qin|shi)/
-    console.log(str.search(reg)) //4
-    console.log(str.indexOf('qin')) //11
-    console.log(str.lastIndexOf('qin')) //6
-    
-```
-修饰符
-
-```
-  const reg = /(ab){2}$/mi
-    const str = 'Abab\n1111'
-    console.log(str.search(reg))
-
-```
+    console.log(reg.test(str))//true
+    console.log(reg_.test(str))//true
 
 
-
-##### 对正则方法test(str) exec(str)适用,因为正则方法值匹配第一个 所以只有  i m适用
-
-
-
-```
-  const reg = /ab$/mi
-    const str = 'Ab\n1111'
-    console.log(reg.test(str)) //true`
-    console.log(reg.exec(str))//["Ab"]
+    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  //这个是str.match(reg)的逆运算
+    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]
 ```
 
 
@@ -167,7 +127,7 @@ str.repalce(reg,fn(item){})
 
 
 
-### 次数类* +  ?  {}
+### * +  ?  {}次数
 
 ##### ?
  runo? 可以匹配 run 或者 runo，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。**
@@ -192,7 +152,7 @@ o{,3}
 
 
 
-### 匹配位置$ ^
+### $ ^匹配位置
 
 
 
@@ -215,7 +175,7 @@ console.log(reg.exec(str)) //['lei']
 
 
 
-### ()的作用: 分组和捕获
+### ():分组和捕获
 
 ##### 分组
 
@@ -235,22 +195,32 @@ console.log(reg.exec(str)) //['lei']
 （a|b）匹配a或者b
 ```
 
+##### 捕获和不捕获
 
-##### ()捕获
+###### ()捕获类型
 
  对reg.test()的影响: 可以用括号分组
 
  对reg.exec()的影响: 捕获到reg.exec('xxx')[1],
-   
-可以通过RegExp.$1访问,
+
+* 访问捕获的内容
+
+1. arr[1]
 
 ```
     const reg = /(doubi) is a doubi/
-    console.log(reg.exec('doubi is a doubi'))// [0: "doubi is a doubi" 1: "doubi"]
+    const arr=reg.exec('doubi is a doubi')
+       console.log(arr)// [0: "doubi is a doubi" 1: "doubi"]
+
+```
+2. 可以通过RegExp.$1访问,
+
+``` 
     console.log(RegExp.$1 )//doubi,记忆窍门:和$1===reg.exec('xxx')[1}
 ```
-在表达式里通过/1访问
-   
+
+3. 在表达式里通过/1访问
+
 ```
 
    const reg = /(doubi) is a \1/
@@ -261,7 +231,7 @@ console.log(reg.exec(str)) //['lei']
 
 
 
-###### 非捕获(?:)
+###### (?:)非捕获
 
 对reg.test()的影响: 可以用括号分组
 
@@ -279,11 +249,9 @@ console.log(reg.exec(str))// [0:kid is]
 
 ```
 
-###### 非捕获前瞻(?=)  
+###### (?=)  非捕获前瞻
 
- 非捕获前瞻的含义是:
-
-对reg.test()的影响:往前看一下是否有相等的值,有则返回true
+对reg.test()的影响:可以用括号分组,往前看一下是否有相等的值,有则返回true
 
 对reg.exec()的影响:括号部分不捕获
 
@@ -300,11 +268,9 @@ const str = "hahahamimimi"
 
 
 console.log(reg.test(str))//true
-```  
+```
 
-###### 非捕获前瞻否定(?!)   
-
- 前瞻的含义是:
+###### (?!)  非捕获前瞻否定 
 
 对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
 
@@ -322,7 +288,7 @@ console.log(reg.test(str))//true
 ```
 
 
-### 贪婪模式和懒惰模式
+### * +贪婪模式和?懒惰模式
 ##### 贪婪模式
 " * "限定符和" + "限定符都是__贪婪的__，因为它们会尽可能多的匹配文字，
 
@@ -352,40 +318,7 @@ console.log(reg.exec(str))
 
 ```
 
-
-
-
-
     var re = /hello/g;
-
-# 构造函数建立实例
-
-    var re = new RegExp('hello','g');   //代替/xxxx/
-
-
-
-# 实例方法
-
-test(str) exec(str)匹配第一个就结束
-
-```
-const reg = /[1-2]/
-const str = 'a123'
-
-
-
-
-//1.reg匹配部分字符串就为ture
-const i = reg.test(str) //true
-
-
-//2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
-const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
-```
-
-
-
-
 
 # 常用正则
 
@@ -401,7 +334,19 @@ QQ号：[1-9][0-9]{4,9}
 
 ```
 
+str.repalce(reg,fn(item){})替换网址
+```
+    function replaceReg(reg, str) {
+        return str.replace(reg, function (item) {
+            return `<a href="item">${item}</a>`;
+        })
+    }
 
+    var reg = /http:\/\/[\w-]*(\.[\w-]*)+/ig;
+    var str = '将一个用户输入的一段文字中的url替换成可以点击的link地址。测试一下：http://www.ablanxue.com紧接着中文，还有    http://www.baidu.com';
+    document.write(replaceReg(reg, str));
+
+```
 
 # 注意
 正则在部分代码里必须使用new RegExp _否则无效_

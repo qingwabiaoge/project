@@ -1,26 +1,16 @@
 [[_toc_]]
 # 安装
-<!--
+
 koa版
 
     vue init nuxt/koa nuxt
 普通版
 
     vue init nuxt-community/starter-template <project-name>
--->
-
-
-
 ```
 $ npx create-nuxt-app <项目名>
 
 ```
-
-
-
-
-
-
 
 # nuxt流程
 
@@ -32,17 +22,7 @@ $ npx create-nuxt-app <项目名>
 ![](./img/4.png)
 
 
-
-
-
-
-
-
-
-
 # 详解流程
-
-
 
 ### 上下文对象(函数回调的参数)
 
@@ -58,7 +38,7 @@ $ npx create-nuxt-app <项目名>
 ### 把自定义数据注入到上下文对象
 ##### ctx.xxx注入
 
-```
+```javascript
 
 export default(ctx)=> {
 //新建函数挂载在app上 app.fn
@@ -73,20 +53,19 @@ export default(ctx)=> {
 ```
 
 
-
-
 ##### nuxt.config.js 注入到ctx.env(只能注入变量)
 
-```
+```javascript
 
   env: {
     HOST: process.env.HOST ,
     PORT: 3333,
+  }
 
 ```
 #####  inject联合注入到實例
 
-```
+```javascript
 export default ({ app }, inject) => {
   inject('myCombinedInjectedFunction', (string) => console.log('app联合注入', string))
   //注入到了 app  vm vm.store
@@ -97,7 +76,7 @@ export default ({ app }, inject) => {
 
 在服务器端运行vuex,因为在服务器端,所以浏览器缓存中获得token , 改用从req中获得数据
 
-```
+```javascript
 actions: {
   nuxtServerInit ({ commit,dispatch }, { req }) {
     if (req.session.user) {
@@ -119,7 +98,7 @@ nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 
 1.nuxt.config.js  //进入每个路由前使用的代码
 
 
-```
+```javascript
 
 module.exports = {
   mode: 'universal',
@@ -133,20 +112,23 @@ module.exports = {
 ```
 
 2.匹配布局
-```` 
+
+```` javascript
 export default {
   middleware: 'auth',
+  }
 ````
 3.匹配页面 进入页面前使用的代码
 
-```` 
+```` javascript
 export default {
   middleware: 'auth',
+  }
 ````
 
 /middleware/auth.js
 
-````
+````javascript
 
 export default function ({ store, error, redirect, req }) {
   if (!store.state.token) {
@@ -162,7 +144,7 @@ Nuxt.js 可以让你在动态路由组件中定义参数校验方法。
 
 举个例子： pages/users/_id.vue
 
-```
+```javascript
 export default {
   validate ({ params }) {
     // 必须是number类型
@@ -179,16 +161,16 @@ export default {
 
 如果页面组件设置了 fetch 方法，它会在组件每次加载前被调用__（在服务端或切换至目标路由之前）__。
 
-    fetch({ store, params }){}
+```javascript
+fetch({ store, params }){}
+```
 
 
 ##### page-> asyncData()可以填充vuex和data 
 
 在服务器端调用asyncData时，您可以访问用户请求的req和res对象。
 
-
-
-```
+```javascript
 export default {
   async asyncData ({ req, res }) {
     // 请检查您是否在服务器端
@@ -205,10 +187,10 @@ export default {
 ```
 
 
-```
+```javascript
    async asyncData({store}) {
 
-  await store.dispatch('getBanners', '')
+      await store.dispatch('getBanners', '')
 
     }
 ```
@@ -217,7 +199,7 @@ export default {
 
 ##### nuxt.config.js公共header,本质估计是mixin
 
-```
+```javascript
   head: {
     title: pkg.name,
     meta: [
@@ -237,7 +219,7 @@ export default {
 
 ##### 页面page.vue和head
 
-```
+```javascript
 
 < template>
   <h1>{{ title }}</h1>
@@ -270,14 +252,6 @@ export default {
 
 ![](./img/18.png)
 
-
-
-
-
-
-
-
-
 ### app(服务器上的vue根实例)的生命周期:
 
 ```
@@ -297,13 +271,9 @@ nuxt.render()
 
 ###  代码下载到浏览器重新开始走一遍vue的生命周期
 
-
-
 ##### mouted()后可以用windows方法
 
 ![](./img/8.png)
-
-
 
 
 ### 点击nuxt-link 进入其他页面
@@ -321,16 +291,12 @@ validate()
 
 ### asyncData函数的异步请求
 
-
-
 ### 浏览器端Vue生命周期
 
 __asyncData请求完成后__,才开始vue的生命周期(这点和vuecli不同)
 
 
 # 插件
-
-
 
 ### 全局插件注入和局部插件注入
 
@@ -345,7 +311,7 @@ nuxt.config.js里包含的代码都是全局的,相当于vue的main.js 打开网
 
 ### 设置插件只在服务器或者只在客户端运行
 
-```
+```javascript
 export default {
   plugins: [
     { src: '~/plugins/both-sides.js' },  //both
@@ -357,8 +323,6 @@ export default {
 ```
 
 ### 判断设备运行代码
-
-
 
 #####  if (process.server)
 
@@ -374,20 +338,13 @@ export default {
  if (process.client) {}
 ```
 
-
-
-
-
-
-
-
-
 # 按需加载element插件和css
 
 ##### 1下载依赖：
 	先下载element-ui
+	
+	    npm install element-ui --save
 
-        npm install element-ui --save
 
  	
 ##### 2 创建插件配置文件
@@ -396,36 +353,33 @@ export default {
 在文件根目录创建(或已经存在)plugins/目录，创建名为：element-ui.js的文件，内容如下：
 	
 	import Vue from 'vue'
-
+	
 	import { Button } from 'element-ui'    //引入Button按钮
-
+	
 	export default ()=>{
    	 Vue.use(Button)
 	}
 ##### 3引入插件
-
-
-
-
+```
 	plugins:[
 	'~/plugins/element-ui'
 	]
+````
 
- ssr:false  只在客户端用
-	
-	
+  只在客户端用
+  ```
 	plugins:[
    	 {
         src:'~/plugins/element-ui',
         ssr:false    //只在客户端用
   	  }
 	]
-
+  ```
 ##### 4配置babel选项配置按需加载
 
 如果使用按需引入，必须安装babel-plugin-component(官网有需要下载说明，此插件根据官网规则不	同，安装插件不同)
 
-	
+
 ````
 npm install babel-plugin-component --save-dev
 ````
@@ -462,7 +416,7 @@ npm install babel-plugin-component --save-dev
 
 修改gulpfile.js
 
-````
+````javascript
 
 gulp.task('compile', function() {
   return gulp.src('./src/*.scss')
@@ -488,10 +442,6 @@ gulp.task('build', ['compile', 'copyfont']);
 生成css命令
 
 `npm run build `
-
-
-
-
 
 
 # 根组件
@@ -557,12 +507,6 @@ build: {
   }
 ```
 
------
-
-
-
-
-
 # 配置主机和端口
 
 
@@ -575,7 +519,7 @@ linux永久设置系统变量HOST, NODE_ENV
 nuxt.config.js配置context.env 注入到上下文对形象
 
 
-```
+```javascript
 //context里注入的env,機器設置永久的HOST環境變量,則個地方才方便
   env: {
     HOST: process.env.HOST ,
@@ -587,7 +531,7 @@ nuxt.config.js配置context.env 注入到上下文对形象
 
 axios使用
 
-```
+```javascript
 export default function ({$axios,redirect,env}) {
   let axios = $axios;
   // 基本配置
@@ -598,24 +542,17 @@ export default function ({$axios,redirect,env}) {
 
 server/index.js使用
 
-```
+```javascript
 let config = require('../nuxt.config.js')
 const host= config.env.HOST
 const port= config.env.PORT
 ```
 
 
-
-
-----------------
-
-
-
-
 # nuxt vuecli修改axios地址 再打包上传
 
 
-```
+```javascript
   env: {
     HOST: 47.107.170.105,
     PORT: 3333

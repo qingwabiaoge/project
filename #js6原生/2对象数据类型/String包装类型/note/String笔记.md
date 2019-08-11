@@ -12,12 +12,12 @@
 
 
 # 截取
-#### substring
+### substring
 ```
 substring(0,30) //参数2的值要比参数1大
 ```
 
-#### slice
+### slice
 
 ```
 var str='abcdefg'; 
@@ -28,6 +28,8 @@ str.slice(3,1) // ""
 
 # 去除空格
 
+### trim
+
 ```
 
 str.trim('   123')
@@ -36,18 +38,18 @@ str.trim('   123')
 # 判断是否以xxx开头结尾
 
 
-#### endsWith()
+### endsWith()
 
-#### startsWith()
+### startsWith()
 
 # 自动补全
-#### padStart()
+### padStart()
 pad~padding 补丁
 
     a=`love`.padStart(7, '1111'); // 字符串love补足7位 用‘1111’补
-#### padEnd()
+### padEnd()
 
 # 重复
-repeat()
+### repeat()
 
 

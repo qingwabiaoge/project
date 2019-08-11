@@ -1,7 +1,6 @@
 [[toc]]
 
 <style>h3{font-weight:bolder}</style>
-
 # 声明过没赋值的值都是undifined
 
 
@@ -56,23 +55,23 @@ let [a,b]=[1]
 
 函数没有返回值默认返回undefined
 
-# 参数型变量也是如此
+### 参数型变量
 
-### 函数参数
+##### 函数参数
 
 函数参数也是变量的一种形参默认也是undefined
 
 
-### 构造函数参数
+##### 构造函数参数
 
 构造函数也是函数的一种 
 
 
-### vue标签本质也是函数
+##### vue标签本质也是函数
 
 
-```javascript
-< mybutton type="">< /mybuttion>
+```html
+<mybutton type=""></mybutton>
 
 <!-- 
 构造函数调用new button(),实参传值给形参未赋值的形参为undefine 

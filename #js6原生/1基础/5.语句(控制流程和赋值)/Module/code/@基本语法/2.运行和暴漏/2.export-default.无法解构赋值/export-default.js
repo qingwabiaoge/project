@@ -1,20 +1,19 @@
 export default {
     a:1,
-    fn() {
-        console.log(this.a++)
-    }
+    b:2
 }
 
 
 
 
 /*µÈ¼ÛÓÚ
-*   module.exports={
-*     default:{
-*      a:1,
-*      fn(){}
-*             }
-*                    }
-*
-* */
+  module.exports={
+
+     default:{
+                a:1,
+                 b:2
+               }
+             }
+
+*/
 
