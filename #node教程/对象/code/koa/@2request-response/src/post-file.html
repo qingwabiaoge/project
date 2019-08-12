@@ -66,16 +66,14 @@
                 console.log(formdata)
 
                 let config = {
-
-                    headers: {
-
-                        headers: {'Content-Type': 'multipart/form-data'} //之前说的以表单传数据的格式来传递fromdata
-
-                    }
+                    headers: { "Content-Type": "multipart/form-data" },
 
                 };
 
-                axios.post('http://localhost:3000/request/', formdata, config).then((res) => {
+                axios.post('http://localhost:3000/request-file/', formdata, {
+                    headers: { "Content-Type": "multipart/form-data" },
+
+                }).then((res) => {
 
                     //做处理
 

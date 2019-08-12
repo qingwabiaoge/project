@@ -2,16 +2,16 @@ module.exports = async (ctx, next) => {
 
 
     ctx.status = 200
-    ctx.state.code=0
-    ctx.state.msg='hello'
-    ctx.state.data='state.customData数据'
-
+    ctx.state.code = 0
+    ctx.state.msg = 'hello'
+    ctx.state.data = 'state.customData数据'
 
 
     console.log("ctx-----------")
     console.log(Object.keys(ctx))
 
-
+    console.log("ctx.req.headers.cookie-----------")
+    console.log(ctx.req.headers.cookie)
 
     console.log("ctx.request.url---------")
     console.log(ctx.url === ctx.request.url);
@@ -39,12 +39,10 @@ module.exports = async (ctx, next) => {
     console.log(ctx.params)
 
 
-
     console.log('ctx.request.header----------------')
-    console.log(ctx.request.header===ctx.header) //true
-    console.log(ctx.req.header===ctx.header)  //false
+    console.log(ctx.request.header === ctx.header) //true
+    console.log(ctx.req.header === ctx.header)  //false
     console.log(ctx.request.header)
-
 
 
 }

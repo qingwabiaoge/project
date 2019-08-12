@@ -3,17 +3,23 @@
 
 <script>
 
-   const store={state:{token:{token:'this is token'}}}
 
-   axios.defaults.baseURL ='http://localhost:3000'
-  // axios.defaults.headers.common['Authorization'] ='AUTH_TOKEN';
-   axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+    //全局的 axios 默认值
+    axios.defaults.baseURL = 'http://localhost:3000'
+//#1头文件加入方式1
+    axios.defaults.headers.common['Authorization'] = 'DEFAULT.TOKEN';
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-    // request添加信息
+
+    const store = {state: {token: {token: 'this is token'}}}
+
+    // 拦截request并添加信息
     axios.interceptors.request.use(
+
         config => {
-            // 在headers里加入数据
+            // 在headers里加入数据,会覆盖全局默认值
             if (store.state.token.token) {
+//#2头文件加入方式2
                 config.headers.Authorization = `token ${store.state.token.token}`;
             }
             // loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
@@ -25,31 +31,30 @@
         }
     );
 
-    //response拦截并处理数据
+    //response过滤数据
     axios.interceptors.response.use(
         // status=2xx的 正确的的走这里
         res => {
-            console.log('默认返回的报文res:',res)
+            console.log('默认返回的报文res:', res)
 
-            if (res.data.code === -1&&res.data.msg) {
+            if (res.data.code === -1 && res.data.msg) {
                 // alert(res.data.data.msg)
             } else {
                 if (res.data.msg) {
-                   alert(res.data.msg)
+                    alert(res.data.msg)
                 }
-
                 return res.data.data;
-
             }
 
         },
+
         //检测status默认除了2XX之外的都是错误的，就会走这里
         error => {
             if (error.response) {
 
                 switch (error.response.status) {
                     case 401:
-                        alert('登陆过期，请重新登陆' )
+                        alert('登陆过期，请重新登陆')
                         break
                     case 404:
                         alert('404错误，请检查网络' + error.response.statusText)
@@ -58,16 +63,16 @@
                     default:
                         alert('错误:' + error.response.statusText)
 
-
                 }
             }
             return Promise.reject(error.response);
         }
     );
 
-
-
-    axios.get('/request').then(_=>{console.log('这是过滤后的数据:',_)})
+    //额外添加head,不能覆盖拦截器里的同名字段
+    const config = {headers: {'X-Requested-With': 'shilei'}};
+//#3头文件加入方式3
+    axios.get('/request', config).then(_ => console.log('这是过滤后的数据:', _))
 
 
 </script>
