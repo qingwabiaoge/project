@@ -14,11 +14,18 @@ var mongoose = require('mongoose');
 // });
 // module.exports = db;
 
+var options = {
+    useNewUrlParser: true,
+    'useCreateIndex': true,
+    // user: 'myUserName',
+    // pass: 'myPassword'
+}
 
-mongoose.connect('mongodb://localhost/demo', {useNewUrlParser:true}, function(err){
-    if(err){
+
+mongoose.connect('mongodb://localhost/demo', options, function (err) {
+    if (err) {
         console.log('Connection Error:' + err)
-    }else{
+    } else {
         console.log('Connection success!')
     }
 })

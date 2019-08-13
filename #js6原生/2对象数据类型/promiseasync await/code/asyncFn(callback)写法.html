@@ -29,18 +29,29 @@
         }
     }
 
+
+
+
+
+
+
     asynFn((err, res) => {
         if (err) {
             console.log(err)
         } else {
             console.log(res)
 
-
         }
 
     })
 
-    asynFn().then(res => console.log(res)).catch(err => {
-        console.log(err)
-    })
+
+
+
+
+        asynFn().then(res => console.log(res)).catch(err => {
+            console.log(err)
+        })
+
+
 </script>

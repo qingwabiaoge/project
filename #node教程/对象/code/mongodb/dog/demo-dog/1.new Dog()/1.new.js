@@ -1,6 +1,6 @@
 const Dog = require('../../model/Dog')
 var dog = new Dog({
-    "name": "小花",
+    "name": "小马",
     age: 10,
     "type": "雌"
 });
