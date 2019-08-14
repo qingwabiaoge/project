@@ -26,6 +26,13 @@
         props: {prop: {default: 10}}
     })
     const vm = new VueComponent({props: {prop: {default: 100}}})
+
     const dom = vm.$mount().$el
     document.getElementById('app').appendChild(dom)
 </script>
+
+<style>
+    .red {
+        color: red;
+    }
+</style>

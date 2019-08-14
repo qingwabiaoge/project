@@ -1,22 +1,20 @@
-# 
+# 一、安装过程
 
-# **一、安装过程**
+1. 到mongodb官网下载对应系统的压缩包，我的系统是Ubuntu16.04,64位。（注意不要选错系统版本，也可以在本地下载好后上传到云服务器）
 
-１．到mongodb官网下载对应系统的压缩包，我的系统是Ubuntu16.04,64位。（注意不要选错系统版本，也可以在本地下载好后上传到云服务器）
-
-２．默认下载路径是到用户目录下的Downloads目录，将其解压
+2. 默认下载路径是到用户目录下的Downloads目录，将其解压
 
 ```
 tar -zxvf mongodb-linux-x86_64-3.2.12.tgz
 ```
 
-３．将解压后的文件夹移动到/usr/local/的mongodb目录下
+3. 将解压后的文件夹移动到/usr/local/的mongodb目录下
 
 ```
 mv -r mongodb-linux-x86_64-3.2.12 /usr/local/mongodb
 ```
 
-４．配置系统文件profile
+4. 配置系统文件profile
 
 ```
 sudo vi /etc/profile
@@ -51,6 +49,8 @@ touch mongodb.log
 
 ![img](https://images2018.cnblogs.com/blog/1101099/201803/1101099-20180319233418015-953209930.png)
 
+# 二、配置用户
+
 6. mongodb启动配置
 
 进入到bin目录，增加一个配置文件：
@@ -79,14 +79,14 @@ auth = true #开启密码
 
    
 
-1.  启动mongod数据库服务，以配置文件的方式启动
+8.  启动mongod数据库服务，以配置文件的方式启动
 
 ```
 cd /usr/local/mongodb/bin
 ./mongod -f mongodb.conf
 ```
 
-８．连接mongodb数据库
+9. 连接mongodb数据库
 
 ```
 ./mongo
@@ -94,9 +94,11 @@ cd /usr/local/mongodb/bin
 
 ![img](https://images2018.cnblogs.com/blog/1101099/201803/1101099-20180319233505037-1320009908.png)
 
+10. 登陆测试用户是否成功
+    db.auth("root", "qinshilei@168") 如果返回1，则表示成功。
+    show collections 验证是否登陆成功
 
-
-# 二.设置mongodb.service启动服务
+# 三、设置mongodb.service启动服务
 
 ９．设置mongodb.service启动服务，设置开机启动
 
@@ -123,8 +125,6 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-
-
 10．设置mongodb.service权限
 
 ```
@@ -132,8 +132,6 @@ chmod 754 mongodb.service
 ```
 
 11．系统mongodb.service的操作命令如下：
-
-
 
 ```
 #启动服务  
@@ -152,7 +150,7 @@ systemctl enable mongodb.service
 
  
 
-# 三、安装过程中遇到的问题
+# 四、安装过程中遇到的问题
 
 **1.**
 

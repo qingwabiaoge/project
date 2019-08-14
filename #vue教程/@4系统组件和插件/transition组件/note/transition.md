@@ -2,66 +2,116 @@
 > Vue 提供了 transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡
 
 ```
-条件渲染 (使用 v-if)
-条件展示 (使用 v-show)
+模块渲染 (使用 v-if)
+隐藏显示 (使用 v-show)
 动态组件
 路由切换
 
 ```
->注意：
-
->transition标签中只能包裹一个元素，否则会报错：
-![](1.png)
 
 
+# 过渡原理：
 
-#过渡原理：
->在动画执行的过程中，vue在不同时刻向标签上动态的增加与删除一些class属性，实现动画过渡的效果。
-
->![](2.jpg)
-
---------------
-
-> 当元素从隐藏到显示的过程中，其过程如下图所示：
-
->![](3.png)
-
-
-#过渡的类名：
-
-
->在进入/离开的过渡中，会有 6 个 class 切换。
-
->v-enter：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。
-
->v-enter-active：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。
-
->v-enter-to: 2.1.8版及以上 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 v-enter 被移除)，在过渡/动画完成之后移除。
-
->v-leave: 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。
-
->v-leave-active：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。
-
->v-leave-to: 2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。
-
-
-
-
-# code
-
+```html
+  <transition name="fade" mode="out-in">
+        <p v-if="show">hello</p>
+    </transition>
 ```
- <style>
+```css
+
         .fade-enter{
             opacity: 0;
         }
-        .fade-enter-active{
+        .fade-enter-active,.fade-leave-active{
             transition: opacity 1s;
         }
         .fade-leave-to{
             opacity: 0;
         }
-        .fade-leave-active{
-            transition: opacity 1s;
+```
+模块创建或者显示时间触发
+
+![](2.png)
+模块销毁或者隐藏时间触发
+
+![](3.png)
+
+
+
+
+
+
+# transition-group
+
+> transition标签中只能包裹一个元素，否则会报错：
+> ![](1.png)
+
+# transition和animal
+
+###  css过渡
+
+●起始态--------------------------------------●结束态
+
+​                         transition time
+
+### 动画
+
+任意状态触发添加animite的类,触发动画
+
+##### 渲染和销毁添加不同动画
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="example-3">
+    <button @click="show = !show">
+        Toggle render
+    </button>
+
+    <transition
+            enter-active-class="animated tada"
+            leave-active-class="animated bounceOutRight"
+    >
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+
+<script>
+
+    new Vue({
+        el: '#example-3',
+        data: {
+            show: true
         }
+    })
+</script>
+```
+
+##### hover触发动画
+
+```html
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+<div id="app">
+
+    <button :class="{bounceOutRight:isOUt}" class="animated" @mouseover="isOUt=!isOUt">btn</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            isOUt: false
+        }
+    })
+</script>
 
 ```
+
