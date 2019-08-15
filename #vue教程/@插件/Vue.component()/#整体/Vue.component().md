@@ -22,6 +22,33 @@ fa={age:10,fn(){} ....}
 <cl age='age' @fn='fn'></cl>
 const cl = new VueComponent({props: {age,fn}})
 ```
-### 组件属性改变
+### 组件属性的种类
+
+> props=['xxx'] 自定义属性
+
+> class
+
+> style
+
+>  attr 通过$attr访问
+
+>  ref其他组件 通过 this.$refs['xxx']访问
+```
+<el-input-number 
+                 v-model="num" 
+                @change="handleChange" 
+               :min="1" 
+              :max="10" 
+              label="描述文字"
+             :label-width="formLabelWidth">
+</el-input-number>
+
+num变量随着fa.num的改变而改变,
+label常量不可改变
+:min="1" :max="10"也是常量,程序代码里不可改变
+:label-width="formLabelWidth" 不用更改值的变量
+```
+
+### 组件属性改变更新视图
 
 组件属性改变=>l中的键值也会改变=>cl的钩子函数运行(render,v-direct,watch,update等)

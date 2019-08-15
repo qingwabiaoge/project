@@ -1,4 +1,12 @@
-# 使用场景
+# 原生css transition
+
+```
+●状态1--------------------------------------●状态2(hover)                        
+                  transition:all:0.5s
+```
+
+# < transition />使用场景
+
 > Vue 提供了 transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡
 
 ```
@@ -10,7 +18,7 @@
 ```
 
 
-# 过渡原理：
+# < transition />过渡原理
 
 ```html
   <transition name="fade" mode="out-in">
@@ -19,15 +27,13 @@
 ```
 ```css
 
-        .fade-enter{
+        .fade-enter,.fade-leave-to{
             opacity: 0;
         }
         .fade-enter-active,.fade-leave-active{
-            transition: opacity 1s;
+            transition: all 1s;
         }
-        .fade-leave-to{
-            opacity: 0;
-        }
+   
 ```
 模块创建或者显示时间触发
 
@@ -41,24 +47,16 @@
 
 
 
-# transition-group
+# < transition-group />
 
 > transition标签中只能包裹一个元素，否则会报错：
 > ![](1.png)
 
-# transition和animal
-
-###  css过渡
-
-●起始态--------------------------------------●结束态
-
-​                         transition time
-
-### 动画
+# < transition />使用animal.css
 
 任意状态触发添加animite的类,触发动画
 
-##### 渲染和销毁添加不同动画
+### 渲染和销毁添加不同动画class
 
 ```html
 <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
@@ -88,7 +86,7 @@
 </script>
 ```
 
-##### hover触发动画
+### hover添加动画class
 
 ```html
 <meta charset="utf-8">

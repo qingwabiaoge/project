@@ -1,10 +1,9 @@
-[[toc]]
 # event对象是全局变量
 
 > event本质上window的全局变量
 
 
-# 3种事件注册和事件运行触发函数修改全局变量event
+### 3种事件注册和事件运行触发函数修改全局变量event
 
 ```html
 
@@ -39,7 +38,7 @@ this===当前dom对象
 </script>
 
 ```
-# event的数据结构
+# event对象的属性
 ### event对象包含事件名称,注入被操作el对象到target键
 
 
