@@ -1,4 +1,5 @@
-# 和数组相同的公共方法
+# String.prototype
+### 和数组相同的公共方法
 
 |公共方法|array|string（类数组）|Function|
 |----|----|-----|-----|
@@ -11,13 +12,13 @@
 |填充|fill(’qsl’,1,4))|padStart(7,'111111')|
 
 
-# 截取
-### substring
+### 截取
+##### substring
 ```
 substring(0,30) //参数2的值要比参数1大
 ```
 
-### slice
+##### slice
 
 ```
 var str='abcdefg'; 
@@ -26,30 +27,30 @@ str.slice(1,3)  // bc
 str.slice(3,1) // ""
 ```
 
-# 去除空格
+### 去除空格
 
-### trim
+##### trim
 
 ```
 
 str.trim('   123')
 ```
 
-# 判断是否以xxx开头结尾
+### 判断是否以xxx开头结尾
 
 
-### endsWith()
+##### endsWith()
 
-### startsWith()
+##### startsWith()
 
-# 自动补全
-### padStart()
+### 自动补全
+##### padStart()
 pad~padding 补丁
 
     a=`love`.padStart(7, '1111'); // 字符串love补足7位 用‘1111’补
-### padEnd()
+##### padEnd()
 
-# 重复
-### repeat()
+### 重复
+##### repeat()
 
 

@@ -19,12 +19,14 @@ this===当前dom对象
 
     console.log(event) //undifine也不是err 说明event声明过,事件操作只是为event赋值
 
-    const el = document.getElementById('btn')
+  
     function fn() {
         //event 其实是window全局变量,注意不是global
         console.log(window.event)
     }
 
+    
+   const el = document.getElementById('btn')
     //方式2
     el.onmousedown = fn
 

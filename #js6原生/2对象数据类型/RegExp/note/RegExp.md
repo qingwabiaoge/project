@@ -1,36 +1,26 @@
-[[toc]]
-
-
-
 # 构造函数建立实例
 
 ```
 var re = new RegExp('hello','g');   //代替/xxxx/
 ```
 
-
-
-
-
 # 字面量语法糖建立实例
-
-
 
 ### gmi修饰符:
 
-/m多行匹配 [英]multi- :多个
-
 /g [英]globe
+
+/m多行匹配 [英]multi- :多个
 
 /i 对大小写不敏感
 
 ```javascript
     const str = 'qinshilei\nqinshiwei'
 
-    const reg = /qin/
-    const reg_ = /^QIN/gmi
+    const reg = /qi\w/
+    const reg_ = /^QI\w/gmi
 
-    //#1
+
     console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined]
     console.log(str.match(reg_))//["qin", "qin"]
 
@@ -42,7 +32,7 @@ var re = new RegExp('hello','g');   //代替/xxxx/
 
 
     console.log(str.search(reg)) //0
-    console.log(str.search(reg_))//0   //不响应global,为搜索的第一个词
+    console.log(str.search(reg_))//0   //****唯一 一个不响应global,为搜索的第一个词
 
 
     console.log(reg.test(str))//true
@@ -50,11 +40,11 @@ var re = new RegExp('hello','g');   //代替/xxxx/
 
 
     console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  //这个是str.match(reg)的逆运算
-    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]
+    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个
 ```
 
 
-### \  转意字符(单字符)
+###  转意字符匹配若干范围(单字符)
 ```
  . 代表任意字符
 \. 表示真实的.
@@ -79,28 +69,26 @@ var re = new RegExp('hello','g');   //代替/xxxx/
 
 ```
 
+### 自定义匹配(单字符) 
 
-
-###  [-] 自定义匹配范围 (单字符) [^ ]排除后的范围匹配
+#####  [-] 自定义匹配范围 
 
 [a-zA-z]匹配英文大小写
 
-[  ^ ]表示排除  [^ \s]
-
 [0-3]匹配0，1，2，3
-
-[^ 0-3 ]匹配 4，5，6，7，8，9
 
 [0-9]* 匹配数字（注意后面有 *，可以为空）
 
 [0-9]+ 匹配数字（注意后面有 +，不可以为空）
 
+##### [ ^  ]排除后的范围匹配
+
+[  ^ ]表示排除  [ ^  \s ]
+
+[^ 0-3 ]匹配 4，5，6，7，8，9
 
 
-
-
-
-### * +  ?  {}次数
+### 次数
 
 ##### ?
  runo? 可以匹配 run 或者 runo，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。**
@@ -122,10 +110,40 @@ o{,3}
 
 (a|b){3,}
 
+##### 贪婪模式和懒惰模式
+
+###### 贪婪模式* +
+
+" * "限定符和" + "限定符都是__贪婪的__，因为它们会尽可能多的匹配文字，
+
+如：`<img src="test.jpg" width="60px" height="80px"/>`如果用正则匹配src中内容非懒惰模式匹配`/src=".*"/`
+
+匹配结果是：`src="test.jpg" width="60px" height="80px"`意思是从="往后匹配，直到最后一个 **"** 匹配结束
+
+###### 懒惰模式正则?
+
+在它们的后面加上一个?就可以实现非贪婪或最少匹配。
+
+`/src=".*?"/`
+
+结果：`src="test.jpg"`因为匹配到第一个 **"** 就结束了一次匹配。不会继续向后匹配。因为他懒惰嘛。
 
 
 
-### $ ^匹配位置
+```
+const str = `<img src="test.jpg" width="60px" height="80px"/>`
+
+const reg = /src=".*?"/
+ 
+console.log(reg.test(str))
+console.log(reg.exec(str))
+
+```
+
+
+
+
+### 匹配位置$ ^
 
 
 
@@ -148,7 +166,7 @@ console.log(reg.exec(str)) //['lei']
 
 
 
-### ():分组和捕获
+### 分组和捕获()
 
 ##### 分组
 
@@ -170,20 +188,23 @@ console.log(reg.exec(str)) //['lei']
 
 ##### 捕获和不捕获
 
-###### ()捕获类型
+###### 捕获类型()
 
- 对reg.test()的影响: 可以用括号分组
+-  对reg.test()的影响: 括号分组
 
- 对reg.exec()的影响: 捕获到reg.exec('xxx')[1],
+-  对reg.exec()的影响: 括号部分捕获并把括号部分的捕获值赋值到reg.exec('xxx')[1]
 
-* 访问捕获的内容
 
-1. arr[1]
+
+
+>  访问捕获的内容
+
+1. reg.exec('xxx')[1]
 
 ```
     const reg = /(doubi) is a doubi/
     const arr=reg.exec('doubi is a doubi')
-       console.log(arr)// [0: "doubi is a doubi" 1: "doubi"]
+    console.log(arr)// [0: "doubi is a doubi" 1: "doubi"]
 
 ```
 2. 可以通过RegExp.$1访问,
@@ -204,11 +225,12 @@ console.log(reg.exec(str)) //['lei']
 
 
 
-###### (?:)非捕获
+###### 非捕获(?:)
 
-对reg.test()的影响: 可以用括号分组
+- 对reg.test()的影响: 括号分组
 
-对reg.exec()的影响: 括号部分不捕获
+- 对reg.exec()的影响: 括号部分不捕获
+
 
 
 ```
@@ -222,11 +244,12 @@ console.log(reg.exec(str))// [0:kid is]
 
 ```
 
-###### (?=)  非捕获前瞻
+###### 非捕获前瞻(?=)  
 
-对reg.test()的影响:可以用括号分组,往前看一下是否有相等的值,有则返回true
+- 对reg.test()的影响:可以用括号分组,往前看一下是否有相等的值,有则返回true
 
-对reg.exec()的影响:括号部分不捕获
+- 对reg.exec()的影响:括号部分不捕获
+
 
 ```
    const reg = /kid is a (?=doubi)/
@@ -243,11 +266,12 @@ const str = "hahahamimimi"
 console.log(reg.test(str))//true
 ```
 
-###### (?!)  非捕获前瞻否定 
+######  非捕获前瞻否定(?!)  
 
-对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
+- 对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
 
-对reg.exec()的影响: 括号部分不捕获
+- 对reg.exec()的影响: 括号部分不捕获
+
 
 
 ```
@@ -261,43 +285,68 @@ console.log(reg.test(str))//true
 ```
 
 
-### * +贪婪模式和?懒惰模式
-##### 贪婪模式
-" * "限定符和" + "限定符都是__贪婪的__，因为它们会尽可能多的匹配文字，
-
-如：`<img src="test.jpg" width="60px" height="80px"/>`如果用正则匹配src中内容非懒惰模式匹配`/src=".*"/`
-
-匹配结果是：`src="test.jpg" width="60px" height="80px"`意思是从="往后匹配，直到最后一个"匹配结束
-
-##### 懒惰模式正则*?：
-
-
-在它们的后面加上一个?就可以实现非贪婪或最少匹配。
-
-`/src=".*?"/`
-
-结果：`src="test.jpg"`因为匹配到第一个"就结束了一次匹配。不会继续向后匹配。因为他懒惰嘛。
 
 
 
+# 所有属性in
+
+![](./7.png)
+
+
+
+```javascript
+   const reg = /\w{3}/i
+    reg.a = 10
+    console.log({reg})
+
+    console.log(RegExp.prototype.isPrototypeOf(reg))
+    console.log(Object.getPrototypeOf(reg))
+
+/*    compile: ƒ compile()
+    constructor: ƒ RegExp()
+    dotAll: (...)
+    exec: ƒ exec()
+    flags: (...)
+    global: (...)
+    ignoreCase: (...)
+    multiline: (...)
+    source: (...)
+    sticky: (...)
+    test: ƒ test()
+    toString: ƒ toString()
+    unicode: (...)
+    Symbol(Symbol.match): ƒ [Symbol.match]()
+    Symbol(Symbol.matchAll): ƒ [Symbol.matchAll]()
+    Symbol(Symbol.replace): ƒ [Symbol.replace]()
+    Symbol(Symbol.search): ƒ [Symbol.search]()
+    Symbol(Symbol.split): ƒ [Symbol.split]()
+    get dotAll: ƒ dotAll()
+    get flags: ƒ flags()
+    get global: ƒ global()
+    get ignoreCase: ƒ ignoreCase()
+    get multiline: ƒ multiline()
+    get source: ƒ source()
+    get sticky: ƒ sticky()
+    get unicode: ƒ unicode()
+    __proto__: Object*/
+   
+
+    console.log(reg.hasOwnProperty('lastIndex'))//true
+    console.log(Object.getOwnPropertyNames(reg))//["lastIndex", "a"]
+
+
+    console.log(reg.propertyIsEnumerable('a'))//true
+    console.log(Object.keys(reg))//['a']
 
 ```
-const str = `<img src="test.jpg" width="60px" height="80px"/>`
 
-const reg = /src=".*?"/
 
-console.log(reg.test(str))
-console.log(reg.exec(str))
 
-```
+### RegExp.prototype
 
-    var re = /hello/g;
+##### reg.test(str),reg. exec(str)匹配第一个就结束
 
-# 实例方法
-
-### reg.test(str),reg. exec(str)匹配第一个就结束
-
-```
+```javascript
 const reg = /[1-2]/
 const str = 'a123'
 
@@ -309,11 +358,9 @@ const i = reg.test(str) //true
 const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 ```
 
-### reg.test判定为true, reg.exe(str)才不是undifined 
+##### reg.test判定为true, reg.exe(str)才不是undifined 
 
-```
- reg.test&reg.exec
-
+```javascript
 reg.test判定为true, reg.exe(str)才不是undifined 
 ```
 
