@@ -72,5 +72,4 @@ export default () => {
   Vue.use(textList)
   Vue.use(picA)
 
-
 }

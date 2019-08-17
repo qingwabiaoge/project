@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div{ background: #eee}
+    .div1, .div2, .div3 {
+      width: 100px;
+    }
+
+
+    .div1 {
+      background: red
+    }
+
+    .div2 {
+      background: green
+    }
+
+    .div3 {
+      background: rgba(0, 0, 255, 0.5);
+      color: white;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div>
+
+  <div class="div2" style=" position: absolute; top: 0px"> absolute;</div>
+
+  <div class="div3" style=" position: fixed; top: 0px"> fixed</div>
+
+  正常文档流
+</div>
+
+<br>
+
+<div >
+  <div class="div1" style="float: left; margin: 10px"> float</div>
+  正常文档流
+</div>
+<!--z-index 定义了postion才有用-->
+</body>
+</html>

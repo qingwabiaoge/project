@@ -1,151 +1,147 @@
+# å®¹å™¨çº§å’Œæ–‡æœ¬çº§
+![](./1.png)
 
+# å—å…ƒç´ (block element) HTMLæ ‡ç­¾åˆ†ç±»æ˜Žç»†
 
+address - åœ°å€
 
+blockquote - å—å¼•ç”¨
 
+center - ä¸¾ä¸­å¯¹é½å—
 
+dir - ç›®å½•åˆ—è¡¨
 
-# ¿éÔªËØ(block element) HTML±êÇ©·ÖÀàÃ÷Ï¸
+div - å¸¸ç”¨å—çº§å®¹æ˜“ï¼Œä¹Ÿæ˜¯css layoutçš„ä¸»è¦æ ‡ç­¾
 
-address - µØÖ·
+dl - å®šä¹‰åˆ—è¡¨
 
-blockquote - ¿éÒýÓÃ
+fieldset - formæŽ§åˆ¶ç»„
 
-center - ¾ÙÖÐ¶ÔÆë¿é
+form - äº¤äº’è¡¨å• ï¼ˆåªèƒ½ç”¨æ¥å®¹çº³å…¶å®ƒå—å…ƒç´ ï¼‰
 
-dir - Ä¿Â¼ÁÐ±í
+h1 - å¤§æ ‡é¢˜
 
-div - ³£ÓÃ¿é¼¶ÈÝÒ×£¬Ò²ÊÇcss layoutµÄÖ÷Òª±êÇ©
+h2 - å‰¯æ ‡é¢˜
 
-dl - ¶¨ÒåÁÐ±í
+h3 - 3çº§æ ‡é¢˜
 
-fieldset - form¿ØÖÆ×é
+h4 - 4çº§æ ‡é¢˜
 
-form - ½»»¥±íµ¥ £¨Ö»ÄÜÓÃÀ´ÈÝÄÉÆäËü¿éÔªËØ£©
+h5 - 5çº§æ ‡é¢˜
 
-h1 - ´ó±êÌâ
+h6 - 6çº§æ ‡é¢˜
 
-h2 - ¸±±êÌâ
-
-h3 - 3¼¶±êÌâ
-
-h4 - 4¼¶±êÌâ
-
-h5 - 5¼¶±êÌâ
-
-h6 - 6¼¶±êÌâ
-
-hr - Ë®Æ½·Ö¸ôÏß
+hr - æ°´å¹³åˆ†éš”çº¿
 
 isindex - input prompt
 
-menu - ²Ëµ¥ÁÐ±í
+menu - èœå•åˆ—è¡¨
 
-noframes - frames¿ÉÑ¡ÄÚÈÝ£¬£¨¶ÔÓÚ²»Ö§³ÖframeµÄä¯ÀÀÆ÷ÏÔÊ¾´ËÇø¿éÄÚÈÝ
+noframes - frameså¯é€‰å†…å®¹ï¼Œï¼ˆå¯¹äºŽä¸æ”¯æŒframeçš„æµè§ˆå™¨æ˜¾ç¤ºæ­¤åŒºå—å†…å®¹
 
-noscript - ¿ÉÑ¡½Å±¾ÄÚÈÝ£¨¶ÔÓÚ²»Ö§³ÖscriptµÄä¯ÀÀÆ÷ÏÔÊ¾´ËÄÚÈÝ£©
+noscript - å¯é€‰è„šæœ¬å†…å®¹ï¼ˆå¯¹äºŽä¸æ”¯æŒscriptçš„æµè§ˆå™¨æ˜¾ç¤ºæ­¤å†…å®¹ï¼‰
 
-ol - ÅÅÐò±íµ¥
+ol - æŽ’åºè¡¨å•
 
-p - ¶ÎÂä
+p - æ®µè½
 
-pre - ¸ñÊ½»¯ÎÄ±¾
+pre - æ ¼å¼åŒ–æ–‡æœ¬
 
-table - ±í¸ñ
+table - è¡¨æ ¼
 
-ul - ·ÇÅÅÐòÁÐ±í
+ul - éžæŽ’åºåˆ—è¡¨
 
-# ÄÚÁªÔªËØ(inline element) HTML±êÇ©·ÖÀàÃ÷Ï¸
+# å†…è”å…ƒç´ (inline element) HTMLæ ‡ç­¾åˆ†ç±»æ˜Žç»†
 
-a - Ãªµã
+a - é”šç‚¹
 
-abbr - ËõÐ´
+abbr - ç¼©å†™
 
-acronym - Ê××Ö
+acronym - é¦–å­—
 
-b - ´ÖÌå(²»ÍÆ¼ö)
+b - ç²—ä½“(ä¸æŽ¨è)
 
 bdo - bidi override
 
-big - ´ó×ÖÌå
+big - å¤§å­—ä½“
 
-br - »»ÐÐ
+br - æ¢è¡Œ
 
-cite - ÒýÓÃ
+cite - å¼•ç”¨
 
-code - ¼ÆËã»ú´úÂë(ÔÚÒýÓÃÔ´ÂëµÄÊ±ºòÐèÒª)
+code - è®¡ç®—æœºä»£ç (åœ¨å¼•ç”¨æºç çš„æ—¶å€™éœ€è¦)
 
-dfn - ¶¨Òå×Ö¶Î
+dfn - å®šä¹‰å­—æ®µ
 
-em - Ç¿µ÷
+em - å¼ºè°ƒ
 
-font - ×ÖÌåÉè¶¨(²»ÍÆ¼ö)
+font - å­—ä½“è®¾å®š(ä¸æŽ¨è)
 
-i - Ð±Ìå
+i - æ–œä½“
 
-img - Í¼Æ¬
+img - å›¾ç‰‡
 
-input - ÊäÈë¿ò
+input - è¾“å…¥æ¡†
 
-kbd - ¶¨Òå¼üÅÌÎÄ±¾
+kbd - å®šä¹‰é”®ç›˜æ–‡æœ¬
 
-label - ±í¸ñ±êÇ©
+label - è¡¨æ ¼æ ‡ç­¾
 
-q - ¶ÌÒýÓÃ
+q - çŸ­å¼•ç”¨
 
-s - ÖÐ»®Ïß(²»ÍÆ¼ö)
+s - ä¸­åˆ’çº¿(ä¸æŽ¨è)
 
-samp - ¶¨Òå·¶Àý¼ÆËã»ú´úÂë
+samp - å®šä¹‰èŒƒä¾‹è®¡ç®—æœºä»£ç 
 
-select - ÏîÄ¿Ñ¡Ôñ
+select - é¡¹ç›®é€‰æ‹©
 
-small - Ð¡×ÖÌåÎÄ±¾
+small - å°å­—ä½“æ–‡æœ¬
 
-span - ³£ÓÃÄÚÁªÈÝÆ÷£¬¶¨ÒåÎÄ±¾ÄÚÇø¿é
+span - å¸¸ç”¨å†…è”å®¹å™¨ï¼Œå®šä¹‰æ–‡æœ¬å†…åŒºå—
 
-strike - ÖÐ»®Ïß
+strike - ä¸­åˆ’çº¿
 
-strong - ´ÖÌåÇ¿µ÷
+strong - ç²—ä½“å¼ºè°ƒ
 
-sub - ÏÂ±ê
+sub - ä¸‹æ ‡
 
-sup - ÉÏ±ê
+sup - ä¸Šæ ‡
 
-textarea - ¶àÐÐÎÄ±¾ÊäÈë¿ò
+textarea - å¤šè¡Œæ–‡æœ¬è¾“å…¥æ¡†
 
-tt - µç´«ÎÄ±¾
+tt - ç”µä¼ æ–‡æœ¬
 
-u - ÏÂ»®Ïß
+u - ä¸‹åˆ’çº¿
 
-var - ¶¨Òå±äÁ¿
+var - å®šä¹‰å˜é‡
 
-¡ò¿É±äÔªËØ ÊÇ»ùÓÚÒÔÉÏÁ½ÕßËæ»·¾³¶ø±ä»¯µÄ£¬ËüµÄ»ù±¾¸ÅÄî¾ÍÊÇ¸ù¾ÝÉÏÏÂÎÄ¹Ø 
-ÏµÈ·¶¨¸ÃÔªËØÊÇ¿éÔªËØ»¹ÊÇÄÚÁªÔªËØ¡£Ò»µ©È·¶¨ÁËËüµÄÀà±ð£¬Ëü¾Í×ñÑ­¿éÔªËØ»ò 
-ÕßÄÚÁªÔªËØµÄ¹æÔòÏÞÖÆ¡£
+â—Žå¯å˜å…ƒç´  æ˜¯åŸºäºŽä»¥ä¸Šä¸¤è€…éšçŽ¯å¢ƒè€Œå˜åŒ–çš„ï¼Œå®ƒçš„åŸºæœ¬æ¦‚å¿µå°±æ˜¯æ ¹æ®ä¸Šä¸‹æ–‡å…³ 
+ç³»ç¡®å®šè¯¥å…ƒç´ æ˜¯å—å…ƒç´ è¿˜æ˜¯å†…è”å…ƒç´ ã€‚ä¸€æ—¦ç¡®å®šäº†å®ƒçš„ç±»åˆ«ï¼Œå®ƒå°±éµå¾ªå—å…ƒç´ æˆ– 
+è€…å†…è”å…ƒç´ çš„è§„åˆ™é™åˆ¶ã€‚
 
-¿É±äÔªËØ   HTML±êÇ©·ÖÀàÃ÷Ï¸
+å¯å˜å…ƒç´    HTMLæ ‡ç­¾åˆ†ç±»æ˜Žç»†
 
-applet - java applet¡¡¡¡
+applet - java appletã€€ã€€
 
-button - °´Å¥¡¡¡¡
+button - æŒ‰é’®ã€€ã€€
 
-del - É¾³ýÎÄ±¾¡¡¡¡
+del - åˆ é™¤æ–‡æœ¬ã€€ã€€
 
-iframe - inline frame¡¡¡¡
+iframe - inline frameã€€ã€€
 
-ins - ²åÈëµÄÎÄ±¾¡¡¡¡
+ins - æ’å…¥çš„æ–‡æœ¬ã€€ã€€
 
-map - Í¼Æ¬Çø¿é(map)¡¡¡¡
+map - å›¾ç‰‡åŒºå—(map)ã€€ã€€
 
-object - object¶ÔÏó¡¡¡¡
+object - objectå¯¹è±¡ã€€ã€€
 
-script - ¿Í»§¶Ë½Å±¾
+script - å®¢æˆ·ç«¯è„šæœ¬
 
----------------------------------------------------------------------- 
-----------
+-------------------------------------------------
 
-µ«ÊÇÍ¨¹ýCSS£¬ÎÒÃÇ¿ÉÒÔ°ÚÍÑÉÏÃæ±í¸ñÀïHTML±êÇ©¹éÀàµÄÏÞÖÆ£¬×ÔÓÉµØÔÚ²»Í¬±ê 
-Ç©/ÔªËØÉÏÓ¦ÓÃÎÒÃÇÐèÒªµÄÊôÐÔ¡£ÀýÈç£¬ÎÒÃÇ¿ÉÒÔ¶Ô¿éÔªËØ[ ul ]±êÇ©¼ÓÉÏ  
-display:inline ÊôÐÔ£¬ÈÃÔ­±¾´¹Ö±µÄÁÐ±íË®Æ½ÏÔÊ¾£¬ÕâÔÚÎÒÃÇÉèÖÃBlogµ¼º½Ìõ 
-Ê±µÃµ½ÁË¹ã·ºÓ¦ÓÃ£»ÎÒÃÇÒ²ÍêÈ«¿ÉÒÔ°ÑÄÚÁªÔªËØ[ cite ]¼ÓÉÏ display:block  
-ÕâÑùµÄÊôÐÔ£¬ÈÃËüÒ²ÓÐÃ¿´Î¶¼´ÓÐÂÐÐ¿ªÊ¼µÄÊôÐÔ¡£
+ä½†æ˜¯é€šè¿‡CSSï¼Œæˆ‘ä»¬å¯ä»¥æ‘†è„±ä¸Šé¢è¡¨æ ¼é‡ŒHTMLæ ‡ç­¾å½’ç±»çš„é™åˆ¶ï¼Œè‡ªç”±åœ°åœ¨ä¸åŒæ ‡ 
+ç­¾/å…ƒç´ ä¸Šåº”ç”¨æˆ‘ä»¬éœ€è¦çš„å±žæ€§ã€‚ä¾‹å¦‚ï¼Œæˆ‘ä»¬å¯ä»¥å¯¹å—å…ƒç´ [ ul ]æ ‡ç­¾åŠ ä¸Š  
+display:inline å±žæ€§ï¼Œè®©åŽŸæœ¬åž‚ç›´çš„åˆ—è¡¨æ°´å¹³æ˜¾ç¤ºï¼Œè¿™åœ¨æˆ‘ä»¬è®¾ç½®Blogå¯¼èˆªæ¡ 
+æ—¶å¾—åˆ°äº†å¹¿æ³›åº”ç”¨ï¼›æˆ‘ä»¬ä¹Ÿå®Œå…¨å¯ä»¥æŠŠå†…è”å…ƒç´ [ cite ]åŠ ä¸Š display:block  
+è¿™æ ·çš„å±žæ€§ï¼Œè®©å®ƒä¹Ÿæœ‰æ¯æ¬¡éƒ½ä»Žæ–°è¡Œå¼€å§‹çš„å±žæ€§ã€‚
 

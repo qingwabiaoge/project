@@ -11,6 +11,7 @@ import {
     Popover,Tooltip,
 
     Tabs, TabPane,
+  Table, TableColumn,
 
     Collapse, CollapseItem,
 
@@ -64,6 +65,7 @@ export default () => {
     Vue.use(Pagination)
     //loading
     Vue.use(Loading.directive);
-
+  Vue.use(Table);
+  Vue.use(TableColumn);
 
 }

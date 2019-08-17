@@ -1,21 +1,21 @@
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 <div id="app">
-    <!--value是变量媒介,v-model参数-->
-    <cl v-model="value">
+  <!--value是变量媒介,v-model参数-->
+  <cl v-model="value" :data="10">
 
-        <template scope="{item}">
-            <button>
-                {{item}}
-            </button>
-        </template>
-    </cl>
-    {{value}}
+    <template scope="{item}">
+      <button>
+        {{item}}
+      </button>
+    </template>
+  </cl>
+  {{value}}
 </div>
 
 <script>
-    const cl = {
-        template: ` <ul>
-                        <li v-for="item in 4"
+  const cl = {
+    template: ` <ul>
+                        <li v-for="item in data"
                          @click="$emit('input',item)"
                          :class="item===value?'active':''"
                        >
@@ -27,23 +27,23 @@
 
                         </li>
                        </ul>`,
-        props: ['value']
-    }
-    const vm = new Vue({
-        el: '#app',
-        data() {
-            return {
-                value: 1
-            }
-        },
-        components: {cl}
-    })
+    props: ['value', 'data']
+  }
+  const vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        value: 1
+      }
+    },
+    components: {cl}
+  })
 
 </script>
 
 <style>
-    .active {
-        color: red;
-    }
+  .active {
+    color: red;
+  }
 
 </style>

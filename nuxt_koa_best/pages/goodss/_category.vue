@@ -1,7 +1,8 @@
 <template>
     <div class="background-gray-lightest padding-top-small padding-bottom-largest">
 
-        <pictextContact  :data="$store.state.componentDatas.pictextContact" class="hidden@xs"></pictextContact>
+
+<!--        <pictextContact :data="$store.state.componentDatas.pictextContact" class="visible@s"></pictextContact>-->
 
         <div class="margin-top container">
 

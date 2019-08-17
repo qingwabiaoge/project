@@ -2,7 +2,7 @@
 
 
                 <div class="border hover-inverse inline background-default">
-                  <nuxt-link :to="{path:$route.fullPath+'/'+item._id}">
+                  <nuxt-link :to="`/news/公司新闻/${item._id}`">
                     <img
                             style="margin-top:-50px; padding-right: 20px; "
                             v-lazy="item.image" :alt="item.title"/>

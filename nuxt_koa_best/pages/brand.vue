@@ -22,9 +22,9 @@
                 text="Color Art"
     >
     </titleScale>
-<!--    <div class='background-gray-dark padding-top-larger padding-bottom-larger'>
+    <div class='background-gray-dark padding-top-larger padding-bottom-larger'>
       <pictextThree :data="$store.state.componentDatas.pictextThree"></pictextThree>
-    </div>-->
+    </div>
     <titleScale title="品牌"
                 subTitle="历史"
                 text="brand history"

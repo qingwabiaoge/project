@@ -1,6 +1,6 @@
 <template>
   <div class="background-gray-lightest padding-top-small padding-bottom-largest">
-    <pictextContact :data="$store.state.componentDatas.pictextContact" class="hidden@xs"></pictextContact>
+<!--    <pictextContact :data="$store.state.componentDatas.pictextContact" class="hidden@xs"></pictextContact>-->
 
     <div class="container  margin-top padding   background-default">
       <el-row :gutter="25">
