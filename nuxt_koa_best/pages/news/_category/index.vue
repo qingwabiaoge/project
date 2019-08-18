@@ -1,5 +1,5 @@
 <template>
-  <div class="background-gray-lightest padding-top-small padding-bottom-largest ">
+
 <!--    <pictextContact :data="$store.state.componentDatas.pictextContact" class="visible@s"></pictextContact>-->
 
     <div class="margin-top container ">
@@ -48,7 +48,7 @@
             </el-col>
           </el-row>
 
-          <pagination
+   <!--       <pagination
 
             :page-size="15"
             :total="151"
@@ -56,7 +56,7 @@
             path="/公司新闻"
             class="text-center margin-top">
 
-          </pagination>
+          </pagination>-->
         </el-col>
 
       </el-row>
@@ -65,7 +65,7 @@
     </div>
 
 
-  </div>
+
 
 </template>
 <script>

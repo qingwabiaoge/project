@@ -1,6 +1,6 @@
 # 一切皆是对象(键值对)
 
-对象===键值对
+对象===键值对===引用类型
 
  都是`{prop:'',fn(){}}`的形式
 
@@ -58,6 +58,12 @@ new Object({a:1,b:2})
 typeof(obj)
 obj instance of Object
 ```
+
+
+
+# obj和()计算会出错
+
+
 
 # 属性范围
 
@@ -140,8 +146,6 @@ Object.protype
 
 
 ### 2.OwnProperty
-
-##### 定义
 
 自己创造的属性,不是从原型copy的
 

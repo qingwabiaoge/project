@@ -2,12 +2,9 @@
 
 > split分裂,splice剪接 ,slice 一部分@名词_
 
+# 创建数组
 
-# Array
-
-### 创建数组
-
-##### new Array()
+### new Array()
 
 ```javascript
 new Array(3); //new可省略, [null,null,null]`
@@ -16,20 +13,20 @@ new Array("Greg"); //  new可省略, ["Greg"]`
 
 ```
 
-##### 语法糖
+### 语法糖
 
 ```
 [1,true,'str']
 ```
 
-##### Array.of（1）
+### Array.of（1）
 
 ```javascript
  Array.of（1）  //[1]
  Array.of（1，2，3）//[1,2,3]
 ```
 
-##### 类数组转数组
+### 类数组转数组
 
 ```javascript
 let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
@@ -37,7 +34,7 @@ Array.from(ArrayLike)
 
 ```
 
-##### 数组和字符串互转  Array.protorype.join()
+### 数组和字符串互转  Array.protorype.join()
 
 ```javascript
 '1234'.split('')
@@ -51,13 +48,15 @@ Array.from(ArrayLike)
 [1, 2, 3, 4].join('-')
 ```
 
-### 判断是否数组类型
+# 判断是否数组类型
 
 1. 检测是不是数组 Array.isArray(arr)
 2. arr instanceof Array //操作符不用.和括号
 3. Array.protype.isprotypeof(arr)
 
-### 所有属性 in
+# arr与()计算出错
+
+# 所有属性 in
 
 ![](4.png)
 
@@ -300,7 +299,7 @@ Object.assign()
 [...[1,2],...[3,4]]
 ```
 
-### null,undefine 不能用数组方法的解决方法
+# null,undefine 不能用数组方法的解决方法
 
 数组的方法的主题必须是数组 若为null,undefine就不是数组会报错__ 
 

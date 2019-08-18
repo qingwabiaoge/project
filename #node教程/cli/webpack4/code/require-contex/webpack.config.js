@@ -3,8 +3,8 @@ module.exports = {
     // 入口文件路径，__dirname是根目录
     entry: {
         index:__dirname + '/src/index.js',
-        index3:__dirname + '/src/index3.js',
-        index4:__dirname + '/src/index4.js'
+        index2:__dirname + '/src/index2.js',
+        index3:__dirname + '/src/index3.js'
 
     },
     // 打包生成文件

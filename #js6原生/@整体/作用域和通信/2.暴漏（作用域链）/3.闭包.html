@@ -13,11 +13,11 @@
         return {i, fn}
     }
 
-
-    const obj = f() //作为全局变量
+    //作为全局变量
+    const obj = f()
 
     function f1() {
-        //回调输出
+
         obj.fn(obj.i + 10)
 
     }

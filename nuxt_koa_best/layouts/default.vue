@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div style=" background-repeat: no-repeat;background-attachment: fixed;"
+      :style="{backgroundImage:`url(${$store.state.config.global.background})`}">
     <headerA></headerA>
 
-    <nuxt style="padding-bottom:90px; background-repeat: no-repeat;background-attachment: fixed;" :style="{backgroundImage:`url(${$store.state.config.global.background})`}"/>
+    <nuxt style="padding-bottom:90px;"/>
 
     <footerBlack></footerBlack>
   </div>

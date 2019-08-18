@@ -11,8 +11,7 @@
       </a>
     </div>
 
-
-
+  
 </template>
 
 <script>

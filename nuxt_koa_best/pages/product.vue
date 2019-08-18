@@ -3,11 +3,9 @@
   <div>
 
 
-    <titleScale title="产品"
-                subTitle="介绍"
-                text="atr produce">
-    </titleScale>
+
     <div class="margin-top container padding " style="background: white">
+     <h1 style="text-align: center ; padding-bottom: 20px">产品介绍</h1>
       <p>
         中山市百事得化工有限公司成立于2005年，历经多年的蓬勃发展，已成为一家集研发、生产、销售为一体的大型化工集团。百事得凭借雄厚的实力和过硬的技术，在坚持走专业化发展道路的基础上，努力进取，开拓创新，现已拥有四大品牌：百事得、典艺、依家、万东，公司产品线丰富，有：
 

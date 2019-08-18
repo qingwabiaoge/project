@@ -1,16 +1,18 @@
-# Function
+# Function和对象的关系
 
-fn继承于Object   fn还能创造新对象实例
+fn继承于Object.protype,是对象类型
 
-### 创建对象
+ new fn创造新的对象实例
 
-##### 构造函数创建对象
+# 创建函数对象
+
+### 构造函数创建对象
 
 ```javascript
 new Function('a', 'b', 'return a + b');
 ```
 
-##### 直面量语法糖等价构造函数创建
+### 直面量语法糖等价构造函数创建
 
 ```
   function f(a,b) {return a + b}//语法糖等价上面的构造函数生成
@@ -21,14 +23,16 @@ new Function('a', 'b', 'return a + b');
 
 ```
 
-### 所有属性 in
+# Fn和()计算得到return返回值
+
+# 所有属性 in
 
 ![1](2.png)
 
 
 
 
-
+### Function.protype
 ```javascript
    const Fn = function () {
         console.log(Fn.arguments)
@@ -58,7 +62,9 @@ new Function('a', 'b', 'return a + b');
     set caller: ? ()
     }*/
 
-
+```
+### OwnProperty
+```
 
     
     //2.Own属性,Function构造生成---------------------    
@@ -68,7 +74,9 @@ new Function('a', 'b', 'return a + b');
 
 
 
-
+```
+### keys
+```
 
     //3.可枚举属性:静态变量,静态方法--------------------
      console.log(Object.keys(Fn)) //['a']
@@ -83,10 +91,4 @@ new Function('a', 'b', 'return a + b');
 ```
 
 
-
-### 对象fn可以和运行操作符()进行计算
-
-```
-fn(),建立上下文栈
-```
 

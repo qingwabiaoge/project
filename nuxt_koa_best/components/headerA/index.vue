@@ -43,8 +43,18 @@
         <nuxt-link to="/" class="hover-underline inline "
         >首页
         </nuxt-link>
+        <nuxt-link to="/company" class="hover-underline inline ">
+          公司介绍
+        </nuxt-link>
+
+        <nuxt-link to="/book" class="hover-underline inline ">
+          营销
+        </nuxt-link>
+        <nuxt-link to="/process">
+          水性木蜡油
+        </nuxt-link>
         <nuxt-link to="/brand" class="hover-underline inline "
-        >关于{{$store.state.config.global.ename}}
+        > 品牌介绍
         </nuxt-link>
         <nuxt-link to="/baidu" class="hover-underline inline "
         >加入百事得
@@ -75,6 +85,7 @@
   .nav {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+    background: white;
     > div {
       /*font-size: 16px;*/
       text-transform: uppercase;
