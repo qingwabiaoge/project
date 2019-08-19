@@ -1,11 +1,10 @@
-
-
-
-
 # 路由嵌套和普通父子组件嵌套
 
 路由父子关系和普通父子关系一样也是携带关系  
 ### 路由嵌套
+
+![1566146868286](img/1566146868286.png)
+
 * 用于嵌套布局基本的组件比如<navbar>
 
 * 用于嵌套页面级别的组件 /new  切换至  /company
@@ -14,11 +13,11 @@
 
   模块之间的嵌套
 
-# 路由和is
+### 组件切换(路由和is)
    .     |路由           | 动态组件     
 ---|---|---     
 标签        | < route-view/>  |<  component />
-作用        | 嵌套布局组件,切换页面级别的组件| 切换模块级别的组件
+作用        | 嵌套布局组件,切换页面布局级别的组件 | 切换模块级别的组件
 设置组件参数 | history栈的值   | is的值     
 组件生命周期 |切换运行distroyed|切换运行distroyed
 keeplive    | 切换运行activate deactivate| 切换运行activate deactivate        
@@ -50,20 +49,20 @@ transition | 可用            |可用
 
 </div>
 <script>
-    /**************************************** 这个router-view非常容易忘记*/
+                            /** 这个router-view非常容易忘记*/
     
     const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
 
     const cs = {template: '<div>/fa/cs</div>'}
 
-    //route配置其实是配置router-view组件和route-link组件
+    //routes配置router-view组件和route-link组件
     const router = new VueRouter({
 
             routes: [{//配置最顶级的<route-view/>
                 path: '/fa/', //<router-link/> 用什么path可以访问
                 name: 'fa', //<router-link/> 用什么name可以访问
-                component: fa, //is的默认值
-                children: [ //每个children对应一个<route-view/>
+                component: fa, 
+                children: [ //配置嵌套的<route-view/>
                     {
                         path: '/cs',
                         name: 'cs',
@@ -93,8 +92,7 @@ transition | 可用            |可用
 
 ![](./4.png)
 
-
-##### 路由守卫  router.beforeEach
+路由守卫  router.beforeEach
 
 ```javascript
 
@@ -114,14 +112,18 @@ transition | 可用            |可用
 
 
 
-
-
 # $router=router
 路由实例router 挂载在vue实例的$router子键上
 
 # 向history栈顶推入网址
 
 ### </ router-link>
+
+```
+<router-link to='/new?cid=1'>news</router-link>
+```
+
+
 
 
 ### $router.push()
@@ -136,15 +138,11 @@ this.$router.push({
                 })
 ```
 
-
-
 原生
 ```
 
 history.pushState({state: 1}, "newtitle","1.html?b=1")
 ```
-
-
 
 
 
@@ -154,7 +152,7 @@ history.pushState({state: 1}, "newtitle","1.html?b=1")
 
 
 
- 
+
 ```
 $router.go(-1)//返回上一个$router也是使用方法
 
@@ -173,85 +171,38 @@ history.go(-1)
 
 ```
 
+# $route注入了当前页面的路由信息
 
-
--------------------------------------
-
-
+- name
+- path
+- meta元信息(popstate) 
+- prames
+- param query
 
 # < router-view />组件属性
 
 
-##### 显示什么父子组件:
+### 显示什么父子组件:
 网址:path决定
 
-##### 组件属性(路由解构) : 
- 网址:param query 
+### 组件属性(路由解耦) : 
+props:true
+
+props:{} 
 
 
 
 
-
-
-
-# $route注入了当前的路由信息
-
-
-* name或path
-
-*  meta元信息(popstate) 
-
-*  param query
-
-
-
-
-
-
-
-# 路由建立和销毁页面组件实例 为了节省内存
-
-```
-created(){}
-
-distroyed(){}
-
-
-```
-
-# < keep-alive > 
-
-
-
-```
-
-<keep-alive>
-    <router-view></router-view>
-</keep-alive>
-```
-
-
-```
-取消了 destroy(){} 和 created(){}
-
-增加了激活和失活的钩子函数deactivated activated
-
-```
-
-# 异步加载路由
-
-在切换到当前当前页面路由时,才从服务器下载当前组件的代码,节省网速
 
 # 路由流配置加active
 ```
-    const router = new VueRouter({
-        linkActiveClass :'active',})
+const router = new VueRouter({
+                               linkActiveClass :'active',
+                               })
 ```
 
 
-    
-
-
+​    
 
 # VUE 路由参数变化页面内容不刷新
 
@@ -280,7 +231,7 @@ watch: {
 }
 ```
 
-##### 2.添加key属性
+##### 2.添加key属性作为不同的组件
 
 
 ```
@@ -289,4 +240,6 @@ watch: {
 
 ```
 
+# 异步加载路由
 
+在切换到当前当前页面路由时,才从服务器下载当前组件的代码,节省网速

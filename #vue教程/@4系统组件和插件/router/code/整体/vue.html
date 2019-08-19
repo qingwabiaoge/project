@@ -1,0 +1,107 @@
+<html>
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+<style>
+
+</style>
+<body>
+<div id="app">
+  <router-link to="/">home</router-link>
+  <router-link to="/admin">admin</router-link>
+  <router-link :to="{name:'admin_info'}">admin_info</router-link>
+  <router-link :to="{name:'admin_id',params:{id:1},query:{q:2}}">admin_id</router-link>
+  <router-link to="/404/">404</router-link>
+  <hr>
+
+  <router-view>
+  </router-view>
+</div>
+
+
+<script>
+
+  const home = {template: `<div>home</div>`}
+  const login = {template: `<div>login</div>`}
+  const err = {template: `<div>err</div>`}
+  const admin = {template: `<div>admin<transition enter-active-class="animated bounceInRight"  leave-active-class="animated bounceOutRight" :key="$route.params.id"><router-view></router-view></transition></div>`}
+  const admin_index = {template: `<div>admin_index</div>`}
+  const admin_info = {template: `<div>admin_info</div>`}
+  const admin_id = {template: `<div>{{id}}_{{q}}</div>`, props: ['id', 'q']}
+  const router = new VueRouter({
+    routes: [{
+      path: '/',
+      name: 'home',
+      component: home
+    },
+      {
+        path: '/login',
+        name: 'login',
+        component: login
+      },
+      {
+        path: '*',
+        redirect: '/',
+        name: 'err',
+        component: err
+      },
+      {
+        path: '/admin',
+        name: 'admin',
+        component: admin,
+        meta: {author: true},
+        children: [
+          {
+            path: '/',
+            name: 'admin_index',
+            component: admin_index,
+          },
+          {
+            path: '/info',
+            name: 'admin_info',
+            component: admin_info,
+          }
+          ,
+          {
+            path: '/id',
+            name: 'admin_id',
+            component: admin_id,
+            props: function (route) {
+              return {id: route.params.id, q: route.query.q}
+            }
+          }
+
+        ]
+      }
+    ]
+
+  })
+  router.beforeEach((to, from, next) => {
+
+    if (to.meta.author === true) {
+      next({
+        path: '/login'
+      })
+    }else {
+      next()
+    }
+
+
+  })
+
+  new Vue({
+    el: '#app',
+    router
+  })
+</script>
+
+
+</body>
+</html>

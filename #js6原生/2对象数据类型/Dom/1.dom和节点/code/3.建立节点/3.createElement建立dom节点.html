@@ -5,29 +5,29 @@
 
 <meta charset="uft-8">
 <script>
-    function addElement() {
+  function addElement() {
+     //åˆ›å»ºæ–°èŠ‚ç‚¹å¯¹è±¡
+    var newMark = document.createElement("A");
 
-        var newA = document.createElement("A");
-        var newText = document.createTextNode("Hi there and greetings!");
+    //é€šè¿‡ . è®¾ç½®ç³»ç»Ÿå±æ€§
+    newMark.id = 'app'
+    newMark.target = '_black'
 
-        //Í¨¹ı.ÉèÖÃÉèÖÃÊôĞÔ
-        newA.id='app'
-        
-        //ÉèÖÃ ²éÑ¯ ÒÆ³ı×Ô¶¨ÒåÊôĞÔºÍÏµÍ³ÊôĞÔ
-        newA.setAttribute('href', '#')
-        newA.getAttribute('href')//»ñµÃhref
-        newA.setAttribute('someattr', '123')
-        newA.removeAttribute('id')
-
-
-        newA.appendChild(newText);
-        newA.target = '_black'
+    //è®¾ç½® æŸ¥è¯¢ ç§»é™¤ç³»ç»Ÿå±æ€§å’Œè‡ªå®šä¹‰å±æ€§
+    newMark.setAttribute('href', '#')
+    newMark.getAttribute('href')//è·å¾—href
+    newMark.setAttribute('someattr', '123')
+    newMark.removeAttribute('id')
 
 
+    //èŠ‚ç‚¹ä¸‹çº§æ’å…¥æ–‡æœ¬
+    var newText = document.createTextNode("Hi there and greetings!");
+    newMark.appendChild(newText);
 
-        var hr = document.getElementById("hr")
-        document.body.insertBefore(newA, hr)
-    }
+    //èŠ‚ç‚¹å¯¹è±¡å‰é¢æ’å…¥å¯¹è±¡
+    var hr = document.getElementById("hr")
+    document.body.insertBefore(newMark, hr)
+  }
 
-    addElement()
+  addElement()
 </script>

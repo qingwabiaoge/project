@@ -1,6 +1,4 @@
-[[toc]]
 
-<style>h3{font-weight:bolder}</style>
 # 声明过没赋值的值都是undifined
 
 
@@ -55,7 +53,7 @@ let [a,b]=[1]
 
 函数没有返回值默认返回undefined
 
-### 参数型变量
+### 参数型类型变量
 
 ##### 函数参数
 

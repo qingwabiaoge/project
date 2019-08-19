@@ -1,9 +1,9 @@
-<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
 <div id="app">
   <!--value是变量媒介,v-model参数-->
   <cl v-model="value" :data="10">
 
-    <template scope="{item}">
+    <template v-slot="{item}">
       <button>
         {{item}}
       </button>

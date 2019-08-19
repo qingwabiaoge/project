@@ -15,7 +15,7 @@ function fn(ctx) {
 
 app.use(async (ctx, next) => {
     ctx.body = '1';
-    await next() //接收next()返回的promise
+     next() //接收next()返回的promise
     await fn(ctx)
 
 })

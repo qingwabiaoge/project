@@ -35,7 +35,7 @@
 
             {
                 path: '/:id',
-                // 路由解耦，parame作为组件的属性值像data一样
+                // 路由解耦，设置属性值,因为<route-view>可能代表多个组件,所以属性不能设置在<route-view>
                 props: function (route) {
                     return {id: route.params.id, query: route.query.q}
                 },

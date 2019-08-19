@@ -1,7 +1,23 @@
-const fs = require('fs')
-const callback = require('./callback')
-var readStream = fs.createReadStream('./cs/1.txt', )
-fs.appendFile('./cs/2.txt', '', callback)
-var writerStream = fs.createWriteStream('./cs/2.txt', callback)
+const Koa = require('koa')
+const app = new Koa()
+const Router = require('koa-router')
 
-readStream.pipe(writerStream)
+
+router = new Router()
+router.get('/', async (ctx, next) => {
+  ctx.body += 'root'
+})
+
+
+app.use(async (ctx, next) => {
+  ctx.body = '1';
+  await next();
+  ctx.body += 2;
+
+})
+  .use(router.routes())
+  .use(router.allowedMethods())
+
+
+app.listen(3000)
+console.log(":3000")

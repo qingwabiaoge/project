@@ -1,11 +1,39 @@
 # < keep-alive >
 
-## ÓÃ´¦
+## ç”¨å¤„
 
-router×é¼şºÍ is¶¯Ì¬×é¼ş
+routerç»„ä»¶å’Œ isåŠ¨æ€ç»„ä»¶
 
-##  Ôö¼ÓÁËÁ½¸ö¹³×Ó
+## é’©å­å‡½æ•°
 
-×èÖ¹×é¼şÏú»ÙºÍÖØ½¨
+æ— <keep-live>çš„é’©å­
 
-Ôö¼ÓÁË¼¤»îºÍÊ§»îµÄ¹³×Óº¯Êıdeactivated activated
+```
+created(){}
+
+distroyed(){}
+
+
+```
+
+< keep-alive > åçš„é’©å­
+
+```
+<keep-alive>
+    <router-view></router-view>
+</keep-alive>
+```
+
+```
+å–æ¶ˆäº† 
+
+destroy(){} å’Œ created(){}
+
+å¢åŠ äº†æ¿€æ´»å’Œå¤±æ´»çš„é’©å­å‡½æ•°
+
+deactivated(){}
+activated(){}
+
+```
+
+

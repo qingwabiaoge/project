@@ -13,7 +13,6 @@
         </li>
     </ul>
 
-    <!-- 写到这里不太好因为router-view代表的是下级组件,而下级组件不止一种类型的,有的是不需要这些属性的-->
     <router-view :id="$route.params.id" :query="$route.query.q" :prop="$route.query.q-1"></router-view>
 </div>
 

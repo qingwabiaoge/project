@@ -5,45 +5,47 @@
 
 <div id="app">
 
-    <component is="cs" prop="myprop"></component>
+  <component is="cs" prop="myprop"></component>
 </div>
 
 <script>
 
-    const cs = {template: `<div>{{prop}}--{{prop2}}</div>`, props: ['prop', 'prop2']}
-    const vm = new Vue({ //vue×é¼ş¹¹Ôì²ÎÊı
-        el: "#app",
-        components: {cs}
-    })
+  const cs = {template: `<div>{{prop}}</div>`, props: ['prop']}
+  const vm = new Vue({ //vueç»„ä»¶æ„é€ å‚æ•°
+    el: "#app",
+    components: {cs}
+  })
 
 
 </script>
 
-
+<div>----------</div>
 <div id="router">
-    <!--ºÍisÓÃ·¨»ù±¾Ò»Ñù,Ö»²»¹ı¶àÁËÄ¬ÈÏÏî-->
-    <router-view></router-view>
-    <router-view name="cs" prop="myprop"></router-view>
+  <!--å’Œisç”¨æ³•åŸºæœ¬ä¸€æ ·,åªä¸è¿‡å¤šäº†é»˜è®¤é¡¹-->
+  <router-view></router-view>
+
+  <!--  è¿™é‡Œpropå¯¹å¤šä¸ªè·¯ç”±éƒ½èƒ½ç”¨,ä¸ç²¾ç¡®-->
+  <router-view name="cs" prop="myprop"></router-view>
 
 </div>
 
 <script>
 
-    const def = {template: `<div>defalut</div>`}
+  const def = {template: `<div>defalut</div>`}
 
-    const router = new VueRouter({
-        routes: [// <router-view/>×é¼ş¹¹Ôì²ÎÊı
-            {
-                path: '/',
-                name: 'cs',
-                props: {prop2: '2'},
-                component: cs
-            }
-        ]
-    })
-    const vm2 = new Vue({
-        el: '#router',
-        router
-    })
+  const router = new VueRouter({
+    routes: [// <router-view/>ç»„ä»¶æ„é€ å‚æ•°
+      {
+        path: '/',
+        name: 'cs',
+        props: {prop: 'è¿™é‡Œä¼˜å…ˆçº§æ›´é«˜,è·¯ç”±æ›´å‡†ç¡®'},
+        component: cs
+      }
+    ]
+  })
+  const vm2 = new Vue({
+    el: '#router',
+    router
+  })
 
 </script>

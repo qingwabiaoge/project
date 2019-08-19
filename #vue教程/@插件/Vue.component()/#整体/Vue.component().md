@@ -22,17 +22,9 @@ fa={age:10,fn(){} ....}
 <cl age='age' @fn='fn'></cl>
 const cl = new VueComponent({props: {age,fn}})
 ```
+
 ### 组件属性的种类
 
-> props=['xxx'] 自定义属性
-
-> class
-
-> style
-
->  attr 通过$attr访问
-
->  ref其他组件 通过 this.$refs['xxx']访问
 ```
 <el-input-number 
                  v-model="num" 
@@ -48,6 +40,42 @@ label常量不可改变
 :min="1" :max="10"也是常量,程序代码里不可改变
 :label-width="formLabelWidth" 不用更改值的变量
 ```
+
+
+
+ ##### props=['xxx'] 自定义属性
+
+   ###### prop作用
+
+   * 数据父传子  
+
+   * 组件属性不可以给 slot用
+
+   ```
+   不要被父子组件的属性传递和v-for误导了
+   ```
+
+   
+
+##### @change='handleChange'
+
+   ######  作用: 
+
+     数据子传父
+
+##### class
+
+##### style
+
+##### attr 
+
+ 父传子 子组件通过$attr访问
+
+##### ref其他组件 
+
+  通过 this.$refs['xxx']访问
+
+
 
 ### 组件属性改变更新视图
 

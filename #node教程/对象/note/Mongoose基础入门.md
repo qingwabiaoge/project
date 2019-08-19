@@ -1,3 +1,4 @@
+
 # [Mongoose基础入门]
 
 
@@ -60,7 +61,7 @@ mongodb.MongoClient.connect("mongodb://localhost/db1",function(err,db){
 
 　　2、基于mongodb驱动，简化操作
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170721123112068-7289503.jpg)
+![img](img/740839-20170721123112068-7289503.jpg)
 
 　　Mongooose中，有三个比较重要的概念，分别是Schema、Model、Entity。它们的关系是：Schema生成Model，Model创造Document，Model和Document都可对数据库操作造成影响，但Model比Document更具操作性
 
@@ -80,7 +81,7 @@ mongodb.MongoClient.connect("mongodb://localhost/db1",function(err,db){
 npm install mongoose
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170720114229505-521707664.png)
+![img](img/740839-20170720114229505-521707664.png)
 
 　　安装成功后，就可以通过 require('mongoose') 来使用
 
@@ -129,8 +130,14 @@ mongoose.connect(uri, options);
  promiseLibrary
 ```
 
-```
+```javascript
 var options = {
+  /*
+  useNewUrlParser - 底层MongoDB已经废弃当前连接字符串解析器。因为这是一个重大的改变，添加了  useNewUrlParser标记如果在用户遇到bug时，允许用户在新的解析器中返回旧的解析器。除非连接阻止设置，否则你应  该设置useNewUrlParser: true。
+*/
+ useNewUrlParser: true,
+    //估计是新建索引的方法
+ useCreateIndex: true,
   db: { native_parser: true },
   server: { poolSize: 5 },
   replset: { rs_name: 'myReplicaSetName' },
@@ -184,6 +191,244 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
+
+
+## 连接（Connections）
+
+你可以用`mongoose.connect()`方法连接MongoDB。
+
+```js
+mongoos.connect('mongodb://localhost:27017/myapp');
+```
+
+这是连接运行在本地`myapp`数据库最小的值（27017）。如果连接失败，尝试用`127.0.0.1`代替`localhost`。
+你可在`uri`中指定更多的参数：
+
+```js
+mongoose.connect('mongodb://username:password@host:port/database?options...');
+```
+
+有关更多细节查看mongodb连接字符串规范。
+
+### 操作缓冲
+
+Mongoose可以让你立即使用模型，不用等待mongoose与MongoDB建立连接。
+
+```js
+mongoose.connect('mongodb://localhost:27017/myapp');
+var MyModel = mongoose.model('Test', new Schema({ name: String }));
+// Works
+MyModel.findOne(function(error, result) { /* ... */ });
+```
+
+这是因为mongoose缓冲模型函数被立即调用。这种缓冲非常方便，但也是造成混淆的常见原因。默认情况下，如果你用一个没有连接的模型，Mongoose不会报错。
+
+```js
+var MyModel = mongoose.model('Test', new Schema({ name: String }));
+// 将一直挂起，直到连接成功
+MyModel.findOne(function(error, result) { /* ... */ });
+
+setTimeout(function() {
+  mongoose.connect('mongodb://localhost:27017/myapp');
+}, 60000);
+```
+
+关闭schema的配置`bufferCommands`就可以禁用缓冲。如果在`bufferCommands`打开时有连接挂起，尝试关闭`bufferCommands`观察是否没有正确打开连接。你也可以全局禁用`bufferCommands`:
+
+```js
+mongoose.set('bufferCommands', false);
+```
+
+### 选项
+
+`connect`方法也接收一个`options`对象，它将传递给底层的MongoDB驱动程序。
+
+```js
+mongoose.connect(uri, options);
+```
+
+可以在MongoDB Node.js驱动文档上找到`connect()`中选项的完整列表。Mongoose在没有修改的情况下将选项传递给驱动，除以下展示的例外。
+
+- `bufferCommands` - 这是mongoose中一个特殊的选项（不传递给MongoDB驱动），它可以禁用mongoose的缓冲机制
+- `user/pass` - 身份验证的用户名和密码。这是mongoose中特殊的选项，它们可以等同于MongoDB驱动中的auth.user和auth.password选项。
+- `autoIndex` - 默认的，mongoose在连接的时候自动会在schema中创建索引。这对开发来说非常好，但是对大型项目部署并不理想，因为索引的构建将会造成性能的降低。如果设置`autoIndex`为false,mongoose在连接的时候不会为任何与此连接相关的模型创建索引。
+- `dbName` - 指定连接哪个数据库，并覆盖连接字符串中任意的数据库。如果你用mongodb+srv语法连接MongoDB Atlas，你应该用`dbName`去指定数据库，因为当前不能再字符串中使用。
+
+以下是调用mongoose中一些重要的选项。
+
+- `useNewUrlParser` - 底层MongoDB已经废弃当前连接字符串解析器。因为这是一个重大的改变，添加了`useNewUrlParser`标记如果在用户遇到bug时，允许用户在新的解析器中返回旧的解析器。除非连接阻止设置，否则你应该设置`useNewUrlParser: true`。
+- `autoReconnect` - 当与MongoDB连接断开时，底层MongoDB驱动将会自动尝试重新连接。除非你是高级用户，想要控制他们自己的连接池，否则不要设置这个选项为`false`。
+- `reconnectTries` - 如果你连接到单个服务器或mongos代理（而不是副本集），MongoDB驱动将会在`reconnectTries`时间内的每一个`reconnectInterval`毫秒内重新连接，直到最后放弃连接。当驱动放弃连接的时候，mongoose连接将会触发`reconnectFailed`事件。此选项不会对副本集连接执行任何操作。
+- `reconnectInterval` - 查看`reconnectTries`
+- `promiseLibrary` - 设置底层驱动的promise库
+- `poolSize` - MongoDB驱动将为这个连接保持的最大socket数量。默认情况下，`poolSize`是5。请记住在MongoDB 3.4中，MongoDB每个socket每次只允许一个操作，如果你在进行中发现一些缓慢的查询阻止快的查询，你可以增加这个值。
+- `connectTimeoutMS` - MongoDB驱动在初始化连接失败时会等待多久。一旦Mongoose成功连接，`connectTimeoutMS`就不再有效。
+- `socketTimeoutMS` - MongoDB驱动在杀掉一个不活跃的socket时会等待多久。socket可能因为不再活动或长时间处于操作状态而处于不活跃状态。默认情况这个值是`30000`，如果你希望一些数据库操作运行事件超过20秒，你应该设置为最长运行时间的2-3倍。
+- `family` - 是否用IPv4或IPv6进行连接。这个选项传递个Node.js的`dns.lookup()`函数。如果你不设置这个选项，MongoDB驱动首先会尝试IPv6如果失败再尝试IPv4。如果`mongoose.connect(uri)`花费很长时间，尝试`mongoose.connect(uri, {family: 4})`
+
+例子：
+
+```js
+const options = {
+  useNewUrlParser: true,
+  autoIndex: false, // 不创建索引
+  reconnectTries: Number.MAX_VALUE, // 总是尝试重新连接
+  reconnectInterval: 500, // 每500ms重新连接一次
+  poolSize: 10, // 维护最多10个socket连接
+  // 如果没有连接立即返回错误，而不是等待重新连接
+  bufferMaxEntries: 0,
+  connectTimeoutMS: 10000, // 10s后放弃重新连接
+  socketTimeoutMS: 45000, // 在45s不活跃后关闭sockets
+  family: 4 // 用IPv4, 跳过IPv6
+};
+mongoose.connect(uri, options);
+```
+
+有关`connectTimeoutMS`和`socketTimeoutMS`的更多信息，查阅此页面
+
+### 回调
+
+`connect()`函数也接收一个回调参数，其返回一个promise。
+
+```js
+mongoose.connect(uri, options, function(error) {
+  // 检查错误，初始化连接。回调没有第二个参数。
+});
+
+// 或者用promise
+mongoose.connect(uri, options).then(
+  () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ },
+  err => { /** handle initial connection error */ }
+);
+```
+
+### 连接字符串选项
+
+你还可以将连接字符串中的驱动选项指定为URI查询字符串中的部分参数。这只适用于传递给MongoDB驱动的选项。你不能在查询字符串中设置特定的Mongoose选项，类似`bufferCommands`
+
+```js
+mongoose.connect('mongodb://localhost:27017/test?connectTimeoutMS=1000&bufferCommands=false');
+// 以上等同于:
+mongoose.connect('mongodb://localhost:27017/test', {
+  connectTimeoutMS: 1000
+  // 注意mongoose将不会从查询字符串中提取`bufferCommands`
+});
+```
+
+将选项放入查询字符串选项不利于阅读。但是你只需要单独设置URI，而不是分开对`socketTimeoutMS`，`connectTimeoutMS`等设置。最佳实践是在开发和生产中将不同的选项，类似`replicaSet`或`ssl`放到连接字符串中，保持不变的类似`connectTimeoutMS`或`poolsize`放到对象中。 MongoDB文档具有支持连接字符串选项的完整列表。
+
+### keepAlive注意
+
+对于长时间运行的应用，通常谨慎的做法是用毫秒数来激活`keepAlive`。没有它，一段时间后你或许会看到“连接关闭”的错误，这似乎是没有理由的。如果确实是这样，在阅读完本文后，你或许决定开启`keepAlive`：
+
+```js
+mongoose.connect(uri, { keepAlive: true, keepAliveInitialDelay: 300000 });
+```
+
+`keepAliveInitialDelay`是在socket上启动`keepAlive`时要等待的毫秒数。从mongoose 5.2.0开始`keepAlive`默认被启动。
+
+### 副本集连接
+
+要连接到一个副本集需要通过逗号分隔的主机列表而不是单个主机。
+
+```js
+mongoose.connect('mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]' [, options]);
+```
+
+例如：
+
+```js
+mongoose.connect('mongodb://user:pw@host1.com:27017,host2.com:27017,host3.com:27017/testdb');
+```
+
+连接一个单点副本集，指定`replicaSet`选项
+
+```js
+mongoose.connect('mongodb://host1:port1/?replicaSet=rsName');
+```
+
+### Multi-mongos支持
+
+你可以连接多个mongos实例，以便于分片集群中的高可用行。在mongoose 5.x中你不需要传递任何选项去连接多个mongos。
+
+```js
+// 连接2个服务器
+mongoose.connect('mongodb://mongosA:27501,mongosB:27501', cb);
+```
+
+### 多连接
+
+到目前为止我们已经用mongoose的默认连接来连接上MongoDB。有时我们需要对mongo开放多个连接，每个具有不同的读/写设置，或者只是可能针对不同的数据库。在这些情况下，我们可以使用`mongoose.createConnection()`，他接受上面已经介绍过的所有参数，并返回一个新的连接给你。
+
+```js
+const conn = mongoose.createConnection('mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]', options);
+```
+
+这个连接对象用于创建和索引模型。模型总是作用于单个连接。当你调用`mongoose.connect()`时mongoose会创建一个默认连接。你可以用`mongoose.connection`访问默认连接。
+
+### 连接池
+
+每个连接，无论由`mongoose.connect`或`mongoose.createConnection`创建都被内部配置连接池支持，默认最大值为5。可以修改连接选项来修改连接池大小。
+
+```js
+// With object options
+mongoose.createConnection(uri, { poolSize: 4 });
+
+const uri = 'mongodb://localhost:27017/test?poolSize=4';
+mongoose.createConnection(uri);
+```
+
+### 在v5.x中选项的改变
+
+如果你在4.x中没有使用`useMongoClient`，当从4.x升级到5.x的时候，你或许会收到以下弃用警告：
+
+```
+the server/replset/mongos options are deprecated, all their options are supported at the top level of the options object
+```
+
+在较早版本的MongoDB驱动中，必须为服务器连接、副本集连接和mongos连接指定不同的选项：
+
+```js
+mongoose.connect(myUri, {
+  server: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      keepAlive: true
+    },
+    reconnectTries: 30
+  },
+  replset: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      keepAlive: true
+    },
+    reconnectTries: 30
+  },
+  mongos: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      keepAlive: true
+    },
+    reconnectTries: 30
+  }
+});
+```
+
+在mongoose v5.x中可以在顶级声明这些，不需要额外的嵌套，这里列出了所有支持的选项。
+
+```js
+// Equivalent to the above code
+mongoose.connect(myUri, {
+  socketTimeoutMS: 0,
+  keepAlive: true,
+  reconnectTries: 30
+});
+```
+
+
+
+
+
 ##### disconnect() 
 
 ```
@@ -210,7 +455,7 @@ setTimeout(function(){
 
 
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170720232404255-1533749216.gif)
+![img](img/740839-20170720232404255-1533749216.gif)
 
  
 
@@ -623,7 +868,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　由下图所示，db1数据库中的集合名称为mymodels，里面有一个{size:"small"}的文档
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170721003232802-1510769411.png)
+![img](img/740839-20170721003232802-1510769411.png)
 
  
 
@@ -729,11 +974,11 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
  
 
-### 新增
+### 新增文档
 
 　　文档新增有三种方法，一种是使用上面介绍过的文档的save()方法，另一种是使用模型model的create()方法，最后一种是模型model的insertMany()方法
 
-##### save()
+#####  new Model+save()
 
 　　[注意]回调函数可以省略
 
@@ -842,7 +1087,7 @@ Model.find(conditions, [projection], [options], [callback])
 
 　　在数据库db1的集合temps中存在如下数据
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170721205332902-619241772.png)
+![img](img/740839-20170721205332902-619241772.png)
 
 　　现在，使用find()方法找出所有数据
 
@@ -1061,11 +1306,7 @@ temp.findOne({age:{$gt : 20}},"name").lean().exec(function(err,doc){
 })   
 ```
 
-
-
 ##### 文档查询中，常用的查询条件如下
-
-
 
 ```
 $or　　　　或关系
@@ -1092,11 +1333,15 @@ $centerSphere　范围查询，球形范围（基于LBS）
 $slice　　　　查询字段集合中的元素（比如从第几个之后，第N到第M个元素
 ```
 
+```
+Dog.find({name: 'xiaohua', age: {$in: [10, 20]}}, callback)
+```
+
 #####  $where
 
 　　如果要进行更复杂的查询，需要使用$where操作符，$where操作符功能强大而且灵活，它可以使用任意的JavaScript作为查询的一部分，包含JavaScript表达式的字符串或者JavaScript函数
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722141433964-2137472445.png)
+![img](img/740839-20170722141433964-2137472445.png)
 
 　　使用字符串
 
@@ -1115,8 +1360,6 @@ temp.find({$where:"obj.x == obj.y"},function(err,docs){
 
 　　使用函数
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
-
 ```
 temp.find({$where:function(){
         return obj.x !== obj.y;
@@ -1127,9 +1370,7 @@ temp.find({$where:function(){
 }) 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
 temp.find({$where:function(){
@@ -1141,9 +1382,9 @@ temp.find({$where:function(){
 }) 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-### 联表查询
+
+### 文档联表查询
 
 　　下面以一个实例的形式来介绍下mongoose中的联表操作population
 
@@ -1301,7 +1542,7 @@ fnRelatedCategory = _id => {
 
  
 
-### 查询后处理
+### 文档查询后处理
 
 　　常用的查询后处理的方法如下所示
 
@@ -1314,9 +1555,9 @@ select   显示字段
 exect    执行count    计数distinct 去重
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
+
 
 ```
 var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
@@ -1330,13 +1571,13 @@ temp.find(function(err,docs){
 }) 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### sort()
 
 　　按age从小到大排序
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.find().sort("age").exec(function(err,docs){
@@ -1472,7 +1713,7 @@ Model.update(conditions, doc, [options], [callback])
 
 　　数据库temps中现有数据如下
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722102511714-669069142.png)
+![img](img/740839-20170722102511714-669069142.png)
 
 　　现在使用update()方法查询age大于20的数据，并将其年龄更改为40岁
 
@@ -1497,7 +1738,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　经过以上操作，数据库结果如下。只有第一个数据更改为40岁。而第三个数据没有发生变化
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722103806792-1390059167.png)
+![img](img/740839-20170722103806792-1390059167.png)
 
 　　如果要同时更新多个记录，需要设置options里的multi为true。下面将名字中有'a'字符的年龄设置为10岁
 
@@ -1520,7 +1761,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 [![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722105348933-1661967582.png)
+![img](img/740839-20170722105348933-1661967582.png)
 
 　　如果设置的查找条件，数据库里的数据并不满足，默认什么事都不发生
 
@@ -1540,7 +1781,7 @@ temp.update({age:100},{name: "hundred"},{upsert:true},function(err,raw){
 })
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722111059777-351477732.png)
+![img](img/740839-20170722111059777-351477732.png)
 
 ```
 temp.update({name:/aa/},{age: 0},{upsert:true},function(err,raw){
@@ -1549,7 +1790,7 @@ temp.update({name:/aa/},{age: 0},{upsert:true},function(err,raw){
 })
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722111300761-1926802847.png)
+![img](img/740839-20170722111300761-1926802847.png)
 
 　　[注意]update()方法中的回调函数不能省略，否则数据不会被更新。如果回调函数里并没有什么有用的信息，则可以使用exec()简化代码
 
@@ -1574,7 +1815,24 @@ temp.updateMany({name:/huo/},{age:50},function(err,raw){
 });
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722112834308-1873815423.png)
+![img](img/740839-20170722112834308-1873815423.png)
+
+
+
+##### updateOne()
+
+ 　　updateOne()方法只能更新找到的第一条数据，即使设置{multi:true}也无法同时更新多个文档
+
+　　将数据库中名字中带有'huo'的数据，年龄变为60岁
+
+```
+temp.updateOne({name:/huo/},{age:60},function(err,raw){
+    //{ n: 1, nModified: 1, ok: 1 }
+    console.log(raw);
+});
+```
+
+![img](img/740839-20170722113216183-374293061.png)
 
 ##### find() + save()
 
@@ -1599,20 +1857,7 @@ temp.find({age:{$lt:20}},function(err,docs){
 
 [![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-##### updateOne()
 
- 　　updateOne()方法只能更新找到的第一条数据，即使设置{multi:true}也无法同时更新多个文档
-
-　　将数据库中名字中带有'huo'的数据，年龄变为60岁
-
-```
-temp.updateOne({name:/huo/},{age:60},function(err,raw){
-    //{ n: 1, nModified: 1, ok: 1 }
-    console.log(raw);
-});
-```
-
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722113216183-374293061.png)
 
 ##### findOne() + save()
 
@@ -1671,7 +1916,7 @@ findByIdAndRemove()
 model.remove(conditions, [callback])
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722115955136-435160244.png)
+![img](img/740839-20170722115955136-435160244.png)
 
 　　删除数据库中名称包括'30'的数据
 
@@ -1679,7 +1924,7 @@ model.remove(conditions, [callback])
 temp.remove({name:/30/},function(err){})
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722120740730-207409461.png)
+![img](img/740839-20170722120740730-207409461.png)
 
 　　[注意]remove()方法中的回调函数不能省略，否则数据不会被删除。当然，可以使用exec()方法来简写代码
 
@@ -1697,7 +1942,7 @@ document.remove([callback])
 
 　　[注意]文档的remove()方法的回调函数参数可以省略
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.find({name:/huo/},function(err,doc){
@@ -1711,9 +1956,9 @@ temp.find({name:/huo/},function(err,doc){
 })  
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722121538620-1318315817.png)
+
+![img](img/740839-20170722121538620-1318315817.png)
 
 ##### findOneAndRemove()
 
@@ -1725,7 +1970,7 @@ Model.findOneAndRemove(conditions, [options], [callback])
 
  　　集合temps现有数据如下
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722122724527-1611550236.png)
+![img](img/740839-20170722122724527-1611550236.png)
 
 　　现在删除第一个年龄小于20的数据
 
@@ -1736,7 +1981,7 @@ temp.findOneAndRemove({age:{$lt:20}},function(err,doc){
 })
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722123723214-1991458770.png)
+![img](img/740839-20170722123723214-1991458770.png)
 
 　　与model的remove()方法相同，回调函数不能省略，否则数据不会被删除。当然，可以使用exec()方法来简写代码
 
@@ -1750,7 +1995,7 @@ temp.findOneAndRemove({age:{$lt:20}}).exec()
 Model.findByIdAndRemove(id, [options], [callback])
 ```
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722124111839-168768226.png)
+![img](img/740839-20170722124111839-168768226.png)
 
 　　删除第0个元素
 
@@ -1771,7 +2016,7 @@ temp.find(function(err,docs){
 
 [![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722124210105-1759533603.png)
+![img](img/740839-20170722124210105-1759533603.png)
 
 　　类似的，该方法也不能省略回调函数，否则数据不会被删除。当然，可以使用exec()方法来简写代码
 
@@ -1789,7 +2034,7 @@ temp.find(function(err,docs){
 
 [![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
-![img](https://images2015.cnblogs.com/blog/740839/201707/740839-20170722124335949-2088054111.png)
+![img](img/740839-20170722124335949-2088054111.png)
 
  
 

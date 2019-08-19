@@ -19,6 +19,9 @@
 
   </ch>
   <ch>
+    <template v-slot="{xx}">
+      {{xx}}
+    </template>
     <template v-slot:hasnamescope="{xx}">
       <button>{{xx}}</button>
     </template>
@@ -26,9 +29,9 @@
 </div>
 <script>
   var ch = {
-    template: `<div><slot>....</slot>
+    template: `<div><slot :xx=" '默认作用域插槽'">....</slot>
                         <slot name="hasname">.....</slot>
-                         <slot name="hasnamescope" :xx=" '作用域插槽'"></slot></div>`
+                         <slot name="hasnamescope" :xx=" '具名作用域插槽'"></slot></div>`
   }
   const vm = new Vue({
     el: '#app',

@@ -364,7 +364,15 @@ const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 reg.test判定为true, reg.exe(str)才不是undifined 
 ```
 
+### ownProperty
 
+```
+["lastIndex", "a"]
+```
+
+### key
+
+['a']
 
 # 常用正则
 
