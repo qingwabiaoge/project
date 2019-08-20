@@ -136,8 +136,8 @@ var options = {
   useNewUrlParser - 底层MongoDB已经废弃当前连接字符串解析器。因为这是一个重大的改变，添加了  useNewUrlParser标记如果在用户遇到bug时，允许用户在新的解析器中返回旧的解析器。除非连接阻止设置，否则你应  该设置useNewUrlParser: true。
 */
  useNewUrlParser: true,
-    //估计是新建索引的方法
- useCreateIndex: true,
+    //估计是用新的索引方法
+  useCreateIndex: true,
   db: { native_parser: true },
   server: { poolSize: 5 },
   replset: { rs_name: 'myReplicaSetName' },
@@ -193,7 +193,37 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 
 
-## 连接（Connections）
+##### disconnect() 
+
+```
+mongoose.disconnect()
+```
+
+　　 使用disconnect()方法可以断开连接
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(err){
+        console.log('连接失败');
+    }else{
+        console.log('连接成功');
+    }
+});
+setTimeout(function(){
+    mongoose.disconnect(function(){
+        console.log("断开连接");
+    })
+}, 2000);
+```
+
+
+
+![img](img/740839-20170720232404255-1533749216.gif)
+
+ 
+
+### 连接数据库(官方5.2中文)
 
 你可以用`mongoose.connect()`方法连接MongoDB。
 
@@ -210,7 +240,7 @@ mongoose.connect('mongodb://username:password@host:port/database?options...');
 
 有关更多细节查看mongodb连接字符串规范。
 
-### 操作缓冲
+##### 操作缓冲
 
 Mongoose可以让你立即使用模型，不用等待mongoose与MongoDB建立连接。
 
@@ -239,7 +269,7 @@ setTimeout(function() {
 mongoose.set('bufferCommands', false);
 ```
 
-### 选项
+##### 选项
 
 `connect`方法也接收一个`options`对象，它将传递给底层的MongoDB驱动程序。
 
@@ -270,11 +300,14 @@ mongoose.connect(uri, options);
 
 ```js
 const options = {
-  useNewUrlParser: true,
+  useNewUrlParser: true,//不选有警告
+        //估计是用新的索引方法
+  useCreateIndex: true,//不选有警告
+ poolSize: 100, //必要 维护最多100个socket连接
   autoIndex: false, // 不创建索引
   reconnectTries: Number.MAX_VALUE, // 总是尝试重新连接
   reconnectInterval: 500, // 每500ms重新连接一次
-  poolSize: 10, // 维护最多10个socket连接
+
   // 如果没有连接立即返回错误，而不是等待重新连接
   bufferMaxEntries: 0,
   connectTimeoutMS: 10000, // 10s后放弃重新连接
@@ -286,7 +319,7 @@ mongoose.connect(uri, options);
 
 有关`connectTimeoutMS`和`socketTimeoutMS`的更多信息，查阅此页面
 
-### 回调
+##### 回调
 
 `connect()`函数也接收一个回调参数，其返回一个promise。
 
@@ -302,7 +335,7 @@ mongoose.connect(uri, options).then(
 );
 ```
 
-### 连接字符串选项
+##### 连接字符串选项
 
 你还可以将连接字符串中的驱动选项指定为URI查询字符串中的部分参数。这只适用于传递给MongoDB驱动的选项。你不能在查询字符串中设置特定的Mongoose选项，类似`bufferCommands`
 
@@ -317,7 +350,7 @@ mongoose.connect('mongodb://localhost:27017/test', {
 
 将选项放入查询字符串选项不利于阅读。但是你只需要单独设置URI，而不是分开对`socketTimeoutMS`，`connectTimeoutMS`等设置。最佳实践是在开发和生产中将不同的选项，类似`replicaSet`或`ssl`放到连接字符串中，保持不变的类似`connectTimeoutMS`或`poolsize`放到对象中。 MongoDB文档具有支持连接字符串选项的完整列表。
 
-### keepAlive注意
+##### keepAlive注意
 
 对于长时间运行的应用，通常谨慎的做法是用毫秒数来激活`keepAlive`。没有它，一段时间后你或许会看到“连接关闭”的错误，这似乎是没有理由的。如果确实是这样，在阅读完本文后，你或许决定开启`keepAlive`：
 
@@ -327,7 +360,7 @@ mongoose.connect(uri, { keepAlive: true, keepAliveInitialDelay: 300000 });
 
 `keepAliveInitialDelay`是在socket上启动`keepAlive`时要等待的毫秒数。从mongoose 5.2.0开始`keepAlive`默认被启动。
 
-### 副本集连接
+##### 副本集连接
 
 要连接到一个副本集需要通过逗号分隔的主机列表而不是单个主机。
 
@@ -347,7 +380,7 @@ mongoose.connect('mongodb://user:pw@host1.com:27017,host2.com:27017,host3.com:27
 mongoose.connect('mongodb://host1:port1/?replicaSet=rsName');
 ```
 
-### Multi-mongos支持
+##### Multi-mongos支持
 
 你可以连接多个mongos实例，以便于分片集群中的高可用行。在mongoose 5.x中你不需要传递任何选项去连接多个mongos。
 
@@ -356,7 +389,7 @@ mongoose.connect('mongodb://host1:port1/?replicaSet=rsName');
 mongoose.connect('mongodb://mongosA:27501,mongosB:27501', cb);
 ```
 
-### 多连接
+##### 多连接
 
 到目前为止我们已经用mongoose的默认连接来连接上MongoDB。有时我们需要对mongo开放多个连接，每个具有不同的读/写设置，或者只是可能针对不同的数据库。在这些情况下，我们可以使用`mongoose.createConnection()`，他接受上面已经介绍过的所有参数，并返回一个新的连接给你。
 
@@ -366,7 +399,7 @@ const conn = mongoose.createConnection('mongodb://[username:password@]host1[:por
 
 这个连接对象用于创建和索引模型。模型总是作用于单个连接。当你调用`mongoose.connect()`时mongoose会创建一个默认连接。你可以用`mongoose.connection`访问默认连接。
 
-### 连接池
+##### 连接池
 
 每个连接，无论由`mongoose.connect`或`mongoose.createConnection`创建都被内部配置连接池支持，默认最大值为5。可以修改连接选项来修改连接池大小。
 
@@ -378,7 +411,7 @@ const uri = 'mongodb://localhost:27017/test?poolSize=4';
 mongoose.createConnection(uri);
 ```
 
-### 在v5.x中选项的改变
+##### 在v5.x中选项的改变
 
 如果你在4.x中没有使用`useMongoClient`，当从4.x升级到5.x的时候，你或许会收到以下弃用警告：
 
@@ -428,36 +461,6 @@ mongoose.connect(myUri, {
 
 
 
-
-##### disconnect() 
-
-```
-mongoose.disconnect()
-```
-
-　　 使用disconnect()方法可以断开连接
-
-```
-var mongoose = require('mongoose');
-mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
-    if(err){
-        console.log('连接失败');
-    }else{
-        console.log('连接成功');
-    }
-});
-setTimeout(function(){
-    mongoose.disconnect(function(){
-        console.log("断开连接");
-    })
-}, 2000);
-```
-
-
-
-![img](img/740839-20170720232404255-1533749216.gif)
-
- 
 
 ### Schema
 

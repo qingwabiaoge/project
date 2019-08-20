@@ -10,10 +10,6 @@
 模块化组件化标签化:__把一个逻辑的dom  css  js逻辑  数据状态 封装在一起,__简化__成标签,
 
 # 组件===构造函数
-
-###  组件属性===构造函数的参数
-
-
 ```javascript
 父组件
 fa={age:10,fn(){} ....}
@@ -23,29 +19,10 @@ fa={age:10,fn(){} ....}
 const cl = new VueComponent({props: {age,fn}})
 ```
 
-### 组件属性的种类
-
-```
-<el-input-number 
-                 v-model="num" 
-                @change="handleChange" 
-               :min="1" 
-              :max="10" 
-              label="描述文字"
-             :label-width="formLabelWidth">
-</el-input-number>
-
-num变量随着fa.num的改变而改变,
-label常量不可改变
-:min="1" :max="10"也是常量,程序代码里不可改变
-:label-width="formLabelWidth" 不用更改值的变量
-```
+#  组件属性===构造函数的参数
 
 
-
- ##### props=['xxx'] 自定义属性
-
-   ###### prop作用
+### props=['xxx'] 自定义属性
 
    * 数据父传子  
 
@@ -55,28 +32,24 @@ label常量不可改变
    不要被父子组件的属性传递和v-for误导了
    ```
 
-   
-
-##### @change='handleChange'
-
-   ######  作用: 
-
-     数据子传父
-
-##### class
-
-##### style
-
-##### attr 
+### attr 
 
  父传子 子组件通过$attr访问
-
-##### ref其他组件 
-
-  通过 this.$refs['xxx']访问
-
-
 
 ### 组件属性改变更新视图
 
 组件属性改变=>l中的键值也会改变=>cl的钩子函数运行(render,v-direct,watch,update等)
+
+
+
+# 组件自定义事件===构造函数的回调参数类型参数
+
+```
+@change='handleChange'
+```
+
+```
+ 数据子传父
+```
+
+

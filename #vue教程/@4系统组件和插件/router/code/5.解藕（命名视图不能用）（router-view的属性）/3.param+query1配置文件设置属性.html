@@ -35,8 +35,9 @@
 
             {
                 path: '/:id',
-                // 路由解耦，设置属性值,因为<route-view>可能代表多个组件,所以属性不能设置在<route-view>
-                props: function (route) {
+
+                // 路由解耦，设置属性值,因为<route-view>代表多个要切换的组件,所以属性不能设置在<route-view>
+                props: function (route) {//函数做参数,vue的prop里有介绍
                     return {id: route.params.id, query: route.query.q}
                 },
                 component: mycomponent

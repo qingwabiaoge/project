@@ -47,7 +47,7 @@ touch mongodb.log
 
 
 
-![img](https://images2018.cnblogs.com/blog/1101099/201803/1101099-20180319233418015-953209930.png)
+![img](./img/1101099-20180319233418015-953209930.png)
 
 # 二、配置用户
 
@@ -92,7 +92,7 @@ cd /usr/local/mongodb/bin
 ./mongo
 ```
 
-![img](https://images2018.cnblogs.com/blog/1101099/201803/1101099-20180319233505037-1320009908.png)
+![img](./img/1101099-20180319233505037-1320009908.png)
 
 10. 登陆测试用户是否成功
     db.auth("root", "qinshilei@168") 如果返回1，则表示成功。
@@ -146,7 +146,7 @@ systemctl enable mongodb.service
 
 12．mongodb.service启动测试
 
-![img](https://images2018.cnblogs.com/blog/1101099/201803/1101099-20180319233548242-1156614625.png)
+![img](./img/1101099-20180319233548242-1156614625.png)
 
  
 
@@ -160,7 +160,7 @@ mongod: error while loading shared libraries: libnetsnmpmibs.so.30: cannot open 
 
 这个报错信息是说找不到对应的库文件，原因是一开始我下错了安装包版本，所以在下载是一定要注意自己系统的版本
 
-![img](https://images2018.cnblogs.com/blog/1101099/201803/1101099-20180319234218626-1036575677.png)
+![img](./img/1101099-20180319234218626-1036575677.png)
 
 ２．通过配置文件启动服务：mongod -f /etc/mongodb.conf 时报错
 

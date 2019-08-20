@@ -1,9 +1,77 @@
-[[toc]]
+# CentOS7图形界面与命令行界面切换
 
-<style>
+### 方式1
 
-h3{font-size:20px}
-</style>
+在图形界面使用 ctrl+alt+F2切换到dos界面  
+
+dos界面 ctrl+alt+F2切换回图形界面
+
+### 方式2
+
+在命令上 输入 init 3 命令 切换到dos界面 
+
+输入 init 5命令 切换到图形界面
+
+###  默认启动
+
+如果想系统默认以某种方式启动， 使用systemd创建符号链接指向默认运行级别。
+
+ 修改方法为：
+
+1.首先删除已经存在的符号链接：
+
+rm /etc/systemd/system/default.target 
+
+2.默认级别转换为3(文本模式)： 
+
+*ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target* 或者默认
+
+3. 级别转换为5(图形模式)：
+
+ *ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target* 
+
+3.重启：
+
+ *reboot* 
+
+ 
+
+centos7以下的版本 
+
+```
+以管理员权限编辑/etc/inittab
+把
+id:5:initdefault:
+改为
+id:3:initdefault:
+就ok。
+```
+
+
+
+
+
+# 修改网卡配置，让网卡随操作系统自动启用
+
+1，确保是root账号进行下面操作，如果不是root身份，首先要以root身份登入当前的CentOS 7 ！
+
+2，在shell里面输入命令：cd /etc/sysconfig/network-scripts ，随后回车，进入这个目录。随后在shell里面输入：ls -a ，随后回车，会显示这个目录里面的所有文件。
+
+![img](img/510112-20170720223901380-181988068.png)
+
+3，修改网卡配置文件。“ifcfg-ens33”就是我的网卡配置文件，我用vi编辑它，在shell里面输入：vi ifcfg-ens33 ，随后回车，按"i"键，进入vi编辑模式，现在就可以编辑此文件了！
+
+![img](img/510112-20170720224317146-326654761.png)
+
+4，把“ONBOOT”的值修改为"yes"，CentOS最小化安装的网卡默认不跟随系统启用，所以这项的默认值为“no”。修改成"yes"后，直接输入":wq"保存当前修改，退出vi。
+
+![img](img/510112-20170720225007677-1078435840.png)
+
+5，重启操作系统，在shell里面输入：reboot，随后回车，重启操作系统。
+
+6，验证yum是否可以正常工作了，登入系统后，在shell里面输入：yum grouplist，如果网卡设置正确，那么yum就应该可以正常工作了，如下图：
+
+![img](img/510112-20170720225413786-534550151.png)
 
 # 文件目录
 
@@ -102,7 +170,7 @@ mv abc.txt 1234.txt
 
 mv a.txt /b/c.txt
 ```
- 
+
 
 删除文件
 
@@ -127,7 +195,7 @@ ifconfig -a
 ```
 
 ### 查看开启的端口
-   
+
     再运行    netstat -lntp
 
 
