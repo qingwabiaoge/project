@@ -95,7 +95,7 @@ return new Promise((resolve,reject)=>{})
 
 ```
 
-#  兼容  回调  ,async和 promise的写法
+#  兼容  回调  async和 promise的写法
 
 ```html
  <script>

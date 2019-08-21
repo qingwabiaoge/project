@@ -25,7 +25,7 @@ npm install mongodb
 
 　　在mongodb数据库中建立db1数据库，然后通过以下代码，建立col集合，并插入{"a":1}文档
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongodb = require('mongodb');
@@ -40,7 +40,7 @@ mongodb.MongoClient.connect("mongodb://localhost/db1",function(err,db){
 })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　最后返回结果如下
 
@@ -633,13 +633,13 @@ new temp({name:'a'}).save(function(err,doc){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ###### min | max
 
 　　将age的取值范围设置为[0,10]。如果age取值为20，文档将不被保存，且出现错误提示
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var schema = new mongoose.Schema({ age:{type:Number,min:0,max:10}, name: String,x:Number,y:Number});  
@@ -650,13 +650,13 @@ new temp({age:20}).save(function(err,doc){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ###### match
 
 　　将name的match设置为必须存在'a'字符。如果name不存在'a'，文档将不被保存，且出现错误提示
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var schema = new mongoose.Schema({ age:Number, name:{type:String,match:/a/},x:Number,y:Number});  
@@ -667,13 +667,13 @@ new temp({name:'bbb'}).save(function(err,doc){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ###### enum
 
 　　将name的枚举取值设置为['a','b','c']，如果name不在枚举范围内取值，文档将不被保存，且出现错误提示
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var schema = new mongoose.Schema({ age:Number, name:{type:String,enum:['a','b','c']},x:Number,y:Number});  
@@ -685,13 +685,13 @@ new temp({name:'bbb'}).save(function(err,doc){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ###### validate
 
 　　validate实际上是一个函数，函数的参数代表当前字段，返回true表示通过验证，返回false表示未通过验证。利用validate可以自定义任何条件。比如，定义名字name的长度必须在4个字符以上
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var validateLength = function(arg){
@@ -708,7 +708,7 @@ new temp({name:'abc'}).save(function(err,doc){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
  
 
@@ -718,7 +718,7 @@ new temp({name:'abc'}).save(function(err,doc){
 
 　　可以在数据库执行下列操作时，设置前后钩子
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
     init
@@ -734,13 +734,13 @@ new temp({name:'abc'}).save(function(err,doc){
     update
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ###### pre()
 
 　　以find()方法为例，在执行find()方法之前，执行pre()方法
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
@@ -763,13 +763,13 @@ temp.find(function(err,docs){
 */
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ###### post()
 
 　　post()方法并不是在执行某些操作后再去执行的方法，而在执行某些操作前最后执行的方法，post()方法里不可以使用next()
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
@@ -790,7 +790,7 @@ temp.find(function(err,docs){
  */   
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
  　
 
@@ -821,7 +821,7 @@ var MyModel = mongoose.model('MyModel', schema);
 
 　　通过对原型Model1使用new方法，实例化出文档document对象
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -838,7 +838,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### 文档保存
 
@@ -850,7 +850,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 save(function (err, doc) {})
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -867,7 +867,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　由下图所示，db1数据库中的集合名称为mymodels，里面有一个{size:"small"}的文档
 
@@ -881,7 +881,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　`Model`的实例是`document，`内置实例方法有很多，如 `save`，可以通过Schema对象的`methods`属性给实例自定义扩展方法
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -911,13 +911,13 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### 静态方法
 
 　　通过Schema对象的`statics`属性给 `Model` 添加静态方法
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -944,7 +944,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　由上所示，实例方法和静态方法的区别在于，静态方法是通过Schema对象的`statics属性`给`model`添加方法，实例方法是通过Schema对象的`methods`是给document添加方法
 
@@ -952,7 +952,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　通过schema对象的query属性，给model添加查询方法
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -973,7 +973,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
  
 
@@ -991,7 +991,7 @@ save([options], [options.safe], [options.validateBeforeSave], [fn])
 
 　　新建{age:10,name:'save'}文档，并保存
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -1008,7 +1008,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### create()
 
@@ -1020,7 +1020,7 @@ Model.create(doc(s), [callback])
 
 　　新增{name:"xiaowang"}，{name:"xiaoli"}这两个文档
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -1038,7 +1038,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### insertMany()
 
@@ -1048,7 +1048,7 @@ Model.insertMany(doc(s), [options], [callback])
 
 　　新增{name:"a"}，{name:"b"}这两个文档
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -1066,7 +1066,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　 
 
@@ -1094,7 +1094,7 @@ Model.find(conditions, [projection], [options], [callback])
 
 　　现在，使用find()方法找出所有数据
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -1113,11 +1113,11 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　找出年龄大于18的数据
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
         temp.find({age:{$gte:18}},function(err,docs){
@@ -1128,7 +1128,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
         })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　找出年龄大于18且名字里存在'huo'的数据
 
@@ -1181,7 +1181,7 @@ Model.findById(id, [projection], [options], [callback])
 
 　　显示第0个元素的所有字段
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
         var aIDArr = [];
@@ -1196,11 +1196,11 @@ Model.findById(id, [projection], [options], [callback])
         })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　以上代码的另一种写法如下
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
         var aIDArr = [];
@@ -1215,7 +1215,7 @@ Model.findById(id, [projection], [options], [callback])
         })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　只输出name字段
 
@@ -1237,7 +1237,7 @@ Model.findById(id, [projection], [options], [callback])
 
 　　输出最少的字段
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
             temp.findById(aIDArr[0],{lean:true},function(err,doc){
@@ -1250,7 +1250,7 @@ Model.findById(id, [projection], [options], [callback])
             })     
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 #####  findOne()
 
@@ -1262,7 +1262,7 @@ Model.findOne([conditions], [projection], [options], [callback])
 
 　　找出age>20的文档中的第一个文档
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.findOne({age:{$gt : 20}},function(err,doc){
@@ -1275,11 +1275,11 @@ temp.findOne({age:{$gt : 20}}).exec(function(err,doc){
 })  
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　找出age>20的文档中的第一个文档，且只输出name字段
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.findOne({age:{$gt : 20}},{name:1,_id:0},function(err,doc){
@@ -1395,7 +1395,7 @@ temp.find({$where:function(){
 
 　　其中，category的model如下所示
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 const mongoose = require('mongoose')
@@ -1416,11 +1416,11 @@ const CategorySchema = new Schema(
 module.exports = mongoose.model('Category', CategorySchema)
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　post的model如下所示
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 const mongoose = require('mongoose')
@@ -1446,11 +1446,11 @@ const PostSchema = new Schema(
 module.exports = mongoose.model('Post', PostSchema)
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　在对类别的操作中， 都需要使用populate操作符显示出所包括的posts中的title
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
   /* 加载所有类别 */
@@ -1474,11 +1474,11 @@ module.exports = mongoose.model('Post', PostSchema)
 ...
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　在对文章的操作中，则需要显示出类别category的number属性
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
   /* 按照id加载一篇文章 */
@@ -1498,11 +1498,11 @@ module.exports = mongoose.model('Post', PostSchema)
     })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　在新增、更新和删除文章的操作中，都需要重建与category的关联
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 // 关联category的posts数组
@@ -1541,7 +1541,7 @@ fnRelatedCategory = _id => {
 ...
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
  
 
@@ -1549,7 +1549,7 @@ fnRelatedCategory = _id => {
 
 　　常用的查询后处理的方法如下所示
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 sort     排序skip     跳过
@@ -1592,11 +1592,11 @@ temp.find().sort("age").exec(function(err,docs){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　按x从小到大，age从大到小排列
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.find().sort("x -age").exec(function(err,docs){
@@ -1608,13 +1608,13 @@ temp.find().sort("x -age").exec(function(err,docs){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### skip()
 
 　　跳过1个，显示其他
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.find().skip(1).exec(function(err,docs){
@@ -1625,7 +1625,7 @@ temp.find().skip(1).exec(function(err,docs){
 }); 
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### limit()
 
@@ -1688,7 +1688,7 @@ temp.find().distinct('x',function(err,distinct){
 
 　　文档更新可以使用以下几种方法
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 update()
@@ -1698,7 +1698,7 @@ findByIdAndUpdate()
 fingOneAndUpdate()
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### update()
 
@@ -1720,7 +1720,7 @@ Model.update(conditions, doc, [options], [callback])
 
 　　现在使用update()方法查询age大于20的数据，并将其年龄更改为40岁
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -1737,7 +1737,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 　　经过以上操作，数据库结果如下。只有第一个数据更改为40岁。而第三个数据没有发生变化
 
@@ -1745,7 +1745,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　如果要同时更新多个记录，需要设置options里的multi为true。下面将名字中有'a'字符的年龄设置为10岁
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var mongoose = require('mongoose');
@@ -1762,7 +1762,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ![img](img/740839-20170722105348933-1661967582.png)
 
@@ -1841,7 +1841,7 @@ temp.updateOne({name:/huo/},{age:60},function(err,raw){
 
 　　如果需要更新的操作比较复杂，可以使用find()+save()方法来处理，比如找到年龄小于30岁的数据，名字后面添加'30'字符
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.find({age:{$lt:20}},function(err,docs){
@@ -1858,7 +1858,7 @@ temp.find({age:{$lt:20}},function(err,docs){
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 
 
@@ -1866,7 +1866,7 @@ temp.find({age:{$lt:20}},function(err,docs){
 
 　　如果需要更新的操作比较复杂，可以使用findOne()+save()方法来处理，比如找到名字为'huochai'的数据，年龄加100岁
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 temp.findOne({name:'huochai'},function(err,doc){
@@ -1879,7 +1879,7 @@ temp.findOne({name:'huochai'},function(err,doc){
 });
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ##### findOneAndUpdate()
 
@@ -2002,7 +2002,7 @@ Model.findByIdAndRemove(id, [options], [callback])
 
 　　删除第0个元素
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var aIDArr = [];
@@ -2017,13 +2017,13 @@ temp.find(function(err,docs){
 })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ![img](img/740839-20170722124210105-1759533603.png)
 
 　　类似的，该方法也不能省略回调函数，否则数据不会被删除。当然，可以使用exec()方法来简写代码
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
 var aIDArr = [];
@@ -2035,7 +2035,7 @@ temp.find(function(err,docs){
 })
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ![img](img/740839-20170722124335949-2088054111.png)
 
