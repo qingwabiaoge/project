@@ -1,0 +1,132 @@
+<div>
+	<div class="layout grid-m0" data-componentid="231" data-context="bd" data-id="24783721" data-prototypeid="231" data-widgetid="24783721">
+		<div class="col-main">
+			<div class="main-wrap" data-modules="main" data-width="b950" style="overflow:visible;">
+				<div data-componentid="5003" data-spm="110.0.5003-24783722" data-title="自定义内容区" data-widgetid="24783722">
+					<div class="skin-box tb-module">
+						<s class="skin-box-tp"></s>
+						<div class="skin-box-bd clear-fix">
+							<div class="J_TWidget" data-widget-config="{'triggerType': 'mouse','triggerCls':'ks-switchable-trigger','panelCls':'ks-switchable-panel','multiple':false,'autoplay':true}" data-widget-type="Accordion" style="border:1px solid rgb(0,0,0);width:948px;height:400px;">
+								<div class="ks-switchable-trigger ks-active first-trigger" style="background:rgb(235,104,119);width:38px;height:400px;text-align:center;color:rgb(255,255,255);font-size:14px;margin-left:1px;border-left-color:rgb(255,255,255);border-left-width:1px;border-left-style:solid;float:left;cursor:pointer;">
+									<div>
+										<span>+<br />
+										NO.1<br />
+										销<br />
+										售<br />
+										排<br />
+										行<br />
+										榜<br />
+										这<br />
+										里<br />
+										输<br />
+										入<br />
+										标<br />
+										题<br />
+										请<br />
+										注<br />
+										意<br />
+										换<br />
+										行</span></div>
+								</div>
+								<div class="ks-switchable-panel" style="width:750px;height:400px;float:left;">
+									<span><a href="#" target="_blank"><img height="400" src="http://img.tbzxiu.com/8/T2b3WZXltXXXXXXXXX_!!461730043.jpg" style="float:none;margin:0px;" width="750" /></a></span></div>
+								<div class="ks-switchable-trigger" style="background:rgb(235,104,119);width:38px;height:400px;text-align:center;color:rgb(255,255,255);font-size:14px;border-left-color:rgb(255,255,255);border-left-width:1px;border-left-style:solid;float:left;cursor:pointer;">
+									<div>
+										<span>+<br />
+										NO.2<br />
+										销<br />
+										售<br />
+										排<br />
+										行<br />
+										榜<br />
+										这<br />
+										里<br />
+										输<br />
+										入<br />
+										标<br />
+										题<br />
+										请<br />
+										注<br />
+										意<br />
+										换<br />
+										行</span></div>
+								</div>
+								<div class="ks-switchable-panel" style="width:750px;height:400px;float:left;display:none;">
+									<span><a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-2895405436.2.Zj7e10&amp;id=26573500353&amp;scene=taobao_shop" target="_blank"><img height="400" src="http://img.tbzxiu.com/8/T2VRdpXotNXXXXXXXX_!!461730043.jpg" width="750" /></span></div>
+								<div class="ks-switchable-trigger" style="background:rgb(235,104,119);width:38px;height:400px;text-align:center;color:rgb(255,255,255);font-size:14px;border-left-color:rgb(255,255,255);border-left-width:1px;border-left-style:solid;float:left;cursor:pointer;">
+									<div>
+										<span>+<br />
+										NO.3<br />
+										销<br />
+										售<br />
+										排<br />
+										行<br />
+										榜<br />
+										这<br />
+										里<br />
+										输<br />
+										入<br />
+										标<br />
+										题<br />
+										请<br />
+										注<br />
+										意<br />
+										换<br />
+										行</span></div>
+								</div>
+								<div class="ks-switchable-panel" style="width:750px;height:400px;float:left;display:none;">
+									<span><a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-2895405436.2.Zj7e10&amp;id=26573500353&amp;scene=taobao_shop" target="_blank"><img height="400" src="http://img.tbzxiu.com/8/T2_GKwXnNbXXXXXXXX_!!461730043.jpg" width="750" /></span></div>
+								<div class="ks-switchable-trigger" style="background:rgb(235,104,119);width:38px;height:400px;text-align:center;color:rgb(255,255,255);font-size:14px;border-left-color:rgb(255,255,255);border-left-width:1px;border-left-style:solid;float:left;cursor:pointer;">
+									<div>
+										<span>+<br />
+										NO.4<br />
+										销<br />
+										售<br />
+										排<br />
+										行<br />
+										榜<br />
+										这<br />
+										里<br />
+										输<br />
+										入<br />
+										标<br />
+										题<br />
+										请<br />
+										注<br />
+										意<br />
+										换<br />
+										行</span></div>
+								</div>
+								<div class="ks-switchable-panel" style="width:750px;height:400px;float:left;display:none;">
+									<span><a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-2895405436.2.Zj7e10&amp;id=26573500353&amp;scene=taobao_shop" target="_blank"><img height="400" src="http://img.tbzxiu.com/8/T2IBuLXapaXXXXXXXX_!!461730043.jpg" width="750" /></span></div>
+								<div class="ks-switchable-trigger last-trigger" style="background:rgb(235,104,119);width:38px;height:400px;text-align:center;color:rgb(255,255,255);font-size:14px;border-left-color:rgb(255,255,255);border-left-width:1px;border-left-style:solid;float:left;cursor:pointer;">
+									<div>
+										<span>+<br />
+										NO.5<br />
+										销<br />
+										售<br />
+										排<br />
+										行<br />
+										榜<br />
+										这<br />
+										里<br />
+										输<br />
+										入<br />
+										标<br />
+										题<br />
+										请<br />
+										注<br />
+										意<br />
+										换<br />
+										行</span></div>
+								</div>
+								<div class="ks-switchable-panel" style="width:750px;height:400px;float:left;display:none;">
+									<span><a href="http://item.taobao.com/item.htm?spm=a1z10.1.w4004-2895405436.2.Zj7e10&amp;id=26573500353&amp;scene=taobao_shop" target="_blank"><img height="400" src="http://img.tbzxiu.com/8/T2Q8CZXd4XXXXXXXXX_!!461730043.jpg" width="750" /></span></div>
+							</div>
+						</div>
+						<s class="skin-box-bt"></s></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

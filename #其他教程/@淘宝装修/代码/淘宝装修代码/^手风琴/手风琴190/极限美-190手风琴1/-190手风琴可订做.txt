@@ -1,0 +1,39 @@
+<div style="background:rgb(255, 0, 0);width:190px;text-align:center;color:rgb(255, 255, 255);line-height:35px;font-family:微软雅黑;font-size:18px;font-weight:bold;">
+	热卖排行榜</div>
+<div class="J_TWidget" data-widget-config="{'triggerType': 'mouse','triggerCls':'ks-switchable-trigger','panelCls':'ks-switchable-panel','multiple':false,'autoplay':true}" data-widget-type="Accordion" style="border:1px solid rgb(255, 0, 0);width:188px;height:auto;margin-top:11px;">
+	<div class="ks-switchable-trigger" style="background:rgb(255, 0, 0);height:25px;color:rgb(255, 255, 255);line-height:25px;font-size:15px;cursor:pointer;">
+		+TOP1&amp;nbsp;输入商品标题文字</div>
+	<div class="ks-switchable-panel">
+		<a href="#" target="_blank"><img height="180" src="http://img03.taobaocdn.com/imgextra/i3/T1kCK6XjBXXXXI4cwI-261995681.jpg" style="float: none; margin: 3px; " width="180" /></a>
+		<div style="background:rgb(204, 204, 204);margin:3px;width:182px;text-align:center;color:rgb(255, 0, 0);font-size:18px;font-weight:bold;">
+			一口价：80元</div>
+	</div>
+	<div class="ks-switchable-trigger" style="background:rgb(255, 0, 0);height:25px;color:rgb(255, 255, 255);line-height:25px;font-size:15px;border-top-color:rgb(255, 255, 255);border-top-width:1px;border-top-style:solid;cursor:pointer;">
+		+TOP2&amp;nbsp;输入商品标题文字</div>
+	<div class="ks-switchable-panel" style="display:none;">
+		<a target="_blank"><img height="180" src="http://img04.taobaocdn.com/imgextra/i4/T1G9i6XhXaXXXI4cwI-261995681.jpg" style="margin:3px;border:1px solid rgb(255, 0, 0);" width="180" /></a>
+		<div style="background:rgb(204, 204, 204);margin:3px;width:182px;text-align:center;color:rgb(255, 0, 0);font-size:18px;font-weight:bold;">
+			一口价：80元</div>
+	</div>
+	<div class="ks-switchable-trigger" style="background:rgb(255, 0, 0);height:25px;color:rgb(255, 255, 255);line-height:25px;font-size:15px;border-top-color:rgb(255, 255, 255);border-top-width:1px;border-top-style:solid;cursor:pointer;">
+		+TOP3&amp;nbsp;输入商品标题文字</div>
+	<div class="ks-switchable-panel" style="display:none;">
+		<a target="_blank"><img height="180" src="http://img03.taobaocdn.com/imgextra/i3/T1kCK6XjBXXXXI4cwI-261995681.jpg" style="margin:3px;border:1px solid rgb(255, 0, 0);" width="180" /></a>
+		<div style="background:rgb(204, 204, 204);margin:3px;width:182px;text-align:center;color:rgb(255, 0, 0);font-size:18px;font-weight:bold;">
+			一口价：80元</div>
+	</div>
+	<div class="ks-switchable-trigger" style="background:rgb(255, 0, 0);height:25px;color:rgb(255, 255, 255);line-height:25px;font-size:15px;border-top-color:rgb(255, 255, 255);border-top-width:1px;border-top-style:solid;cursor:pointer;">
+		+TOP4&amp;nbsp;输入商品标题文字</div>
+	<div class="ks-switchable-panel" style="display:none;">
+		<a target="_blank"><img height="180" src="http://img04.taobaocdn.com/imgextra/i4/T1G9i6XhXaXXXI4cwI-261995681.jpg" style="margin:3px;border:1px solid rgb(255, 0, 0);" width="180" /></a>
+		<div style="background:rgb(204, 204, 204);margin:3px;width:182px;text-align:center;color:rgb(255, 0, 0);font-size:18px;font-weight:bold;">
+			一口价：80元</div>
+	</div>
+	<div class="ks-switchable-trigger" style="background:rgb(255, 0, 0);height:25px;color:rgb(255, 255, 255);line-height:25px;font-size:15px;border-top-color:rgb(255, 255, 255);border-top-width:1px;border-top-style:solid;cursor:pointer;">
+		+TOP5&amp;nbsp;输入商品标题文字</div>
+	<div class="ks-switchable-panel" style="display:none;">
+		<a target="_blank"><img height="180" src="http://img03.taobaocdn.com/imgextra/i3/T1kCK6XjBXXXXI4cwI-261995681.jpg" style="margin:3px;border:1px solid rgb(255, 0, 0);" width="180" /></a>
+		<div style="background:rgb(204, 204, 204);margin:3px;width:182px;text-align:center;color:rgb(255, 0, 0);font-size:18px;font-weight:bold;">
+			一口价：80元</div>
+	</div>
+</div>

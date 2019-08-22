@@ -1,0 +1,23 @@
+/* 懒人图库 搜集整理 www.lanrentuku.com */
+body { background:black; color:white; font-family: 'georgia' } /* not important */
+.spotlightWrapper ul { 
+list-style-type: none; /* remove the default style for list items (the circles) */ 
+margin:0px; /* remove default margin */
+padding:0px; /* remove default padding */
+}
+.spotlightWrapper ul li { 
+float:left; /* important: left float */
+position:relative; /* so we can use top and left positioning */
+}
+.spotlightWrapper ul li a img { 
+width:200px; /* you don't need this, i just rescaled the images they are bigger then i want them to be ' */
+position:relative; /* so we can use top and left positioning */
+border:none; /* remove the default blue border */
+}
+.spotlightWrapper ul li a img.active {
+border:4px solid white; /* choose whatever you like */
+z-index:1; /* show it on top of the other images (they have z-index 0) */
+left: -4px; /* same as border width but negative */
+top: -4px; /* same as border width but negative */
+}
+.clear { clear:both; } /* to clear the float after the last item */

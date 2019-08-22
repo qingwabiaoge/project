@@ -1,0 +1,199 @@
+<div class="box " data-spm="110.0.3-17931924548">
+	<div class="shop-custom no-border">
+		<div class="bd">
+			<div class="custom-area">
+				<div style="height: 150px;">
+					<div class="J_TWidget" data-widget-config="{&#13;&#10; &#13;&#10;&#13;&#10;'effect': 'fade',&#13;&#10; 'circular': true ,&#13;&#10; 'navCls':'toseise',&#13;&#10; &#13;&#10;&#13;&#10;'activeTriggerCls':'odslos',&#13;&#10; 'contentCls':'piaofu'&#13;&#10; }" data-widget-type="Tabs">
+						<ul class="toseise" style="display: none;">
+							<li class="odslos">
+								&nbsp;</li>
+						</ul>
+						<div class="piaofu">
+							<div style="background: rgb(255, 255, 255); width: 950px; height: 150px; z-index: 99;">
+								<table align="left" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="" height="150" width="950">
+									<tbody>
+										<tr>
+											<td>
+												<div class="slider-promo J_TWidget" data-widget-config="{'effect':'fade','contentCls': 'lst-main', 'navCls': 'lst-trigger-2', 'activeTriggerCls': 'current'}" data-widget-type="Slide" style="width: 950px; height: 150px; float: left;">
+													<table border="0" cellpadding="0" cellspacing="0" class="" height="150" width="950">
+														<tbody>
+															<tr>
+																<td height="150" width="632">
+																	<table align="center" border="0" cellpadding="0" cellspacing="0" class="" height="150" style="font-size: 12px;" width="632">
+																		<tbody>
+																			<tr>
+																				<td align="center" bgcolor="#ffffff" height="50" style="border: 1px solid rgb(208, 208, 208);" valign="center">
+																					<table border="0" cellpadding="0" cellspacing="0" class="" height="148" width="630">
+																						<tbody>
+																							<tr>
+																								<td height="25" width="630">
+																									<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" class="" height="25" width="630">
+																										<tbody>
+																											<tr>
+																												<td width="138">
+																													<img data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/T2GM0MXi4bXXXXXXXX-180538120.gif" height="25" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="178" /></td>
+																												<td align="right" width="492">
+																													<a href="#" target="_blank">按新品 </a>| <a href="#" target="_blank">按价格</a> | <a href="#" target="_blank">按收藏</a> | <a href="#" target="_blank">按价格</a></td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																							</tr>
+																							<tr>
+																								<td height="123">
+																									<table border="0" cellpadding="0" cellspacing="0" class="" height="123" width="630">
+																										<tbody>
+																											<tr>
+																												<td height="40" width="10">
+																													<br />
+																												</td>
+																												<td valign="bottom" width="81">
+																													<table background="http://img01.taobaocdn.com/imgextra/i1/T2G30MXi4bXXXXXXXX-180538120.gif" border="0" cellpadding="0" cellspacing="0" class="" height="21" width="81">
+																														<tbody>
+																															<tr>
+																																<td height="21" width="3">
+																																	<br />
+																																</td>
+																																<td align="left" width="73">
+																																	<div align="left" style="color: rgb(255, 255, 255); font-size: 10pt;">
+																																		<font style="color: rgb(255, 255, 255);">上衣分类</font></div>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																												<td align="right" valign="bottom" width="539">
+																													<table border="0" cellpadding="0" cellspacing="0" class="" height="23" width="530">
+																														<tbody>
+																															<tr>
+																																<td>
+																																	<p align="left">
+																																		卡通T恤 | <span>连衣裙</span> | 衬衫 |<a href="#"><span>最新上架</span></a> | 半袖T恤 | <span>背心吊带</span> | <a href="#"><span>雪纺布料</span></a></p>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																											<tr>
+																												<td height="43" width="10">
+																													<br />
+																												</td>
+																												<td align="center" height="43" valign="center" width="81">
+																													<table background="http://img01.taobaocdn.com/imgextra/i1/T2G30MXi4bXXXXXXXX-180538120.gif" border="0" cellpadding="0" cellspacing="0" class="" height="21" width="81">
+																														<tbody>
+																															<tr>
+																																<td height="21" width="3">
+																																	<br />
+																																</td>
+																																<td align="left" width="73">
+																																	<div align="left" style="color: rgb(255, 255, 255); font-size: 10pt;">
+																																		<font style="color: rgb(255, 255, 255);">上衣分类</font></div>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																												<td align="right" valign="center">
+																													<table border="0" cellpadding="0" cellspacing="0" class="" height="23" width="530">
+																														<tbody>
+																															<tr>
+																																<td align="left">
+																																	半身裙 | <span>牛仔裤</span> | <a href="#"><span>超短裤</span></a><a>|</a> 短裙 | <a href="#"><span>布裤</span></a><a>|</a> 7分裤 | 马裤</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																											<tr>
+																												<td height="40" width="10">
+																													<br />
+																												</td>
+																												<td valign="top" width="81">
+																													<table background="http://img01.taobaocdn.com/imgextra/i1/T2G30MXi4bXXXXXXXX-180538120.gif" border="0" cellpadding="0" cellspacing="0" class="" height="21" width="81">
+																														<tbody>
+																															<tr>
+																																<td height="21" width="3">
+																																	<br />
+																																</td>
+																																<td align="left" width="73">
+																																	<div align="left" style="color: rgb(255, 255, 255); font-size: 10pt;">
+																																		<font style="color: rgb(255, 255, 255);">上衣分类</font></div>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																												<td align="right" valign="top">
+																													<table border="0" cellpadding="0" cellspacing="0" class="" height="23" width="530">
+																														<tbody>
+																															<tr>
+																																<td>
+																																	<p align="left">
+																																		0-50元 | <span>50-88元</span> | 88-130元 | <span>130-180元</span> | <span>180-200元</span> |<a href="#" target="_blank"><span>200元以上 </span></a></p>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+																<td width="8">
+																	<br />
+																</td>
+																<td width="310">
+																	<table align="center" border="0" cellpadding="0" cellspacing="0" class="" height="150" style="font-size: 12px;" width="310">
+																		<tbody>
+																			<tr>
+																				<td align="center" bgcolor="#ffffff" height="50" style="border: 1px solid rgb(208, 208, 208);" valign="center">
+																					<table border="0" cellpadding="0" cellspacing="0" class="" height="148" width="308">
+																						<tbody>
+																							<tr>
+																								<td align="center" height="32" valign="top" width="308">
+																									<img data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/T2Jw0MXi4bXXXXXXXX-180538120.gif" height="24" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="308" /></td>
+																							</tr>
+																							<tr>
+																								<td align="center" height="116" valign="top">
+																									<table border="0" cellpadding="0" cellspacing="0" class="" style="width: 298px; height: 106px;">
+																										<tbody>
+																											<tr>
+																												<td valign="top">
+																													<marquee direction="up" height="116" scrollamount="1" style="color: rgb(255, 255, 255); line-height: 15px; font-size: 12px;"><span style="color: rgb(49, 49, 49); font-size: 12pt;"><span>此处编辑您的公告内容</span><span>此处编辑您的公告内容</span><span>此处编辑您的公告内容......</span></span></marquee></td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,84 @@
+<div class="skin-box-bd clear-fix">
+	<div style="border: 1px solid rgb(217, 217, 217); width: 948px; height: 79px;">
+		<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544523T21SuZXnhXXXXXXXXX_!!793176709.jpg&quot;) no-repeat center; width: 193px; height: 79px; float: left;">
+			<span>&nbsp;</span></div>
+		<div style="height: 78px; float: left;">
+			<div style="border-width: 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); width: 23px; height: 64px; text-align: center; color: rgb(51, 51, 51); line-height: 12px; padding-top: 15px; font-size: 12px; margin-left: 0px; float: left;">
+				<span>售前客服</span></div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544857T2NouYXolaXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>玫瑰</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545228T2NPyZXa4aXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>月季</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545351T26YG0XhRXXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>菊花</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545155T2X0diXb8OXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>牡丹</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545351T26YG0XhRXXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>百合</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545155T2X0diXb8OXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>春兰</span></div>
+			</div>
+		</div>
+		<div style="float: left; display: inline;">
+			<div style="border-width: 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); padding: 15px 1px 1px; width: 23px; height: 64px; text-align: center; color: rgb(51, 51, 51); line-height: 12px; font-size: 12px; margin-left: 0px; float: left;">
+				<span>售后客服</span></div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545640T2x4KZXe4aXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>薄荷</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545609T2zgqZXf4aXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>桂花</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545228T2NPyZXa4aXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>海棠</span></div>
+			</div>
+		</div>
+		<div style="float: left; display: inline;">
+			<div style="border-width: 0px 1px; border-style: solid; border-color: rgb(217, 217, 217); padding: 15px 1px 1px; width: 23px; height: 64px; text-align: center; color: rgb(51, 51, 51); line-height: 12px; font-size: 12px; margin-left: 0px; float: left;">
+				<span>投诉建议</span></div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545609T2zgqZXf4aXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>红花</span></div>
+			</div>
+			<div style="width: 60px; text-align: center; float: left;">
+				<div style="background: url(&quot;http://www26.tx8cdn.com/photo/lengyuchen29/2012103002544120T2jkWZXjxXXXXXXXXX_!!793176709.gif&quot;) no-repeat; padding: 7px; width: 46px; height: 46px;">
+					<span><a href="#" target="_blank"><img alt="有事点这里" border="0" data-ks-lazyload="http://www26.tx8cdn.com/photo/lengyuchen29/2012103002545228T2NPyZXa4aXXXXXXXX_!!793176709.gif" data-ks-lazyloaded="true" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" /></a></span></div>
+				<div style="color: rgb(102, 102, 102);">
+					<span>合欢</span></div>
+			</div>
+		</div>
+	</div>
+</div>

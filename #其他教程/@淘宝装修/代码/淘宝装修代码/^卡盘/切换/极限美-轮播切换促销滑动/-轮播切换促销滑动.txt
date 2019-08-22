@@ -1,0 +1,110 @@
+<div class="col-sub">
+	<div class="box" data-spm="11029xXY.1-1Uot1.3-53pVrb">
+		<div class="shop-custom no-border">
+			<div class="bd">
+				<div class="custom-area">
+					<div class="box" data-spm="1102aLC7.1-3HTqK.3-4XAN*h">
+						<div class="shop-custom no-border">
+							<div class="bd">
+								<div class="custom-area">
+									<div style="height:570px;">
+										<div class="J_TWidget" data-widget-config="{
+
+ 
+
+
+'effect': 'fade',
+
+ 'circular': true ,
+
+ 'navCls':'toseise',
+
+ 
+
+
+'activeTriggerCls':'odslos',
+
+ 'contentCls':'piaofu'
+
+ }" data-widget-type="Tabs">
+											<ul class="toseise" style="display:none;">
+												<li class="odslos">
+													&nbsp;</li>
+											</ul>
+											<div class="piaofu">
+												<div style="background:rgb(255,255,255);width:950px;height:570px;z-index:99;">
+													<div class="aaa">
+														<table align="left" border="0" cellpadding="0" cellspacing="0" class="" height="570" width="950">
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="J_TWidget" data-widget-config="{'effect':'fade','easing':'easeOutStrong','contentCls': 'listmain', 'navCls': 'listnav', 'activeTriggerCls':'selected','duration':'1','autoplay':1,'interval':3}" data-widget-type="Slide" style="border:1px solid rgb(204,204,204);width:948px;height:565px;">
+																			<div class="J_TWidget" data-widget-config="{'effect':'fade','easing':'easeOutStrong','contentCls': 'listmain2', 'navCls': 'listnav2', 'activeTriggerCls':'selected','duration':'1','autoplay':1,'interval':3}" data-widget-type="Slide">
+																				<div class="slider-promo" style="width:405px;height:565px;float:left;display:block;">
+																					<div class="listmain">
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2MOSeXcxaXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2nySeXc8aXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T28jieXhBXXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2xOWeXbxaXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2u6qeXfdXXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																					</div>
+																				</div>
+																				<div style="width:135px;height:565px;border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);border-right-width:1px;border-left-width:1px;border-right-style:solid;border-left-style:solid;float:left;">
+																					<div style="width:135px;height:98px;border-bottom-color:rgb(204,204,204);border-bottom-width:1px;border-bottom-style:solid;">
+																						<img alt="" src="http://img.tbzxiu.com/l/T2N8OeXm4aXXXXXXXX_!!162627820.gif" /></div>
+																					<div class="listnav listnav2" style="height:199px;text-align:center;color:rgb(255,39,141);line-height:32px;font-size:14px;font-weight:bold;">
+																						<div style="height:33px;border-bottom-color:rgb(204,204,204);border-bottom-width:1px;border-bottom-style:solid;cursor:pointer;">
+																							<span style="text-decoration:underline;">外套</span></div>
+																						<div style="height:33px;border-bottom-color:rgb(204,204,204);border-bottom-width:1px;border-bottom-style:solid;cursor:pointer;">
+																							<span style="text-decoration:underline;">牛仔裤</span></div>
+																						<div style="height:33px;border-bottom-color:rgb(204,204,204);border-bottom-width:1px;border-bottom-style:solid;cursor:pointer;">
+																							<font color="#ff278d">针织衫</font></div>
+																						<div style="height:33px;border-bottom-color:rgb(204,204,204);border-bottom-width:1px;border-bottom-style:solid;cursor:pointer;">
+																							<span style="text-decoration:underline;">女士西装</span></div>
+																						<div style="height:33px;border-bottom-color:rgb(204,204,204);border-bottom-width:1px;border-bottom-style:solid;cursor:pointer;">
+																							<span style="text-decoration:underline;">毛衣</span></div>
+																					</div>
+																					<div style="width:135px;height:267px;">
+																						<img alt="" src="http://img.tbzxiu.com/l/T26BOeXmNaXXXXXXXX_!!162627820.jpg" /></div>
+																				</div>
+																				<div class="slider-promo" style="width:405px;height:565px;float:left;display:block;">
+																					<div class="listmain2">
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T24iSeXchaXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2KyOeXd0aXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2x6qeXfdXXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2hyWeXbVaXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																						<div>
+																							<a href="#" target="_blank"><img alt="" src="http://img.tbzxiu.com/l/T2z6qeXfXXXXXXXXXX_!!162627820.jpg" style="height:556px;width:402px;float:none;margin:0px;" /></a></div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p>&nbsp;
+	</p>

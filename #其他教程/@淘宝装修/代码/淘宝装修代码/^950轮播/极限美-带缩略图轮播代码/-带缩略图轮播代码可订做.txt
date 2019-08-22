@@ -1,0 +1,61 @@
+<div class="J_TWidget" data-widget-config="{
+
+
+            'contentCls': 'slide-kun1362815729682content',
+
+
+            'triggerCls': 'slide-kun1362815729682triggers',
+
+
+            'navCls': 'slide-kun1362815729682triggers',
+
+
+            'triggerType': 'mouse',
+
+
+            'effect': 'scrollx',
+
+
+            'steps': 1,
+
+
+            'autoplay': true,
+
+
+            'circular': true
+
+
+        }" data-widget-type="Carousel" style="margin:0px;padding:0px;width:950px;">
+	<div style="margin:0px;padding:0px;width:950px;height:214px;overflow:hidden;">
+		<ul class="slide-kun1362815729682content" style="margin:0px;padding:0px;width:950px;height:214px;">
+			<li style="margin:0px;padding:0px;width:950px;height:214px;display:block;list-style-type:none;">
+				<div style="margin:0px;padding:0px;">
+					<a href="#" style="margin:0px;padding:0px;" target="_blank"><img border="0" height="210" src="http://bvvta.img37.wal8.com/img37/383786_20131030093556/1383097859.jpg" style="margin:0px;float:none;" width="950" /></a></div>
+				<div style="width:314px;height:4px;line-height:4px;font-size:4px;float:left;background-color:rgb(255,0,0);">
+					&nbsp;</div>
+			</li>
+			<li style="margin:0px;padding:0px;width:950px;height:214px;display:block;list-style-type:none;">
+				<div style="margin:0px;padding:0px;">
+					<a href="#" style="margin:0px;padding:0px;" target="_blank"><img border="0" height="210" src="http://bvvta.img37.wal8.com/img37/383786_20131030093556/138309787026.jpg" width="950" /></a></div>
+				<div style="width:314px;height:4px;line-height:4px;font-size:4px;margin-left:318px;background-color:rgb(255,0,0);">
+					&nbsp;</div>
+			</li>
+			<li style="margin:0px;padding:0px;width:950px;height:214px;display:block;list-style-type:none;">
+				<div style="margin:0px;padding:0px;">
+					<a href="#" style="margin:0px;padding:0px;" target="_blank"><img border="0" height="210" src="http://bvvta.img37.wal8.com/img37/383786_20131030093556/138309785602.jpg" width="950" /></a></div>
+				<div style="width:314px;height:4px;line-height:4px;font-size:4px;float:right;background-color:rgb(255,0,0);">
+					&nbsp;</div>
+			</li>
+		</ul>
+	</div>
+	<div style="margin:0px;padding:0px;width:950px;height:69px;overflow:hidden;">
+		<ul class="slide-kun1362815729682triggers" style="margin:0px;padding:0px;width:950px;height:69px;">
+			<li style="float:left;list-style-type:none;">
+				<img height="69" src="http://bvvta.img37.wal8.com/img37/383786_20131030093556/1383097859.jpg" style="margin:0px;float:none;" width="314" /></li>
+			<li style="margin-left:4px;float:left;list-style-type:none;">
+				<img height="69" src="http://bvvta.img37.wal8.com/img37/383786_20131030093556/138309787026.jpg" width="314" /></li>
+			<li style="float:right;list-style-type:none;">
+				<img height="69" src="http://bvvta.img37.wal8.com/img37/383786_20131030093556/138309785602.jpg" width="314" /></li>
+		</ul>
+	</div>
+</div>

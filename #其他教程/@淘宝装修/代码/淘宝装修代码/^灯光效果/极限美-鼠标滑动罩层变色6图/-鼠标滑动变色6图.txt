@@ -1,0 +1,146 @@
+<div class="box" data-spm="110.0.3-8720902587">
+	<div class="shop-custom no-border">
+		<div class="bd">
+			<div class="custom-area">
+				<div class="box" data-spm="110.0.3-8421170169">
+					<div class="shop-custom no-border">
+						<div class="bd">
+							<div class="custom-area">
+								<div class="J_TWidget" data-widget-config="{'effect': 'fade','circular': true ,'navCls':'toseise','activeTriggerCls':'odslos','contentCls':'piaofu'}" data-widget-type="Tabs" style="width: 848px; height: 985px;">
+									<ul class="toseise" style="display: none;">
+										<li class="odslos">
+											&nbsp;</li>
+									</ul>
+									<div class="piaofu">
+										<div style="width: 950px; height: 995px; overflow: hidden; z-index: 99; background-color: rgb(255, 255, 255);">
+											<div class="dd1" style="width: 316px; height: 496px; border-top-color: rgb(153, 153, 153); border-left-color: rgb(153, 153, 153); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid; float: left;">
+												<div style="margin: 9px 0px 0px 8px; width: 300px; height: 456px;">
+													<img data-attr-replace="[{'type':'data-ks-lazyload','desc':'NO1的图片地址'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/74363507/T2d7SZXfpaXXXXXXXX_!!74363507.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 300px; height: 456px; display: block;" /></div>
+												<div style="width: 300px; height: 28px; line-height: 28px; margin-top: 1px; margin-left: 8px;">
+													<div class="STYLE1" data-attr-replace="[{'type':'innerHTML','desc':'NO1的标题名称'}]" style="width: 215px; height: 28px; color: rgb(255, 255, 255); text-indent: 1em; float: left; background-color: rgb(102, 102, 102);">
+														极致美高端设计</div>
+													<div data-attr-replace="[{'type':'innerHTML','desc':'NO1的价格'}]" style="background: rgb(255, 0, 153); width: 85px; height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; float: left;">
+														￥10.00</div>
+												</div>
+											</div>
+											<div class="J_TWidget hidden" data-widget-config="{'trigger':'.dd1','align':{'node':'.dd1','offset':[8,8],'points':['tl','tl']}}" data-widget-type="Popup" style="border: 1px solid rgb(255, 255, 255); display: none;">
+												<div style="width: 300px; height: 456px; overflow: hidden;">
+													<div style="background: rgb(0, 0, 0); height: 188px; opacity: 0.4;">
+														&nbsp;</div>
+													<div style="background: rgb(0, 0, 0); padding: 5px; height: 100px; line-height: 25px; opacity: 0.8;">
+														<a data-attr-replace="[{'type':'href','desc':'NO1的连接地址'}]" href="#" style="color: rgb(255, 255, 255);" target="_blank"><font data-attr-replace="[{'type':'innerHTML','desc':'NO1的描述标题'}]" style="width: 300px; text-align: center; font-size: 24px; font-weight: 900; display: block;">极致美</font><font data-attr-replace="[{'type':'innerHTML','desc':'NO1的描述内容'}]">扶植版也有春天，谢谢各位亲们的光临，扶植版/标准版！ ￥10元</font></a></div>
+													<div style="background: rgb(0, 0, 0); height: 168px; opacity: 0.4;">
+														&nbsp;</div>
+												</div>
+											</div>
+											<div class="dd2" style="width: 315px; height: 496px; border-top-color: rgb(153, 153, 153); border-left-color: rgb(153, 153, 153); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid; float: left;">
+												<div style="margin: 9px 0px 0px 7px; width: 300px; height: 456px;">
+													<img data-attr-replace="[{'type':'data-ks-lazyload','desc':'NO2的图片地址'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/74363507/T2GuS0XfBXXXXXXXXX_!!74363507.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 300px; height: 456px; display: block;" /></div>
+												<div style="width: 300px; height: 28px; line-height: 28px; margin-top: 1px; margin-left: 7px;">
+													<div class="STYLE2" data-attr-replace="[{'type':'innerHTML','desc':'NO2的标题名称'}]" style="width: 215px; height: 28px; color: rgb(255, 255, 255); text-indent: 1em; float: left; background-color: rgb(102, 102, 102);">
+														<font style="background-color: rgb(102, 102, 102);">极致美高端设计</font></div>
+													<div data-attr-replace="[{'type':'innerHTML','desc':'NO2的价格'}]" style="background: rgb(255, 0, 153); width: 85px; height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; float: left;">
+														￥10.00</div>
+												</div>
+											</div>
+											<div class="J_TWidget hidden" data-widget-config="{'trigger':'.dd2','align':{'node':'.dd2','offset':[7,8],'points':['tl','tl']}}" data-widget-type="Popup" style="border: 1px solid rgb(255, 255, 255); display: none;">
+												<div style="width: 300px; height: 456px; overflow: hidden;">
+													<div style="background: rgb(0, 0, 0); height: 188px; opacity: 0.4;">
+														&nbsp;</div>
+													<div style="background: rgb(0, 0, 0); padding: 5px; height: 100px; line-height: 25px; opacity: 0.8;">
+														<a data-attr-replace="[{'type':'href','desc':'NO2的连接地址'}]" href="#" style="color: rgb(255, 255, 255);" target="_blank"><font data-attr-replace="[{'type':'innerHTML','desc':'NO2的描述标题'}]" style="width: 300px; text-align: center; font-size: 24px; font-weight: 900; display: block;">极致美</font><font data-attr-replace="[{'type':'innerHTML','desc':'NO2的描述内容'}]">扶植版也有春天，谢谢各位亲们的光临！ ￥10元</font></a></div>
+													<div style="background: rgb(0, 0, 0); height: 168px; opacity: 0.4;">
+														&nbsp;</div>
+												</div>
+											</div>
+											<div class="dd3" style="width: 315px; height: 496px; border-top-color: rgb(153, 153, 153); border-right-color: rgb(153, 153, 153); border-left-color: rgb(153, 153, 153); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left;">
+												<div style="margin: 9px 0px 0px 7px; width: 300px; height: 456px;">
+													<img data-attr-replace="[{'type':'data-ks-lazyload','desc':'NO3的图片地址'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/74363507/T2LeyZXglaXXXXXXXX_!!74363507.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 300px; height: 456px; display: block;" /></div>
+												<div style="width: 300px; height: 28px; line-height: 28px; margin-top: 1px; margin-left: 7px;">
+													<div class="STYLE2" data-attr-replace="[{'type':'innerHTML','desc':'NO3的标题名称'}]" style="width: 215px; height: 28px; color: rgb(255, 255, 255); text-indent: 1em; float: left; background-color: rgb(102, 102, 102);">
+														<font style="background-color: rgb(102, 102, 102);">极致美高端设计</font></div>
+													<div data-attr-replace="[{'type':'innerHTML','desc':'NO3的价格'}]" style="background: rgb(255, 0, 153); width: 85px; height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; float: left;">
+														￥10.00</div>
+												</div>
+											</div>
+											<div class="J_TWidget hidden" data-widget-config="{'trigger':'.dd3','align':{'node':'.dd3','offset':[7,8],'points':['tl','tl']}}" data-widget-type="Popup" style="border: 1px solid rgb(255, 255, 255); display: none;">
+												<div style="width: 300px; height: 456px; overflow: hidden;">
+													<div style="background: rgb(0, 0, 0); height: 188px; opacity: 0.4;">
+														&nbsp;</div>
+													<div style="background: rgb(0, 0, 0); padding: 5px; height: 100px; line-height: 25px; opacity: 0.8;">
+														<a data-attr-replace="[{'type':'href','desc':'NO3的连接地址'}]" href="#" style="color: rgb(255, 255, 255);" target="_blank"><font data-attr-replace="[{'type':'innerHTML','desc':'NO3的描述标题'}]" style="width: 300px; text-align: center; font-size: 24px; font-weight: 900; display: block;">极致美</font><font data-attr-replace="[{'type':'innerHTML','desc':'NO3的描述内容'}]">扶植版也有春天，谢谢各位亲们的光临，扶植版/标准版！ ￥10元</font></a></div>
+													<div style="background: rgb(0, 0, 0); height: 168px; opacity: 0.4;">
+														&nbsp;</div>
+												</div>
+											</div>
+											<div class="dd4" style="width: 316px; height: 496px; border-top-color: rgb(153, 153, 153); border-bottom-color: rgb(153, 153, 153); border-left-color: rgb(153, 153, 153); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; float: left;">
+												<div style="margin: 9px 0px 0px 8px; width: 300px; height: 456px;">
+													<img data-attr-replace="[{'type':'data-ks-lazyload','desc':'NO4的图片地址'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/74363507/T2LpWzXjxbXXXXXXXX_!!74363507.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 300px; height: 456px; display: block;" /></div>
+												<div style="width: 300px; height: 28px; line-height: 28px; margin-top: 1px; margin-left: 8px;">
+													<div class="STYLE2" data-attr-replace="[{'type':'innerHTML','desc':'NO4的标题名称'}]" style="width: 215px; height: 28px; color: rgb(255, 255, 255); text-indent: 1em; float: left; background-color: rgb(102, 102, 102);">
+														<font style="background-color: rgb(102, 102, 102);">极致美高端设计</font></div>
+													<div data-attr-replace="[{'type':'innerHTML','desc':'NO4的价格'}]" style="background: rgb(255, 0, 153); width: 85px; height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; float: left;">
+														￥10.00</div>
+												</div>
+											</div>
+											<div class="J_TWidget hidden" data-widget-config="{'trigger':'.dd4','align':{'node':'.dd4','offset':[8,8],'points':['tl','tl']}}" data-widget-type="Popup" style="border: 1px solid rgb(255, 255, 255); display: none;">
+												<div style="width: 300px; height: 456px; overflow: hidden;">
+													<div style="background: rgb(0, 0, 0); height: 188px; opacity: 0.4;">
+														&nbsp;</div>
+													<div style="background: rgb(0, 0, 0); padding: 5px; height: 100px; line-height: 25px; opacity: 0.8;">
+														<a data-attr-replace="[{'type':'href','desc':'NO4的连接地址'}]" href="#" style="color: rgb(255, 255, 255);" target="_blank"><font data-attr-replace="[{'type':'innerHTML','desc':'NO4的描述标题'}]" style="width: 300px; text-align: center; font-size: 24px; font-weight: 900; display: block;">极致美</font><font data-attr-replace="[{'type':'innerHTML','desc':'NO4的描述内容'}]">扶植版也有春天，谢谢各位亲们的光临，扶植版/标准版！ ￥10元</font></a></div>
+													<div style="background: rgb(0, 0, 0); height: 168px; opacity: 0.4;">
+														&nbsp;</div>
+												</div>
+											</div>
+											<div class="dd5" style="width: 315px; height: 496px; border-top-color: rgb(153, 153, 153); border-bottom-color: rgb(153, 153, 153); border-left-color: rgb(153, 153, 153); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; float: left;">
+												<div style="margin: 9px 0px 0px 7px; width: 300px; height: 456px;">
+													<img data-attr-replace="[{'type':'data-ks-lazyload','desc':'NO5的图片地址'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/74363507/T2kka0XadXXXXXXXXX_!!74363507.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 300px; height: 456px; display: block;" /></div>
+												<div style="width: 300px; height: 28px; line-height: 28px; margin-top: 1px; margin-left: 7px;">
+													<div class="STYLE2" data-attr-replace="[{'type':'innerHTML','desc':'NO5的标题名称'}]" style="width: 215px; height: 28px; color: rgb(255, 255, 255); text-indent: 1em; float: left; background-color: rgb(102, 102, 102);">
+														极致美高端设计</div>
+													<div data-attr-replace="[{'type':'innerHTML','desc':'NO5的价格'}]" style="background: rgb(255, 0, 153); width: 85px; height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; float: left;">
+														￥10.00</div>
+												</div>
+											</div>
+											<div class="J_TWidget hidden" data-widget-config="{'trigger':'.dd5','align':{'node':'.dd5','offset':[7,8],'points':['tl','tl']}}" data-widget-type="Popup" style="border: 1px solid rgb(255, 255, 255); display: none;">
+												<div style="width: 300px; height: 456px; overflow: hidden;">
+													<div style="background: rgb(0, 0, 0); height: 188px; opacity: 0.4;">
+														&nbsp;</div>
+													<div style="background: rgb(0, 0, 0); padding: 5px; height: 100px; line-height: 25px; opacity: 0.8;">
+														<a data-attr-replace="[{'type':'href','desc':'NO5的连接地址'}]" href="#" style="color: rgb(255, 255, 255);" target="_blank"><font data-attr-replace="[{'type':'innerHTML','desc':'NO5的描述标题'}]" style="width: 300px; text-align: center; font-size: 24px; font-weight: 900; display: block;">极致美</font><font data-attr-replace="[{'type':'innerHTML','desc':'NO5的描述内容'}]">扶植版也有春天，谢谢各位亲们的光临，扶植版/标准版！ ￥10元</font></a></div>
+													<div style="background: rgb(0, 0, 0); height: 168px; opacity: 0.4;">
+														&nbsp;</div>
+												</div>
+											</div>
+											<div class="dd6" style="border: 1px solid rgb(153, 153, 153); width: 315px; height: 496px; float: left;">
+												<div style="margin: 9px 0px 0px 7px; width: 300px; height: 456px;">
+													<img data-attr-replace="[{'type':'data-ks-lazyload','desc':'NO6的图片地址'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/74363507/T2Ar1VXoXaXXXXXXXX_!!74363507.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 300px; height: 456px; display: block;" /></div>
+												<div style="width: 300px; height: 28px; line-height: 28px; margin-top: 1px; margin-left: 7px;">
+													<div class="STYLE2" data-attr-replace="[{'type':'innerHTML','desc':'NO6的标题名称'}]" style="width: 215px; height: 28px; color: rgb(255, 255, 255); text-indent: 1em; float: left; background-color: rgb(102, 102, 102);">
+														极致美高端设计</div>
+													<div data-attr-replace="[{'type':'innerHTML','desc':'NO6的价格'}]" style="background: rgb(255, 0, 153); width: 85px; height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 18px; float: left;">
+														￥10.00</div>
+												</div>
+											</div>
+											<div class="J_TWidget hidden" data-widget-config="{'trigger':'.dd6','align':{'node':'.dd6','offset':[7,8],'points':['tl','tl']}}" data-widget-type="Popup" style="border: 1px solid rgb(255, 255, 255); display: none;">
+												<div style="width: 300px; height: 456px; overflow: hidden;">
+													<div style="background: rgb(0, 0, 0); height: 188px; opacity: 0.4;">
+														&nbsp;</div>
+													<div style="background: rgb(0, 0, 0); padding: 5px; height: 100px; line-height: 25px; opacity: 0.8;">
+														<a data-attr-replace="[{'type':'href','desc':'NO6的连接地址'}]" href="#" style="color: rgb(255, 255, 255);" target="_blank"><font data-attr-replace="[{'type':'innerHTML','desc':'NO6的描述标题'}]" style="width: 300px; text-align: center; font-size: 24px; font-weight: 900; display: block;">极致美</font><font data-attr-replace="[{'type':'innerHTML','desc':'NO6的描述内容'}]">扶植版也有春天，谢谢各位亲们的光临，扶植版/标准版！ ￥10元</font></a></div>
+													<div style="background: rgb(0, 0, 0); height: 168px; opacity: 0.4;">
+														&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

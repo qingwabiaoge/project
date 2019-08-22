@@ -1,0 +1,48 @@
+<div class="col-sub">
+	<div class="box" data-spm="11029xXY.1-1Uot1.3-53pVrb">
+		<div class="shop-custom no-border">
+			<div class="bd">
+				<div class="custom-area">
+					<div class="liebao_950_01" style="height: 80px;">
+						<div class="J_TWidget" data-widget-config="{ 'effect': 'fade', 'circular': true , 'contentCls':'piaofu' }" data-widget-type="Tabs">
+							<div class="piaofu">
+								<table border="0" cellpadding="0" cellspacing="0" class="" width="950">
+									<tbody>
+										<tr>
+											<td background="http://img02.taobaocdn.com/imgextra/i2/675377614/T2DFHHXmxaXXXXXXXX_!!675377614.gif" height="80" valign="top">
+												<table border="0" cellpadding="0" cellspacing="0" class="" width="950">
+													<tbody>
+														<tr>
+															<td height="15">
+																&nbsp;</td>
+														</tr>
+														<tr>
+															<td height="60" valign="top">
+																<table border="0" cellpadding="0" cellspacing="0" class="" width="950">
+																	<tbody>
+																		<tr>
+																			<td height="45" width="42">
+																				&nbsp;</td>
+																			<td width="886">
+																				<marquee data-attr-replace="[{'type':'innerHTML','desc':'店铺公告文字在此编辑'}]" style="width: 886px; height: 45px; color: rgb(255, 0, 0); font-family: 黑体; font-size: 40px;">极致美感谢亲的光临！此页面为CSS特效代码模板效果展示，模板上面的图片和链接要替换成自已的哦！！！若不会操作，可联系店主协助！</marquee></td>
+																			<td width="22">
+																				&nbsp;</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

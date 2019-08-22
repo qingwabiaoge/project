@@ -1,0 +1,23 @@
+<div class="skin-box-bd clear-fix">
+	<div class="skin-box tb-module">
+		<span><s class="skin-box-tp"></s></span>
+		<div class="skin-box-bd clear-fix">
+			<div class="ocn J_TWidget style_2 lunboz_950" data-widget-config="{'effect':'scrollx', 'duration':'1.5', 'autoplay':true, 'easing':'bounceOut', 'prevBtnCls':'prev', 'nextBtnCls':'next', 'contentCls': 'o_con', 'navCls':'o_nav','activeTriggerCls': 'selected'}" data-widget-type="Carousel" style="position:relative;overflow-x:hidden;overflow-y:hidden;width:950px;height:300px;">
+				<ul class="o_con" style="padding-bottom:0px;list-style-type:none;margin:0px;padding-left:0px;width:999999px;padding-right:0px;height:300px;padding-top:0px;left:0px;">
+					<li class="lunboz_950 ks-switchable-panel-internal1453" style="position:relative;padding-bottom:0px;overflow-x:hidden;overflow-y:hidden;margin:0px;padding-left:0px;width:950px;padding-right:0px;display:block;float:left;height:300px;padding-top:0px;">
+						<span><span><a class="img" href="#" style="text-align:center;overflow-x:hidden;overflow-y:hidden;display:block;background-position:50% 50%;color:rgb(0,0,0);text-decoration:none;" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/1015393481/T2WRP_XetaXXXXXXXX-1015393481.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float: none; margin: 0px; " width="950" /></a></span></span></li>
+					<li class="lunboz_950 ks-switchable-panel-internal1453" style="position:relative;padding-bottom:0px;overflow-x:hidden;overflow-y:hidden;margin:0px;padding-left:0px;width:950px;padding-right:0px;display:block;float:left;height:300px;padding-top:0px;">
+						<span><span><a class="img" href="#" style="text-align:center;overflow-x:hidden;overflow-y:hidden;display:block;background-position:50% 50%;color:rgb(0,0,0);text-decoration:none;" target="_blank"><img border="0" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/1015393481/T2SyT9XXhaXXXXXXXX-1015393481.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="border-right-width:0px;border-top-width:0px;border-bottom-width:0px;border-left-width:0px;" width="950" /></a></span></span></li>
+				</ul>
+				<ul class="o_nav lunboz_3" style="z-index:99;text-align:center;position:relative;padding-bottom:0px;overflow-x:hidden;overflow-y:hidden;list-style-type:none;padding-top:270px;margin:0px;padding-left:0px;bottom:0px;padding-right:0px;height:30px;right:0px;">
+					<li class="lunboz_0 ks-switchable-trigger-internal1452" style="padding-bottom:0px;line-height:36px;overflow-x:hidden;overflow-y:hidden;background-color:#80C26A;margin:0px;padding-left:0px;width:475px;padding-right:0px;float:left;height:30px;vertical-align:top;padding-top:0px;opacity:0.8;">
+						<span><span><a class="lunboz_0" href="#" style="display:block;color:rgb(255,255,255);text-decoration:none;" target="_blank">极致美 品质保证</a></span></span></li>
+					<li class="lunboz_1 ks-switchable-trigger-internal1452" style="padding-bottom:0px;line-height:36px;overflow-x:hidden;overflow-y:hidden;background-color:#62C5E4;margin:0px;padding-left:0px;width:475px;padding-right:0px;float:left;height:30px;vertical-align:top;padding-top:0px;opacity:0.8;">
+						<span><span><a class="lunboz_0" href="#" style="display:block;color:rgb(255,255,255);text-decoration:none;" target="_blank">温馨服务 满意一百</a></span></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<p>
+	<s class="skin-box-bt"></s></p>

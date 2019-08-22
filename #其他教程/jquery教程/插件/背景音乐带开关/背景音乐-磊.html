@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+<!--背景音乐in-->
+<audio autoplay id="music" src="http://qinshi-10012620.file.myqcloud.com/bg.mp3"   loop="loop"></audio>
+<div style=" position:fixed; right:5px; top:55px; z-index:20;"><a id="audio_btn"><img src="http://cdn-10012620.file.myqcloud.com/img/play.png" width="30" height="30" id="music_btn" border="0"></a></div>
+<script>
+$("#audio_btn").click(function(){
+	var music = document.getElementById("music");
+	if(music.paused){
+		music.play();
+		$("#music_btn").attr("src","http://cdn-10012620.file.myqcloud.com/img/play.png");
+	}else{
+		music.pause();
+		$("#music_btn").attr("src","http://cdn-10012620.file.myqcloud.com/img/pause.png");
+	}
+});
+
+function playPause() {
+    var music = document.getElementById('music2');
+    var music_btn = document.getElementById('music_btn2');
+    if (music.paused){
+        music.play();
+        music_btn.src = 'http://cdn-10012620.file.myqcloud.com/img/play.png';
+    }
+    else{
+        music.pause();
+        music_btn.src = 'http://cdn-10012620.file.myqcloud.com/img/pause.png'; 
+    }
+}
+</script> 
+<!--背景音乐out--> 
+</body>
+</html>

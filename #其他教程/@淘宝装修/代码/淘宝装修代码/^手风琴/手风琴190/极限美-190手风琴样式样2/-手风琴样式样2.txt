@@ -1,0 +1,42 @@
+<div class="J_TWidget" data-widget-config="{'triggerType': 'mouse','triggerCls':'ks-switchable-trigger','panelCls':'ks-switchable-panel','multiple':false,'autoplay':true}" data-widget-type="Accordion" style="border-bottom: #ccc 1px solid; border-left: #ccc 1px solid; width: 188px; height: auto; border-top: #ccc 1px solid; border-right: #ccc 1px solid">
+	<div class="ks-switchable-trigger ks-active first-trigger" style="text-align: center; color: #666; font-size: 14px; border-top: #ccc 1px solid; cursor: pointer">
+		<br />
+		<strong><span style="color: #f00">NO.1</span></strong> 月销890件</div>
+	<div class="ks-switchable-panel">
+		<a href="#" target="_blank"><img height="160" src="http://www.amaomb.com/uploads/allimg/120419/1_2253091461.jpg" style="margin: 14px; width: 160px; float: none; height: 160px" width="160" /></a>
+		<div style="text-align: center">
+			<img height="27" src="http://www.amaomb.com/uploads/allimg/120627/1_1907398551.gif" style="margin: 0px; width: 58px; float: none; height: 27px" width="58" /><strong><font style="color: #c00000; font-size: 12pt">&nbsp;&nbsp;180.00元</font></strong></div>
+	</div>
+	<div class="ks-switchable-trigger" style="text-align: center; color: #666; font-size: 14px; border-top: #ccc 1px solid; cursor: pointer">
+		<br />
+		<span style="color: #f00"><strong>NO.2</strong></span> 月销780件</div>
+	<div class="ks-switchable-panel" style="display: none">
+		<a href="#" target="_blank"><img height="160" src="http://www.amaomb.com/uploads/allimg/120419/1_2253097352.jpg" style="margin: 14px; width: 160px; float: none; height: 160px" width="160" /></a>
+		<div style="text-align: center">
+			<img height="27" src="http://www.amaomb.com/uploads/allimg/120627/1_1907398551.gif" style="margin: 0px; width: 58px; float: none; height: 27px" width="58" /><strong><font style="color: #c00000; font-size: 12pt">&nbsp;&nbsp;170.00元</font></strong></div>
+	</div>
+	<div class="ks-switchable-trigger" style="text-align: center; color: #666; font-size: 14px; border-top: #ccc 1px solid; cursor: pointer">
+		<br />
+		<span style="color: #f00"><strong>NO.3</strong></span> 月销680件</div>
+	<div class="ks-switchable-panel" style="display: none">
+		<a href="#" target="_blank"><img height="160" src="http://www.amaomb.com/uploads/allimg/120419/1_2253096523.jpg" style="margin: 14px; width: 160px; float: none; height: 160px" width="160" /></a>
+		<div style="text-align: center">
+			<img height="27" src="http://www.amaomb.com/uploads/allimg/120627/1_1907398551.gif" style="margin: 0px; width: 58px; float: none; height: 27px" width="58" /><strong><font style="color: #c00000; font-size: 12pt">&nbsp;&nbsp;160.00元</font></strong></div>
+	</div>
+	<div class="ks-switchable-trigger" style="text-align: center; color: #666; font-size: 14px; border-top: #ccc 1px solid; cursor: pointer">
+		<br />
+		<span style="color: #f00"><strong>NO.4</strong></span> 月销480件</div>
+	<div class="ks-switchable-panel" style="display: none">
+		<a href="#" target="_blank"><img height="160" src="http://www.amaomb.com/uploads/allimg/120419/1_2253091461.jpg" style="margin: 14px; width: 160px; float: none; height: 160px" width="160" /></a>
+		<div style="text-align: center">
+			<img height="27" src="http://www.amaomb.com/uploads/allimg/120627/1_1907398551.gif" style="margin: 0px; width: 58px; float: none; height: 27px" width="58" /><strong><font style="color: #c00000; font-size: 12pt">&nbsp;&nbsp;150.00元</font></strong></div>
+	</div>
+	<div class="ks-switchable-trigger last-trigger" style="text-align: center; color: #666; font-size: 14px; border-top: #ccc 1px solid; cursor: pointer">
+		<br />
+		<span style="color: #f00"><strong>NO.5</strong></span> 月销380件</div>
+	<div class="ks-switchable-panel" style="display: none">
+		<a href="#" target="_blank"><img height="160" src="http://www.amaomb.com/uploads/allimg/120419/1_2253099014.jpg" style="margin: 14px; width: 160px; float: none; height: 160px" width="160" /></a>
+		<div style="text-align: center">
+			<img height="27" src="http://www.amaomb.com/uploads/allimg/120627/1_1907398551.gif" style="margin: 0px; width: 58px; float: none; height: 27px" width="58" /><strong><font style="color: #c00000; font-size: 12pt">&nbsp;&nbsp;140.00元</font></strong></div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<!--库文件in -->
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" />
+
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!--库文件 out -->
+
+<style>
+.isStuck {
+	 left:0px;
+    width:100%;
+	background: #000; 
+	color:#fff;
+}/*停留到顶部时间添加的样式*/
+</style>
+
+<!-- 固定导航out -->
+</head>
+
+<body style="height:5000px; padding-top:100px;">
+
+
+<div class="navbar-wrapper">
+
+主页
+
+
+</div>
+
+<!-- 固定导航in stickUp -->
+<script src="http://cdn-10012620.file.myqcloud.com/stickUp.min.js"></script>
+<script type="text/javascript"> 
+ jQuery(function($) { $(document).ready( function() { $('.navbar-wrapper').stickUp({ marginTop: 'auto' }); }); }); </script> 
+
+
+
+</body>
+</html>

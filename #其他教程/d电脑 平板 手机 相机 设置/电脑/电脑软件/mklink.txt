@@ -1,0 +1,8 @@
+1.复制User目录到D盘：　robocopy “C:\Users” “D:\Users” /E /COPYALL /XJ
+2.强制删除User目录：　rmdir “C:\Users” /S /Q
+3.创建C盘下的User的软件链接，链接到D盘User目录：mklink /J "C:\Users" "D:\Users"
+
+
+
+
+mklink /J  "D:\vueci\@后台系统\vuecli\src\assets"    "D:\vueci\@后台系统\nuxt-uikit\assets"

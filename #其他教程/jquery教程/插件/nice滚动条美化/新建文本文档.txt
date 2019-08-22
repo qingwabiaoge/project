@@ -1,0 +1,7 @@
+<script src="jquery.nicescroll.js"></script>
+ 
+ $("html").niceScroll();
+ 
+$("#thisdiv").niceScroll({cursorcolor:"#00F"});
+ 
+$("#viewportdiv").niceScroll("#wrapperdiv",{cursorcolor:"#00F"});

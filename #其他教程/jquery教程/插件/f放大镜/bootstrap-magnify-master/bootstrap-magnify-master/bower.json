@@ -1,0 +1,14 @@
+{
+    "name": "bootstrap-magnify",
+    "version": "0.3.0",
+    "homepage": "https://github.com/marcaube/bootstrap-magnify",
+    "description": "Small bootstrap js plugin to enhance porte-folios and image galleries.",
+    "keywords": [
+        "bootstrap",
+        "magnify",
+        "image",
+        "gallery"
+    ],
+    "main": ["js/bootstrap-magnify.min.js", "css/bootstrap-magnify.min.css"],
+    "license": "MIT"
+}

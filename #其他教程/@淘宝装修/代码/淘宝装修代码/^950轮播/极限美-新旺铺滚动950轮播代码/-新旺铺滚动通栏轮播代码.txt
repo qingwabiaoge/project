@@ -1,0 +1,87 @@
+<div class="skin-box tb-module">
+	<s class="skin-box-tp"></s>
+	<div class="skin-box-bd clear-fix">
+		<div class="skin-box tb-module">
+			<span><s class="skin-box-tp"></s> </span>
+			<div class="skin-box-bd clear-fix">
+				<div class="mall-slide J_TWidget dd" data-widget-config="{
+
+
+			'navCls':'ks-switchable-nav',
+
+
+			'contentCls':'ks-switchable-content',
+
+
+			 'effect':'scrollx',
+
+
+             'easing':'bounceOut',
+
+
+             'duration':1,
+
+
+			 'steps':1,
+
+
+			 'viewSize': [950],
+
+
+			 'circular': false, 
+
+
+			 'prevBtnCls': 'prev', 
+
+
+			 'nextBtnCls': 'next', 
+
+
+			 'disableBtnCls': 'disable',
+
+
+             'autoplay':true 
+
+
+			}" data-widget-type="Carousel">
+					<div class="piaofu">
+						<div align="left" style="width:950px;float:left;height:460px;">
+							<div style="width:950px;font-family:arial;height:460px;">
+								<div class="mall-content clearfix" style="position:relative;">
+									<ul class="ks-switchable-content" style="width:4750px;overflow:hidden;left:-2850px;">
+										<li style="display:block;float:left;">
+											<span><span><a href="#" target="_blank"><img height="460" src="http://img.tbzxiu.com/20/T2NA1.XhhXXXXXXXXX_!!839097338.jpg" style="float:none;margin:0px;" width="950" /></a></span></span></li>
+										<li style="display:block;float:left;">
+											<span><span><a href="#" target="_blank"><img height="460" src="http://img.tbzxiu.com/20/T2_rytXdFbXXXXXXXX_!!839097338.jpg" style="float:none;margin:0px;" width="950" /></a></span></span></li>
+										<li style="display:block;float:left;">
+											<span><span><a href="#" target="_blank"><img height="460" src="http://img.tbzxiu.com/20/T2TzlvXkVNXXXXXXXX_!!839097338.jpg" style="float:none;margin:0px;" width="950" /></a></span></span></li>
+										<li style="display:block;float:left;">
+											<span><span><a href="#" target="_blank"><img height="460" src="http://img.tbzxiu.com/20/T2NA1.XhhXXXXXXXXX_!!839097338.jpg" style="float:none;margin:0px;" width="950" /></a></span></span></li>
+										<li style="display:block;float:left;">
+											<span><span><a href="#" target="_blank"><img border="0" height="460" src="http://img.tbzxiu.com/20/T2RQX.XfVcXXXXXXXX_!!839097338.jpg" style="float:none;margin:0px;" width="950" /></a></span></span></li>
+									</ul>
+								</div>
+								<div class="J_TWidget" data-widget-config="{'duration':0.8,'autoplay': true,'delay':0.2,'easing':'easeBothStrong','effect': 'scrollx' }" data-widget-type="Slide" style="position:relative;height:200px;">
+									<div style="text-align:left;width:950px;float:right;">
+										<ul class="ks-switchable-nav">
+											<li style="border-bottom:#CCC 1px solid;border-left:#CCC 1px solid;margin:400px 5px 5px 180px;width:106px;float:left;height:46px;border-top:#CCC 1px solid;border-right:#CCC 1px solid;">
+												<span><span><a href="#" target="_blank"><img border="0" height="460" src="http://img.tbzxiu.com/20/T2NA1.XhhXXXXXXXXX_!!839097338.jpg" style="height:40px;width:100px;float:none;margin:3px;" width="950" /></a></span></span></li>
+											<li style="border-bottom:#CCC 1px solid;border-left:#CCC 1px solid;margin:400px 0px 5px;width:106px;float:left;height:46px;border-top:#CCC 1px solid;border-right:#CCC 1px solid;">
+												<span><span><a href="#" target="_blank"><img height="460" src="http://img.tbzxiu.com/20/T2_rytXdFbXXXXXXXX_!!839097338.jpg" style="height:40px;width:100px;float:none;margin:3px;" width="950" /></a></span></span></li>
+											<li style="border-bottom:#CCC 1px solid;border-left:#CCC 1px solid;margin:400px 5px 5px;width:106px;float:left;height:46px;border-top:#CCC 1px solid;border-right:#CCC 1px solid;">
+												<span><span><a href="#" target="_blank"><img height="460" src="http://img.tbzxiu.com/20/T2TzlvXkVNXXXXXXXX_!!839097338.jpg" style="height:40px;width:100px;float:none;margin:3px;" width="950" /></a></span></span></li>
+											<li class="ks-active" style="border-bottom:#CCC 1px solid;border-left:#CCC 1px solid;margin:400px 0px 0px;width:106px;float:left;height:46px;border-top:#CCC 1px solid;border-right:#CCC 1px solid;">
+												<span><span><a href="#" target="_blank"><img border="0" height="460" src="http://img.tbzxiu.com/20/T2NA1.XhhXXXXXXXXX_!!839097338.jpg" style="height:40px;width:100px;float:none;margin:3px;" width="950" /></a></span></span></li>
+											<li style="border-bottom:#CCC 1px solid;border-left:#CCC 1px solid;margin:400px 5px 5px;width:106px;float:left;height:46px;border-top:#CCC 1px solid;border-right:#CCC 1px solid;">
+												<span><span><a href="#" target="_blank"><img border="0" height="460" src="http://img.tbzxiu.com/20/T2RQX.XfVcXXXXXXXX_!!839097338.jpg" style="height:40px;width:100px;float:none;margin:3px;" width="950" /></a></span></span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<s class="skin-box-bt"></s></div>

@@ -1,0 +1,18 @@
+<div class="slider-promo J_TWidget" data-widget-config="{'effect': 'scrolly','triggerType':'mouse','duration': 0.5,'autoplay':true,'navCls': 'lst-trigger','contentCls': 'lst-main','activeTriggerCls': 'current'}" data-widget-type="Slide" style="border: 1px solid rgb(0, 0, 0); width: 748px; height: 360px;">
+	<div class="lst-main">
+		<div>
+			<a href="#" target="_blank"><img height="360" src="http://img02.taobaocdn.com/imgextra/i2/T1Lrm_XaXpXXaNmi._-865874217.png" width="624" /></a></div>
+		<div>
+			<a href="#" target="_blank"><img height="360" src="http://img03.taobaocdn.com/imgextra/i3/T1Tpu_XbNpXXcXki._-865874217.jpg" width="624" /></a></div>
+		<div>
+			<a href="#" target="_blank"><img height="360" src="http://img02.taobaocdn.com/imgextra/i2/T1Lrm_XaXpXXaNmi._-865874217.png" width="624" /></a></div>
+	</div>
+	<div class="lst-trigger" style="left: 0px; top: 0px; width: 120px; height: 360px; margin-left: 626px; cursor: pointer;">
+		<div class="current" style="width: 120px; height: 120px;">
+			<img height="118" src="http://img03.taobaocdn.com/imgextra/i3/T1kCK6XjBXXXXI4cwI-261995681.jpg" style="margin: 1px;" width="118" /></div>
+		<div style="width: 120px; height: 120px;">
+			<img height="118" src="http://img04.taobaocdn.com/imgextra/i4/T1G9i6XhXaXXXI4cwI-261995681.jpg" style="margin: 1px;" width="118" /></div>
+		<div style="width: 120px; height: 120px;">
+			<img height="118" src="http://img03.taobaocdn.com/imgextra/i3/T2pb8JXipaXXXXXXXX-46505722.gif" style="margin: 1px;" width="118" /></div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+	
+.demo2{
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+        }
+.demo2:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 100%;
+            background: #4285f4;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+.demo2:hover:before{
+            transform: scale(1);
+        }	</style>
+<body>
+	<a class="demo2">
+		11
+		
+	</a>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Gallery With Auto Slide and Loop</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet"  href="lightGallery.css"/>
+    
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="lightGallery.js"></script>
+    <script>
+    	 $(document).ready(function() {
+			$("#auto-loop").lightGallery({
+				loop:true,
+				auto:true,
+				pause:4000
+			});
+		});
+    </script>
+</head>
+<body>
+	<ul id="auto-loop" >
+        <li data-src="img1.jpg"> 
+        	<a href="#">
+            <img src="thumb1.jpg" />
+            </a> 
+        </li>
+        <li data-src="img2.jpg" > 
+        	<a href="#">
+            <img src="thumb2.jpg" />
+            </a> 
+        </li>
+        <li data-src="img3.jpg"> 
+        	<a href="#">
+            <img src="thumb3.jpg" />
+            </a> 
+        </li>
+        <li data-src="img4.jpg" > 
+        	<a href="#">
+            <img src="thumb4.jpg" />
+            </a> 
+        </li>
+    </ul>	
+</body>

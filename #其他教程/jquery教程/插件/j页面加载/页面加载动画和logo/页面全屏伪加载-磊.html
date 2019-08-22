@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="fakeloader" ></div>
+
+
+<!--页面加载动画in  建设类名为fakeloader的空div-->
+<link rel="stylesheet" href="http://cdn-10012620.file.myqcloud.com/htmlloading/fakeLoader.css">
+<script src="http://cdn-10012620.file.myqcloud.com/htmlloading/fakeLoader.min.js"></script>
+<script>
+        $(document).ready(function(){
+            $(".fakeloader").fakeLoader({
+                timeToHide:2400,
+                bgColor:"#000",
+	            spinner:"spinner5"
+
+
+            });
+        });
+    </script>
+
+<!--页面加载动画out-->
+</body>
+</html>

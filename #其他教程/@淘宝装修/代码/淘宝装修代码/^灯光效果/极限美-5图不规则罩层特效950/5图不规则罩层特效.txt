@@ -1,0 +1,66 @@
+<div class="bd">
+	<div class="custom-area">
+		<div class="box" data-spm="11042Fk8.4-9Pmx5.3-790RNa">
+			<div class="shop-custom no-border">
+				<div class="bd">
+					<div class="custom-area">
+						<div class="custom-area">
+							<div style="height:470px;">
+								<div class="J_TWidget" data-widget-config="{'effect': 'fade', 'circular': true , 'navCls':'toseise','easing':'elasticOut','activeTriggerCls':'odslos','contentCls':'piaofu'}" data-widget-type="Tabs">
+									<ul class="toseise" style="display:none;">
+										<li class="odslos">
+											&nbsp;</li>
+									</ul>
+									<div class="piaofu">
+										<div style="width:950px;height:470px;display:block;z-index:99;cursor:pointer;">
+											<div style="float:left;">
+												<div class="zh1" style="border:1px solid rgb(206,206,206);width:228px;height:468px;cursor:pointer;opacity:0.99;">
+													<a href="#" target="_blank"><img alt="" data-ks-lazyload="http://img04.taobaocdn.com/bao/uploaded/i4/T1QiSDXmNAXXXXXXXX.jpg" height="463" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float:none;margin:0px;" width="228" /></a></div>
+												<div class="J_TWidget hidden" data-widget-config="{ 'trigger':'.zh1','align':{'node':'.zh1', 'offset':[0,0],'points':['tr','tr'] }}" data-widget-type="Popup">
+													<div style="background:rgb(0,102,255);width:230px;height:470px;opacity:0.7;">
+														<a data-attr-replace="[{'type':'href','desc':'NO1的连接地址'}]" href="#" style="width:228px;height:470px;display:block;" target="_blank"></a></div>
+												</div>
+											</div>
+											<div style="margin-left:10px;float:left;">
+												<div class="zh2" style="border:1px solid rgb(206,206,206);width:468px;height:228px;cursor:pointer;opacity:0.99;">
+													<a href="#" target="_blank"><img alt="" data-attr-replace="[{'type':'src','desc':'no2图片地址 尺寸宽468高228'}]" data-ks-lazyload="http://img02.taobaocdn.com/bao/uploaded/i2/T1L5ODXdVBXXXXXXXX.jpg" height="228" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float:none;margin:0px;" width="468" /></a></div>
+												<div class="J_TWidget hidden" data-widget-config="{ 'trigger':'.zh2','align':{'node':'.zh2', 'offset':[0,0],'points':['tr','tr'] }}" data-widget-type="Popup">
+													<div style="background:rgb(0,153,51);width:470px;height:230px;opacity:0.7;">
+														<a data-attr-replace="[{'type':'href','desc':'NO2的连接地址'}]" href="#" style="width:470px;height:230px;display:block;" target="_blank"></a></div>
+												</div>
+											</div>
+											<div style="margin-left:10px;float:left;">
+												<div class="zh3" style="border:1px solid rgb(206,206,206);width:228px;height:228px;cursor:pointer;opacity:0.99;">
+													<a href="#" target="_blank"><img alt="" data-attr-replace="[{'type':'src','desc':'no3图片地址 尺寸宽228高228'}]" data-ks-lazyload="http://img01.taobaocdn.com/bao/uploaded/i1/T1lP1DXgdtXXXXXXXX.jpg" height="228" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float:none;margin:0px;" width="228" /></a></div>
+												<div class="J_TWidget hidden" data-widget-config="{ 'trigger':'.zh3','align':{'node':'.zh3', 'offset':[0,0],'points':['tr','tr'] }}" data-widget-type="Popup">
+													<div style="background:rgb(255,255,0);width:230px;height:230px;opacity:0.7;">
+														<a data-attr-replace="[{'type':'href','desc':'NO3的连接地址'}]" href="#" style="width:230px;height:230px;display:block;" target="_blank"></a></div>
+												</div>
+											</div>
+											<div style="margin-top:10px;margin-left:10px;float:left;">
+												<div class="zh4" style="border:1px solid rgb(206,206,206);width:228px;height:228px;cursor:pointer;opacity:0.99;">
+													<a href="#" target="_blank"><img alt="" data-attr-replace="[{'type':'src','desc':'no4图片地址 尺寸宽228高228'}]" data-ks-lazyload="http://img03.taobaocdn.com/bao/uploaded/i3/T14iGDXX4CXXXXXXXX.jpg" height="228" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float:none;margin:0px;" width="228" /></a></div>
+												<div class="J_TWidget hidden" data-widget-config="{ 'trigger':'.zh4','align':{'node':'.zh4', 'offset':[0,0],'points':['tr','tr'] }}" data-widget-type="Popup">
+													<div style="background:rgb(204,102,0);width:230px;height:230px;opacity:0.7;">
+														<a data-attr-replace="[{'type':'href','desc':'NO4的连接地址'}]" href="#" style="width:230px;height:230px;display:block;" target="_blank"></a></div>
+												</div>
+											</div>
+											<div style="margin-top:10px;margin-left:10px;float:left;">
+												<div class="zh5" style="border:1px solid rgb(206,206,206);width:468px;height:228px;cursor:pointer;opacity:0.99;">
+													<a href="#" target="_blank"><img alt="" data-attr-replace="[{'type':'src','desc':'no5图片地址 尺寸宽468高228'}]" data-ks-lazyload="http://img02.taobaocdn.com/bao/uploaded/i2/T1PiWDXgdAXXXXXXXX.jpg" height="228" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float:none;margin:0px;" width="468" /></a></div>
+												<div class="J_TWidget hidden" data-widget-config="{ 'trigger':'.zh5','align':{'node':'.zh5', 'offset':[0,0],'points':['tr','tr'] }}" data-widget-type="Popup">
+													<div style="background:rgb(204,0,0);width:470px;height:230px;opacity:0.7;">
+														<a data-attr-replace="[{'type':'href','desc':'NO5的连接地址'}]" href="#" style="width:470px;height:230px;display:block;" target="_blank"></a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

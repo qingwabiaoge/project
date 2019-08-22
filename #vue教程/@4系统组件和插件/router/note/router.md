@@ -235,9 +235,7 @@ watch: {
 
 
 ```
-
 <router-view :key=this.route.query.a />
-
 ```
 
 # 异步加载路由

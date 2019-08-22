@@ -1,0 +1,90 @@
+<div class="skin-box-bd clear-fix">
+	<div class="box" data-spm="1103FYNQ.1-4qoZB.3-5uaEYA">
+		<div class="shop-custom no-border">
+			<div class="bd">
+				<div class="custom-area">
+					<div>
+						<div class="slider-promo J_TWidget" data-widget-config="{'effect':'fade','contentCls': 'lst-main', 'navCls': 'lst-trigger', 'activeTriggerCls': 'current'}" data-widget-type="Slide" style="padding: 5px; border: 1px solid rgb(226, 226, 226); width: 938px; height: 374px; margin-bottom: 5px;">
+							<ul class="lst-main" style="margin: 0px; padding: 0px; width: 420px; float: left;">
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第一个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/296931148/T26DzhXjNXXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第二个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第2个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2tFYiXjBXXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第三个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" data-attr-replace="[{'type':'src','desc':'第3个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/296931148/T2R4DiXalXXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第四个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第4个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2rijiXXlXXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第五个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第5个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2VCnhXm4XXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第六个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第6个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/296931148/T23bnhXj8aXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第七个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第7个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/296931148/T26IDiXg8XXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第八个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" data-attr-replace="[{'type':'src','desc':'8个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2F7DhXahaXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第九个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第9个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2E0HhXjJaXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第十个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第10个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T27ibhXbBaXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第十一个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第11个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2ITzhXjJXXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+								<li style="display: block; z-index: 1; opacity: 0;">
+									<div class="item" style="width: 420px; height: 376px;">
+										<span><a data-attr-replace="[{'type':'href','desc':'第十二个宝贝链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第12个大图片地址(大小310*310)'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/296931148/T2QNThXe4aXXXXXXXX_!!296931148.jpg" height="376" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" width="420" /></a></span></div>
+								</li>
+							</ul>
+							<ul class="lst-trigger" style="margin: 0px; padding: 0px; width: 510px; height: 370px; float: right;">
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第一个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第1个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/296931148/T26DzhXjNXXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第二个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第2个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2tFYiXjBXXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第三个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/296931148/T2R4DiXalXXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第四个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2rijiXXlXXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第五个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2VCnhXm4XXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第六个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/296931148/T23bnhXj8aXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第七个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/296931148/T26IDiXg8XXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第八个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2F7DhXahaXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第九个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2E0HhXjJaXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第十个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T27ibhXbBaXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第十一个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2ITzhXjJXXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+								<li style="margin: 0px 0px 5px 5px; border: 1px solid rgb(226, 226, 226); width: 120px; height: 120px; text-align: center; float: left;">
+									<span><a data-attr-replace="[{'type':'href','desc':'第十二个宝贝小图链接地址 '}]" href="#" target="_blank"><img alt="" border="0" data-attr-replace="[{'type':'src','desc':'第一个小图片地址(大小120*120)'}]" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/296931148/T2QNThXe4aXXXXXXXX_!!296931148.jpg" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="width: 120px; height: 120px;" /></a></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

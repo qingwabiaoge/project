@@ -1,0 +1,109 @@
+<div class="skin-box-bd clear-fix">
+	<div class="box">
+		<div class="shop-custom">
+			<div class="mall-slide J_TWidget dd" data-widget-config="{
+
+
+
+
+			'navCls':'ks-switchable-nav',
+
+
+
+
+			'contentCls':'ks-switchable-content',
+
+
+
+
+			 'effect':'scrollx',
+
+
+
+
+       'easing':'bounceOut',
+
+
+
+
+       'duration':1,
+
+
+
+
+			 'steps':1,
+
+
+
+
+			 'viewSize': [950],
+
+
+
+
+			 'circular': false, 
+
+
+
+
+			 'prevBtnCls': 'prev', 
+
+
+
+
+			 'nextBtnCls': 'next', 
+
+
+
+
+			 'disableBtnCls': 'disable',
+
+
+
+
+       'autoplay':true 
+
+
+
+
+			}" data-widget-type="Carousel">
+				<div class="piaofu">
+					<div align="left" style="width:950px;height:540px;float:left;">
+						<div style="width:950px;height:540px;font-family:arial;">
+							<div class="mall-content clearfix" style="position:relative;">
+								<ul class="ks-switchable-content" style="left:-3800px;width:999999px;overflow:hidden;">
+									<li class="ks-switchable-panel-internal1997" style="float:left;display:block;">
+										<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2HDjhXm8XXXXXXXXX_!!296931148.jpg" height="540" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="float:none;margin:0px;" width="950" /></a></span></li>
+									<li class="ks-switchable-panel-internal1997" style="float:left;display:block;">
+										<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T21h6hXaJaXXXXXXXX_!!296931148.jpg" height="540" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:0px;float:none;" width="950" /></a></span></li>
+									<li class="ks-switchable-panel-internal1997" style="float:left;display:block;">
+										<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2HDjhXm8XXXXXXXXX_!!296931148.jpg" height="540" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:0px;float:none;" width="950" /></a></span></li>
+									<li class="ks-switchable-panel-internal1997" style="float:left;display:block;">
+										<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T21h6hXaJaXXXXXXXX_!!296931148.jpg" height="540" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:0px;float:none;" width="950" /></a></span></li>
+									<li class="ks-switchable-panel-internal1997" style="float:left;display:block;">
+										<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T2HDjhXm8XXXXXXXXX_!!296931148.jpg" height="540" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:0px;float:none;" width="950" /></a></span></li>
+								</ul>
+							</div>
+							<div class="J_TWidget" data-widget-config="{'duration':0.8,'autoplay': true,'delay':0.2,'easing':'easeBothStrong','effect': 'scrollx' }" data-widget-type="Slide" style="position:relative;">
+								<div style="width:950px;text-align:left;float:right;">
+									<ul class="ks-switchable-nav">
+										<li class="ks-switchable-trigger-internal1996 ks-switchable-trigger-internal2000" style="margin:450px 5px 5px 68px;border:1px solid rgb(204,204,204);width:156px;height:86px;float:left;">
+											<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2HIDhXkRaXXXXXXXX_!!296931148.jpg" height="80" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:3px;width:150px;height:80px;" width="150" /></a></span></li>
+										<li class="ks-switchable-trigger-internal1996 ks-switchable-trigger-internal2000" style="margin:450px 0px 5px;border:1px solid rgb(204,204,204);width:156px;height:86px;float:left;">
+											<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T21h6hXaJaXXXXXXXX_!!296931148.jpg" height="80" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:3px;width:150px;height:80px;float:none;" width="150" /></a></span></li>
+										<li class="ks-switchable-trigger-internal1996 ks-switchable-trigger-internal2000" style="margin:450px 5px 5px;border:1px solid rgb(204,204,204);width:156px;height:86px;float:left;">
+											<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2HIDhXkRaXXXXXXXX_!!296931148.jpg" height="80" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:3px;width:150px;height:80px;" width="150" /></a></span></li>
+										<li class="ks-switchable-trigger-internal1996 ks-switchable-trigger-internal2000" style="margin:450px 0px 0px;border:1px solid rgb(204,204,204);width:156px;height:86px;float:left;">
+											<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/296931148/T21h6hXaJaXXXXXXXX_!!296931148.jpg" height="80" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:3px;width:150px;height:80px;float:none;" width="150" /></a></span></li>
+										<li class="ks-switchable-trigger-internal1996 ks-switchable-trigger-internal2000 ks-active" style="margin:450px 5px 5px;border:1px solid rgb(204,204,204);width:156px;height:86px;float:left;">
+											<span><a href="#" target="_blank"><img border="0" data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/296931148/T2HIDhXkRaXXXXXXXX_!!296931148.jpg" height="80" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin:3px;width:150px;height:80px;" width="150" /></a></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

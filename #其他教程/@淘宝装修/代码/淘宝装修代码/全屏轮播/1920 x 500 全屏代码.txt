@@ -1,0 +1,8 @@
+<div style="height:500px;">
+    <div class="footer-more-trigger" style="left:50%;top:auto;border:none;padding:0;">
+        <div class="footer-more-trigger" style="left:-960px;top:auto;border:none;padding:0;">
+      <a href="#" target="_blank" style="width:1920px;height:500px;display:block;">
+              <img src="http://img03.taobaocdn.com/imgextra/i3/275890217/T2OptSXAVaXXXXXXXX_!!275890217.jpg" border="0"   /></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+、自动定时开机的实现 
+
+首先在启动计算机时，按“Delete”键进入BIOS界面。 
+
+在BIOS设置主界面中选择“Power Management Setup”菜单，进入电源管理窗口。 
+
+默认情况下，“Automatic Power Up(定时开机，有些机器选项为Resume By Alarm，或者Power alarm)”选项是关闭的，将光标移到该项，用PageUp或PageDown翻页键将“Disabled”改为“Enabled”，而后在“Date (of Month) Alarm”和“Time (hh:mm:ss) Alarm”中分别设定开机的日期和时间。

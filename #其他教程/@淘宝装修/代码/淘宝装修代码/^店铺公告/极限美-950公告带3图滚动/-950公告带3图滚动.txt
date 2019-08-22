@@ -1,0 +1,47 @@
+<div class="skin-box-bd clear-fix">
+	<span><a href="#" target="_blank"></a></span>
+	<table border="0" cellpadding="0" cellspacing="0" class="" width="950">
+		<tbody>
+			<tr>
+				<td background="http://img13.poco.cn/mypoco/myphoto/20121102/16/649165742012110216540801.jpg" height="384" valign="top">
+					<table border="0" cellpadding="0" cellspacing="0" class="" width="100%">
+						<tbody>
+							<tr>
+								<td height="35">
+								</td>
+							</tr>
+							<tr>
+								<td align="middle" height="46">
+									<table border="0" cellpadding="0" cellspacing="0" class="" width="700">
+										<tbody>
+											<tr>
+												<td>
+													<span><span><marquee direction="up" height="36" scrollamount="1"><font style="color: rgb(255, 255, 255);">各位亲！欢迎光临本店！为了感谢新老客户的厚爱，和支持。本店即日起，凡是购买满200元，可享受优惠20元活动！多买多优惠！谢谢亲们，具体事项可以联系在线客服.本套模版由极致美制作，店铺地址：http://jxyz888.taobao.com鼠标双击弹出虚线框以后，可以修改文字！</font></marquee></span></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="13">
+								</td>
+							</tr>
+							<tr>
+								<td align="middle" height="262">
+									<table border="0" cellpadding="0" cellspacing="0" class="" width="800">
+										<tbody>
+											<tr>
+												<td align="middle">
+													<span><span><marquee behavior="alternate" scrollamount="2" width="790"><a href="#" target="_blank"><img data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/T22GXXXhFMXXXXXXXX-80777183.gif" height="250" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 250px; height: 250px; float: none;" width="250" /></a><a href="#" target="_blank"><img data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/T2zp8XXhJMXXXXXXXX-80777183.gif" height="250" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; width: 250px; height: 250px; float: none;" width="250" /></a><a href="#" target="_blank"><img data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/T20FVXXhFMXXXXXXXX-80777183.gif" height="250" src="http://a.tbcdn.cn/kissy/1.0.0/build/imglazyload/spaceball.gif" style="margin: 0px; float: none;" /></a><a href="#" target="_blank"><span style="display: none;"> </span></a></marquee></span></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

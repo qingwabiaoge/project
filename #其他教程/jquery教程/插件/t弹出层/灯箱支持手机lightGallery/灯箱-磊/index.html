@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>好消息</title>
+
+<!--库文件in -->
+
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<!--库文件 out -->
+
+
+<!--图片画廊in #auto-loop为选择器，<div data-src=""> 必须在<div id="auto-loop">的下边 -->
+  <script type="text/javascript" src="http://cdn-10012620.file.myqcloud.com/hualang/js/lightGallery.min.js"></script><link rel="stylesheet" type="text/css" href="http://cdn-10012620.file.myqcloud.com/hualang/css/lightGallery.css"/>
+      
+        <script>
+    	 $(document).ready(function() {
+			$("#auto-loop").lightGallery({
+				loop:true,
+				auto:true,
+				pause:8000
+			});
+		});
+    </script>
+<!--图片画廊out -->
+
+</head>
+
+<body>
+<div class="fakeloader"></div>  <!--页面加载动画html部分-->
+<ul id="auto-loop" class="list-unstyled" >
+<li data-src="1.jpg"><img  src="1.jpg" width="100"  /><br />
+111</li>
+<li data-src="2.jpg"><img src="2.jpg" width="100"  /></li>
+<li data-src="4.jpg"><img src="4.jpg" width="100" /> </li>
+<li data-src="5.jpg"><img src="5.jpg" width="100"  /></li>
+
+
+
+</ul>
+</body>
+</html>

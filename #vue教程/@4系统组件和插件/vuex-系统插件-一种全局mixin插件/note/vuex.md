@@ -63,10 +63,6 @@ const store = new Vuex.Store({
 ```
 
 
-
-
-
-
 ### html代码
 
 ```

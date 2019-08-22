@@ -1,0 +1,33 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+
+  <button class="btn">button</button>
+
+  <button
+    @mouseover="isRotate=true"
+    @mouseleave="isRotate=false"
+    :class="{rotate:isRotate}">button
+  </button>
+
+
+</div>
+
+<script>
+  new Vue({data: {isRotate: false}}).$mount('#app')
+
+</script>
+<style>
+  .btn {
+    background: red
+  }
+
+  .rotate, .btn:hover {
+    transform: rotate(90deg)
+  }
+
+  button {
+    transition: all 1s;
+  }
+
+</style>

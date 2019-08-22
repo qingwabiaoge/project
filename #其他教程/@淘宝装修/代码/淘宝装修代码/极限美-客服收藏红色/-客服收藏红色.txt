@@ -1,0 +1,60 @@
+ <div class="customer">
+	<div class="kefu-templet" style="width: 950px;">
+		<table border="0" cellpadding="0" cellspacing="0" class="" style="border: 1px solid rgb(232, 232, 232); width: 950px; color: rgb(0, 0, 0); font-family: 宋体; font-size: 12px;">
+			<tbody>
+				<tr>
+					<td align="center" height="40" style="color: rgb(255, 255, 255); background-color: rgb(184, 0, 2);">
+						<a href="#" style="color: rgb(255, 255, 255); text-decoration: none;" target="_blank">返回首页</a> <span> | </span> <a href="#" style="color: rgb(255, 255, 255); text-decoration: none;" target="_blank">所有宝贝</a> <span> | </span> <a href="#" style="color: rgb(255, 255, 255); text-decoration: none;" target="_blank">按销量</a> <span> | </span> <a href="#" style="color: rgb(255, 255, 255); text-decoration: none;" target="_blank">按人气</a> <span> | </span> <a href="#" style="color: rgb(255, 255, 255); text-decoration: none;" target="_blank">按价格</a> <span> | </span> <a href="#" style="color: rgb(255, 255, 255); text-decoration: none;" target="_blank">按新品</a> <span> | </span> <a href="#" style="color: rgb(255, 255, 255); text-decoration: none;">返回顶部</a></td>
+				</tr>
+				<tr>
+					<td style="padding: 20px 0px;">
+						<table border="0" cellpadding="0" cellspacing="0" class="" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" valign="top" width="245">
+										<table border="0" cellpadding="0" cellspacing="0" class="" width="210">
+											<tbody>
+												<tr>
+													<td align="center" style="font-weight: bold;">
+														客服中心</td>
+												</tr>
+												<tr>
+													<td align="left" style="padding: 13px 0px;">
+														<span style="margin: 0px 12px; display: inline-block;">小冰<a href="#" style="display: inline-block;" target="_blank"><img alt="点击这里给我发消息" border="0" src="http://amos.im.alisoft.com/online.aw?v=2&amp;uid=%E6%AC%A2%E4%B9%90%E9%80%9B%3A%E5%B0%8F%E5%86%B0&amp;site=cntaobao&amp;s=2&amp;charset=utf-8" style="margin: 0px; float: none;" /></a></span> <span style="margin: 0px 12px; display: inline-block;">板砖<a href="#" style="display: inline-block;" target="_blank"><img alt="点击这里给我发消息" border="0" src="http://amos.im.alisoft.com/online.aw?v=2&amp;uid=%E6%AC%A2%E4%B9%90%E9%80%9B%3A%E6%9D%BF%E7%A0%96&amp;site=cntaobao&amp;s=2&amp;charset=utf-8" style="margin: 0px; float: none;" /></a></span></td>
+												</tr>
+												<tr>
+													<td align="left">
+														周一至周日：9:00-23:00<br />
+														TEL:020-12345678</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td align="center" style="border-left-color: rgb(230, 230, 230); border-left-width: 1px; border-left-style: solid;" valign="top" width="176">
+										<span style="font-weight: bold;">关于快递</span>
+										<p style="margin: 0px; padding: 10px; text-align: left; line-height: 21px; font-size:14px">
+											本店默认申通快递或圆通快递，如需要发其他快递请提前与客服联系。</p>
+									</td>
+									<td align="center" style="border-left-color: rgb(230, 230, 230); border-left-width: 1px; border-left-style: solid;" valign="top" width="176">
+										<span style="font-weight: bold;">关于我们</span>
+										<p style="margin: 0px; padding: 10px;font-size:14px; text-align: left; line-height: 21px;">
+											本模板由开开淘城免费提供，开开网店教学，让淘宝开店不再困难！</p>
+									</td>
+									<td align="center" style="border-left-color: rgb(230, 230, 230); border-left-width: 1px; border-left-style: solid;" valign="top" width="176">
+										<span style="font-weight: bold;">关于退货</span>
+										<p style="margin: 0px; font-size:14px; padding: 10px; text-align: left; line-height: 21px;">
+											如果想退货，亲们自理往返运费，如果商品质量问题，本店承担往返运费。</p>
+									</td>
+									<td align="center" style="line-height: 1; border-left-color: rgb(230, 230, 230); border-left-width: 1px; border-left-style: solid;">
+										<a href="#" style="color: rgb(102, 102, 102); text-decoration: none;" target="_blank"> <span style="font-family: arial; font-size: 36px; font-weight: bold;">BOOK</span><br />
+										<span style="font-family: arial; font-size: 38px;">MARK</span><br />
+										<span style="font-family: 微软雅黑; font-size: 26px; font-weight: bold;">收藏本店</span> </a></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jQuery 超实用的图片列表布局切换效果</title>
+<meta http-equiv="content-type" content="text/html;charset=gb2312">
+<style type="text/css">
+body {
+font-size: 12px;
+}
+p.switch {
+width: 122px;
+height: 26px;
+margin-bottom: 15px;
+background: url(http://www.veryhuo.com/uploads/allimg/1008/switch_bg.gif) no-repeat;
+}
+a.switch_thumb {
+width: 34px;
+height: 26px;
+line-height: 26px;
+padding: 0;
+margin: 0 0 0 80px;
+display: block;
+background: url(http://www.veryhuo.com/uploads/allimg/1008/switch_btn.gif) no-repeat;
+outline: none;
+text-indent: -9999px;
+}
+a.swap {
+background-position: left bottom;
+}
+a:hover.switch_thumb {
+filter:alpha(opacity=75);
+opacity:.75;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+}
+ul.display {
+width: 744px;
+background: #222 none repeat scroll 0 0;
+border-right: 1px solid #333;
+border-top: 1px solid #333;
+margin: 0;
+padding: 0;
+overflow: hidden;
+clear: both;
+}
+ul.display li {
+width: 742px;
+float: left;
+margin: 0;
+padding: 10px 0;
+border: 1px solid;
+border-color: #111 #111 #333 #333;
+}
+ul.display li a {
+color: #DDD;
+text-decoration: none;
+font-size: 140%;
+}
+ul.display li .content_block {
+padding: 0 10px;
+}
+ul.display li .content_block h4 {
+margin: 0;
+padding: 5px;
+}
+ul.display li .content_block p {
+margin: 0;
+padding: 5px 5px 5px 241px;
+color: #CCC;
+}
+ul.display li .content_block a img{
+border: 5px solid #ccc;
+background: #fff;
+margin: 0 15px 0 0;
+float: left;
+}
+ul.thumb_view li {
+width: 246px;
+}
+ul.thumb_view li h4 {
+display: inline;
+}
+ul.thumb_view li p {
+display: none;
+}
+ul.thumb_view li .content_block a img {
+margin: 0 0 10px;
+}
+</style>
+<script type="text/javascript" src="http://www.veryhuo.com/uploads/common/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("a.switch_thumb").toggle(function(){
+$(this).addClass("swap");
+$("ul.display").fadeOut("fast", function() {
+$(this).fadeIn("fast").addClass("thumb_view");
+});
+}, function () {
+$(this).removeClass("swap");
+$("ul.display").fadeOut("fast", function() {
+$(this).fadeIn("fast").removeClass("thumb_view");
+});
+});
+});
+</script>
+</head>
+<body>
+<!--把下面代码加到<body>与</body>之间-->
+<p class="switch"><a href="#" class="switch_thumb">Switch Display</a></p>
+<ul class="display">
+<li>
+<div class="content_block">
+<a href="#"><img src="http://www.veryhuo.com/uploads/allimg/1008/sample1.gif" alt="Sample"></a>
+<h4><a href="#">Sunflowa Media</a></h4>
+<p>Hey, I'm Airos Chou.</p>
+<p>I am a freelance web designer & graphic designer based in Shanghai, CN. I make Green Environment Protection website, accessible websites that are easy to use and easy for our life.</p>
+</div>
+</li>
+<li>
+<div class="content_block">
+<a href="#"><img src="http://www.veryhuo.com/uploads/allimg/1008/sample2.gif" alt="Sample"></a>
+<h4><a href="#">Sunflowa Media</a></h4>
+<p>Hey, I'm Airos Chou.</p>
+<p>I am a freelance web designer & graphic designer based in Shanghai, CN. I make Green Environment Protection website, accessible websites that are easy to use and easy for our life.</p>
+</div>
+</li>
+<li>
+<div class="content_block">
+<a href="#"><img src="http://www.veryhuo.com/uploads/allimg/1008/sample3.gif" alt="Sample"></a>
+<h4><a href="#">Sunflowa Media</a></h4>
+<p>Hey, I'm Airos Chou.</p>
+<p>I am a freelance web designer & graphic designer based in Shanghai, CN. I make Green Environment Protection website, accessible websites that are easy to use and easy for our life.</p>
+</div>
+</li>
+</ul>
+</body>
+</html><br /><center>如不能显示效果，请按Ctrl+F5刷新本页，更多网页代码：<a href='http://www.veryhuo.com/' target='_blank'>http://www.veryhuo.com/</a></center>

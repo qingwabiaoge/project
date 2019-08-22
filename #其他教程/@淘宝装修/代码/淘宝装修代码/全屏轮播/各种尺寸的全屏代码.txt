@@ -1,0 +1,27 @@
+920px 全屏海报：（宽度1920px，高度随便自己调，同时修改两处500px即可）
+<div style="height:500px;">    
+<div class="footer-more-trigger" style="left:50%;top:auto;border:none;padding:0;">      
+<div class="footer-more-trigger" style="left:-960px;top:auto;border:none;padding:0;">      
+<a href="#" target="_blank" style="width:1920px;height:500px;display:block;">             
+<img src="http://img02.taobaocdn.com/imgextra/i2/844217250/T223j.XcVXXXXXXXXX_!!844217250.jpg" border="0" alt="全屏海报" /></a></div>      
+</div>    
+</div>
+</div>
+1680px 全屏海报：（宽度1680px，高度随便自己调，同时修改两处500px即可）
+<div style="height:500px;">    
+<div class="footer-more-trigger" style="left:50%;top:auto;border:none;padding:0;">        
+<div class="footer-more-trigger" style="left:-840px;top:auto;border:none;padding:0;">      
+<a href="#" target="_blank" style="width:1680px;height:500px;display:block;">             
+ <img src="#" border="0" alt="全屏海报" /></a></div>        
+</div>    
+</div>
+</div>
+1440px 全屏海报：（宽度1440px，高度随便自己调，同时修改两处500px即可）
+<div style="height:500px;">    
+<div class="footer-more-trigger" style="left:50%;top:auto;border:none;padding:0;">        
+<div class="footer-more-trigger" style="left:-720px;top:auto;border:none;padding:0;">      
+<a href="#" target="_blank" style="width:1440px;height:500px;display:block;">              
+<img src="#" border="0" alt="全屏海报" /></a></div>        
+</div>    
+</div>
+</div>

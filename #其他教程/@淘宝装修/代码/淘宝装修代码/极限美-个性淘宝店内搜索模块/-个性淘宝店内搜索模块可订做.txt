@@ -1,0 +1,9 @@
+<div style="border:2px solid #ff0000;line-height:16px;font-size:12px;padding:12px 12px;background-color:#000000">
+  <span style="float:right;padding-top:3px;margin:0px;line-height:16px;font-size:12px;"><font style="color:#ff0000;">热门搜索：</font>
+  <a href="#" style="color:#ff0000;" target="_blank">开店指导</a>  <a href="#" style="color:#ff0000;" target="_blank">CSS模板</a>  <a href="#" style="color:#ff0000;" target="_blank">PS图片处理</a>
+  </span>
+   <form action="http://jxyz888.taobao.com/search.htm" method="get" target="_blank" style="padding:0px;margin:0px;">
+	<input type="hidden" name="baobei_type" value="">
+	<span style="padding:0px;margin:0px;font-weight:bold;color:#ffffff;">店内搜索：</span><input name="keyword" type="text" value="" style="line-height:16px;font-size:12px;width:150px;">    <span style="padding:0px;margin:0px;color:#ff0000;">价格：</span><input name="lowPrice" type="text" value=""  style="line-height:16px;font-size:12px;width:50px"> <span style="padding:0px;margin:0px;">-</span> <input name="highPrice" type="text" value=""  style="line-height:16px;font-size:12px;width:50px">    <input type="submit" value="搜索" style="background-color:#333333;color:#00FF00;border:none;margin:0px;padding:4px 10px; _padding:3px 5px 1px 10px;font-size:12px;">
+   </form>
+</div>

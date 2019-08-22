@@ -1,0 +1,40 @@
+﻿<div style="margin-bottom:10px;overflow:hidden;">
+	<div class="mall-slide J_TWidget slide_Psk3a" data-widget-config="{'navCls':'ks-switchable-nav','contentCls':'ks-switchable-content','steps':1,'prevBtnCls': 'prev','nextBtnCls': 'next','disableBtnCls': 'disable',
+
+'circular':true,
+
+'effect':'scrollx',
+
+'easing':'bounceOut',
+
+'duration':1.0,
+
+'interval':'4',
+
+'autoplay':true}" data-widget-type="Carousel" style="height:480px;">
+		<div class="J_TWidget" data-widget-config="{'trigger':'.slide_Psk3a','align':{'node':'.slide_Psk3a','offset':[0,0],'points':['cc','cc']}}" data-widget-type="Popup" style="display:none;width:950px;font-size:80px;color:#FFF;font-family:宋体;">
+			<span class="prev J_TWidget" data-widget-config="{'png':true,'png_bg':true}" data-widget-type="Compatible" style="cursor:pointer;float:left;display:block;width:55px;height:95px;background:url(http://img01.taobaocdn.com/imgextra/i1/60358248/T27FVbXCNaXXXXXXXX-60358248.png) no-repeat;"></span> <span class="next J_TWidget" data-widget-config="{'png':true,'png_bg':true}" data-widget-type="Compatible" style="cursor:pointer;float:right;display:block;width:55px;height:95px;background:url(http://img04.taobaocdn.com/imgextra/i4/60358248/T2c0LjXnBbXXXXXXXX-60358248.png) no-repeat;"></span></div>
+		<div class="scroller" style="width:950px;height:450px;overflow:hidden;">
+			<ul class="ks-switchable-content">
+				<li>
+					<a href="#" style="display:block;cursor:pointer;width:950px;height:450px;background:url(http://img03.taobaocdn.com/imgextra/i3/60358248/T2GfFJXdBXXXXXXXXX-60358248.jpg) no-repeat center 0;" target="_blank"></a></li>
+				<li>
+					<a href="#" style="display:block;cursor:pointer;width:950px;height:450px;background:url(http://img01.taobaocdn.com/imgextra/i1/60358248/T2qaJjXzRaXXXXXXXX-60358248.jpg) no-repeat center 0;" target="_blank"></a></li>
+				<li>
+					<a href="#" style="display:block;cursor:pointer;width:950px;height:450px;background:url(http://img03.taobaocdn.com/imgextra/i3/60358248/T20GYKXcNbXXXXXXXX-60358248.jpg) no-repeat center 0;" target="_blank"></a></li>
+				<li>
+					<a href="#" style="display:block;cursor:pointer;width:950px;height:450px;background:url(http://img03.taobaocdn.com/imgextra/i3/60358248/T2k.VjXEdXXXXXXXXX-60358248.jpg) no-repeat center 0;" target="_blank"></a></li>
+			</ul>
+		</div>
+		<ul class="ks-switchable-nav" style="color:#FA9090;font-size:20px;font-family:tahoma;margin-left:435px;">
+			<li style="width:20px;height:20px;line-height:20px;text-align:center;float:left;cursor:pointer;">
+				●</li>
+			<li style="width:20px;height:20px;line-height:20px;text-align:center;float:left;cursor:pointer;">
+				●</li>
+			<li style="width:20px;height:20px;line-height:20px;text-align:center;float:left;cursor:pointer;">
+				●</li>
+			<li style="width:20px;height:20px;line-height:20px;text-align:center;float:left;cursor:pointer;">
+				●</li>
+		</ul>
+	</div>
+</div>

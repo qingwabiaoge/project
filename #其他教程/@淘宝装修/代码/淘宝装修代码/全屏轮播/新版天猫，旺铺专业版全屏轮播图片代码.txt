@@ -1,0 +1,44 @@
+﻿<div style="height:404px;overflow:hidden;">
+	<div class="J_TWidget mypoper" data-widget-config="{'effect': 'fade','circular': true ,'contentCls':'yubaibai-t','navCls':'yubaibai-n','autoplay':'true'}" data-widget-type="Tabs" style="padding-bottom:0px;margin:0px;padding-left:0px;padding-right:0px;height:404px;overflow:hidden;padding-top:0px;">
+		<div class="yubaibai-t">
+			<div class="J_TWidget" data-widget-config="{'contentCls': 'yubaibai-content','navCls': 'yubaibai-n','triggerType': 'click','effect': 'fade','steps': 1,'autoplay': true,'circular': true ,'prevBtnCls':'prev','nextBtnCls':'next'}" data-widget-type="Carousel">
+				<div class="pa2">
+					<div class="J_TWidget" data-widget-config="{'trigger':'.yubaibai-content', 'align':{'node':'.mypoper', 'offset':[0,0], 'points':['cl','cl'] } }" data-widget-type="Popup" style="width:950px;display:none;">
+						<div class="ks-contentbox" style="padding-bottom:0px;margin:0px;padding-left:0px;width:950px;padding-right:0px;padding-top:0px;left:0px;">
+							<div class="prev" style="float:left;margin-left:50px;">
+								<img class="J_TWidget" data-ks-lazyload="http://img03.taobaocdn.com/imgextra/i3/60358248/T2KnsMXk4aXXXXXXXX-60358248.png" data-widget-config="{'png':true,'png_tag':true}" data-widget-type="Compatible" /></div>
+							<div class="next" style="float:right;margin-right:50px;">
+								<img class="J_TWidget" data-ks-lazyload="http://img01.taobaocdn.com/imgextra/i1/60358248/T2Fn7XXoVaXXXXXXXX-60358248.png" data-widget-config="{'png':true,'png_tag':true}" data-widget-type="Compatible" /></div>
+						</div>
+					</div>
+					<ul class="yubaibai-content" style="padding-bottom:0px;margin:0px;padding-left:0px;width:1920px;padding-right:0px;height:404px;overflow:hidden;padding-top:0px;">
+						<li style="padding-bottom:0px;list-style-type:none;margin:0px;padding-left:0px;width:1920px;padding-right:0px;height:404px;padding-top:0px;top:0px;left:-475px;">
+							<a href="http://www.taobao.com" target="_blank"><img data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/60358248/T2jR_sXdxbXXXXXXXX-60358248.jpg" height="404" width="1920" /></a></li>
+						<li style="padding-bottom:0px;list-style-type:none;margin:0px;padding-left:0px;width:1920px;padding-right:0px;height:404px;padding-top:0px;top:0px;left:-475px;">
+							<a href="http://www.taobao.com" target="_blank"><img data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/60358248/T2N8DxXgNbXXXXXXXX-60358248.jpg" height="404" width="1920" /></a></li>
+						<li style="padding-bottom:0px;list-style-type:none;margin:0px;padding-left:0px;width:1920px;padding-right:0px;height:404px;padding-top:0px;top:0px;left:-475px;">
+							<a href="http://www.taobao.com" target="_blank"><img data-ks-lazyload="http://img02.taobaocdn.com/imgextra/i2/60358248/T23KLZXeVbXXXXXXXX-60358248.jpg" height="404" width="1920" /></a></li>
+						<li style="padding-bottom:0px;list-style-type:none;margin:0px;padding-left:0px;width:1920px;padding-right:0px;height:404px;padding-top:0px;top:0px;left:-475px;">
+							<a href="http://www.taobao.com" target="_blank"><img data-ks-lazyload="http://img04.taobaocdn.com/imgextra/i4/60358248/T2_PM1XelXXXXXXXXX-60358248.jpg" height="404" width="1920" /></a></li>
+					</ul>
+				</div>
+				<div style="width:1920px;display:none;height:0px;overflow:hidden;">
+					<ul class="yubaibai-t" style="padding-bottom:0px;margin:0px;padding-left:0px;width:1920px;padding-right:0px;height:50px;padding-top:0px;">
+						<li>
+							&nbsp;</li>
+						<li>
+							&nbsp;</li>
+						<li>
+							&nbsp;</li>
+						<li>
+							&nbsp;</li>
+					</ul>
+				</div>
+				<ul class="yubaibai-n" style="padding-bottom:0px;margin:0px;padding-left:0px;padding-right:0px;display:none;height:1px;padding-top:0px;">
+					<li>
+						&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+<div style="width:950px">
+
+<div style="height:99px;border:solid 1px #CCCCCC;">
+ <div style="float:left;width:160px;padding:19px 0px 0px 10px;">
+   <div style="font-size:36px;line-height:40px;font-weight:bold;color:#666666">客服中心</div>
+   <div style="font-size:20px;line-height:22px;font-weight:bold;color:#CCCCCC">Server Center</div>
+ </div>
+ <div style="float:right;width:770px;padding:0px;">
+ <div style="float:left;width:14px;padding:18px 5px;margin:0px 7px;font-size:14px;line-height:16px;background-color:#CCCC99;color:#333333">售前客服</div>
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	<div style="float:left;width:14px;padding:18px 5px;margin:0px 7px;font-size:14px;line-height:16px;background-color:#CCCC99;color:#333333">售后客服</div>
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	<div style="float:left;width:14px;padding:18px 5px;margin:0px 7px;font-size:14px;line-height:16px;background-color:#CCCC99;color:#333333">投述建议</div>
+	<div style="float:left;margin:9px 5px 0px 5px;padding:0px;">
+	<div style="background-image:url(http://img03.taobaocdn.com/imgextra/i3/675377614/T2VOybXolcXXXXXXXX_!!675377614.jpg);background-repeat:no-repeat; margin:0px;padding:44px 0px 0px 44px;border-right:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;"><a target="_blank" href="#"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%BC%80%E5%BC%80%E6%B7%98%E5%9F%8E&site=cntaobao&s=2&charset=utf-8" alt="开开" /></a></div>
+	<p style="padding:5px 0px 0px 0px;margin:0px;font-size:14px;line-height:14px;text-align:center"><a target="_blank" href="#">开开</a></p>
+	</div>
+	</div></div>

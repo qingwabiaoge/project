@@ -1,0 +1,5 @@
+D:\workspace\jQuery.plugin\jQuery.plugin\jQuery.plugin\bin\jQuery.plugin.dll
+D:\workspace\jQuery.plugin\jQuery.plugin\jQuery.plugin\bin\jQuery.plugin.pdb
+D:\workspace\jQuery.plugin\jQuery.plugin\jQuery.plugin\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\jQuery.plugin\jQuery.plugin\jQuery.plugin\obj\Debug\jQuery.plugin.dll
+D:\workspace\jQuery.plugin\jQuery.plugin\jQuery.plugin\obj\Debug\jQuery.plugin.pdb
