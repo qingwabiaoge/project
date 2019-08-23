@@ -18,10 +18,7 @@
     }
 
     .carousel {
-      width: 20%;
-      height: 300px;
       overflow: hidden;
-      margin: 100px auto;
       position: relative;
     }
 
@@ -35,8 +32,8 @@
     }
 
     .carousel ul li a img {
-      width: 500px;
-      height: 300px;
+      /*其他图片兼容第一张的大小*/
+      object-fit: cover;
     }
 
     .bullet {
@@ -116,27 +113,34 @@
 </head>
 <body>
 
+<div id="app" style="width: 500px">
+  <div class="carousel" id="carousel" @mouseenter="enter" @mouseleave="leave">
 
-<div class="carousel" @mouseenter="enter" @mouseleave="leave">
-  <!--  <transition-group tag="ul"
-                      enter-active-class="animated lightSpeedIn"
-                      leave-active-class="animated lightSpeedOut">-->
-  <transition-group tag="ul" name="image">
-    <li v-for='(image,index) in images' :key='index' v-if="index === mark">
-      <a href="javascript:;">
-        <img :src="image">
-      </a>
-    </li>
-  </transition-group>
-  <div class="bullet">
-    <span v-for="(item,index) in images.length" :class="{'active':index === mark}" @click="change(index)" :key="index">{{index+1}}</span>
-  </div>
-  <div class="switch">
-    <span class="prev" @click="prev">&lt;</span>
-    <span class="next" @click="next">&gt;</span>
+    <!-- animat.css-->
+
+
+    <!--  <transition-group tag="ul"
+                        enter-active-class="animated lightSpeedIn"
+                        leave-active-class="animated lightSpeedOut">-->
+
+    <transition-group tag="ul" name="image">
+
+      <li v-for='(image,index) in images' :key='index' v-if="index === mark">
+        <a href="javascript:;">
+          <img :src="image">
+        </a>
+      </li>
+    </transition-group>
+    <div class="bullet">
+      <span v-for="(item,index) in images.length" :class="{'active':index === mark}" @click="change(index)"
+            :key="index">{{index+1}}</span>
+    </div>
+    <div class="switch">
+      <span class="prev" @click="prev">&lt;</span>
+      <span class="next" @click="next">&gt;</span>
+    </div>
   </div>
 </div>
-
 <script>
 
   /*
@@ -147,7 +151,7 @@
 
   //初始化一个vue实例然后挂载到父元素上，并设定数据为图片的数组，以及后面计数用的mark，mark初始值为0
   var vm = new Vue({
-    el: '.carousel',
+    el: '#app',
     data: {
       mark: 0,
       images: [
@@ -194,12 +198,24 @@
         console.log('leave')
         this.play();
       },
-      getHeight(){
-        document
-      }
+      setCarouselSize(id) {
+        //获得第一张图片的尺寸
+        const el = document.getElementById('carousel')
+        const width=el.querySelectorAll('img')[0].offsetWidth
+        const height = el.querySelectorAll('img')[0].offsetHeight
+
+        el.style.width = width + 'px'
+        el.style.height = height + 'px'
+      },
+
     },
     created() {
       this.play()
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.setCarouselSize('carousel')
+      })
     }
   })
 </script>
