@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../style/ui/ui.css">
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <script type="text/javascript" src="../cdn/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.http6.net/jquery1.0.min.js"></script>
+    <script src="http://cdn.http6.net/html5shiv.min.js"></script>
+    <script src="http://cdn.http6.net/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<ul id="collapseA" style="width: 200px;" class="  ">
+    <li><a>list item 1</a></li>
+    <li><a>list item 2</a>
+    </li>
+    <ul class="">
+        <li>list item 2-a</li>
+        <li>list item 2-b</li>
+    </ul>
+    <li>list item 3</li>
+    <ul class="">
+        <li>list item 2-a</li>
+        <li>list item 2-b</li>
+    </ul>
+    <li>list item 4</li>
+</ul>
+
+
+<script>
+
+
+    $('li').next("ul").css("display", "none")
+        .prev("li").append("<span class='pull-right'>+</span><span style='display:none' class=' pull-right'>-</span>")
+        .click(function () {
+            $(this).find("span").toggle()
+                .end().next("ul").slideToggle()
+
+        })
+
+</script>
+
+</body>
+</html>

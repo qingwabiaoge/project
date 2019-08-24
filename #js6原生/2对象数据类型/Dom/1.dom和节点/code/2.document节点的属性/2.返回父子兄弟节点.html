@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
@@ -8,36 +8,36 @@
 <body>
 
 <div id="App">
-    <li>1</li>
-    <li>2</li>
-    <a href="baidu">3</a>4
+  <li>1</li>
+  <li>2</li>
+  <a href="baidu">3</a>4
 </div>
 
 <script>
-    const el = document.getElementById('App')
+  const el = document.getElementById('App')
 
 
-    console.log('el.parentNode', el.parentNode)
+  console.log('el.parentNode', el.parentNode)
 
-    //ieÓĞ¼æÈİÎÊÌâ,»»ĞĞÒ²Ëãtext
-    console.log('el.hasChildNodes', el.hasChildNodes())
-    console.log('el.childNodes', el.childNodes)
-    console.log(' el.firstChild', el.firstChild);//µÚÒ»¸ö
-    console.log(' el.lastChild', el.lastChild);//×îºóÒ»¸ö
-    console.log('el.firstChild.nextSibling', el.firstChild.nextSibling)
-    console.log(' el.lastChild.previousSibling', el.lastChild.previousSibling);//µ¹ÊıµÚ¶ş¸ö
-
-
-    //Ö»ÁĞ³öÏÂ¼¶±êÇ©½Úµã
-    console.log(el.children)
+  //åˆ—å‡ºä¸‹çº§çš„æ‰€æœ‰èŠ‚ç‚¹[æ ‡ç­¾èŠ‚ç‚¹å’Œæ–‡æœ¬èŠ‚ç‚¹(ä»£ç æ¢è¡Œä¹Ÿç®—)]  ieæœ‰å…¼å®¹é—®é¢˜,
+  console.log('el.hasChildNodes', el.hasChildNodes())
+  console.log('el.childNodes', el.childNodes)
+  console.log(' el.firstChild', el.firstChild);//ç¬¬ä¸€ä¸ª
+  console.log(' el.lastChild', el.lastChild);//æœ€åä¸€ä¸ª
+  console.log('el.firstChild.nextSibling', el.firstChild.nextSibling)
+  console.log(' el.lastChild.previousSibling', el.lastChild.previousSibling);//å€’æ•°ç¬¬äºŒä¸ª
 
 
-    // ÁĞ³öÏÂ¼¶µÄli½Úµã
-    console.log(el.querySelectorAll('li'))
+  //åªåˆ—å‡ºä¸‹çº§æ ‡ç­¾èŠ‚ç‚¹
+  console.log(el.children)
 
 
-    //ÁĞ³öÏÂ¼¶µÄÎÄ±¾½Úµã
-    console.log(el.querySelectorAll('li')[0].childNodes)
+  // åˆ—å‡ºä¸‹çº§çš„lièŠ‚ç‚¹
+  console.log(el.querySelectorAll('li'))
+
+
+  //åˆ—å‡ºä¸‹çº§çš„æ–‡æœ¬èŠ‚ç‚¹
+  console.log(el.querySelectorAll('li')[0].childNodes)
 
 </script>
 </body>

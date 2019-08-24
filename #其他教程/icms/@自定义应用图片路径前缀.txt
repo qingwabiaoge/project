@@ -1,0 +1,1 @@
+    <!--{$content_list.banner|call:'iFS::fp':'+http'}-->

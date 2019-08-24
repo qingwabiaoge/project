@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SimpleTree</title>
+<link rel="stylesheet" type="text/css" href="js/tree_themes/SimpleTree.css"/>
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/SimpleTree.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".st_tree").SimpleTree({
+		click:function(a){
+			if(!$(a).attr("hasChild"))
+				alert($(a).attr("ref"));
+		}
+	});
+});
+</script>
+</head>
+<body>
+
+<div class="st_tree">
+<ul>
+	<li><a href="#" ref="hyjm">欢迎界面</a></li>
+	<li><a href="#" ref="xtgl">系统管理</a></li>
+    <ul show="true">
+		<li><a href="#" ref="yhgl">用户管理</a></li>
+		<li><a href="#" ref="rzck">日志查看</a></li>
+	</ul>
+	<li><a href="#" ref="ckgl">仓库管理</a></li>
+    <ul>
+		<li><a href="www.baidu.com" >库存管理</a></li>
+		<li><a href="#" ref="shgl">收货管理</a></li>
+		<li><a href="#" ref="fhgl">发货管理</a></li>
+        <ul>
+            <li><a href="#" ref="yhgl">用户管理</a></li>
+            <li><a href="#" ref="rzck">日志查看</a></li>
+        </ul>
+	</ul>
+</ul>
+</div>
+
+</body>
+</html>

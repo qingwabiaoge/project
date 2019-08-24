@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js">
+
+</script>
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+<div id="app">
+
+
+</div>
+
+<script>
+
+    const VueCoponent = Vue.component('cl', {
+        template: `<div >{{prop}}</div>`,
+        props: {prop: {default: 10}},
+        mounted(){
+            console.log(this)
+        }
+    })
+    //el形式挂载
+    const vm = new VueCoponent({el: '#app', props: {prop: {default: 100}}})
+
+</script>

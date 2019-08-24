@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="div1">
+    <span>a</span>
+    <span>b</span>
+    <span>c</span>
+</div>
+<script>
+
+    $(function () {
+        var div_span = $("#div1 span");
+        var i = 0;
+        div_span.each(function () {
+            $(this).addClass("a" + i);
+            i++;
+        });
+    });
+
+</script>
+</body>
+</html>

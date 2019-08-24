@@ -1,0 +1,31 @@
+article.htm 模板
+
+<!--{$article.page.nav}-->
+改成
+        <!--{if $article.chapter}-->
+          <div class="pagenav iCMS_pagination clr chapterlist">
+            <h3>内容导航</h3>
+            <ul>
+            <!--{foreach value="pagelist" from="$article.page.list"}-->
+              <li>第<!--{$pagelist.pn}-->章：
+                <a href="<!--{$pagelist.url}-->" title="<!--{$pagelist.title}-->">
+                  <!--{if $pagelist.title}-->
+                  <!--{$pagelist.title|default:'下一页更精彩'}-->
+                  <!--{else}-->
+                  第<!--{$pagelist.pn}-->章
+                  <!--{/if}-->
+                </a>
+              </li>
+            <!--{/foreach}-->
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        <!--{else}-->
+        <div class="article-pagenav iCMS_pagination">
+          <!--{$article.page.nav}-->
+        </div>
+        <!--{/if}-->
+.chapterlist { border: 1px dashed #CCC; max-height: none; padding: 10px; }
+.chapterlist h3 { height: 30px; line-height: 30px; text-align: left; font-size: 14px; margin: 0px !important;}
+.chapterlist li { width: 48%; float: left; text-align: left; margin-bottom: 5px; }
+.chapterlist li a { border: 0px; text-align: left; padding: 3px !important; }

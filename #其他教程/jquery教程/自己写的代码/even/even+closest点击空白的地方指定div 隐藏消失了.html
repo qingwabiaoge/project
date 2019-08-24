@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>网页特效展示中心</title>
+    <style type="text/css">
+        .pop {
+            width: 200px;
+            height: 130px;
+            background: #080;
+        }
+    </style>
+</head>
+<body>
+<script src="http://cdn.http6.net/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(document).click(function (e) {
+
+            if ($(e.target).closest(".pop").length == 0) {
+                $(".pop").hide();
+            }
+        })
+    })
+</script>
+<div class="pop"></div>
+点击空白的地方指定div 隐藏消失了
+</body>
+</html>

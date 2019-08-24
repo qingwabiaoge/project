@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery聚光灯插件制作jquery图片特效鼠标滑过图片当前图片高亮</title>
+<meta name="description" content="jquery聚光灯插件制作jquery图片特效当鼠标滑过图片时当前图片高亮显示其余另外的图片变暗。jquery插件,jquery下载。" />
+<link href="1.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+
+    
+    
+<dd class="lamp">
+	<a target="_blank" href="http://www.17sucai.com/" class="sublight pic1"><img src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/images/dudu.jpg" title="DUDU 源自意大利的真皮风尚"></a>
+	<a target="_blank" href="http://www.17sucai.com/" class="sublight pic2"><img src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/images/event_02.jpg" title="浪美 自由行走间的风尚标" /></a>
+	<a target="_blank" href="http://www.17sucai.com/" class="sublight pic3"><img src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/images/gb3.jpg" title="戈尔本 成就男士商务之旅"></a>
+	<a target="_blank" href="http://www.17sucai.com/" class="sublight pic4"><img src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/images/zne.jpg"title="卓妮尔 当优雅与摩登不期而遇"></a>
+	<a target="_blank" href="http://www.17sucai.com/" class="sublight pic5"><img src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/images/fbs2.jpg"title="梵贝斯 来自东京武藏野设计"></a>
+	<a target="_blank" href="http://www.17sucai.com/" class="sublight pic6"><img src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/images/xxbm2.jpg"title="希夏邦马 运动与旅行的完美结合"></a>
+</dd>
+
+<script type="text/javascript" src="http://www.17sucai.com/preview/1/2013-05-06/jquery图片聚光灯插件/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+// 高亮效果
+var blockHighLight = (function(window, $, undefined){
+    var markers = [];
+    return function(boxCls, itemCls, sizeArr){
+        var box = $(boxCls);
+        itemCls = itemCls || "a";
+        box.find(itemCls).each(function(i){
+            var self = $(this);
+            var arr,w,h,marker;
+            if(sizeArr !== undefined){
+                arr = sizeArr[i].split(",");
+                w = arr[0];
+                h = arr[1];
+            }else{
+                w = self.find("img").attr("width");
+                h = self.find("img").attr("height");
+            }
+            marker = $('<div style="cursor:pointer;top:0;left:0;position:absolute;width:'+w+'px;height:'+h+'px;filter:alpha(opacity=0);opacity: 0;background-color:#000;"></div>');
+            self.append(marker);
+            self.mouseover(function(){
+                for(var i=0; i<markers.length; i++){
+                    markers[i].show().css({"opacity":'0.2',"filter":"alpha(opacity=20)"});
+                }
+                marker.hide();
+            });     
+            markers.push(marker);
+                
+        });
+
+        box.mouseout(function(){
+            for(var i=0; i<markers.length; i++){
+                markers[i].css({"opacity":'0',"filter":"alpha(opacity=0)"});
+            }
+        })
+    }
+})(this, $);
+
+blockHighLight(
+
+	".lamp", //父元素
+	".sublight", //子元素集
+	
+	[
+		'240,366', //第一张图片的宽高
+		'480,183', //第二张图片的宽高
+		'240,183', //第三张图片的宽高
+		'240,183', //第四张图片的宽高
+		'240,183', //第五张图片的宽高
+		'240,183'  //第六张图片的宽高
+	]
+); 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <style>
+       .e{
+
+           width: 100px; height: 100px;
+           background: #0f0;;
+
+       }
+
+    </style>
+    <script>
+        $(function () {
+            var flag = 1;
+            $(".e").click(function () {
+                if (flag == 1) {
+                    $(this).css("border-radius","50%");
+                    flag = 0;
+                } else {
+                    $(this).css("border-radius","10%");
+                    flag = 1;
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<div id="panel">
+    <div class="e" >什么事jquery</div>
+
+</div>
+</body>
+</html>

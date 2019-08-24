@@ -1,0 +1,1 @@
+[A]新增模板变量引用符 `<!--{&$article.pubdate|date:"Y-m-d H:i"}-->` [R]移除多余模板插件

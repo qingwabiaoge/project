@@ -1,23 +1,13 @@
-# 路由嵌套和普通父子组件嵌套
+# 父子嵌套
 
-路由父子关系和普通父子关系一样也是携带关系  
-### 路由嵌套
+![1566146868286](img/1566146868286.gif)
 
-![1566146868286](img/1566146868286.png)
 
-* 用于嵌套布局基本的组件比如<navbar>
 
-* 用于嵌套页面级别的组件 /new  切换至  /company
-
-### 普通父子组件嵌套
-
-  模块之间的嵌套
-
-### 组件切换(路由和is)
-   .     |路由           | 动态组件     
+   .     |路由视图           | 动态组件     
 ---|---|---     
-标签        | < route-view/>  |<  component />
-作用        | 嵌套布局组件,切换页面布局级别的组件 | 切换模块级别的组件
+标签        | < route-view/>代表页面组件 |<  component />代表普通组件
+作用        | 切换页面级别的组件 | 切换模块级别的组件
 设置组件参数 | history栈的值   | is的值     
 组件生命周期 |切换运行distroyed|切换运行distroyed
 keeplive    | 切换运行activate deactivate| 切换运行activate deactivate        
@@ -144,13 +134,7 @@ this.$router.push({
 history.pushState({state: 1}, "newtitle","1.html?b=1")
 ```
 
-
-
 ### $router.go()
-
-
-
-
 
 
 ```
@@ -171,7 +155,7 @@ history.go(-1)
 
 ```
 
-# $route注入了当前页面的路由信息
+# $route注入了当前的路由信息
 
 - name
 - path
@@ -186,13 +170,14 @@ history.go(-1)
 网址:path决定
 
 ### 组件属性(路由解耦) : 
+```js
 props:true
 
-props:{} 
+props:{name:'1'} 
 
+props(){ return{name:'1'}} 
 
-
-
+```
 
 # 路由流配置加active
 ```
@@ -201,9 +186,6 @@ const router = new VueRouter({
                                })
 ```
 
-
-​    
-
 # VUE 路由参数变化页面内容不刷新
 
 ### 原因
@@ -211,8 +193,6 @@ const router = new VueRouter({
 
 ### 解决方法
 ##### 1.watch监听路由'$route对象是否变化
-
-
 
 ```
 watch: {

@@ -1,0 +1,22 @@
+<ul>
+			<li class="li-active" id="c0"><a href="<!--{$site.url}-->">ÍøÕ¾Ê×Ò³</a></li>
+			<!--{iCMS:category:list loop="true" stype='top' row="10"}-->
+            <li id="c<!--{$category_list.cid}-->">
+				<!--{if $category_list.child}-->
+					<a href="javascript:;"><!--{$category_list.name}--> </a>
+					<dl>
+						<div class="cc">
+							<!--{iCMS:category:list as="sub_category" loop="true" stype='sub' row="15" cid=$category_list.cid}-->
+								<dd>
+								<a  href="<!--{$sub_category.url}-->" ><!--{$sub_category.name}--></a>
+								</dd>
+								<!--{/iCMS}-->
+						</div>
+					<>
+				<!--{else}-->
+					<a href="<!--{$category_list.url}-->" ><span><!--{$category_list.name}--></span>
+				<!--{/if}-->
+			</a>
+            </li>
+            <!--{/iCMS}-->	
+		</ul>

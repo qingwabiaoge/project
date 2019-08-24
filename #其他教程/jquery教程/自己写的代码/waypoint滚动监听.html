@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+    <script src="../../cdn/jquery.waypoints.min.js"></script>
+</head>
+<body>
+<div class="red" style="height: 200px; margin-top: 800px; margin-bottom: 800px; background: #f00;"></div>
+<div class="gre" style="height: 200px; margin-top: 800px; margin-bottom: 800px; background: #0f0;"></div>
+<script>
+
+    $('.red').waypoint(function() {
+        alert('红色');
+    });
+    $('.gre').waypoint(function() {
+        alert('绿色');
+    });
+</script>
+</body>
+</html>

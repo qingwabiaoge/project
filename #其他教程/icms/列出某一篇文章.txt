@@ -1,0 +1,2 @@
+<!--{iCMS:article:data aid='ÎÄÕÂid'}-->
+<!--{$article_data.body}-->

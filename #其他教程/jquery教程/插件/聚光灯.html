@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="gb2312">
+  <title> Rguanghui Test </title>
+  <!-- 关联jquery -->
+  <script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+  <style type="text/css">
+    ul,li{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    ul{
+        width:800px;
+        height:100%;
+        margin:20px auto;
+    }
+    ul li{
+        width:200px;
+        height:300px;
+        float:left;
+        overflow:hidden;
+        position:relative;
+    }
+    ul li img{
+        width:200px;
+        height:300px;
+        border:none;
+    }
+    ul li i{
+        width:100%;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        display:block;
+    }
+    .opacity_bg{
+        background:#000;
+        opacity:0.5;
+        filter:alpha(opacity=50);
+    }
+  </style>
+  <script type="text/javascript">
+  <!--
+    /*当鼠标滑过图片的时候，为所有的i元素添加opacity_bg属性，
+     然后将把鼠标正经过的元素移除opacity_bg*/
+    $(document).ready(function(){
+        $("ul li").hover(function(){
+              $(this).siblings().find("i").addClass("opacity_bg");
+        },function(){
+            $(this).siblings().find("i").removeClass("opacity_bg");
+        });
+    });
+  //-->
+  </script>
+ </head>
+                   
+ <body>
+  <ul>
+    <li><img src="../images/vae (1).jpg"><i></i></li>
+    <li><img src="../images/vae (2).jpg"><i></i></li>
+    <li><img src="../images/vae (3).jpg"><i></i></li>
+    <li><img src="../images/vae (4).jpg"><i></i></li>
+    <li><img src="../images/vae (5).jpg"><i></i></li>
+    <li><img src="../images/vae (6).jpg"><i></i></li>
+    <li><img src="../images/vae (7).jpg"><i></i></li>
+    <li><img src="../images/vae (8).jpg"><i></i></li>
+    <li><img src="../images/vae (9).jpg"><i></i></li>
+    <li><img src="../images/vae (10).jpg"><i></i></li>
+    <li><img src="../images/vae (11).jpg"><i></i></li>
+    <li><img src="../images/vae (12).jpg"><i></i></li>
+    <li><img src="../images/vae (13).jpg"><i></i></li>
+    <li><img src="../images/vae (14).jpg"><i></i></li>
+    <li><img src="../images/vae (15).jpg"><i></i></li>
+    <li><img src="../images/vae (16).jpg"><i></i></li>
+  </ul>
+ </body>
+</html>

@@ -31,7 +31,10 @@ const router = new Router({
       name: 'vue.static',
       component: () => import('@/pages/vue.static.vue'),
     }
-
+    , {
+      path: '/process',
+      component: () => import('@/pages/process.vue'),
+    }
 
     ,
     {
@@ -154,7 +157,7 @@ const router = new Router({
       name: 'styled-extend',
       component: () => import('@/pages/styled-extend'),
     },
-  {
+    {
 
       path: '/styled-div',
       name: 'styled-div',

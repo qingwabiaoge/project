@@ -1,0 +1,24 @@
+
+
+
+
+批量添加前缀后缀
+
+update meizhuang_product set content = concat(convert(id,char));
+update meizhuang_product set content = concat('<img src="http://pic.http6.net/fuxiangxuan/product/',convert(content,char));
+update meizhuang_product set content = concat(convert(content,char) ,'.jpg"/>');
+
+
+
+
+
+update meizhuang_product set image = concat(convert(id,char));
+update meizhuang_product set image = concat('http://pic.http6.net/fuxiangxuan/product/',convert(image,char));
+update meizhuang_product set image = concat(convert(image,char) ,'.jpg_300');
+
+批量替换
+
+update table[表名] set Fields[字段名]=replace(Fields[字段名],'被替换原内容','要替换 
+
+
+UPDATE meizhuang_product SET image=REPLACE(image,'http://pic.http6.net/fuxiangxuan/','images/')

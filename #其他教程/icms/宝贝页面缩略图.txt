@@ -1,0 +1,12 @@
+Sam(280094058)  17:20:38
+$article.pic.url
+有事直接说<cool.tea@qq.com>  17:20:46
+一样的 $article_list.pic.url 换成$article
+青蛙表哥(393502736)  17:20:52
+哦好的
+如果是3张如何调用啊？
+Sam(280094058)  17:21:57
+mpic
+spic
+m是第二张，s是第三张
+你自己也可以新建一个字段xpic

@@ -1,0 +1,3 @@
+
+<!--{iCMS:category:array cid='1'}-->
+<!--{$category_array.biaoti1}-->

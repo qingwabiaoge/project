@@ -6,16 +6,6 @@ router组件和 is动态组件
 
 ## 钩子函数
 
-无<keep-live>的钩子
-
-```
-created(){}
-
-distroyed(){}
-
-
-```
-
 < keep-alive > 后的钩子
 
 ```

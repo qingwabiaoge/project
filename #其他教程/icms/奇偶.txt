@@ -1,0 +1,11 @@
+  <!--{iCMS:article:list  row="8" orderby="month"}-->
+  <!--{foreach key=key value=alist from="$article_list"}-->
+   <!--{if $key%2=="0"}-->
+   
+   Ææ <a href="<!--{$alist.url}-->"><!--{$alist.title}--></a>
+   
+   <!--{else}-->
+   Å¼<a href="<!--{$alist.url}-->"><!--{$alist.title}--></a>
+   <!--{/if}-->
+   
+<!--{/foreach}-->

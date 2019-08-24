@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.http6.net/jquery.min.js"></script>
+</head>
+<body>
+<p style="height: 50px;border: 1px solid #000"></p>
+<div><a>11</a></div>
+<div><a>22</a></div>
+<button>111111111</button>
+</body>
+<script>
+
+    $("div ,a").click(function () {
+
+        $("p").html($(this).find("a").clone());
+        var _this = $(this)
+        $("button").click(function () {
+
+            $("p").html(_this.next().find("a").clone())
+        })
+    })
+
+</script>
+</html>

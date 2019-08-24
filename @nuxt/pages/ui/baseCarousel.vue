@@ -5,8 +5,8 @@
               :stopTime="5000"
               :transitionTime="100"
               pagination="dot"
-              :paginationIndex="true"
-              :paginationIndexBottom="100"
+              :paginationMark="true"
+              :paginationMarkBottom="100"
               :navigation="true"
               :height="300">
     <!--   data:幻灯片数组
@@ -15,9 +15,9 @@
             switchTime: 4000, //定时切换
             transitionTime: 200,//为切换动画提供切换时间
              :pagination="true"  //显示导航
-        :paginationIndex="true" //显示导航序号
+        :paginationMark="true" //显示导航序号
         :navigation="true"
-        :paginationIndexBottom距離底部的像素數
+        :paginationMarkBottom距離底部的像素數
     -->
 
   </baseCarousel>

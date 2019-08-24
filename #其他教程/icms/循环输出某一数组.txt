@@ -1,0 +1,5 @@
+<!--{foreach  value=pics from="$article_list.pics"}-->
+ 
+    <!--{$pics}-->
+   
+<!--{/foreach}-->

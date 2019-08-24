@@ -1,0 +1,15 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+img{vertical-align:middle}
+/* lamp */
+.lamp{height:366px;width:960px;position:relative;margin:0 auto;}
+.lamp .sublight{position:absolute;display:block;overflow:hidden;}
+.lamp .pic1{top:0;left:0;width:240px;height:366px;}
+.lamp .pic2{top:0;left:240px;width:480px;height:183px;}
+.lamp .pic3{top:0;left:720px;width:240px;height:183px;}
+.lamp .pic4{top:183px;left:240px;width:240px;height:183px;}
+.lamp .pic5{top:183px;left:480px;width:240px;height:183px;}
+.lamp .pic6{top:183px;left:720px;width:240px;height:183px;}
+.Left{ width:700px; float:left}
+
+

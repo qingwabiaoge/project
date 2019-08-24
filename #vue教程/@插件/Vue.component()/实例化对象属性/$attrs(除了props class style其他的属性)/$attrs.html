@@ -1,0 +1,21 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+    <!-- 构造函数参数-->
+    <cl id="id" someprop="someprop">
+
+
+    </cl>
+</div>
+<script>
+    Vue.component('cl',
+        {
+            template: `<div >
+                       $attrs:{{$attrs}}
+                        </div>`,
+        }
+    )
+    const vm = new Vue({
+        el: '#app',
+    })
+
+</script>

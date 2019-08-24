@@ -1,0 +1,5 @@
+栏目侧边栏（输出父栏目列表，若没有父栏目既微顶级栏目 输出本栏目列表）
+<!--{iCMS:category:list loop="true" row="10" stype="sub" cid=$category.rootid|default:$category.cid}-->
+<!--{$category_list.cid|print_r}-->
+<!--{/iCMS}--> 
+
