@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<style>
+  form {
+    border: 1px solid #0bb20c
+  }
+</style>
+<div id="app">
+
+  <!--  <input type="text" disabled>-->
+
+  <l-input disabled>
+
+  </l-input>
+
+  <l-form :disabled="true">
+    <l-form-item>
+      <l-input>
+
+      </l-input>
+
+    </l-form-item>
+
+  </l-form>
+</div>
+<script>
+
+
+  Vue.component('LInput', {
+    template: '<input :disabled="disabled||lFormItem.disabled||lForm.disabled" :value="`disabled:${disabled}`"/>',
+    inject: {lForm: {default: {}}, lFormItem: {default: {}}}, //引入父级的父级的父级的变量
+    props: {disabled: Boolean},
+  })
+
+  Vue.component('LFormItem', {
+    template: '<label for="name"> name: <slot></slot></label>',
+    provide() {
+      return {
+        lFormItem: this
+      };
+    },
+  })
+  Vue.component('LForm', {
+    template: '<form> <slot></slot></form>',
+    provide() {
+      return {
+        lForm: this
+      };
+    },
+    props: {disabled: Boolean}
+  })
+
+
+  const vm = new Vue({
+    el: '#app',
+    data: {},
+  })
+</script>

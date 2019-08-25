@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+
+
+<div id="main">
+
+</div>
+<hr>
+<div id="app">
+
+</div>
+
+<script>
+  // 1.$set给data对象中的变量设置值，比如我在data中定义了一个对象，在使用的时候我想给这个对象赋予一个a的属性，
+  var app = new Vue({
+    el: "#main",
+    template: '<div>{{obj.a}}</div>',
+    data: {
+      obj: {}
+    }
+  })
+
+  var i = 0;
+  i++;
+  app.$set(app.obj, 'a', i)
+  //语法糖[vm.$set( target, key, value )]
+
+  //2、$delete删除对象的属性
+  app.$delete(app.obj, 'a')
+
+  //3、$forceUpdate()强行更新vue实例
+  // 在data中声明了obj对象，但并没有a的声明
+  setInterval(() => {
+    var i = 0;
+    i++;
+    app.obj.a = i;
+  }, 1000)
+  console.log(app.obj.a)
+  //但是在页面中并不会显示出a的值，但是a的值在一直改变,console会打印出来，这中方法a的值并没有在data中事先声明，不能显示在页面，如果想显示出来，也可以在声明obj的时候，给a声明一个空值。
+  //    在data中声明的对象的属性并没有声明，但是调用了，这是非响应式，不会重新渲染
+  // 方法二：
+  //     使用app.$forceUpdate()，强行更新vue实例
+  var app = new Vue({
+    el: "#app",
+    template: '<div>{{obj.a}}</div>',
+    data: {
+      obj: {}
+    }
+  })
+  setInterval(() => {
+    var i = 0;
+    i++;
+    app.$forceUpdate(app.obj, 'a', i)
+  }, 2000)
+  console.log(app.obj.a)
+  // $forceUpdate该方法会重新给obj的a属性重新声明，在页面就能显示出来了，但是这种方法不建议使用，如果要使用到a的值，可以先声明一个空值
+
+</script>
+

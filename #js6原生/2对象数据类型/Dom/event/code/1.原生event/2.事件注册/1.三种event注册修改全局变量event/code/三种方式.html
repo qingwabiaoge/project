@@ -1,0 +1,34 @@
+<!--方式1，
+双引号里可以放任何语句,
+this===当前dom对象
+优势可以自定义传参
+-->
+<button onmouseover="fn(),console.log(this)" id="btn">btn</button>
+
+
+<script>
+
+    console.log(event) //undifine也不是err 说明event声明过,事件操作只是为event赋值
+
+    const el = document.getElementById('btn')
+    function fn() {
+        //event 其实是window全局变量,注意不是global
+        console.log(window.event)
+    }
+
+
+
+
+    //方式2
+    el.onmousedown = fn
+
+
+
+    //方式3
+    el.addEventListener('click', fn, false)
+    setTimeout(() => {
+            el.removeEventListener("click", fn, false);  //有效！
+        }, 3000
+    )
+
+</script>

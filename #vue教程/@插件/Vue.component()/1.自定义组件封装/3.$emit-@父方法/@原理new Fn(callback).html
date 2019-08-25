@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<div id="app">
+    <!--
+      语法糖 @update:value="value=>paValue = value"  +    v-bind:value  <=>  sync
+      语法糖 @input="value=>paValue = value"         +    :v-bind:value  <=>   v-modal
+    -->
+    <cl :value="paValue"
+        :fn="fn"
+        @update:value="fn"
+        @input="fn"
+        @xx="fn"
+        @input.native="fn2"
+    >
+
+    </cl>
+    {{paValue}}
+</div>
+
+
+<script>
+    Vue.component('cl', {
+        template: '<input :value="value" @input="inputfn($event.target.value)" type="text" >',
+        props: ['value', 'fn'],
+        methods: {
+            inputfn(value) {
+                //以下都是回调函数
+
+                //等价于vm.fn()为this赋值vm
+                this.$parent.fn(value)
+                this.$parent.paValue = value
+
+                //cl.fn(value), vue一定在源码里对fn属性做了call($father)处理
+                this.fn(value)
+
+                this.$emit('update:value', value)
+                this.$emit('input', value)
+                this.$emit('xx', value)
+
+
+            }
+        }
+
+    })
+    const vm = new Vue({
+        el: '#app',
+        data: {paValue: 'msg'},
+        methods: {
+            fn(value) {
+
+                this.paValue = value
+                console.log('触发', value)
+
+            },
+            fn2(e) {
+                console.log(e)
+            }
+        }
+
+    })
+
+</script>
+</body>
+</html>

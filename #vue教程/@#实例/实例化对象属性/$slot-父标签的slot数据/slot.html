@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+<div id="app">
+
+  <cl>
+    slot
+    <template v-slot:hasname>hasname</template>
+    <template v-slot:scope="{msg}">
+      {{msg}}
+    </template>
+  </cl>
+</div>
+
+<script>
+  Vue.component('cl', {
+    template: `<div>
+<h1><slot></slot></h1>
+<h2><slot name="hasname"></slot></h2>
+<h3><slot name="scope" msg="123"></slot></h3>
+</div>`,
+    created(){
+      console.log(this)
+    }
+  })
+  const vm = new Vue({
+    el: '#app'
+
+  })
+
+</script>

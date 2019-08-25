@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <h1>{{msg}}</h1>
+    <ch>msg</ch>
+
+</div>
+
+
+<script>
+    var ch = {
+        template: `<div>
+                    <button @click="click1">子修改父的msg</button>
+                   <button @click="click2">子调用父的函数</button>
+                   </div>`,
+        data: function () {
+            return {
+            msg:'msg'
+            }
+
+        },
+        methods:{
+            click1(){this.$parent.msg='子修改父'},
+            click2(){this.$parent.alert('子调用父')}
+        }
+
+    }
+
+    var vm = new Vue({
+        el: '#app',
+        data: {msg: 'msg'},
+        components: {ch},
+        methods:{
+            alert(a){
+
+                alert(a)
+            }
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>
