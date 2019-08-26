@@ -7,7 +7,7 @@
 
 <div id="app">
 
-  <base-input v-on:input.native="onFocus"></base-input>
+  <base-input v-on:focus.native="onFocus"></base-input>
 
 
 </div>
@@ -22,22 +22,18 @@
                 <input
                   v-bind="$attrs"
                   value="value"
-                  v-on="listeners"
+
                 >
               </label>
               `,
-    computed:{
-      listeners(){
-       return  Object.assign({},this.$listeners)
-      }
-    }
+
   }
 
   new Vue({
     el: '#app',
     methods: {
       onFocus(e) {
-
+        console.log(123)
         console.log(e)
       }
     },

@@ -10,11 +10,8 @@
 
   <!--  <input type="text" disabled>-->
 
-  <l-input disabled>
 
-  </l-input>
-
-  <l-form :disabled="true">
+  <l-form disabled>
     <l-form-item>
       <l-input>
 
@@ -23,32 +20,41 @@
     </l-form-item>
 
   </l-form>
+
+
 </div>
 <script>
 
 
   Vue.component('LInput', {
     template: '<input :disabled="disabled||lFormItem.disabled||lForm.disabled" :value="`disabled:${disabled}`"/>',
-    inject: {lForm: {default: {}}, lFormItem: {default: {}}}, //引入父级的父级的父级的变量
+    inject: {
+      lForm: {default: {}},
+      lFormItem: {default: {}}
+    }, //引入父级的父级的父级的变量
     props: {disabled: Boolean},
   })
 
   Vue.component('LFormItem', {
     template: '<label for="name"> name: <slot></slot></label>',
+    props: {disabled: Boolean},
     provide() {
       return {
         lFormItem: this
       };
     },
+
   })
+
   Vue.component('LForm', {
     template: '<form> <slot></slot></form>',
+    props: {disabled: Boolean},
     provide() {
       return {
         lForm: this
       };
     },
-    props: {disabled: Boolean}
+
   })
 
 

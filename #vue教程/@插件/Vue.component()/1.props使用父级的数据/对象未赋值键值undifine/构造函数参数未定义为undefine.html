@@ -1,6 +1,6 @@
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 <div id="app">
-  <cl prop3></cl>
+  <cl :prop3="{a:1}"></cl>
 </div>
 <script>
 
@@ -20,7 +20,7 @@
       },
       prop3: {},
       // props4 vue主动抛出错误
-      prop4: {type: Object, default: {}}
+      prop4: {type: Object, default:{}}
 
     }
   }

@@ -6,15 +6,9 @@
 
 
 <div id="app">
-
-  <base-input v-on:focus="log" @input="log"></base-input>
-
-
+  <base-input @focus="onFocus"></base-input>
 </div>
-
-
 <script>
-
   const baseInput = {
     template: `
               <label>
@@ -26,38 +20,23 @@
                 >
               </label>
               `,
-    computed: {
-      listeners() {
-
-        return Object.assign({}, this.$listeners,
-          {
-            // 这里确保组件配合 `v-model` 的工作,不添加这里也可以用event.target.value
-            input: event => {
-              this.$emit('input', event.target.value)
-            }
-          }
-        )
+    computed:{
+      listeners(){
+       return  Object.assign({},this.$listeners)
       }
-    },
-    created() {
-      console.log(this.$listeners)
     }
   }
-
   new Vue({
     el: '#app',
     methods: {
-      log(e) {
+      onFocus(e) {
 
         console.log(e)
       }
-
     },
     components: {
       baseInput
     }
-
   })
-
 
 </script>

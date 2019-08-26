@@ -14,8 +14,8 @@
 
   </l-input>
 
-  <l-form :disabled="true">
-    <l-form-item>
+  <l-form >
+    <l-form-item disabled>
       <l-input>
 
       </l-input>
@@ -28,9 +28,18 @@
 
 
   Vue.component('LInput', {
-    template: '<input :disabled="disabled||lFormItem.disabled||lForm.disabled" :value="`disabled:${disabled}`"/>',
-    inject: {lForm: {default: {}}, lFormItem: {default: {}}}, //引入父级的父级的父级的变量
+    template: '<input :disabled="_disable" :value="null"/>',
+    inject: {
+      lForm: {default: {}},
+      lFormItem: {default: {}}
+    }, //引入父级的父级的父级的变量
     props: {disabled: Boolean},
+    computed:{
+      _disable(){
+        return this.disabled||this.lFormItem.disabled||this.lForm.disabled
+      }
+
+    }
   })
 
   Vue.component('LFormItem', {
@@ -40,6 +49,7 @@
         lFormItem: this
       };
     },
+    props: {disabled: Boolean},
   })
   Vue.component('LForm', {
     template: '<form> <slot></slot></form>',

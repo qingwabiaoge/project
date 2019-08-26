@@ -9,26 +9,22 @@
 <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
 <div id="app">
 
-  <cl @update="myfn" @cs="myfn"></cl>
 
+  <cl>
+    测试
+  </cl>
 </div>
 
 <script>
   Vue.component('cl', {
-    template: `<div></div>`,
-    created() {
-      console.log(this.$listeners)
-    },
-
-  })
-
-  new Vue({
-    el: '#app',
-    methods: {
-      myfn() {
-      }
+    template: `<button><slot></slot></button>`, created() {
+      console.log(this.$slots.default ? '默认插槽有内容' : '')
+      console.log(this.$slots.default)
     }
   })
 
+  new Vue({
+    el: '#app'
+  })
 </script>
 

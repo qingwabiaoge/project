@@ -7,7 +7,7 @@
 
 <div id="app">
 
-  <base-input @focus="onFocus"></base-input>
+  <base-input v-on:focus="log" @input="log"></base-input>
 
 
 </div>
@@ -26,20 +26,32 @@
                 >
               </label>
               `,
-    computed:{
-      listeners(){
-       return  Object.assign({},this.$listeners)
+    computed: {
+      listeners() {
+      //$listeners 默认父标签的所有监听函数
+        return Object.assign({}, this.$listeners,
+          {
+            // 这里确保组件配合 `v-model` 的工作,覆盖默认的事件,如果不用父标签上@input监听到时event
+            input: event => {
+              this.$emit('input', event.target.value)
+            }
+          }
+        )
       }
+    },
+    created() {
+      console.log(this.$listeners)
     }
   }
 
   new Vue({
     el: '#app',
     methods: {
-      onFocus(e) {
+      log(e) {
 
         console.log(e)
       }
+
     },
     components: {
       baseInput

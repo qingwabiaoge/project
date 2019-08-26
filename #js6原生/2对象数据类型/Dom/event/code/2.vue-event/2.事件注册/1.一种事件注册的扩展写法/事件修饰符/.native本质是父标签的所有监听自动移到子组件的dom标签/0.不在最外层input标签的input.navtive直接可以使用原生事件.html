@@ -7,7 +7,7 @@
 
 <div id="app">
 
-  <base-input v-on:focus.native="onFocus"></base-input>
+  <base-input v-on:input.native="onInput"></base-input>
 
 
 </div>
@@ -26,9 +26,9 @@
                 >
               </label>
               `,
-    computed:{
-      listeners(){
-       return  Object.assign({},this.$listeners)
+    computed: {
+      listeners() {
+        return Object.assign({}, this.$listeners)
       }
     }
   }
@@ -36,8 +36,8 @@
   new Vue({
     el: '#app',
     methods: {
-      onFocus(e) {
-        console.log(123)
+      onInput(e) {
+
         console.log(e)
       }
     },
