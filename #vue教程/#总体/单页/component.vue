@@ -1,4 +1,4 @@
-<!--template±»vueloader½âÎöÎªjs-->
+<!--templateè¢«vueloaderè§£æžä¸ºjs-->
 
 <template>
 
@@ -11,8 +11,17 @@
 
 <script>
 
-    //  vue¹¹ÔìÆ÷µÄÅäÖÃÎÄ¼þ  es6-moduleÊä³ö
+    //  vueæž„é€ å™¨çš„é…ç½®æ–‡ä»¶  es6-moduleè¾“å‡º
     export default {
+
+      style: css`
+    .title {
+      /* You can access component's "this" via "vm" */
+      color: ${vm => vm.$store.state.themeColor};
+      font-size: ${modularScale(2)};
+      margin: 0;
+    }
+  `
     }
 
 </script>
@@ -20,7 +29,7 @@
 
 
 
-<!--style±»css-loader½âÎö ‘js-->
+<!--styleè¢«css-loaderè§£æžçˆ²js-->
 <style>
 
 

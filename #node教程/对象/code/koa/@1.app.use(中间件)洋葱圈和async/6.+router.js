@@ -3,7 +3,7 @@ const app = new Koa()
 const Router = require('koa-router')
 
 
-router = new Router()
+const router = new Router()
 router.get('/', async (ctx, next) => {
     ctx.body += 'root'
 })

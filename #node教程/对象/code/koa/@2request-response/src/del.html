@@ -2,7 +2,9 @@
 
 
 <script>
-//必须这种写法{data:{id:1}}
-    axios.delete('http://127.0.0.1:3000/request/',{data:{id:1}}).then(_=>{console.log(_)})
+  //必须这种写法{data:{id:1}}
+  axios.delete('http://127.0.0.1:3000/api/request/', {data: {id: 1}}).then(_ => {
+    console.log(_)
+  })
 
 </script>

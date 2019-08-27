@@ -29,7 +29,7 @@
     var config = {
         headers: {'Content-Type': 'text/xml'}
     };
-    axios.post('http://localhost:3000/request/', xml, config).then(res => {
+    axios.post('http://localhost:3000/api/request/', xml, config).then(res => {
         console.log(res)
     }).catch(err => callback(err));
 
