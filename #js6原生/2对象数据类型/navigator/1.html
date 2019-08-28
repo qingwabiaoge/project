@@ -1,5 +1,13 @@
 <script>
+function Person(name,age) {
+  this.name=name
+  this.age=age
 
-    document.write(navigator.userAgent);
+}
+Person.prototype={say(){console.log(123)}}
+const xiaoming=new Person('xiaoming',21)
 
+
+xiaoming.a=1
+  console.log(xiaoming)
 </script>

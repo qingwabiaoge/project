@@ -36,14 +36,14 @@
 
  原理npm install xxx-cli -g 安裝xxx-cli到npm和yarn的目录下，这些目录已经设置了环境变量Path
 
-##### cli模块全局安装到全局文件夹
+##### 安装
 
 ```
 yarn global add webpack 
 npm install webpack -g 
 ```
 
-##### 命令行运行的cli命令
+##### 命令行运行的cli**命令**
 
 ```
  npm -v
@@ -57,7 +57,7 @@ npm install webpack -g
 
 ### cli模块安装到项目文件夹
 
-##### cli安装到项目文件夹
+##### 安装
 
 ```
 npm i nuxt-S //安装并保存到webpack.json生产环境配置
@@ -69,14 +69,31 @@ yarn add webpack
 
 ##### 命令行npm run test,运行安装到项目文件夹的cli模块
 
-`npm run test`时,会运行`./node_modules/.bin/test.cmd`
+`npm run test`时,本质会运行`./node_modules/.bin/test.cmd`
+
+```json
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    }
+```
 
 ```
-"start": "cross-env NUXT_HOST=0.0.0.0 NUXT_PORT=3333 nuxt",
-"dev": "nuxt"
- npm run dev
- npm run sart
+//test.cmd
+@IF EXIST "%~dp0\node.exe" (
+  "%~dp0\node.exe"  "%~dp0\..\cs\index.js" %*
+) ELSE (
+  @SETLOCAL
+  @SET PATHEXT=%PATHEXT:;.JS;=;%
+  node  "%~dp0\..\cs\index.js" %*
+)
 ```
+
+##### 也可以放置全局命令
 
 
 ```

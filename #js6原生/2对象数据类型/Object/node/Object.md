@@ -1,19 +1,3 @@
-# 一切皆是对象(键值对)
-
-对象===键值对===引用类型
-
- 都是`{prop:'',fn(){}}`的形式
-
-```
-                                         Functon
-
-                                            ↓
-
-构造器函数:      (Object)                   Array             自己写的构造函数(Vue,nuxt,Koa)        String
-                  ↓                         ↓                         ↓                          ↓        
-           {a:1,b:2,tostring(){}..}  {0:1,1:2,length:2}       {i:1,fn:()=>{}}            {0:1,1:2,length: 0,indexOf(){}}
-
-```
 
 > _原型 :[英]prototype_  
 
@@ -24,10 +8,10 @@
 ### 创建新对象
 
 
-##### json直面量语法糖
+##### json直面量(用于新建对象和控制台打印)
 
 ```
-{a:1,b:2}
+{a:1,b:2}//唯一的一个表达式表示出key的类型
 ```
 
 ##### new Object() 等价json语法糖
@@ -52,20 +36,27 @@ new Object({a:1,b:2})
 
 ```
 
-### 判断是否对象类型
+### 对象地址赋值给变量
+
+```
+const obj={a:1}  //obj里存内存地址#000x1
+
+```
+
+###  弱类型对象扩展
+
+```
+obj.b=2   //js弱类型可扩展
+```
+
+# 判断是否对象类型
 
 ```
 typeof(obj)
 obj instance of Object
 ```
 
-
-
-# obj和()计算会出错
-
-
-
-# 属性范围
+# 属性分类
 
 > __所有属性:__ 
 >
@@ -93,7 +84,7 @@ obj instance of Object
 
 注:只有属性判断组用的对Object的实例方法
 
-# 所有属性in 
+# 所有属性(真实数据结构)in 
 
 ![](3.png)
 
@@ -381,4 +372,133 @@ Object.is(NaN, NaN) // true
 
 等同于两个对象内的函数通信
 
+
+# js一切数据皆是对象(键值对)
+
+对象===键值对===引用类型
+
+### 新建Object类型
+
+##### new新建对象
+
+```
+new Objcet({a:1,b:2})
+```
+
+##### 字面量新建对象等同于上面
+
+```
+{a:1,b:2}
+```
+
+### 新建有类型的对象,生成指定格式的键值对
+
+按照构造函数Vue的指定规则,生成对象,这种对象属于Vue类型
+
+##### new Fn()新建对象
+
+```js
+new Function('a,b','a+b')
+new Array(1,2,3)
+new RegExp(/\w/,'ig')
+new Vue()
+```
+
+##### 字面量等同于new Fn()新建对象和命令行用于打印
+
+```js
+{a:1}
+function fn(){}
+[1,2,3]
+<div id='app'></div>
+/\w/ig
+
+```
+
+```js
+console.log(obj)//{a:1}
+console.log(fn)//fn(){}
+console.log(arr)//[1,2,3]
+console.log(document.getElmentById())//<div id='app'></div>
+console.log(reg)// /\w/ig
+```
+
+##### Object.creat({name:'''})
+
+```
+Object.creat{{},{a:1}}
+```
+
+###  返回的真实对象都是`{prop:'',fn(){}}`的形式
+
+
+```js
+                                         Functon
+
+                                            ↓
+    String     (Object)                   Array               (Vue,nuxt,Koa)   
+                  ↓                         ↓                         ↓                          ↓        
+           {a:1,b:2,tostring(){}..}  {0:1,1:2,length:2}       {i:1,fn:()=>{}}   {0:1,1:2,length: 0,indexOf(){}}
+
+```
+
+### 对象的内存地址赋值给变量
+
+```js
+const str=new String('hello') 
+
+
+const obj={a:1}
+
+
+function fn(){}
+
+
+const arr=[1,2,3]
+
+
+const vm=new Vue({})
+
+```
+
+### js弱类型键值对都可以再扩展
+
+```js
+const str=new String('hello') 
+str.a=1
+
+//------------------------------
+
+const obj={a:1}
+obj.b=2
+
+//------------------------------
+
+
+function fn(){
+    
+}
+fn.a=1
+
+//------------------------------
+
+const arr=[1,2,3]
+arr.a=1
+
+//------------------------------
+
+const el=document.getElmentById()
+el.a=1
+
+//------------------------------
+
+const reg=/\w/
+reg.a=1
+
+//------------------------------
+
+const vm=new Vue({})
+vm.a=1
+
+```
 

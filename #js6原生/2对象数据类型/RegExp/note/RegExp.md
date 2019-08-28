@@ -4,7 +4,7 @@
 var re = new RegExp('hello','g');   //代替/xxxx/
 ```
 
-# 字面量语法糖建立实例
+# 字面量(用于建立对象和控制台打印)
 
 ### gmi修饰符:
 
@@ -39,7 +39,7 @@ var re = new RegExp('hello','g');   //代替/xxxx/
     console.log(reg_.test(str))//true
 
 
-    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  //这个是str.match(reg)的逆运算
+    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  ,这个是str.match(reg)的逆运算
     console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个
 ```
 
@@ -286,9 +286,19 @@ console.log(reg.test(str))//true
 
 
 
+# 对象赋值给变量可扩展
 
+```js
+const reg=/\w/  //对象的内存地址赋值给变量
+```
 
-# 所有属性in
+# 弱类型对象扩展
+
+```
+reg.a=1  //弱类型可扩展
+```
+
+# 所有属性in(真实对象)
 
 ![](./7.png)
 

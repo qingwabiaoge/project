@@ -2,9 +2,11 @@
 
 > split分裂,splice剪接 ,slice 一部分@名词_
 
-# 创建数组
+# 数组对象
 
-### new Array()
+### 创建数组
+
+##### new Array()
 
 ```javascript
 new Array(3); //new可省略, [null,null,null]`
@@ -13,20 +15,32 @@ new Array("Greg"); //  new可省略, ["Greg"]`
 
 ```
 
-### 语法糖
+##### 字面量(等价new Array和用于控制台打印)
 
 ```
 [1,true,'str']
 ```
 
-### Array.of（1）
+### 赋值给变量
+
+```
+const arr=[1,2,3] //arr里存内存地址#0x001
+```
+
+### 弱类型扩展
+
+```
+arr.a=10//若类型可以扩展
+```
+
+#  Array.of静态函数创建数组
 
 ```javascript
  Array.of（1）  //[1]
  Array.of（1，2，3）//[1,2,3]
 ```
 
-### 类数组转数组
+# Array.from类数组转数组
 
 ```javascript
 let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
@@ -34,29 +48,13 @@ Array.from(ArrayLike)
 
 ```
 
-### 数组和字符串互转  Array.protorype.join()
-
-```javascript
-'1234'.split('')
-```
-
-```
-[...'abc']
-```
-
-```
-[1, 2, 3, 4].join('-')
-```
-
-# 判断是否数组类型
+#  Array.isArray( )判断是否数组类型
 
 1. 检测是不是数组 Array.isArray(arr)
 2. arr instanceof Array //操作符不用.和括号
 3. Array.protype.isprotypeof(arr)
 
-# arr与()计算出错
-
-# 所有属性 in
+# 所有属性(真实数据结构) in
 
 ![](4.png)
 
@@ -148,9 +146,19 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 3. arr.indexOf({a: 10}) //无法使用,返回-1
 ```
 
+##### Array.prototype.join()数组和字符串互转
 
+```javascript
+'1234'.split('')
+```
 
+```
+[...'abc']
+```
 
+```
+[1, 2, 3, 4].join('-')
+```
 
 ##### 数组迭代方法(不改变原数组)
 

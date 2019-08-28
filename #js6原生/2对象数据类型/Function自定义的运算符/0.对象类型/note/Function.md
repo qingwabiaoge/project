@@ -1,18 +1,16 @@
-# Function和对象的关系
 
-fn继承于Object.protype,是对象类型
 
- new fn创造新的对象实例
+# 函数对象
 
-# 创建函数对象
+### 创建函数对象
 
-### 构造函数创建对象
+##### 构造函数创建对象
 
 ```javascript
 new Function('a', 'b', 'return a + b');
 ```
 
-### 直面量语法糖等价构造函数创建
+##### 直面量(用于新建对象和控制台打印)
 
 ```
   function f(a,b) {return a + b}//语法糖等价上面的构造函数生成
@@ -23,7 +21,20 @@ new Function('a', 'b', 'return a + b');
 
 ```
 
-# Fn和()计算得到return返回值
+### 赋值给变量
+
+```js
+const fn=function(){} //fn里存内存地址0x0001
+
+```
+
+### 弱类型扩展静态函数和静态变量
+
+```
+fn.a=1//对象键值对可扩展
+```
+
+### 变量Fn/new Funciton()/function fn(){}和()计算得到return返回值
 
 > 引用类型fn赋值:对于同一个引用变量fn, 赋值到任何地方只是复制了一个内存地址,函数堆内存没有改变,还是同一个函数
 
@@ -205,7 +216,7 @@ require'xxx'()
 ````
 
 
-# 所有属性 in
+# 所有属性(真实数据结构) in
 
 ![1](2.png)
 
@@ -244,19 +255,14 @@ require'xxx'()
 
 ```
 ### OwnProperty
-```
-
-    
-    //2.Own属性,Function构造生成---------------------    
+```js
+  //2.Own属性,Function构造生成---------------------    
     console.log(Object.getOwnPropertyNames(Fn))//(6)["length", "name", "arguments", "caller", "prototype", "a"]
      console.log(Fn.name)
 
-
-
-
 ```
 ### keys
-```
+```js
 
     //3.可枚举属性:静态变量,静态方法--------------------
      console.log(Object.keys(Fn)) //['a']
@@ -272,3 +278,8 @@ require'xxx'()
 
 
 
+# Function和对象的关系
+
+fn继承于Object.protype,是对象类型
+
+ new fn创造新的对象实例
