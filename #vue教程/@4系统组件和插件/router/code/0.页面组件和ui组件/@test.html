@@ -11,15 +11,15 @@
         <router-link to="/">index</router-link>
         <router-link :to="{name:'animal'}">animal</router-link>
     </div>
-    <!--ÏÂ±ßÊÇÒ³Ãæ¼¶ÇĞ»»Ä£Ê½-->
+    <!--ä¸‹è¾¹æ˜¯é¡µé¢çº§åˆ‡æ¢æ¨¡å¼-->
     <router-view></router-view>
 </div>
 
 <script>
-    //uiÀàĞÍµÄ×é¼ş------------------
+    //uiç±»å‹çš„ç»„ä»¶------------------
     Vue.component('btn', {template: `<button style="background: red;color: white"><slot></slot></slot></button>`})
 
-    //Ò³ÃæÀàĞÍµÄ×é¼ş-------------------------
+    //é¡µé¢ç±»å‹çš„ç»„ä»¶-------------------------
     const index = {template: `<div>index</div>`}
     const animal = {
         template: `<div>
@@ -34,7 +34,6 @@
     const router = new VueRouter({
 
         routes: [
-
             {
                 path: '/',
                 name: 'index',

@@ -30,7 +30,7 @@ $ npx create-nuxt-app <项目名>
 
 ![](./img/2.png)
 
-##### ctx.req.headers
+ctx.req.headers
 
 ![](./img/17.png)
 
@@ -86,8 +86,6 @@ actions: {
   }
 }
 ```
-
-
 
 
 nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 context.redirect() 和 context.error()。
@@ -287,7 +285,7 @@ export default {
 ````
 ### 浏览器端-路由钩子检验
 
-validate()
+`validate()`
 
 ### asyncData函数的异步请求
 

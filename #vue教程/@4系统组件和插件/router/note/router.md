@@ -2,8 +2,6 @@
 
 ![1566146868286](img/1566146868286.gif)
 
-
-
    .     |路由视图           | 动态组件     
 ---|---|---     
 标签        | < route-view/>代表页面组件 |<  component />代表普通组件
@@ -112,8 +110,6 @@ transition | 可用            |可用
 ```
 <router-link to='/new?cid=1'>news</router-link>
 ```
-
-
 
 
 ### $router.push()

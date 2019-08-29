@@ -25,13 +25,12 @@
   Vue.directive('h', {
 
     bind: function (el, binding, vnode, oldVnode) {
-      console.log('1.bind()')
       console.log(arguments)
       console.log('el', {el})//指令el
       console.log('binding', binding)// 返回对象，用户设置的信息
       console.log('vnode:', vnode)//Vue编译生成的虚拟节点。
       console.log('oldVnode', oldVnode)
-
+      console.log('1.bind()')
     },
     inserted: function (el, binding) {
       console.log('2.inserted()')

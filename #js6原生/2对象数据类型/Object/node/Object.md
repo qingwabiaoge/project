@@ -1,7 +1,7 @@
+[^1]: prototype:原型 
+[^2]: Property: 属性
 
-> _原型 :[英]prototype_  
 
-> _属性: [英]Property_
 
 # Object
 
@@ -38,20 +38,20 @@ new Object({a:1,b:2})
 
 ### 对象地址赋值给变量
 
-```
+```js
 const obj={a:1}  //obj里存内存地址#000x1
 
 ```
 
 ###  弱类型对象扩展
 
-```
+```js
 obj.b=2   //js弱类型可扩展
 ```
 
 # 判断是否对象类型
 
-```
+```js
 typeof(obj)
 obj instance of Object
 ```
@@ -84,11 +84,13 @@ obj instance of Object
 
 注:只有属性判断组用的对Object的实例方法
 
-# 所有属性(真实数据结构)in 
+# 所有属性(真实数据结构)
+
+## in操作符
 
 ![](3.png)
 
-判断对象是否有某属性(返回Boolean) (in操作符是针对key的)
+>  in判断对象是否有某属性(返回Boolean,in操作符是针对key的)
 
 ````javascript
 'constructor' in {a:1}
@@ -102,15 +104,13 @@ obj instance of Object
 'hasOwnProperty'in{a:1}
 ````
 
-### 1.Object.prototype
+### 1.Object.prototype[^1]
 
 ##### 判断prototype是否是对象的原型
 
 
 ```
-
 Person.prototype.isprototypeof(person)
-
 ```
 ```
  person instanceof(Person)
@@ -119,33 +119,47 @@ Person.prototype.isprototypeof(person)
 ##### 获得原型对象
 
 
-````
-
+````js
 obj.__proto__
-
 ````
 
 
-````
+````js
 Object.getPrototypeOf(obj)              //和obj._proto_功能相同
-
 ````
 
-Object.protype
+
+
 ![](./object.prototype.png)
 
+##### 访问原型对象的方法
 
+```js
+const obj={a:1}
+Object.protype.valueof(obj)
+obj.valueof()
+```
 
-### 2.OwnProperty
+### 2.OwnProperty[^2]
+
+##### 定义
 
 自己创造的属性,不是从原型copy的
 
 #####   判断是否是OwnProperty
 
 ````
+const obj={a:1}
 obj.hasOwnProperty(a) 返回boolen 
 ````
-##### 添加修改删除own属性
+##### 列出OwnProperty
+
+```
+const obj={a:1}
+Object.getOwnPropertyNames(obj)//['a']
+```
+
+##### 添加修改删除访问own属性
 
 ###### json直面量  (键都是字符串obj.a或者obj[' ']):
 
@@ -208,34 +222,10 @@ str['1']
   console.log( arr[0],arr[1])
 ```
 
-删除键
+###### 删除键
 
 ```
 delate(obj.a)
-```
-
-本质:赋值obj和'a'计算后的返回值(地址或普通值)
-
-```
-
-obj={}
-obj.a=2//赋值普通值
-console.log(obj.a)//取得普通值
-obj.b={i:1}//赋值地址
-console.log(obj.b)//获得地址
-
-```
-obj.a 和obj 无上下级关系 都是平级
-
-![](6.png)
-
-```
-
-    obj = {a: {i: 1}}
-    const obj2 = obj.a //获得地址
-    obj2.i=10
-    console.log(obj)//{a: {i: 10}}
-
 ```
 
 ###### 属性定义器 键值也是字符串
@@ -272,10 +262,35 @@ obj.a 和obj 无上下级关系 都是平级
 
 ````
 
+###### 访问obj.a
+
+本质:赋值obj和'a'计算后的返回值(地址或普通值)
+
+```
+obj={}
+obj.a=2//赋值普通值
+console.log(obj.a)//取得普通值
+obj.b={i:1}//赋值地址
+console.log(obj.b)//获得地址
+
+```
+
+obj.a 和obj 无上下级关系 都是平级
+
+![](6.png)
+
+```
+    obj = {a: {i: 1}}
+    const obj2 = obj.a //获得地址
+    obj2.i=10
+    console.log(obj)//{a: {i: 10}}
+
+```
 
 
 
-### 3.enumerableProperty
+
+### 3.enumerableProperty[^2]
 
 
 #####  判断对象的某个属性是否可枚举
@@ -311,14 +326,17 @@ Object.values(obj)列出可枚举的value返回数组
 ```
   Object.values(obj)
 ```
+##### 枚举类型转JSON
+
 JSON.stringify( )   列出obj返回json字符串
+
 ```
 JSON.stringify(obj) 
 ```
 
 ##### 合并可枚举对象
 
- 合并后改变了内存地址
+######  合并后改变了内存地址
 
 ```
 const obj = {a: 1}, obj2 = {a:10,b: 20}
@@ -330,12 +348,13 @@ const obj = [10], obj2 =[10,20]
 console.log([...obj,...obj2]) //[10,10,20]
 ```
 
- 合并而不改变内存地址
+######  Object.assign合并而不改变内存地址
 
 ```
 Object.assign({a: 1}, {a:10,b: 20})//{a: 10,b: 22}
 Object.assign({a: 1}, [1, 2, 3])//{0: 1, 1: 2, 2: 3, a: 1}
-Object.assign({a: 1}, '123') //{0: "1", 1: "2", 2: "3", a: 1}
+Object.assign({a: 1}, '123') //{0: "1", 1: "2", 2: "3", a: 1} //字符串自动封装对象了
+Object.assign(vue_instance,{msg:'msg'})
 ```
 
 ```
@@ -343,7 +362,7 @@ Object.assign([1,2,3],[4,5,6]//[1,2,3]
 Object.assign([1,2,3],'456') //["4", "5", "6"]
 ```
 
-# Object.is()  ===  比较是否相等
+# Object.is()  ===  比较对象是否相等
 
 ##### 相同之处
 
@@ -398,29 +417,39 @@ new Objcet({a:1,b:2})
 ##### new Fn()新建对象
 
 ```js
+new Object({a:1})
 new Function('a,b','a+b')
 new Array(1,2,3)
 new RegExp(/\w/,'ig')
+//------------------------
+new String('hello');         const str=new Object('hello')
+//----------------------
 new Vue()
 ```
 
-##### 字面量等同于new Fn()新建对象和命令行用于打印
+##### 字面量等新建对象(同于new Fn())和命令行用于打印
 
 ```js
-{a:1}
+const obj={a:1}
 function fn(){}
-[1,2,3]
+const arr=[1,2,3]
+const reg=/\w/ig
+//----------------
+const str='hello'
+//----------------
 <div id='app'></div>
-/\w/ig
-
 ```
 
 ```js
 console.log(obj)//{a:1}
 console.log(fn)//fn(){}
 console.log(arr)//[1,2,3]
-console.log(document.getElmentById())//<div id='app'></div>
 console.log(reg)// /\w/ig
+//----------------
+console.log(str)//hello
+//----------------
+console.log(document.getElmentById())//<div id='app'></div>
+
 ```
 
 ##### Object.creat({name:'''})
@@ -445,29 +474,27 @@ Object.creat{{},{a:1}}
 ### 对象的内存地址赋值给变量
 
 ```js
-const str=new String('hello') 
-
-
 const obj={a:1}
-
-
 function fn(){}
-
-
 const arr=[1,2,3]
-
-
+const reg=/\w/ig
+//----------------------
+const str=new String('hello') 
+//----------------------
+const el=document.getElmentById()
 const vm=new Vue({})
 
+```
+
+### 基本类型值赋值给变量
+
+```js
+const str='hello'
 ```
 
 ### js弱类型键值对都可以再扩展
 
 ```js
-const str=new String('hello') 
-str.a=1
-
-//------------------------------
 
 const obj={a:1}
 obj.b=2
@@ -484,7 +511,9 @@ fn.a=1
 
 const arr=[1,2,3]
 arr.a=1
-
+//------------------------------
+const str=new String('hello') 
+str.a=1
 //------------------------------
 
 const el=document.getElmentById()
@@ -501,4 +530,3 @@ const vm=new Vue({})
 vm.a=1
 
 ```
-

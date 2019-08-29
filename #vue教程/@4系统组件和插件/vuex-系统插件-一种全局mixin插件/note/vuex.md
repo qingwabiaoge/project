@@ -3,23 +3,62 @@
 
 
 # vuex代码
-### 构造器代码
-```
+```html
 
-const store = new Vuex.Store({
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="this.$store.state.count">
+    <h3>{{$store.state.count}}</h3>
+    <h3>
+        {{ $store.getters.counta}}
+    </h3>
+
+    <div>
+        <span>conmmit</span>
+        <button @click="$store.commit('add',1)">+</button>
+        <button @click="$store.commit('reduce',1)">-</button>
+
+    </div>
+
+    <div>
+        <span>dispatch</span>
+        <button @click="$store.dispatch('addAction',20)">+</button>
+        <button @click="$store.dispatch('reduceAction',10)">-</button>
+
+    </div>
+
+
+    <button @click="$store.state.fn()">{{$store.state.fn}}</button>
+
+</div>
+<script>
+
+    const store = new Vuex.Store({
+   
+        strict: false,
         state: {
-            count: 10
+            count: 10,
+
+            fn() {
+                    console.log(1)
+                }
         },
 
         getters: {
             counta: function (state) {
                 return state.count + 9;
             }
-     
         },
 
         mutations: {
-       
 
             add(state, n) {
                 state.count += n;
@@ -29,85 +68,31 @@ const store = new Vuex.Store({
             }
         },
         actions: {
-      
-
-            addAction(context,n) { //回调函数
-
-
-             
-                context.commit('add', n)//第二个回调函数
-                
-
-         /* 伪代码
-           function commit(mymutation, n) {mymutation(state, n)}
-      
-           */        
+            addAction(context, n) {
+                setTimeout(() => context.commit('add', n), 1000)
             },
-            
-            reduceAction({commit}, n) {  
-
+            reduceAction({commit}, n) {
                 commit('reduce', 10 + n)
-
-         
             }
         }
-        ,
-        strict: false
+       
     })
 
     const vm = new Vue({
         el: '#app',
-        store
+        store,
+        created() {
+            this.$store.dispatch('addAction', 20)
+        }
     })
+</script>
+
+</body>
+</html>
 
 ```
 
-
-### html代码
-
-```
-
-
-    <input type="text" v-model="this.$store.state.count">
-    <h3>{{$store.state.count}}</h3>
-    <h3>
-        {{ $store.getters.counta}}
-    </h3>
-
-    <div>
-        <span>conmmit</span>
-
-  
-
-
-        <button @click="$store.commit('add',1)">+</button>
-        <button @click="$store.commit('reduce',1)">-</button>
-        
-   
-
-
-    </div>
-
-    <div>
-        <span>dispatch</span>
-
-              
-
-        <button @click="$store.dispatch('addAction',20)">+</button> <!--模板里省去了this,分析时间加上-->
-        <button @click="$store.dispatch('reduceAction',10)">-</button>
-        
-   <!--@伪代码
-                function  dispatch(myaction, n) {
-                    myaction(contex, n)}
-                   -->
-
-
-    </div>
-
-
-```
-
-# 对比$emit,都是回调函数
+对比$emit,都是回调函数
 
 ```
 this.$emit("input",data)
@@ -134,12 +119,3 @@ this.$emit("input",data)
 # 作用
 
  vuex作用可以替代config.js
-
-
-
-
-
-
-
-
-

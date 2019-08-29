@@ -1,5 +1,3 @@
-
-
 # npm是什么?
 
 >npm是node自带的一个打包器插件,
@@ -25,12 +23,9 @@
 ![1](./2.png)
 
 
-# 创建模块和package.json
+# 
 
-    npm init
-    npm init -y 默认
-
-# 安装和运行
+# 模块操作
 
 ### cli模块安装到全局文件夹
 
@@ -39,13 +34,15 @@
 ##### 安装
 
 ```
-yarn global add webpack 
 npm install webpack -g 
+yarn global add webpack 
 ```
 
 ##### 命令行运行的cli**命令**
 
 ```
+ node 1.js
+ 
  npm -v
  
  npm run xxx
@@ -55,23 +52,22 @@ npm install webpack -g
  nodemon xxx
 ```
 
-### cli模块安装到项目文件夹
+
+### cli模块安装到项目文件夹和npm run xxx
 
 ##### 安装
 
 ```
-npm i nuxt-S //安装并保存到webpack.json生产环境配置
-
-yarn add webpack 
-
+npm i test -S //安装并保存到webpack.json生产环境配置
+yarn add test 
 ```
-
 
 ##### 命令行npm run test,运行安装到项目文件夹的cli模块
 
-`npm run test`时,本质会运行`./node_modules/.bin/test.cmd`
+package.json设置test命令
 
 ```json
+//package.json
 {
   "name": "code",
   "version": "1.0.0",
@@ -81,6 +77,8 @@ yarn add webpack
     "test": "test",
     }
 ```
+
+`npm run test`时, 会搜索全局有没有test命令 如果没有会运行`./node_modules/.bin/test.cmd`
 
 ```
 //test.cmd
@@ -93,13 +91,7 @@ yarn add webpack
 )
 ```
 
-##### 也可以放置全局命令
 
-
-```
-"dev": "set NODE_ENV=production node 1.js"  
-npm run dev
-```
 
 
 
@@ -142,7 +134,7 @@ yarn add package-name@tag 会安装某个 “tag” 标识的版本（比如 bet
 
 ```
 
-### 局部安裝到開發模式
+### 局部安裝到开发模式
 
 ```
 npm i nuxt -D //安装并保存到webpack.json开发环境配置
@@ -158,14 +150,14 @@ yarn install
 ```
 
 
-# 删除模块
+### 删除模块
 
 ```
  yarn remove webpack # yarn
 npm uninstall webpack --save # npm 可以指定 --save | --save-dev
 ```
 
-# 更新模块版本
+### 更新模块版本
 ```
  npm update
 
@@ -176,18 +168,19 @@ yarn upgrade
 
 运行原理: 间接运行了note test.js
 
-### 建立全局自定义cli模块
+### 建立自定义全局cli模块
 
-##### 1.npm init
+1. npm init创建项目和package.json
 
-##### 2.建立/bin/test.js
+2. 建立/bin/test.js
+
 ```
 #!/usr/bin/env node   //表示依靠node解析本文件
 
 console.log("hello world");
 ```
 
-##### 修改package.json文件,设置命令名字
+3. 修改package.json文件,设置命令名字
 
 ```json
 {
@@ -198,7 +191,7 @@ console.log("hello world");
 }
 
 ```
-#####  npm link 命令
+4. npm link 命令和复制到C:\Users\Administrator\AppData\Roaming\npm\
 
 本质是mklink
 ```
@@ -208,10 +201,11 @@ $ npm link
 //C:\Users\Administrator\AppData\Roaming\npm\node_modules\test - E:\github-code\test
 ```
 
-##### 运行
+5. 运行
 
 命令行  test
 
-### 建立本地自定义cli模块
+### 建立局部自定义全局cli模块
 
 见code
+
