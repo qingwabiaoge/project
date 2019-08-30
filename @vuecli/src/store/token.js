@@ -1,9 +1,8 @@
-
 import router from '../router'
 
 export default {
   namespaced: true,
-  state: {token: window.sessionStorage.getItem('token')||''},
+  state: {token: window.sessionStorage.getItem('token') || ''},
   mutations: {
     set: (state, token) => {
       //更改token的值
