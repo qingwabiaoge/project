@@ -41,18 +41,22 @@ this===当前dom对象
 
 ```
 # event对象的属性
-### event对象包含事件名称,注入被操作el对象到target键
+### event对象
+
+包含事件名称,注入被操作el对象到target键
 
 
 ![](./img/4.png)
 
+### 小程序的event
 
-### 小程序的event也注入了el对象,表示本事件点击了哪个目标元素(target)
+注入了el对象,表示本事件点击了哪个目标元素(target)
 
 ![5.png](./img/5.png)
 
+### vue的$event
 
-### vue组件的$event可以自定义任何值 
+##### vue组件的$event可以自定义任何值 
 
 ```
     <cl @click="fn($event)"></cl>
@@ -83,7 +87,7 @@ this===当前dom对象
     })
 ```
 
-###  vue组件上可以使用原生dom的event
+#####  vue组件上可以使用原生dom的event
 
 ```
 @click.native即可

@@ -1,18 +1,18 @@
 # 构造函数建立实例
 
 ```
-var re = new RegExp('hello','g');   //代替/xxxx/
+var re = new RegExp('hello','g');   //代替/hello/g
 ```
 
 # 字面量(用于建立对象和控制台打印)
 
 ### gmi修饰符:
 
-/g [英]globe
+/g [英]globe: 对大小写不敏感 
 
-/m多行匹配 [英]multi- :多个
+/m [英]multi-line :多行匹配
 
-/i 对大小写不敏感
+/i  [英]ignoreCase:对大小写不敏感
 
 ```javascript
     const str = 'qinshilei\nqinshiwei'
@@ -87,6 +87,21 @@ var re = new RegExp('hello','g');   //代替/xxxx/
 
 [^ 0-3 ]匹配 4，5，6，7，8，9
 
+### 匹配位置$ ^
+
+匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。要匹配 $ 字符本身，请使用 \$。
+
+```
+var str = 'my name is shilei'
+
+const reg = /lei$/
+
+console.log(reg.test(str)) //true
+
+console.log(reg.exec(str)) //['lei']
+
+```
+
 
 ### 次数
 
@@ -141,27 +156,6 @@ console.log(reg.exec(str))
 ```
 
 
-
-
-### 匹配位置$ ^
-
-
-
-匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。要匹配 $ 字符本身，请使用 \$。
-
-
-
-
-```
-var str = 'my name is shilei'
-
-const reg = /lei$/
-
-console.log(reg.test(str)) //true
-
-console.log(reg.exec(str)) //['lei']
-
-```
 
 
 

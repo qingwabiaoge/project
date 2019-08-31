@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="//unpkg.com/vue/dist/vue.js"></script>
-    <script src="//unpkg.com/element-ui@2.11.0/lib/index.js"></script>
-    <link rel="stylesheet" href="//unpkg.com/element-ui@2.11.0/lib/theme-chalk/index.css">
+<meta charset="utf-8">
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.8.2/lib/index.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
 
 </head>
 <body>
@@ -15,6 +13,7 @@
         min-height:300px;
         width: 100%;
     }
+  img{ max-width: 100%; object-fit:cover}
 </style>
 <div id="app">
         <el-image v-for="url in urls" :key="url" :src="url" lazy ></el-image>
