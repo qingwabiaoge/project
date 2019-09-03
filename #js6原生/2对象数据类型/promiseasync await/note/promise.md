@@ -1,29 +1,10 @@
-# Promise
-
-### 创建对象
+# 创建对象
 
 ```js
-new Promise((resolve,reject)=>{})
+new Promise((resolve,reject)=>{.....})
 ```
-
-### 赋值给变量
-
-```js
-const p=new Promise((resolve,reject)=>{}) //存放内存地址#0x001
-
-```
-
-### 弱类型扩展
-
-```
-p.a=1//js若类型可扩展
-```
-
-
 
 # 所有属性(真实对象键值对)
-
-### Promise.protype
 
 ![1566963355851](img/1566963355851.png)
 
@@ -47,8 +28,6 @@ p.a=1//js若类型可扩展
 
 
 promise对象可以在函数体任意级别 resove值, 普通函数和异步函数的return不行,
-
-
 
 ### 3.承诺接收promise
 

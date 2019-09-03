@@ -280,18 +280,6 @@ console.log(reg.test(str))//true
 
 
 
-# 对象赋值给变量可扩展
-
-```js
-const reg=/\w/  //对象的内存地址赋值给变量
-```
-
-# 弱类型对象扩展
-
-```
-reg.a=1  //弱类型可扩展
-```
-
 # 所有属性in(真实对象)
 
 ![](./7.png)
@@ -335,20 +323,15 @@ reg.a=1  //弱类型可扩展
     __proto__: Object*/
    
 
-    console.log(reg.hasOwnProperty('lastIndex'))//true
-    console.log(Object.getOwnPropertyNames(reg))//["lastIndex", "a"]
 
 
-    console.log(reg.propertyIsEnumerable('a'))//true
-    console.log(Object.keys(reg))//['a']
+
 
 ```
 
+### __ proto __:RegExp.prototype
 
-
-### RegExp.prototype
-
-##### reg.test(str),reg. exec(str)匹配第一个就结束
+reg.test(str),reg. exec(str)匹配第一个就结束
 
 ```javascript
 const reg = /[1-2]/
@@ -362,7 +345,7 @@ const i = reg.test(str) //true
 const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 ```
 
-##### reg.test判定为true, reg.exe(str)才不是undifined 
+reg.test判定为true, reg.exe(str)才不是undifined 
 
 ```javascript
 reg.test判定为true, reg.exe(str)才不是undifined 
@@ -370,14 +353,12 @@ reg.test判定为true, reg.exe(str)才不是undifined
 
 ### ownProperty
 
-```
-["lastIndex", "a"]
-```
-
+    console.log(reg.hasOwnProperty('lastIndex'))//true
+    console.log(Object.getOwnPropertyNames(reg))//["lastIndex", "a"]
 ### key
 
-['a']
-
+    console.log(reg.propertyIsEnumerable('a'))//true
+    console.log(Object.keys(reg))//['a']
 # 常用正则
 
 ``` javascript

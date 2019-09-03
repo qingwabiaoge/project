@@ -2,37 +2,6 @@
 
 > split分裂,splice剪接 ,slice 一部分@名词_
 
-# 数组对象
-
-### 创建数组
-
-##### new Array()
-
-```javascript
-new Array(3); //new可省略, [null,null,null]`
-
-new Array("Greg"); //  new可省略, ["Greg"]`
-
-```
-
-##### 字面量(等价new Array和用于控制台打印)
-
-```
-[1,true,'str']
-```
-
-### 赋值给变量
-
-```
-const arr=[1,2,3] //arr里存内存地址#0x001
-```
-
-### 弱类型扩展
-
-```
-arr.a=10//若类型可以扩展
-```
-
 #  Array.of静态函数创建数组
 
 ```javascript

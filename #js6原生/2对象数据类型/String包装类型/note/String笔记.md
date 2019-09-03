@@ -1,47 +1,26 @@
-# String
-
-### 新建对象
-
-##### new String
-
-```
-new String('hello')
-```
-
-##### 字面量(用于建立普通值和控制台打印)
-
-```
-'hello'
-```
-
-### 赋值给变量
-
-```js
-const str=new String('hello')//在栈中存放基本值,如用到方法是临时封装成对象
-```
-
-### 弱类型对象扩展
-
-```
-str.a=1//js弱类型可扩展
-```
-
-
-
-# 所有属性(真实对象键值对)
+# 实例化对象的所有属性(真实对象键值对)
 
 ![1566952961137](img/1566952961137.png)
 
-### own属性 key属性
+
+
+### own属性 
 
 ```js
   const str=new String('hello')
-  console.log(Object.getPrototypeOf(str)) //String.prototype
   console.log(Object.getOwnPropertyNames(str))//["0", "1", "2", "3", "4", "length"]
+
+```
+### key属性
+
+```
   console.log(Object.keys(str))//["0", "1", "2", "3", "4"]
 ```
+### __ proto __:String.prototype
 
-### String.prototype
+```
+  console.log(Object.getPrototypeOf(str)) //String.prototype
+```
 
 ##### 和数组相同的公共方法
 

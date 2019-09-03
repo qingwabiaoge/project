@@ -86,7 +86,7 @@ let i=0
 
 # screen
 
-  console.log(screen.availWidth, screen.availHeight);
+  `console.log(screen.availWidth, screen.availHeight);`
 
 # navigator
 ```
