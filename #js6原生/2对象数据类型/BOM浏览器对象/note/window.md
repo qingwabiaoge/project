@@ -1,6 +1,6 @@
 # Windows
 
-### setTimeout执行一次
+### setTimeout()执行一次
 
 ```js
 let i=0
@@ -10,7 +10,7 @@ let i=0
     }, 1000)
 //1
 ```
-### setInterval 时钟频率执行
+### setInterval() 时钟频率执行
 
 ```js
     let i = 0
@@ -58,42 +58,42 @@ let i=0
 
 
 ```
-### encodeURIComponent
 
-```html
-<script>
-    var uri = "http://w3cschool.cc/my test.asp?name=ståle&car=saab";
 
-    document.write(encodeURIComponent(uri)); //http%3A%2F%2Fw3cschool.cc%2Fmy%20test.asp%3Fname%3Dst%C3%A5le%26car%3Dsaab
-    document.write("<br>");
-    document.write(decodeURIComponent(uri_encode));//http://w3cschool.cc/my test.asp?name=ståle&car=saab
-</script>
-
-```
-
-### open 新窗口打开链接
+### open() 新窗口打开链接
 
 ```js
   window.open("http://www.runoob.com");
 ```
 
-# location 本窗口跳转
+### location
+
+##### location.href 本窗口跳转
 
 ```js
   window.location.href = "http://www.baidu.com"
 
 ```
 
-# screen
+### screen
+
+##### screen.availWidth
 
   `console.log(screen.availWidth, screen.availHeight);`
 
-# navigator
+### navigator
+
+##### navigator.userAgent
+
 ```
 navigator.userAgent
 ```
 
-# history
+### history
+
+##### history.pushState()
+
+##### history.go()
 
 ```html
 <!DOCTYPE html>
