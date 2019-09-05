@@ -18,6 +18,7 @@ dos界面 ctrl+alt+F2切换回图形界面
 
  修改方法为：
 
+```
 1.首先删除已经存在的符号链接：
 
 rm /etc/systemd/system/default.target 
@@ -35,6 +36,7 @@ rm /etc/systemd/system/default.target
  *reboot* 
 
  
+```
 
 centos7以下的版本 
 
@@ -92,10 +94,30 @@ usr 用于存放系统应用程序，比较重要的目录/usr/local 本地管�
 var 用于存放运行时需要改变数据的文件
 ```
 # 快捷键
-    ctrl+z挂起进程
-    Ctrl+c彻底关闭进程
-    Ctrl+u撤销上一步操作
-    ctrl+r恢复上一步被撤销的操作
+    
+    # 光标操作
+    Ctrl+A：将光标移动到命令行的开始处。 
+    Ctrl+E：将光标移动到命行令的结尾处。
+    Ctrl+u ------- 清除光标之前的内容，快速删除shell中输入错误的命令，不必逐个字符删除
+    Ctrl+k ------清除光标之后的内容
+    
+    
+    
+    
+    Ctrl+r----- 在历史命令中查找 ，非常好用，输入关键字就联想出以前的命令了
+    
+    
+    
+    
+    Ctrl + s 锁定屏幕显示的意思(以前电脑配置低时间使用现在已经不用了)
+    Ctrl + q 继续显示
+    
+    
+    Ctrl+l 清屏
+    
+    
+    Tab 键 自动补全命令
+    
 
 
 # 文件操作
@@ -106,10 +128,6 @@ var 用于存放运行时需要改变数据的文件
 df -a
 df -h
 ```
-
-
-
-
 
 
 浏览文件
@@ -229,7 +247,7 @@ nload -t 200 -i 1024 -o 128 -U M
 -A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT 
 -A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
 ```
-# 任务管理器
+# 任务管理
 
 ###  查看剩余内存
 
@@ -246,11 +264,50 @@ free -h
 kill xxx
 ```
 
+### Linux前后台进程切换
 
+(1) Linux前台进程与后台进程的区别
 
+　　前台进程：是在终端中运行的命令，那么该终端就为进程的控制终端，一旦这个终端关闭，这个进程也随之消失。
 
+　　后台进程：也叫守护进程（Daemon），是运行在后台的一种特殊进程，不受终端控制，它不需要终端的交互；Linux的大多数服务器就是使用守护进程实现的。比如Web服务器的httpd等。
 
+(2) 进程的前台与后台运行
 
+　　与系统任务相关的几个命令（了解）：
+
+| &                      | 用在一个命令的最后，可以把这个命令放到后台执行               |
+| ---------------------- | ------------------------------------------------------------ |
+| Ctrl+z                 | 将一个正在前台执行的命令放到后台，并暂停                     |
+| jobs                   | 查看当前有多少在后台运行的进程。这是一个作业控制命令         |
+| fg(foregroud  process) | 将后台中的命令调至前台继续运行。如果后台中有多个命令，可以用fg [jobnumber]将选中的命令调出，jobnumber是通过jobs命令查到的后台正在执行的命令的序号（不是pid） |
+| bg(backgroud  process) | 将一个在后台暂停的命令，变成继续执行。如果后台中有多个命令，可以用bg %jobnumber将选中的命令调出，%jobnumber是通过jobs命令查到的后台正在执行的命令的序号（不是pid） |
+
+(3) &的使用
+
+　　如果直接使用&，部分命令仍然在前台显示，例如"ping 127.0.0.1 &"。此时我们可以使用nohup命令帮助，"nohup ping 127.0.0.1 &"，在执行时会创建一个nohup.out的文件。
+
+(4)恢复被挂起的进程
+
+　　首先准备一个实验环境，创建三个被挂起的进程
+
+```
+`[xf@xuexi ~]$ vim 1.txt` `[1]+  已停止               vim 1.txt``[xf@xuexi ~]$ vim 3.txt` `[2]+  已停止               vim 3.txt``[xf@xuexi ~]$ vim 2.txt` `[3]+  已停止               vim 2.txt``[xf@xuexi ~]$ ps -aux | grep vim``xf        10277  0.2  0.2 151796  5372 pts/0    T    14:02   0:00 vim 1.txt``xf        10284  0.4  0.2 151796  5352 pts/0    T    14:02   0:00 vim 3.txt``xf        10291  1.5  0.2 151796  5376 pts/0    T    14:02   0:00 vim 2.txt``xf        10299  0.0  0.0 112724   988 pts/0    S+   14:02   0:00 grep --color=auto vim`
+```
+
+　　接着查看后台进程
+
+```
+`[xf@xuexi ~]$ jobs``[1]   已停止               vim 1.txt``[2]-  已停止               vim 3.txt``[3]+  已停止               vim 2.txt`
+```
+
+　　恢复vim 3.txt的进程
+
+```
+`[xf@xuexi ~]$ fg 2``vim 3.txt`
+```
+
+　　
 
 # linux环境变量
 
@@ -437,7 +494,11 @@ YUN   已经添加到path了
 
 ![](10.PNG)
 
+列出包
 
+```
+yum grouplist
+```
 
 ### 安装源码
 
@@ -471,31 +532,48 @@ tar -zxvf yarn-v1.7.0.tar.gz -C /usr/local/yarn
 
 ```
 vim /etc/profile
+
 #在文件结尾加入以下内容
 export PATH=$PATH:/var/local/yarn/yarn-1.7.0/bin
 
- #立马生效 source /etc/profile
+#立马生效 
+
+source /etc/profile
 
 ```
 
 
 # vim
 
+建立或者修改文件
+
 ```
-wim xxx 建立或者修改文件
-      
-esc->i输入模式
+wim /xxx 
+```
+
+输入模式      
+
+```
+esc->i
+```
+
+撤销 恢复
+
+```
+vim撤销操作：u
+
+vim恢复操作：ctrl+r
+```
+
+保存
+
+```
 esc->:wq保存关闭
 esc->:q不保存退出
 esc->:q!强制退出
-
-
-快捷键
-
-       Ctrl + s 停止输入锁定
-       Ctrl + q 继续
-
 ```
+
+
 
 # 压缩
 

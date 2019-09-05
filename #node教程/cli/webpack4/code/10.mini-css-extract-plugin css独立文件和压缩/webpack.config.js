@@ -15,6 +15,7 @@ module.exports = {
     filename: './js/[name].bundle.js'
   },
   plugins: [
+    //建立MiniCssExtractPlugin对象
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
       chunkFilename: "./css/[id].css"

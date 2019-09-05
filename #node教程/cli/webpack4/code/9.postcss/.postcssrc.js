@@ -1,3 +1,4 @@
+// 必须在package.json里加 "browserslist"
 module.exports = {
     "plugins": {
         "postcss-import": {},
