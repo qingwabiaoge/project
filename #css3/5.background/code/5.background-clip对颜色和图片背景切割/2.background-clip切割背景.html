@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<h1>切割背景 (包括颜色背景 和图片背景)</h1>
+<h1> background-clip切割背景 (颜色背景和图片背景一块切)</h1>
 .padding-box
 <div class="padding-box">正文部分文字内容......</div>
 .content-box
@@ -28,9 +28,9 @@
         border:10px dashed #0f0;
         padding:20px;
         margin: 20px;
+        background:url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') #ccc no-repeat ;
+        background-origin: border-box;
 
-        background:url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') #ccc no-repeat;
-        background-size: 70% 90%;
     }
     .padding-box {
         background-clip:padding-box;   /* 描述图片背景 图片的起始位置border-box content-box padding-box;*/

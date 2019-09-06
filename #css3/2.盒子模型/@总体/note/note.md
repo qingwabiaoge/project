@@ -5,7 +5,7 @@ css属性|块级元素	| 内联可替换元素 <br />img,input textarea,select,v
 另起一行| √  |×	|×                 
 高度| √ |√	|×
 宽度| √ |√	|×
-上下margin| √ |	√|x
+上下margin| √ |	√|x 完全冲且看不到
 左右margin | √ | √ |**√**
 上下padding| √ |√	| 乄上下补丁会冲破容器 
 左右padding| √ |√ |**√**

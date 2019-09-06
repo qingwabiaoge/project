@@ -1,4 +1,4 @@
-# CentOS7图形界面与命令行界面切换
+# CentOS7  CLI和GUI切换
 
 ### 方式1
 
@@ -93,32 +93,73 @@ tmp 用于存放各种临时文件
 usr 用于存放系统应用程序，比较重要的目录/usr/local 本地管理员软件安装目录
 var 用于存放运行时需要改变数据的文件
 ```
-# 快捷键
-    
-    # 光标操作
-    Ctrl+A：将光标移动到命令行的开始处。 
-    Ctrl+E：将光标移动到命行令的结尾处。
-    Ctrl+u ------- 清除光标之前的内容，快速删除shell中输入错误的命令，不必逐个字符删除
-    Ctrl+k ------清除光标之后的内容
-    
-    
-    
-    
-    Ctrl+r----- 在历史命令中查找 ，非常好用，输入关键字就联想出以前的命令了
-    
-    
-    
-    
-    Ctrl + s 锁定屏幕显示的意思(以前电脑配置低时间使用现在已经不用了)
-    Ctrl + q 继续显示
-    
-    
-    Ctrl+l 清屏
-    
-    
-    Tab 键 自动补全命令
-    
+# 命令输入
 
+### linux
+
+Ctrl+A： 将光标移动到命令行的开始处。 
+Ctrl+E：将光标移动到命行令的结尾处。
+Ctrl+u: 清除光标之前的内容，快速删除shell中输入错误的命令，不必逐个字符删除
+Ctrl+k: 清除光标之后的内容
+
+Ctrl+r: 在历史命令中查找 ，非常好用，输入关键字就联想出以前的命令了
+
+Ctrl + s 锁定屏幕显示的意思(以前电脑配置低时间使用现在已经不用了)
+Ctrl + q 继续显示
+
+Ctrl+l 清屏
+
+Tab 键 自动补全命令
+
+空格 分离多个命令
+
+### windows
+
+```
+&&分离多个命令
+```
+
+# 任务管理
+
+### 查看剩余内存
+
+```
+free -h
+```
+
+### 任务管理器
+
+`top`
+
+### 杀死进程
+
+```
+kill xxx
+```
+
+### Linux前后台进程切换
+
+##### (1) Linux前台进程与后台进程的区别
+
+前台进程：是在终端中运行的命令，那么该终端就为进程的控制终端，一旦这个终端关闭，这个进程也随之消失。
+
+后台进程：也叫守护进程（Daemon），是运行在后台的一种特殊进程，不受终端控制，它不需要终端的交互；Linux的大多数服务器就是使用守护进程实现的。比如Web服务器的httpd等。
+
+##### (2) 进程的前台与后台运行
+
+| 命令和快捷键           | 作用                                           |
+| ---------------------- | ---------------------------------------------- |
+| &                      | 用在一个命令的最后，可以把这个命令放到后台执行 |
+| Ctrl+z                 | 暂停到后台                                     |
+| ctrl+c                 | 关闭进程                                       |
+| jobs <br />jobs –l     | 查看当前有多少在后台运行的进程.                |
+| fg(foregroud  process) | 进程切换到前台                                 |
+| bg(backgroud  process) | 后台运行继承                                   |
+| kill(pid) (id)         | 关闭后台进程                                   |
+
+##### (3) &的使用
+
+　　如果直接使用&，部分命令仍然在前台显示，例如"ping 127.0.0.1 &"。此时我们可以使用nohup命令帮助，"nohup ping 127.0.0.1 &"，在执行时会创建一个nohup.out的文件。
 
 # 文件操作
 
@@ -144,20 +185,23 @@ du -sh *也会列出当前文件夹下所有文件对应的大小(指定文件�
 ```
 
 
-
-
 建立和删除文件夹
 
 ```
-mkdir、rmdir
+mkdir
 
 mkdir -p data/db 连带添加上级目录
 
+rmdir
 ```
 
+建立文件
 
+```
+touch 
+```
 
- 设置权限
+设置权限
 
 ```
 对当前目录下所有文件及文件夹极其子目录及子文件
@@ -165,8 +209,6 @@ mkdir -p data/db 连带添加上级目录
     chmod -R  777 *
     
 ```
-
-
 
 
 复制第一个文件夹到第二个文件夹
@@ -179,8 +221,6 @@ linux复制到远程主机
         scp local_file remote_username@remote_ip:remote_folder
 
 
-
-
 mv 移动和重命名
 
 ```
@@ -190,17 +230,22 @@ mv a.txt /b/c.txt
 ```
 
 
-删除文件
+删除文件和文件夹
 
 ```
+rm xxx
 rm -rf
 ```
 
+# 用戶
 
+    who、w 和 users 等命令通过 utmp(/var/run/utmp) 文件查询当前登录用户的信息。
+    last 和 ac 命令通过 wtmp(/var/log/wtmp) 文件查询当前与过去登录系统的用户的信息。
+    lastb 命令通过 btmp(/var/log/btmp) 文件查询所有登录系统失败的用户的信息。
+    lastlog 命令通过 lastlog(/var/log/lastlog) 文件查询用户最后一次登录的信息。
+    
+    passwd 修改密碼
 
-# 修改登录密码
-
-      passwd
 
 
 # 网络
@@ -247,72 +292,12 @@ nload -t 200 -i 1024 -o 128 -U M
 -A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT 
 -A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
 ```
-# 任务管理
+# 环境变量
 
-###  查看剩余内存
-
-```
-free -h
-```
-### 任务管理器
-`top`
-
-
-### 杀死进程
-
-```
-kill xxx
-```
-
-### Linux前后台进程切换
-
-(1) Linux前台进程与后台进程的区别
-
-　　前台进程：是在终端中运行的命令，那么该终端就为进程的控制终端，一旦这个终端关闭，这个进程也随之消失。
-
-　　后台进程：也叫守护进程（Daemon），是运行在后台的一种特殊进程，不受终端控制，它不需要终端的交互；Linux的大多数服务器就是使用守护进程实现的。比如Web服务器的httpd等。
-
-(2) 进程的前台与后台运行
-
-　　与系统任务相关的几个命令（了解）：
-
-| &                      | 用在一个命令的最后，可以把这个命令放到后台执行               |
-| ---------------------- | ------------------------------------------------------------ |
-| Ctrl+z                 | 将一个正在前台执行的命令放到后台，并暂停                     |
-| jobs                   | 查看当前有多少在后台运行的进程。这是一个作业控制命令         |
-| fg(foregroud  process) | 将后台中的命令调至前台继续运行。如果后台中有多个命令，可以用fg [jobnumber]将选中的命令调出，jobnumber是通过jobs命令查到的后台正在执行的命令的序号（不是pid） |
-| bg(backgroud  process) | 将一个在后台暂停的命令，变成继续执行。如果后台中有多个命令，可以用bg %jobnumber将选中的命令调出，%jobnumber是通过jobs命令查到的后台正在执行的命令的序号（不是pid） |
-
-(3) &的使用
-
-　　如果直接使用&，部分命令仍然在前台显示，例如"ping 127.0.0.1 &"。此时我们可以使用nohup命令帮助，"nohup ping 127.0.0.1 &"，在执行时会创建一个nohup.out的文件。
-
-(4)恢复被挂起的进程
-
-　　首先准备一个实验环境，创建三个被挂起的进程
-
-```
-`[xf@xuexi ~]$ vim 1.txt` `[1]+  已停止               vim 1.txt``[xf@xuexi ~]$ vim 3.txt` `[2]+  已停止               vim 3.txt``[xf@xuexi ~]$ vim 2.txt` `[3]+  已停止               vim 2.txt``[xf@xuexi ~]$ ps -aux | grep vim``xf        10277  0.2  0.2 151796  5372 pts/0    T    14:02   0:00 vim 1.txt``xf        10284  0.4  0.2 151796  5352 pts/0    T    14:02   0:00 vim 3.txt``xf        10291  1.5  0.2 151796  5376 pts/0    T    14:02   0:00 vim 2.txt``xf        10299  0.0  0.0 112724   988 pts/0    S+   14:02   0:00 grep --color=auto vim`
-```
-
-　　接着查看后台进程
-
-```
-`[xf@xuexi ~]$ jobs``[1]   已停止               vim 1.txt``[2]-  已停止               vim 3.txt``[3]+  已停止               vim 2.txt`
-```
-
-　　恢复vim 3.txt的进程
-
-```
-`[xf@xuexi ~]$ fg 2``vim 3.txt`
-```
-
-　　
-
-# linux环境变量
+## linux环境变量
 
 ### 设置永久的环境变量
-##### profile里设置path,让cli可以命令行全局使用(估计是操作系统的一种搜索机制)
+##### profile里设置过的path,让cli命令可以全局使用(估计是操作系统的一种搜索机制)
 ```
 vim /etc/profile，添加PATH
 
@@ -323,11 +308,7 @@ export PATH=$PATH:$MONGODB_HOME/bin
 
 shell下输入source /etc/profile 立马生效 
 ```
-##### 设置软链接到已设置path的目录(window下是mklink)
-
-
-
-
+*设置软链接到已设置path的目录(window下是mklink)*
 
 软连接到 /usr/local/bin/ 
 
@@ -367,9 +348,7 @@ shell下输入source /etc/profile 立马生效
 
 ```
 
-
-
-### shell下临时修改设置环境变量 
+### 临时修改设置环境变量 
 
 使用export其实相当于导出变量，在shell里面，直接使用=赋值符号就可以定义一个变量，例如A=“test”，用命令echo $A就可以打印出"test"；
 但这样定义的变量只在当前的shell中可用，如果要使其在外部（子shell中）可见，就要用export A=“test”的方式，或者在定义A之后使用export A。
@@ -388,7 +367,7 @@ export NODE_PATH=/alidata/node/lib/node_modules
 (多个命令用空格间隔)
 
 ```
-    Linux 下  HOST=47.107.170.105 PORT=3000 npm run start
+ Linux 下  HOST=47.107.170.105 PORT=3000 npm run start
 ```
 
 ### 查看环境变量
@@ -396,7 +375,7 @@ export NODE_PATH=/alidata/node/lib/node_modules
 显示所有环境变量
 
 ```
-env 
+export或env 
 ```
 显示路径环境变量
 
@@ -413,7 +392,7 @@ echo $HOST
 
 
 
-# windows 环境变量
+## windows 环境变量
 
 ### 配置永久的环境变量
 ##### windows的path让程序能在命令行全局运行
@@ -430,7 +409,7 @@ echo $HOST
 
 
 
-###  window命令行设置临时环境变量 
+###  设置临时环境变量 
 
 
 
@@ -461,24 +440,8 @@ set path
 显示指定
 
 ```
-
 set HOST
 ```
-
-### 命令行运行程序
-
-```
-node
-
-node-sass
-
-babel-node
-
-webpack
-
-```
-
-
 
 
 # 安装软件
@@ -494,7 +457,7 @@ YUN   已经添加到path了
 
 ![](10.PNG)
 
-列出包
+列出安装过的包
 
 ```
 yum grouplist
@@ -502,11 +465,13 @@ yum grouplist
 
 ### 安装源码
 
-##### 下载
+**下载**
+
 ```
 wget http://cn.wordpress.org/wordpress-3.1-zh_CN.zip 
 ```
-##### 编译
+**编译**
+
 1. ./configure是源代码安装的第一步，主要的作用是对即将安装的软件进行配置，检查当前的环境是否满足要安装软件的依赖关系，但并不是所有的tar包都是源代码的包，楼主可以ls看看有没有configure这个文件，也许你下的是二进制的包，如果是二进制的包，解压后直接就能使用
 2. make 
 3. make install
@@ -514,21 +479,21 @@ wget http://cn.wordpress.org/wordpress-3.1-zh_CN.zip
 
 ### 安装免编译安装包
 
+**下载**
 
-##### 下载
 ```
 
 wget http://cn.wordpress.org/wordpress-3.1-zh_CN.zip 
 ```
 
-##### 解压
+**解压**
 
 ```
 
 tar -zxvf yarn-v1.7.0.tar.gz -C /usr/local/yarn
 ```
 
-##### 添加path
+**添加path**
 
 ```
 vim /etc/profile
@@ -543,58 +508,8 @@ source /etc/profile
 ```
 
 
-# vim
 
-建立或者修改文件
-
-```
-wim /xxx 
-```
-
-输入模式      
-
-```
-esc->i
-```
-
-撤销 恢复
-
-```
-vim撤销操作：u
-
-vim恢复操作：ctrl+r
-```
-
-保存
-
-```
-esc->:wq保存关闭
-esc->:q不保存退出
-esc->:q!强制退出
-```
-
-
-
-# 压缩
-
-```
-unzip test.zip
-zip -r shipoe4.zip /alidata/www/shipoe.com
-```
-
-```
-
-tar -zxvf yarn-v1.7.0.tar.gz -C /usr/local/yarn
-
-x : 从 tar 包中把文件提取出来
-z : 表示 tar 包是被 gzip 压缩过的，所以解压时需要用 gunzip 解压
-v : 显示详细信息
-f xxx.tar.gz : 指定被处理的文件是 xxx.tar.gz
-```
-
-
-
-# 建立服务并开机启动(mongo为例)
+# 服务(mongo为例)
 
 ### 建立服务
 linux系统结构/lib/systemd/system/目录 该目录自动存放启动文件的配置位置，里面一般包含有xxx.service 
@@ -628,11 +543,11 @@ WantedBy=multi-user.target
 `chmod 754 mongodb.service`
 
 
-### 操作服务
+### 服务操作 system-ctl
 
 ##### 启动服务  
 `systemctl start mongodb.service  `
-#####关闭服务  
+##### 关闭服务  
 `systemctl stop mongodb.service  `
 
 ##### 重启服务
@@ -646,22 +561,64 @@ WantedBy=multi-user.target
 ##### 参看所有服务的状态
 
 `systemctl list-unit-files`
-##### 开机启动  
-```
-systemctl enable mongodb.service 
 
-让/lib/systemd/system/supervisord.service文件开机启动
-````
+##### 开机启动  
+`systemctl enable mongodb.service `
+
 ##### 取消开机启动
 
 `systemctl disable`
 
+# vim
+
+![1567763517912](img/1567763517912.png)
+
+建立或者修改文件
+
+```
+wim /xxx 
+```
+
+输入模式      
+
+```
+i
+```
+
+撤销 恢复
+
+```
+vim撤销操作：u
+
+vim恢复操作：ctrl+r
+```
+
+保存
+
+```
+esc->:wq保存关闭
+esc->:q不保存退出
+esc->:q!强制退出
+```
+
+# 压缩软件
+
+```
+unzip test.zip
+zip -r shipoe4.zip /alidata/www/shipoe.com
+```
+
+```
+tar -zxvf yarn-v1.7.0.tar.gz -C /usr/local/yarn
+
+x : 从 tar 包中把文件提取出来
+z : 表示 tar 包是被 gzip 压缩过的，所以解压时需要用 gunzip 解压
+v : 显示详细信息
+f xxx.tar.gz : 指定被处理的文件是 xxx.tar.gz
+```
+
+
+
 # 参数的意义
 -R  递归
-
-
-
-
-
-
 

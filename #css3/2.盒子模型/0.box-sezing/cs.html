@@ -1,0 +1,40 @@
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+
+<h1 style="color: red">.content-box(default)</h1>
+<div class="content-box">
+
+
+</div>
+<h1>border-box</h1>
+<div class="border-box">
+
+
+</div>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0
+  }
+
+  div {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-clip: content-box;
+    background-color: #eee;
+    border: 10px solid blue;
+
+    /*  和margin无关*/
+
+  }
+
+  .content-box {
+    box-sizing: content-box;
+  }
+
+  .border-box {
+    box-sizing: border-box;
+  }
+</style>
