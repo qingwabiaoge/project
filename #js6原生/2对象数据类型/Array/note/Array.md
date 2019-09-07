@@ -1,6 +1,6 @@
-
-
-> split分裂,splice剪接 ,slice 一部分@名词_
+[^split]:分裂
+[^splice]: 剪接 
+[^slice]: 一部分@名词_
 
 #  Array.of静态函数创建数组
 
@@ -27,22 +27,6 @@ Array.from(ArrayLike)
 
 ![](4.png)
 
-```javascript
-    const arr = [1]
-//1.原型属性
-    console.log(Array.prototype.isPrototypeOf(arr))
-    console.log(Object.getPrototypeOf(arr)) //[constructor: ?, concat: ?, copyWithin: ?, fill: ?, find: ?,?…]
-
-//2.own属性
-   console.log(arr.hasOwnProperty('length'))
-    console.log(Object.getOwnPropertyNames(arr)) //["0", "length"]
-
-//3.Enumerable属性
-    console.log(arr.propertyIsEnumerable(0))
-    console.log(Object.keys(arr)) //["0"]
-
-```
-
 ### Array.prototype
 
 ##### 栈方法修改数组(只有此组改变原数组)
@@ -59,7 +43,7 @@ push  pop  unshift shift
 
 ```
 
-###### 任意位置增删改
+###### 任意位置增删改splice[^splice]
 
 ```javascript
 const arr = [1, 2, 3, 4]
@@ -78,7 +62,7 @@ console.log(arr2)//[2]
 
 ##### 和string相同的方法(不改变原数组)
 
-###### slice截取
+###### slice[^slice] 截取
 
 ```
 instance.slice（1，4）\\截取数组2到5不包含5
@@ -96,8 +80,6 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
     console.log(allarry) //[1,2,3,4,5]
 
 ```
-
-
 
 ###### includes
 
@@ -117,10 +99,6 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 
 ##### Array.prototype.join()数组和字符串互转
 
-```javascript
-'1234'.split('')
-```
-
 ```
 [...'abc']
 ```
@@ -128,23 +106,27 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ```
 [1, 2, 3, 4].join('-')
 ```
+split[^split]
 
+```javascript
+'1234'.split('')
+```
 ##### 数组迭代方法(不改变原数组)
 
-###### 判断所有项符合某条件 返回boolen
+###### every判断所有项符合某条件 返回boolen
 
 ```
  Array.protype.every((item,index,self) => {})
 ```
 
-###### 判断是否有符合某条件的项 返回boolen
+###### some判断是否有符合某条件的项 返回boolen
 
 ```
  Array.protype.some((item,index,self) => {})
  
 ```
 
-###### 映射—>按照某条件返回数组
+###### map映射—>按照某条件返回数组
 
 ```
   Array.protype.map((item,index,self) => {})
@@ -157,7 +139,7 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
  Array.protype.filter((item,index,self) => {})
 ```
 
-###### forEach
+###### forEach对每一项操作
 
 ```
  Array.protype.forEach((item,index,self) => {})
@@ -190,15 +172,15 @@ arr=[{a:1,id:1},{b:2,id:2},{b:2,id:3}]
 ###### 相加reduce
 
 ```
-array.reduce(function(accumulator, currentValue, currentIndex, array), initialValue)；
+array.reduce((total, item, index, self) => res += item, initialValue)
 
-accumulator：上一次调用回调返回的值，或者是提供的初始值（initialValue）
+total：上一次调用回调返回的值，或者是提供的初始值（initialValue）
 
-currentValue：数组中正在处理的元素
+item：数组中正在处理的元素
 
-currentIndex：数据中正在处理的元素索引，如果提供了 initialValue ，从0开始；否则从1开始
+index：数据中正在处理的元素索引，如果提供了 initialValue ，从0开始；否则从1开始
 
-array： 调用 reduce 的数组
+self： 调用 reduce 的数组
 
 initialValue：可选项，其值用于第一次调用 callback 的第一个参数。如果没有设置初始值，则将数组中的第一个元素作为初始值。空数组调用reduce时没有设置初始值将会报错。
 
@@ -238,16 +220,13 @@ IE>=9 , PS: IE不支持ES6的箭头函数。
 ### ownProperty
 
 ```javascript
-['leng',
-'0',
-'1']
+['leng','0','1']
 ```
 
 ### keys(EnumerableProperty()
 
 ```javascript
-['0',
-'1']
+['0','1']
 ```
 
 ##### 枚举出值
@@ -276,9 +255,9 @@ Object.assign()
 [...[1,2],...[3,4]]
 ```
 
-# null,undefine 不能用数组方法的解决方法
+# null,undefine 报错的解决方法
 
-数组的方法的主题必须是数组 若为null,undefine就不是数组会报错__ 
+数组的方法的主题必须是数组 若为null,undefine就不是数组会报错
 
 ![](1.png)
 

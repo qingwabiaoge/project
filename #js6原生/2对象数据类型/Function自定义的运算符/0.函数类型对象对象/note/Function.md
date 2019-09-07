@@ -1,24 +1,28 @@
 
 
-
 # 所有属性(真实数据结构) in
 
-![1](2.png)
+```js
+  const Fn = function () {
+    console.log(Fn.arguments)
+    console.log(Fn.arguments.callee)
+  }
+  Fn.staticMethod1 = function () {
+  }
+  Fn.staticMethod2 = function () {
+  }
+  console.log({Fn})
+```
+
+
+
+![1567864824530](img/1567864824530.png)
 
 
 
 
 ### Function.protype
 ```javascript
-   const Fn = function () {
-        console.log(Fn.arguments)
-        console.log(Fn.arguments.callee)
-    }
-    Fn.a = 10
-    Fn()
-   
-    
-
   //1.原型属性Function.prototype---------------
    console.log({'Function.protype': Object.getPrototypeOf(fn)})
   /*{ 
@@ -42,8 +46,8 @@
 ### OwnProperty
 ```js
   //2.Own属性,Function构造生成---------------------    
-    console.log(Object.getOwnPropertyNames(Fn))//(6)["length", "name", "arguments", "caller", "prototype", "a"]
-     console.log(Fn.name)
+    console.log(Object.getOwnPropertyNames(Fn))//(6)["length", "name", "arguments", "caller", "prototype","staticMethod1","staticMethod2"]
+
 
 ```
 ### keys
@@ -51,7 +55,6 @@
 
     //3.可枚举属性:静态变量,静态方法--------------------
      console.log(Object.keys(Fn)) //[staticMethod1,staticMethod2]
-
 
      //for..in还能枚举出 
 

@@ -4,7 +4,7 @@
 # 判断是否为Object类型
 
 ```js
-typeof(obj)
+typeof (obj)
 obj instance of Object
 ```
 
@@ -37,111 +37,47 @@ Object.is(NaN, NaN) // true
 
 > __所有属性:__ 
 >
-> * 判断:in 
+> * 判断:in ,in判断对象是否有某属性(返回Boolean,in操作符是针对key的)
+>
+>   ```javascript
+>   'constructor' in {a:1}
+>   
+>   '__proto__' in {a:1}
+>   
+>   'a'in{a:1}
+>   
+>   0 in [1,2] //true
+>   
+>   'hasOwnProperty'in{a:1}
+>   ```
 >
 > * 列出: obj  
+>
+> * 访问: obj
 
->> __原型属性对象包:__
+>> __prototype[^1]:__
 >>
 >> * 判断:Person.prototype.isprototypeof(person),
 >> * 列出: Object.getPrototypeOf(obj)
+>> * 访问:Person.protype.apply(obj,argument)
 
->> __OwnProperty:__ 
+>> __OwnProperty[^2]:__ 
 >>
->> * 判断:obj.hasOwnProperty(propertyName) 
+>> * 判断:obj.hasOwnProperty(propertyName) ,arr.hasOwnProperty('length')
 >>
 >> * 列出:Object.getOwnPropertyNames(obj)
 
 >>> __可枚举的属性:__  
 >>>
->>> * 判断 obj.propertyIsEnumerable(propertyName) 
->>> * 列出:Object.keys(obj), for...in
+>>> * 判断 obj.propertyIsEnumerable(propertyName) ,arr.propertyIsEnumerable(0)
+>>> * 列出:见下方
 
 >>> __不可枚举的own属性__
 
 注:只有属性判断组用的对Object的实例方法
 
-## in操作符 所有属性
 
-![](3.png)
-
->  in判断对象是否有某属性(返回Boolean,in操作符是针对key的)
-
-````javascript
-'constructor' in {a:1}
-
-'__proto__' in {a:1}
-
-'a'in{a:1}
-
-0 in [1,2] //true
-
-'hasOwnProperty'in{a:1}
-````
-
-### 1.prototype[^1] 原型属性
-
-##### 判断prototype是否是对象的原型
-
-
-```
-Person.prototype.isprototypeof(person)
-```
-```
- person instanceof(Person)
-```
-
-##### 获得原型对象
-
-
-````js
-obj.__proto__
-arr.__proto__
-````
-
-
-````js
-Object.getPrototypeOf(obj)              //和obj._proto_功能相同
-Object.getPrototypeOf(arr)   
-````
-
-##### 访问原型对象的方法
-
-```js
-const obj={a:1}
-Object.protype.valueof(obj)
-obj.valueof()
-```
-
-### 2.OwnProperty[^2]
-
-##### 定义
-
-自己创造的属性,不是从原型copy的
-
-#####   判断是否是OwnProperty
-
-````js
-const obj={a:1}
-obj.hasOwnProperty(a) 返回boolen
-  const arr=[1,2,3]
-  console.log(arr.hasOwnProperty(0),arr.hasOwnProperty('length')) //true
-
-````
-##### 列出OwnProperty
-
-```
-const obj={a:1}
-Object.getOwnPropertyNames(obj)//['a']
-  const arr=[1,2,3]
-  console.log(Object.getOwnPropertyNames(arr))//["0", "1", "2", "length"]
-
-```
-
-
-
-
-### 3.enumerableProperty[^2]
+### enumerableProperty[^2]
 
 
 #####  判断对象的某个属性是否可枚举
@@ -158,13 +94,13 @@ console.log(arr.propertyIsEnumerable(0))//true
 for....in操作符 列出可枚举的key (in操作符是针对key的)
 
 ```
-	for....in
+for....in
 ```
 
 for....of 枚举出可枚举的value,用于可迭代类型(array)
 
 ```
-	for....of
+for....of
 ```
 
 
@@ -215,7 +151,7 @@ Object.assign([1,2,3],[4,5,6]//[1,2,3]
 Object.assign([1,2,3],'456') //["4", "5", "6"]
 ```
 
-# 实例的所有实例属性
+# 实例的属性
 
 ### __ proto __:Object.prototype
 
