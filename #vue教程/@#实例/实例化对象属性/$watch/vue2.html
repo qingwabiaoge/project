@@ -27,8 +27,10 @@
     }
   })
 
-  vm.$watch('firstName', function (val) {
-    this.fullName = val + ' ' + this.lastName
+  vm.$watch('firstName', function (new_,old_) {
+    //computed
+    this.fullName = new_ + ' ' + this.lastName
+    //watch
     console.log('fullName:'+this.fullName)
   })
 

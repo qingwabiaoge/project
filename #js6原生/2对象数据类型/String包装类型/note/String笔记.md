@@ -31,29 +31,12 @@
 |indexOf()|✓|✓||
 |lastIndexOf()|✓|✓||
 |concat()|✓|✓||
-|截取|sclice|slice;substring(a,b) b>a||
-|填充|fill(’qsl’,1,4))|padStart(7,'111111')|
-
-
-##### 截取
-###### substring
-```
-substring(0,30) //参数2的值要比参数1大
-```
-
-###### slice
-
-```
-var str='abcdefg'; 
-str.slice(1)   //bcdefg      
-str.slice(1,3)  // bc
-str.slice(3,1) // ""
-```
+|截取|sclice <br />var str='abcdefg'; <br/>str.slice(1)   //bcdefg      <br/>str.slice(1,3)  // bc<br/>str.slice(3,1) // ""|1.slice;<br />2. substring(0,30) //参数2的值要比参数1大||
+|填充|填充指定位置<br />fill(’qsl’,1,4))|填充开头结尾 <br /> padStart(7,'111111'),padEnd()||
 
 ##### 去除空格
 
 ```
-
 str.trim('   123')
 ```
 
@@ -62,14 +45,6 @@ str.trim('   123')
 endsWith()
 
 startsWith()
-
-##### 自动补全
-###### padStart()
-
-pad~padding 补丁
-
-    a=`love`.padStart(7, '1111'); // 字符串love补足7位 用‘1111’补
-###### padEnd()
 
 ##### 重复
 

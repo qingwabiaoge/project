@@ -13,8 +13,6 @@ new Promise((resolve,reject)=>{.....})
 
 ### 1异步队列,不影响执行主程序
 
-
-
 1. 返回异步的promise对象,
 
 

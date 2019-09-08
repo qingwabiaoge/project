@@ -68,9 +68,9 @@ let i=0
 
 ### location
 
-##### location.href 
+##### location.href  读取和设置本窗口的地址
 
-读取和设置本窗口的地址
+
 
 ```js
   window.location.href = "http://www.baidu.com"

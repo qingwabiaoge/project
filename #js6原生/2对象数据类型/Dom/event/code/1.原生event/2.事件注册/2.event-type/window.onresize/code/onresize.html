@@ -1,16 +1,24 @@
 <meta charset="utf-8">
-<body onresize="fn()">
-<div id="demo">
-
-</div>
+<body onresize="showWindowSize()">
+<div id="app"></div>
 </body>
 <script>
 
-    function fn() {
-        var w = window.outerWidth;
-        var h = window.outerHeight;
-        document.getElementById("demo").innerHTML = "窗口大小: 宽度=" + w + ", 高度=" + h;
+  function showWindowSize() {
+    var w = document.body.clientWidth;
+    var h = document.body.clientHeight;
+    const el = document.getElementById("app")
+    const span = el.children[0]
+    const newText = document.createTextNode("窗口大小: 宽度=" + w + ", 高度=" + h)
+    if (el.hasChildNodes()) {
+      const oldText = el.childNodes[0]
+      console.log(oldText)
+      el.replaceChild(newText, oldText)
+    } else {
+      el.appendChild(newText)
     }
+
+  }
 
 </script>
 

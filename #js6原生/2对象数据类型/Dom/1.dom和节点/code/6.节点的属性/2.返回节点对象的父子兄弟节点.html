@@ -19,13 +19,19 @@
 
   console.log('el.parentNode', el.parentNode)
 
-  //列出下级的所有节点[标签节点和文本节点(代码换行也算)]  ie有兼容问题,
+
+  //判断是否有子节点
   console.log('el.hasChildNodes', el.hasChildNodes())
+  //列出下级的所有节点 包裹标签节点和文本节点(代码换行也算)  ie有兼容问题,
   console.log('el.childNodes', el.childNodes)
-  console.log(' el.firstChild', el.firstChild);//第一个
-  console.log(' el.lastChild', el.lastChild);//最后一个
+  //第一个
+  console.log(' el.firstChild', el.firstChild);
+  //第二个
   console.log('el.firstChild.nextSibling', el.firstChild.nextSibling)
-  console.log(' el.lastChild.previousSibling', el.lastChild.previousSibling);//倒数第二个
+  //最后一个
+  console.log(' el.lastChild', el.lastChild);
+  //倒数第二个
+  console.log(' el.lastChild.previousSibling', el.lastChild.previousSibling);
 
 
   //只列出下级标签节点
@@ -36,7 +42,7 @@
   console.log(el.querySelectorAll('li'))
 
 
-  //列出下级的文本节点
+  //文本节点
   console.log(el.querySelectorAll('li')[0].childNodes)
 
 </script>

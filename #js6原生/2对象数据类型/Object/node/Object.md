@@ -1,14 +1,16 @@
 [^1]: prototype:原型 
 [^2]: Property: 属性
 
-# 判断是否为Object类型
+# 静态函数
+
+### 判断是否为Object类型
 
 ```js
 typeof (obj)
 obj instance of Object
 ```
 
-# Object.is()  ===  比较对象实例是否相等
+### Object.is()  ===  比较对象实例是否相等
 
 ##### 相同处
 
@@ -31,7 +33,36 @@ Object.is(+0, -0) // false
 Object.is(NaN, NaN) // true
 ```
 
+### defineProperty
 
+```
+    obj = {a: 1, b: 2}
+
+    Object.defineProperty(obj, 'c', {//可以改变其他属性的值，可以把其他属性的值赋值给自己
+        configurable: false,
+        enumerable: true,
+        set: function () {
+            this.a = 0
+        },
+        get: function () {
+            return this.b
+        }
+
+    })
+    obj.c = 3 //set触发tis.a=0
+    console.log(obj)//除非get
+```
+
+```
+ obj = {a: 1, b: 2, c: 3}
+    Object.defineProperty(obj, 'd', {
+        configurable: false,
+        enumerable: false,
+        writable: true,
+        value: 4
+    })
+
+```
 
 # 实例化对象属性分类
 

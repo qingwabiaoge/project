@@ -46,8 +46,7 @@ var re = new RegExp('hello','g');   //代替/hello/g
 
 ###  转意字符匹配若干范围(单字符)
 ```
- . 代表任意字符
-\. 表示真实的.
+ . 代表任意字符   \. 表示真实的.
 
 \n   换行  ~next
 
@@ -73,7 +72,7 @@ var re = new RegExp('hello','g');   //代替/hello/g
 
 #####  [-] 自定义匹配范围 
 
-[a-zA-z]匹配英文大小写
+[a-z A-Z]匹配英文大小写
 
 [0-3]匹配0，1，2，3
 
@@ -156,11 +155,7 @@ console.log(reg.exec(str))
 ```
 
 
-
-
-
-
-### 分组和捕获()
+### ()
 
 ##### 分组
 
@@ -187,8 +182,6 @@ console.log(reg.exec(str))
 -  对reg.test()的影响: 括号分组
 
 -  对reg.exec()的影响: 括号部分捕获并把括号部分的捕获值赋值到reg.exec('xxx')[1]
-
-
 
 
 >  访问捕获的内容
@@ -268,9 +261,9 @@ console.log(reg.test(str))//true
 
 
 
-```
+```js
 
-     const reg = /kid is a (?!doubi)/
+    const reg = /kid is a (?!doubi)/
 
     console.log(reg.test('kid is a doubi')) // false
     console.log(reg.test('kid is a shabi')) // true
@@ -280,7 +273,7 @@ console.log(reg.test(str))//true
 
 
 
-# 所有属性in(真实对象)
+# 所有属性in(真实键值对)
 
 ![](./7.png)
 
@@ -321,12 +314,7 @@ console.log(reg.test(str))//true
     get sticky: ƒ sticky()
     get unicode: ƒ unicode()
     __proto__: Object*/
-   
-
-
-
-
-
+  
 ```
 
 ### __ proto __:RegExp.prototype
@@ -339,8 +327,6 @@ const str = 'a123'
 
 //1.reg匹配部分字符串就为ture
 const i = reg.test(str) //true
-
-
 //2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
 const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 ```
@@ -353,12 +339,14 @@ reg.test判定为true, reg.exe(str)才不是undifined
 
 ### ownProperty
 
-    console.log(reg.hasOwnProperty('lastIndex'))//true
-    console.log(Object.getOwnPropertyNames(reg))//["lastIndex", "a"]
+```js
+console.log(reg.hasOwnProperty('lastIndex'))//true
+console.log(Object.getOwnPropertyNames(reg))//["lastIndex"]
+```
 ### key
 
-    console.log(reg.propertyIsEnumerable('a'))//true
-    console.log(Object.keys(reg))//['a']
+    console.log(reg.propertyIsEnumerable('lastIndex'))//false
+    console.log(Object.keys(reg))//[]
 # 常用正则
 
 ``` javascript
