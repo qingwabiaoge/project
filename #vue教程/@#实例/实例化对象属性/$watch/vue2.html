@@ -34,8 +34,8 @@
     console.log('fullName:'+this.fullName)
   })
 
-  vm.$watch('lastName', function (val) {
-    this.fullName = this.firstName + ' ' + val
+  Vue.prototype.$watch.call( vm,'lastName', function (new_,old) {
+    this.fullName = this.firstName + ' ' + new_
     console.log('lastName:',this.lastName)
   })
 </script>

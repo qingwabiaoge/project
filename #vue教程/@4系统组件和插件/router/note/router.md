@@ -37,9 +37,9 @@ transition | 可用            |可用
 
 </div>
 <script>
-                            /** 这个router-view非常容易忘记*/
+                          
     
-    const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
+    const fa = {template: '<div>fa组件:<router-view></router-view></div>'}   // 这个<router-view/>非常容易忘记
 
     const cs = {template: '<div>/fa/cs</div>'}
 
@@ -105,7 +105,7 @@ transition | 可用            |可用
 
 # 向history栈顶推入网址
 
-### </ router-link>
+### < router-link />
 
 ```
 <router-link to='/new?cid=1'>news</router-link>
@@ -188,7 +188,7 @@ const router = new VueRouter({
 出现这种情况是因为的路由参数获取写路由绑定组件的生命周期的created钩子函数里,相同路由参数改变后并没有销毁和重建，
 
 ### 解决方法
-##### 1.watch监听路由'$route对象是否变化
+##### 1.vue-watch监听路由'$route对象是否变化
 
 ```
 watch: {

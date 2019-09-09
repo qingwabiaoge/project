@@ -86,7 +86,7 @@
 </script>
 ```
 
-### hover添加动画class
+### hover添加和删除 动画class
 
 ```html
 <meta charset="utf-8">

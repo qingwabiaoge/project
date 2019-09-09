@@ -2,7 +2,7 @@
 <meta charset="utf-8"/>
 <div id="app">
 
- 用户名  : <input type="text" :value="user" @input="user=$event.target.value" @keyup.enter="fn"> {{user}}
+ 用户名  : <input type="text"v-model="user" @keyup.enter="fn"> {{user}}
 </div>
 <script>
 
@@ -15,8 +15,8 @@
         },
         methods:{
 
-            fn(){
-                console.log(this.user)
+            fn($event){
+                console.log(event,$event)
             }
         }
 

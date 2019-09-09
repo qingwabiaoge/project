@@ -7,25 +7,23 @@
 
 <div id="app">
   <button @click="fn">button click</button>
-  <hr>
+
 
 
   <!--自动补全成@click="fn($event)或@click="fn(data,1)-->
   <cl @click.native="fn">
     click.native
   </cl>
-  <hr>
 
-  <cl @component-event="fn">
-    component-event
-  </cl>
+
+
 
 </div>
 
 
 <script>
   Vue.component('cl', {
-      template: `<button @click="$emit('component-event','data')"><slot></slot></button>`,
+      template: `<button><slot></slot></button>`,
     }
   )
 

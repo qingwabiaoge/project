@@ -2,10 +2,7 @@
 <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
 
 <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
-<!-- ÒıÈëÑùÊ½ -->
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<!-- ÒıÈë×é¼ş¿â -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 
 <div id="app">
     <div>
@@ -27,7 +24,7 @@
 </div>
 
 <script>
-    // ´´½¨ Vue ÊµÀı£¬µÃµ½ ViewModel
+    // åˆ›å»º Vue å®ä¾‹ï¼Œå¾—åˆ° ViewModel
     var vm = new Vue({
         el: '#app',
         data: {
@@ -41,7 +38,7 @@
         },
         methods: {
             add() {
-                //×¢ÒâÕâÀïÊÇunshift
+                //æ³¨æ„è¿™é‡Œæ˜¯unshift
                 this.list.unshift({id: ++this.newId, name: this.name})
                 this.name = ''
             }

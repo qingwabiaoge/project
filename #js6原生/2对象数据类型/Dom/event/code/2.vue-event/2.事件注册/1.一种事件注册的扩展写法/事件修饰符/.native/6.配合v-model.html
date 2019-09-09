@@ -28,10 +28,11 @@
               `,
     computed: {
       listeners() {
-      //$listeners 默认父标签的所有监听函数
-        return Object.assign({}, this.$listeners,
-          {
-            // 这里确保组件配合 `v-model` 的工作,覆盖默认的事件,如果不用父标签上@input监听到时event
+
+        return Object.assign({},
+          //$listeners 为父标签所有的v-on属性合成对象
+          this.$listeners, {
+            // 覆盖input事件,为了v-model
             input: event => {
               this.$emit('input', event.target.value)
             }
