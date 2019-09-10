@@ -9,8 +9,8 @@ const jwt = require('jsonwebtoken')
 const token = jwt.sign({
   name: 'qingwabiaoge',
   _id: 'shilei12'
-}, 'my_token', {expiresIn: 60});
+}, 'my_key', {expiresIn: 60});
 console.log(token)
 
-var decoded = jwt.verify(token, 'my_token');
+var decoded = jwt.verify(token, 'my_key');
 console.log(decoded)

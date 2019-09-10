@@ -1,4 +1,3 @@
-[[_toc_]]
 # 安装
 
 koa版
@@ -24,7 +23,7 @@ $ npx create-nuxt-app <项目名>
 
 # 详解流程
 
-### 上下文对象(函数回调的参数)
+### ctx
 
 有些键值在客户端存在有些在服务端存在
 
@@ -36,7 +35,7 @@ ctx.req.headers
 
 
 ### 把自定义数据注入到上下文对象
-##### ctx.xxx注入
+##### nuxt.config.js ->plugins 注入的ctx
 
 ```javascript
 
@@ -48,22 +47,11 @@ export default(ctx)=> {
     ? ctx.req.headers["user-agent"] //当是服务器进程时:从客户端的请求链接总获得userAgent
     : navigator.userAgent;            //当是浏览器端时:从浏览器对象中获得浏览器uA
 
-
-
-```
-
-
-##### nuxt.config.js 注入到ctx.env(只能注入变量)
-
-```javascript
-
-  env: {
-    HOST: process.env.HOST ,
-    PORT: 3333,
-  }
+}
 
 ```
-#####  inject联合注入到實例
+
+#####  nuxt.config.js ->plugins, 联合注入到 app  vm vm.store
 
 ```javascript
 export default ({ app }, inject) => {
@@ -71,6 +59,16 @@ export default ({ app }, inject) => {
   //注入到了 app  vm vm.store
 }
 ```
+##### nuxt.config.js ->env注入到ctx.env(只能注入变量)
+
+```javascript
+  env: {
+    HOST: process.env.HOST ,
+    PORT: 3333,
+  }
+
+```
+
 ### vuex nuxtServerInit 方法
 
 
@@ -93,13 +91,12 @@ nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 
 
 ##### 不同位置的中间件执行顺序
 
-1.nuxt.config.js  //进入每个路由前使用的代码
+1.nuxt.config.js->router  //进入每个路由前使用的代码
 
 
 ```javascript
 
 module.exports = {
-  mode: 'universal',
   router: {
     //当前流和上级栏目
     linkActiveClass: 'active',
@@ -109,14 +106,14 @@ module.exports = {
 
 ```
 
-2.匹配布局
+2.layout.vue->middleware
 
 ```` javascript
 export default {
   middleware: 'auth',
   }
 ````
-3.匹配页面 进入页面前使用的代码
+3.page.vue->middleware
 
 ```` javascript
 export default {
@@ -136,7 +133,7 @@ export default function ({ store, error, redirect, req }) {
 
 ````
 
-### 路由参数校验 
+### 路由参数校验 page->validate()
 
 Nuxt.js 可以让你在动态路由组件中定义参数校验方法。
 
@@ -195,7 +192,7 @@ export default {
 
 ### header设置
 
-##### nuxt.config.js公共header,本质估计是mixin
+##### nuxt.config.js->head,本质估计是mixin
 
 ```javascript
   head: {
@@ -215,7 +212,7 @@ export default {
 
 ```
 
-##### 页面page.vue和head
+##### 页面page.vue->head
 
 ```javascript
 
@@ -246,11 +243,11 @@ export default {
 
 
 
-### ctx数据作为vue实例app的初始化数据
+### 服务器端vue实例app数据下载到浏览器成为浏览器端vue实例vm数据
 
 ![](./img/18.png)
 
-### app(服务器上的vue根实例)的生命周期:
+### 服务器上的vue根实例app的生命周期:
 
 ```
 
@@ -289,25 +286,37 @@ export default {
 
 ### asyncData函数的异步请求
 
+__asyncData请求完成后__,才开始vue的生命周期(这点和vuecli的不同)
+
 ### 浏览器端Vue生命周期
 
-__asyncData请求完成后__,才开始vue的生命周期(这点和vuecli不同)
 
 
-# 插件
+
+# 插件 nuxt.config.js->plugins:[]
 
 ### 全局插件注入和局部插件注入
 
 
 ##### 全局运行
-nuxt.config.js里包含的代码都是全局的,相当于vue的main.js 打开网站就会调用
+nuxt.config.js, 里包含的代码都是全局的,相当于vue的main.js 打开网站就会调用
+
+```json
+  plugins: [
+    { src: '~/plugins/both-sides.js' },  //both
+    { src: '~/plugins/client-only.js' },
+    { src: '~/plugins/server-only.js'}
+  ]
+```
+
+
 
 ##### 局部运行
 
 局部页面的组件 指令 函数 过滤器 放到vue构造器里(切换到当前路由才会建立vue对象运行)
 
 
-### 设置插件只在服务器或者只在客户端运行
+### 判断设备运行插件
 
 ```javascript
 export default {
@@ -322,17 +331,11 @@ export default {
 
 ### 判断设备运行代码
 
-#####  if (process.server)
-
-```
+```js
  if (process.server) {}
 ```
 
-
-
-#####  if (process.client)
-
-```
+```js
  if (process.client) {}
 ```
 
@@ -453,31 +456,22 @@ gulp.task('build', ['compile', 'copyfont']);
 
 
 -----
-# webpack选项
+# nuxt.config.js
 
-
-### less支持(需要安装) 
-
-```
-devDependencies": {
-    "less": "^3.8.1",
-    "less-loader": "^4.1.0",
-```
-### less全局变量
-
-![](./img/5.png)
 
 
 ### 全局css
-需要安装 cnpm i css-loader -S
+
+` cnpm i css-loader -S`
+
+nuxt.config.js
 
 ```
-
 css: [
     './assets/css/index.css',
   ]
 ```
-### build打包钩子函数
+### build
 
 ```
 build: {
@@ -490,6 +484,14 @@ build: {
     },
     loaders: {
       imgUrl: {limit: 20 * 1000},
+    },
+      styleResources: {
+      /*预先引入到各个vue文件中*/
+      less: ['./assets/less/variables.less', './assets/less/mixins/_mixins.less'],
+      /*  options: {
+          // See https://github.com/yenshih/style-resources-loader#options
+          // Except `patterns` property
+        }*/
     },
     /*
     ** You can extend webpack config here
@@ -504,6 +506,56 @@ build: {
 
   }
 ```
+
+##### less支持(需要安装) 
+
+```
+yarn add less less-loader -D
+```
+
+##### styleResources
+
+- 类型: `Object`
+- 默认: `{}`
+
+当您需要在页面中注入一些变量和`mixin`而不必每次都导入它们时，这非常有用。
+
+Nuxt.js 使用 https://github.com/nuxt-community/style-resources-module 来实现这种行为。
+
+您需要为css预处理器指定要包含的 模式 / 路径 ： `less`, `sass`, `scss` 或 `stylus`
+
+您不能在此处使用**路径别名**(`~` 和 `@`)，
+
+:warning: You cannot use path aliases here (`~` and `@`)，你需要使用相对或绝对路径。
+
+安装 style-resources：
+
+```
+$ yarn add @nuxtjs/style-resources
+```
+
+根据需要安装：
+
+- SASS: `$ yarn add sass-loader node-sass`
+- LESS: `$ yarn add less-loader less`
+- Stylus: `$ yarn add stylus-loader stylus`
+
+修改 `nuxt.config.js`:
+
+```
+export default {
+  modules: [
+    '@nuxtjs/style-resources',
+  ],
+  styleResources: {
+    scss: './assets/variables.scss',
+    less: './assets/**/*.less',
+    // sass: ...
+  }
+}
+```
+
+然后就可以随处直接使用定义过的变量或函数。
 
 # 配置主机和端口
 

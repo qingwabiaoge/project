@@ -23,7 +23,7 @@
 ![1](./2.png)
 
 
-# 
+
 
 # 模块操作
 
@@ -38,7 +38,7 @@ npm install webpack -g
 yarn global add webpack 
 ```
 
-##### 命令行运行的cli**命令**
+##### 命令行运行cli**命令**
 
 ```
  node 1.js
@@ -52,17 +52,37 @@ yarn global add webpack
  nodemon xxx
 ```
 
+##### 项目里组合运用全局命令npm run 
 
-### cli模块安装到项目文件夹和npm run xxx
+```
+//package.json
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon 1.js&& set HOST=127.0.0.1 ",
+    }
+}
+```
+
+
+
+### cli模块安装到项目文件夹
 
 ##### 安装
 
 ```
-npm i test -S //安装并保存到webpack.json生产环境配置
-yarn add test 
+npm i nuxt -S //安装并保存到webpack.json生产环境配置
+yarn add nuxt 
 ```
 
-##### 命令行npm run test,运行安装到项目文件夹的cli模块
+##### 运行
+
+命令行npm run dev,运行安装到项目文件夹的cli模块
+
+###### 原理
 
 package.json设置test命令
 
@@ -74,34 +94,42 @@ package.json设置test命令
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "dev": "nuxt",
     }
+}
 ```
 
-`npm run test`时, 会搜索全局有没有test命令 如果没有会运行`./node_modules/.bin/test.cmd`
+`npm run dev 时, 会搜索全局有没有nuxt命令 如果没有会运行`./node_modules/.bin/nuxt.cmd`
 
-```
-//test.cmd
+```cmd
 @IF EXIST "%~dp0\node.exe" (
-  "%~dp0\node.exe"  "%~dp0\..\cs\index.js" %*
+  "%~dp0\node.exe"  "%~dp0\..\@nuxt\cli\bin\nuxt-cli.js" %*
 ) ELSE (
   @SETLOCAL
   @SET PATHEXT=%PATHEXT:;.JS;=;%
-  node  "%~dp0\..\cs\index.js" %*
+  node  "%~dp0\..\@nuxt\cli\bin\nuxt-cli.js" %*
 )
 ```
 
+对应目录的  nuxt-cli.js
 
+```js
+#!/usr/bin/env node
 
+require('../dist/cli.js').run()
+  .catch((error) => {
+    require('consola').fatal(error)
+    require('exit')(2)
+  })
+```
 
-
-### 在项目文件夹安装和引入module
+### 在项目文件夹安装和引入module对象
 
 
 ```
-import axios from 'axios'
+import koa from 'koa'
 ```
-npm会读取"./node_modules/axios/package.json"文件
+npm会读取"./node_modules/koa/package.json"文件
 
 ```
 {
@@ -118,8 +146,6 @@ npm会读取"./node_modules/axios/package.json"文件
   },
   }
 ```
-
-
 
 ### 安装指定版本
 
@@ -164,7 +190,7 @@ npm uninstall webpack --save # npm 可以指定 --save | --save-dev
 yarn upgrade
 ```
 
-# 新建cli模块
+# 自己动手新建cli模块
 
 运行原理: 间接运行了note test.js
 
@@ -203,7 +229,7 @@ $ npm link
 
 5. 运行
 
-命令行  test
+   命令行  test
 
 ### 建立局部自定义全局cli模块
 

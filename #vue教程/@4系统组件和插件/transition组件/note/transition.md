@@ -1,20 +1,17 @@
 # 原生css transition
 
 ```
-●状态1--------------------------------------●状态2(hover)                        
-                  transition:all:0.5s
+添加和消除类的会触发动画 
+transition添加过渡效果
 ```
 
 # < transition />使用场景
-
-> Vue 提供了 transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡
 
 ```
 模块渲染 (使用 v-if)
 隐藏显示 (使用 v-show)
 动态组件
 路由切换
-
 ```
 
 
@@ -28,6 +25,7 @@
 ```css
 
         .fade-enter,.fade-leave-to{
+            /* 进入时消除类fade-enter,动画就出现了 */
             opacity: 0;
         }
         .fade-enter-active,.fade-leave-active{
@@ -49,12 +47,14 @@
 
 # < transition-group />
 
-> transition标签中只能包裹一个元素，否则会报错：
-> ![](1.png)
+ transition标签中只能包裹一个元素，否则会报错：
+ ![](1.png)
 
 # < transition />使用animal.css
 
-任意状态触发添加animite的类,触发动画
+任意状态触发添加animite的动画类,
+
+并不需要过渡效果,所以不用添加过渡类 fade-enter-active fade-leave-active
 
 ### 渲染和销毁添加不同动画class
 

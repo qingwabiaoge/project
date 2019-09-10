@@ -14,15 +14,15 @@
     template: `
         <div style="border: 1px solid green">
         <router-link to="/">/</router-link>
-        <router-link to="/news">/news</router-link>
-
+        <router-link to="/news/index">/news/index</router-link>
+        <hr>
         <router-view style="background: #eee"></router-view>
         </div>`
     // <rout-view/>类似nuxt的<nuxt/>
   }
+  const news_layout = {template: '<div><btn><router-link to="/news/news_list">company news</router-link></btn><btn>other</btn><router-view/></div>'}
   //页面组件
   const index = {template: '<div>index</div>'}
-  const news = {template: '<div><btn><router-link to="/news/news_list">company news</router-link></btn><btn>other</btn><router-view/></div>'}
   const news_index = {template: '<div>news_index </div>'}
   const news_list = {template: '<div>   <router-link to="/news/1">/news/1</router-link></div>'}
   const id = {template: '<div>id:{{id}}</div>', props: ['id']}
@@ -38,7 +38,7 @@
       {
         path: '/news',
         name: 'news',
-        component: news,
+        component: news_layout,
         children: [{
           path: '/',
           name: 'news_index',
