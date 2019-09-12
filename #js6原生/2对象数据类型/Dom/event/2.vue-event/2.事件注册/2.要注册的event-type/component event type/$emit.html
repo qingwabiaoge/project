@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+
+<div id="app">
+
+  <cl @myevent="fn"></cl>
+
+</div>
+
+<script>
+  var cl = {
+    template: `<button @click="click">事件</button>`,
+    methods: {
+      click: function () {
+        this.$emit('myevent', '子组件发送的')
+      }
+    }
+
+  }
+  const vm = new Vue({
+    el: '#app',
+    components: {cl},
+    data: {
+      msg: 'msg'
+    },
+    methods: {
+
+      fn(data) {
+        console.log(data)
+      }
+
+    }
+  })
+
+
+</script>
+</body>
+</html>

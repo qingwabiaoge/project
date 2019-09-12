@@ -1173,6 +1173,67 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
         })
 ```
 
+
+
+##### findOne()
+
+　　该方法返回查找到的所有实例的第一个
+
+```
+Model.findOne([conditions], [projection], [options], [callback])
+```
+
+　　找出age>20的文档中的第一个文档
+
+
+
+```
+temp.findOne({age:{$gt : 20}},function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
+    console.log(doc);
+})   
+temp.findOne({age:{$gt : 20}}).exec(function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
+    console.log(doc);
+})  
+```
+
+
+
+　　找出age>20的文档中的第一个文档，且只输出name字段
+
+
+
+```
+temp.findOne({age:{$gt : 20}},{name:1,_id:0},function(err,doc){
+    //{ name: 'huochai' }
+    console.log(doc);
+})   
+temp.findOne({age:{$gt : 20}},{name:1,_id:0}).exec(function(err,doc){
+    //{ name: 'huochai' }
+    console.log(doc);
+})     
+```
+
+
+
+　　找出age>20的文档中的第一个文档，且输出包含name字段在内的最短字段
+
+
+
+```
+temp.findOne({age:{$gt : 20}},"name",{lean:true},function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' }
+    console.log(doc);
+})   
+temp.findOne({age:{$gt : 20}},"name").lean().exec(function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' }
+    console.log(doc);
+})   
+```
+
+
+
 ##### findById()
 
 ```
@@ -1237,8 +1298,6 @@ Model.findById(id, [projection], [options], [callback])
 
 　　输出最少的字段
 
-
-
 ```
             temp.findById(aIDArr[0],{lean:true},function(err,doc){
                 //{ _id: 5971f93be6f98ec60e3dc86c }
@@ -1250,66 +1309,7 @@ Model.findById(id, [projection], [options], [callback])
             })     
 ```
 
-
-
-#####  findOne()
-
-　　该方法返回查找到的所有实例的第一个
-
-```
-Model.findOne([conditions], [projection], [options], [callback])
-```
-
-　　找出age>20的文档中的第一个文档
-
-
-
-```
-temp.findOne({age:{$gt : 20}},function(err,doc){
-    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
-    console.log(doc);
-})   
-temp.findOne({age:{$gt : 20}}).exec(function(err,doc){
-    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
-    console.log(doc);
-})  
-```
-
-
-
-　　找出age>20的文档中的第一个文档，且只输出name字段
-
-
-
-```
-temp.findOne({age:{$gt : 20}},{name:1,_id:0},function(err,doc){
-    //{ name: 'huochai' }
-    console.log(doc);
-})   
-temp.findOne({age:{$gt : 20}},{name:1,_id:0}).exec(function(err,doc){
-    //{ name: 'huochai' }
-    console.log(doc);
-})     
-```
-
-
-
-　　找出age>20的文档中的第一个文档，且输出包含name字段在内的最短字段
-
-
-
-```
-temp.findOne({age:{$gt : 20}},"name",{lean:true},function(err,doc){
-    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' }
-    console.log(doc);
-})   
-temp.findOne({age:{$gt : 20}},"name").lean().exec(function(err,doc){
-    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' }
-    console.log(doc);
-})   
-```
-
-##### 文档查询中，常用的查询条件如下
+##### 查询条件
 
 ```
 $or　　　　或关系
@@ -1801,6 +1801,21 @@ temp.update({name:/aa/},{age: 0},{upsert:true},function(err,raw){
 temp.update({name:/aa/},{age: 0},{upsert:true}).exec();
 ```
 
+##### updateOne()
+
+ 　　updateOne()方法只能更新找到的第一条数据，即使设置{multi:true}也无法同时更新多个文档
+
+　　将数据库中名字中带有'huo'的数据，年龄变为60岁
+
+```
+temp.updateOne({name:/huo/},{age:60},function(err,raw){
+    //{ n: 1, nModified: 1, ok: 1 }
+    console.log(raw);
+});
+```
+
+![img](img/740839-20170722113216183-374293061.png)
+
 ##### updateMany()
 
 　　updateMany()与update()方法唯一的区别就是默认更新多个文档，即使设置{multi:false}也无法只更新第一个文档
@@ -1822,26 +1837,11 @@ temp.updateMany({name:/huo/},{age:50},function(err,raw){
 
 
 
-##### updateOne()
 
- 　　updateOne()方法只能更新找到的第一条数据，即使设置{multi:true}也无法同时更新多个文档
-
-　　将数据库中名字中带有'huo'的数据，年龄变为60岁
-
-```
-temp.updateOne({name:/huo/},{age:60},function(err,raw){
-    //{ n: 1, nModified: 1, ok: 1 }
-    console.log(raw);
-});
-```
-
-![img](img/740839-20170722113216183-374293061.png)
 
 ##### find() + save()
 
 　　如果需要更新的操作比较复杂，可以使用find()+save()方法来处理，比如找到年龄小于30岁的数据，名字后面添加'30'字符
-
-
 
 ```
 temp.find({age:{$lt:20}},function(err,docs){
@@ -1857,10 +1857,6 @@ temp.find({age:{$lt:20}},function(err,docs){
     console.log(docs);
 });
 ```
-
-
-
-
 
 ##### findOne() + save()
 
@@ -1897,17 +1893,17 @@ Model.findOneAndUpdate([conditions], [update], [options], [callback])
 Model.findOneAndUpdate([conditions], [update], [options], [callback])
 ```
 
- 
-
 ### 文档删除
-
-　　有三种方法用于文档删除
 
 ```
 remove()
 findOneAndRemove()
 findByIdAndRemove()
+deleteMany
+deleteOne
 ```
+
+
 
 ##### remove()
 
@@ -1962,6 +1958,20 @@ temp.find({name:/huo/},function(err,doc){
 
 
 ![img](img/740839-20170722121538620-1318315817.png)
+
+##### deleteOne()
+
+```
+Dog.deleteOne( {name:'xiaohua'},callback)
+```
+
+##### deleteMany()
+
+```
+Dog.deleteMany( {_id:{$in:['5cecf36924298219842cd9c9','5cecf409aab26c113c1bd32f']}},callback)
+```
+
+
 
 ##### findOneAndRemove()
 

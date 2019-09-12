@@ -44,10 +44,8 @@ await等待不到Promise对象 后面的代码绝不运行
 ```
 .then().catch(),
 
- async  fn(){ await} 
+ async  fn(){ await f()} 
 ```
-
-
 
 
 # 回调 promise asyncawait比较
@@ -156,5 +154,11 @@ return new Promise((resolve,reject)=>{})
     f()
 </script>
 
+```
+
+# promise拒绝的原因
+
+```
+  Promise.reject('renson');
 ```
 

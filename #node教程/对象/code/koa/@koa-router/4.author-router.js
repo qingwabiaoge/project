@@ -4,25 +4,24 @@ var router = new Router
 const app = new Koa()
 
 
-const token = false
-const author = (ctx, next) => {
-    if (token) {
-        return next()
-    }else {
+const token = true
+const routerMidware = (ctx, next) => {
+  if (token) {
+    return next()
+  } else {
 
-        ctx.body={
-            code:'-1',
-            msg:'login pleaese'
-        }
+    ctx.body = {
+      code: '-1',
+      msg: 'login pleaese'
     }
+  }
 }
 
 
+const nav = `<a href="/">index</a> <a href="/routerMidware">routerMidware</a><hr>`
 
-const nav=`<a href="/">index</a> <a href="/author">author</a><hr>`
-
-router.get('/', (ctx, next) => ctx.body =  `${nav}index`)
-router.get('/author', author, (ctx, next) => ctx.body = `${nav}author`)
+router.get('/', (ctx, next) => ctx.body = `${nav}index`)
+router.get('/autor', routerMidware, (ctx, next) => ctx.body = `${nav}routerMidware`)
 app.use(router.routes()).use(router.allowedMethods())
 app.listen(3004)
 console.log(3004)

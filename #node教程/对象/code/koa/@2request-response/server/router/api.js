@@ -24,9 +24,9 @@ api
   .put(/request/, controller.request)
   .post('/request/', controller.request)
   .del('/request/', controller.request)
-  //路由里指定路由使用中间件
+  //路由里指定路由使用上传中间件
   .post('/request-file/', koaBodyMidware, controller.request)
-  //路由里指定路由使用中间件//autor页面
+  //路由里指定路由使用autor中间件
   .get('/autor/', middlewares.autor, controller.autor)
 
 module.exports = api

@@ -19,7 +19,7 @@ router.post('/uploadfile', async (ctx, next) => {
     const file = ctx.request.files.file; // 获取上传文件
 
 
-    // 创建可读流
+    // 创建可读流,没什么神奇的就是读取浏览器端电脑上的文件路径
     const reader = fs.createReadStream(file.path);
 
     //当前时间挫

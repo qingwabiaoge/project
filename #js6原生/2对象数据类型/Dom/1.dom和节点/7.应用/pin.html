@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="height: 2000px">
+<div id="div" style="width:100px;height:100px;background:#ccc;position:absolute;"></div>
+<script>
+    console.log(document.documentElement.clientHeight)//    ->   视口的大小
+    console.log(document.documentElement.scrollHeight) // ->   文档的大小
+    window.onscroll = function ()
+    {
+        var oFix = document.getElementById("div");
+        oFix.style.top = document.documentElement.scrollTop + "px";
+        
+
+    }
+
+</script>
+</body>
+</html>

@@ -35,13 +35,17 @@ new VueComponent({props: {age,fn}})
 
 ###### 使用
 
-子组件里通过 this.$listeners访问
+子组件里通过 this.$listeners访问,不包含.native
+
+子组件里通过$emit( )触发
+
+不包含
 
 构造函数的回调参数类型的参数 
 
 ###### 作用:
 
-子传父$emit( )
+子传父
 
 ### 父标签其他属性
 
@@ -50,5 +54,12 @@ new VueComponent({props: {age,fn}})
 ###### 属性种类:
 
 1. class
+
 2. style
-3. 除class style的其他属性可以通过this.$attr访问
+
+3. @eventType.native="fn"
+
+4. 其他属性可以通过this.$attr访问
+
+   
+

@@ -169,3 +169,23 @@ navigator.userAgent
 </html>
 
 ```
+
+### url
+
+##### url.createObjectURL()
+
+```html
+<input type="file" id="btn" accept="image/*" value="upload"/>
+<img id="img"/>
+
+<script>
+
+  btn.addEventListener('change', function () {
+    let file = this.files[0];
+    img.src = URL.createObjectURL(file)
+  })
+
+</script>
+
+```
+

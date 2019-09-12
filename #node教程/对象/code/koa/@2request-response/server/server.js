@@ -11,6 +11,7 @@ const middlewares = require('./middlewares/')
 
 
 router.use('/api', api.routes(), api.allowedMethods())
+
 //路由里指定路由组使用中间件
 router.use('/admin', middlewares.autor, admin.routes(), admin.allowedMethods())
 
@@ -19,7 +20,7 @@ app.use(middlewares.response)
   //xmlParser必须和bodyParser一起用 并删除koaBody, 貌似还要放到全局
   .use(xmlParser())
   .use(bodyParser())
-  //取得json ,router要放到bodyParser后
+  //router要放到bodyParser后
   .use(router.routes())
   .use(router.allowedMethods())
 

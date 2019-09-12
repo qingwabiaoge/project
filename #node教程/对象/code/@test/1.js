@@ -1,25 +1,29 @@
-const Koa = require('Koa')
+const Koa = require('koa')
 const app = new Koa()
-const Router = require('koa-router')
-const router = new Router()
-
-router.get('/', async (ctx, next) => {
-  ctx.body += 'root'
-})
 
 
-router.get('/cs', async (ctx, next) => {
-  ctx.body += 'cs'
-})
-
+function fn(ctx) {
+  console.log(ctx.body)
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      ctx.body += 2
+      //ctx.body里添加2后再resolve
+      resolve()
+    })
+  })
+}
 
 app.use(async (ctx, next) => {
-  ctx.body += '1'
-  await next()
-  ctx.body += '2'
+  ctx.body = '1';
+  next() //接收next()返回的promise
+  await fn(ctx)//等待接收异步函数的值undefined
+
 })
-  .use(router.routes())
-  .use(router.allowedMethods())
 
 
+app.use( (ctx, next) => {
+  ctx.body += '3';
+  next();
+  ctx.body += '4'
+})
 app.listen(3000)
