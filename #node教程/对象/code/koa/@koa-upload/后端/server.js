@@ -35,7 +35,7 @@ router.post('/uploadfile', async (ctx, next) => {
     const upStream = fs.createWriteStream(filePath);
     // 可读流通过管道写入可写流
     reader.pipe(upStream);
-    return ctx.body = "上传成功！";
+    return ctx.body = `http://localhost:3000/upload/${rename}`;
 });
 
 //静态目录插件

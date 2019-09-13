@@ -1,0 +1,19 @@
+<script>
+  const i = 1
+
+  function out() {
+    const i = 2
+    const obj = {
+      a: 20,
+      fn(arg) {
+        console.log(arg)
+        console.log(this.a)
+        console.log(i)
+        console.log(`---------------`)
+      }
+    }
+    obj.fn(100)
+  }
+
+out()
+</script>

@@ -24,67 +24,9 @@
 
 
 
+### npm run xxx运行cli的原理
 
-# 模块操作
-
-### cli模块安装到全局文件夹
-
- 原理npm install xxx-cli -g 安裝xxx-cli到npm和yarn的目录下，这些目录已经设置了环境变量Path
-
-##### 安装
-
-```
-npm install webpack -g 
-yarn global add webpack 
-```
-
-##### 命令行运行cli**命令**
-
-```
- node 1.js
- 
- npm -v
- 
- npm run xxx
- 
- webpack  
- 
- nodemon xxx
-```
-
-##### 项目里组合运用全局命令npm run 
-
-```
-//package.json
-{
-  "name": "code",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon 1.js&& set HOST=127.0.0.1 ",
-    }
-}
-```
-
-
-
-### cli模块安装到项目文件夹
-
-##### 安装
-
-```
-npm i nuxt -S //安装并保存到webpack.json生产环境配置
-yarn add nuxt 
-```
-
-##### 运行
-
-命令行npm run dev,运行安装到项目文件夹的cli模块
-
-###### 原理
-
-package.json设置test命令
+package.json设置dev命令
 
 ```json
 //package.json
@@ -99,7 +41,7 @@ package.json设置test命令
 }
 ```
 
-`npm run dev 时, 会搜索全局有没有nuxt命令 如果没有会运行`./node_modules/.bin/nuxt.cmd`
+`npm run dev 时, 会搜索全局有没有nuxt命令 如果没有会运行当前目录的`./node_modules/.bin/nuxt.cmd`
 
 ```cmd
 @IF EXIST "%~dp0\node.exe" (
@@ -114,6 +56,7 @@ package.json设置test命令
 对应目录的  nuxt-cli.js
 
 ```js
+//表示靠node运行下边的代码
 #!/usr/bin/env node
 
 require('../dist/cli.js').run()
@@ -122,6 +65,46 @@ require('../dist/cli.js').run()
     require('exit')(2)
   })
 ```
+
+
+
+# 模块操作
+
+### cli模块安装到全局文件夹
+
+ 原理npm install xxx-cli -g 安裝xxx-cli到npm和yarn的目录下，这些目录已经设置了环境变量Path
+
+##### 安装
+
+```
+npm install webpack -g 
+yarn global add webpack 
+```
+
+##### 命令行可以直接运行cli**命令**
+
+```
+ node 1.js
+ 
+ npm -v
+ 
+ npm run xxx
+ 
+ webpack  
+ 
+ nodemon xxx
+```
+
+### cli模块安装到项目文件夹
+
+##### 安装
+
+```
+npm i nuxt -S //安装并保存到webpack.json生产环境配置
+yarn add nuxt 
+```
+
+
 
 ### 在项目文件夹安装和引入module对象
 
@@ -157,7 +140,6 @@ npm i xxx@latest
 yarn add package-name 会安装 latest 最新版本。
 yarn add package-name@1.2.3 会从 registry 里安装这个包的指定版本。
 yarn add package-name@tag 会安装某个 “tag” 标识的版本（比如 beta、next 或者 latest）
-
 ```
 
 ### 局部安裝到开发模式
@@ -179,13 +161,13 @@ yarn install
 ### 删除模块
 
 ```
- yarn remove webpack # yarn
+yarn remove webpack # yarn
 npm uninstall webpack --save # npm 可以指定 --save | --save-dev
 ```
 
 ### 更新模块版本
 ```
- npm update
+npm update
 
 yarn upgrade
 ```
