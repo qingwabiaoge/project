@@ -1,6 +1,6 @@
 # npm是什么?
 
->npm是node自带的一个打包器插件,
+npm是node自带的一个打包器插件,
 
 通过npm上传代码到npm仓库 
 
@@ -41,7 +41,9 @@ package.json设置dev命令
 }
 ```
 
-`npm run dev 时, 会搜索全局有没有nuxt命令 如果没有会运行当前目录的`./node_modules/.bin/nuxt.cmd`
+`npm run dev` 时, 会搜索全局有没有nuxt命令 
+
+如果没有会运行当前目录的`./node_modules/.bin/nuxt.cmd`
 
 ```cmd
 @IF EXIST "%~dp0\node.exe" (
@@ -53,7 +55,7 @@ package.json设置dev命令
 )
 ```
 
-对应目录的  nuxt-cli.js
+对应目录的  nuxt-cli.js文件内容
 
 ```js
 //表示靠node运行下边的代码

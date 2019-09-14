@@ -1,20 +1,23 @@
 <script>
 
-    const obj = {
+  const obj = {
 
-        obj2: {
+    obj2: {
 
-            fn1() {
-                console.log(this) //{fn1: ?, fn2: ?}
-                this.fn2() //{fn1: ?, fn2: ?}
-                var fn3 = this.fn2
-                fn3() //windows
-            },
-            fn2() {
-                console.log(this)
-            }
-        }
+      fn1() {
+        //this===obj.obj2
+        console.log(this)
+        this.fn2()
+        var fn3 = this.fn2
+        fn3()
+      },
+      fn2() {
+        //this.fn2()進栈時this===obj.obj2
+        //fn3()進栈時 //this===windows
+        console.log(this)
+      }
     }
-    obj.obj2.fn1()
+  }
+  obj.obj2.fn1()
 
 </script>

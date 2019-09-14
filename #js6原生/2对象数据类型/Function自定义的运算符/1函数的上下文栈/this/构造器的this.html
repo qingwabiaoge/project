@@ -1,30 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 </head>
 
 
 <script>
-    function Person(name, surname) {
-        this.name = name;
-        this.surname = surname;
+  function Person(name, surname) {
 
-    }
+    console.log(this)
 
-    Person.prototype.sex = function () {
-        console.log('prototype this:', this)
+  }
 
-    }
-    Person.fn = function () {
-        console.log(' Person.fn的this:', this) //Person
-    }
+  Person.prototype.sex = function () {
+    console.log('prototype this:', this)
 
-    const p1 = new Person('始皇', '秦')
-    p1.sex()
+  }
+  Person.fn = function () {
+    console.log(' Person.fn->this:', this) //Person
+  }
 
-    //對象調用fn
-    Person.fn()
+  const p1 = new Person()
+  p1.sex()
+
+  //灏嶈薄瑾跨敤fn
+  Person.fn()
 </script>
 </body>
 </html>

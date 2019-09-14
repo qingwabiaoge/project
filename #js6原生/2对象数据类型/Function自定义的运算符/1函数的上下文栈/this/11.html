@@ -1,22 +1,23 @@
 <script>
-    a = 0//#1
-    obj = {
-        a: 10,
-        fn() {
-
-            console.log(this)
-            a += 1 //修改#1
-        }
+  a = 0//#1
+  obj = {
+    a: 10,
+    fn() {
+      //obj.fn()時第一次進栈this===obj
+      // obj.fn.call(obj2)运行时,第二次進栈 this===obj2
+      console.log(this)
+      a += 1 //修改#1
     }
-    obj2 = {
-        a: 100,
-        fn() {
-            //this===obj2
-            obj.fn()   // obj.fn()运行时,this===obj
-            obj.fn.call(this)   // obj.fn.call(obj2)运行时, this===obj2
-        }
+  }
+  obj2 = {
+    a: 100,
+    fn() {
+      //this===obj2
+      obj.fn()
+      obj.fn.call(this)
     }
-    obj2.fn()
-    console.log(a)
+  }
+  obj2.fn()
+  console.log(a)
 
 </script>

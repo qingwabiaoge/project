@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
 <script>
 
-    var a = 1
-    const obj = {a: 3}
 
-    function fn() {
+  function fn() {
+    /*
+      #1.fn.apply(obj)进栈时this===obj
+      #2.const fn2 = fn.bind(obj); fn2()时 this===obj
+      #3.f()进栈时 this==windows
+      */
 
-        console.log(this.a)
-        console.log('-----------------------')
+    console.log(this)
 
-    }
-
-    const obj2 = {
-        fn
-    }
-
-
-    fn()
+  }
+  const obj = {fn}
 
 
 
-    fn.call(obj)
-    fn.apply(obj)
+  fn.apply(obj) //#1
 
 
-    //this===obj
-    const fn2 = fn.bind(obj)   ;     fn2()
+  //#2
+  const bindFn = fn.bind(obj);
+  bindFn()
 
 
 
-    const fn3 = obj2.fn  //this===windows
-    fn3()
+  const f = obj.fn
+  //#3
+  f()
 
 </script>
 </body>
