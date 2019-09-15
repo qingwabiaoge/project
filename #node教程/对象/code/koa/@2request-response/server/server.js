@@ -1,8 +1,8 @@
 const Koa = require('Koa')
 const Router = require('Koa-router')
 const app = new Koa()//实例化koa
-const api=require('./router/api')
-const admin=require('./router/admin')
+const api = require('./router/api')
+const admin = require('./router/admin')
 const router = new Router//ronter作用：koa根目录响应-》若干目录响应
 const cors = require('koa2-cors');
 var xmlParser = require('koa-xml-body'); // note the default

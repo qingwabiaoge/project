@@ -15,8 +15,11 @@ module.exports = async (ctx, next) => {
   console.log(ctx.request.header === ctx.req.headers)  //true
   console.log(ctx.request.header === ctx.header) //true
   console.log(ctx.request.header)
-  console.log('cookie:',ctx.req.headers.cookie)
+  console.log('cookie:', ctx.req.headers.cookie)
 
+  console.log(`ctx.request.method------`)
+  console.log(ctx.method === ctx.request.method)
+  console.log(ctx.method)
 
   console.log("ctx.request.url---------")
   console.log(ctx.url === ctx.request.url);

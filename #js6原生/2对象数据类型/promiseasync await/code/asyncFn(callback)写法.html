@@ -1,57 +1,49 @@
 <script>
 
-    /*,Èô²»´«Èë»Øµ÷º¯Êý£¬Ôò»á·µ»ØÒ»¸ö promise,mongose vueµÄ$nexttick ¶¼ÊÇÕâÑù×öµÄ------------------------------*/
+  /*,è‹¥ä¸ä¼ å…¥å›žè°ƒå‡½æ•°ï¼Œåˆ™ä¼šè¿”å›žä¸€ä¸ª promise,mongose vueçš„$nexttick éƒ½æ˜¯è¿™æ ·åšçš„------------------------------*/
 
-    const i = 1
+  const i = 0
 
-    function asynFn(callback) {
+  function asynFn(callback) {
 
-        const promise = new Promise((resolve, reject) => {
-            if (i > 0) {
-                setTimeout(() => {
-                    resolve(i + 1)
-                }, 500)
-            } else {
-                reject(new Error('err'))
-            }
-
-        })
-        if (callback) {
-
-            promise.then(res => {
-                callback(false, res)
-            })
-                .catch(err => {
-                    callback(err)
-                })
-        } else {
-            return promise
-        }
-    }
-
-
-
-
-
-
-
-    asynFn((err, res) => {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log(res)
-
-        }
+    const promise = new Promise((resolve, reject) => {
+      if (i > 0) {
+        setTimeout(() => {
+          resolve(i + 1)
+        }, 500)
+      } else {
+        reject(new Error('err'))
+      }
 
     })
+    if (callback) {
 
-
-
-
-
-        asynFn().then(res => console.log(res)).catch(err => {
-            console.log(err)
+      promise.then(res => {
+        callback(false, res)
+      })
+        .catch(err => {
+          callback(err)
         })
+    } else {
+      return promise
+    }
+  }
+
+
+  asynFn((err, res) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log(res)
+
+    }
+
+  })
+
+
+  asynFn().then(res => console.log(res)).catch(err => {
+    console.log(err)
+  })
 
 
 </script>

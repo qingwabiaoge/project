@@ -1,14 +1,9 @@
 const Dog = require('../../model/Dog')
+const callback=require('../callback')
 var dog = new Dog({
     "name": "小马",
     age: 10,
     "type": "雌"
 });
 
-dog.save(function (err, data) {
-    if (err) {
-        console.log(err)
-    } else {
-        console.log(data)
-    }
-});
+dog.save(callback);

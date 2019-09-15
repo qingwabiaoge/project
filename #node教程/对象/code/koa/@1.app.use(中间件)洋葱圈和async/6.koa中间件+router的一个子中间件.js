@@ -6,15 +6,16 @@ const router = new Router()
 const control = async (ctx, next) => {
   ctx.body = '1'; //在路由执行前添加
   await next();
-  ctx.body += '2';////在路由执行后添加
+  ctx.body += '2';//在路由执行后添加
 }
 
-const routerControl = async (ctx, next) => {
-  ctx.body += '3'; //在路由执行前添加
+const routerMiddlewares = async (ctx, next) => {
+  ctx.body += '3';
   await next();
-  ctx.body += '4';////在路由执行后添加
+  ctx.body += '4';
 }
-router.get('/', routerControl)
+
+router.get('/', routerMiddlewares)
 
 
 app.use(control)

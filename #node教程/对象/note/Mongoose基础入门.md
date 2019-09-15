@@ -593,6 +593,7 @@ new temp({age:true,name:10}).save(function(err,doc){
 required: 数据必须填写
 default: 默认值
 validate: 自定义匹配
+unique: true, 唯一键值,必须删除表重新建立文档才行
 min: 最小值(只适用于数字)
 max: 最大值(只适用于数字)
 match: 正则匹配(只适用于字符串)

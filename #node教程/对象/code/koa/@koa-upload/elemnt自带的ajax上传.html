@@ -41,8 +41,8 @@
           return isJPG && isLt2M;
         },
         handleAvatarSuccess(data, file) {
-          //this.imageUrl = URL.createObjectURL(file.raw);
-          this.imageUrl = data
+          this.imageUrl = URL.createObjectURL(file.raw)&&data;
+
         },
       }
     }
