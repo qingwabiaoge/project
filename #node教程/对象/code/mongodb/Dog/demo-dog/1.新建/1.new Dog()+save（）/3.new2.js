@@ -1,5 +1,5 @@
-const Master = require('../../model/Master')
-const Dog = require('../../model/Dog')
+const Master = require('../../../model/Master')
+const Dog = require('../../../model/Dog')
 
 const master = new Master({
   name: "shilei",

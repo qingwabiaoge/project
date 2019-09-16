@@ -3,22 +3,24 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 /*----------------新建Schema ,类似构造函数 ,this.name=name--------------------------------*/
+//和vue的属性的配置类似
 const schema = new Schema({
-  //和vue的属性的配置类似
-  name: {type: String, default: 'xxx'},
-  //unique 唯一性,需要删除dogs数据库重建
-  id: {
-    type: Number, unique: true
-  },
+  //required 不能为空
+  name: {type: String, required: true},
+  //unique 唯一性,需要删除dogs数据库重建才能用
+  id: {type: Number, unique: true},
+  //默认值
   age: {type: Number, default: 0},
   type: {type: String, default: '雄'},
-  comments: [{body: String, foor: String}],
   date: {type: Date, default: Date.now},
   hidden: Boolean,
+  //嵌套
+  comments: [{body: String, foor: String}],
   meta: {
     votes: Number,
     favs: Number
   },
+  //popular
   master: {type: Schema.Types.ObjectId, ref: 'Master'}
 })
 /*-------------------实例化对象的方法 ,类似protype---------------------------------------*/
@@ -49,7 +51,7 @@ schema.statics.findDog = function (name, callback) {
   //this===Dog,   因为Dog.finddog(),对象调用函数 this被赋值Dog
   this.find({name: name}, callback);
 };
-//创建修改的静态方法
+
 schema.statics.modifyDogAge = function (conditions, age) {
   this.update(conditions, {$set: {"age": age}}, {}, function () {
     console.log("更改成功");

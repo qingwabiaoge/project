@@ -1,4 +1,4 @@
-const Dog=require('../../model/Dog')
+const Dog=require('../../../model/Dog')
 
 try {
     Dog.create({name:'小花',age:1,type:'雌',id:1})

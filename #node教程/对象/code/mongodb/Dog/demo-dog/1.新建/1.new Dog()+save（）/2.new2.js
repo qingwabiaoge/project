@@ -1,4 +1,4 @@
-const Dog = require('../../model/Dog')
+const Dog = require('../../../model/Dog')
 
 try {
   fn = async () => {

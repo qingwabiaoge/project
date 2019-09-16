@@ -5,9 +5,9 @@ const Dog = require('../../../model/Dog')
 // const name = new RegExp('', 'i')
 const name_ = new RegExp(undefined, 'i')
 
-
-Dog.find({name: {$regex: ''}}, callback)
+Dog.find({name}, callback)
 
 
 //{$regex: '字符串'}所以要用下边的这个
-Dog.find({name}, callback) //结果同上面
+Dog.find({name: {$regex: ''}}, callback)
+//结果同上面

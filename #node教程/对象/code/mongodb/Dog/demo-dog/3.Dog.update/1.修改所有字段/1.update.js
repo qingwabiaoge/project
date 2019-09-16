@@ -1,5 +1,5 @@
-const Dog = require('../../model/Dog')
-const callback = require('../callback')
+const Dog = require('../../../model/Dog')
+const callback = require('../../callback')
 
 /*Model.update(conditions, doc, [options], [callback])
    options选项

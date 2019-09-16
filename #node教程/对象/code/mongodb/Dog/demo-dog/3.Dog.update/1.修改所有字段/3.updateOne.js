@@ -1,4 +1,4 @@
-const Dog = require('../../model/Dog.js')
+const Dog = require('../../../model/Dog.js')
 
 
 async function fn() {
