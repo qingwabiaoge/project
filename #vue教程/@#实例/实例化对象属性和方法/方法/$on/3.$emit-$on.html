@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+  <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+<body>
+<div id="app">
+
+  <cl1></cl1>
+  <cl2></cl2>
+
+
+</div>
+
+
+<script>
+  var bus = new Vue()
+  const cl1 = {
+    template: '<button @click="sent">{{a}}</button>',
+    data() {
+      return {a: 1}
+    },
+    methods: {
+      sent: function () {
+        bus.$emit('bus', this.a)
+      }
+
+    }
+  }
+  const cl2 = {
+    template: `<button>{{a}}{{b}}</button>`,
+    data() {
+      return {a: undefined, b: 2}
+    },
+    mounted() {
+      bus.$on('bus', res => this.a = res)
+
+    }
+  }
+  const vm = new Vue({
+    el: '#app',
+    components: {
+      cl1, cl2
+    }
+  })
+
+</script>
+
+</body>
+</html>

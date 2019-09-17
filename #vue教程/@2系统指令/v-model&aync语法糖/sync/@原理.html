@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta lei-inputarset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 
 <div id="app">
-    {{prop1}} <br>
-    <ch :prop1.sync="prop1"></ch>
-    <!--等价于下边-->
-    <ch :prop1="prop1"
-        @update:prop1="data => prop1 = data">
+  {{prop1}} <br>
+  <lei-input :prop1.sync="prop1"></lei-input>
+  <!--等价于下边-->
+  <lei-input :prop1="prop1"
+             @update:prop1="data => prop1 = data">
 
-    </ch>
+  </lei-input>
 
 
 </div>
 
 <script>
-    var ch = {
-        template: `<input type="text"
+  var leiInput = {
+    template: `<input type="text"
                             :value="prop1"
                             @input="$emit('update:prop1', $event.target.value)" >`,
-        props: ["prop1"]
+    props: ["prop1"]
 
-    }
-    vm = new Vue({
-        el: '#app',
-        components: {ch},
-        data: {prop1: 'some'}
-    })
+  }
+  vm = new Vue({
+    el: '#app',
+    components: {leiInput},
+    data: {prop1: 'some'}
+  })
 
 </script>
 

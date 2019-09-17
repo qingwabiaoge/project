@@ -1310,17 +1310,19 @@ Model.findById(id, [projection], [options], [callback])
             })     
 ```
 
-##### 查询条件
+### 查询条件
 
 ```
 $or　　　　或关系
 $nor　　　 或关系取反
+$not      取反与正则表达式联合使用时极为有效，用来查找那些与特定模式不匹配的文档。
 $gt　　　　大于
 $gte　　　 大于等于
 $lt　　　　小于
 $lte　　　 小于等于
-$ne　　　　不等于
-$in　　　　在多个值范围内
+$eq       等于 equal
+$ne　　　　不等于 no eual
+$in　　　　[10,15,20]  在数组里的
 $nin　　　 不在多个值范围内
 $all　　　 匹配数组中多个值
 $regex　　 正则，用于模糊查询
@@ -1342,6 +1344,32 @@ Dog.find({name: 'xiaohua', age: {$in: [10, 20]}}, callback)
 ```
 
 #####  $where
+
+1、$where操作的原理：
+
+当由where操作时，他将逐一遍历mongo集合中文档对象，将其属性由Bson格式转换为Json。然后能通过json找到对象属性，供js来调用。
+
+而如果不用where语句进行比较，则是通过文档对象的Bson二进制形式直接进行比较，类似于关系型数据库。
+
+2、缺点
+
+他的的比较操作，是必须逐一遍历该集合下所有文档对象，将二进制转换为json对象在磁盘上进行判断操作！！！这将带来多大的性能消耗，效率很低。
+
+3、优点
+
+1）、能写出比较复杂的操作语句
+
+2）、能使的表达式写的比较容易
+
+4、使用方法
+
+db.student.find({$where:'this.yuwen_score>70 && this.shuxue_score<90 || this.huaxue_score>88'},{name:1,_id:0})
+
+查询yuwen_score分数大于70且数学分数小于90或者化学大于88的人，输出名字，不输出id号
+
+
+
+
 
 　　如果要进行更复杂的查询，需要使用$where操作符，$where操作符功能强大而且灵活，它可以使用任意的JavaScript作为查询的一部分，包含JavaScript表达式的字符串或者JavaScript函数
 

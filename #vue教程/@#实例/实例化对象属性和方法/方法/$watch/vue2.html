@@ -10,10 +10,10 @@
 
 <div id="app">
 
-  <label >firstName
+  <label>firstName
     <input type="text" v-model="firstName">
   </label>
-  <label >lastName
+  <label>lastName
     <input type="text" v-model="lastName">
   </label>
 </div>
@@ -27,16 +27,16 @@
     }
   })
 
-  vm.$watch('firstName', function (new_,old_) {
+  vm.$watch('firstName', function (new_, old_) {
     //computed
     this.fullName = new_ + ' ' + this.lastName
     //watch
-    console.log('fullName:'+this.fullName)
+    console.log('fullName:' + this.fullName)
   })
 
-  Vue.prototype.$watch.call( vm,'lastName', function (new_,old) {
+  Vue.prototype.$watch.call(vm, 'lastName', function (new_, old) {
     this.fullName = this.firstName + ' ' + new_
-    console.log('lastName:',this.lastName)
+    console.log('lastName:', this.lastName)
   })
 </script>
 

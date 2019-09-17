@@ -164,7 +164,9 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 ##### :propx:sync
 
-###### propx:sync不限于value input
+###### 原理
+
+propx:sync不限于value input,但是不能用于原生组件
 
 ```javascript
     <ch :prop1.sync="prop1"></ch>

@@ -1,5 +1,5 @@
 const Dog = require('../../../model/Dog')
 const callback = require('../../callback')
-Dog.find({name: 'xiaohua', age: {$in: [10, 20]}}, callback)
-
-
+Dog.find({$where:"this.age<=10"},function(err,docs){
+  console.log(docs);
+})

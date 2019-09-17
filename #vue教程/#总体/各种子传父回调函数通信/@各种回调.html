@@ -29,7 +29,7 @@
     props: ['value', 'fn'],
     methods: {
       inputfn(value) {
-
+        //对象键值赋值
         this.$parent.msg = 0
         //以下都是回调函数
         this.$parent.fn(1)
@@ -37,7 +37,6 @@
         this.$emit('update:value', 3)
         this.$emit('input', 4)
         this.$listeners.input(5)
-
       }
     }
 

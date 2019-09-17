@@ -8,6 +8,6 @@ const name_ = new RegExp(undefined, 'i')
 Dog.find({name}, callback)
 
 
-//{$regex: '字符串'}所以要用下边的这个
-Dog.find({name: {$regex: ''}}, callback)
 //结果同上面
+Dog.find({name: {$regex: ''}}, callback)
+

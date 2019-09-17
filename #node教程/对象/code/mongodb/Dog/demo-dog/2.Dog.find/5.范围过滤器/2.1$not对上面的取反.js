@@ -1,5 +1,7 @@
 const Dog = require('../../../model/Dog')
 const callback = require('../../callback')
-Dog.find({name: 'xiaohua', age: {$not: {$lte: 11}}}, callback)
+
+Dog.find({age: {$not: {$in: [13,15]}}}, callback)
+
 
 
