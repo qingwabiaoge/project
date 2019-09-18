@@ -12,7 +12,7 @@
     div > div {
         border: 1px solid #f00;
     }
-//
+
     div > div > div {
         border: 1px solid #00f;
     }
@@ -25,35 +25,35 @@
     <ul>
 
         <!-------------------path----------------------------------------------------->
-        <router-link to="/fa/1?q=2">to</router-link>
+        <router-link to="/fa/1?q=1">to</router-link>
         <br>
 
-        <router-link :to="{ path: '/fa/1?q=2'}">     <!-- 注path:不能param因为path里本身就有param-->
+        <router-link :to="{ path: '/fa/2?q=2'}">     <!-- 注path:不能param因为path里本身就有param-->
             path
         </router-link>
         <br>
 
         <!-------------------path+query----------------------------------------------------->
-        <router-link :to="{ path: '/fa/1',query:{q:2}}">     <!-- 注path:不能param因为path里本身就有param-->
+        <router-link :to="{ path: '/fa/3',query:{q:3}}">     <!-- 注path:不能param因为path里本身就有param-->
             path+query
         </router-link>
         <br>
 
-
+      <hr>
         <!-------------------name+params+query----------------------------------------------------->
-        <router-link :to="{name:'id',params:{id:1},query:{q:2}}">
+        <router-link :to="{name:'id',params:{id:4},query:{q:4}}">
             name
         </router-link>
-        <br>
 
+      <hr>
         <router-link :to="{name:'id',params:{id:{a:1,b:2}},query:{id:{a:1,b:2}}}">
             传递对象
         </router-link>
-        <br>
 
 
+      <hr>
         <!-------------------程序形式----------------------------------------------------->
-        <button @click="$router.push({ name: 'id',params:{id: 2}, query: { q: 2 }})">
+        <button @click="$router.push({ name: 'id',params:{id: 5}, query: { q: 5 }})">
             $router.push()替代to
         </button>
 

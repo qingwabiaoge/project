@@ -8,7 +8,7 @@
 作用        | 切换页面级别的组件 | 切换模块级别的组件
 设置组件参数 | history栈的值   | is的值     
 组件生命周期 |切换运行distroyed|切换运行distroyed
-keeplive    | 切换运行activate deactivate| 切换运行activate deactivate        
+加< keeplive>    | 切换运行activate deactivate| 切换运行activate deactivate        
 transition | 可用            |可用      
 
 

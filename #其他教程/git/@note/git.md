@@ -1,62 +1,68 @@
-[[TOC]]
-# git commit -m'' 提交和标签
-
-![](./img/2.png)
-
-# Git 工作区、暂存区和版本库
+# 工作区、暂存区和版本库
 
 
 * 工作区：即你的电脑里能看到的目录，平时开发代码的地方
 
 * 暂存区：保存临时改动
 
-* 版本库：指向最后一次提交的结果
+* 版本库：
+
+# 标签
 
 
 
+![](./img/2.png)
 
+# 版本操作
+![](img/7.png)
 
 # git init
 
 ```
 git init 初始化新项目
-
 ```
-
-
 
 # git log
 
+### 查看版本号
+
 ```
-//查看版本号
 git log --oneline
 
 git log --pretty=oneline
 
 
-
-
 github上也可以找
 
-webstorm可以找
+webstorm versition log可以找
 
 ```
+
+### 分支图打印
+
+![](img/4.png)
+
+```
+git log --graph --abbrev-commit --decorate --date=relative --all
+```
+
+### webstorm git log
 
 # git logref
 
 ```javascript
- //拉取操作日志
+git logref //拉取操作日志
 ```
 
 # git add 
 
-添加操作到缓存
+工作文件添加操作到缓存
 
 
 ```
 git add .
 
-git add 1.txt
+git add 1.txt //添加特定文件
 ```
 
 # git rm
@@ -80,103 +86,52 @@ git rm -r  --cached .
 git add .
 ```
 
-# head
-
-head指向当前分支
-
-# git reset && git checkout
 
 
-![](img/7.png)
-```
-git checkout . //检出到缓存到工作区
+# git commit -m'' 
 
-```
+提交和设置标签名字
 
+# git reset xxx 
 
-```
-git reset a1a1a1 --hard  // 检出到缓存区和工作区
-
-git reset master //检出到到缓存区
-```
-```
-git checkout a1a1a1 //head移动到任何一次提交,不隐藏以后版本的提交,建立新分支!,分支重命名 git checkout -b branchA
-git checkout master // header移动到分支的最高版本
-
-```
+![img](img/4428238-fcad08ebe26933a6.webp)
 
 
 
+### reset三种模式区别和使用场景
 
-# git revert
+1. **--hard**：重置位置的同时，直接将 **working Tree工作目录**、 **index 暂存区**及 **repository** 都重置成目标**Reset**节点的內容,所以效果看起来等同于清空暂存区和工作区。
+2. **--soft**：重置位置的同时，保留**working Tree工作目录**和**index暂存区**的内容，只让**repository**中的内容和 **reset** 目标节点保持一致，因此原节点和**reset**节点之间的【差异变更集】会放入**index暂存区**中(**Staged files**)。所以效果看起来就是工作目录的内容不变，暂存区原有的内容也不变，只是原节点和**Reset**节点之间的所有差异都会放到暂存区中。
+3. **--mixed（默认）**：重置位置的同时，只保留**Working Tree工作目录**的內容，但会将 **Index暂存区** 和 **Repository** 中的內容更改和reset目标节点一致，因此原节点和**Reset**节点之间的【差异变更集】会放入**Working Tree工作目录**中。所以效果看起来就是原节点和**Reset**节点之间的所有差异都会放到工作目录中。
 
-```
-git revert -n 8ce5
-```
-![8.png](./img/8.png )
-
-
-
-
-
-# git branch 本地分支
-
-
+# git branch 
 
 ### 列出分支
 
->本地分支
+本地分支
+
 ```
 git branch
 ```
->远程分支
+远程分支
+
 ```
 git branch -r
 ```
->所有分支
+所有分支
 
 ```
 git branch -a
 ```
 
-
-### 切换分支
-
-```
-git checkout dev //拉取dev的本到工作区和缓存,并设置为head
-```
-
-
 ### 创建并切换分支
-```
 
+```
 $ git branch dev
-$ git checkout dev
-
-
 ```
-
-### 从任何版本建立分支
-
- ```
-git checkout a1a1a1 //head移动到任何一次提交,不隐藏以后版本的提交,建立新分支!,
-
-git checkout -b branchA //为分支命名 
-
- ```
-
-### 分支图打印
-
-![](img/4.png)
-
-
-```
-git log --graph --abbrev-commit --decorate --date=relative --all
-```
-
-webstorm git log
 
 ### 重命名分支
+
 ```
  git branch -m oldBranchName newBranchName
 ```
@@ -192,9 +147,32 @@ git branch -d dev
 ```
 git merge dev
 ```
-# 远程分支
 
-### git remote 
+
+# git checkout
+
+### 移动head到dev标签
+
+```
+git checkout dev //移动head到dev标签,head移动到哪个节点就编辑哪个节点
+```
+
+### head移动到任何一次提交
+
+```
+git checkout a1a1a1 //head移动到任何一次提交,不隐藏以后版本的提交,建立新分支!,
+git checkout -b branchA //为分支命名 
+```
+
+# git revert
+
+
+
+![8.png](./img/8.png )
+
+# 
+
+# git remote 
 
 ##### 添加远程主机和主机名
 
@@ -227,7 +205,7 @@ git remote add origin [url]
 
 ```
 
-### git push & git pull 
+# git push & git pull 
 
 ##### 初次建立建立远程分支
 
@@ -251,11 +229,12 @@ git pull
 git push
 ```
 
+![](./img/9.png)
+
 ##### 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
 
 ```
 git push -f
-
 ```
 
 ##### 删除远程分支
@@ -282,8 +261,6 @@ git checkout dev
 
 # git diff
 
-
-
 ```
 git diff  //比较工作区和缓存区的不同
 
@@ -291,16 +268,14 @@ git diff HEAD //比较工作区和HEAD
 
 git diff origin/master 比较工作区和网络分支
 
-git diff master dev 比较工作区和分支的最高版本
-
-
-```
-
-比较追加到文件
-
+git diff master dev 比较master和dev标签的节点内容
 
 ```
 
+比较内容追加到文件
+
+
+```
 覆盖 git diff [branchA] [branchB] > a.txt
 追加 git diff [branchA] [branchB] >> a.txt
 git diff --color > foo.diff
@@ -308,27 +283,23 @@ foo.diff用notepad++/sublime 之类的编辑器打开，高亮颜色
 
 ```
 
+webstorm比较
 
 # .gitignore
 
-忽略的文件
-
-
+忽略监听的文件
 
 # git config
 
 命令别名
 
 ```
-
 git config --global alias.xxx '开头省去 git xxx xxx xxx'
 ```
 
 ```
 git config --global alias.lg " log --graph --abbrev-commit --decorate --date=relative --a
 ll"
-
-
 ```
 
 

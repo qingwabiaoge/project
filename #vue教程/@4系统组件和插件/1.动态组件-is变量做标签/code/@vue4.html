@@ -6,53 +6,53 @@
 <script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
 <link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
 <div id="app">
-    <button @click="cur='cl1'">cl1</button>
-    <button @click="cur='cl2'">cl2</button>
-    <transition name="fade">
-        <keep-alive>
-            <component :is="cur"></component>
-        </keep-alive>
-    </transition>
+  <button @click="cur='cl1'">cl1</button>
+  <button @click="cur='cl2'">cl2</button>
+  <transition name="fade">
+    <keep-alive>
+      <component :is="cur"></component>
+    </keep-alive>
+  </transition>
 </div>
 
 <script>
-    Vue.mixin({
-        created() {
-            console.log(this._uid + 'creat')
-        },
-        destroyed() {
-            console.log(this._uid + 'destroy')
-        },
-        actived() {
-            console.log(this._uid + 'actived')
-        },
-        deactivated() {
-            console.log(this._uid + 'deactivated')
-        }
+  Vue.mixin({
+    created() {
+      console.log(this._uid + 'creat')
+    },
+    destroyed() {
+      console.log(this._uid + 'destroy')
+    },
+    actived() {
+      console.log(this._uid + 'actived')
+    },
+    deactivated() {
+      console.log(this._uid + 'deactivated')
+    }
 
-    })
-    Vue.component('cl1', {template: `<div>cl1</div>`})
-    Vue.component('cl2', {template: `<div>cl2</div>`})
-    const vm = new Vue({
-        el: '#app',
-        data: {
-            cur: 'cl1'
-        }
-    })
+  })
+  Vue.component('cl1', {template: `<div>cl1</div>`})
+  Vue.component('cl2', {template: `<div>cl2</div>`})
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      cur: 'cl1'
+    }
+  })
 
 
 </script>
 
 <style>
 
-    .fade-enter-active, .fade-leave-active {
-        transition: all .2s;
-    }
+  .fade-enter-active, .fade-leave-active {
+    transition: all .2s;
+  }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-    {
-        left: -100%;
-    }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+  {
+    left: -100%;
+  }
 
 
 </style>
