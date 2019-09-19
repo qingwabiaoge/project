@@ -4,7 +4,10 @@ export default {
 }
 
 
-/*本质等价于
+
+
+
+/*本质等价于下边, import obj  from '..'  会引入 default
 
   module.exports={
 

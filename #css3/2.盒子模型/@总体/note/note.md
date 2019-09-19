@@ -5,11 +5,11 @@ css属性|块级元素	| 内联可替换元素 <br />img,input textarea,select,v
 另起一行| √  |×	|×                 
 高度| √ |√	|×
 宽度| √ |√	|×
-上下margin| √ |	√|x 完全冲且看不到
+上下margin| √ |	√|冲破块级容器
 左右margin | √ | √ |**√**
-上下padding| √ |√	| 乄上下补丁会冲破容器 
+上下padding| √ |√	| 乄冲破块级容器 
 左右padding| √ |√ |**√**
-上下border| √ |√	| 乄上下border会冲破容器 
+上下border| √ |√	| 乄冲破块级容器 
 左右border| √ |√ |**√**
 行高| √ |×|×
 Text-align| √ |√|×
@@ -84,15 +84,19 @@ Text-align| √ |√|×
   }
     .padding-margin {
 
-        margin-top: 50px; /* 不可用*/
-        margin-bottom: 50px; /*不可用*/
+  
         margin-left: 50px; /*可用*/
         margin-right: 50px; /*可用*/
         padding-left: 50px; /*可用*/
         padding-right: 50px; /*可用*/
+        
+
+        margin-top: 50px; /* 会冲破容器*/
+        margin-bottom: 50px; /*会冲破容器*/
         padding-top: 50px; /*不好用会冲破容器*/
         padding-bottom: 50px; /*不好用会冲破容器*/
         border: 10px solid #000; /*可用,上下border也会冲破容器*/
+        
         width: 300px; /*不可用*/
         height: 300px; /*不可用*/
         background: #ccc;

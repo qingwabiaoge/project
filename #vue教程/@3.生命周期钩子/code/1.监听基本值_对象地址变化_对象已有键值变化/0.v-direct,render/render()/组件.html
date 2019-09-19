@@ -1,0 +1,25 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+  <anchored-heading :level="1">ceshi</anchored-heading>
+
+</div>
+<script>
+
+  Vue.component('anchored-heading', {
+    render: function (createElement) {
+      return createElement(
+        'h' + this.level,   // 标签名
+        this.$slots.default // slot
+      )
+    },
+    props: {
+      level: {
+        type: Number,
+        required: true
+      }
+    }
+  })
+
+  new Vue({el: '#app'})
+</script>

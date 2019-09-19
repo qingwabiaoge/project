@@ -25,7 +25,7 @@
   Vue.directive('h', {
 
     bind: function (el, binding, vnode, oldVnode) {
-      console.log(arguments)
+      console.log(el, binding, vnode, oldVnode)
       console.log('1.bind()')
     },
     inserted: function (el, binding) {

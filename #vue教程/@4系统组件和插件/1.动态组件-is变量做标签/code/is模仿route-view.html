@@ -8,9 +8,9 @@
 
 
 <div id="app">
-    <route-view name="cl" prop="prop">
+  <route-view name="cl" prop="prop">
 
-    </route-view>
+  </route-view>
 
 
 </div>
@@ -18,24 +18,24 @@
 
 <script>
 
-    const cl = {template: '<div>{{prop}}</div>', props: ['prop']}
+  const cl = {template: '<div>{{prop}}</div>', props: ['prop']}
 
-    const routeView = {
-        //'cl'¼´¿ÉÒÔ×öisµÄ±äÁ¿ÖµÓÖ¿ÉÒÔ×ö±êÇ©
-        template: '<div><component :is="name" :prop="prop"></component>  </div>',
-        props: ['name', 'prop'],
-        components: {cl}
+  const routeView = {
+    //'cl'å³å¯ä»¥åšisçš„å˜é‡å€¼åˆå¯ä»¥åšæ ‡ç­¾
+    template: '<div><component :is="name" :prop="prop"></component>  </div>',
+    props: ['name', 'prop'],
+    components: {cl}
+  }
+
+  const vm = new Vue({
+    el: "#app",
+    data: {
+      msg: 'msg'
+    },
+    components: {
+      routeView
     }
-
-    const vm = new Vue({
-        el: "#app",
-        data: {
-            msg: 'msg'
-        },
-        components: {
-            routeView
-        }
-    })
+  })
 
 </script>
 

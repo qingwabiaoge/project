@@ -25,7 +25,7 @@
 
     const store = new Vuex.Store({
         state: {
-            obj: {a: 1}
+            obj: {a: 1} //$store.state.obj是一个对象,遵循对象的render方式
         },
         mutations: {
             assign: state => Object.assign(state.obj, {b: 1}),
