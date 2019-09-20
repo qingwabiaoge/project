@@ -7,7 +7,7 @@ export default {
 
 
 
-/*本质等价于下边, import obj  from '..'  会引入 default
+/*上面代码被babel-node 封装为
 
   module.exports={
 
