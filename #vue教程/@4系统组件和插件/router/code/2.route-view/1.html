@@ -33,7 +33,7 @@
 
 </div>
 <script>
-  /**************************************** 这个router-view非常容易忘记*/
+                                      /* 这个router-view非常容易忘记*/
   const fa = {template: '<div>fa组件:<router-view></router-view></div>'}
 
   const cs = {template: '<div>/fa/cs</div>'}
@@ -42,9 +42,9 @@
   const router = new VueRouter({
 
       routes: [{//配置最顶级的<route-view/>
-        path: '/fa/', //<router-link/> 用什么path可以访问
-        name: 'fa', //<router-link/> 用什么name可以访问
-        component: fa, //is的默认值
+        path: '/fa/',
+        name: 'fa',
+        component: fa, //默认值
         children: [ //每个children对应一个<route-view/>
           {
             path: '/cs',

@@ -7,13 +7,11 @@
 
 <link href="https://element.eleme.cn/2.8/docs.b8e65c4.css" rel="stylesheet">
 
-<!--使用场景 有的页面需要一个模块 有的需要两个-->
+
 <div id="app">
 
-
+  <!--两个router-view代表切换的同级路由, /index和/admin,有的是一个模块 有的是两个模块 -->
   <router-view name='navbar'></router-view>
-
-  <!-- 和is类似,is没有默认值-->
   <router-view/>
 
 
@@ -29,15 +27,15 @@
   const router = new VueRouter({
     routes: [
       {
-        path: '/',  //配置<router-link/> 用什么path可以访问
-        name: 'login', //配置<router-link/> 用什么name可以访问
+        path: '/',
+        name: 'login',
         component: Login
       },
       {
 
-        path: '/admin',  //配置<router-link/> 用什么path可以访问
-        name: 'Admin', //配置<router-link/> 用什么name可以访问
-        components: {// 配置<router-view/>组件
+        path: '/admin',
+        name: 'Admin',
+        components: {
           navbar: NavBar,
           default: Admin
         }

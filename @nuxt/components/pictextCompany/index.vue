@@ -1,14 +1,16 @@
 <template>
   <div class="pictextCompany">
+    {{this.$store.getters["components/components"].brand}}
+
     <div>
-      <img v-lazy="$store.state.components.brand.image" :alt="$store.state.components.brand.tilte">
+      <img v-lazy="image" :alt="title">
     </div>
     <card type="inverse" border="true" style="margin-top: 6px">
       <h2 class="text-center">
-       {{$store.state.components.brand.etitle}}
+        {{subtitle}}
       </h2>
       <p>
-        {{$store.state.components.brand.description|setLongth(num)}}
+        {{description|setLength(num)}}
         <span v-if="more" @click="num=10000;more=false">...</span>
       </p>
       <p class="text-center color-primary">
@@ -27,14 +29,10 @@
       return {
         num: 500,
         more: true,
+        ...this.$store.getters["components/components"].brand
       }
     },
-    filters: {
 
-      setLongth(value, n) {
-        return value.substring(0, n)
-      }
-    },
 
   }
 </script>

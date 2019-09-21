@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <carouselFull></carouselFull>
 
     <title-zh-english :data="{title:'produces',subtitle:'产品'}">
@@ -7,15 +8,14 @@
     </title-zh-english>
 
 
-      <pictextFour>
+    <!--  <pictextFour>
 
 
-      </pictextFour>
-
+      </pictextFour>-->
 
 
     <div :style="{background:`url(${$store.state.global.background2})`,backgroundAttachment: 'fixed'} ">
-      <div></div>
+
       <title-zh-english :data="{title:'brand',subtitle:'品牌'}">
 
       </title-zh-english>
@@ -26,6 +26,7 @@
       </div>
 
     </div>
+
     <title-zh-english :data="{title:'service',subtitle:'服务'}">
 
     </title-zh-english>
@@ -36,15 +37,13 @@
         </h3>
       </div>-->
 
-    <pictextOne>
+    <!--   <pictextOne>
 
-    </pictextOne>
+       </pictextOne>-->
 
     <div
       :style="{background:`url(${$store.state.global.background2})`,backgroundAttachment: 'fixed'} "
-      style="padding-bottom: 90px; margin-bottom: -90px"
-
-    >
+      style="padding-bottom: 90px; margin-bottom: -90px">
 
 
       <title-zh-english :data="{title:'trend',subtitle:'潮流'}"></title-zh-english>

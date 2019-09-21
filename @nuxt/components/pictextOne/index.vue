@@ -59,11 +59,14 @@
 <style lang="less" module>
   .pictextOne {
     background: #f1f1f1;
+
     section {
       padding: 70px 0;
+
       > * {
         text-transform: uppercase;
       }
+
       h2 {
         font-size: 94px;
         margin-top: 0;
@@ -71,15 +74,18 @@
         font-weight: bolder;
         color: @global-color-primary;
       }
+
       div {
         margin-top: 10px;
         height: 3px;
         width: 30%;
         background: @global-color-primary;
       }
+
       h3 {
         font-size: 42px;
       }
+
       p {
         font-size: 16px;
         line-height: 2;
