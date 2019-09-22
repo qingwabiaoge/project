@@ -4,7 +4,7 @@
 
     <!--<login></login>-->
     <div class="uk-background-default uk-padding  uk-box-shadow-small uk-box-shadow-hover-medium">
-      <router-link to="/"><img :src="$store.state.global.logo" :alt="$store.state.global.name" style="max-height: 50px">
+      <router-link to="/"><img :src="$store.state.global.logo" :alt="components.brand.title" style="max-height: 50px">
       </router-link>
 
 
@@ -42,7 +42,7 @@
 
     </el-row>
     <el-row class="uk-text-muted uk-text-center uk-padding">
-      <span>{{$store.state.global.sitename}}</span>
+      <span>{{$store.state.global.name}}</span>
     </el-row>
   </div>
 </template>

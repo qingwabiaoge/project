@@ -21,7 +21,7 @@ const goodsSchema = mongoose.Schema({
 
 //tags
   cid: Number,
-  flag: Boolean,
+  flag: {type:Boolean,default:false},
 //sort
   sort: Number,
 

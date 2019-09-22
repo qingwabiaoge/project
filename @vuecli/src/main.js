@@ -15,7 +15,7 @@ Vue.component('uniform', uniform)
 
 import ElementUI from 'element-ui';
 Vue.use(ElementUI);
-
+import 'element-ui/lib/theme-chalk/index.css';
 
 
 import VueLazyload from 'vue-lazyload'
@@ -23,8 +23,14 @@ Vue.use(VueLazyload)
 
 
 
-import 'element-ui/lib/theme-chalk/index.css';
 import './assets/less/all/index.css'
+
+
+function importPlugins (r) {
+  r.keys().forEach(r);
+}
+
+importPlugins(require.context('./plugins', false, /\.js$/));
 
 
 Vue.prototype.$axios = axios;

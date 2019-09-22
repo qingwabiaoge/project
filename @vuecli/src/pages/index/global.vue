@@ -19,13 +19,13 @@
     data() {
       return {
         uniformData: {},
-        global: {},
+
       };
     },
 
     methods: {
       async submit() {
-        this.$store.dispatch('global/patch',this.uniformData)
+        this.$store.dispatch('global/patch', this.uniformData)
         this.$refs.uniform.visible = false
       },
 

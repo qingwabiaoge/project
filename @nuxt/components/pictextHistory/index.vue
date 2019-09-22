@@ -1,7 +1,7 @@
 <template>
 
   <div :class="$style['history']"
-       :style="{backgroundImage:`url(${backgroundImage})`}">
+       :style="{backgroundImage:`url(${components.history.background})`}">
 
     <section>
 
@@ -12,7 +12,7 @@
     <!--导航-->
     <ul>
       <li
-        v-for="item in ul"
+        v-for="item in components.history.children"
         :class="{active:cur===item}"
         @click="cur = item">
         <span> {{item.title}}</span>
@@ -34,7 +34,7 @@
     data() {
       return {
         cur: [],
-        ...this.$store.state.components.pictextHistory
+
       }
     },
 

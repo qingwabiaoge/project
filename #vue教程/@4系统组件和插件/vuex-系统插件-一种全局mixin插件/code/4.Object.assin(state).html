@@ -4,20 +4,19 @@
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 
 <div id="app">
-    <button @click="$store.commit('setN')">btn</button>
     {{$store.state }}
 </div>
 
 <script>
     const store = new Vuex.Store({
 
-        state: [],
-
-
+        state: {
+            a: null
+        },
         mutations: {
 
             setN(state) {
-              state.push(1)
+                Object.assign(state, {a: 1})
 
             }
 
@@ -31,7 +30,9 @@
 
         el: '#app',
         store,
-
+        created() {
+            this.$store.commit('setN')
+        }
     })
 
 

@@ -9,7 +9,7 @@
         <el-row>
           <el-col :md="12" class="left">
 
-            Welcome To {{$store.getters.components.brand.title}}
+            Welcome To {{components.brand.title}}
           </el-col>
 
           <el-col :md="12" class="right">
@@ -45,7 +45,7 @@
     <div class="banner container">
       <el-row>
         <el-col :md="12" class="left">
-          <img :src="$store.state.global.logo" alt="$store.state.components.brand.title">
+          <img :src="$store.state.global.image" :alt="components.brand.title">
         </el-col>
 
         <el-col :md="12" class="right  hidden-xs-only" >
@@ -61,7 +61,7 @@
     <nav class="nav">
       <div class="container">
         <nuxt-link to="/">首页</nuxt-link>
-        <nuxt-link v-for="item in $store.getters.categorys" :to="item.href||'#'" class="hover-underline" :key="item.title">{{item.title}}
+        <nuxt-link v-for="item in categorys" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">{{item.title}}
         </nuxt-link>
       </div>
     </nav>

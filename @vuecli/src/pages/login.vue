@@ -2,7 +2,7 @@
   <div id="login">
     <el-card class=" uk-padding-left-lg uk-padding-right-lg uk-box-shadow-medium uk-box-shadow-hover-large">
       <div slot="header">
-        <img class="logo" :src="logo" alt="">
+        <img class="logo" :src="logo" alt="SHENBOMA">
       </div>
       <el-form :model="loginForm" status-icon :rules="$store.state.rules" ref="loginForm" label-width="100px"
                class="demo-ruleForm"
@@ -65,8 +65,10 @@
         this.$refs[formName].resetFields();
       }
     },
-    async created() {
-      this.logo = this.$store.state.global.logo
+   computed:{
+      logo(){
+        return  this.$store.state.global.logo
+      }
 
     },
     mounted() {

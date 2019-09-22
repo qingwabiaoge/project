@@ -11,7 +11,7 @@
         <el-form :inline="true">
 
           <el-form-item>
-            <el-input v-model="serchBoxValue"
+            <el-input v-model="searchInputValue"
                       clearable
                       prefix-icon="el-icon-search"
                       placeholder="输入名称搜索产品"
@@ -41,7 +41,7 @@
 
         <template slot-scope="scope">
 
-          <img v-lazy="scope.row.images[0].url" alt="" style="width: 50px;height: 50px">
+          <img v-lazy="scope.row.image" alt="" style="width: 50px;height: 50px">
         </template>
 
       </el-table-column>
@@ -53,12 +53,14 @@
       >
       </el-table-column>
       <el-table-column
-        prop="category"
+        prop="cid"
         label="类别"
-
-        :filters="$store.getters.goodsCategory"
+        :filters="categorFilters"
         :filter-method="filterHandler">
+        <template slot-scope="{row}">
+          {{(goodsCategory.filter(item=>item.id===row.cid))[0].title}}
 
+        </template>
       </el-table-column>
 
       <el-table-column
@@ -89,19 +91,19 @@
         :filters="[
                   {
                    value: true,
-                   label: '推荐',
+
                     text: '推荐'
                   },
                   {
                  value: false,
-                 label: '不推荐',
+
                  text: '不推荐'
                   }]"
         :filter-method="filterHandler"
       >
         <template slot-scope="scope">
 
-          <span v-if="scope.row.publish">上架</span><span v-else>下架</span>
+          <span v-if="scope.row.flag">推荐</span><span v-else></span>
         </template>
       </el-table-column>
 
@@ -157,6 +159,7 @@
 
 
     <uniform ref="uniform" :data="uniformData" @submit='submit'></uniform>
+    <div class="test">{{filterTableData}}</div>
   </div>
 </template>
 
@@ -170,21 +173,29 @@
         tableData: [],
         uniformData: {},
         listLoading: false,
-        serchBoxValue: undefined,
+        searchInputValue: undefined,
         //要显示的第几页和每页的数量
         total: 0,
         page: 1,
         //列表选中项---------------
         sels: [],
+        curCid:undefined
         // 按照栏目过滤
       }
     },
 
     computed: {
+      categorFilters() {
+        //格式为"[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]
+        let filters = []
+        this.goodsCategory.forEach((item, index, self) => {
+          filters.push({text: item.title, value: item.id})
+        })
+        return filters
+      },
       filterTableData: function () {
-        const serchBoxValue = new RegExp(this.serchBoxValue)
-        return this.tableData.filter(item => serchBoxValue.test(item.title))
-
+        const searchInputValue = new RegExp(this.searchInputValue)
+        return this.tableData.filter(item => searchInputValue.test(item.title))
       }
 
     },
@@ -193,6 +204,7 @@
 
       async gets() {
         const {goodss} = await this.$axios.get('goodss')
+        console.log(goodss)
         this.tableData = goodss
       },
 //通用表格过滤器------------------------------------------------------------
@@ -212,7 +224,7 @@
         this.uniformData = {
           type: 'goods',
           images: [],//验证upload ruler需要不可删除
-          category: this.$route.params.cid - 0,
+          cid: this.curCid,
           publish: true,
           pv: this.$store.state.tool.randomNum(1500, 20000),
           sales: this.$store.state.tool.randomNum(5, 100),
@@ -268,13 +280,15 @@
       ,
 
       //提交数据按钮
-      submit: function () {
+      submit: function (data) {
 
         if (!this.uniformData._id) {// 如果不存在_id 是新增商品操作
           this.$axios.post('goods', {...this.uniformData, image: this.uniformData.images[0].url}) //计算出首页缩略图地址方便list写法和articl通用
         } else {// 如果是编辑
           this.$axios.patch('goods', {...this.uniformData, image: this.uniformData.images[0].url})
         }
+        console.log(data)
+        this.curCid=data
         this.gets()
       },
 

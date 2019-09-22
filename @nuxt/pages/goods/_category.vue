@@ -1,15 +1,13 @@
 <template>
   <div>
-    <div class="text-center">
-      <img v-lazy="$store.state.components.pictextFour.categoryImage" :alt="$store.state.global.title">
-    </div>
+
 
     <div class="container">
 
       <div style=" margin-bottom: 60px; margin-top: 60px">
         <el-button-group :class="$style['button-group']">
 
-          <el-button plain v-for="item in this.$store.getters.categorys[0].ul">
+          <el-button plain v-for="item in this.goodsCategory">
             <nuxt-link :to="`/produces/${item.title}?page=1`||'#'" :key="item.title">
               {{item.title}}
             </nuxt-link>

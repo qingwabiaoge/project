@@ -7,7 +7,10 @@
 
     </title-zh-english>
 
+    <el-row :gutter="20">
+      <el-col :md="12"><img v-for="item in components.goods.children" :src="item.image" alt="" style="height: 500px"></el-col>
 
+    </el-row>
     <!--  <pictextFour>
 
 

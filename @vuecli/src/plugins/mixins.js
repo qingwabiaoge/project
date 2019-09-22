@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('components')
 //把mixin挂载在vue实例
 Vue.mixin({
-  props: ['data'],
+  // props: ['data'],
   methods: {
     // 必传 标题，描述。其他的 meta 标签通过 payload 注入，其中，每个 meta 的 hid 需要是唯一的。
     $seo(title, content, payload = []) {
@@ -13,17 +13,16 @@ Vue.mixin({
         meta: [{
           hid: 'description',
           name: 'description',
-          content
+          content:'content'
         }].concat(payload)
       }
     },
 
   },
   computed: {
-
     ...mapGetters([
       'components',
-      'articleCategory',
+      'newsCategory',
       'categorys',
       'goodsCategory',
     ])

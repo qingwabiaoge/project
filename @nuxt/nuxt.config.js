@@ -5,7 +5,6 @@ module.exports = {
     'pages/-ui/*',
     'pages/-demo/*',
    'pages/api/*',
-    'pages/brand/*'
     ],
   // static: {'index': ['index.html', 'index.htm']},
   //本配置可以在server ,插件$axios使用

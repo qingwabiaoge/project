@@ -8,14 +8,14 @@
           <el-col :md="12">
             <h2>contact us</h2>
 
-            <p>TEL:{{$store.state.components.contact.tel}}</p>
+            <p>TEL:{{components.contact.tel}}</p>
             <p>
-              {{$store.state.components.brand.description|setLength(100)}}...
+              {{components.brand.description|setLength(100)}}...
             </p>
             <h2>ADDRESS</h2>
 
             <p>
-              {{$store.state.components.contact.address}}
+              {{components.contact.address}}
             </p>
           </el-col>
           <el-col :md="{span: 10, offset: 2}" :xs="{span: 24, offset: 0}">
@@ -29,8 +29,8 @@
                      ref="message"
 
             >
-              <!--prop="name"用于在validate时提示>
-              <!--label视图中写在input之前的label-->
+              <!--prop="name"用于在validate时提示
+             label视图中写在input之前的label-->
               <el-form-item>
                 <!--message.name 数据-->
                 <el-input v-model="message.name"></el-input>
@@ -63,7 +63,7 @@
             <el-col :md="12">
 
               <section>
-                <a :href="`mailto:${$store.state.components.contact.email}`">
+                <a :href="`mailto:${components.contact.email}`">
                   <svg t="1552138607639" class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
                        xmlns="http://www.w3.org/2000/svg"
                        p-id="2138" xmlns:xlink="http://www.w3.org/1999/xlink">

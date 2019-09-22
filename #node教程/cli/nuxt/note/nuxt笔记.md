@@ -628,3 +628,9 @@ NODE_ENV=production pm2 start server/index.js
 NODE_ENV=production pm2 start pm2.json
 
 ```
+
+# 错误
+
+![1569154342601](img/1569154342601.png)
+
+后端api写错了

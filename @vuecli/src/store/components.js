@@ -18,7 +18,7 @@ export default {
     goodsCategory(state, getters) {
       return getters.components.goods.children
     },
-    articleCategory(state, getters) {
+    newsCategory(state, getters) {
       return getters.components.article.children
     },
     maxId(state, getters) {

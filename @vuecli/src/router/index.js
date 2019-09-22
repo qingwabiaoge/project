@@ -31,7 +31,7 @@ const router = new Router({
 
       children: [
         {
-          path: 'goodss/:cid',
+          path: 'goodss/',
           name: 'goodss',
           component: () => import('../pages/index/goodss'),
           meta: {

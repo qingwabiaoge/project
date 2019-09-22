@@ -9,7 +9,7 @@
 
     <!--ref一定要写到这里 form的外层-->
     <el-form :model="data" :rules="$store.state.rules" ref="form">
-      <h4>基本字段:</h4>
+      <h4><span v-if="data.type">推广字段</span><span v-else>基本字段</span>:</h4>
       <section>
 
         <el-form-item label="标题" :label-width="formLabelWidth" prop="title">
@@ -30,8 +30,8 @@
           :label-width="formLabelWidth" prop="cid">
           <el-select v-model="data.cid" placeholder="请选择">
             <el-option
-              v-for="item in data.type==='article'?$store.getters.articleCategory
-                                              :data.type==='goods'?$store.getters.goodsCategory:''"
+              v-for="item in data.type==='article'?articleCategory
+                                              :data.type==='goods'?goodsCategory:''"
               :key="item.title"
               :label="item.title"
               :value="item.id">
@@ -83,6 +83,14 @@
           <!--data.name 数据-->
           <el-input v-model="data.tel"
                     placeholder="请输入电话号码">
+          </el-input>
+        </el-form-item>
+        <el-form-item label="传真"
+                      :label-width="formLabelWidth"
+                      prop="fax">
+          <!--data.name 数据-->
+          <el-input v-model="data.fax"
+                    placeholder="请输入传真号码">
           </el-input>
         </el-form-item>
 
@@ -297,6 +305,8 @@
       <section v-if="data.type!=='global'">
 
         <el-form-item v-if="data.type==='component'">
+          <el-tooltip class="item" effect="dark" content="栏目是组件的一种,栏目级组件带有页面,可通过导航链接访问栏目页面" placement="top-start">
+
           <el-switch
             v-model="data.isCategory"
             active-text="栏目级组件"
@@ -304,20 +314,21 @@
             class="uk-padding-left-md"
           >
           </el-switch>
+          </el-tooltip>
         </el-form-item>
 
         <el-form-item>
           <el-switch
             v-if="data.type==='article'||data.type==='goods'"
             v-model="data.flag"
-            active-text="首页推荐"
+            active-text="推荐到潮流模块"
             inactive-text="不推荐"
             class="uk-padding-left-md"
           >
           </el-switch>
         </el-form-item>
 
-        <el-form-item >
+        <el-form-item>
           <el-switch
             v-model="data.publish"
             active-text="发布"
@@ -340,7 +351,7 @@
 
         <vue-editor id="editor"
                     useCustomImageHandler
-                    @imageAdded="handleImageAdded"
+                    @imageAdded="addImage"
                     :class="$style.editor"
                     v-model="data.content">
         </vue-editor>
@@ -349,7 +360,7 @@
 
       <section v-if="data.type==='global'">
 
-        <el-form-item label="主机地址"   :label-width="formLabelWidth">
+        <el-form-item label="主机地址" :label-width="formLabelWidth">
           <el-input type="text"
                     v-model.number="data.host"
                     auto-complete="off">
@@ -357,7 +368,7 @@
           </el-input>
         </el-form-item>
 
-        <el-form-item label="产品分页"   :label-width="formLabelWidth">
+        <el-form-item label="产品分页" :label-width="formLabelWidth">
           <el-input type="number"
                     v-model.number="data.goodsPagerSize"
                     auto-complete="off">
@@ -366,7 +377,7 @@
         </el-form-item>
 
 
-        <el-form-item label="新闻分页"  :label-width="formLabelWidth">
+        <el-form-item label="新闻分页" :label-width="formLabelWidth">
           <el-input type="number"
                     v-model.number="data.newsPagerSize"
                     auto-complete="off">
@@ -418,7 +429,7 @@
 
       //编辑器editor--------------------------------------------------------------------
 
-      handleImageAdded: function (file, Editor, cursorLocation, resetUploader) {
+      addImage: function (file, Editor, cursorLocation, resetUploader) {
         // An example of using FormData
         // NOTE: Your key could be different such as:
         // formData.append('file', file)
@@ -449,9 +460,10 @@
         try {
           await this.$refs.form.validate()
           this.visible = false
-          this.$emit('submit')
+          //sent  curCid to father component
+          this.$emit('submit',this.data.cid)
         } catch (e) {
-          this.$message('有必填的字段!')
+          this.$message('有必填的字段!'+e)
         }
       },
       reset(formName) {

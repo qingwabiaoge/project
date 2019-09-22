@@ -8,7 +8,7 @@
       default-active="$route.path"
       @close="handleClose"
       router>
-      <el-submenu index="admin">
+<!--      <el-submenu index="admin">
         <template slot="title">
           <i class="el-icon-goods"></i>
           <span>商品</span>
@@ -23,8 +23,12 @@
         </el-menu-item>
 
 
-      </el-submenu>
+      </el-submenu>-->
 
+      <el-menu-item index="/goodss">
+        <i class="el-icon-goods"></i>
+        <span slot="title">产品</span>
+      </el-menu-item>
       <el-submenu index="/article/">
         <template slot="title">
           <i class="el-icon-tickets"></i>
@@ -32,7 +36,7 @@
         </template>
 
         <el-menu-item
-          v-for="item in articleCategory"
+          v-for="item in newsCategory"
           :key="item.title"
           :index="`/articles/${item.id}`">
           {{item.title}}
@@ -52,8 +56,10 @@
               <span slot="title">组件</span>
             </el-menu-item>-->
       <el-menu-item index="/component">
+
         <i class="el-icon-picture"></i>
-        <span slot="title">新组件</span>
+        <span slot="title">组件&栏目</span>
+
       </el-menu-item>
 
 
@@ -81,9 +87,9 @@
           <i class="el-icon-setting"></i>
           <span slot="title">联系我们</span>
         </el-menu-item>-->
-      <el-menu-item index="/global">
+   <el-menu-item index="/global">
         <i class="el-icon-setting"></i>
-        <span slot="title">全局</span>
+        <span slot="title">全局配置</span>
       </el-menu-item>
     </el-menu>
 
@@ -97,9 +103,9 @@
     name: "sidebar",
     data() {
       return {
-        goodsCategory: this.$store.getters['components/goodsCategory'],
+        // goodsCategory: this.$store.getters['components/goodsCategory'],
         isCollapse: true,
-        articleCategory: this.$store.getters['components/articleCategory']
+        // articleCategory: this.$store.getters['components/articleCategory']
 
       };
     },
@@ -110,7 +116,8 @@
       handleClose(key, keyPath) {
         console.log(key, keyPath);
       }
-    }
+    },
+
   }
 </script>
 

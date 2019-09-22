@@ -16,9 +16,13 @@
       draggable
       :expand-on-click-node="false">
       <span class="custom-tree-node" slot-scope="{ node, data }">
-        <span v-if="data.isCategory">[栏目]</span><span
+              <el-tooltip class="item" effect="dark" content="栏目是组件的一种,栏目级组件带有页面,可通过导航访问栏目页面" placement="top-start">
+
+        <span v-if="data.isCategory" style="color: #0bb20c">[栏目]</span>    </el-tooltip><span
         @click="edit(node, data)">{{ data.title}}</span>
+
         <span>
+
           <el-button
             type="text"
             size="mini"

@@ -1,5 +1,5 @@
-function log (r) {
+function importJs (r) {
     r.keys().forEach(r);
 }
 
-log(require.context('./dir', true, /\.js$/));
+importJs(require.context('./dir', true, /\.js$/));
