@@ -48,9 +48,13 @@
           <img :src="$store.state.global.image" :alt="components.brand.title">
         </el-col>
 
-        <el-col :md="12" class="right  hidden-xs-only" >
+        <el-col :md="6" :offset="6" class="right">
 
-          <search  @search="search"></search>
+          <el-input
+            placeholder="search"
+            prefix-icon="el-icon-search"
+            v-model.lazy="inputValue">
+          </el-input>
         </el-col>
 
       </el-row>
@@ -61,7 +65,8 @@
     <nav class="nav">
       <div class="container">
         <nuxt-link to="/">首页</nuxt-link>
-        <nuxt-link v-for="item in categorys" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">{{item.title}}
+        <nuxt-link v-for="item in categorys" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">
+          {{item.title}}
         </nuxt-link>
       </div>
     </nav>
@@ -83,6 +88,7 @@
     line-height: 40px;
     font-size: 12px;
     text-transform: uppercase;
+
     .left {
       text-align: left;
       @media (max-width: @global-breakpoint-phone-max) {
@@ -90,10 +96,12 @@
       }
     }
   ;
+
     .right {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       .svg {
 
         height: 1.8em;
@@ -128,6 +136,7 @@
   .nav {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+
     > div {
       font-size: 16px;
       text-transform: uppercase;
@@ -135,6 +144,7 @@
       overflow-x: auto;
       display: flex;
       justify-content: space-between;
+
       > a {
 
         display: inline-block;
@@ -152,12 +162,14 @@
   export default {
     data() {
       return {
+        inputValue: ''
         // searchValue: '11'
       }
     },
-    methods: {
-      search(data) {
-        this.$router.push(`/produces/search/${data}`)
+    watch: {
+      inputValue(value) {
+
+        this.$router.push(`/goods/?title=${value}`)
       }
     }
 

@@ -1,8 +1,7 @@
+ // const json=require('./data.json')
 export default {
   namespaced: true,
   state: [],//state===components
-
-
   getters: {
     components(state, getters) {
       const _conponents = {}
@@ -39,13 +38,11 @@ export default {
     }
   },
 
-
   mutations: {
     set(state, data) {
       Object.assign(state, data)
     }
   },
-
 
   actions: {
     async get({commit}) {

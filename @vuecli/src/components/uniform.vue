@@ -278,7 +278,7 @@
                       v-if="data.type==='component'||data.type==='global'"
         >
 
-          <el-color-picker v-model="data.backgroundColor" show-alpha></el-color-picker>
+          <el-color-picker v-model="data.bg" show-alpha></el-color-picker>
         </el-form-item>
 
 
@@ -300,6 +300,15 @@
           </upload>
         </el-form-item>
       </section>
+      <h4 v-if="data.type!=='global'"> 超链接</h4>
+
+      <section v-if="data.type!=='global'">
+        <el-form-item label="超链接" :label-width="formLabelWidth" >
+          <el-input type="text" v-model="data.href" auto-complete="off"></el-input>
+        </el-form-item>
+
+      </section>
+
 
       <h4 v-if="data.type!=='global'"> 开关</h4>
       <section v-if="data.type!=='global'">
@@ -307,13 +316,13 @@
         <el-form-item v-if="data.type==='component'">
           <el-tooltip class="item" effect="dark" content="栏目是组件的一种,栏目级组件带有页面,可通过导航链接访问栏目页面" placement="top-start">
 
-          <el-switch
-            v-model="data.isCategory"
-            active-text="栏目级组件"
-            inactive-text="普通组件"
-            class="uk-padding-left-md"
-          >
-          </el-switch>
+            <el-switch
+              v-model="data.isCategory"
+              active-text="栏目级组件"
+              inactive-text="普通组件"
+              class="uk-padding-left-md"
+            >
+            </el-switch>
           </el-tooltip>
         </el-form-item>
 
@@ -435,7 +444,7 @@
         // formData.append('file', file)
         var formData = new FormData();
         formData.append('file', file)
-        this.$store.dispatch('upload', formData).then(({res}) => {
+        this.$axios.post('/upload', formData).then(({res}) => {
 
           let url = res// Get url from response
 
@@ -461,9 +470,9 @@
           await this.$refs.form.validate()
           this.visible = false
           //sent  curCid to father component
-          this.$emit('submit',this.data.cid)
+          this.$emit('submit', this.data.cid)
         } catch (e) {
-          this.$message('有必填的字段!'+e)
+          this.$message('有必填的字段!' + e)
         }
       },
       reset(formName) {

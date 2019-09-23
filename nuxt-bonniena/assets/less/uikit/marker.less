@@ -1,0 +1,77 @@
+// Name:            Marker
+// Description:     Component to create a marker icon
+//
+// Component:       `marker`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@marker-padding:                                 5px;
+@marker-background:                              @global-background-inverse;
+@marker-color:                                   @global-color-inverse;
+
+@marker-hover-color:                             @global-color-inverse;
+
+
+/* ========================================================================
+   Component: Marker
+ ========================================================================== */
+
+/*
+ * Addopts `icon`
+ */
+
+.marker {
+    padding: @marker-padding;
+    background: @marker-background;
+    color: @marker-color;
+    .hook-marker;
+}
+
+/* Hover + Focus */
+.marker:hover,
+.marker:focus {
+    color: @marker-hover-color;
+    outline: none;
+    .hook-marker-hover;
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-marker-misc;
+
+.hook-marker() {}
+.hook-marker-hover() {}
+.hook-marker-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-marker-background:                  @global-background-muted;
+@inverse-marker-color:                       @global-color;
+@inverse-marker-hover-color:                 @global-color;
+
+.hook-inverse() {
+
+    .marker {
+        background: @inverse-marker-background;
+        color: @inverse-marker-color;
+        .hook-inverse-marker;
+    }
+
+    .marker:hover,
+    .marker:focus {
+        color: @inverse-marker-hover-color;
+        .hook-inverse-marker-hover;
+    }
+
+}
+
+.hook-inverse-marker() {}
+.hook-inverse-marker-hover() {}

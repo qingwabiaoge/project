@@ -4,14 +4,15 @@ module.exports = {
   ignore: [
     'pages/-ui/*',
     'pages/-demo/*',
-   'pages/api/*',
-    ],
+    'pages/api/*',
+  ],
   // static: {'index': ['index.html', 'index.htm']},
   //本配置可以在server ,插件$axios使用
   env: {
     // HOST: process.env.HOST,
-    HOST: '127.0.0.1',
-    PORT: 3003
+      //HOST: '47.107.170.105',
+   HOST: '127.0.0.1',
+    PORT: 3002
   },
 
 
@@ -32,14 +33,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '森伯马_广州森伯马工艺品有限公司_森伯马美甲_senboma_bonniena',
+    title: 'senboma_bonniena',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {
         hid: 'description',
         name: 'description',
-        content: 'BonnieNa 是广州森伯马公司旗下的穿戴美甲品牌，作为一家长期为国外知名一线品牌代工的穿戴美甲生产企业，一直专注于产品的开发和改良，以“带给中国女性时尚，便利，健康，自然的穿戴美甲” 为目标和宗旨，推出时下最流行的产品系列，让每一个穿戴的女性炫彩指尖'
+        content: 'Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different markets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.'
       }
     ],
     link: [
@@ -53,8 +54,8 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
- loading: {color: '#FB00C9'},
- loading: '~/loading/',
+  loading: {color: '#FB00C9'},
+  // loading: '~/loading/',
   /*
   ** Global CSS
   */

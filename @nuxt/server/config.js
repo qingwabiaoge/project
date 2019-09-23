@@ -9,7 +9,7 @@ module.exports = {
     },
     adminJwtString: 'qinshilei',
     vipJwtString: 'qinshilei',
-    dataBash: 'mongodb://localhost:27017/senboma',
+    dataBash: 'mongodb://localhost:27017/bonniena',
     apiBase: '/api',
     uploadBase: '/upload',
 
