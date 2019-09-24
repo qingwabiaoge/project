@@ -50,11 +50,8 @@
            <span slot="title">单页</span>
          </el-menu-item>
    -->
-      <!--
-            <el-menu-item index="/component">
-              <i class="el-icon-picture"></i>
-              <span slot="title">组件</span>
-            </el-menu-item>-->
+
+
       <el-menu-item index="/component">
 
         <i class="el-icon-picture"></i>

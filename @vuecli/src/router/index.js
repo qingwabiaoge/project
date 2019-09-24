@@ -118,7 +118,7 @@ router.beforeEach((to, from, next) => {
 //注册全局钩子用来拦截导航 在每一个路由进入前执行
 router.beforeEach((to, from, next) => {
   //获取store里面的token
-  let token = store.state.token;
+  let token = store.state.token.token;
   // console.log('beforeEach-from')
   // console.log(from)
   // console.log('beforeEach-to')

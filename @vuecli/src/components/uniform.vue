@@ -302,7 +302,7 @@
       </section>
       <h4 v-if="data.type!=='global'"> 超链接</h4>
 
-      <section v-if="data.type!=='global'">
+      <section v-if="data.type==='component'">
         <el-form-item label="超链接" :label-width="formLabelWidth" >
           <el-input type="text" v-model="data.href" auto-complete="off"></el-input>
         </el-form-item>

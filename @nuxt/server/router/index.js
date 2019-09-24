@@ -47,8 +47,8 @@ router
 router
   .post('/upload', checkToken, controller.upload)
 //carousel
-router.get('/components', component.get)
-  .put('/components', component.put)
+router.get('/components', component.gets)
+  .post('/component', component.post)
 
 
 router

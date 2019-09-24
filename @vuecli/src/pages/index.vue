@@ -4,7 +4,7 @@
 
     <!--<login></login>-->
     <div class="uk-background-default uk-padding  uk-box-shadow-small uk-box-shadow-hover-medium">
-      <router-link to="/"><img :src="$store.state.global.logo" :alt="components.brand.title" style="max-height: 50px">
+      <router-link to="/"><img :src="$store.state.global.image" :alt="components.brand.title" style="max-height: 50px">
       </router-link>
 
 
@@ -12,7 +12,7 @@
         <div v-if="$store.state.global">
           <i class="iconfont icon-yonghu uk-h1"></i>
 
-          <span class="uk-padding-left-xs">{{$store.state.global.name}} 登录成功</span>
+          <span class="uk-padding-left-xs">{{$store.state.global.title}} 登录成功</span>
           <a @click="$store.commit('token/remove');" class="uk-text-danger uk-padding-left">
             <i class="iconfont  icon-tuichu uk-h4 uk-text-danger"></i>
             退出登录
@@ -58,7 +58,6 @@
 
 <script>
   import siderbar from '@/components/sidebar'
-
 
 
   export default {

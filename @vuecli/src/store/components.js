@@ -1,4 +1,6 @@
- // const json=require('./data.json')
+import store from "./index";
+
+const json=require('./data.json')
 export default {
   namespaced: true,
   state: [],//state===components
@@ -40,7 +42,8 @@ export default {
 
   mutations: {
     set(state, data) {
-      Object.assign(state, data)
+      // Object.assign(state, data)
+      state.push(...data)
     }
   },
 
@@ -56,3 +59,4 @@ export default {
   }
 
 }
+

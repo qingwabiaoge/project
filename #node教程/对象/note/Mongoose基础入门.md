@@ -606,7 +606,7 @@ enum:  枚举匹配(只适用于字符串)
 
 　　将age设置为必填字段，如果没有age字段，文档将不被保存，且出现错误提示
 
-
+​                 **唯一性,需要删除当前数据库重建才能用 **
 
 ```
 var schema = new mongoose.Schema({ age:{type:Number,required:true}, name: String,x:Number,y:Number});  

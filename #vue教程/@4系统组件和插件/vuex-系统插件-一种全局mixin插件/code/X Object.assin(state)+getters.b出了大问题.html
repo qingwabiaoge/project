@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+
+<div id="app">
+<!--  getters.b出了大问题-->
+  {{$store.state }}__ {{$store.getters }}
+</div>
+
+<script>
+  const store = new Vuex.Store({
+
+    state: {
+      a: null,
+    },
+    getters: {
+      a_(state) {
+        return state.a
+      },
+      b_(state) {
+        return state.b + 1
+      }
+
+    },
+    mutations: {
+
+      set(state) {
+        Object.assign(state, {a: 1, b: 2})
+      }
+    },
+    actions: {
+
+      get({commit}) {
+        setTimeout(() => {
+          commit('set')
+
+        })
+      }
+    }
+
+
+  })
+
+
+  const vm = new Vue({
+
+    el: '#app',
+    store,
+    created() {
+      this.$store.dispatch('get')
+    }
+  })
+
+
+</script>
+
+

@@ -42,7 +42,7 @@ export const getters = {
 
 export const mutations= {
   set(state, data) {
-    Object.assign(state, data)
+    state.push(...data)
   }
 };
 

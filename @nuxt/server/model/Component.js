@@ -1,46 +1,48 @@
 const mongoose = require('mongoose')
-const componentSchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+const componentSchema = Schema({
+  //组件唯一的标识符,需要删了当前数据库重新建才能验证
+  name: {type: String, unique: true},
+  //是否为顶级栏目
+  top: Boolean,
+  //标题字段
   title: String,
   subtitle: String,
-  etitle: String,
   info: String,
   description: String,
-  content: String,
-  href: String,
-  key:String,
   button: String,
-  width:String, //col ;md='with'
+//编辑器内容-----------------
+  content: String,
+//超链接----------------
+  href: String,
 //image------------
-
   image: String,
+  images: String,
   cimage: String,
   icon: String,
-
-  //-------------------
+  //background-------------------
   background: String,
-  backgroundColor: String,
-
+  bg: String,
 //联系我们附加字段---------------------------------
-  tel: String,
+  tel: [Number],
   fax: String,
-  qq: String,
+  qq: [Number],
   email: String,
   address: String,
   map: String,
-  qcode: String,//二维码
+  qcode: [String],//二维码
 
-//开关
+//开关----------------
   isCategory: Boolean,
   publish: {
     default: true,
     type: Boolean
   },
 
-
-//活动时间
+//活动时间-----------------------
   starttime: Date,
-  endtime: Date
-
+  endtime: Date,
+  children: [{type: Schema.Types.ObjectId, ref: 'component'}]
 })
 
 const Component = mongoose.model('component', componentSchema)
