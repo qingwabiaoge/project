@@ -1911,7 +1911,11 @@ temp.findOne({name:'huochai'},function(err,doc){
 　　fineOneAndUpdate()方法的第四个参数回调函数的形式如下function(err,doc){}
 
 ```
-Model.findOneAndUpdate([conditions], [update], [options], [callback])
+Model.findByIdAndUpdate(id, update, options, callback) // executes
+Model.findByIdAndUpdate(id, update, options)  // returns Query
+Model.findByIdAndUpdate(id, update, callback) // executes
+Model.findByIdAndUpdate(id, update)           // returns Query
+Model.findByIdAndUpdate()                     // returns Query
 ```
 
 ##### findByIdAndUpdate
@@ -2087,3 +2091,17 @@ temp.find(function(err,docs){
 　　欢迎交流
 
  
+
+# 常见错误
+
+### 没写await
+
+### ![1569377483274](img/1569377483274.png)
+
+![1569374563937](img/1569374563937.png)
+
+
+
+### 路由问题
+
+![1569378350466](img/1569378350466.png)

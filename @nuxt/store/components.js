@@ -1,26 +1,20 @@
+import Vue from 'vue'
+
+const vm = new Vue()
 export const state = () => [];
 
 export const getters = {
-  components(state, getters) {
+  components: state => {
     const _conponents = {}
     state.forEach((item, index, self) => {
       _conponents[item.key] = item
     })
     return _conponents
   },
-  categorys(state, getters) {
-    const _categorys = state.filter(item => item.isCategory === true)
-    return _categorys
-  }
-  ,
-  goodsCategory(state, getters) {
-    return getters.components.goods.children
-  }
-  ,
-  articleCategory(state, getters) {
-    return getters.components.article.children
-  }
-  ,
+  categorys: state => state.filter(item => item.isCategory === true),
+  goodsCategory: (state, getters) => getters.components.goods.children,
+  newsCategory: (state, getters) => getters.components.article.children,
+
   maxId(state, getters) {
     let _maxid = 0
     state.forEach(item => {
@@ -40,9 +34,13 @@ export const getters = {
 }
 
 
-export const mutations= {
-  set(state, data) {
-    state.push(...data)
+export const mutations = {
+  set(state, components) {
+    //Object.assign(state, data)  //不行不会监听新加键值
+    // state.push(...data) //第二次会有问题
+    for (let item in components) {
+      vm.$set(state, item, components[item])
+    }
   }
 };
 

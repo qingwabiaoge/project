@@ -1,7 +1,7 @@
 <template>
   <div >
 
-    <title-zh-english :data="{title:'service',subtitle:'服务'}">
+    <title-zh-english :data="components.service">
 
     </title-zh-english>
     <!--<div class="text-center">

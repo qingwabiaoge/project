@@ -64,7 +64,7 @@
 
     <nav class="nav">
       <div class="container">
-        <nuxt-link to="/">首页</nuxt-link>
+        <nuxt-link to="/">home</nuxt-link>
         <nuxt-link v-for="item in categorys" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">
           {{item.title}}
         </nuxt-link>

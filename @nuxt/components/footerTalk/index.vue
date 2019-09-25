@@ -33,15 +33,19 @@
              label视图中写在input之前的label-->
               <el-form-item>
                 <!--message.name 数据-->
-                <el-input v-model="message.name" placeholder="请输入姓名 "></el-input>
+                <el-input v-model="message.name" placeholder="Please enter your name.
+
+ "></el-input>
               </el-form-item>
               <el-form-item prop="tel">
                 <!--message.name 数据-->
-                <el-input v-model="message.tel" placeholder="请输入电话号码"></el-input>
+                <el-input v-model="message.tel" placeholder="Please enter your telephone number.
+
+"></el-input>
               </el-form-item>
               <el-form-item>
                 <!--message.name 数据-->
-                <el-input type="textarea" v-model="message.content" placeholder="留言"></el-input>
+                <el-input type="textarea" v-model="message.content" placeholder="Please enter a message"></el-input>
               </el-form-item>
 
               <h3 @click="submitForm('message')">SENT</h3>

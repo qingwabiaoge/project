@@ -5,6 +5,7 @@ const componentSchema = Schema({
   name: {type: String, unique: true},
   //是否为顶级栏目
   top: Boolean,
+  fatherId: Schema.Types.ObjectId,
   //标题字段
   title: String,
   subtitle: String,
@@ -24,13 +25,13 @@ const componentSchema = Schema({
   background: String,
   bg: String,
 //联系我们附加字段---------------------------------
-  tel: [Number],
+  tel: String,
   fax: String,
-  qq: [Number],
+  qq: String,
   email: String,
   address: String,
   map: String,
-  qcode: [String],//二维码
+  qcode: String,//二维码
 
 //开关----------------
   isCategory: Boolean,

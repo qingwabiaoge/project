@@ -49,6 +49,8 @@ router
 //carousel
 router.get('/components', component.gets)
   .post('/component', component.post)
+  .patch('/component', component.patch)
+  .del('/component/:_id',  component.del)
 
 
 router

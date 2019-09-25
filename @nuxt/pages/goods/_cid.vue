@@ -7,10 +7,11 @@
       <div style=" margin-bottom: 60px; margin-top: 60px">
         <el-button-group :class="$style['button-group']">
 
-          <el-button plain v-for="item in this.goodsCategory">
-            <nuxt-link :to="`/goods/${item.id}?page=1`" :key="item.title">
+          <el-button v-for="item in this.goodsCategory" plain >
+            <nuxt-link  :to="`/goods/${item.id}?page=1`" :key="item.title">
               {{item.title}}
             </nuxt-link>
+
           </el-button>
 
         </el-button-group>
@@ -100,6 +101,9 @@
       flex: 1 1 20rem;
       border-color: #ccc;
     }
+a{
+  display: block;
+}
   }
 
 </style>

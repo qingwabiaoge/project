@@ -1,12 +1,15 @@
-const fs = require('fs')
-const path = require('path')
+const Component = require('../../model/Component');
 
-module.exports = async (ctx, next) => {
-  const data = ctx.request.body
-  const stringfyData=JSON.stringify(data)
-  fs.writeFile(path.join(__dirname, './data.json'), stringfyData, function (err) {
-    if (err)
-      return console.error(err);
-    console.log('data');
-  });
-}
+// 获得产品列表
+module.exports = async (ctx) => {
+  let {component, fatherId} = ctx.request.body
+
+  const childComponent = await Component.create({...component, fatherId})
+
+  const fatherComponent = await Component.findById(fatherId)
+
+  await fatherComponent.children.push(childComponent._id)
+  fatherComponent.save()
+
+
+};

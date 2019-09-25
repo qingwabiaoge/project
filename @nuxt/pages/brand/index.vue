@@ -4,7 +4,7 @@
 
     <div class="container" style="background: #fff; padding: 20px;">
 
-      <title-zh-english :data="{title:'brand',subtitle:'品牌'}">
+      <title-zh-english :data="components.brand">
 
       </title-zh-english>
       <!--   <div class="text-center">
@@ -18,7 +18,7 @@
       <pictextCompany></pictextCompany>
 
 
-      <title-zh-english :data="{title:'HISTORY',subtitle:'历史'}">
+      <title-zh-english :data="components.history">
 
       </title-zh-english>
       <!--   <div class="text-center">
@@ -38,7 +38,7 @@
 
     <div class="container">
 
-      <title-zh-english :data="{title:'news',subtitle:'新闻'}">
+      <title-zh-english :data="{title:'news'}">
 
       </title-zh-english>
 

@@ -3,7 +3,7 @@
 
     <carouselFull></carouselFull>
 
-    <title-zh-english :data="{title:'produces',subtitle:'产品'}">
+    <title-zh-english :data="{title:'product'}">
 
     </title-zh-english>
 
@@ -53,7 +53,7 @@
 
     <div :style="{background:`url(${$store.state.global.background2})`,backgroundAttachment: 'fixed'} ">
 
-      <title-zh-english :data="{title:'brand',subtitle:'品牌'}">
+      <title-zh-english :data="components.brand">
 
       </title-zh-english>
 
@@ -64,7 +64,8 @@
 
     </div>
 
-    <title-zh-english :data="{title:'service',subtitle:'服务'}">
+
+    <title-zh-english :data="components.service">
 
     </title-zh-english>
     <!--  <div class="text-center">
@@ -83,7 +84,7 @@
       style="padding-bottom: 90px; margin-bottom: -90px">
 
 
-      <title-zh-english :data="{title:'trend',subtitle:'潮流'}"></title-zh-english>
+      <title-zh-english :data="{title:'trend'}"></title-zh-english>
       <!--<div class="text-center">-->
       <!--<h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"-->
       <!--style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">-->
@@ -104,7 +105,7 @@
 
     </div>
 
-    <title-zh-english :data="{title:'OEM'}"></title-zh-english>
+    <title-zh-english :data="components.oem"></title-zh-english>
     <div class="container">
       <img v-lazy="components.oem.image">
     </div>

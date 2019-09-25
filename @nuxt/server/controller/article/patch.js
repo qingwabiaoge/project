@@ -9,4 +9,4 @@ module.exports = async (ctx) => {
     let options = {upsert: true};  //默认为false。如果不存在则创建新记录。
     await Article.update(conditions, update)
 
-};
+}
