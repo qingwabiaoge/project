@@ -2,7 +2,7 @@
   <div :class="$style['produce']">
     <el-row>
       <el-col :md="12">
-        <img :src="data.image" alt="">
+        <el-carousel-responsive :data="data.images"></el-carousel-responsive>
       </el-col>
       <el-col :md="11" :offset="1">
         <h1>

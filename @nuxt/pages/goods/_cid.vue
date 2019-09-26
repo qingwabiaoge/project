@@ -1,14 +1,14 @@
 <template>
   <div>
-    <title-zh-english :data="{title:'goods'}"></title-zh-english>
+    <title-zh-english :data="components.goods"></title-zh-english>
 
     <div class="container">
 
       <div style=" margin-bottom: 60px; margin-top: 60px">
         <el-button-group :class="$style['button-group']">
 
-          <el-button v-for="item in this.goodsCategory" plain >
-            <nuxt-link  :to="`/goods/${item.id}?page=1`" :key="item.title">
+          <el-button v-for="item in this.goodsCategory" plain>
+            <nuxt-link :to="`/goods/${item.id}?page=1`" :key="item.title">
               {{item.title}}
             </nuxt-link>
 
@@ -21,9 +21,9 @@
       <el-row :gutter="20">
         <el-col v-for="item in goodss" :xs="12" :md="6" :lg="6" :key="item._id">
           <nuxt-link :to="`/goods/detail/${item._id}`">
-          <picE :data="item" height="300" style="margin-top: 20px">
+            <picE :data="item" height="300" style="margin-top: 20px">
 
-          </picE>
+            </picE>
           </nuxt-link>
         </el-col>
 
@@ -97,13 +97,15 @@
   .button-group {
 
     display: flex;
+
     button {
       flex: 1 1 20rem;
       border-color: #ccc;
     }
-a{
-  display: block;
-}
+
+    a {
+      display: block;
+    }
   }
 
 </style>

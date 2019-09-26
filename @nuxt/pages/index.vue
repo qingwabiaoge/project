@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <carouselFull></carouselFull>
+    <el-carousel-responsive :data="components.swiper.children"></el-carousel-responsive>
 
     <title-zh-english :data="{title:'product'}">
 
