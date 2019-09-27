@@ -3,8 +3,6 @@
 
 
 
-## 前面的话
-
 　　Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具。本文将详细介绍如何使用Mongoose来操作MongoDB
 
  
@@ -190,8 +188,6 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
     }
 });
 ```
-
-
 
 ##### disconnect() 
 
@@ -790,10 +786,6 @@ temp.find(function(err,docs){
 { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 }
  */   
 ```
-
-
-
- 　
 
 ### Model
 
@@ -2084,13 +2076,7 @@ temp.find(function(err,docs){
 
  
 
-## 最后
 
-　　mongoose操作基础入门大致就是以上这些。mongoose的很多操作与mongodb的操作命令非常类似，学起来并不难。但是，由于中文资源并不完善，需要对照[英文文档](http://mongoosejs.com/docs/guide.html)进行学习，可能会稍显吃力。而且，mongoose对mongodb做了许多扩展，增加了许多方法，需要更多耐心
-
-　　欢迎交流
-
- 
 
 # 常见错误
 

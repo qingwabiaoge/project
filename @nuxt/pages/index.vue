@@ -3,7 +3,7 @@
 
     <el-carousel-responsive :data="components.swiper.children"></el-carousel-responsive>
 
-    <title-zh-english :data="{title:'product'}">
+    <title-zh-english :data="components.goods">
 
     </title-zh-english>
 
@@ -14,7 +14,7 @@
         </el-row>
     -->
 
-    <div class="container">
+    <div class="container" v-if="components.goods.show" :data="components.goods.children">
       <el-row :gutter="5">
         <el-col :md="14">
 
@@ -25,7 +25,7 @@
         </el-col>
         <el-col :md="10">
           <picC :data='Object.assign(goodsCategory[1],{href:`/goods/${goodsCategory[1].id}?page=1`})'
-                placement="cover"
+                placement="left"
                 :height="500">
 
           </picC>
@@ -39,7 +39,7 @@
         </el-col>
         <el-col :md="10">
           <picC :data='Object.assign(goodsCategory[3],{href:`/goods/${goodsCategory[3].id}?page=1`})'
-                placement="cover"
+                placement="left"
                 :height="280">
 
           </picC>
@@ -50,6 +50,20 @@
 
     </div>
 
+    <title-zh-english :data="components.history">
+
+    </title-zh-english>
+    <!--   <div class="text-center">
+         <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
+             style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
+           HISTORY
+         </h3>
+       </div>-->
+
+    <pictext-history :data="components.history">
+
+    </pictext-history>
+
 
     <div :style="{background:`url(${$store.state.global.background2})`,backgroundAttachment: 'fixed'} ">
 
@@ -58,8 +72,7 @@
       </title-zh-english>
 
       <div class="container">
-
-        <pictextCompany></pictextCompany>
+        <pictextCompany :data="components.brand"></pictextCompany>
       </div>
 
     </div>
@@ -84,7 +97,7 @@
       style="padding-bottom: 90px; margin-bottom: -90px">
 
 
-      <title-zh-english :data="{title:'trend'}"></title-zh-english>
+      <title-zh-english :data="components.trend"></title-zh-english>
       <!--<div class="text-center">-->
       <!--<h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"-->
       <!--style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">-->
@@ -105,8 +118,10 @@
 
     </div>
 
-    <title-zh-english :data="components.oem"></title-zh-english>
-    <div class="container">
+    <title-zh-english
+                      :data="components.oem"></title-zh-english>
+    <div v-if="components.oem.show"
+         class="container">
       <img v-lazy="components.oem.image">
     </div>
     <!--
@@ -131,7 +146,6 @@
 
     scrollToTop: true,
     async asyncData({$axios}) {
-
       const {goodss} = await $axios.get('/goodss', {params: {flag: '首页'}})
       return {
         goodss

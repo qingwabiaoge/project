@@ -10,9 +10,9 @@ const response = require('./middlewares/response.js')
 const router = require('./router')
 const consola = require('consola')
 const {Nuxt, Builder} = require('nuxt')
-const nuxt_config = require('../nuxt.config')
-const host = nuxt_config.env.HOST
-const port = nuxt_config.env.PORT
+let config = require('../nuxt.config.js')
+const host = config.env.HOST
+const port = config.env.PORT
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = '../staticPath'
 
@@ -31,7 +31,7 @@ app.use(response) //捕捉错误和空返回值
   .use(router.allowedMethods());
 
 
-let config = require('../nuxt.config.js')
+
 config.dev = !(app.env === 'production')
 
 async function start() {

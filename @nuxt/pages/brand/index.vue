@@ -15,22 +15,7 @@
          </div>
    -->
 
-      <pictextCompany></pictextCompany>
-
-
-      <title-zh-english :data="components.history">
-
-      </title-zh-english>
-      <!--   <div class="text-center">
-           <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
-               style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
-             HISTORY
-           </h3>
-         </div>-->
-
-      <pictext-history>
-
-      </pictext-history>
+      <pictextCompany :data="components.brand"></pictextCompany>
 
 
     </div>
@@ -38,7 +23,7 @@
 
     <div class="container">
 
-      <title-zh-english :data="{title:'news'}">
+      <title-zh-english :data="components.article">
 
       </title-zh-english>
 
@@ -49,7 +34,7 @@
          </h3>
        </div>-->
 
-      <el-row :gutter="30">
+      <el-row :gutter="30" v-if="components.article.show">
         <el-col :md="8"
                 v-for="(item,index) in articles"
                 :key="'picA'+index">

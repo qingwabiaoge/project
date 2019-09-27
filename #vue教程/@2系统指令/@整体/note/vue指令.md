@@ -61,7 +61,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 ### v-model  ,v-bind:prop. sync
 
-##### 适合场景(子组件操作经常更新的父组件)
+*适合场景(子组件操作经常更新的父组件)*
 
 1. 输入更新到父组件(表单类组件,自定义表单组件)
 
@@ -159,6 +159,40 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 </body>
 </html>
+
+```
+
+###### obj.a问题
+
+```html
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+  <!--
+        当item=1时
+  v-model="1"  无法赋值
+
+  -->
+  <input type="text" v-for="item in arr" v-model="item"> <br>
+  <!--
+       当item=1时
+     :value=1
+     @input="arr[1]=data" 这里是给数组的键赋值,所以可行
+
+  -->
+
+  <input type="text" v-for="(item,index) in arr" v-model="arr[index]">
+  {{arr}}
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      arr: ['1', '2']
+    }
+  })
+</script>
 
 ```
 

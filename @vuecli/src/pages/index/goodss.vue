@@ -135,6 +135,10 @@
         <template slot-scope="scope">
           <el-button
             size="mini"
+            @click="previewButton(scope.$index, scope.row)">预览
+          </el-button>
+          <el-button
+            size="mini"
             @click="editButton(scope.$index, scope.row)">编辑
           </el-button>
           <el-button
@@ -179,7 +183,7 @@
         page: 1,
         //列表选中项---------------
         sels: [],
-        curCid:undefined
+        curCid: undefined
         // 按照栏目过滤
       }
     },
@@ -233,7 +237,9 @@
 
       },
 
-
+//预览按钮
+      previewButton() {
+      },
       //跳转编辑界面--------------------------------------------------------------------------------------
       editButton: async function (index, row) {//index行号 ，row内容
         const {goods} = await this.$axios.get(`/goods/${row._id}`)
@@ -288,7 +294,7 @@
           this.$axios.patch('goods', {...this.uniformData, image: this.uniformData.images[0].url})
         }
         console.log(data)
-        this.curCid=data
+        this.curCid = data
         this.gets()
       },
 

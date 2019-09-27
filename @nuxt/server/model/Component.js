@@ -39,10 +39,12 @@ const componentSchema = Schema({
     default: true,
     type: Boolean
   },
+  show: Boolean, //是否显示模块
 
 //活动时间-----------------------
   starttime: Date,
   endtime: Date,
+  //子模块
   children: [{type: Schema.Types.ObjectId, ref: 'component'}]
 })
 

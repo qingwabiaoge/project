@@ -21,17 +21,13 @@
       </el-col>
     </el-row>
 
-    <article>
-      {{data.content}}
+    <article v-html="data.content">
     </article>
   </div>
 </template>
 
 <script>
-  export default {
-
-
-  }
+  export default {}
 </script>
 
 <style module lang="less">
@@ -39,19 +35,23 @@
     text-transform: uppercase;
     background: #fff;
     padding: 50px 20px;
+
     h1 {
       padding: 26px 0 17px 10px;
       border-bottom: 1px solid #999;
       font-size: 2.5rem;
     }
+
     h3 {
       padding-left: 10px;
       font-size: 2.2rem;
     }
+
     p {
       padding-top: 50px;
       line-height: 2;
     }
+
     article {
       margin-top: 50px;
       padding-top: 50px;

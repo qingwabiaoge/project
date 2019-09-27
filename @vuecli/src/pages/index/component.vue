@@ -35,7 +35,7 @@
         this.$refs.uniform.visible = true
       },
       clickB(fatherId) {
-        this.uniformData={}
+        this.uniformData = {}
         this.$refs.uniform.visible = true
 
         this.fatherId = fatherId

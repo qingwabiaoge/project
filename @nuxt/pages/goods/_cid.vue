@@ -1,6 +1,6 @@
 <template>
   <div>
-    <title-zh-english :data="components.goods"></title-zh-english>
+    <!--    <title-zh-english :data="components.goods"></title-zh-english>-->
 
     <div class="container">
 

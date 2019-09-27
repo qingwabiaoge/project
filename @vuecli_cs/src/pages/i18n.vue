@@ -1,7 +1,7 @@
 <template>
   <div class="i18n">
 
-    <div >
+    <div>
       来自全局: {{ $t('hello') }}
     </div>
 
@@ -26,7 +26,7 @@
 <script>
   export default {
 
-    created(){
+    created() {
       console.log(this)
     }
   }

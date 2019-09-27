@@ -22,8 +22,7 @@
 
     <el-row class="uk-margin-top-small" style="margin-top: 30px">
 
-      <img v-lazy="components.contact.map" :alt="components.brand.title">
-
+      <img :src="components.contact.map">
 
     </el-row>
 
@@ -31,8 +30,6 @@
 </template>
 
 <script>
-
-
 
 
 </script>

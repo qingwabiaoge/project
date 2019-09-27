@@ -1,0 +1,28 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+  <!--
+        当item=1时
+  v-model="1"  无法赋值
+
+  -->
+  <input type="text" v-for="item in arr" v-model="item"> <br>
+  <!--
+       当item=1时
+     :value=1
+     @input="arr[1]=data" 这里还是给数组的键赋值
+
+  -->
+
+  <input type="text" v-for="(item,index) in arr" v-model="arr[index]">
+  {{arr}}
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      arr: ['1', '2']
+    }
+  })
+</script>

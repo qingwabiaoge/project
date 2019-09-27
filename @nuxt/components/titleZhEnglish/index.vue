@@ -1,7 +1,7 @@
 <template>
 
 
-  <div :class="$style.title">
+  <div :class="$style.title" v-if="data.show">
     <section class="hover-underline hover-underline-center">
 
       <h2 v-if="data.title">{{data.title}}</h2>

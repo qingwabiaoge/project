@@ -118,4 +118,14 @@ this.$emit("input",data)
 
 # 作用
 
- vuex作用可以替代config.js
+1.  vuex作用可以替代本地的config.js
+2. vuex可以从后端获取异步收据然后和本地的config.js数据融合
+
+# 使用场景
+
+被不同非父子组件多次用到的数据
+
+# 限用场景
+
+往后端传送数据, 麻烦不直观
+

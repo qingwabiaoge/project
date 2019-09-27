@@ -40,6 +40,7 @@
 
 <style lang="less" module>
   .picC {
+    word-wrap:break-word;
     overflow: hidden;
     position: relative;
     display: inline-block;

@@ -3,14 +3,14 @@
 
 
     <div>
-      <img v-lazy="image" :alt="title">
+      <img v-lazy="data.image" :alt="title">
     </div>
     <card type="inverse" border="true" style="margin-top: 6px">
       <h2 class="text-center" style="text-transform: uppercase">
-        {{title}}
+        {{data.title}}
       </h2>
       <p>
-        {{description|setLength(num)}}
+        {{data.description|setLength(num)}}
         <span v-if="more" @click="num=10000;more=false">...</span>
       </p>
       <p class="text-center color-primary">
@@ -29,7 +29,6 @@
       return {
         num: 500,
         more: true,
-        ...this.$store.getters["components/components"].brand
       }
     },
 

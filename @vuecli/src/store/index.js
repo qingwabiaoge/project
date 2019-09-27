@@ -7,16 +7,16 @@ import token from './token'
 import rules from './rules'
 import tool from '@/store/tool'
 import nuxt_config from '../../../@nuxt/nuxt.config'
-import dev from './dev'
+
 
 Vue.use(Vuex);
 
 
 export default new Vuex.Store({
   state: {
-
     tool: tool,
-    HOST: `http://${nuxt_config.env.HOST}:${nuxt_config.env.PORT}/api`
+    HOST: `http://${nuxt_config.env.HOST}:${nuxt_config.env.PORT}/api`,
+    dev:process.env.NODE_ENV === "development"
   },
-  modules: {global, dev, components, token, rules}
+  modules: {global,  components, token, rules}
 });

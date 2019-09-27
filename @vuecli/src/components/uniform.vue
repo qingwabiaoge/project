@@ -17,7 +17,7 @@
         </el-form-item>
 
         <el-form-item label="key"
-                      v-if="data.type==='component'"
+                      v-if="data.type==='component'&&$store.state.dev"
                       :label-width="formLabelWidth"
                       prop="key"
                       class="test">
@@ -55,8 +55,11 @@
 
 
         <el-form-item label="描述" :label-width="formLabelWidth">
-          <el-input type="textarea" v-model="data.description" auto-complete="off"
-                    placeholder="请写一个通顺的句子最好句中包含seo标题内容"></el-input>
+          <el-input type="textarea" v-model="data.description"
+                    auto-complete="off"
+                    placeholder="请写一个通顺的句子最好句中包含seo标题内容">
+
+          </el-input>
         </el-form-item>
 
         <el-form-item v-if="data.type==='goods'||data.type==='article'"
@@ -248,7 +251,7 @@
         </el-form-item>
 
         <el-form-item v-if="data.isCategory===true"
-                      label="栏目内页缩略图"
+                      label="栏目内页横幅图"
         >
 
           <upload v-model="data.cimage">
@@ -303,23 +306,23 @@
       <h4 v-if="data.type!=='global'"> 超链接</h4>
 
       <section v-if="data.type==='component'">
-        <el-form-item label="超链接" :label-width="formLabelWidth" >
+        <el-form-item label="超链接" :label-width="formLabelWidth">
           <el-input type="text" v-model="data.href" auto-complete="off"></el-input>
         </el-form-item>
 
       </section>
 
 
-      <h4 v-if="data.type!=='global'"> 开关</h4>
-      <section v-if="data.type!=='global'">
+      <h4> 开关</h4>
+      <section>
 
         <el-form-item v-if="data.type==='component'">
           <el-tooltip class="item" effect="dark" content="栏目是组件的一种,栏目级组件带有页面,可通过导航链接访问栏目页面" placement="top-start">
 
             <el-switch
               v-model="data.isCategory"
-              active-text="栏目级组件"
-              inactive-text="普通组件"
+              active-text="在栏目展示"
+              inactive-text="不展示"
               class="uk-padding-left-md"
             >
             </el-switch>
@@ -328,10 +331,20 @@
 
         <el-form-item>
           <el-switch
-            v-if="data.type==='article'||data.type==='goods'"
+            v-if="data.type==='component'"
+            v-model="data.show"
+            active-text="在页面中显示模块"
+            inactive-text="不显示"
+            class="uk-padding-left-md"
+          >
+          </el-switch>
+        </el-form-item>
+        <el-form-item>
+          <el-switch
+            v-if="data.type==='artile'||data.type==='news'"
             v-model="data.flag"
-            active-text="推荐到潮流模块"
-            inactive-text="不推荐"
+            active-text="不推荐"
+            inactive-text="推荐到首页"
             class="uk-padding-left-md"
           >
           </el-switch>
@@ -339,6 +352,7 @@
 
         <el-form-item>
           <el-switch
+            v-if="data.type==='article'&&data.type==='goods'"
             v-model="data.publish"
             active-text="发布"
             inactive-text="存草稿"
@@ -404,7 +418,23 @@
         </el-form-item>
       </section>
 
+      <section v-if="data.type==='global'">
+        <el-form-item label="字段"
+                      :label-width="formLabelWidth"
 
+                      prop="beian">
+          <!--global.name 数据-->
+          <el-input v-for="(item,key) in data.ex"
+                    v-model="item[key]"
+                    style="margin-bottom: 10px"
+                    placeholder="请输入字段内容"
+                    :key="'ex'+key">
+            <template slot="prepend">{{item.key}}</template>
+          </el-input>
+
+          <el-button @click="data.ex.push({})">新增字段</el-button>
+        </el-form-item>
+      </section>
     </el-form>
 
     <div class="test">{{data}}</div>

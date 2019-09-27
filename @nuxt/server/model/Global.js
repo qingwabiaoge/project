@@ -25,6 +25,7 @@ const globalSchema = mongoose.Schema({
   background: String,
   background2: String,
   background3: String,
+  ex:{type:Array,default: ['']}
 
 
 });

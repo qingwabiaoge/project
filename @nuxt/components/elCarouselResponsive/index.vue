@@ -20,10 +20,9 @@
     },
     mounted() {
       const el = this.$refs.img[0]
-
-      el.onload=function () {
-
-        this.height = (el.offsetHeight / el.offsetWidth) * el.parentElement.clientWidth
+      const that = this
+      el.onload = function () {
+        that.height = (this.offsetHeight / this.offsetWidth) * this.parentElement.parentElement.clientWidth
       }
 
     }
