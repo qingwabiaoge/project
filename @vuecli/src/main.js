@@ -79,7 +79,11 @@ Vue.mixin({
 
 })
 
+//filter
 
+Vue.filter('id2time', function (value) {
+  return (new Date(parseInt(value.toString().substring(0, 8), 16) * 1000)).toLocaleDateString();
+})
 new Vue({
   el: '#app',
   router,

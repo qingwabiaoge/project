@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     padding-top: 90px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 
     section {
       display: flex;

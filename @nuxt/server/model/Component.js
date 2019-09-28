@@ -40,6 +40,7 @@ const componentSchema = Schema({
     type: Boolean
   },
   show: Boolean, //是否显示模块
+  fullpage:Boolean,
 
 //活动时间-----------------------
   starttime: Date,

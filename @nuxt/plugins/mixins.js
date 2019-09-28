@@ -1,7 +1,6 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
 
-const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('components')
+
 //把mixin挂载在vue实例
 Vue.mixin({
   props: ['data'],
@@ -16,18 +15,24 @@ Vue.mixin({
           content
         }].concat(payload)
       }
-    },
+    }
 
   },
-  computed: {
 
-    ...mapGetters([
-      'components',
-      'articleCategory',
-      'categorys',
-      'goodsCategory',
-    ])
-  },
+  mounted() {
+
+    if (this.$el && this.data) {
+
+      this.$el.style.background = `${this.data.bg} url(${this.data.background}) 0% 0% / cover  fixed`
+
+
+      /*   if (!this.data.fullpage&&this.data.type==="component") {
+
+           this.$el.className += " container"
+         }*/
+
+    }
+  }
 
 })
 

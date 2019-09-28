@@ -133,10 +133,10 @@
                        fixed="right"
                        width="150">
         <template slot-scope="scope">
-          <el-button
+    <!--      <el-button
             size="mini"
             @click="previewButton(scope.$index, scope.row)">预览
-          </el-button>
+          </el-button>-->
           <el-button
             size="mini"
             @click="editButton(scope.$index, scope.row)">编辑

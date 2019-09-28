@@ -9,9 +9,18 @@
 
         <h1 style="text-transform: uppercase">{{components.brand.title}}{{components.brand.subtitle}}</h1>
         <hr>
-        <i class="iconfont icon-zuoji1 uk-margin-right-small"></i>TEL:{{components.contact.tel}} <br>
-        <i class="iconfont icon-qq uk-margin-right-small"></i>Q Q:{{components.contact.qq}} <br>
-        <i class="iconfont icon-coordinates uk-margin-right-small"></i>ADDRESS:{{components.contact.address}} <br>
+        <i class="el-icon-phone-outline"  style="margin-right:-15px"></i>
+        <span v-for="item in components.contact.tel.split('\n')" style="margin-left: 15px">
+           {{item}} <br>
+        </span>
+
+        <i class="iconfont icon-qq uk-margin-right-small"  style="margin-right:-15px"></i>
+        <span style="margin-left: 15px"
+              v-for="item in components.contact.qq.split('\n')">
+          {{item}} <br>
+        </span>
+
+        <i class="el-icon-position" style="margin-right: 5px"></i>ADDRESS:{{components.contact.address}} <br>
       </el-col>
 
     </el-row>

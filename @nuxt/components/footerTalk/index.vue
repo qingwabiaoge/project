@@ -1,17 +1,20 @@
 <template>
 
-  <div
-    :style="{background:`url(${$store.state.global.background3})`, backgroundSize:'cover',backgroundAttachment: 'fixed'} ">
+  <div >
+
     <div :class="$style['footer']">
       <div class="container">
         <el-row>
           <el-col :md="12">
             <h2>contact us</h2>
 
-            <p>TEL:{{components.contact.tel}}</p>
-            <p>
-              {{components.brand.description|setLength(100)}}...
-            </p>
+            <p><i class="el-icon-phone-outline" style="margin-right:-15px"></i>
+              <span v-for="item in components.contact.tel.split('\n')" style="margin-left: 15px">
+           {{item}} <br>
+        </span></p>
+            <!--  <p>
+                {{components.brand.description|setLength(100)}}...
+              </p>-->
             <h2>ADDRESS</h2>
 
             <p>
@@ -33,19 +36,22 @@
              label视图中写在input之前的label-->
               <el-form-item>
                 <!--message.name 数据-->
-                <el-input v-model="message.name" placeholder="Please enter your name.
+                <!--                Please enter your name.-->
+                <el-input v-model="message.name" placeholder="请输入姓名
 
  "></el-input>
               </el-form-item>
               <el-form-item prop="tel">
                 <!--message.name 数据-->
-                <el-input v-model="message.tel" placeholder="Please enter your telephone number.
+                <!--                Please enter your telephone number.-->
+                <el-input v-model="message.tel" placeholder="请输入电话号码
 
 "></el-input>
               </el-form-item>
               <el-form-item>
                 <!--message.name 数据-->
-                <el-input type="textarea" v-model="message.content" placeholder="Please enter a message"></el-input>
+                <!--                Please enter a message-->
+                <el-input type="textarea" v-model="message.content" placeholder="请输入留言"></el-input>
               </el-form-item>
 
               <h3 @click="submitForm('message')">SENT</h3>
@@ -100,7 +106,12 @@
         message: {},
         rules: {
           tel: [
-            {required: true, message: 'Enter your mobile phone number please', trigger: 'blur'},
+            {
+              required: true,
+              //message: 'Enter your mobile phone number please',
+              message: '请输入电话号码',
+              trigger: 'blur'
+            },
           ],
         }
       }
@@ -133,45 +144,57 @@
       text-transform: uppercase;
       color: #ccc;
     }
+
     * + h2 {
       margin-top: 80px
     }
+
     h3 {
       font-size: 60px;
       color: #444;
+
       &:hover {
         color: #ccc;
       }
     }
+
     p {
       color: #ccc;
       font-size: 16px;
       line-height: 2;
     }
+
     * + p {
       margin-top: 40px
     }
+
     form {
       margin-top: 50px;
     }
+
     input, textarea {
       border: 1px solid #777;
       height: 50px;
     }
+
     textarea {
       height: 150px
     }
+
     footer {
       border-top: 1px solid #777;
       margin-top: 180px;
       line-height: 108px;
 
     }
+
     section {
       text-align: right;
+
       svg {
         margin-left: 47px;
       }
+
       a {
         color: #555;
       }

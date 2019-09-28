@@ -9,7 +9,7 @@
         <el-row>
           <el-col :md="12" class="left">
 
-            Welcome To {{components.brand.title}}
+            Welcome To {{data.title}}
           </el-col>
 
           <el-col :md="12" class="right">
@@ -45,7 +45,7 @@
     <div class="banner container">
       <el-row>
         <el-col :md="12" class="left">
-          <img :src="$store.state.global.image" :alt="components.brand.title">
+          <img :src="data.image" :alt="data.title">
         </el-col>
 
         <el-col :md="6" :offset="6" class="right">
@@ -64,8 +64,8 @@
 
     <nav class="nav">
       <div class="container">
-        <nuxt-link to="/">home</nuxt-link>
-        <nuxt-link v-for="item in categorys" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">
+        <nuxt-link to="/" :style="{color:$route.name==='index'?'#FB00C9':'#333'}">首页</nuxt-link>
+        <nuxt-link v-for="item in data.children" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">
           {{item.title}}
         </nuxt-link>
       </div>
@@ -119,7 +119,7 @@
 
   .banner {
     .left {
-      padding: 50px 15px;
+      padding: 30px 15px;
       @media (max-width: @global-breakpoint-phone-max) {
         padding: 20px 10px
       }
@@ -127,7 +127,7 @@
     }
 
     .right {
-      padding: 50px 20px 50px 0;
+      padding: 30px 20px 30px 0;
       text-align: right
     }
 

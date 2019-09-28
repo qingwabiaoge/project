@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  :style="{background:`url(${data.backgroud})`}">
     {{$route}}
     <hr>
 {{categorys}}

@@ -9,7 +9,7 @@
 
           <el-button v-for="item in this.goodsCategory" plain>
             <nuxt-link :to="`/goods/${item.id}?page=1`" :key="item.title">
-              {{item.title}}
+              {{item.subtitle}}
             </nuxt-link>
 
           </el-button>
@@ -43,7 +43,7 @@
         background
         layout="prev, pager, next"
 
-        :page-size="$store.state.global.goodsPagerSize"
+        :page-size="global.goodsPagerSize"
         :total="total"
         :current-page.sync="$route.query.page-0"
       >

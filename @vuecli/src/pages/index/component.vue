@@ -37,7 +37,7 @@
       clickB(fatherId) {
         this.uniformData = {}
         this.$refs.uniform.visible = true
-
+        this.type="component"
         this.fatherId = fatherId
       },
       clickI({_id, title}) {

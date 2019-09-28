@@ -3,7 +3,7 @@
 
 
     <div>
-      <img v-lazy="data.image" :alt="title">
+      <img v-lazy="data.image" :alt="data.title">
     </div>
     <card type="inverse" border="true" style="margin-top: 6px">
       <h2 class="text-center" style="text-transform: uppercase">

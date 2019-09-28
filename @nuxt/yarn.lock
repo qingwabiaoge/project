@@ -8714,6 +8714,11 @@ vue@^2.6.10:
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha1-pysaQqTYKnIepDjRtr9V5mGVxjc=
 
+vuex-i18n@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.npm.taobao.org/vuex-i18n/download/vuex-i18n-1.13.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvuex-i18n%2Fdownload%2Fvuex-i18n-1.13.1.tgz#f9f6bf5de44f85929ff684170ed9bb5724cbba88"
+  integrity sha1-+fa/XeRPhZKf9oQXDtm7VyTLuog=
+
 vuex-persistedstate@^2.5.4:
   version "2.5.4"
   resolved "http://registry.npm.taobao.org/vuex-persistedstate/download/vuex-persistedstate-2.5.4.tgz#a19710ad7f9a08cea4e65fc585924d9fdac7384a"

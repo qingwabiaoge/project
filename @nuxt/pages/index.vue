@@ -65,35 +65,8 @@
     </pictext-history>
 
 
-    <div :style="{background:`url(${$store.state.global.background2})`,backgroundAttachment: 'fixed'} ">
-
-      <title-zh-english :data="components.brand">
-
-      </title-zh-english>
-
-      <div class="container">
-        <pictextCompany :data="components.brand"></pictextCompany>
-      </div>
-
-    </div>
-
-
-    <title-zh-english :data="components.service">
-
-    </title-zh-english>
-    <!--  <div class="text-center">
-        <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
-            style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
-          service
-        </h3>
-      </div>-->
-    <!--{{$store.state.test[0]}}-->
-
-    <pictext1 :data="components.service">
-
-    </pictext1>
     <div
-      :style="{background:`url(${$store.state.global.background2})`,backgroundAttachment: 'fixed'} "
+      :style="{background:`url(${global.background2})`,backgroundAttachment: 'fixed'} "
       style="padding-bottom: 90px; margin-bottom: -90px">
 
 
@@ -119,7 +92,7 @@
     </div>
 
     <title-zh-english
-                      :data="components.oem"></title-zh-english>
+      :data="components.oem"></title-zh-english>
     <div v-if="components.oem.show"
          class="container">
       <img v-lazy="components.oem.image">
@@ -132,7 +105,7 @@
           </h3>
         </div>
         <div class="text-center">
-          <img v-lazy="$store.state.components['page-oem'].image"  :alt="$store.state.global.title">
+          <img v-lazy="$store.state.components['page-oem'].image"  :alt="global.title">
         </div>-->
 
   </div>
@@ -150,6 +123,9 @@
       return {
         goodss
       }
+    },
+    mounted() {
+      console.log(this.test)
     }
   }
 

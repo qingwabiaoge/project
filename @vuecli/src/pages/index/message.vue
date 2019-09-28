@@ -43,6 +43,18 @@
       >
       </el-table-column>
 
+      <el-table-column
+        prop="_id"
+        label="日期"
+        sortable
+
+      >
+
+        <template slot-scope="scope">
+
+          {{scope.row._id|id2time}}
+        </template>
+      </el-table-column>
 
       <el-table-column label="操作"
                        width="150"

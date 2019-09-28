@@ -2,7 +2,7 @@
   <!--新增商品-->
   <el-dialog
     :class="$style.uniform"
-    :title="'编辑 '+data.type"
+    :title="'编辑 '+data.title"
     :visible.sync="visible"
     width="90%"
     :before-close="close">
@@ -85,6 +85,7 @@
                       prop="tel">
           <!--data.name 数据-->
           <el-input v-model="data.tel"
+                    type="textarea"
                     placeholder="请输入电话号码">
           </el-input>
         </el-form-item>
@@ -112,6 +113,7 @@
                       prop="qq">
           <!--data.name 数据-->
           <el-input v-model="data.qq"
+                    type="textarea"
                     placeholder="请输入qq号码">
           </el-input>
         </el-form-item>
@@ -339,6 +341,17 @@
           >
           </el-switch>
         </el-form-item>
+
+        <el-form-item>
+          <el-switch
+            v-if="data.type==='component'"
+            v-model="data.fullpage"
+            active-text="在页面中显示模块"
+            inactive-text="不显示"
+            class="uk-padding-left-md"
+          >
+          </el-switch>
+        </el-form-item>
         <el-form-item>
           <el-switch
             v-if="data.type==='artile'||data.type==='news'"
@@ -349,6 +362,7 @@
           >
           </el-switch>
         </el-form-item>
+
 
         <el-form-item>
           <el-switch

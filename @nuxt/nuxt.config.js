@@ -63,14 +63,16 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'senboma_bonniena',
+    // title: 'senboma_bonniena',
+    title: '广州森伯马_穿戴美甲',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {
         hid: 'description',
         name: 'description',
-        content: 'Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different markets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.'
+        //content: 'Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different markets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.'
+        content: '广州森伯马工艺品有限公司是一家集设计、研发、制造、销售美甲及美甲相关产品的一体性公司，公司成立于2012年3月，位于广州市番禺区大石街涌口工业区，公司以“秉着执着和创新的精神打造国际知名品牌，用服务和质量赢得客户口碑，给员工提供施展平台，把企业成果回馈社会”为经营理念；以“成为美甲行业的领导者”为经营目标；以“追求完美，不断创新，成就手指上的艺术”为质量目标，努力成为一间受到客户和社会认可的专业性美甲产品的国际化公司。 公司拥有自有品牌：SENBOMA和樱柏漫BONNIENA，同时承接OEM,ODM生产。 公司主营产品：塑料指甲贴片，指甲贴膜，指甲贴花，水晶指甲贴，美甲工具，美甲配件等工艺产品。公司建立无尘车间，采用ABS为原材料，运用全自动涂装设备及国际领先的移印丝印设备。我司拥有一批具有多年工作经验的设计研发人员、工程师、销售员及熟手技术人员。我们将以卓越的品质，真诚为广大客户服务。欢迎各界朋友莅临参观、指导和业务洽谈。'
       }
     ],
     link: [
@@ -96,14 +98,15 @@ module.exports = {
   */
   plugins: [
     '~/plugins/element-ui',
-    '~/plugins/swiper.client.js',
+    //'~/plugins/swiper.client.js',
     '~/plugins/lei-ui',
     '~/plugins/mixins',
     '~/plugins/vue-lazyload',
     "~/plugins/axios",
     "~/plugins/filter",
+    //"~/plugins/vuex-i18n",
     //vuex持久化
-    "~/plugins/vuex-persistedstate.client.js",
+    //"~/plugins/vuex-persistedstate.client.js",
     //test----------------------
     "~/plugins/process",
     "~/plugins/combined-inject",

@@ -1,7 +1,6 @@
 <template>
 
-  <div :class="$style['history']"
-       :style="{backgroundImage:`url(${data.background})`}">
+  <div :class="$style['history']">
 
     <section>
 
@@ -82,11 +81,13 @@
       }
 
     }
+
     ul {
       display: flex;
       margin-top: 100px;
       justify-content: space-around;
     }
+
     li {
       width: 55px;
       height: 66px;
@@ -94,9 +95,11 @@
       margin-bottom: 12px;
       text-align: center;
       position: relative;
+
       &:global(.active) {
         background: url("./tabbg.png");
       }
+
       &:after {
         content: '';
         position: absolute;
@@ -107,6 +110,7 @@
         background: #888;
       }
     }
+
     footer {
       height: 18px;
       background: url("./timeline.png") repeat-x;
