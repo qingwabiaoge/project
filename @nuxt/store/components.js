@@ -1,36 +1,36 @@
 import Vue from 'vue'
 
 const vm = new Vue()
-export const state = () => [];
+export const state = () => ({components: []});
 
 export const getters = {
+  //把component数组变成coponents对象
   components: state => {
+
     const _conponents = {}
-    state.forEach((item, index, self) => {
-      _conponents[item.key] = item
-    })
+    state.components.forEach(item => _conponents[item.key] = item)
     return _conponents
   },
-  categorys: state => state.filter(item => item.isCategory === true),
-  goodsCategory: (state, getters) => getters.components.goods.children,
-  newsCategory: (state, getters) => getters.components.article.children,
+  categorys: state => state.components.filter(item => item.isCategory === true),
+  produceCategory: (state, getters) => getters.components.produce.children,
+  articleCategory: (state, getters) => getters.components.article.children,
 
-  maxId(state, getters) {
-    let _maxid = 0
-    state.forEach(item => {
-      if (item.id > _maxid) {
-        _maxid = item.id
-        if (item.id.children && item.id.children.length > 0) {
-          item.id.children.forEach((i) => {
-            if (i.id > _maxid) {
-              _maxid = i.id
-            }
-          })
+  /*  maxId(state, getters) {
+      let _maxid = 0
+      state.forEach(item => {
+        if (item.id > _maxid) {
+          _maxid = item.id
+          if (item.id.children && item.id.children.length > 0) {
+            item.id.children.forEach((i) => {
+              if (i.id > _maxid) {
+                _maxid = i.id
+              }
+            })
+          }
         }
-      }
-    })
-    return _maxid + 1
-  }
+      })
+      return _maxid + 1
+    }*/
 }
 
 
@@ -38,16 +38,18 @@ export const mutations = {
   set(state, components) {
     //Object.assign(state, data)  //不行不会监听新加键值
     // state.push(...data) //第二次会有问题
-    for (let item in components) {
-      vm.$set(state, item, components[item])
-    }
+    /* for (let item in components) {
+       vm.$set(state, item, components[item])
+     }*/
+    state.components = components
+
   }
 };
 
 
 export const actions = {
   async get({commit}) {
-    const {components} = await this.$axios.get('/components')   //按照键值名分裂数组
+    const {components} = await this.$axios.get('/components')
     commit('set', components)
   }
   ,
@@ -58,20 +60,17 @@ export const actions = {
 }
 
 
-
 import Vuex from 'vuex'
 
 const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('components')
 //把mixin挂载在vue实例
 Vue.mixin({
-
   computed: {
-
     ...mapGetters([
       'components',
       'articleCategory',
       'categorys',
-      'goodsCategory',
+      'produceCategory',
     ])
   },
 

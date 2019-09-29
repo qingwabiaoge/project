@@ -1,7 +1,7 @@
 const controller = require('../controller/admin/index')
 const user = require('../controller/user')
 const article = require('../controller/article/index.js')
-const goods = require('../controller/goods')
+const produce = require('../controller/produce')
 
 const component = require('../controller/component')
 const global = require('../controller/global')
@@ -12,16 +12,16 @@ const router = new Router({prefix: '/api'})
 
 //checkToken作为中间件存在
 const checkToken = require('../libs/token/checkToken.js');
-router.get('/test', ctx => ctx.body = {code: '0', data: {msg: '后端返回的消息', goods: '家具'}})
+router.get('/test', ctx => ctx.body = {code: '0', data: {msg: '后端返回的消息', produce: '家具'}})
 router.post('/adminLogin', controller.adminLogin);
 //产品1
 router
-  .get('/goodss', goods.gets)
-  .del('/goodss', checkToken, goods.dels)
-  .get('/goods/:_id', goods.get)
-  .post('/goods', checkToken, goods.post)
-  .patch('/goods', checkToken, goods.patch)
-  .del('/goods/:_id', checkToken, goods.del)
+  .get('/produces', produce.gets)
+  .del('/produces', checkToken, produce.dels)
+  .get('/produce/:_id', produce.get)
+  .post('/produce', checkToken, produce.post)
+  .patch('/produce', checkToken, produce.patch)
+  .del('/produce/:_id', checkToken, produce.del)
 
 //文章
 

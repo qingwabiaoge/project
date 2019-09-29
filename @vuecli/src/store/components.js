@@ -13,8 +13,8 @@ export default {
       return _conponents
     },
     categorys: state => state.filter(item => item.isCategory === true),
-    goodsCategory: (state, getters) => getters.components.goods.children,
-    newsCategory: (state, getters) => getters.components.article.children,
+    produceCategory: (state, getters) => getters.components.produce.children,
+    articleCategory: (state, getters) => getters.components.article.children,
 
     maxId(state, getters) {
       let _maxid = 0

@@ -71,9 +71,9 @@ Vue.mixin({
   computed: {
     ...mapGetters([
       'components',
-      'newsCategory',
+      'articleCategory',
       'categorys',
-      'goodsCategory',
+      'produceCategory',
     ])
   },
 

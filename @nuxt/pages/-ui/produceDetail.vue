@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <goodsA :data="$store.state.test[0]">
+    <produceA :data="$store.state.test[0]">
 
-    </goodsA>
+    </produceA>
   </div>
 </template>
 

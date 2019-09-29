@@ -9,8 +9,8 @@
                                hidden@xs">
           <h3>艺术产品</h3>
           <ul style="margin-top: 18px; margin-left: 6px">
-            <li v-for="item in $store.state.goodsCategory">
-              <nuxt-link :to="{path:`/goodss/${item.text}`}">
+            <li v-for="item in $store.state.produceCategory">
+              <nuxt-link :to="{path:`/produces/${item.text}`}">
                 {{item.text}}
               </nuxt-link>
             </li>
@@ -24,7 +24,7 @@
                     margin-left: 6px">
             <li v-for="item in $store.state.articleCategory">
               <nuxt-link
-                :to="{path:`/news/${item.text}`}">
+                :to="{path:`/article/${item.text}`}">
                 {{item.text}}
               </nuxt-link>
             </li>

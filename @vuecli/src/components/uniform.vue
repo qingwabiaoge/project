@@ -2,7 +2,7 @@
   <!--新增商品-->
   <el-dialog
     :class="$style.uniform"
-    :title="'编辑 '+data.title"
+    :title="'编辑 '+data.title||data.type"
     :visible.sync="visible"
     width="90%"
     :before-close="close">
@@ -25,13 +25,13 @@
         </el-form-item>
 
         <el-form-item
-          v-if="data.type==='goods'||data.type==='article'"
+          v-if="data.type==='produce'||data.type==='article'"
           label="栏目"
           :label-width="formLabelWidth" prop="cid">
           <el-select v-model="data.cid" placeholder="请选择">
             <el-option
               v-for="item in data.type==='article'?articleCategory
-                                              :data.type==='goods'?goodsCategory:''"
+                                              :data.type==='produce'?produceCategory:''"
               :key="item.title"
               :label="item.title"
               :value="item.id">
@@ -62,7 +62,7 @@
           </el-input>
         </el-form-item>
 
-        <el-form-item v-if="data.type==='goods'||data.type==='article'"
+        <el-form-item v-if="data.type==='produce'||data.type==='article'"
                       label="排序"
                       :label-width="formLabelWidth">
           <el-input type="number"
@@ -149,8 +149,8 @@
       </section>
 
 
-      <h4 v-if="data.type==='goods'">产品字段:</h4>
-      <section v-if="data.type==='goods'">
+      <h4 v-if="data.type==='produce'">产品字段:</h4>
+      <section v-if="data.type==='produce'">
         <el-form-item label="原价" :label-width="formLabelWidth" prop="">
           <el-input type="number" v-model.number="data.maxPrice" auto-complete="off"></el-input>
         </el-form-item>
@@ -190,10 +190,10 @@
         </el-form-item>
       </section>
 
-      <h4 v-if="data.type==='article'||data.type==='goods'">
+      <h4 v-if="data.type==='article'||data.type==='produce'">
         推广字段
       </h4>
-      <section v-if="data.type==='article'||data.type==='goods'">
+      <section v-if="data.type==='article'||data.type==='produce'">
         <el-form-item label="百度标题"
                       :label-width="formLabelWidth"
                       prop="seotitle">
@@ -231,7 +231,7 @@
 
       <section>
 
-        <el-form-item v-if="data.type==='goods'"
+        <el-form-item v-if="data.type==='produce'"
                       label=" 缩略图"
                       prop="images">
 
@@ -283,27 +283,10 @@
                       v-if="data.type==='component'||data.type==='global'"
         >
 
-          <el-color-picker v-model="data.bg" show-alpha></el-color-picker>
+          <el-color-picker v-model="data.bg" show-alpha :predefine="predefineColors"></el-color-picker>
         </el-form-item>
 
 
-        <el-form-item label="背景2"
-                      v-if="data.type==='global'"
-        >
-
-          <upload v-model="data.background2">
-
-          </upload>
-        </el-form-item>
-
-        <el-form-item label="背景3"
-                      v-if="data.type==='global'"
-        >
-
-          <upload v-model="data.background2">
-
-          </upload>
-        </el-form-item>
       </section>
       <h4 v-if="data.type!=='global'"> 超链接</h4>
 
@@ -315,10 +298,10 @@
       </section>
 
 
-      <h4> 开关</h4>
-      <section>
+      <h4 v-if="data.type!=='global'"> 开关</h4>
+      <section v-if="data.type!=='global'">
 
-        <el-form-item v-if="data.type==='component'">
+        <el-form-item v-if="data.type==='component'&&data.key!=='bottom'&&data.key!=='top'">
           <el-tooltip class="item" effect="dark" content="栏目是组件的一种,栏目级组件带有页面,可通过导航链接访问栏目页面" placement="top-start">
 
             <el-switch
@@ -342,19 +325,10 @@
           </el-switch>
         </el-form-item>
 
+
         <el-form-item>
           <el-switch
-            v-if="data.type==='component'"
-            v-model="data.fullpage"
-            active-text="在页面中显示模块"
-            inactive-text="不显示"
-            class="uk-padding-left-md"
-          >
-          </el-switch>
-        </el-form-item>
-        <el-form-item>
-          <el-switch
-            v-if="data.type==='artile'||data.type==='news'"
+            v-if="data.type==='artile'||data.type==='article'"
             v-model="data.flag"
             active-text="不推荐"
             inactive-text="推荐到首页"
@@ -366,7 +340,7 @@
 
         <el-form-item>
           <el-switch
-            v-if="data.type==='article'&&data.type==='goods'"
+            v-if="data.type==='article'&&data.type==='produce'"
             v-model="data.publish"
             active-text="发布"
             inactive-text="存草稿"
@@ -407,7 +381,7 @@
 
         <el-form-item label="产品分页" :label-width="formLabelWidth">
           <el-input type="number"
-                    v-model.number="data.goodsPagerSize"
+                    v-model.number="data.producePagerSize"
                     auto-complete="off">
 
           </el-input>
@@ -416,7 +390,7 @@
 
         <el-form-item label="新闻分页" :label-width="formLabelWidth">
           <el-input type="number"
-                    v-model.number="data.newsPagerSize"
+                    v-model.number="data.articlePagerSize"
                     auto-complete="off">
 
           </el-input>
@@ -474,6 +448,23 @@
       return {
         formLabelWidth: '80px',
         visible: false,
+        predefineColors: [
+          '#ff4500',
+          '#ff8c00',
+          '#ffd700',
+          '#90ee90',
+          '#00ced1',
+          '#1e90ff',
+          '#c71585',
+          'rgba(0,0,0,0.5)',
+          'rgba(255, 69, 0, 0.68)',
+          'rgb(255, 120, 0)',
+          'hsv(51, 100, 98)',
+          'hsva(120, 40, 94, 0.5)',
+          'hsl(181, 100%, 37%)',
+          'hsla(209, 100%, 56%, 0.73)',
+          '#c7158577'
+        ]
       }
     },
     props: {data: {type: Object, default: {}}}

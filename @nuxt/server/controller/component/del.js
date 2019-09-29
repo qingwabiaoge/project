@@ -6,12 +6,12 @@ module.exports = async (ctx) => {
   let {_id} = ctx.params
 
   //取得fatherid
-  const {fatherId} = await Component.findById(_id)
-  await Component.updateOne({_id: fatherId}, {$pull: {children: _id}})
+  const {parentid} = await Component.findById(_id)
+  await Component.updateOne({_id: parentid}, {$pull: {children: _id}})
 
 
   /*
-    const father = await Component.findById({_id: fatherId})
+    const father = await Component.findById({_id: parentid})
     const index = await father.children.findIndex(item => item === '5d8ad37e7d54be1ad0ee36d9')
     console.log(index)
     await father.children.splice(index, 1)

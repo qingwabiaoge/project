@@ -1,11 +1,10 @@
 <template>
   <div :style="{background:`url(${global.background})`,backgroundAttachment: 'fixed'} ">
-    <header2 :data="{...global,children:categorys}"></header2>
+    <header2 :data="{title:components.brand.title,image:global.image,children:categorys}"></header2>
     <!--    <bannerCategory></bannerCategory>-->
-    <!--
-        <nuxt style="padding-bottom:90px; background-repeat: no-repeat;background-attachment: fixed;" :style="{backgroundImage:`url(${$store.state.global.background})`}"/>-->
-    <nuxt/>
-    <footerTalk :data="components.contact"></footerTalk>
+
+    <!--    <nuxt/>-->
+    <footerMessage :data="{...components.contact,beian:global.beian}"></footerMessage>
   </div>
 </template>
 

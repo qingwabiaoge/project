@@ -21,7 +21,7 @@ const router = new Router({
     {
 
       path: '/',
-      // redirect:'/goods',
+      // redirect:'/produce',
       name: 'index',
       //因为有模版包含所以不能直接用login组件做跟目录
       component: () => import('../pages/index'),
@@ -31,9 +31,9 @@ const router = new Router({
 
       children: [
         {
-          path: 'goodss/',
-          name: 'goodss',
-          component: () => import('../pages/index/goodss'),
+          path: 'produces/',
+          name: 'produces',
+          component: () => import('../pages/index/produces'),
           meta: {
             //requiresAuth: true
           }

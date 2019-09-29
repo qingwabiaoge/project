@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+  <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+<body>
+
+<div id="app">
+  {{n}}__{{m}}_{{l}}
+  <hr>
+  <button @click="add()">+</button>
+  <button @click="addA()">-</button>
+</div>
+
+<script>
+  const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('myModule')
+
+  const myModule = {
+    namespaced: true,
+    state: {n: 1},
+    getters: {
+      m(state) {
+        return state.n + 1
+      },
+      l(state, getters) {
+
+        return getters.m + 10
+      }
+    },
+    mutations: {
+      add(state, i=1) {
+        return state.n += i
+      },
+
+      red(state, i) {
+        return state.n -= i
+      }
+
+    },
+    actions: {
+      addA({commit}, i) {
+        setTimeout(() => {
+          commit('add', i)
+        }, 200)
+
+      }
+
+
+    }
+  }
+
+
+  const store = new Vuex.Store({
+
+    modules: {
+
+      myModule
+    }
+
+  })
+  const vm = new Vue({
+    el: '#app',
+    store,
+    computed: {
+      ...mapState(['n']),
+      ...mapGetters(['m', 'l'])
+    },
+    methods:{
+      ...mapMutations(['add']),
+      ...mapActions(['addA'])
+
+    }
+  })
+</script>
+
+
+</body>

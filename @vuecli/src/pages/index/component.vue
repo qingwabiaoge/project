@@ -2,11 +2,12 @@
   <div>
     <div :class="$style['component']">
       <section v-for="item in $store.state.components">
-        <h4 @click="click(item)">{{item.title}} <b v-if="item.children.length>0" @click.stop="clickB(item._id)">+</b>
+        <h4 @click="clickEdit(item)">{{item.title}} <b v-if="item.children.length>0"
+                                                       @click.stop="clickAdd(item._id)">+</b>
         </h4>
         <p v-if="item.children.length>0">
-        <span v-for="i in item.children" @click="click(i)">
-          {{i.title}} <i @click.stop="clickI(i)">-</i>
+        <span v-for="i in item.children" @click="clickEdit(i)">
+          {{i.title}} <i @click.stop="clickReduce(i)">-</i>
         </span>
         </p>
       </section>
@@ -23,24 +24,22 @@
   export default {
     data() {
       return {
-        fatherId: '',
+        parentid: '',
         uniformData: {}
       }
 
     },
     methods: {
-      click(item) {
+      clickEdit(item) {
         const component = {...item}
         this.uniformData = component
         this.$refs.uniform.visible = true
       },
-      clickB(fatherId) {
-        this.uniformData = {}
+      clickAdd(parentid) {
+        this.uniformData = {type: 'component', parentid}
         this.$refs.uniform.visible = true
-        this.type="component"
-        this.fatherId = fatherId
       },
-      clickI({_id, title}) {
+      clickReduce({_id, title}) {
         this.$confirm(`删除组件 [${title}] , 是否继续?`, '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
@@ -68,7 +67,7 @@
         if (this.uniformData._id) {// 如果不存在_id 是新增
           await this.$axios.patch('/component', this.uniformData)
         } else {
-          await this.$axios.post('/component', {component: this.uniformData, fatherId: this.fatherId})
+          await this.$axios.post('/component', this.uniformData)
         }
         this.$store.dispatch('components/get')
         this.uniformData = {}

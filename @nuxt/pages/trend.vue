@@ -13,7 +13,7 @@
 -->
 
     <el-row>
-      <el-col v-for="item in goodss"  :md="6" :lg="4" :key="item._id">
+      <el-col v-for="item in produces"  :md="6" :lg="4" :key="item._id">
         <picD :data="item">
 
         </picD>
@@ -34,9 +34,9 @@
 
     async asyncData({$axios}) {
 
-      const {goodss} = await $axios.get('/goodss', {params: {flag: '首页'}})
+      const {produces} = await $axios.get('/produces', {params: {flag: '首页'}})
       return {
-        goodss
+        produces
       }
     }
   }

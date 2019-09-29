@@ -8,12 +8,12 @@ const checkToken = require('../libs/token/checkToken.js');
 router.post('/adminLogin', controller.adminLogin);
 //产品1
 router
-    .get('/goodss', controller.getGoodss)
-    .get('/getGoodsById/:id', controller.getGoodsById)
-    .post('/goods', controller.addGoods)
-    .post('/editGoods', controller.editGoods)
-    .post('/delGoods', controller.delGoods)
-    .post('/delGoodss', controller.delGoodss);
+    .get('/produces', controller.getProduces)
+    .get('/getProduceById/:id', controller.getProduceById)
+    .post('/produce', controller.addProduce)
+    .post('/editProduce', controller.editProduce)
+    .post('/delProduce', controller.delProduce)
+    .post('/delProduces', controller.delProduces);
 //文章
 router
     .get('/getArticles', controller.getArticles)

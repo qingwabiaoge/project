@@ -1,31 +1,17 @@
 const mongoose = require('mongoose')
 //声明schema
 const globalSchema = mongoose.Schema({
-  type: {type:String,default:'global'},
 
-  title: String,
-  subtitle: String,
-  info: String,
-  description: String,
-  content: String,
-//seo
-  seotitle: String,
-  keyword: String,
-  //image
-  image: String,//公司照片
-
-
-  //other
-
-  goodsPagerSize:Number,
-  newsPagerSize:Number,
-
-  host:String,
+  producePagerSize: Number,
+  articlePagerSize: Number,
+  host: String,
   beian: String,
+  //全局背景
+  bg: String,
   background: String,
-  background2: String,
-  background3: String,
-  ex:{type:Array,default: ['']}
+
+  //额外的字段
+  ex: {type: Array, default: ['']}
 
 
 });

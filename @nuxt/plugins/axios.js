@@ -50,7 +50,7 @@ export default function ({$axios,redirect,env}) {
     }
     return Promise.reject(error.response);
   });
-  axios.getGoodss = function () {
+  axios.getProduces = function () {
 
     return $axios.get('/qin')
   }

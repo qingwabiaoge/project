@@ -2,7 +2,7 @@
   <div>
 
 404
-    {{newsCategory}}
+    {{articleCategory}}
   </div>
 </template>
 <script>

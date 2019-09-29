@@ -1,4 +1,4 @@
-const Goods = require('../../model/Goods');
+const Produce = require('../../model/Produce');
 
 // 获得所有产品
 module.exports = async (ctx) => {
@@ -7,17 +7,17 @@ module.exports = async (ctx) => {
     flag=new RegExp(flag,'i')
     category=new RegExp(category,'i')
     try {
-        const goodss = await Goods.find({$and:[ {name},
+        const produces = await Produce.find({$and:[ {name},
                                                   {flag},
                                                   {category},
                                                   {publish:true}]})
                                     .sort({'_id': -1})
-        const total = goodss.length
+        const total = produces.length
         ctx.body = {
             code: 0,
             data: {
                 total,
-                goodss
+                produces
             }
         };
     }

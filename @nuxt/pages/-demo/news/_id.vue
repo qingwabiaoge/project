@@ -26,7 +26,7 @@
       return {
         title: this.title,
         meta: [
-          {hid: 'description', name: 'news', content: 'This is news page'}
+          {hid: 'description', name: 'article', content: 'This is article page'}
         ]
       }
     }

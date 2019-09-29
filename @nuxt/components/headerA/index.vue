@@ -47,10 +47,10 @@
         <nuxt-link to="/join" class="hover-underline inline "
                    style="padding:30px 0; margin-right: 30px">加盟支持
         </nuxt-link>
-        <nuxt-link :to="{ path: '/goodss/'}" class="hover-underline inline "
+        <nuxt-link :to="{ path: '/produces/'}" class="hover-underline inline "
                    style="padding:30px 0; margin-right: 30px">艺术产品
         </nuxt-link>
-        <nuxt-link :to="{ path: '/news/公司新闻'}" class="hover-underline inline "
+        <nuxt-link :to="{ path: '/article/公司新闻'}" class="hover-underline inline "
                    style="padding:30px 0; margin-right: 30px">新闻中心
         </nuxt-link>
 

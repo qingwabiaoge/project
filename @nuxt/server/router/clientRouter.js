@@ -7,8 +7,8 @@ clientRouter
     .get('/getArticles', controller.getArticles)
     .get('/getArticleById/:id', controller.getArticleById)
 clientRouter
-    .get('/goodss',controller.getGoodss)
-    .get('/getGoodsById/:id', controller.getGoodsById)
+    .get('/produces',controller.getProduces)
+    .get('/getProduceById/:id', controller.getProduceById)
 clientRouter
     .get('/getBanners/',controller.getBanners)
 // 微信登录支付

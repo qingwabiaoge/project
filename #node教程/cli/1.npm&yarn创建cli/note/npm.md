@@ -14,7 +14,7 @@ npm是node自带的一个打包器插件,
 
     npm -v
 
-### 升级
+### 升级npm
 
     npm install npm@latest -g
 

@@ -1,4 +1,4 @@
-const Goods = require('../../model/Goods');
+const Produce = require('../../model/Produce');
 
 // 获得产品列表
 module.exports = async (ctx) => {
@@ -7,12 +7,12 @@ module.exports = async (ctx) => {
 
     try {
 
-        const goods = await Goods.findOne({_id:id})
+        const produce = await Produce.findOne({_id:id})
 
         ctx.body = {
             code: 0,
             data: {
-                goods
+                produce
             }
         };
     }

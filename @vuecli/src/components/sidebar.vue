@@ -10,23 +10,23 @@
       router>
 <!--      <el-submenu index="admin">
         <template slot="title">
-          <i class="el-icon-goods"></i>
+          <i class="el-icon-produce"></i>
           <span>商品</span>
         </template>
 
 
         <el-menu-item
-          v-for="item in goodsCategory"
+          v-for="item in produceCategory"
           :key="item.title"
-          :index="`/goodss/${item.id}`">
+          :index="`/produces/${item.id}`">
           {{item.title}}
         </el-menu-item>
 
 
       </el-submenu>-->
 
-      <el-menu-item index="/goodss">
-        <i class="el-icon-goods"></i>
+      <el-menu-item index="/produces">
+        <i class="el-icon-produce"></i>
         <span slot="title">产品</span>
       </el-menu-item>
       <el-submenu index="/article/">
@@ -36,7 +36,7 @@
         </template>
 
         <el-menu-item
-          v-for="item in newsCategory"
+          v-for="item in articleCategory"
           :key="item.title"
           :index="`/articles/${item.id}`">
           {{item.title}}
@@ -100,7 +100,7 @@
     name: "sidebar",
     data() {
       return {
-        // goodsCategory: this.$store.getters['components/goodsCategory'],
+        // produceCategory: this.$store.getters['components/produceCategory'],
         isCollapse: true,
         // articleCategory: this.$store.getters['components/articleCategory']
 

@@ -93,24 +93,24 @@ export default {
   },
 
 //获得商品列表
-  getGoodss(para) {
+  getProduces(para) {
     return instance.get('/goodss', {params: para})
   },
-  getGoodsById(id){
-    return instance.get('/getGoodsById/'+id)
+  getProduceById(id){
+    return instance.get('/getProduceById/'+id)
   },
 
-  addGoods(para) {
-    return instance.post('/addGoods', para)//post不用params=
+  addProduce(para) {
+    return instance.post('/addProduce', para)//post不用params=
   },
-  editGoods(para) {
-    return instance.post('/editGoods', para)
+  editProduce(para) {
+    return instance.post('/editProduce', para)
   },
-  delGoods(para) {
-    return instance.post('/delGoods', para)//post不用params=
+  delProduce(para) {
+    return instance.post('/delProduce', para)//post不用params=
   },
-  delGoodss(para) {
-    return instance.post('/delGoodss', para)//post不用params=
+  delProduces(para) {
+    return instance.post('/delProduces', para)//post不用params=
   },
 
   //获得文章列表

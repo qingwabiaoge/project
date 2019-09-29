@@ -169,7 +169,7 @@
     watch: {
       inputValue(value) {
 
-        this.$router.push(`/goods/?title=${value}`)
+        this.$router.push(`/produce/?title=${value}`)
       }
     }
 

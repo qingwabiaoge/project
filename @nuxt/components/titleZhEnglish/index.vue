@@ -4,7 +4,7 @@
   <div :class="$style.title" v-if="data.show">
     <section class="hover-underline hover-underline-center">
 
-      <h2 v-if="data.title">{{data.title}}</h2>
+      <h2 v-if="data.title" :style="{color:inverse?'#fff':''}">{{data.title}}</h2>
       <h3 v-if="data.subtitle"> {{data.subtitle}}</h3>
 
     </section>

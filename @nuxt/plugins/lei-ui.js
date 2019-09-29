@@ -101,7 +101,7 @@ import footerTalk from '@/components/footerTalk'
 import talk from '@/components/talk'
 
 //produce
-import goodsA from '@/components/goodsA'
+import produceA from '@/components/produceA'
 
 
 export default () => {
@@ -152,7 +152,7 @@ export default () => {
   Vue.use(search)
   Vue.use(card)
   Vue.use(footerTalk)
-  Vue.use(goodsA)
+  Vue.use(produceA)
 
 
 }

@@ -1,4 +1,4 @@
-export const state = () => ({});//括号是为了防止=>{}引起编译器误会
+export const state = () => ({global:{}});//括号是为了防止=>{}引起编译器误会
 
 export const mutations = {
   //方便才如此

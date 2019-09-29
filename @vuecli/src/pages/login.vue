@@ -48,7 +48,7 @@
                   if (!token) {
                     return false
                   } else {
-                    //首次登陸this.$route.query.redirect不存在推入goods
+                    //首次登陸this.$route.query.redirect不存在推入produce
                     const redirectUrl = decodeURIComponent(this.$route.query.redirect || '/');
                     this.$router.push({
                       path: redirectUrl

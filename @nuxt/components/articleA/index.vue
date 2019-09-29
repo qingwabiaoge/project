@@ -23,6 +23,7 @@
     background: white;
     padding: 50px 20px;
     overflow: hidden;
+
     img:first-of-type {
       float: left;
       margin-right: 20px;

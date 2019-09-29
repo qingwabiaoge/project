@@ -7,13 +7,18 @@
 
 <body>
 <div id="app">
-  <cl msg="1"></cl>
-  <cl :msg="1"></cl>
+  <cl></cl>
+  <cl :msg="{b:2}"></cl>
+  <cl :msg="[1,2,3]"></cl>
 </div>
 
 <script>
 
-  Vue.component('cl', {template: `<button :msg="msg">{{msg}}</button>`, props: {msg: [String, Number]}})
+  Vue.component('cl', {
+    template: `<button :msg="msg">{{msg}}</button>`,
+    //双类型如果是object arr的话 default必须用函数
+    props: {msg: {type: [Object, Array], default: () => ({a: 1})}}
+  })
   new Vue({el: '#app'})
 </script>
 

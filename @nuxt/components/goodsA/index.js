@@ -1,8 +1,8 @@
-import _goodsA from './index.vue'
+import _produceA from './index.vue'
 
-let goodsA = {
+let produceA = {
   install: function (Vue) {
-    Vue.component('goodsA', _goodsA)
+    Vue.component('produceA', _produceA)
   }
 }
-export default goodsA
+export default produceA
