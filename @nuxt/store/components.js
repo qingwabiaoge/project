@@ -8,7 +8,7 @@ export const getters = {
   components: state => {
 
     const _conponents = {}
-    state.components.forEach(item => _conponents[item.key] = item)
+    state.components.forEach(item => _conponents[item.name] = item)
     return _conponents
   },
   categorys: state => state.components.filter(item => item.isCategory === true),

@@ -2,14 +2,14 @@
   <!--新增商品-->
   <el-dialog
     :class="$style.uniform"
-    :title="'编辑 '+data.title||data.type"
+    :title="'编辑 '+data.title||data.model"
     :visible.sync="visible"
     width="90%"
     :before-close="close">
 
     <!--ref一定要写到这里 form的外层-->
     <el-form :model="data" :rules="$store.state.rules" ref="form">
-      <h4><span v-if="data.type">推广字段</span><span v-else>基本字段</span>:</h4>
+      <h4><span v-if="data.model">推广字段</span><span v-else>基本字段</span>:</h4>
       <section>
 
         <el-form-item label="标题" :label-width="formLabelWidth" prop="title">
@@ -17,7 +17,7 @@
         </el-form-item>
 
         <el-form-item label="key"
-                      v-if="data.type==='component'&&$store.state.dev"
+                      v-if="data.model==='component'&&$store.state.dev"
                       :label-width="formLabelWidth"
                       prop="key"
                       class="test">
@@ -25,13 +25,13 @@
         </el-form-item>
 
         <el-form-item
-          v-if="data.type==='produce'||data.type==='article'"
+          v-if="data.model==='produce'||data.model==='article'"
           label="栏目"
           :label-width="formLabelWidth" prop="cid">
           <el-select v-model="data.cid" placeholder="请选择">
             <el-option
-              v-for="item in data.type==='article'?articleCategory
-                                              :data.type==='produce'?produceCategory:''"
+              v-for="item in data.model==='article'?articleCategory
+                                              :data.model==='produce'?produceCategory:''"
               :key="item.title"
               :label="item.title"
               :value="item.id">
@@ -44,7 +44,7 @@
           <el-input type="text" v-model="data.subtitle" auto-complete="off"></el-input>
         </el-form-item>
 
-        <el-form-item v-if="data.type==='component'" label="按钮文字" :label-width="formLabelWidth" prop="">
+        <el-form-item v-if="data.model==='component'" label="按钮文字" :label-width="formLabelWidth" prop="">
           <el-input type="text" v-model="data.button" auto-complete="off"></el-input>
         </el-form-item>
 
@@ -62,7 +62,7 @@
           </el-input>
         </el-form-item>
 
-        <el-form-item v-if="data.type==='produce'||data.type==='article'"
+        <el-form-item v-if="data.model==='produce'||data.model==='article'"
                       label="排序"
                       :label-width="formLabelWidth">
           <el-input type="number"
@@ -149,8 +149,8 @@
       </section>
 
 
-      <h4 v-if="data.type==='produce'">产品字段:</h4>
-      <section v-if="data.type==='produce'">
+      <h4 v-if="data.model==='produce'">产品字段:</h4>
+      <section v-if="data.model==='produce'">
         <el-form-item label="原价" :label-width="formLabelWidth" prop="">
           <el-input type="number" v-model.number="data.maxPrice" auto-complete="off"></el-input>
         </el-form-item>
@@ -190,10 +190,10 @@
         </el-form-item>
       </section>
 
-      <h4 v-if="data.type==='article'||data.type==='produce'">
+      <h4 v-if="data.model==='article'||data.model==='produce'">
         推广字段
       </h4>
-      <section v-if="data.type==='article'||data.type==='produce'">
+      <section v-if="data.model==='article'||data.model==='produce'">
         <el-form-item label="百度标题"
                       :label-width="formLabelWidth"
                       prop="seotitle">
@@ -231,7 +231,7 @@
 
       <section>
 
-        <el-form-item v-if="data.type==='produce'"
+        <el-form-item v-if="data.model==='produce'"
                       label=" 缩略图"
                       prop="images">
 
@@ -244,7 +244,7 @@
 
 
         <el-form-item v-else
-                      :label="data.type==='global'?'LOGO':'缩略图'"
+                      :label="data.model==='global'?'LOGO':'缩略图'"
         >
 
           <upload v-model="data.image">
@@ -263,7 +263,7 @@
 
 
         <el-form-item label="图标"
-                      v-if="data.type==='component'"
+                      v-if="data.model==='component'"
         >
 
           <upload v-model="data.icon">
@@ -272,7 +272,7 @@
         </el-form-item>
 
         <el-form-item label="背景"
-                      v-if="data.type==='component'||data.type==='global'"
+                      v-if="data.model==='component'||data.model==='global'"
         >
 
           <upload v-model="data.background">
@@ -280,7 +280,7 @@
           </upload>
         </el-form-item>
         <el-form-item label="背景颜色"
-                      v-if="data.type==='component'||data.type==='global'"
+                      v-if="data.model==='component'||data.model==='global'"
         >
 
           <el-color-picker v-model="data.bg" show-alpha :predefine="predefineColors"></el-color-picker>
@@ -288,9 +288,9 @@
 
 
       </section>
-      <h4 v-if="data.type!=='global'"> 超链接</h4>
+      <h4 v-if="data.model==='component'"> 超链接</h4>
 
-      <section v-if="data.type==='component'">
+      <section v-if="data.model==='component'">
         <el-form-item label="超链接" :label-width="formLabelWidth">
           <el-input type="text" v-model="data.href" auto-complete="off"></el-input>
         </el-form-item>
@@ -298,10 +298,10 @@
       </section>
 
 
-      <h4 v-if="data.type!=='global'"> 开关</h4>
-      <section v-if="data.type!=='global'">
+      <h4 v-if="data.model!=='global'"> 开关</h4>
+      <section v-if="data.model!=='global'">
 
-        <el-form-item v-if="data.type==='component'&&data.key!=='bottom'&&data.key!=='top'">
+        <el-form-item v-if="data.model==='component'">
           <el-tooltip class="item" effect="dark" content="栏目是组件的一种,栏目级组件带有页面,可通过导航链接访问栏目页面" placement="top-start">
 
             <el-switch
@@ -316,7 +316,7 @@
 
         <el-form-item>
           <el-switch
-            v-if="data.type==='component'"
+            v-if="data.model==='component'"
             v-model="data.show"
             active-text="在页面中显示模块"
             inactive-text="不显示"
@@ -328,7 +328,7 @@
 
         <el-form-item>
           <el-switch
-            v-if="data.type==='artile'||data.type==='article'"
+            v-if="data.model==='produce'||data.model==='article'"
             v-model="data.flag"
             active-text="不推荐"
             inactive-text="推荐到首页"
@@ -340,7 +340,7 @@
 
         <el-form-item>
           <el-switch
-            v-if="data.type==='article'&&data.type==='produce'"
+            v-if="data.model==='article'||data.model==='produce'"
             v-model="data.publish"
             active-text="发布"
             inactive-text="存草稿"
@@ -350,7 +350,7 @@
         </el-form-item>
       </section>
 
-      <h4 v-if="data.type!=='global'&&data.isCategory!==false">
+      <h4 v-if="data.model!=='global'&&data.isCategory!==false">
         <span v-if="data.isCategory===true">
           栏目内页内容
         </span>
@@ -358,7 +358,7 @@
       </h4>
 
       <!-- undifine!==false-->
-      <section v-if="data.type!=='global'&&data.isCategory!==false">
+      <section v-if="data.model!=='global'&&data.isCategory!==false">
 
         <vue-editor id="editor"
                     useCustomImageHandler
@@ -369,7 +369,7 @@
 
       </section>
 
-      <section v-if="data.type==='global'">
+      <section v-if="data.model==='global'">
 
         <el-form-item label="主机地址" :label-width="formLabelWidth">
           <el-input type="text"
@@ -406,7 +406,7 @@
         </el-form-item>
       </section>
 
-      <section v-if="data.type==='global'">
+      <section v-if="data.model==='global'">
         <el-form-item label="字段"
                       :label-width="formLabelWidth"
 
@@ -456,7 +456,7 @@
           '#00ced1',
           '#1e90ff',
           '#c71585',
-          'rgba(0,0,0,0.5)',
+          'rgba(0,0,0,0.8)',
           'rgba(255, 69, 0, 0.68)',
           'rgb(255, 120, 0)',
           'hsv(51, 100, 98)',

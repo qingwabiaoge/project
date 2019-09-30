@@ -2078,6 +2078,16 @@ temp.find(function(err,docs){
 
 
 
+# 数据库设计
+
+### 一对一
+
+
+
+# stuido 3t
+
+![1569817757761](img/1569817757761.png)
+
 # 常见错误
 
 ### 没写await

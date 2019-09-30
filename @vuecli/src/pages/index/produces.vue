@@ -114,29 +114,29 @@
         :filters="[
                   {
                    value: true,
-                   label: '上架',
+                   label: '在线',
                     text: '上架'
                   },
                   {
                  value: false,
-                 label: '下架',
-                 text: '下架'
+                 label: '草稿',
+                 text: '草稿'
                   }]"
         :filter-method="filterHandler"
       >
         <template slot-scope="scope">
 
-          <span v-if="scope.row.publish">上架</span><span v-else>下架</span>
+          <span v-if="scope.row.publish"></span><span v-else>草稿</span>
         </template>
       </el-table-column>
       <el-table-column label="操作"
                        fixed="right"
                        width="150">
         <template slot-scope="scope">
-    <!--      <el-button
-            size="mini"
-            @click="previewButton(scope.$index, scope.row)">预览
-          </el-button>-->
+          <!--      <el-button
+                  size="mini"
+                  @click="previewButton(scope.$index, scope.row)">预览
+                </el-button>-->
           <el-button
             size="mini"
             @click="editButton(scope.$index, scope.row)">编辑
@@ -198,7 +198,7 @@
         return filters
       },
       filterTableData: function () {
-        const searchInputValue = new RegExp(this.searchInputValue)
+        const searchInputValue = new RegExp(this.searchInputValue, 'i')
         return this.tableData.filter(item => searchInputValue.test(item.title))
       }
 
@@ -207,8 +207,7 @@
     methods: {
 
       async gets() {
-        const {produces} = await this.$axios.get('produces')
-        console.log(produces)
+        const {produces} = await this.$axios.get('/produces?admin=true')
         this.tableData = produces
       },
 //通用表格过滤器------------------------------------------------------------

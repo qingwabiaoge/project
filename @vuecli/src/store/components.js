@@ -8,7 +8,7 @@ export default {
     components: state => {
       const _conponents = {}
       state.forEach((item, index, self) => {
-        _conponents[item.key] = item
+        _conponents[item.name] = item
       })
       return _conponents
     },

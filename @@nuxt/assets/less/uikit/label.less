@@ -1,0 +1,110 @@
+// Name:            Label
+// Description:     Component to indicate important notes
+//
+// Component:       `label`
+//
+// Modifiers:       `label-success`
+//                  `label-warning`
+//                  `label-danger`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@label-padding-vertical:                        0;
+@label-padding-horizontal:                      @global-margin-small;
+@label-background:                              @global-color-primary;
+@label-line-height:                             @global-line-height;
+@label-font-size:                               @global-font-size-h6;
+@label-color:                                   @global-color-inverse;
+
+@label-success-background:                      @global-color-success;
+@label-success-color:                           @global-color-inverse;
+@label-warning-background:                      @global-color-warning;
+@label-warning-color:                           @global-color-inverse;
+@label-danger-background:                       @global-color-danger;
+@label-danger-color:                            @global-color-inverse;
+
+
+/* ========================================================================
+   Component: Label
+ ========================================================================== */
+
+.label {
+    display: inline-block;
+    padding: @label-padding-vertical @label-padding-horizontal;
+    background: @label-background;
+    line-height: @label-line-height;
+    font-size: @label-font-size;
+    color: @label-color;
+    vertical-align: middle;
+    white-space: nowrap;
+    .hook-label;
+}
+
+
+/* Color modifiers
+ ========================================================================== */
+
+/*
+ * Success
+ */
+
+.label-success {
+    background-color: @label-success-background;
+    color: @label-success-color;
+    .hook-label-success;
+}
+
+/*
+ * Warning
+ */
+
+.label-warning {
+    background-color: @label-warning-background;
+    color: @label-warning-color;
+    .hook-label-warning;
+}
+
+/*
+ * Danger
+ */
+
+.label-danger {
+    background-color: @label-danger-background;
+    color: @label-danger-color;
+    .hook-label-danger;
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-label-misc;
+
+.hook-label() {}
+.hook-label-success() {}
+.hook-label-warning() {}
+.hook-label-danger() {}
+.hook-label-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-label-background:                     @inverse-global-primary-background;
+@inverse-label-color:                          @inverse-global-inverse-color;
+
+.hook-inverse() {
+
+    .label {
+        background-color: @inverse-label-background;
+        color: @inverse-label-color;
+        .hook-inverse-label;
+    }
+
+}
+
+.hook-inverse-label() {}

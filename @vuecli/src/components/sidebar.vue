@@ -26,10 +26,14 @@
       </el-submenu>-->
 
       <el-menu-item index="/produces">
-        <i class="el-icon-produce"></i>
+        <i class="el-icon-goods"></i>
         <span slot="title">产品</span>
       </el-menu-item>
-      <el-submenu index="/article/">
+      <el-menu-item index="/articles">
+        <i class="el-icon-tickets"></i>
+        <span slot="title">新闻</span>
+      </el-menu-item>
+ <!--     <el-submenu index="/article/">
         <template slot="title">
           <i class="el-icon-tickets"></i>
           <span>新闻</span>
@@ -43,13 +47,8 @@
         </el-menu-item>
 
 
-      </el-submenu>
+      </el-submenu>-->
 
-      <!--   <el-menu-item index="/article/单页">
-           <i class="el-icon-document"></i>
-           <span slot="title">单页</span>
-         </el-menu-item>
-   -->
 
 
       <el-menu-item index="/component">

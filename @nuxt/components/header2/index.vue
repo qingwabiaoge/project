@@ -65,7 +65,7 @@
     <nav class="nav">
       <div class="container">
         <nuxt-link to="/" :style="{color:$route.name==='index'?'#FB00C9':'#333'}">首页</nuxt-link>
-        <nuxt-link v-for="item in data.children" :to="'/'+item.key||'#'" class="hover-underline" :key="item.title">
+        <nuxt-link v-for="item in data.children" :to="'/'+item.name||'#'" class="hover-underline" :key="item.title">
           {{item.title}}
         </nuxt-link>
       </div>
@@ -75,6 +75,30 @@
   </div>
 
 </template>
+<script>
+  import mixin from '@/plugins/mixins'
+
+  if (process.client) {
+    require('./iconfont')
+
+  }
+  export default {
+    mixins: [mixin],
+    data() {
+      return {
+        inputValue: ''
+        // searchValue: '11'
+      }
+    },
+    watch: {
+      inputValue(value) {
+       console.log(value)
+        this.$router.push(`/produce/?title=${value}`)
+      }
+    }
+
+  }
+</script>
 
 <style lang="less" scoped>
   .header {
@@ -154,24 +178,3 @@
     }
   }
 </style>
-<script>
-  if (process.client) {
-    require('./iconfont')
-
-  }
-  export default {
-    data() {
-      return {
-        inputValue: ''
-        // searchValue: '11'
-      }
-    },
-    watch: {
-      inputValue(value) {
-
-        this.$router.push(`/produce/?title=${value}`)
-      }
-    }
-
-  }
-</script>

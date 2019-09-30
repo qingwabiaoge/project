@@ -61,7 +61,11 @@
 
 
   export default {
-    components: {siderbar},
 
+    components: {siderbar},
+    created() {
+      //进入admin验证token是否过期
+      this.$axios('/validateToken')
+    }
   }
 </script>

@@ -15,7 +15,6 @@ module.exports = {
     PORT: 3001,
   },
 
-
   mode: 'universal',
   router: {
     linkActiveClass: 'active',//当前流和上级栏目

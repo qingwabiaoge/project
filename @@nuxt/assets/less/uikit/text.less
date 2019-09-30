@@ -1,0 +1,282 @@
+// Name:            Text
+// Description:     Utilities for text
+//
+// Component:       `text-*`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@text-lead-font-size:                           @global-font-size-h3;
+@text-lead-line-height:                         1.5;
+@text-lead-color:                               @global-color-emphasis;
+
+@text-meta-font-size:                           @global-font-size-h6;
+@text-meta-line-height:                         1.4;
+@text-meta-color:                               @global-background-muted;
+
+@text-small-font-size:                          @global-font-size-h6;
+@text-small-line-height:                        1.5;
+
+@text-large-font-size:                          @global-font-size-h3;
+@text-large-line-height:                        1.5;
+
+@text-bold-font-weight:                         bolder;
+
+@text-inverse-color:                              @global-color-inverse;
+@text-muted-color:                              @global-background-muted;
+@text-primary-color:                            @global-color-primary;
+@text-success-color:                            @global-color-success;
+@text-warning-color:                            @global-color-warning;
+@text-danger-color:                             @global-color-danger;
+
+@text-background-color:                         @global-color-primary;
+
+
+/* ========================================================================
+   Component: Text
+ ========================================================================== */
+
+.line-height-1{line-height: 1}
+.line-height-2{line-height: 2}
+
+.text-SimSun{font-family: 'SimSun'}
+/* Style modifiers
+ ========================================================================== */
+
+.text-lead {
+    font-size: @text-lead-font-size;
+    line-height: @text-lead-line-height;
+    color: @text-lead-color;
+    .hook-text-lead;
+}
+
+.text-meta {
+    font-size: @text-meta-font-size;
+    line-height: @text-meta-line-height;
+    color: @text-meta-color;
+    .hook-text-meta;
+}
+
+
+/* Size modifiers
+ ========================================================================== */
+
+.text-small {
+   font-size: 85%;
+}
+
+.text-large {
+    font-size: 115%
+}
+
+
+/* Weight modifier
+ ========================================================================== */
+
+.text-bold { font-weight: @text-bold-font-weight; }
+
+
+/* Transform modifier
+ ========================================================================== */
+
+.text-uppercase { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+.text-lowercase { text-transform: lowercase !important; }
+
+
+/* Color modifiers
+ ========================================================================== */
+
+.text-muted { color: @text-muted-color !important; }
+.text-primary { color: @text-primary-color !important; }
+.text-success { color: @text-success-color !important; }
+.text-warning { color: @text-warning-color !important; }
+.text-danger { color: @text-danger-color !important; }
+
+.text-inverse{color: @global-color-inverse !important;}
+
+/* Background modifier
+ ========================================================================== */
+
+/*
+ * 1. The background clips to the foreground text. Works in Chrome, Firefox, Safari, Edge and Opera
+ *    Default color is set to transparent
+ * 2. Container fits the text
+ * 3. Fallback color for IE11
+ */
+
+.text-background {
+    /* 1 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* 2 */
+    display: inline-block;
+    /* 3 */
+    color: @text-background-color !important;
+}
+
+@supports (-webkit-background-clip: text) {
+
+    .text-background {
+        background-color: @text-background-color;
+        .hook-text-background;
+    }
+
+}
+
+
+/* Alignment modifiers
+ ========================================================================== */
+
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+.text-justify { text-align: justify !important; }
+
+/* Phone landscape and bigger */
+@media (max-width: @global-breakpoint-phone) {
+
+  .text-left\@xs { text-align: left !important; }
+  .text-right\@xs { text-align: right !important; }
+  .text-center\@xs { text-align: center !important; }
+
+}
+
+@media (min-width: @global-breakpoint-phone) {
+
+    .text-left\@s { text-align: left !important; }
+    .text-right\@s { text-align: right !important; }
+    .text-center\@s { text-align: center !important; }
+
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @global-breakpoint-tablet) {
+
+    .text-left\@m { text-align: left !important; }
+    .text-right\@m { text-align: right !important; }
+    .text-center\@m { text-align: center !important; }
+
+}
+
+/* Desktop and bigger */
+@media (min-width: @global-breakpoint-desktop) {
+
+    .text-left\@l { text-align: left !important; }
+    .text-right\@l { text-align: right !important; }
+    .text-center\@l { text-align: center !important; }
+
+}
+
+/* Large screen and bigger */
+@media (min-width: @global-breakpoint-largeScreens) {
+
+    .text-left\@xl { text-align: left !important; }
+    .text-right\@xl { text-align: right !important; }
+    .text-center\@xl { text-align: center !important; }
+
+}
+
+/*
+ * Vertical
+ */
+
+.text-top { vertical-align: top !important; }
+.text-middle { vertical-align: middle !important; }
+.text-bottom { vertical-align: bottom !important; }
+.text-baseline { vertical-align: baseline !important; }
+
+
+/* Wrap modifiers
+ ========================================================================== */
+
+/*
+ * Prevent text from wrapping onto multiple lines
+ */
+
+.text-nowrap { white-space: nowrap; }
+
+/*
+ * 1. Make sure a max-width is set after which truncation can occur
+ * 2. Prevent text from wrapping onto multiple lines, and truncate with an ellipsis
+ * 3. Fix for table cells
+ */
+
+.text-truncate {
+    /* 1 */
+    max-width: 100%;
+    /* 2 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 2 */
+th.text-truncate,
+td.text-truncate { max-width: 0; }
+
+
+/*
+ * 1. Wrap long words onto the next line and break them if they are too long to fit
+ * 2. Legacy `word-wrap` as fallback for `overflow-wrap`
+ * 3. Fix `overflow-wrap` which doesn't work with table cells in Chrome, Opera, IE11 and Edge
+ *    Must use `break-all` to support IE11 and Edge
+ * Note: Not using `hyphens: auto;` because it hyphenates text even if not needed
+ */
+
+.text-break {
+    /* 1 */
+    overflow-wrap: break-word;
+    /* 2 */
+    word-wrap: break-word;
+}
+
+/* 3 */
+th.text-break,
+td.text-break { word-break: break-all; }
+
+
+
+// Hooks
+// ========================================================================
+
+.hook-text-misc;
+
+.hook-text-lead() {}
+.hook-text-meta() {}
+.hook-text-small() {}
+.hook-text-large() {}
+.hook-text-background() {}
+.hook-text-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-text-lead-color:                      @inverse-global-color;
+@inverse-text-meta-color:                      @inverse-global-muted-color;
+@inverse-text-muted-color:                     @inverse-global-muted-color;
+@inverse-text-primary-color:                   @inverse-global-color;
+
+.hook-inverse() {
+
+    .text-lead {
+        color: @inverse-text-lead-color;
+        .hook-inverse-text-lead;
+    }
+
+    .text-meta {
+        color: @inverse-text-meta-color;
+        .hook-inverse-text-meta;
+    }
+
+    .text-muted { color: @inverse-text-muted-color !important; }
+    .text-primary { color: @inverse-text-primary-color !important; }
+
+}
+
+.hook-inverse-text-lead() {}
+.hook-inverse-text-meta() {}

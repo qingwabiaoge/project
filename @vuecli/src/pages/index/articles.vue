@@ -152,7 +152,7 @@
           page: this.page,
           title: this.keyword,
           category: this.$route.params.category,
-          inlcudeNoPublish: true
+          admin: true
         };
         this.listLoading = true;
         const {total, articles} = await this.$axios.get('/articles', {params})

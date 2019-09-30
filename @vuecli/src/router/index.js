@@ -41,7 +41,7 @@ const router = new Router({
 
         {
 
-          path: 'articles/:cid',
+          path: 'articles/',
           name: 'articles',
           component: () => import('../pages/index/articles'),
           meta: {
