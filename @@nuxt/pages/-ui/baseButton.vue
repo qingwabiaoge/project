@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-  export default {   layout: 'ui',
+  export default {
     layout: 'ui'
   }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <titlebarA icon="weixin" title="产品中心" subTitle="PRODUCE CENTER">
+    <titlebarA >
 
     </titlebarA>
   </div>

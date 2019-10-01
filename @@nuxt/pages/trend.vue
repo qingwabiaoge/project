@@ -28,8 +28,11 @@
 </template>
 
 
+
+
 <script>
 
+import mixin from '@/plugins/page-mixin'
   export default {
 
     async asyncData({$axios}) {
@@ -38,7 +41,8 @@
       return {
         produces
       }
-    }
+    },
+    mixins:[mixin]
   }
 
 </script>

@@ -96,20 +96,20 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/element-all',
+    '~/plugins/element-ui',
     //'~/plugins/swiper.client.js',
     '~/plugins/lei-ui',
-    '~/plugins/mixins',
     '~/plugins/vue-lazyload',
     "~/plugins/axios",
     "~/plugins/filter",
-    "~/plugins/vue.prtotype",
+    "~/plugins/vue.prototype",
+    "~/plugins/vuex.prototype",
     //"~/plugins/vuex-i18n",
     //vuex持久化
     //"~/plugins/vuex-persistedstate.client.js",
     //test----------------------
     "~/plugins/test-process",
-    "~/plugins/test-combined-inject",
+    "~/plugins/inject",
     "~/plugins/test-store.client"
 
   ],
@@ -129,6 +129,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+
 
     babel: {
       "plugins": [["component",

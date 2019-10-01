@@ -60,25 +60,4 @@ export const actions = {
 }
 
 
-import Vuex from 'vuex'
-
-const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('components')
-//把mixin挂载在vue实例
-
-let i=1
-Vue.mixin({
-  computed: {
-    ...mapGetters([
-      'components',
-      'articleCategory',
-      'categorys',
-      'produceCategory',
-    ])
-  },
-  created(){
-    i++
-    console.log('全局mixin执行'+i+'次')
-  }
-
-})
 

@@ -8,9 +8,9 @@
 </template>
 
 <script>
-  import mixin from '@/plugins/mixins'
+
 export default {
-    mixins:[mixin],
+
     props: {
       type: String,
       border: String

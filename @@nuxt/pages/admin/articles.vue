@@ -1,6 +1,6 @@
 <template>
   <div class="article">
-    <el-breadcrumb separator=">" class="border-bottom-small uk-padding-bottom uk-margin-medium-bottom">
+    <el-breadcrumb separator=">" style="margin-bottom: 20px">
       <el-breadcrumb-item>首页</el-breadcrumb-item>
       <el-breadcrumb-item>文案</el-breadcrumb-item>
       <el-breadcrumb-item>{{$route.params.category}}</el-breadcrumb-item>
@@ -24,8 +24,6 @@
           </el-form-item>
         </el-form>
       </el-col>
-
-
     </el-row>
 
 
@@ -108,14 +106,15 @@
       </el-table-column>
     </el-table>
 
-
-    <!--工具条-->
-    <el-col :span="24" class="toolbar uk-margin-top">
-      <el-button type="danger" @click="batchRemoveButton" :disabled="this.sels.length===0">批量删除</el-button>
-      <el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="50" :total="total"
-                     style="float:right;">
-      </el-pagination>
-    </el-col>
+    <el-row>
+      <!--工具条-->
+      <el-col :span="24" style="padding-top: 20px; ">
+        <el-button type="danger" @click="batchRemoveButton" :disabled="this.sels.length===0">批量删除</el-button>
+        <el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="50" :total="total"
+                       style="float:right;">
+        </el-pagination>
+      </el-col>
+    </el-row>
     <uniform ref="uniform" :data="uniformData" @submit='submit'></uniform>
 
   </div>
@@ -125,7 +124,7 @@
 
 
   export default {
-    layout:'admin',
+    layout: 'admin',
     data: function () {
       return {
         //新闻表格数据----------------------------------
@@ -177,11 +176,11 @@
       //显示新增界面并传递属性--------------------------------------------------------------
       addButton: function () {
         this.uniformData = {
-          type: 'article',
+          model: 'article',
           image: '',//验证upload ruler需要不可删除
           category: this.$route.params.id - 0,
           publish: true,
-          pv: this.$store.state.tool.randomNum(1500, 20000),
+          pv: this.$tool.randomNum(1500, 20000),
         };
         this.$refs.uniform.visible = true
       },
@@ -237,7 +236,6 @@
           await this.$axios.patch('/article', this.uniformData);
 
         }
-
         this.gets()
       }
     }

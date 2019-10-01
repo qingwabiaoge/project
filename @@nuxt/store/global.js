@@ -18,19 +18,6 @@ export const actions = {
   }
 }
 
-import Vue from 'vue'
-import Vuex from 'vuex'
 
-const {mapState} = Vuex.createNamespacedHelpers('global')
-//把mixin挂载在vue实例
-Vue.mixin({
 
-  computed: {
-
-    ...mapState([
-      'global'
-    ])
-  },
-
-})
 

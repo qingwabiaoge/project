@@ -6,7 +6,12 @@
     <footerMessage :data="{...components.contact,beian:global.beian}"></footerMessage>
   </div>
 </template>
-
+<script>
+  import mixin from '@/plugins/page-mixin'
+  export default {
+    mixins:[mixin]
+  }
+</script>
 
 <style>
   /* body {
@@ -16,11 +21,4 @@
 
 </style>
 
-
-<!--<template>
-<div>
-  {{components}}
-</div>
-&lt;!&ndash;  <nuxt/>&ndash;&gt;
-</template>-->
 

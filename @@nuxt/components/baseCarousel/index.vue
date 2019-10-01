@@ -13,7 +13,7 @@
       mode="out-in">
 
 
-      <router-link v-for="(item,index) in carouselData"
+      <router-link v-for="(item,index) in data.children"
                    v-show="index===mark"
                    :key="`bashcarousel`+index"
                    :to="{path:item.href||'#'}">
@@ -25,7 +25,7 @@
     </transition-group>
 
     <div v-if="pagination" class="text-center">
-      <div v-for="(item,index) in carouselData"
+      <div v-for="(item,index) in data.children"
            @click="mark=index"
            class="border-circle background-default-transparent text-center inline "
            style="width: 20px; height: 20px;line-height:20px;  margin-left: 5px"
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-  import mixin from '@/plugins/mixins'
+  import mixin from '@/plugins/conponent-mixin'
 export default {
     mixins:[mixin],
 
@@ -53,13 +53,13 @@ export default {
         mark: 0, //#1当前屏显示的幻灯片第一个
       }
     },
-    props: ['carouselData', 'animation', 'stopTime', 'transitionTime', 'pagination', 'paginationMark', 'paginationMarkBottom', 'navigation', 'height'],
+    props: [ 'animation', 'stopTime', 'transitionTime', 'pagination', 'paginationMark', 'paginationMarkBottom', 'navigation', 'height'],
 
     methods: {
 
       next() {//前进按钮和定时器前进触发此函数
         this.mark++
-        if (this.mark > this.carouselData.length - 1) {//超出图片数目归零
+        if (this.mark > this.data.children.length - 1) {//超出图片数目归零
           this.mark = 0
         }
 
@@ -67,7 +67,7 @@ export default {
       prev() {//后退按钮触发此函数
         this.mark--;
         if (this.mark < 0) {//小于零时赋值图片最大数目
-          this.mark = this.carouselData.length - 1
+          this.mark = this.data.children.length - 1
         }
 
       }

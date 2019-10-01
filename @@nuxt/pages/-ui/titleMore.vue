@@ -1,11 +1,11 @@
 <template>
   <div>
-    <titleMore :data="$store.state.test[0]" type="default">
+    <titleMore  type="default">
 
     </titleMore>
     <div style="background: black">
 
-      <titleMore :data="$store.state.test[0]" type="default" inverse="">
+      <titleMore  type="default" inverse="">
 
       </titleMore>
 

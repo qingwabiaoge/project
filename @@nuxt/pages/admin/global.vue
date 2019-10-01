@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-breadcrumb separator=">" class="border-bottom-small uk-padding-bottom uk-margin-medium-bottom">
+    <el-breadcrumb separator=">" style="margin-bottom: 20px">
       <el-breadcrumb-item>首页</el-breadcrumb-item>
       <el-breadcrumb-item>网站配置</el-breadcrumb-item>
     </el-breadcrumb>
@@ -29,7 +29,7 @@
       },
 
       get: function () {
-        this.uniformData = Object.assign({}, this.$store.state.global)
+        this.uniformData = Object.assign({}, this.$store.state.global.global)
         this.$refs.uniform.visible = true
       },
 

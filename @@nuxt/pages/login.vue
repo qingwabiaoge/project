@@ -36,6 +36,7 @@
   </div>
 </template>
 <script>
+  import mixin from '@/plugins/page-mixin'
   export default {
     name: 'login',
    layout: 'login',
@@ -57,7 +58,7 @@
                     return false
                   } else {
                     //首次登陸this.$route.query.redirect不存在推入produce
-                    const redirectUrl = decodeURIComponent(this.$route.query.redirect || '/');
+                    const redirectUrl = decodeURIComponent(this.$route.query.redirect || '/admin');
                     this.$router.push({
                       path: redirectUrl
                     });
@@ -77,7 +78,8 @@
       if (process.client) {
         document.getElementById('login').style.height = document.documentElement.clientHeight + 'px'
       }
-    }
+    },
+    mixins:[mixin]
   };
 </script>
 

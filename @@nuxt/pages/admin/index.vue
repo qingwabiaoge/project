@@ -1,6 +1,6 @@
 <template>
   <div>
-    1
+  登录成功
   </div>
 </template>
 <script>

@@ -60,11 +60,13 @@
 
 
 <script>
+  import mixin from '@/plugins/page-mixin'
+
   export default {
     async asyncData({$axios}) {
       const {articles} = await $axios.get('/articles', {params: {category: "公司新闻"}})
       return {articles}
-    }
-
+    },
+    mixins: [mixin]
   }
 </script>

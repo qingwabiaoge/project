@@ -2,7 +2,11 @@ import Vue from 'vue'
 
 
 import {
-  Form, FormItem, Button,ButtonGroup, Input,
+  //表单
+
+  Form, FormItem, Button, ButtonGroup, Input, Table, TableColumn, Option, Switch, Select, Upload,colorPicker,
+
+  Dialog,
   Carousel, CarouselItem,
   Card, Row, Col, Container,
   Icon,
@@ -17,17 +21,18 @@ import {
   Breadcrumb, BreadcrumbItem,
   //分页
   Pagination,
-
+//信息
   Message,
+  Loading,
+  MessageBox,
+  Notification,
 
-  Loading
 
 } from 'element-ui'    //引入Button按钮
 
 export default () => {
-  Vue.prototype.$loading = Loading.service;
-  //message
-  Vue.prototype.$message = Message;
+
+  //表单
   Vue.use(Form)
   Vue.use(FormItem);
   Vue.use(Button)
@@ -35,7 +40,15 @@ export default () => {
   Vue.use(Carousel)
   Vue.use(CarouselItem)
   Vue.use(ButtonGroup)
-
+  Vue.use(Upload)
+  Vue.use(Table);
+  Vue.use(TableColumn);
+  Vue.use(Option)
+  Vue.use(Switch)
+  //对话框
+  Vue.use(Dialog)
+  Vue.use(Select)
+  Vue.use(colorPicker)
 
 //布局------
   Vue.use(Card)
@@ -66,6 +79,13 @@ export default () => {
   Vue.use(Pagination)
   //loading
   Vue.use(Loading.directive);
+  Vue.prototype.$loading = Loading.service;
+  Vue.prototype.$msgbox = MessageBox;
+  Vue.prototype.$alert = MessageBox.alert;
+  Vue.prototype.$confirm = MessageBox.confirm;
+  Vue.prototype.$prompt = MessageBox.prompt;
+  Vue.prototype.$notify = Notification;
+  Vue.prototype.$message = Message;
 
 
 }

@@ -5,11 +5,9 @@
 
       <div class="clearfix border-bottom">
         <ul class="nav pull-left">
-          <li><a href="#">产品</a></li>
-          <li><a href="#">品牌</a></li>
-          <li><a href="#">故事</a></li>
-          <li><a href="#">联盟</a></li>
-          <li><a href="#">商城</a></li>
+          <li v-for="item in data.children">
+            <nuxt-link :to="data.href">产品</nuxt-link>
+          </li>
 
         </ul>
         <ul class="nav pull-right">
@@ -26,7 +24,7 @@
                 <i class="iconfont icon-weixin
 "></i> 关注公众号
                 <div slot="popover" style="width: 200px">
-                  <img src="~/assets/images/qcode.jpg" alt="">
+                  <img :src="data.qcode" alt="">
                   <br>
                   长按关注公众号
                 </div>
@@ -45,7 +43,7 @@
                          width="150"
               ><i class="iconfont icon-weixin"></i>关注公众号
 
-                <span> <img src="~/assets/images/qcode.jpg" alt="">  </span>
+                <span> <img src="data.qcode" alt="">  </span>
               </v-tooltip>
             </a>
           </li>
@@ -62,9 +60,10 @@
 </template>
 
 <script>
-  import mixin from '@/plugins/mixins'
-export default {
-    mixins:[mixin],
+  import mixin from '@/plugins/conponent-mixin'
+
+  export default {
+    mixins: [mixin],
   }
 </script>
 <style lang="less" scoped>

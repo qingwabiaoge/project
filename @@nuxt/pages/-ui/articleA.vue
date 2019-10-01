@@ -1,6 +1,6 @@
 <template>
 
-    <articleA :data="$store.state.test[0]"></articleA>
+    <articleA ></articleA>
 </template>
 
 <script>

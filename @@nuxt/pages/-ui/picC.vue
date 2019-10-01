@@ -1,19 +1,19 @@
 <template>
   <div >
 
-    <picC :data='$store.state.test[0]' placement="left" :height="300">
+    <picC  placement="left" :height="300">
 
     </picC>
 
 
-    <picC :data='$store.state.test[0]' placement="right">
+    <picC  placement="right">
 
     </picC>
-    <picC :data='$store.state.test[0]' placement="bottom">
+    <picC  placement="bottom">
 
     </picC>
 
-    <picC :data='$store.state.test[0]' placement="cover">
+    <picC  placement="cover">
 
     </picC>
 

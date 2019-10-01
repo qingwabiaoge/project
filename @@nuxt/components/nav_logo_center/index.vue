@@ -7,7 +7,7 @@
 
 
     <a class="logo ">
-      <h1 ><img  src="~assets/images/logo.jpg" alt=""></h1>
+      <h1 ><img  :src="data.image" alt=""></h1>
     </a>
 
 
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import mixin from '@/plugins/mixins'
+  import mixin from '@/plugins/conponent-mixin'
 export default {
     mixins:[mixin],}
 </script>

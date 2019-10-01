@@ -7,14 +7,8 @@
 
     </title-zh-english>
 
-    <!--
-        <el-row :gutter="20">
-          <el-col :md="12"><img v-for="item in components.produce.children" :src="item.image" alt="" style="height: 500px"></el-col>
-
-        </el-row>
-    -->
-
-    <div class="container" v-if="components.produce.show" :data="components.produce.children" style="margin-bottom: 90px">
+    <div class="container" v-if="components.produce.show" :data="components.produce.children"
+         style="margin-bottom: 90px">
       <el-row :gutter="5">
         <el-col :md="14">
 
@@ -54,12 +48,6 @@
     <title-zh-english inverse :data="{...components.history}">
 
     </title-zh-english>
-    <!--   <div class="text-center">
-         <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
-             style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
-           HISTORY
-         </h3>
-       </div>-->
 
     <pictext-history :data="components.history ">
 
@@ -78,16 +66,6 @@
          style="background: white;text-align: center">
       <img v-lazy="components.oem.image">
     </div>
-    <!--
-        <div class="text-center">
-          <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
-              style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
-            oem
-          </h3>
-        </div>
-        <div class="text-center">
-          <img v-lazy="$store.state.components['page-oem'].image"  :alt="global.title">
-        </div>-->
 
   </div>
 
@@ -96,7 +74,7 @@
 
 <script>
   import head from '@/plugins/head-part'
-
+  import mixin from '@/plugins/page-mixin'
 
   export default {
     scrollToTop: true,
@@ -107,6 +85,7 @@
       }
     },
     head,
+    mixins:[mixin]
 
   }
 

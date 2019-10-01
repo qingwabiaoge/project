@@ -1,5 +1,5 @@
 <template>
-  <textList :data="$store.state.test">
+  <textList >
 
 
   </textList>

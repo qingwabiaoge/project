@@ -1,6 +1,6 @@
 <template>
   <div class="message">
-    <el-breadcrumb separator=">" class="border-bottom-small uk-padding-bottom uk-margin-medium-bottom">
+    <el-breadcrumb separator=">" style="margin-bottom: 20px">
       <el-breadcrumb-item>首页</el-breadcrumb-item>
       <el-breadcrumb-item>留言</el-breadcrumb-item>
 
@@ -73,13 +73,14 @@
 
 
     <!--工具条-->
-    <el-col :span="24" class="toolbar uk-margin-top">
+    <el-row style="margin-top: 20px">
+    <el-col :span="24" >
       <el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0">批量删除</el-button>
       <el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="50" :total="total"
                      style="float:right;">
       </el-pagination>
     </el-col>
-
+    </el-row>
 
   </div>
 </template>

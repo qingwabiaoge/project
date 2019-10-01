@@ -1,5 +1,5 @@
 <template>
-  <baseCarousel :carouselData="[this.$store.state.test[0], this.$store.state.test[0], this.$store.state.test[0]]"
+  <baseCarousel
               :number="3"
               animation='fade'
               :stopTime="5000"

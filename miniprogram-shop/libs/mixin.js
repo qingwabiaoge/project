@@ -1,6 +1,6 @@
 const nativePage = Page
 Page = options => {
-  const mixins = options.mixins
+  const mixins = options.conponent
   if (Array.isArray(mixins)) {
     Reflect.deleteProperty(options, 'mixins')
     merge(mixins, options)

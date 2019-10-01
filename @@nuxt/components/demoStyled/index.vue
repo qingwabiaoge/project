@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import mixin from '@/plugins/mixins'
+  import mixin from '@/plugins/conponent-mixin'
   import {css} from 'styled-vue'
   import {modularScale, backgroundImages} from 'polished'
 

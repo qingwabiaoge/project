@@ -55,7 +55,7 @@
 
 </template>
 <script>
-
+  import mixin from '@/plugins/page-mixin'
   export default {
     scrollToTop: false,
     watchQuery: ['page','title'],
@@ -88,7 +88,8 @@
            this.page = val
            this.produces = produces*/
       }
-    }
+    },
+    mixins:[mixin]
   }
 </script>
 

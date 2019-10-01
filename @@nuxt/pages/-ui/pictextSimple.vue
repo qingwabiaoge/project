@@ -1,5 +1,5 @@
 <template>
-  <pictextSimple :data="$store.state.test[0]">
+  <pictextSimple >
 
 
   </pictextSimple>

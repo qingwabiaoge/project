@@ -425,8 +425,7 @@
         </el-form-item>
       </section>
     </el-form>
-
-    <div class="test">{{data}}</div>
+    <div v-if="$env">{{data}}</div>
     <span slot="footer" class="dialog-footer">
     <el-button @click="visible = false;">取 消</el-button>
 
@@ -438,15 +437,14 @@
 <script>
 
   // import {VueEditor} from 'vue2-editor'
-  /*  import uploadList from '@/components/upload-list/index'
-    import upload from '@/components/upload-simple/index'*/
-
+  import uploadList from '../uploadList/index'
+  import upload from '../uploadSimple/index'
 
   export default {
 
     components: {//VueEditor,
-      /*     upload,
-           uploadList*/
+      upload,
+      uploadList
     },
     data() {
       return {

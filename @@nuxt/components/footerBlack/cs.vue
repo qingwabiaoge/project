@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import mixin from '@/plugins/mixins'
+  import mixin from '@/plugins/conponent-mixin'
     import footerBlack from '@/components/footerBlack/index.vue'
 
   export default {

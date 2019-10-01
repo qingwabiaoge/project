@@ -1,6 +1,6 @@
 <template>
-  <div class="produce">
-    <el-breadcrumb separator=">" class="border-bottom-small uk-padding-bottom uk-margin-medium-bottom">
+  <div>
+    <el-breadcrumb separator=">" style="margin-bottom: 20px">
       <el-breadcrumb-item>首页</el-breadcrumb-item>
       <el-breadcrumb-item>产品</el-breadcrumb-item>
     </el-breadcrumb>
@@ -154,16 +154,17 @@
     <!-- Form -->
 
     <!--工具条-->
-    <el-col :span="24" class="toolbar uk-margin-top">
-      <el-button type="danger" @click="batchRemoveButton" :disabled="this.sels.length===0">批量删除</el-button>
-      <el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="50" :total="total"
-                     style="float:right;">
-      </el-pagination>
-    </el-col>
-
+    <el-row>
+      <el-col :span="24" style="margin-top: 20px">
+        <el-button type="danger" @click="batchRemoveButton" :disabled="this.sels.length===0">批量删除</el-button>
+        <el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="50" :total="total"
+                       style="float:right;">
+        </el-pagination>
+      </el-col>
+    </el-row>
 
     <uniform ref="uniform" :data="uniformData" @submit='submit'></uniform>
-    <div class="test">{{filterTableData}}</div>
+    <div v-if="$env">{{filterTableData}}</div>
   </div>
 </template>
 
@@ -171,7 +172,7 @@
 
 
   export default {
-    layout:'admin',
+    layout: 'admin',
     data() {
       return {
         tableData: [],
@@ -225,12 +226,12 @@
       //跳转 新增界面--------------------------------------------------------------
       addButton: function () {
         this.uniformData = {
-          type: 'produce',
+          model: 'produce',
           images: [],//验证upload ruler需要不可删除
           cid: this.curCid,
           publish: true,
-          pv: this.$store.state.tool.randomNum(1500, 20000),
-          sales: this.$store.state.tool.randomNum(5, 100),
+          pv: this.$tool.randomNum(1500, 20000),
+          sales: this.$tool.randomNum(5, 100),
         };
         this.$refs.uniform.visible = true
 
@@ -303,10 +304,8 @@
 
     mounted() {
       this.gets()
+      console.log(this)
     }
   }
 </script>
 
-<style>
-  /*.produce .el-table th>.cell {text-align: center}*/
-</style>
