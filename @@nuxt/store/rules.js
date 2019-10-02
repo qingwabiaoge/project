@@ -1,4 +1,4 @@
-import tool from '@/tool'
+import * as tool from '@/tool'
 
 export const state = () => ({
   //非空

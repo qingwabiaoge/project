@@ -164,13 +164,13 @@
     </el-row>
 
     <uniform ref="uniform" :data="uniformData" @submit='submit'></uniform>
-    <div v-if="$env">{{filterTableData}}</div>
+    <div v-if="$isdev">{{filterTableData}}</div>
   </div>
 </template>
 
 <script>
 
-
+  import pageMixin from '@/plugins/page-mixin'
   export default {
     layout: 'admin',
     data() {
@@ -305,7 +305,8 @@
     mounted() {
       this.gets()
       console.log(this)
-    }
+    },
+    mixins:[pageMixin]
   }
 </script>
 

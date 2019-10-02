@@ -7,3 +7,10 @@ export const a=1
 export const b=2
 
 */
+
+/*
+本质被babel-node转化为
+module.export={
+ a:1,b:2
+ }
+ */

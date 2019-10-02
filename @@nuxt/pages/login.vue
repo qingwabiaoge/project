@@ -52,7 +52,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) { //验证通过
-            this.$store.dispatch('token/get', this.loginForm)
+            this.$store.dispatch('user/login', this.loginForm)
               .then((token) => {
                   if (!token) {
                     return false

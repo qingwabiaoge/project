@@ -1,4 +1,4 @@
-module.exports  = (min, max) => (rule, v, cb) => {
+export default (min, max) => (rule, v, cb) => {
   const isBetween = v >= min && v <= max
   const isInt = /^[0-9]+$/.test(v)
   if (isBetween && isInt) return cb()

@@ -1,3 +1,3 @@
-import * as obj from './export'
+import * as obj from './export[±æ÷ ]'
 
 console.log(obj)

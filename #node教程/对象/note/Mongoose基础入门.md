@@ -132,9 +132,11 @@ mongoose.connect(uri, options);
 var options = {
   /*
   useNewUrlParser - 底层MongoDB已经废弃当前连接字符串解析器。因为这是一个重大的改变，添加了  useNewUrlParser标记如果在用户遇到bug时，允许用户在新的解析器中返回旧的解析器。除非连接阻止设置，否则你应  该设置useNewUrlParser: true。
+
 */
  useNewUrlParser: true,
-    //估计是用新的索引方法
+    /*估计是用新的索引方法,
+    如果不用会collection.ensure Index is deprecated. Use createIndexes instead */ 
   useCreateIndex: true,
   db: { native_parser: true },
   server: { poolSize: 5 },

@@ -1,3 +1,5 @@
+
+
 module.exports = async (ctx, next) => {
 
 
@@ -7,8 +9,8 @@ module.exports = async (ctx, next) => {
   ctx.state.data = 'state.customData数据'
 
 
-  console.log("ctx-----------")
-  console.log(Object.keys(ctx))
+  console.log("ctx.req.headers-----------")
+  console.log(ctx.req.rawHeaders)
 
   console.log('ctx.request.header----------------')
   //ctx.req是node的request对象

@@ -10,4 +10,4 @@ if (process.server) {
   console.log('process.server这里只在服务端执行')
 }
 
-console.log('env:'+process.env.NODE_ENV)
+console.log('process.env.NODE_ENV:'+process.env.NODE_ENV)

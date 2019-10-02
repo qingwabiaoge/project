@@ -16,12 +16,12 @@
           <el-input type="text" v-model="data.title" auto-complete="off"></el-input>
         </el-form-item>
 
-        <el-form-item label="key"
-                      v-if="data.model==='component'&&$store.state.dev"
+        <el-form-item label="name"
+                      v-if="data.model==='component'&&$isdev"
                       :label-width="formLabelWidth"
-                      prop="key"
-                      class="test">
-          <el-input type="text" v-model="data.key" auto-complete="off"></el-input>
+                      prop="name"
+                      >
+          <el-input type="text" v-model="data.name" auto-complete="off" :disabled="!$isdev"></el-input>
         </el-form-item>
 
         <el-form-item
@@ -425,7 +425,7 @@
         </el-form-item>
       </section>
     </el-form>
-    <div v-if="$env">{{data}}</div>
+    <div v-if="$isdev">{{data}}</div>
     <span slot="footer" class="dialog-footer">
     <el-button @click="visible = false;">取 消</el-button>
 
@@ -439,6 +439,7 @@
   // import {VueEditor} from 'vue2-editor'
   import uploadList from '../uploadList/index'
   import upload from '../uploadSimple/index'
+  import pageMixin from '@/plugins/page-mixin'
 
   export default {
 
@@ -469,9 +470,8 @@
         ]
       }
     },
-    props: {data: {type: Object, default: {}}}
-
-    , methods: {
+    props: {data: {type: Object, default: {}}},
+    methods: {
 
       //编辑器editor--------------------------------------------------------------------
 
@@ -516,7 +516,8 @@
         this.$refs[formName].resetFields();
       },
 
-    }
+    },
+    mixins: [pageMixin]
   }
 </script>
 

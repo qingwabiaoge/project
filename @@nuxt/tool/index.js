@@ -1,11 +1,9 @@
-const r = require.context('', false, /(?!index)\.js$/)
+import betweenInt from './betweenInt'
+import cookie from './cookie'
+import deviceType from './deviceType'
+import randomNum from './randomNum'
+import randomString from './randomString'
 
-let tools = {}
-
-r.keys().forEach(item => {
-
-  const key = item.split('/')[item.split('/').length - 1].split('.')[0]
-  tools[key] = r(item)
-})
-export default tools
-
+export  {
+  betweenInt,cookie,deviceType,randomNum,randomString
+}

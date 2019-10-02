@@ -12,7 +12,7 @@ module.exports = {
     // HOST: process.env.HOST,
     //HOST: '47.107.170.105',
     HOST: '127.0.0.1',
-    PORT: 3001,
+    PORT: 3002,
   },
 
   mode: 'universal',
@@ -36,7 +36,7 @@ module.exports = {
     },
     adminJwtString: 'qinshilei',
     vipJwtString: 'qinshilei',
-    dataBash: 'mongodb://localhost:27017/senboma',
+    database: 'mongodb://localhost:27017/senboma',
     //dataBash: 'mongodb://localhost:27017/bonniena',
     apiBase: '/api',
     uploadBase: '/upload',
@@ -103,14 +103,13 @@ module.exports = {
     "~/plugins/axios",
     "~/plugins/filter",
     "~/plugins/vue.prototype",
-    "~/plugins/vuex.prototype",
     //"~/plugins/vuex-i18n",
     //vuex持久化
     //"~/plugins/vuex-persistedstate.client.js",
     //test----------------------
     "~/plugins/test-process",
     "~/plugins/inject",
-    "~/plugins/test-store.client"
+    "~/plugins/test"
 
   ],
   /*
@@ -130,12 +129,12 @@ module.exports = {
   */
   build: {
 
-
+    transpile: [/^element-ui/],
     babel: {
       "plugins": [["component",
         {
           "libraryName": "element-ui",
-          "styleLibraryName": "~theme" //默认css分散包,按需加载,~theme"为element et sass生成工具的目录
+          "styleLibraryName": "~theme-chalk-master/lib" //默认css分散包,按需加载,~theme"为element et sass生成工具的目录
 
         }
       ]]

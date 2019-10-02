@@ -32,7 +32,7 @@ function isAndroid(UA) {
   return /Android/i.test(UA) ? true : false;
 }
 
-module.exports = (UA) => {
+export default (UA) => {
   if (isMoible(UA)) {
     if (isIOS(UA)) {
       if (isWechat(UA)) {

@@ -121,7 +121,7 @@
 </template>
 
 <script>
-
+import pageMixin from '@/plugins/page-mixin'
 
   export default {
     layout: 'admin',
@@ -253,8 +253,8 @@
 
     created() {
       this.gets()
-    }
-
+    },
+    mixins:[pageMixin]
   }
 </script>
 

@@ -6,7 +6,7 @@
       </el-col>
       <el-col :md="12" style="line-height: 2">
 
-        <h1 style="text-transform: uppercase">{{data.title}}{{data.subtitle}}</h1>
+        <h1 style="text-transform: uppercase">{{data.title}} <small>{{data.name}}</small></h1>
         <hr>
         <i class="el-icon-phone-outline" style="margin-right:-15px"></i>
         <span v-for="item in data.tel.split('\n')" style="margin-left: 15px">

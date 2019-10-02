@@ -1,12 +1,12 @@
-export const state = () => ({
-  //primary: 'fb00c9',
-  //HOST: `http://${nuxt_config.env.HOST}:${nuxt_config.env.PORT}/api`,
-  // dev:process.env.NODE_ENV === "development"
-})
+const qs = require("querystring");
+export const state = () => ({})
 
 export const actions = {
-  async nuxtServerInit({dispatch}, {req}) {
+  async nuxtServerInit({dispatch, commit}, {req}) {
+    const obj = qs.parse(req.headers.cookie)
+    const token = obj.token
     await dispatch('global/get')
     await dispatch('components/get')
+    commit("user/setToken")
   }
 }

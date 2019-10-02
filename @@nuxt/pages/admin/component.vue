@@ -6,8 +6,9 @@
         <el-breadcrumb-item>组件</el-breadcrumb-item>
       </el-breadcrumb>
       <section v-for="item in $store.state.components.components">
+
         <h4 @click="clickEdit(item)">{{item.title}} <b v-if="item.children&&item.children.length>0"
-                                                       @click.stop="clickAdd(item._id)">+</b>
+                                                       @click.stop="clickAdd(item._id)" style="">+</b>
         </h4>
         <p v-if="item.children&&item.children.length>0">
         <span v-for="i in item.children" @click="clickEdit(i)">
@@ -18,13 +19,14 @@
 
     </div>
     <uniform ref="uniform" :data="uniformData" @submit='submitUniform'></uniform>
-    <div v-if="$env">
+    <div v-if="$isdev">
       {{$store.state.components}}
     </div>
   </div>
 </template>
 
 <script>
+  import pageMixin from '@/plugins/page-mixin'
 
   export default {
     layout: 'admin',
@@ -42,7 +44,7 @@
         this.$refs.uniform.visible = true
       },
       clickAdd(parentid) {
-        this.uniformData = {model:'component', parentid}
+        this.uniformData = {model: 'component', parentid, name: this.$tool.randomString(4)}
         this.$refs.uniform.visible = true
       },
       clickReduce({_id, title}) {
@@ -81,8 +83,9 @@
     }
     ,
     created() {
-
-    }
+      console.log(this)
+    },
+    mixins: [pageMixin]
   }
 </script>
 
@@ -93,18 +96,19 @@
       border-bottom: 1px solid #333;
       padding: 30px;
 
-    span {
+      span {
         margin-left: 15px;
       }
 
       b {
         color: #0bb20c;
-        margin-left: 5px
+        margin-left: 15px
       }
 
       i {
         font-size: 30px;
-        margin-left: 5px;
+        margin-left: 15px;
+        margin-right: 25px;
         font-weight: normal;
         color: red;
       }

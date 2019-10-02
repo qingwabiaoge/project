@@ -6,19 +6,18 @@
     <header>
       <el-row>
         <el-col :span="12">
-          <router-link to="/"><img :src="$store.state.global.global.image" :alt="components.brand.title"
+          <router-link to="/"><img :src="global.image" :alt="components.brand.title"
                                    style="max-height: 50px">
           </router-link>
         </el-col>
         <el-col :span="12" style="text-align: right">
           <div class=" " style="line-height: 40px">
-            <div v-if="$store.state.global">
-              <i class="iconfont icon-yonghu uk-h1"></i>
+            <div v-if="global">
 
-              <span class="uk-padding-left-xs">{{$store.state.global.global.title}} 登录成功</span>
-              <a @click="$store.commit('token/remove');" class="uk-text-danger uk-padding-left">
-                <i class="iconfont  icon-tuichu uk-h4 uk-text-danger"></i>
-                退出登录
+              <span v-if="$nuxt.isOffline">您已离线</span>
+              <span style="margin-right: 10px">{{global.title}} <i class="el-icon-success"></i>登录成功</span>
+              <a @click="$store.commit('user/logout');"  style="margin-right: 10px">
+                <i class="el-icon-error"></i>退出登录
               </a>
             </div>
             <router-link v-else :to="{name:'login'}" class="uk-text-primary">
@@ -94,7 +93,8 @@
       padding: 20px;
       border-bottom: 1px solid #f1f1f1;
     }
-    article{
+
+    article {
       background: white;
       padding: 20px;
     }
@@ -104,7 +104,7 @@
 </style>
 
 <script>
-import mixin from '@/plugins/page-mixin'
+  import mixin from '@/plugins/page-mixin'
 
   export default {
     data() {
@@ -113,8 +113,8 @@ import mixin from '@/plugins/page-mixin'
     //components: {siderbar},
     created() {
       //进入admin验证token是否过期
-      //this.$axios('/validateToken')
+     // this.$axios('/validateToken')
     },
-    mixins:[mixin]
+    mixins: [mixin]
   }
 </script>

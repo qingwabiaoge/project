@@ -5,7 +5,7 @@ const componentSchema = Schema({
   ...bash,
   //-------------标识--------------------
 
-  key: {type: String, unique: true},  //组件唯一的标识符,用户通过对象的key访问,unique需要删了当前数据库重新建才能验证
+  name: {type: String, unique: true},  //组件唯一的标识符,用户通过对象的key访问,unique需要删了当前数据库重新建才能验证
   top: Boolean,  //是否为顶级栏目
   parentid: Schema.Types.ObjectId,
   //background-------------------

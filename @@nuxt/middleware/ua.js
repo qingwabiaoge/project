@@ -1,4 +1,4 @@
-import tool from '../tool'
+import * as tool from '@/tool'
 
 export default (ctx) => {
 //新建函数挂载在app上 app.fn
