@@ -1,5 +1,9 @@
-##### 本质
-本质是把组件标签上的监听移到dom标签
+#####  vue组件上可以使用原生dom的event(原理是vue组件上的监听自动加到子组件的最外层)
+
+```
+@click.native即可
+```
+
 
 ```html
 <meta charset="UTF-8">

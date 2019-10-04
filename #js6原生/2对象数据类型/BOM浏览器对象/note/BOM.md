@@ -68,7 +68,7 @@ let i=0
 
 ### location
 
-##### location.href  读取和设置本窗口的地址
+###### location.href  读取和设置本窗口的地址
 
 
 
@@ -79,13 +79,13 @@ let i=0
 
 ### screen
 
-##### screen.availWidth
+###### screen.availWidth
 
   `console.log(screen.availWidth, screen.availHeight);`
 
 ### navigator
 
-##### navigator.userAgent
+###### navigator.userAgent
 
 ```
 navigator.userAgent
@@ -93,9 +93,9 @@ navigator.userAgent
 
 ### history
 
-##### history.pushState()
+###### history.pushState()
 
-##### history.go()
+###### history.go()
 
 ```html
 <!DOCTYPE html>
@@ -215,7 +215,7 @@ console.log(i.a)
 
 ### cookie
 
-##### 使用 JavaScript 创建Cookie
+###### 使用 JavaScript 创建Cookie
 
 JavaScript 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
 
@@ -239,13 +239,13 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 
 
 
-##### 使用 JavaScript 读取 Cookie
+###### 使用 JavaScript 读取 Cookie
 
 在 JavaScript 中, 可以使用以下代码来读取 cookie：
 
 var x = document.cookie;
 
-### 函数
+###### 例子
 
 ```js
     function setCookie(cname, cvalue, exdays) {

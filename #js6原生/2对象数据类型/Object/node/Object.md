@@ -3,13 +3,6 @@
 
 # 静态函数
 
-### 判断是否为Object类型
-
-```js
-typeof (obj)
-obj instance of Object
-```
-
 ### Object.is()  ===  比较对象实例是否相等
 
 ##### 相同处
@@ -33,7 +26,7 @@ Object.is(+0, -0) // false
 Object.is(NaN, NaN) // true
 ```
 
-### defineProperty
+### Object.defineProperty
 
 ```
     obj = {a: 1, b: 2}
@@ -64,7 +57,7 @@ Object.is(NaN, NaN) // true
 
 ```
 
-# 实例化对象属性分类
+# 实例化对象属性的分类 判断和列出
 
 > __所有属性:__ 
 >
@@ -90,7 +83,7 @@ Object.is(NaN, NaN) // true
 >>
 >> * 判断:Person.prototype.isprototypeof(person),
 >> * 列出: Object.getPrototypeOf(obj)
->> * 访问:Person.protype.apply(obj,argument)
+>> * 访问:Person.protype.xxx.apply(obj,argument)
 
 >> __OwnProperty[^2]:__ 
 >>
@@ -98,27 +91,14 @@ Object.is(NaN, NaN) // true
 >>
 >> * 列出:Object.getOwnPropertyNames(obj)
 
+>>> __不可枚举的own属性__
+>>>
 >>> __可枚举的属性:__  
 >>>
 >>> * 判断 obj.propertyIsEnumerable(propertyName) ,arr.propertyIsEnumerable(0)
 >>> * 列出:见下方
 
->>> __不可枚举的own属性__
-
 注:只有属性判断组用的对Object的实例方法
-
-
-### enumerableProperty[^2]
-
-
-#####  判断对象的某个属性是否可枚举
-
-
-````
-obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可以枚举
-console.log(arr.propertyIsEnumerable(0))//true
-
-````
 
 
 ##### 枚举出可枚举的属性

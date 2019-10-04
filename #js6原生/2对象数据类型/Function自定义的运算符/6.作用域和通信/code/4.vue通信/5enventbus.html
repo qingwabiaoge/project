@@ -6,8 +6,8 @@
 
 
 <div id="app">
-    <cl1></cl1>
-    <cl2></cl2>
+  <cl1></cl1>
+  <cl2></cl2>
 
 </div>
 
@@ -15,34 +15,34 @@
 <script>
 
 
-    Vue.prototype.$eventBus = new Vue()
+  Vue.prototype.$eventBus = new Vue()
 
-    Vue.component('cl1', {
-        data() {
-            return {value: ''}
-        },
-        template: `<ul><li v-for="item in 10" @click="$eventBus.$emit('sent',item)">{{item}}</li></ul>`
+  Vue.component('cl1', {
+    data() {
+      return {value: ''}
+    },
+    template: `<ul><li v-for="item in 10" @click="$eventBus.$emit('sent',item)">{{item}}</li></ul>`
 
-    })
-    Vue.component('cl2', {
-        data() {
-            return {value: ''}
-        },
-        template: `<div>{{value}}</div>`,
-        mounted() {
+  })
+  Vue.component('cl2', {
+    data() {
+      return {value: ''}
+    },
+    template: `<div>{{value}}</div>`,
+    mounted() {
 
-            this.$eventBus.$on('sent', res => {
-                this.value = res
-            })
-        }
+      this.$eventBus.$on('sent', res => {
+        this.value = res
+      })
+    }
 
-    })
+  })
 
-    const vm = new Vue({
-        el: '#app',
+  const vm = new Vue({
+    el: '#app',
 
 
-    })
+  })
 
 </script>
 

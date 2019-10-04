@@ -24,6 +24,7 @@
   console.log('clientTop', el.clientTop)// 视口距离顶部的高度
   console.log('offsetTop', el.offsetTop)// 元素顶部的真实距离
 
+  //只能一个监听
   el.onscroll = function (event) {
     console.log('scrollTop', el.scrollTop)//滚动条距离顶部的距离
 //距离顶部的高度--------------------------xxxLeft---------------------------------------------
@@ -34,7 +35,8 @@
 
 
   function go(n) {
-   el.scrollTop = n
+    //写入
+    el.scrollTop = n
   }
 </script>
 </body>

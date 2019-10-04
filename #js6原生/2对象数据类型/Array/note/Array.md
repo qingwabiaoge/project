@@ -2,14 +2,16 @@
 [^splice]: 剪接 
 [^slice]: 一部分@名词_
 
-#  Array.of静态函数创建数组
+# Array的静态函数
+
+###  Array.of静态函数创建数组
 
 ```javascript
  Array.of（1）  //[1]
  Array.of（1，2，3）//[1,2,3]
 ```
 
-# Array.from类数组转数组
+### Array.from类数组转数组
 
 ```javascript
 let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
@@ -17,17 +19,17 @@ Array.from(ArrayLike)
 
 ```
 
-#  Array.isArray( )判断是否数组类型
+###  Array.isArray( )判断是否数组类型
 
 1. 检测是不是数组 Array.isArray(arr)
 2. arr instanceof Array //操作符不用.和括号
 3. Array.protype.isprotypeof(arr)
 
-# 所有属性(真实数据结构) in
+# 实例的所有属性(真实数据结构) in
 
 ![](4.png)
 
-### Array.prototype
+### __ proto __:Array.prototype
 
 ##### 栈方法修改数组(只有此组改变原数组)
 
@@ -97,7 +99,7 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 3. arr.indexOf({a: 10}) //无法使用,返回-1
 ```
 
-##### Array.prototype.join()数组和字符串互转
+##### join()数组和字符串互转
 
 ```
 [...'abc']
@@ -227,32 +229,6 @@ IE>=9 , PS: IE不支持ES6的箭头函数。
 
 ```javascript
 ['0','1']
-```
-
-##### 枚举出值
-
-```
-for循环
-
-for....of
-
-forEach
-
-Object.keys(arr)
-
-JSON.stringfy(arr)
-```
-
-##### 合并枚举类型
-
-Object.assign()静态方法合并数组(改变原数组,不改变地址)
-
-```
-Object.assign()
-```
-
-```
-[...[1,2],...[3,4]]
 ```
 
 # null,undefine 报错的解决方法

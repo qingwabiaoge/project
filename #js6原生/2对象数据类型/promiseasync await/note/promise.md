@@ -16,7 +16,8 @@ new Promise((resolve,reject)=>{.....})
 1. 返回异步的promise对象,
 
 
-2. 用.then().catch()或 async  fn(){ await} 接收,普通程序流不能接受promise对象,
+2. 用.then().catch()或 async  fn( ){ await} 接收
+3. 普通程序流不能接受promise对象,
 
 ![](1.png)
 
@@ -77,7 +78,6 @@ f().then()
 ````
 
 axios 异步函数
-	
 
 
     axios.post("/brandUpdate",para).then

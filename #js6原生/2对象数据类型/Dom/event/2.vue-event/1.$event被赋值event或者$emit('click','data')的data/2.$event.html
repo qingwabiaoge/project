@@ -8,12 +8,14 @@
 <div id="app">
   <button @click="fn">button click</button>
   <hr>
+
   <!--自动补全成@click="fn($event)或@click="fn(data,1)-->
   <cl @click="fn">
     click
   </cl>
   <hr>
 
+<!--  @click直接落在最外层标签,函数地址也赋值到子对象的 $listening-->
   <cl @click.native="fn">
     click.native
   </cl>

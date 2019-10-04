@@ -9,13 +9,11 @@
   <button @click="fn">button click</button>
 
 
-
   <!--自动补全成@click="fn($event)或@click="fn(data,1)-->
+  <!--click事件落到了组件的最外层标签-->
   <cl @click.native="fn">
     click.native
   </cl>
-
-
 
 
 </div>

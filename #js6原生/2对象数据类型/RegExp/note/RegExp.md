@@ -32,15 +32,15 @@ var re = new RegExp('hello','g');   //代替/hello/g
 
 
     console.log(str.search(reg)) //0
-    console.log(str.search(reg_))//0   //****唯一 一个不响应global,为搜索的第一个词
+    console.log(str.search(reg_))//0   //****唯一 g修饰符无效的,为搜索的第一个词
 
 
     console.log(reg.test(str))//true
     console.log(reg_.test(str))//true
 
 
-    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  ,这个是str.match(reg)的逆运算
-    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个
+    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  ,和str.match(reg)返回结果相同
+    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个,而不是所有
 ```
 
 
@@ -88,9 +88,9 @@ var re = new RegExp('hello','g');   //代替/hello/g
 
 ### 匹配位置$ ^
 
-匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。要匹配 $ 字符本身，请使用 \$。
+匹配输入字符串的结尾位置。
 
-```
+```js
 var str = 'my name is shilei'
 
 const reg = /lei$/
@@ -101,6 +101,17 @@ console.log(reg.exec(str)) //['lei']
 
 ```
 
+如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。
+
+```js
+  var str = 'qinshilei\nqinshilei'
+
+  const reg = /lei$/mg
+
+  console.log(reg.test(str)) //true
+
+  console.log(reg.exec(str)) //["lei", index: 16, input: "qinshilei↵qinshilei", groups: undefined]
+```
 
 ### 次数
 
@@ -155,7 +166,7 @@ console.log(reg.exec(str))
 ```
 
 
-### ()
+### ( )
 
 ##### 分组
 
@@ -223,8 +234,8 @@ console.log(reg.exec(str))
 ```
 
 const reg = /kid is (?:doubi)*/
-
 const str='kid is  doubidoubidoubi'
+
 console.log(reg.test(str))// true
 console.log(reg.exec(str))// [0:kid is]
 
@@ -258,8 +269,6 @@ console.log(reg.test(str))//true
 - 对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
 
 - 对reg.exec()的影响: 括号部分不捕获
-
-
 
 ```js
 
@@ -331,6 +340,18 @@ const i = reg.test(str) //true
 const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 ```
 
+正则加了全局修饰符
+
+```js
+  const reg = /[1-2]/g
+  const str = 'a123'
+
+  //1.reg匹配部分字符串就为ture
+  const i = reg.test(str) //true
+  //2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
+  const arr = reg.exec(str) //["2", index: 2, input: "a123", groups: undefined]
+```
+
 reg.test判定为true, reg.exe(str)才不是undifined 
 
 ```javascript
@@ -347,7 +368,7 @@ console.log(Object.getOwnPropertyNames(reg))//["lastIndex"]
 
     console.log(reg.propertyIsEnumerable('lastIndex'))//false
     console.log(Object.keys(reg))//[]
-# 常用正则
+# 常用正则举例
 
 ``` javascript
 
@@ -361,7 +382,7 @@ QQ号：[1-9][0-9]{4,9}
 
 ```
 
-str.repalce(reg,fn(item){})替换网址
+str.replace(reg,fn(item){})替换网址
 ```
     function replaceReg(reg, str) {
         return str.replace(reg, function (item) {
@@ -375,7 +396,7 @@ str.repalce(reg,fn(item){})替换网址
 
 ```
 
-# 注意
+# 常见错误
 正则在部分代码里必须使用new RegExp _否则无效_
 
 ```

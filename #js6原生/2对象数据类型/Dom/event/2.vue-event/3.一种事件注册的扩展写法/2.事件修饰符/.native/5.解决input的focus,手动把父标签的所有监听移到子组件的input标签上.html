@@ -22,7 +22,7 @@
               `,
     computed:{
       listeners(){
-       return  Object.assign({},this.$listeners)
+       return  Object.assign({},this.$listeners)//{focus:onFocus}
       }
     }
   }
@@ -32,6 +32,7 @@
       onFocus(e) {
 
         console.log(e)
+
       }
     },
     components: {
