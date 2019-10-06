@@ -1,0 +1,62 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<div id="app">
+
+    <ul>
+        <li v-for="item in 4">
+            <!--传数据给$router-->
+            <router-link :to="{path:`/${item}?q=${item*10}`}">
+
+                {{item}}
+            </router-link>
+
+        </li>
+    </ul>
+    <!--读取组件信息-->
+    <router-view></router-view>
+</div>
+
+<script>
+    const mybutton = {
+        template: `<button style="background: red"><slot></slot></button>`,
+
+    }
+
+    const mycomponent = {
+        //向非页面级的组件传递
+        template: `<div> <mybutton>{{id}}</mybutton>{{query}}-{{$attrs}}</div>`,
+        props: ['id', 'query'],
+        components: {mybutton}
+    }
+
+    const router = new VueRouter({
+        linkActiveClass: 'active',
+        routes: [
+            {
+                path: '/:id',
+
+                // 路由解耦，设置属性值,因为<route-view>代表多个要切换的组件,所以属性不能设置在<route-view>
+                props: function (route) {//函数做参数,vue的prop里有介绍
+                    return {id: route.params.id, query: route.query.q,attr:1}
+                },
+                component: mycomponent
+            }]
+    })
+    const vm = new Vue({
+        el: '#app',
+        router,
+        data() {
+            return {
+                value: 1
+            }
+        }
+    })
+
+</script>
+
+<style>
+    .active {
+        color: red;
+    }
+
+</style>

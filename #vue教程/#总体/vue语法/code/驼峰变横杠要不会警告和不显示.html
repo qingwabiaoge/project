@@ -1,0 +1,13 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+<!--  驼峰变横杠要不会警告和不显示-->
+  <cl is-show></cl>
+</div>
+<script>
+  Vue.component('cl', {template: `<div v-show="isShow">1</div>`, props: {isShow: Boolean}})
+  const vm = new Vue({
+    el: '#app'
+  })
+
+
+</script>
