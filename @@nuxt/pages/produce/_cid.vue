@@ -64,7 +64,7 @@
       const {produces, total} = await $axios.get('/produces', {
         params: {
           //即可搜索栏目
-          cid: route.params.cid,
+          category: route.params.category,
           //有可搜索title
           title: route.query.title,
           page: route.query.page,

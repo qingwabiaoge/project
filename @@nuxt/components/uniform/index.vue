@@ -27,14 +27,14 @@
         <el-form-item
           v-if="data.model==='produce'||data.model==='article'"
           label="栏目"
-          :label-width="formLabelWidth" prop="cid">
-          <el-select v-model="data.cid" placeholder="请选择">
+          :label-width="formLabelWidth" prop="category">
+          <el-select v-model="data.category" placeholder="请选择">
             <el-option
               v-for="item in data.model==='article'?articleCategory
                                               :data.model==='produce'?produceCategory:''"
               :key="item.title"
               :label="item.title"
-              :value="item.id">
+              :value="item.name">
             </el-option>
           </el-select>
         </el-form-item>
@@ -506,8 +506,8 @@
         try {
           await this.$refs.form.validate()
           this.visible = false
-          //sent  curCid to father component
-          this.$emit('submit', this.data.cid)
+          //sent  curCategory to father component
+          this.$emit('submit', this.data.category)
         } catch (e) {
           this.$message('有必填的字段!' + e)
         }

@@ -58,7 +58,7 @@ async function start() {
     badge: true
   })*/
 
-
+console.log(`http://${host}:${port}`)
 }
 
 start()

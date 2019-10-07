@@ -19,7 +19,7 @@ router.post('/uploadfile', async (ctx, next) => {
     const file = ctx.request.files.file; // 获取上传文件
 
 
-    // 创建可读流,没什么神奇的就是读取浏览器端电脑上的文件路径
+    // 创建可读流,读取浏览器端电脑上的文件路径
     const reader = fs.createReadStream(file.path);
 
     //当前时间挫
@@ -32,9 +32,9 @@ router.post('/uploadfile', async (ctx, next) => {
     const filePath = path.join(__dirname, './static/upload') + `/${rename}`;
 
     // 创建可写流
-    const upStream = fs.createWriteStream(filePath);
+    const writeStream = fs.createWriteStream(filePath);
     // 可读流通过管道写入可写流
-    reader.pipe(upStream);
+    reader.pipe(writeStream);
     return ctx.body = `http://localhost:3000/upload/${rename}`;
 });
 

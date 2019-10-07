@@ -6431,7 +6431,7 @@ parse-json@^4.0.0:
 parseurl@^1.3.2, parseurl@~1.3.2:
   version "1.3.2"
   resolved "http://registry.npm.taobao.org/parseurl/download/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
-  integrity sha1-/CidTtiZMRlGDBViUyYs3I3mW/M=
+  integrity sha1-/CategoryTtiZMRlGDBViUyYs3I3mW/M=
 
 parseurl@~1.3.3:
   version "1.3.3"

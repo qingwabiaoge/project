@@ -1,13 +1,13 @@
 const Article = require('../../model/Article');
 
 module.exports = async (ctx) => {
-  let {title, cid, flag, admin, page = 1, size = 99999} = ctx.query
+  let {title, category, flag, admin, page = 1, size = 99999} = ctx.query
 
   const filter = {
     $and: [
       //必须判是否存在,如果不判断,前端又忘记数据库也没有下边的某个值  就搜索不到东西
       title ? {title: new RegExp(title, "i")} : {},
-      cid ? {cid} : {},
+      category ? {category} : {},
       flag ? {flag: true} : {},
       admin ? {} : {publish: true},
     ]

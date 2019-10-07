@@ -53,14 +53,14 @@
       >
       </el-table-column>
       <el-table-column
-        prop="cid"
+        prop="category"
         label="类别"
         :filters="categorFilters"
         :filter-method="filterHandler">
-        <template slot-scope="{row}">
-          {{(produceCategory.filter(item=>item.id===row.cid))[0].title}}
+<!--        <template slot-scope="{row}">
+ {{(produceCategory.filter(item=>item.id===row.category))[0].title}}
 
-        </template>
+        </template>-->
       </el-table-column>
 
       <el-table-column
@@ -184,7 +184,7 @@
         page: 1,
         //列表选中项---------------
         sels: [],
-        curCid: undefined
+        curCategory: undefined
         // 按照栏目过滤
       }
     },
@@ -228,7 +228,7 @@
         this.uniformData = {
           model: 'produce',
           images: [],//验证upload ruler需要不可删除
-          cid: this.curCid,
+          category: this.curCategory,
           publish: true,
           pv: this.$tool.randomNum(1500, 20000),
           sales: this.$tool.randomNum(5, 100),
@@ -294,7 +294,7 @@
           this.$axios.patch('produce', {...this.uniformData, image: this.uniformData.images[0].url})
         }
         console.log(data)
-        this.curCid = data
+        this.curCategory = data
         this.gets()
       },
 

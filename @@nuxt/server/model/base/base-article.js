@@ -2,7 +2,7 @@ module.exports = {
   //seo
   seotitle: String,
   keyword: String,
-  cid: Number,
+  category: String,//关联Component的name
 
   flag: {type: Boolean, default: false},
   tags: [],

@@ -35,7 +35,7 @@ export const state = () => ({
   beian: [
     {required: true, message: '请输入备案号', trigger: 'blur'}
   ],
-  cid: [
+  category: [
     {required: true, message: '请选择类别', trigger: 'blur'}
   ],
   // upCategory: [

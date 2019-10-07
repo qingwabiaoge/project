@@ -1,22 +1,11 @@
-# 安装
-
-koa版
-
-    vue init nuxt/koa nuxt
-普通版
-
-    vue init nuxt-community/starter-template <project-name>
-```
-$ npx create-nuxt-app <项目名>
-
-```
-
 # nuxt流程
+
+### 打包
 
 ![](./img/1.png)
 
 
-# 生命周期
+### 生命周期
 
 ![](./img/4.png)
 
