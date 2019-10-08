@@ -104,16 +104,11 @@
 </style>
 
 <script>
-  import mixin from '@/plugins/page-mixin'
+  import mixin from '@/mixins/map-mixin'
 
   export default {
     data() {
       return {isCollapse: true}
-    },
-    //components: {siderbar},
-    created() {
-      //进入admin验证token是否过期
-     // this.$axios('/validateToken')
     },
     mixins: [mixin]
   }

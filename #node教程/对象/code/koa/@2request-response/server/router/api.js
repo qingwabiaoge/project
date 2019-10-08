@@ -28,5 +28,6 @@ api
   .post('/request-file/', koaBodyMidware, controller.request)
   //路由里指定路由使用autor中间件
   .get('/autor/', middlewares.autor, controller.autor)
+  .get('/setcookie/', controller.setCookie)
 
 module.exports = api

@@ -36,7 +36,7 @@
   </div>
 </template>
 <script>
-  import mixin from '@/plugins/page-mixin'
+  import mixin from '@/mixins/map-mixin'
   export default {
     name: 'login',
    layout: 'login',

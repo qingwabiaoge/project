@@ -8,6 +8,8 @@ const componentSchema = Schema({
   name: {type: String, unique: true},  //组件唯一的标识符,用户通过对象的key访问,unique需要删了当前数据库重新建才能验证
   top: Boolean,  //是否为顶级栏目
   parentid: Schema.Types.ObjectId,
+  //子模块-----------------------
+  children: [{type: Schema.Types.ObjectId, ref: 'component'}],
   //background-------------------
   background: String,
   bg: String,
@@ -28,8 +30,7 @@ const componentSchema = Schema({
 //做活动的时间段-----------------------
   starttime: Date,
   endtime: Date,
-//子模块-----------------------
-  children: [{type: Schema.Types.ObjectId, ref: 'component'}]
+
 })
 
 const Component = mongoose.model('component', componentSchema)

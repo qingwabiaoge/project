@@ -1,12 +1,11 @@
 const qs = require("querystring");
 export const state = () => ({})
-
+const {getReqCookies}=require('@/tool')
 export const actions = {
   async nuxtServerInit({dispatch, commit}, {req}) {
-    const obj = qs.parse(req.headers.cookie)
-    const token = obj.token
+    const token =  getReqCookies(req).token
     await dispatch('global/get')
     await dispatch('components/get')
-    commit("user/setToken")
+    await commit("user/setToken",token)
   }
 }

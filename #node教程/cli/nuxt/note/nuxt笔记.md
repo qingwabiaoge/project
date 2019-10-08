@@ -279,7 +279,51 @@ __asyncData请求完成后__,才开始vue的生命周期(这点和vuecli的不�
 
 ### 浏览器端Vue生命周期
 
+# modules
 
+## styleResources
+
+- 类型: `Object`
+- 默认: `{}`
+
+当您需要在页面中注入一些变量和`mixin`而不必每次都导入它们时，这非常有用。
+
+Nuxt.js 使用 https://github.com/nuxt-community/style-resources-module 来实现这种行为。
+
+您需要为css预处理器指定要包含的 模式 / 路径 ： `less`, `sass`, `scss` 或 `stylus`
+
+您不能在此处使用**路径别名**(`~` 和 `@`)，
+
+:warning: You cannot use path aliases here (`~` and `@`)，你需要使用相对或绝对路径。
+
+安装 style-resources：
+
+```
+$ yarn add @nuxtjs/style-resources
+```
+
+根据需要安装：
+
+- SASS: `$ yarn add sass-loader node-sass`
+- LESS: `$ yarn add less-loader less`
+- Stylus: `$ yarn add stylus-loader stylus`
+
+修改 `nuxt.config.js`:
+
+```
+export default {
+  modules: [
+    '@nuxtjs/style-resources',
+  ],
+  styleResources: {
+    scss: './assets/variables.scss',
+    less: './assets/**/*.less',
+    // sass: ...
+  }
+}
+```
+
+然后就可以随处直接使用定义过的变量或函数。
 
 
 # 插件 nuxt.config.js->plugins:[]

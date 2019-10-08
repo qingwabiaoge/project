@@ -1,5 +1,4 @@
-
-
+const {getCookies} = require('../../tools')
 module.exports = async (ctx, next) => {
 
 
@@ -9,15 +8,23 @@ module.exports = async (ctx, next) => {
   ctx.state.data = 'state.customData数据'
 
 
-  console.log("ctx.req.headers-----------")
+  console.log("ctx.req.rawHeaders-----------")
+  //ctx.req是node的request对象
   console.log(ctx.req.rawHeaders)
+  console.log("ctx.req.headers-----------")
+  console.log(ctx.req.headers)
+  console.log("ctx.req.headers.cookie-----------")
+  console.log(ctx.req.headers.cookie)
+  console.log(getCookies(ctx.req)['cid'])
 
   console.log('ctx.request.header----------------')
-  //ctx.req是node的request对象
+  //这里不能获取cookie
   console.log(ctx.request.header === ctx.req.headers)  //true
   console.log(ctx.request.header === ctx.header) //true
   console.log(ctx.request.header)
-  console.log('cookie:', ctx.req.headers.cookie)
+
+  console.log(`ctx.cookies.get('name')------`)
+  console.log(ctx.cookies.get('cid'))
 
   console.log(`ctx.request.method------`)
   console.log(ctx.method === ctx.request.method)

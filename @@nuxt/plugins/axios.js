@@ -2,7 +2,7 @@
 import {Message} from 'element-ui';
 
 //修改app.$axios
-export default function ({$axios,redirect,env}) {
+export default function ({$axios, store, redirect, env}) {
   let axios = $axios;
 
   // linuxt用这个配置去 nuxt.conf里的axios配置
@@ -13,7 +13,13 @@ export default function ({$axios,redirect,env}) {
 
   // 请求回调
   axios.onRequest(config => {
-  });
+      // 在发送请求之前1做些什么：每次发送请求之前检测都vuex存有token,那么都要放在请求头发送给服务器
+      if (store.state.user.token) {
+        config.headers.Authorization = `token ${store.state.user.token}`;
+      }
+      // loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
+      return config;
+    })
 
   // 返回回调
   axios.onResponse(res => {
@@ -37,8 +43,8 @@ export default function ({$axios,redirect,env}) {
 
       switch (error.response.status) {
         case 401:
-          Message.error('登陆过期，请重新登陆' );
-          redirect({ path: '/login' });
+          Message.error('登陆过期，请重新登陆');
+          redirect({path: '/login'});
           break;
         case 404:
           Message.error('404错误，请检查网络' + error.response.statusText);

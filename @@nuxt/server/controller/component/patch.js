@@ -4,7 +4,7 @@ const Component = require('../../model/Component');
 module.exports = async (ctx) => {
 
   let data = ctx.request.body
-  await Component.update({_id: data._id}, {$set: ctx.request.body})
+  await Component.updateOne({_id: data._id}, {$set: ctx.request.body})
 
 
 };

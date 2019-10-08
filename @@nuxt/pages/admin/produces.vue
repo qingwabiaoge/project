@@ -57,10 +57,11 @@
         label="类别"
         :filters="categorFilters"
         :filter-method="filterHandler">
-<!--        <template slot-scope="{row}">
- {{(produceCategory.filter(item=>item.id===row.category))[0].title}}
+        <template slot-scope="{row}">
+          <!--produce.category->component.name-->
+          {{(produceCategory.filter(item=>item.name===row.category))[0].title}}
 
-        </template>-->
+        </template>
       </el-table-column>
 
       <el-table-column
@@ -170,9 +171,11 @@
 
 <script>
 
-  import pageMixin from '@/plugins/page-mixin'
+  import mapMixin from '@/mixins/map-mixin'
+  import adminMixin from '@/mixins/admin-page-mixin'
+
   export default {
-    layout: 'admin',
+
     data() {
       return {
         tableData: [],
@@ -306,7 +309,7 @@
       this.gets()
       console.log(this)
     },
-    mixins:[pageMixin]
+    mixins: [mapMixin, adminMixin]
   }
 </script>
 

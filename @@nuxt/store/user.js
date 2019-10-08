@@ -1,13 +1,14 @@
 import {cookie} from '@/tool'
 
-export const state = () => ({token: undefined})
+export const state = () => ({token: null})
 export const mutations = {
   setToken(state, token) {
+    // console.log(token)
     state.token = token
   },
 
   logout(state) {
-    state.token = undefined;
+    state.token = null;
     cookie.clearItem("token");
     this.$router.push('/login')
   }

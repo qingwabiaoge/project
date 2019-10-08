@@ -88,6 +88,7 @@
 
 <script>
 
+  import mixin from '@/mixins/admin-page-mixin'
 
   export default {
     layout:'admin',
@@ -184,7 +185,8 @@
     created() {
       this.getMessages()
       console.log(this)
-    }
+    },
+    mixins:[mixin]
 
   }
 </script>

@@ -26,10 +26,11 @@
 </template>
 
 <script>
-  import pageMixin from '@/plugins/page-mixin'
+  import mapMixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/admin-page-mixin'
 
   export default {
-    layout: 'admin',
+
     data() {
       return {
         parentid: '',
@@ -85,7 +86,7 @@
     created() {
       console.log(this)
     },
-    mixins: [pageMixin]
+    mixins: [mapMixin,mixin]
   }
 </script>
 

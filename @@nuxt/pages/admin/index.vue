@@ -4,7 +4,8 @@
   </div>
 </template>
 <script>
+  import mixin from '@/mixins/admin-page-mixin'
   export default {
-    layout: 'admin',
+    mixins:[mixin]
   }
 </script>

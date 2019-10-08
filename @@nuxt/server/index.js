@@ -30,7 +30,6 @@ app.use(response) //捕捉错误和空返回值
   .use(router.allowedMethods());
 
 
-
 config.dev = !(app.env === 'production')
 
 async function start() {
@@ -53,12 +52,12 @@ async function start() {
   })
   app.listen(port)
 
-/*  consola.ready({
-    message: `Server listening on http://${host}:${port}`,
-    badge: true
-  })*/
+  /*  consola.ready({
+      message: `Server listening on http://${host}:${port}`,
+      badge: true
+    })*/
 
-console.log(`http://${host}:${port}`)
+  console.log(`http://${host}:${port}`)
 }
 
 start()

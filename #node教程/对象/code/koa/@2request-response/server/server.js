@@ -18,6 +18,7 @@ router.use('/admin', middlewares.autor, admin.routes(), admin.allowedMethods())
 app.use(middlewares.response)
   .use(cors())
   //xmlParser必须和bodyParser一起用 并删除koaBody, 貌似还要放到全局
+
   .use(xmlParser())
   .use(bodyParser())
   //router要放到bodyParser后

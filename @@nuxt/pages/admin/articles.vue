@@ -121,10 +121,12 @@
 </template>
 
 <script>
-import pageMixin from '@/plugins/page-mixin'
+import mapMixin from '@/mixins/map-mixin'
+import mixin from '@/mixins/admin-page-mixin'
+
 
   export default {
-    layout: 'admin',
+
     data: function () {
       return {
         //新闻表格数据----------------------------------
@@ -254,7 +256,7 @@ import pageMixin from '@/plugins/page-mixin'
     created() {
       this.gets()
     },
-    mixins:[pageMixin]
+    mixins:[mapMixin,mixin]
   }
 </script>
 

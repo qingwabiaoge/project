@@ -13,7 +13,7 @@
 </template>
 <script>
 
-
+  import mixin from '@/mixins/admin-page-mixin'
   export default {
     layout:'admin',
     data() {
@@ -37,7 +37,8 @@
     ,
     mounted() {
       this.get()
-    }
+    },
+    mixins:[mixin]
   }
 
 

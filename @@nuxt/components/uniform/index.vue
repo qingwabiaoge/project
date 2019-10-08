@@ -439,7 +439,7 @@
   // import {VueEditor} from 'vue2-editor'
   import uploadList from '../uploadList/index'
   import upload from '../uploadSimple/index'
-  import pageMixin from '@/plugins/page-mixin'
+  import mapMixin from '@/mixins/map-mixin'
 
   export default {
 
@@ -517,7 +517,7 @@
       },
 
     },
-    mixins: [pageMixin]
+    mixins: [mapMixin]
   }
 </script>
 

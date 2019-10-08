@@ -76,7 +76,7 @@
 
 </template>
 <script>
-  import mixin from '@/plugins/conponent-mixin'
+  import mixin from '@/mixins/conponent-mixin'
 
   if (process.client) {
     require('./iconfont')

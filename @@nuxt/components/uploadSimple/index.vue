@@ -80,9 +80,9 @@
   .avatar-uploader-icon {
     font-size: 28px;
     color: #8c939d;
-    min-width: 50px;
+    width: 50px;
     height: 50px;
-    line-height: 50px;
+    line-height: 50px!important;
     text-align: center;
   }
 

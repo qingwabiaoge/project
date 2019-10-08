@@ -117,8 +117,17 @@ module.exports = {
   */
   modules: [
     'styled-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    /*预先引入到各个vue文件中*/
+    less: ['./assets/less/variables.less', './assets/less/mixins/*.less'],
+    /*  options: {
+        // See https://github.com/yenshih/style-resources-loader#options
+        // Except `patterns` property
+      }*/
+  },
   //axios: {
 
   //prefix: '/api', // baseURL
@@ -146,14 +155,7 @@ module.exports = {
       imgUrl: {limit: 1000},
 
     },
-    styleResources: {
-      /*预先引入到各个vue文件中*/
-      less: ['./assets/less/variables.less', './assets/less/mixins/_mixins.less'],
-      /*  options: {
-          // See https://github.com/yenshih/style-resources-loader#options
-          // Except `patterns` property
-        }*/
-    },
+
     /*
     ** You can extend webpack config here
     */

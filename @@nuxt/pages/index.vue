@@ -12,13 +12,13 @@
       <el-row :gutter="5">
         <el-col :md="14">
 
-          <picC :data='Object.assign(produceCategory[0],{href:`/produce/${produceCategory[0].id}?page=1`})'
+          <picC :data='Object.assign(produceCategory[0],{href:`/produce/${produceCategory[0].category}?page=1`})'
                 placement="left"
                 :height="500"></picC>
 
         </el-col>
         <el-col :md="10">
-          <picC :data='Object.assign(produceCategory[1],{href:`/produce/${produceCategory[1].id}?page=1`})'
+          <picC :data='Object.assign(produceCategory[1],{href:`/produce/${produceCategory[1].category}?page=1`})'
                 placement="left"
                 :height="500">
 
@@ -26,14 +26,14 @@
 
         </el-col>
         <el-col :md="14">
-          <picC :data='Object.assign(produceCategory[2],{href:`/produce/${produceCategory[2].id}?page=1`})'
+          <picC :data='Object.assign(produceCategory[2],{href:`/produce/${produceCategory[2].category}?page=1`})'
                 placement="left"
                 :height="280">
 
           </picC>
         </el-col>
         <el-col :md="10">
-          <picC :data='Object.assign(produceCategory[3],{href:`/produce/${produceCategory[3].id}?page=1`})'
+          <picC :data='Object.assign(produceCategory[3],{href:`/produce/${produceCategory[3].category}?page=1`})'
                 placement="left"
                 :height="280">
 
@@ -74,7 +74,7 @@
 
 <script>
   import head from '@/plugins/head-part'
-  import mixin from '@/plugins/page-mixin'
+  import mixin from '@/mixins/map-mixin'
 
   export default {
     scrollToTop: true,

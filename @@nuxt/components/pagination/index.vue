@@ -18,7 +18,7 @@
 
 </template>
 <script>
-  import mixin from '@/plugins/conponent-mixin'
+  import mixin from '@/mixins/conponent-mixin'
   export default {
     mixins:[mixin],
         props: ['total', 'current', 'path', 'pageSize'],
