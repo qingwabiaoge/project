@@ -58,8 +58,8 @@
         :filters="categorFilters"
         :filter-method="filterHandler">
         <template slot-scope="{row}">
-          <!--produce.category->component.name-->
-          {{(produceCategory.filter(item=>item.name===row.category))[0].title}}
+
+        {{(produceCategory.filter(item=>item.name===row.category))[0]?(produceCategory.filter(item=>item.name===row.category))[0].title:''}}
 
         </template>
       </el-table-column>

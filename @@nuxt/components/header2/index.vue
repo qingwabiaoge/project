@@ -30,8 +30,8 @@
             <svg aria-hidden="true" class="svg">
               <use xlink:href="#icon-message"></use>
             </svg>
-            <a href="#">
-              message
+            <a @click.prevent.stop="goBottom()">
+              {{'message'|translate}}
 
             </a>
 
@@ -48,7 +48,7 @@
           <img :src="data.image" :alt="data.title">
         </el-col>
 
-        <el-col :md="6" :offset="6" class="right">
+        <el-col :md="{span:6,offset:6}"  class="right">
 
           <el-input
             placeholder="search"
@@ -64,7 +64,7 @@
 
     <nav class="nav">
       <div class="container">
-        <nuxt-link to="/" :style="{color:$route.name==='index'?'#FB00C9':'#333'}">首页</nuxt-link>
+        <nuxt-link to="/" :style="{color:$route.name==='index'?'#FB00C9':'#333'}">{{ 'home' | translate }}</nuxt-link>
         <nuxt-link v-for="item in data.children" :to="'/'+item.name||'#'" class="hover-underline" :key="item.title">
           {{item.title}}
         </nuxt-link>
@@ -90,9 +90,13 @@
         // searchValue: '11'
       }
     },
+    methods:{
+      goBottom() {
+        window.scrollTo(0, document.body.offsetHeight);
+      }
+    },
     watch: {
       inputValue(value) {
-        console.log(value)
         this.$router.push(`/produce/?title=${value}`)
       }
     }

@@ -14,7 +14,7 @@ export const actions = {
   ,
   async patch({commit, state}, data) {
     commit('set', data)
-    this.$axios.patch('/global', state)
+    this.$axios.patch('/global', state.global)
   }
 }
 

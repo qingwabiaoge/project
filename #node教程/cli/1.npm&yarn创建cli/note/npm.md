@@ -137,13 +137,15 @@ npm会读取"./node_modules/koa/package.json"文件
 ```html
 npm i xxx@2
 npm i xxx@latest
-```
-```
 yarn add package-name 会安装 latest 最新版本。
 yarn add package-name@1.2.3 会从 registry 里安装这个包的指定版本。
 yarn add package-name@tag 会安装某个 “tag” 标识的版本（比如 beta、next 或者 latest）
 ```
-
+```
+~ 会匹配最近的小版本依赖包，比如~1.2.3会匹配所有1.2.x版本，但是不包括1.3.0
+^ 会匹配最新的大版本依赖包，比如^1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0
+* 这意味着安装最新版本的依赖包
+```
 ### 局部安裝到开发模式
 
 ```
@@ -170,7 +172,6 @@ npm uninstall webpack --save # npm 可以指定 --save | --save-dev
 ### 更新模块版本
 ```
 npm update
-
 yarn upgrade
 ```
 

@@ -37,21 +37,24 @@
               <el-form-item>
                 <!--message.name 数据-->
                 <!--                Please enter your name.-->
-                <el-input v-model="message.name" placeholder="请输入姓名
+                <el-input v-model="message.name" :placeholder=" $t('Please enter your name')">
 
- "></el-input>
+                </el-input>
               </el-form-item>
               <el-form-item prop="tel">
                 <!--message.name 数据-->
                 <!--                Please enter your telephone number.-->
-                <el-input v-model="message.tel" placeholder="请输入电话号码
+                <el-input v-model="message.tel" :placeholder=" $t('Please enter your telephone number')">
 
-"></el-input>
+                </el-input>
               </el-form-item>
               <el-form-item>
                 <!--message.name 数据-->
                 <!--                Please enter a message-->
-                <el-input type="textarea" v-model="message.content" placeholder="请输入留言"></el-input>
+                <el-input type="textarea" v-model="message.content"
+                          :placeholder=" $t('Please enter a message')">
+
+                </el-input>
               </el-form-item>
 
               <h3 @click="submitForm('message')">{{data.button}}</h3>
@@ -101,8 +104,8 @@
 <script>
   import mixin from '@/mixins/conponent-mixin'
 
-export default {
-    mixins:[mixin],
+  export default {
+    mixins: [mixin],
     data() {
       return {
         message: {},
@@ -111,7 +114,7 @@ export default {
             {
               required: true,
               //message: 'Enter your mobile phone number please',
-              message: '请输入电话号码',
+              message: this.$t('Please enter your telephone number'),
               trigger: 'blur'
             },
           ],

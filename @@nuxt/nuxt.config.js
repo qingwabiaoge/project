@@ -14,17 +14,17 @@ module.exports = {
     HOST: '127.0.0.1',
     PORT: 3002,
   },
-
+  lang: 'zh',//'en'
   mode: 'universal',
   router: {
     linkActiveClass: 'active',//当前流和上级栏目
-    scrollBehavior: function (to, from, savedPosition) {
-      return {x: 0, y: 0}
-    },
-    middleware: [
-      //'auth',
-      'ua'
-    ]
+    /*    scrollBehavior: function (to, from, savedPosition) {
+          return {x: 0, y: 0}
+        },
+        middleware: [
+          //'auth',
+          'ua'
+        ]*/
   },
 
   server: {
@@ -63,7 +63,7 @@ module.exports = {
   */
   head: {
     // title: 'senboma_bonniena',
-    title: '广州森伯马_穿戴美甲',
+    title: '后台输入标题',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -103,7 +103,7 @@ module.exports = {
     "~/plugins/axios",
     "~/plugins/filter",
     "~/plugins/vue.prototype",
-    //"~/plugins/vuex-i18n",
+    "~/plugins/vuex-i18n",
     //vuex持久化
     //"~/plugins/vuex-persistedstate.client.js",
     //test----------------------
@@ -122,17 +122,17 @@ module.exports = {
   ],
   styleResources: {
     /*预先引入到各个vue文件中*/
-    less: ['./assets/less/variables.less', './assets/less/mixins/*.less'],
+    less: ['./assets/less/variables.less', './assets/less/mixins/*'],
     /*  options: {
         // See https://github.com/yenshih/style-resources-loader#options
         // Except `patterns` property
       }*/
   },
-  //axios: {
+  /* axios: {
 
-  //prefix: '/api', // baseURL
-  // credentials: true,
-  // },
+   prefix: '/api', // baseURL
+   credentials: true,
+   },*/
   /*
   ** Build configuration
   */

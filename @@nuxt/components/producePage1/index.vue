@@ -9,11 +9,12 @@
           {{data.title}}
         </h1>
         <h3>
-          weight:{{data.weight}}
+          {{"color"|translate}}:{{data.color}}
         </h3>
         <h3>
-          color:{{data.color}}
+          {{"weight"|translate}}:{{data.weight}}
         </h3>
+
         <p>
           {{data.description}}
         </p>

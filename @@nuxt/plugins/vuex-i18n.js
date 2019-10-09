@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import vuexI18n from 'vuex-i18n'
+
+const vuexI18n = require('vuex-i18n/dist/vuex-i18n.umd.js')
+const {lang} = require('@/nuxt.config')
+
 //修改app.sore
 export default ({store}) => {
   Vue.use(vuexI18n.plugin, store);
@@ -11,15 +14,19 @@ export default ({store}) => {
   // i.e. resources/i18n/de.json.
   const translationsZh = {
     "home": "首页",
-/*    "Please enter your name":"请输入姓名",
-    "Please enter your telephone number":"请输入电话号码",
-    "Please enter a message":"请输入留言"*/
+    "Please enter your name": "请输入姓名",
+    "Please enter your telephone number": "请输入电话号码",
+    "Please enter a message": "请输入留言",
+    "weight": "重量",
+    "color":"颜色",
+    "message":'留言'
   };
+
 
   // add translations directly to the application
   Vue.i18n.add('en', translationsEn);
   Vue.i18n.add('zh', translationsZh);
 
   // set the start locale to use
-  Vue.i18n.set('zh');
+  Vue.i18n.set(lang);
 }

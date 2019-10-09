@@ -47,9 +47,7 @@
 
     created() {
       //data属性更新(网络更新),creade mouted 什么的不行,网络更新没结束那些生命周期就结束了,切哪些生命周期函数只运行一次
-
       this.cur = this.data.children[0]
-
 
     }
 

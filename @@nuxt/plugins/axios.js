@@ -13,13 +13,13 @@ export default function ({$axios, store, redirect, env}) {
 
   // 请求回调
   axios.onRequest(config => {
-      // 在发送请求之前1做些什么：每次发送请求之前检测都vuex存有token,那么都要放在请求头发送给服务器
-      if (store.state.user.token) {
-        config.headers.Authorization = `token ${store.state.user.token}`;
-      }
-      // loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
-      return config;
-    })
+    // 在发送请求之前1做些什么：每次发送请求之前检测都vuex存有token,那么都要放在请求头发送给服务器
+    if (store.state.user.token) {
+      config.headers.Authorization = `token ${store.state.user.token}`;
+    }
+    // loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
+    return config;
+  })
 
   // 返回回调
   axios.onResponse(res => {

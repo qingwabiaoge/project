@@ -84,7 +84,7 @@
     }
     ,
     created() {
-      console.log(this)
+
     },
     mixins: [mapMixin,mixin]
   }
