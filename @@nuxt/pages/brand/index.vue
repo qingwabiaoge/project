@@ -64,7 +64,7 @@
 
   export default {
     async asyncData({$axios}) {
-      const {articles} = await $axios.get('/articles', {params: {category: "公司新闻"}})
+      const {articles} = await $axios.get('/articles', {params: {}})
       return {articles}
     },
     mixins: [mixin]

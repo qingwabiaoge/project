@@ -19,7 +19,7 @@ module.exports = async (ctx) => {
 
   const produces = await Produce.find(filter, {content: 0})
   //按照时间排序 _id就是时间戳
-    .sort({'_id': -1})
+    .sort('-sort -_id')
     //限制条数
     .limit(Number(size))
     //跳过分页

@@ -78,6 +78,14 @@
         sortable>
       </el-table-column>
       <el-table-column
+        prop="sort"
+        label="排序"
+        sortable>
+        <template v-slot="{row}">
+          {{row.sort}}
+        </template>
+      </el-table-column>
+      <el-table-column
         prop="number"
         label="数量"
 

@@ -367,6 +367,9 @@
                     v-model="data.content">
         </vue-editor>
 
+        <editor v-model="data.content">
+
+        </editor>
       </section>
 
       <section v-if="data.model==='global'">
@@ -435,7 +438,7 @@
 </template>
 
 <script>
-
+  import editor from './editor'
   import {VueEditor} from 'vue2-editor'
   import uploadList from '@/components/upload-list'
   import upload from '@/components/upload-simple'
@@ -443,7 +446,7 @@
 
   export default {
 
-    components: {VueEditor, upload, uploadList},
+    components: {VueEditor, upload, uploadList,editor},
     data() {
       return {
         formLabelWidth: '80px',

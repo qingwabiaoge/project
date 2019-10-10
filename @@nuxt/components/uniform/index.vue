@@ -20,7 +20,7 @@
                       v-if="data.model==='component'&&$isdev"
                       :label-width="formLabelWidth"
                       prop="name"
-                      >
+        >
           <el-input type="text" v-model="data.name" auto-complete="off" :disabled="!$isdev"></el-input>
         </el-form-item>
 
@@ -359,15 +359,15 @@
 
       <!-- undifine!==false-->
       <section v-if="data.model!=='global'&&data.isCategory!==false">
-        <client-only>
 
-          <!--   <vue-editor id="editor"
-                         useCustomImageHandler
-                         @imageAdded="addImage"
-                         :class="$style.editor"
-                         v-model="data.content">
-             </vue-editor>-->
-        </client-only>
+
+          <vue-editor id="editor"
+                       useCustomImageHandler
+                       @image-added="addImage"
+                       :class="$style.editor"
+                       v-model="data.content">
+          </vue-editor>
+
       </section>
 
       <section v-if="data.model==='global'">
@@ -436,14 +436,13 @@
 
 <script>
 
-  // import {VueEditor} from 'vue2-editor'
+
   import uploadList from '../uploadList/index'
   import upload from '../uploadSimple/index'
   import mapMixin from '@/mixins/map-mixin'
 
   export default {
-
-    components: {//VueEditor,
+    components: {
       upload,
       uploadList
     },
@@ -545,6 +544,9 @@
 
       .editor {
         min-width: 100%;
+        * + button {
+          margin-top: 0px;
+        }
 
         :global(.ql-container) {
           background: white

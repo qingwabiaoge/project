@@ -52,6 +52,8 @@ import baseButton from './components/baseButton'
 
 Vue.use(baseButton)
 
+
+
 //mixin---------------------------------------------------------------------------------
 Vue.mixin({
   mounted() {

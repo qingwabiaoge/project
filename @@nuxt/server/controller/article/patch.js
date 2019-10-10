@@ -7,6 +7,6 @@ module.exports = async (ctx) => {
     let update = {$set: ctx.request.body};
     console.log( ctx.request.body)
     let options = {upsert: true};  //默认为false。如果不存在则创建新记录。
-    await Article.update(conditions, update)
+    await Article.updateOne(conditions, update)
 
 }
