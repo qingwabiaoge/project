@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+  <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+<body>
+<script>
+  var a = 0
+  var obj = {
+
+    //this===window,因为还在window作用域
+    a: 1,
+    b: this.a + 10
+  }
+  console.log(obj)
+
+
+</script>
+</body>
+</html>

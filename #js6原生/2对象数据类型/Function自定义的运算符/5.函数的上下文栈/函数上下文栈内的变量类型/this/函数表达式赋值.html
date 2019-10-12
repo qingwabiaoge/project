@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+  <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+</head>
+<body>
+<script>
+  const i = 1
+  var obj1 = {
+    b: function () {
+      //obj2.b()进栈时this===obj2
+      console.log(this)
+      console.log(i)
+    }
+  }
+  obj2 = {
+    b: obj1.b
+  }
+
+  obj2.b()
+</script>
+</body>
+</html>

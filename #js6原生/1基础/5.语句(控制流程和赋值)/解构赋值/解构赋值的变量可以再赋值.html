@@ -1,0 +1,25 @@
+<script>
+    let obj = {a: 1, b: 2}
+    let {a, b} = obj
+
+    //解构赋值可以改变
+    a=10
+    console.log(a, b)
+
+
+    let [c, d] = [3, 4]
+    console.log(c, d)
+
+    let [m,n] = 'ab'
+    console.log(m,n)
+
+
+    function f({a, b}) {
+        console.log(a, b)
+
+    }
+
+    f({a: 5, b: 6})
+
+
+</script>

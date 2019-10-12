@@ -6,5 +6,6 @@ i不能在import.js里被改变
 */
 
 import {i, fn} from './exprort'
+
 fn()//改变i值
-console.log(i)
+console.log(i)//2

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-10</title>
+    <!-- 引入Vue -->
+
+</head>
+
+<body>
+
+<script>
+    "use strict";
+
+
+    var a = 1 //先声明var a,开辟一块栈内存空间, a=1 为这块栈内存空间填充数据1
+    a = 2//a=2是赋值 没有重新声明a 未开辟新的内存空间
+    console.log(a)
+
+    function fn() {
+        a = 3//自由变量赋值操作,并非开辟新的栈内存空间
+        // var a=1//变量提升 建立了局部变量 开辟新的栈内存空间 ,则a=3修改的就是这个局部变量
+    }
+
+    fn()
+    console.log(a)
+</script>
+</body>
+
+</body>
+</html>

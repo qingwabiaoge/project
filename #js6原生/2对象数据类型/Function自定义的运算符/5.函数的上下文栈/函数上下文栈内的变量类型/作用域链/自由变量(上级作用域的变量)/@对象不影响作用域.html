@@ -1,0 +1,19 @@
+<script>
+  var a = 1//#1
+  obj = {
+    b: function () {
+      var a = 2//#2
+      function f() {
+        a = 3 //修改#2
+      }
+
+      f()
+      console.log(a) //#2变量的值
+    }
+
+
+  }
+  obj.b()
+  console.log(a) //#1变量的值
+
+</script>
