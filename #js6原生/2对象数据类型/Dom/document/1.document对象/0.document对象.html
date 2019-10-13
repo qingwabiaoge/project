@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+
+
+</body>
+
+<script>
+  console.log({document})
+  console.log(document === window.document)
+
+  console.log(Object.getPrototypeOf(document))
+  console.log(app.__proto__)
+  console.log(document.__proto__ === app.__proto__)
+  console.log(Object.getOwnPropertyNames(document))//["location"]
+  console.log(Object.keys(document))//["location"]
+
+  console.log({app: document.body.childNodes[1]})
+
+</script>
+</html>

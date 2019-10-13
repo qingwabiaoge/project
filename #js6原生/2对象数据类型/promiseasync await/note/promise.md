@@ -1,12 +1,14 @@
+# 实例的所有属性(真实对象键值对)
+
+![1566963355851](img/1566963355851.png)
+
 # 创建对象
 
 ```js
 new Promise((resolve,reject)=>{.....})
+                         .then(res=>{})
+                         .catch(err=>{})
 ```
-
-# 所有属性(真实对象键值对)
-
-![1566963355851](img/1566963355851.png)
 
 # promise的作用
 
@@ -156,7 +158,7 @@ return new Promise((resolve,reject)=>{})
 
 ```
 
-# promise拒绝的原因
+# Promise.rejec拒绝的原因
 
 ```
   Promise.reject('renson');

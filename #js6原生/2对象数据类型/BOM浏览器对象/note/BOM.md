@@ -68,9 +68,7 @@ let i=0
 
 ### location
 
-###### location.href  读取和设置本窗口的地址
-
-
+##### location.href  读取和设置本窗口的地址
 
 ```js
   window.location.href = "http://www.baidu.com"
@@ -79,13 +77,13 @@ let i=0
 
 ### screen
 
-###### screen.availWidth
+##### screen.availWidth
 
   `console.log(screen.availWidth, screen.availHeight);`
 
 ### navigator
 
-###### navigator.userAgent
+##### navigator.userAgent
 
 ```
 navigator.userAgent
@@ -93,9 +91,9 @@ navigator.userAgent
 
 ### history
 
-###### history.pushState()
+##### history.pushState()
 
-###### history.go()
+##### history.go()
 
 ```html
 <!DOCTYPE html>
@@ -211,60 +209,5 @@ localStorage.setItem('obj', obj);
 
 ```js
 console.log(i.a)
-```
-
-### cookie
-
-###### 使用 JavaScript 创建Cookie
-
-JavaScript 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
-
-JavaScript 中，创建 cookie 如下所示：
-
-```
-document.cookie="username=John Doe";
-```
-
-您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：
-
-```
-document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
-```
-
-您可以使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。
-
-```
-document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
-```
-
-
-
-###### 使用 JavaScript 读取 Cookie
-
-在 JavaScript 中, 可以使用以下代码来读取 cookie：
-
-var x = document.cookie;
-
-###### 例子
-
-```js
-    function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-      var expires = "expires=" + d.toGMTString();
-      document.cookie = cname + "=" + cvalue + "; " + expires;
-    }
-
-    function getCookie(cname) {
-      var name = cname + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i].trim();
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
 ```
 

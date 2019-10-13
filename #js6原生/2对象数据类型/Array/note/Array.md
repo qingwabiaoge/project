@@ -1,17 +1,17 @@
-[^split]:·ÖÁÑ
-[^splice]: ¼ô½Ó 
-[^slice]: Ò»²¿·Ö@Ãû´Ê_
+[^split]:åˆ†è£‚
+[^splice]: å‰ªæ¥ 
+[^slice]: ä¸€éƒ¨åˆ†@åè¯_
 
-# ArrayµÄ¾²Ì¬º¯Êı
+# Arrayçš„é™æ€å‡½æ•°
 
-###  Array.of¾²Ì¬º¯Êı´´½¨Êı×é
+###  Array.ofé™æ€å‡½æ•°åˆ›å»ºæ•°ç»„
 
 ```javascript
- Array.of£¨1£©  //[1]
- Array.of£¨1£¬2£¬3£©//[1,2,3]
+ Array.ofï¼ˆ1ï¼‰  //[1]
+ Array.ofï¼ˆ1ï¼Œ2ï¼Œ3ï¼‰//[1,2,3]
 ```
 
-### Array.fromÀàÊı×é×ªÊı×é
+### Array.fromç±»æ•°ç»„è½¬æ•°ç»„
 
 ```javascript
 let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
@@ -19,63 +19,62 @@ Array.from(ArrayLike)
 
 ```
 
-###  Array.isArray( )ÅĞ¶ÏÊÇ·ñÊı×éÀàĞÍ
+###  Array.isArray( )åˆ¤æ–­æ˜¯å¦æ•°ç»„ç±»å‹
 
-1. ¼ì²âÊÇ²»ÊÇÊı×é Array.isArray(arr)
-2. arr instanceof Array //²Ù×÷·û²»ÓÃ.ºÍÀ¨ºÅ
-3. Array.protype.isprotypeof(arr)
+1. Array.isArray(arr)
+2. arr instanceof Array //æ“ä½œç¬¦ä¸ç”¨.å’Œæ‹¬å·
+3. arr.instructor=Array
+4. Array.protype.isprotypeof(arr)
 
-# ÊµÀıµÄËùÓĞÊôĞÔ(ÕæÊµÊı¾İ½á¹¹) in
+# å®ä¾‹çš„æ‰€æœ‰å±æ€§(çœŸå®æ•°æ®ç»“æ„) in
 
 ![](4.png)
 
 ### __ proto __:Array.prototype
 
-##### Õ»·½·¨ĞŞ¸ÄÊı×é(Ö»ÓĞ´Ë×é¸Ä±äÔ­Êı×é)
+##### æ ˆæ–¹æ³•ä¿®æ”¹æ•°ç»„(åªæœ‰æ­¤ç»„æ”¹å˜åŸæ•°ç»„)
 
-###### Õ»·½·¨ĞŞ¸ÄÌí¼ÓÉ¾³ı
-
-push  pop  unshift shift
+###### push  pop  unshift shift
 
 ```
     const arr = [1, 2, 3, 4]
-          arr2=arr.push(5)//arr2º¯Êı·µ»ØÖµ arrÊÇ±»Ó°ÏìµÄÖµ
+          arr2=arr.push(5)//arr2å‡½æ•°è¿”å›å€¼ arræ˜¯è¢«å½±å“çš„å€¼
     console.log(arr)// [1,2,3,4,5]
     console.log(arr2) // 5
 
 ```
 
-###### ÈÎÒâÎ»ÖÃÔöÉ¾¸Äsplice[^splice]
+###### splice[^splice]ä»»æ„ä½ç½®å¢åˆ æ”¹
 
 ```javascript
 const arr = [1, 2, 3, 4]
 arr2=arr.splice(1,1,'a','b')
 console.log(arr)//[1,'a','b',3,4]
 console.log(arr2)//[2]
-//ÔÚÎ»ÖÃ2¿ªÊ¼É¾³ı1Ïî²åÈë'a','b',º¯Êı·µ»ØÉ¾³ıµÄ1Ïî[2]
+//åœ¨ä½ç½®2å¼€å§‹åˆ é™¤1é¡¹æ’å…¥'a','b',å‡½æ•°è¿”å›åˆ é™¤çš„1é¡¹[2]
 
 ```
 
-###### Ìî³äÊı×é(¸Ä±äÔ­Êı×é)
+###### fill å¡«å……æ•°ç»„(æ”¹å˜åŸæ•°ç»„)
 
 ```
- instance.fill(¡¯qsl¡¯,1,4) //Ìî³äqslÔÚÎ»ÖÃ2µ½5²»°üº¬5
+ instance.fill(â€™qslâ€™,1,4) //å¡«å……qslåœ¨ä½ç½®2åˆ°5ä¸åŒ…å«5
 ```
 
-##### ºÍstringÏàÍ¬µÄ·½·¨(²»¸Ä±äÔ­Êı×é)
+##### å’Œstringç›¸åŒçš„æ–¹æ³•(ä¸æ”¹å˜åŸæ•°ç»„)
 
-###### slice[^slice] ½ØÈ¡
-
-```
-instance.slice£¨1£¬4£©\\½ØÈ¡Êı×é2µ½5²»°üº¬5
-
-instance.slice£¨-3£¬-1£©\\µ¹ÊıµÚ4µ½µ¹ÊıµÚ2²»°üº¬4
-```
-
-###### contact(²»¸Ä±äÔ­Êı×é)
+###### slice[^slice] æˆªå–
 
 ```
-//arrºÍÀàÊı×éÓµÓĞ
+instance.sliceï¼ˆ1ï¼Œ4ï¼‰\\æˆªå–æ•°ç»„2åˆ°5ä¸åŒ…å«5
+
+instance.sliceï¼ˆ-3ï¼Œ-1ï¼‰\\å€’æ•°ç¬¬4åˆ°å€’æ•°ç¬¬2ä¸åŒ…å«4
+```
+
+###### contact(ä¸æ”¹å˜åŸæ•°ç»„)
+
+```
+//arrå’Œç±»æ•°ç»„æ‹¥æœ‰
      const arr = [1, 2, 3], arr2 = [1,2,4, 5]
     allarry=arr.concat(arr2)
     console.log(arr) //[1,2,3]
@@ -86,136 +85,110 @@ instance.slice£¨-3£¬-1£©\\µ¹ÊıµÚ4µ½µ¹ÊıµÚ2²»°üº¬4
 ###### includes
 
 ```
- arr.includes(1)  //ÅĞ¶ÏarrÊÇ·ñ°üº¬1 ·µ»Øboolen,
+ arr.includes(1)  //åˆ¤æ–­arræ˜¯å¦åŒ…å«1 è¿”å›boolen,
 
- arr.includes({a:1})  //²»ÄÜÅĞ¶ÏÉî²ã´Î°üº¬
+ arr.includes({a:1})  //ä¸èƒ½åˆ¤æ–­æ·±å±‚æ¬¡åŒ…å«
 ```
 
 ###### indexOf
 
 ```
-1. arr.indexOf(1)  //´ÓÇ°ÍùºóÊıµÚÒ»¸ö1µÄË÷Òı
-2. arr.lastindexOf(1¡¯) //´ÓºóÍùÇ°ÊıµÚÒ»¸ö1µÄË÷Òı
-3. arr.indexOf({a: 10}) //ÎŞ·¨Ê¹ÓÃ,·µ»Ø-1
+1. arr.indexOf(1)  //ä»å‰å¾€åæ•°ç¬¬ä¸€ä¸ª1çš„ç´¢å¼•
+2. arr.lastindexOf(1â€™) //ä»åå¾€å‰æ•°ç¬¬ä¸€ä¸ª1çš„ç´¢å¼•
+3. arr.indexOf({a: 10}) //æ— æ³•ä½¿ç”¨,è¿”å›-1
 ```
 
-##### join()Êı×éºÍ×Ö·û´®»¥×ª
+##### æ•°ç»„å’Œå­—ç¬¦ä¸²äº’è½¬
 
-```
-[...'abc']
-```
+###### joinè½¬å­—ç¬¦ä¸²
 
 ```
 [1, 2, 3, 4].join('-')
+[...'abc']
 ```
-split[^split]
+###### split[^split] å­—ç¬¦ä¸²è½¬æ•°ç»„
 
 ```javascript
 '1234'.split('')
 ```
-##### Êı×éµü´ú·½·¨(²»¸Ä±äÔ­Êı×é)
+##### æ•°ç»„è¿­ä»£æ–¹æ³•(ä¸æ”¹å˜åŸæ•°ç»„)
 
-###### everyÅĞ¶ÏËùÓĞÏî·ûºÏÄ³Ìõ¼ş ·µ»Øboolen
+###### everyåˆ¤æ–­æ‰€æœ‰é¡¹ç¬¦åˆæŸæ¡ä»¶ è¿”å›boolen
 
 ```
  Array.protype.every((item,index,self) => {})
 ```
 
-###### someÅĞ¶ÏÊÇ·ñÓĞ·ûºÏÄ³Ìõ¼şµÄÏî ·µ»Øboolen
+###### someåˆ¤æ–­æ˜¯å¦æœ‰ç¬¦åˆæŸæ¡ä»¶çš„é¡¹ è¿”å›boolen
 
 ```
  Array.protype.some((item,index,self) => {})
  
 ```
 
-###### mapÓ³Éä¡ª>°´ÕÕÄ³Ìõ¼ş·µ»ØÊı×é
+###### mapæ˜ å°„â€”>æŒ‰ç…§æŸæ¡ä»¶è¿”å›æ•°ç»„
 
 ```
   Array.protype.map((item,index,self) => {})
  
 ```
 
-###### filter¹ıÂË¡ª>·ûºÏÄ³Ìõ¼şµÄÔªËØ ·µ»ØÊı×é
+###### filterè¿‡æ»¤â€”>ç¬¦åˆæŸæ¡ä»¶çš„å…ƒç´  è¿”å›æ•°ç»„
 
 ```
  Array.protype.filter((item,index,self) => {})
 ```
 
-###### forEach¶ÔÃ¿Ò»Ïî²Ù×÷
+###### forEachå¯¹æ¯ä¸€é¡¹æ“ä½œ
 
 ```
  Array.protype.forEach((item,index,self) => {})
 ```
 
-###### Êı×éËÑË÷
+###### findæ•°ç»„æœç´¢
 
 ```
-3. arr.find(function(item, index, self) { return item>1 }) //²éÕÒµÚÒ»¸öÖµ
-4. arr.findindex(function(item, index, self) { return item > 9 }) //²éÕÒµÚÒ»¸öË÷Òı
+3. arr.find(function(item, index, self) { return item>1 }) //æŸ¥æ‰¾ç¬¬ä¸€ä¸ªå€¼
+```
+###### findindexæœç´¢ç¬¬ä¸€ä¸ªç´¢å¼•
+```
+4. arr.findindex(function(item, index, self) { return item > 9 }) //æŸ¥æ‰¾ç¬¬ä¸€ä¸ªç´¢å¼•
 ```
 
-Àı
+ä¾‹
 
 ```
-arr=[{a:1,id:1},{b:2,id:2}]    ÒÑÖªid£º2 ¿ÉÒÔÉ¾³ı{b:2,id:2}Âğ?
+arr=[{a:1,id:1},{b:2,id:2}]    å·²çŸ¥idï¼š2 å¯ä»¥åˆ é™¤{b:2,id:2}å—?
 ------------------------
 arr=[{a:1,id:1},{b:2,id:2},{b:2,id:3}]
  const index =arr.findIndex((item,index,arr)=>{return item.id===3})
 ```
 
-###### ÅÅĞò
+###### sortæ’åº
 
 ```
  Array.protype.sort((a,b)=>b-a)
-
- Array.protype.reverse()//·´×ª
+```
+###### reverseåè½¬
 ```
 
-###### Ïà¼Óreduce
+ Array.protype.reverse()//åè½¬
+```
+
+###### reduce
 
 ```
 array.reduce((total, item, index, self) => res += item, initialValue)
 
-total£ºÉÏÒ»´Îµ÷ÓÃ»Øµ÷·µ»ØµÄÖµ£¬»òÕßÊÇÌá¹©µÄ³õÊ¼Öµ£¨initialValue£©
+totalï¼šä¸Šä¸€æ¬¡è°ƒç”¨å›è°ƒè¿”å›çš„å€¼ï¼Œæˆ–è€…æ˜¯æä¾›çš„åˆå§‹å€¼ï¼ˆinitialValueï¼‰
 
-item£ºÊı×éÖĞÕıÔÚ´¦ÀíµÄÔªËØ
+itemï¼šæ•°ç»„ä¸­æ­£åœ¨å¤„ç†çš„å…ƒç´ 
 
-index£ºÊı¾İÖĞÕıÔÚ´¦ÀíµÄÔªËØË÷Òı£¬Èç¹ûÌá¹©ÁË initialValue £¬´Ó0¿ªÊ¼£»·ñÔò´Ó1¿ªÊ¼
+indexï¼šæ•°æ®ä¸­æ­£åœ¨å¤„ç†çš„å…ƒç´ ç´¢å¼•ï¼Œå¦‚æœæä¾›äº† initialValue ï¼Œä»0å¼€å§‹ï¼›å¦åˆ™ä»1å¼€å§‹
 
-self£º µ÷ÓÃ reduce µÄÊı×é
+selfï¼š è°ƒç”¨ reduce çš„æ•°ç»„
 
-initialValue£º¿ÉÑ¡Ïî£¬ÆäÖµÓÃÓÚµÚÒ»´Îµ÷ÓÃ callback µÄµÚÒ»¸ö²ÎÊı¡£Èç¹ûÃ»ÓĞÉèÖÃ³õÊ¼Öµ£¬Ôò½«Êı×éÖĞµÄµÚÒ»¸öÔªËØ×÷Îª³õÊ¼Öµ¡£¿ÕÊı×éµ÷ÓÃreduceÊ±Ã»ÓĞÉèÖÃ³õÊ¼Öµ½«»á±¨´í¡£
-
- 
-```
-
-**ä¯ÀÀÆ÷¼æÈİĞÔ:**
-
-IE>=9 , PS: IE²»Ö§³ÖES6µÄ¼ıÍ·º¯Êı¡£
-
-```
-   let array = [
-        {
-            name: 'apple',
-            price: 10
-        }, 
-        {
-            name: 'banana',
-            price: 9
-        }
-    ];
-
-    let sumprice = 0;
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        sumprice += element.price;
-    }
-    console.log('for example sumprice',sumprice);
-
-    sumprice = array.reduce(function (total, currentValue, currentIndex, arr) {
-        return total + currentValue.price;
-    }, 0);
-    console.log('for reduce sumprice',sumprice);
+initialValueï¼šå¯é€‰é¡¹ï¼Œå…¶å€¼ç”¨äºç¬¬ä¸€æ¬¡è°ƒç”¨ callback çš„ç¬¬ä¸€ä¸ªå‚æ•°ã€‚å¦‚æœæ²¡æœ‰è®¾ç½®åˆå§‹å€¼ï¼Œåˆ™å°†æ•°ç»„ä¸­çš„ç¬¬ä¸€ä¸ªå…ƒç´ ä½œä¸ºåˆå§‹å€¼ã€‚ç©ºæ•°ç»„è°ƒç”¨reduceæ—¶æ²¡æœ‰è®¾ç½®åˆå§‹å€¼å°†ä¼šæŠ¥é”™ã€‚
 
 ```
 
@@ -231,13 +204,15 @@ IE>=9 , PS: IE²»Ö§³ÖES6µÄ¼ıÍ·º¯Êı¡£
 ['0','1']
 ```
 
-# null,undefine ±¨´íµÄ½â¾ö·½·¨
+# é”™è¯¯
 
-Êı×éµÄ·½·¨µÄÖ÷Ìâ±ØĞëÊÇÊı×é ÈôÎªnull,undefine¾Í²»ÊÇÊı×é»á±¨´í
+### null,undefine æŠ¥é”™çš„è§£å†³æ–¹æ³•
+
+æ•°ç»„çš„æ–¹æ³•çš„ä¸»é¢˜å¿…é¡»æ˜¯æ•°ç»„ è‹¥ä¸ºnull,undefineå°±ä¸æ˜¯æ•°ç»„ä¼šæŠ¥é”™
 
 ![](1.png)
 
-½â¾ö·½·¨1 ÏÈÅĞ¶ÏÊÇ·ñ ‘Êı×é
+è§£å†³æ–¹æ³•1 å…ˆåˆ¤æ–­æ˜¯å¦çˆ²æ•°ç»„
 
 ```
 if(Array.isArray(arr)){
@@ -247,7 +222,7 @@ arr.filter(..)
 
 ```
 
-½â¾ö·½·¨2 , ||
+è§£å†³æ–¹æ³•2 , ||
 
 ```
 const arr=null

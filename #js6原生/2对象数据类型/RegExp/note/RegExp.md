@@ -282,51 +282,15 @@ console.log(reg.test(str))//true
 
 
 
-# 所有属性in(真实键值对)
+# 实例的所有属性in(真实键值对)
 
-![](./7.png)
+![1570960003705](img/1570960003705.png)
 
 
-
-```javascript
-   const reg = /\w{3}/i
-    reg.a = 10
-    console.log({reg})
-
-    console.log(RegExp.prototype.isPrototypeOf(reg))
-    console.log(Object.getPrototypeOf(reg))
-
-/*    compile: ƒ compile()
-    constructor: ƒ RegExp()
-    dotAll: (...)
-    exec: ƒ exec()
-    flags: (...)
-    global: (...)
-    ignoreCase: (...)
-    multiline: (...)
-    source: (...)
-    sticky: (...)
-    test: ƒ test()
-    toString: ƒ toString()
-    unicode: (...)
-    Symbol(Symbol.match): ƒ [Symbol.match]()
-    Symbol(Symbol.matchAll): ƒ [Symbol.matchAll]()
-    Symbol(Symbol.replace): ƒ [Symbol.replace]()
-    Symbol(Symbol.search): ƒ [Symbol.search]()
-    Symbol(Symbol.split): ƒ [Symbol.split]()
-    get dotAll: ƒ dotAll()
-    get flags: ƒ flags()
-    get global: ƒ global()
-    get ignoreCase: ƒ ignoreCase()
-    get multiline: ƒ multiline()
-    get source: ƒ source()
-    get sticky: ƒ sticky()
-    get unicode: ƒ unicode()
-    __proto__: Object*/
-  
-```
 
 ### __ proto __:RegExp.prototype
+
+![1570960401829](img/1570960401829.png)
 
 reg.test(str),reg. exec(str)匹配第一个就结束
 
@@ -362,9 +326,11 @@ reg.test判定为true, reg.exe(str)才不是undifined
 
 ```js
 console.log(reg.hasOwnProperty('lastIndex'))//true
-console.log(Object.getOwnPropertyNames(reg))//["lastIndex"]
+console.log(Object.getOwnPropertyNames(reg))//["lastIndex"] 记录test exec匹配的字符串的最后一位的索引
 ```
-### key
+### ennumberable
+
+只包含一些用户自定义的key
 
     console.log(reg.propertyIsEnumerable('lastIndex'))//false
     console.log(Object.keys(reg))//[]
@@ -382,9 +348,10 @@ QQ号：[1-9][0-9]{4,9}
 
 ```
 
-str.replace(reg,fn(item){})替换网址
-```
-    function replaceReg(reg, str) {
+
+```js
+   //str.replace(reg,fn(item){})替换网址
+   function replaceReg(reg, str) {
         return str.replace(reg, function (item) {
             return `<a href="item">${item}</a>`;
         })
