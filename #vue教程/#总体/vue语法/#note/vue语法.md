@@ -38,7 +38,7 @@
 ##### 原始版
 
 ```html
-<person :data='{name:'li',age:'12',sex:'男'}' 
+<person :data='{...{name:'li',age:'12'},...{sex:'男'}}' 
         :class='[{red:true},'blue']'
         :style='{color:'red',backgroud:'white'}'> 
 </person>
@@ -51,12 +51,13 @@
 2. data被监听可以随着data改变,重新渲染dom
 
 ```html
-<person :data='data' :class='class' :style="style"> </person>
+<person :data='{...data,...other}' :class='class' :style="style"> </person>
 
 <script>
 data(){
     return{
-        data:{name:'li',age:'12',sex:'男'},
+        data:{name:'li',age:'12'},
+        other:{sex:'男'},
         class:[{red:true},'blue'],
         style:{color:'red',backgroud:'white'}
         
@@ -68,28 +69,27 @@ data(){
 ##### 再进化版 computed
 
 ```html
-<person :data='data' :class='class' :style="style"> </person>
+<person :data='computedData' :class='class' :style="style"> </person>
 
 <script>
 data(){
     return{
-        data:{name:'li',age:'12',sex:'男'},
+        data:{name:'li',age:'12'},
+        other:{sex:'男'}
         class:[{red:true},'blue'],
         style:{color:'red',backgroud:'white'}
         
     }
 }
     computed:{
-        data(){
-            return Objenct.assign({name:'li'},{age:'12',},{sex:'男'})
+        computedData(){
+            return{...data,...other}
         }
         
     }
 </script>
 
 ```
-
-
 
 ### 组件的v-on属性
 
@@ -128,11 +128,9 @@ methods:{
 </script>
 ```
 
+# 属性值
 
-
-# Vue实例化对象的属性的变量类型
-
-有普通值,对象,函数,数组
+![](./对象属性值.svg)
 
 ```js
 Vue.component('my-component', {
@@ -161,14 +159,14 @@ Vue.component('my-component', {
     // 带有默认值的对象
     propE: {
       type: Object,
-      // 对象或数组默认值必须从一个工厂函数获取
-//4函数当属性值---------------------------------------------------           
+      // 对象或数组默认值必须从一个工厂函数获取      
       default: function () {
         return { message: 'hello' }
       }
     },
     // 自定义验证函数
     propF: {
+        //4 函数做属性值------------------------------------------------------------------------
       validator: function (value) {
         // 这个值必须匹配下列字符串中的一个
         return ['success', 'warning', 'danger'].indexOf(value) !== -1
@@ -179,7 +177,7 @@ Vue.component('my-component', {
 ```
 
 ```js
-//---------------------
+//computed
 data:{msg:1},
 //----------------
 data(){
@@ -187,7 +185,7 @@ data(){
 }
 
 computed:{
-    //--------------------------------
+//4 函数做属性值------------------------------------------------------------------------
     name(){
         
         return this.firstName+this.lastName
@@ -198,6 +196,7 @@ computed:{
 ```
 
 ```js
+//路由解耦
 <meta charset="utf-8">
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
@@ -257,10 +256,12 @@ computed:{
         mode: 'history',
 
         routes: [
-            {path: '/', component: Hello}, // No props, no nothing
+//1普通值做属性值-----------------------------------
+            {path: '/', component: Hello}, // No props, no nothing        
             {path: '/hello/:name', component: Hello, props: true}, // Pass route.params to props
+//2对象做属性值-----------------------------------               
             {path: '/static', component: Hello, props: {name: 'world'}}, // static values
-            //函数生成props作为router-view的属性--------------------------------------
+//4函数当属性值--------------------------------------------------- 函数生成props作为router-view的属性--------------------------------------
             {path: '/dynamic/:years', component: Hello, props: dynamicPropsFn}, // custom logic for mapping between route and props
         ]
     })
@@ -279,5 +280,27 @@ computed:{
     }
 </style>
 
+```
+
+```js
+  //router嵌套
+  const router = new VueRouter({
+      mode:'history',
+      routes: [{//配置最顶级的<route-view/>
+        path: '/fa/',
+        name: 'fa',
+        component: fa, //默认值
+        children: [ //每个children对应一个<route-view/>
+          {
+            path: '/cs',
+            name: 'cs',
+            component: cs,
+          }
+        ]
+      },
+
+      ]
+    }
+  )
 ```
 

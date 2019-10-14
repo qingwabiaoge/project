@@ -16,7 +16,7 @@
 
   Vue.component('cl', {
     template: `<button :msg="msg">{{msg}}</button>`,
-    //双类型如果是object arr的话 default必须用函数
+    //如果是object或Array的话 default必须用函数
     props: {msg: {type: [Object, Array], default: () => ({a: 1})}}
   })
   new Vue({el: '#app'})

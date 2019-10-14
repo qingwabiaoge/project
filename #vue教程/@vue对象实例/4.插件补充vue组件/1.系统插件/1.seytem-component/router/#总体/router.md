@@ -149,7 +149,7 @@ history.go(-1)
 
 $router=history[histroy.length]
 
-然后通过mixin注入到了每个 vue文件
+然后通过全局mixin注入到了每个 vue文件
 
 ### 注入了history栈顶的信息
 
@@ -165,15 +165,28 @@ $router=history[histroy.length]
 | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 标签                                       | < route-view/>代表页面组件                                   | <  component />代表ui组件                                    | < dialog/>                                                   |
 | 作用                                       | 切换页面级别的组件                                           | 切换模块级别的组件                                           | 显示隐藏组件级别的组件                                       |
-| 设置显示哪些组件                           | 1. 先用path过滤  {path: '/'},再看标签上的name<br />2. < route-view name=""/>   <br />注册组件  `{  components: {    default: def,    cs  }}` | 2. < component is="cs" / >   <br />注册组件`{components: {default: def,    cs  }}` | <dialog :data="data":show="isShow"/>                         |
-| 组件生命周期                               | 切换运行beforeDestroyed ,destroyed                           | 切换运行beforeDestroyed ,destroyed                           | v-if有,v-show没有                                            |
-| 加< keeplive>                              | 切换运行activate deactivate                                  | 切换运行activate deactivate                                  |                                                              |
-| transition                                 | 可用                                                         | 可用                                                         | 可用                                                         |
+| 标签                                       | < route-view name="cl"/>                                     | < component is="cs" / >                                      | <dialog :data="data":show="isShow"/>                         |
+| 注册组件:                                  | {<br />path:'/cl',  //路由路径和path匹配<br />components: {   cl, default: def }//匹配到path后使用组件<br />} | {<br />components: {cl,default:def}<br />}                   | {<br />data(){return{isShow:false}}<br />components:{dialog}<br />} |
+| beforeDestroyed ,destroyed                 | 切换运行                                                     | 切换运行                                                     | v-if有,v-show没有                                            |
+| < keeplive>的activate deactivate           | 切换运行                                                     | 切换运行                                                     |                                                              |
+| < transition/ >                            | 可用                                                         | 可用                                                         | 可用                                                         |
 |                                            |                                                              |                                                              |                                                              |
-| 替代组件的类型                             | 页面组件                                                     | 普通组件                                                     |                                                              |
-| 在组件标签上设置属性                       | X  因为< route-view >代表多个组件                            | X  因为<  component />代表多个组件                           | √  标签设置属性                                              |
-| 设置属性默认值<br />本质是函数参数的默认值 | **获取params和query然后计算后传参**:<br />1. `props: true`      <br />2. `props: {name: 'world'}` <br />3.`props(route) {  return {  name: (new Date().getFullYear() + parseInt(route.params.years)) + '!'  }}`<br /> | **组件里数据传参**:<br />props:{msg:{type:String,default:'msg'} | **组件里数据传参**<br />props:{msg:{type:String,default:'msg'}} |
+| 替代组件的类型                             | 页面组件                                                     | 普通组件                                                     | ui组件                                                       |
+| 在组件标签上设置属性                       | < router-view :key=this.route.query.q/>代表多个组件,设置了多个组件的属性 | <  component />代表多个组件设置多个组件的属性                | 标签设置属性                                                 |
+| 设置属性默认值<br />本质是函数参数的默认值 | **获取params和query然后计算后传参**:<br />1. props: true   <br />2. props: {name: 'world'}<br />3.props(route) {  <br />return {  name: (new Date().getFullYear() parseInt(route.params.years))  }<br />} | **组件里数据传参**:<br />props:{<br />msg:{type:String,default:'msg'}<br />} | **组件里数据传参**<br />props:{<br />msg:{type:String,default:'msg'}<br />} |
 | 通信(改变数据)                             | history栈顶(本质是全局变量)                                  | 父子通信(本质是参数传值+回调函数传值)                        | 同左边                                                       |
+
+# 组件的分类
+
+| 组件     | vue-cli    | nuxt      |
+| -------- | ---------- | --------- |
+| 布局组件 | app        | loyout    |
+| 页面组件 | routerPage | index.vue |
+| 模块组件 |            |           |
+| ui组件   |            |           |
+
+
+
 
 # 路由流配置加active
 
@@ -212,7 +225,7 @@ watch: {
 
 
 ```
-<router-view :key=this.route.query.a />
+<router-view :key=this.route.query.q />
 ```
 
 # 异步加载路由

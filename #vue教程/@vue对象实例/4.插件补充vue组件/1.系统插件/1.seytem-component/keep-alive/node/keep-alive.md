@@ -1,28 +1,24 @@
 # < keep-alive >
 
-## 用处
+## 场景
 
 router组件和 is动态组件
 
-## 钩子函数
-
-< keep-alive > 后的钩子
-
-```
+```js
 <keep-alive>
-    <router-view></router-view>
+    <router-view/>
 </keep-alive>
 ```
 
-```
-取消了
-destroy(){} 和 created(){}
-
-增加了激活和失活的钩子函数
-
-deactivated(){}
-activated(){}
-
+```js
+<keep-alive>
+    <component is=""/>
+</keep-alive>
 ```
 
+## 加< keep-alive > 后的钩子
+
+切换路由和动态组件不再销毁组件destroy(){} 和 created(){}
+
+增加了激活和失活的钩子函数deactivated(){}activated(){}
 

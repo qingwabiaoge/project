@@ -6,7 +6,9 @@
 
 <div id="app">
   <!-- 标签属性-->
-  <cl prop="100"></cl>
+  <cl prop="100">
+
+  </cl>
 
 </div>
 
@@ -14,7 +16,8 @@
 
   Vue.component('cl', {
     template: `<div  >{{prop}}</div>`,
-    props: {prop: {default: 1}} //默认属性
+    //默认属性---------------------------
+    props: {prop: {default: 1}}
   })
 
   new Vue({
