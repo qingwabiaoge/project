@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+
+    <div ref="msgDiv">{{msg}}</div>
+    <div v-if="msg1">{{msg1}}</div>
+    <div v-if="msg2"> {{msg2}}</div>
+    <button @click="changeMsg">
+        更改
+    </button>
+
+
+</div>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '测试',
+            msg1: '测试',
+            msg2: '测试'
+        },
+        updated() {
+            console.log('updated数据更新完毕,而非dom更新完毕')
+        },
+        methods: {
+            changeMsg() {
+                this.msg = "你好"
+                this.msg1 = this.$refs.msgDiv.innerHTML
+                console.log('msg1取dom值,没有等待dom更新render完成,取的是$refs.msgDiv更新前的,所以看不出变化')
+                /*
+                *  async function $nextTick(callback){
+                *     await render()
+                *     callback()
+                * }
+                * */
+
+                this.$nextTick(() => {//异步等待Dom更新 render完成再执行
+                    this.msg2 = this.$refs.msgDiv.innerHTML
+                    console.log('msg2取dom值会等待$refs.msgDiv的dom更新完毕再复制给msg2')
+                })
+            }
+        }
+    })
+
+
+</script>

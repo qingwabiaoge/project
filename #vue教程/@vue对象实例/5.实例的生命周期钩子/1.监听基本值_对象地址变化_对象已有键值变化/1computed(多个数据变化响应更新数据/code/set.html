@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+
+<div id="app">
+
+  msg:<input type="text" v-model="msg">
+  <br>
+  msg:{{msg}}
+  <br>
+  msg2:{{msg2}}
+</div>
+
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      msg: 'msg'
+    },
+    computed: {
+      msg2: {
+        set: function () {
+          this.msg = this.msg2//set时间触发事件
+          console.log('触发set')
+        },
+        get: function () {
+          return this.msg + `-----` //get时间取值
+        }
+
+      }
+
+    }
+
+
+  })
+
+
+</script>
+</body>
+</html>

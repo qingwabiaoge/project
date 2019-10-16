@@ -1,0 +1,24 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<script>
+
+  var Event = new Vue();
+
+
+  new Vue({
+    created() {
+      setTimeout(() => Event.$emit('test', 123))
+    }
+  })
+
+  new Vue({
+    created() {
+      Event.$on('test', data => console.log(data))
+    }
+  })
+
+</script>
+

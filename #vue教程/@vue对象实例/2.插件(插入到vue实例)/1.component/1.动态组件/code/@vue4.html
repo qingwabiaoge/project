@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+<div id="app">
+  <button @click="cur='cl1'">cl1</button>
+  <button @click="cur='cl2'">cl2</button>
+  <transition name="fade">
+    <keep-alive>
+      <component :is="cur"></component>
+    </keep-alive>
+  </transition>
+</div>
+
+<script>
+  Vue.mixin({
+    created() {
+      console.log(this._uid + 'creat')
+    },
+    destroyed() {
+      console.log(this._uid + 'destroy')
+    },
+    actived() {
+      console.log(this._uid + 'actived')
+    },
+    deactivated() {
+      console.log(this._uid + 'deactivated')
+    }
+  })
+  Vue.component('cl1', {template: `<div>{{msg}}</div>`, props: {msg: {type: String, default: 'msg'}}})
+  Vue.component('cl2', {template: `<div>cl2</div>`})
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      cur: 'cl1'
+    }
+  })
+
+
+</script>
+
+<style>
+
+  .fade-enter-active, .fade-leave-active {
+    transition: all .2s;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+  {
+    left: -100%;
+  }
+
+
+</style>

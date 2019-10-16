@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+
+    <div>
+
+        <el-col class="clearfix">
+            <el-form :inline="true">
+                <!--<el-form-item>-->
+                <!--<el-button type="primary" @click="handleAdd" icon="el-icon-edit-outline">新增商品</el-button>-->
+                <!--</el-form-item>-->
+                <el-form-item>
+                    <el-input v-model="keyword"
+                              clearable
+                              prefix-icon="el-icon-search"
+                              placeholder="输入名称搜索产品"
+                              class="uk-margin-left"></el-input>
+                </el-form-item>
+
+
+            </el-form>
+        </el-col>
+
+
+        <!-- table属性
+             height="450"Table 的高度，默认为自动高度。 设置高度后 会固定表头
+             max-height	Table 的最大高度
+             stripe是否显示斑马纹
+             border是否带表格线
+             default-sort：表格默认靠什么排序
+             :data="tableData":表格数据数组名
+             -->
+        <el-table
+                :data="tableData"
+                max-height="450"
+                height="450"
+                stripe
+                border
+                :default-sort="{prop: 'date', order: 'descending'}"
+                style="width: 100%"
+        >
+            <el-table-column
+                    prop="picture"
+                    label="缩略图"
+                    width="100">
+
+                <template slot-scope="scope">
+                    <img :src="scope.row.picture" alt="" style="width: 50px;height: 50px">
+                </template>
+
+            </el-table-column>
+
+            <!--table-column列属性-----
+                  label="日期"  表格表头文字，
+                 property对应列内容的字段名，也可以使用prop  属性
+                 sortable表示是否正序倒序排列，
+                 width="180"表格宽度
+                 filters过滤器数据，
+                 filter-method实现过滤器的函数，
+                -->
+            <el-table-column
+                    label="日期"
+                    property="date"
+                    sortable
+                    width="180"
+                    :filters="[{text: '2016-05-01', value: '2016-05-01'}, {text: '2016-05-02', value: '2016-05-02'}, {text: '2016-05-03', value: '2016-05-03'}, {text: '2016-05-04', value: '2016-05-04'}]"
+                    :filter-method="filterHandler"
+            >
+            </el-table-column>
+            <!--  fixed="right"固定到右边-->
+            <el-table-column
+
+                    property="name"
+                    label="姓名"
+                    width="180">
+            </el-table-column>
+            <el-table-column
+                    property="address"
+                    label="地址"
+                    :formatter="formatter">
+            </el-table-column>
+            <el-table-column
+                    property="tag"
+                    label="标签"
+                    width="100"
+                    :filters="[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]"
+                    :filter-method="filterHandler"
+                    filter-placement="bottom-end">
+                <!--slot-scope用于对数据的再加工 文字替换 图片等-->
+                <template slot-scope="scope">
+                    <el-tag
+                            :type="scope.row.tag === '家' ? 'primary' : 'success'"
+                            disable-transitions>{{scope.row.tag}}
+                    </el-tag>
+                </template>
+            </el-table-column>
+            <el-table-column label="操作"  fixed="right">
+                <template slot-scope="scope">
+                    <el-button
+                            size="mini"
+                            @click="handleEdit(scope.$index, scope.row)">编辑
+                    </el-button>
+                    <el-button
+                            size="mini"
+                            type="danger"
+                            @click="handleDelete(scope.$index, scope.row)">删除
+                    </el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+
+        <!--对话框+表单-->
+        <el-dialog title="新建" :visible.sync="dialogFormVisible">
+            <el-form :model="formData">
+                <el-form-item label="名字" :label-width="formLabelWidth">
+                    <el-input v-model="formData.name" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="地址" :label-width="formLabelWidth">
+                    <el-input v-model="formData.address" autocomplete="off"></el-input>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click="dialogFormVisible = false">取 消</el-button>
+                <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+            </div>
+        </el-dialog>
+        <div>
+            <el-button type="primary" @click="add">添加</el-button>
+        </div>
+    </div>
+{{tableDataRaw}}
+</div>
+
+
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                // 表格数据
+                tableDataRaw: [ {
+                    picture:'http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320',
+                    date: '2016-05-04',
+                    name: '李小虎',
+                    address: '上海市普陀区金沙江路 1517 弄',
+                    tag: '公司'
+                }, {
+                    picture:'http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320',
+                    date: '2016-05-01',
+                    name: '张小虎',
+                    address: '上海市普陀区金沙江路 1519 弄',
+                    tag: '家'
+                }, {
+                    picture:'http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320',
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1516 弄',
+                    tag: '公司'
+                },
+                    ],
+                // 过滤关键字
+                keyword: '',
+                //对话框
+                dialogFormVisible: false,
+                //form
+                formData: {
+
+                },
+                formLabelWidth: '120px'
+            }
+        },
+        computed: {
+            tableData() {
+
+                const keyword = new RegExp(this.keyword)
+                return this.tableDataRaw.filter(item => keyword.test(item.name))
+
+            }
+
+        },
+        methods: {
+            formatter(row, column) {
+                return row.address;
+            },
+
+            //对所有列适用
+            filterHandler(value, row, column) {
+                console.log(value)
+                console.log(row)
+                console.log(column)
+                const property = column['property']; //取得列属性 ,tag
+                return row[property] === value;      //value为选框的值
+            },
+            //对指定列适用
+            filterTag(value, row) {
+                console.log(value)
+                console.log(row)
+                return row.tag === value;
+            },
+            //表格按钮点击显示对话框,加载form数据
+            handleEdit(index, row) {
+console.log(index)
+                console.log(row)
+                this.dialogFormVisible=true
+                this.formData=row
+            },
+            handleDelete(index, row) {
+
+                this.tableDataRaw.splice(index,1)
+
+            },
+            add(){
+                this.tableDataRaw.shift({
+                    picture:'',
+                    date: '',
+                    name: '',
+                    address: '',
+                    tag: ''
+                },)
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

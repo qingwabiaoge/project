@@ -1,0 +1,40 @@
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
+<div id="app">
+    <button @click="add">add</button>
+    <button @click="move">remove</button>
+    <button @click="charge">charge</button>
+    <transition-group
+            name="list"
+            enter-active-class="animated bounceInDown"
+            leave-active-class="animated bounceOut"
+    >
+        <li v-for="item in num" :key="item">{{item}}</li>
+    </transition-group>
+</div>
+
+</body>
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            show: true,
+            num: [1, 2, 3, 4, 5],
+            statu: false
+        },
+        methods: {
+            add: function () {
+                this.num.push(this.num.length+1)
+            },
+            move: function () {
+                this.num.pop(this.num.length)
+            },
+            charge(){
+               this.num= this.num.map(item=>item*2)
+            }
+        }
+    });
+
+</script>

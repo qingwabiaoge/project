@@ -1,0 +1,24 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+
+<style>
+    .red{background: red}
+    .green{background: green}
+
+</style>
+<div id="app">
+    <el-row :gutter="20">
+        <el-col :span="8"><div class="red ">11</div></el-col>
+        <el-col :span="8" :offset="8"><div class="green">11</div></el-col>
+    </el-row>
+</div>
+<script>
+
+  const vm=new Vue({
+      el:'#app',
+
+  })
+
+</script>

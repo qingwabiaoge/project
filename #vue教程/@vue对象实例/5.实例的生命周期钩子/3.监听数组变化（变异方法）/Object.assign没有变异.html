@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+    {{arr}} {{arr2}}
+
+    <button @click="fn">按钮</button>
+
+
+</div>
+
+
+<script>
+
+
+    const vm = new Vue({
+        el: '#app',
+        data() {
+
+            return {arr: [1]}
+        },
+        computed: {
+
+            arr2() {
+                //vue并没有变异Object.assing监测不到Object.assingn引起的数组变化
+                return this.arr.map(item => item * 10)
+            }
+        },
+        methods: {
+
+            fn() {
+                //vue并没有变异Object.assing监测不到Object.assingn引起的数组变化
+                Object.assign(this.arr, [, 2])
+                console.log(this.arr)
+            }
+        }
+
+
+    })
+
+</script>
+
+

@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+<div id="app">
+
+    <cl title="title" some="some">
+        1111111111111111
+    </cl>
+</div>
+
+
+<script>
+
+    const cl = {
+        template: `<div>title   <slot></slot></div>`,
+        props: ['title'],
+        watch: {
+
+            title: {
+                immediate: true,
+                handler(n, o) {
+                    console.log(n, o)
+                }
+
+            },
+
+            $attrs: {
+                immediate: true,
+                handler(n, o) {
+                    console.log(n, o)
+                }
+
+            },
+            '$slots': {
+                immediate: true,
+                handler(n, o) {
+                    console.log(n, o)
+                }
+
+            },
+
+
+        }
+
+    }
+
+    const vm = new Vue({
+        el: '#app',
+        data: {a: 0},
+        components: {cl}
+
+    })
+
+
+</script>
+
+

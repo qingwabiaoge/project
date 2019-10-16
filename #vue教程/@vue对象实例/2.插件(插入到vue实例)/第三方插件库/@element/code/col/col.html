@@ -1,0 +1,86 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+
+<style>
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        margin-top:20px;
+      object-fit: cover;
+    }
+
+    .right > div {
+        float: right;
+    }
+
+</style>
+<div id="app">
+    <el-row :gutter="20">
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 700px"></el-col>
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="12" ><img src="./1.jpg" alt="" style="height: 330px"></el-col>
+    </el-row>
+    <hr>
+
+
+    <el-row :gutter="20" class="right">
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 700px"></el-col>
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="12" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+    </el-row>
+    <hr>
+    <el-row :gutter="20">
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 700px"></el-col>
+        <el-col :md="6"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="6"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="6" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="6" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+    </el-row>
+
+
+
+    <hr>
+    <el-row :gutter="20">
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 700px"></el-col>
+        <el-col :md="4"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+    </el-row>
+
+    <hr>
+    <el-row :gutter="20">
+        <el-col :md="12"><img src="./1.jpg" alt="" style="height: 700px"></el-col>
+        <el-col :md="4"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4"><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+        <el-col :md="4" ><img src="./1.jpg" alt="" style="height: 340px"></el-col>
+    </el-row>
+
+</div>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+
+    })
+
+</script>
+
+<style>
+
+
+</style>

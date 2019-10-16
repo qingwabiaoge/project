@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+    {{computedNow}}
+    <!-- 每次点击时，显示的时间都不同 -->
+    <button @click="showMethod">methodsNow</button>
+
+    <!-- 每次点击时，显示的时间都相同 -->
+    <button @click="showComputed">computedNow</button>
+</div>
+
+
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+           time:new Date().toLocaleString()
+        },
+        methods:{
+            methodsNow: function(){
+                return new Date().toLocaleString();
+            },
+            showMethod: function() {
+                alert(this.methodsNow());
+            },
+            showComputed: function() {
+                alert(this.computedNow);
+            }
+        },
+        computed:{
+            computedNow: function(){
+                return new Date().toLocaleString();
+            }
+        },
+        watch:{
+
+        }
+    })
+</script>

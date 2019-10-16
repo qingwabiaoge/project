@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.8.2/lib/index.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+<link href="https://element.eleme.cn/2.8/docs.b8e65c4.css" rel="stylesheet">
+
+<!--使用场景 有的页面需要一个模块 有的需要两个-->
+<div id="app">
+
+
+  <router-view name='navbar'></router-view>
+
+  <!-- 和is类似,is没有默认值-->
+  <router-view :id="this.$route.params.id"></router-view>
+
+
+</div>
+
+<script>
+
+  const Login = {template: `<div>login页</div>`}
+
+  const navbar = {template: `<div>adminbar</div>`}
+  const id = {template: `<div>id:{{id}}</div>`, props: ['id']}
+
+  const router = new VueRouter({
+    routes: [
+      {
+        path: '/',
+        name: 'login',
+        component: Login
+      },
+      {
+        path: '/:id',
+        name: 'navbar',
+        props: true,
+        components: {
+          navbar,
+          default: id
+        },
+      },
+    ]
+
+  })
+  const vm = new Vue({
+    el: '#app',
+    router
+  })
+
+  console.log(vm)
+</script>
+
