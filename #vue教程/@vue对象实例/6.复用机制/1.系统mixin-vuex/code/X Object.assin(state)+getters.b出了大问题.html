@@ -13,6 +13,7 @@
 
     state: {
       a: null,
+      // b:null
     },
     getters: {
       a_(state) {
@@ -26,6 +27,7 @@
     mutations: {
 
       set(state) {
+        //这里添加了新key,getter不能监听到state添加新键值
         Object.assign(state, {a: 1, b: 2})
       }
     },

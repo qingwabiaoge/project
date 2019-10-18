@@ -9,7 +9,7 @@
         <el-row>
           <el-col :md="12" class="left">
 
-            Welcome To {{data.title}}
+            {{'welcome to'|translate}} {{data.title}}
           </el-col>
 
           <el-col :md="12" class="right">
@@ -23,7 +23,6 @@
               <use xlink:href="#icon-english"></use>
             </svg>
             <a href="http://senboma.http6.net/">
-
               english
             </a>
 

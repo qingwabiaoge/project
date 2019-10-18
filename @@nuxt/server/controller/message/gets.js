@@ -7,15 +7,15 @@ module.exports = async (ctx) => {
 
 
   messages = await Message.find({
-      $or: [
-
-        {name: new RegExp(name, 'i')},
-        {tel: new RegExp(tel, 'i')},
-        {content: new RegExp(content, 'i')}
-
-      ]
+      // $or: [
+      //
+      //   {name: new RegExp(name, 'i')},
+      //   {tel: new RegExp(tel, 'i')},
+      //   {content: new RegExp(content, 'i')}
+      //
+      // ]
     }
-  )
+  ).sort()
 
   ctx.body = {
     code: 0,

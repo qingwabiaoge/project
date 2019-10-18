@@ -130,7 +130,6 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 
 ```
   Array.protype.map((item,index,self) => {})
- 
 ```
 
 ###### filter过滤—>符合某条件的元素 返回数组

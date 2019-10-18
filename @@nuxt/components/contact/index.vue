@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="padding: 50px 20px; margin-top: 30px;  background: #fff">
+  <div class="container" style="padding: 70px 20px 20px;  background: #fff">
     <el-row :gutter="25">
       <el-col :md="12">
         <img :src="data.image" :alt="data.title">

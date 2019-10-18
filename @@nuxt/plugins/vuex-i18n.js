@@ -7,12 +7,13 @@ const {lang} = require('@/nuxt.config')
 export default ({store}) => {
   Vue.use(vuexI18n.plugin, store);
   const translationsEn = {
-    "content": "This is some {type} content"
+    // "content": "This is some {type} content"
   };
 
   // translations can be kept in separate files for each language
   // i.e. resources/i18n/de.json.
   const translationsZh = {
+    "welcome to":"欢迎来到",
     "home": "首页",
     "Please enter your name": "请输入姓名",
     "Please enter your telephone number": "请输入电话号码",

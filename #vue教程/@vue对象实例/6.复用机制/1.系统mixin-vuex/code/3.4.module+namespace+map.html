@@ -53,7 +53,7 @@
   Vue.mixin({
     computed: {
       ...mapState({
-        counter: state => state.moduleA.counter
+        counter: state => state.moduleA.counter+1
       }),
       ...mapGetters({
         counter10: 'moduleA/counter10',

@@ -6,7 +6,7 @@
          style="margin-top:50px"
     >
       <!--如果是组件 data.href存在,如果不是组件则是文章-->
-      <nuxt-link :to="data.href||$route.path+'/'+data._id||'#'">
+
         <img
           v-lazy="data.image" :alt="data.title"/>
 
@@ -16,7 +16,7 @@
           <p>———— Read more</p>
 
         </div>
-      </nuxt-link>
+
     </div>
 
   </div>

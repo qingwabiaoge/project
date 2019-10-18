@@ -15,7 +15,7 @@
     async asyncData({$axios, route}) {
 
 
-      const {article} = await $axios.get(`/getArticleById/${ route.params.id}`)
+      const {article} = await $axios.get(`/article/${ route.params.id}`)
 
       return {article}
     }

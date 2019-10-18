@@ -6,50 +6,16 @@
     <title-zh-english :data="{...components.produce,background:'none'}">
 
     </title-zh-english>
+    <pic-c-list :data="components.produce">
 
-    <div class="container" v-if="components.produce.show" :data="components.produce.children"
-         style="margin-bottom: 90px">
-      <el-row :gutter="5">
-        <el-col :md="14">
+    </pic-c-list>
 
-          <picC :data='Object.assign(produceCategory[0],{href:`/produce/${produceCategory[0].category}?page=1`})'
-                placement="left"
-                :height="500"></picC>
-
-        </el-col>
-        <el-col :md="10">
-          <picC :data='Object.assign(produceCategory[1],{href:`/produce/${produceCategory[1].category}?page=1`})'
-                placement="left"
-                :height="500">
-
-          </picC>
-
-        </el-col>
-        <el-col :md="14">
-          <picC :data='Object.assign(produceCategory[2],{href:`/produce/${produceCategory[2].category}?page=1`})'
-                placement="left"
-                :height="280">
-
-          </picC>
-        </el-col>
-        <el-col :md="10">
-          <picC :data='Object.assign(produceCategory[3],{href:`/produce/${produceCategory[3].category}?page=1`})'
-                placement="left"
-                :height="280">
-
-          </picC>
-        </el-col>
-
-      </el-row>
-
-
-    </div>
 
     <title-zh-english inverse :data="{...components.history}">
 
     </title-zh-english>
 
-    <pictext-history :data="components.history ">
+    <pictext-history :data="components.history " class="container">
 
     </pictext-history>
 
@@ -60,7 +26,9 @@
     </picE-list>
 
     <title-zh-english
-      :data="components.oem"></title-zh-english>
+      :data="components.oem">
+
+    </title-zh-english>
 
     <div v-if="components.oem.show"
          style="background: white;text-align: center">
@@ -85,7 +53,7 @@
       }
     },
     head,
-    mixins:[mixin]
+    mixins: [mixin]
 
   }
 

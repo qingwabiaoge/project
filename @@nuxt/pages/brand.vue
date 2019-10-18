@@ -38,8 +38,10 @@
         <el-col :md="8"
                 v-for="(item,index) in articles"
                 :key="'picA'+index">
+          <nuxt-link :to="`/article/${item._id}`">
           <picA :data="item" style="margin: 50px 0 30px">
           </picA>
+          </nuxt-link>
         </el-col>
       </el-row>
 

@@ -178,7 +178,7 @@
           <el-input type="textarea" v-model="data.size" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="颜色" :label-width="formLabelWidth">
-          <el-input type="textarea" v-model="data.color" auto-complete="off" placeholder="多个颜色用英文逗号,分开"></el-input>
+          <el-input type="textarea" v-model="data.color" auto-complete="off" placeholder="多个颜色请换行"></el-input>
         </el-form-item>
 
         <el-form-item label="库存" :label-width="formLabelWidth">

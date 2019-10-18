@@ -1,7 +1,7 @@
 <template>
   <div class="inverse-wrap" :class="$style.picC">
     <!--如果是组件 data.href存在,如果不是组件则是文章-->
-    <nuxt-link :to="data.href||$route.path+'/detail/'+data._id||'#'">
+    <nuxt-link :to="data.href">
       <div>
 
         <img v-if="data.image" v-lazy="data.image" :style="{height: height+'px'}" alt="">

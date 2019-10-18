@@ -7,8 +7,8 @@
       <div style=" margin-bottom: 60px; margin-top: 60px">
         <el-button-group :class="$style['button-group']">
 
-          <el-button v-for="item in this.produceCategory" :key="item.title" plain>
-            <nuxt-link :to="`/produce/${item.id}?page=1`">
+          <el-button v-for="item in produceCategory" :key="item.title" plain>
+            <nuxt-link :to="item.href">
               {{item.subtitle}}
             </nuxt-link>
 
@@ -57,7 +57,7 @@
 <script>
   import mixin from '@/mixins/map-mixin'
   export default {
-    scrollToTop: false,
+    scrollToTop: true,
     watchQuery: ['page','title'],
     async asyncData({$axios, route, store}) {
 

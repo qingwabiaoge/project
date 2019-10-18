@@ -13,18 +13,24 @@ module.exports = async (ctx, next) => {
   console.log(ctx.req.rawHeaders)
   console.log("ctx.req.headers-----------")
   console.log(ctx.req.headers)
-  console.log("ctx.req.headers.cookie-----------")
-  console.log(ctx.req.headers.cookie)
-  console.log(getCookies(ctx.req)['cid'])
+
+  /*
+  //  只能服务器渲染时间使用 ,因为ajax不携带cookie
+    console.log("ctx.req.headers.cookie-----------")
+    console.log(ctx.req.headers.cookie)
+    console.log(`getCookies(ctx.req)---------------`)
+    console.log(getCookies(ctx.req))
+    */
 
   console.log('ctx.request.header----------------')
-  //这里不能获取cookie
   console.log(ctx.request.header === ctx.req.headers)  //true
   console.log(ctx.request.header === ctx.header) //true
   console.log(ctx.request.header)
 
-  console.log(`ctx.cookies.get('name')------`)
-  console.log(ctx.cookies.get('cid'))
+  /*
+    //  只能服务器渲染时间使用 ,因为ajax不携带cookie
+  console.log(`ctx.cookies.get('username')------`)
+    console.log(ctx.cookies.get('username'))*/
 
   console.log(`ctx.request.method------`)
   console.log(ctx.method === ctx.request.method)

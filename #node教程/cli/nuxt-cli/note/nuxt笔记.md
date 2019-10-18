@@ -667,3 +667,9 @@ NODE_ENV=production pm2 start pm2.json
 ![1569154342601](img/1569154342601.png)
 
 后端api写错了
+
+
+
+![1571355328108](img/1571355328108.png)
+
+mixin data属性未赋值

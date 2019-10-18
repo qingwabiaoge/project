@@ -8,15 +8,13 @@
         <h1>
           {{data.title}}
         </h1>
-        <h3>
-          {{"color"|translate}}:{{data.color}}
-        </h3>
-        <h3>
+        <h3 style="white-space: pre">{{"color"|translate}}:{{data.color}}</h3>
+     <!--   <h3>
           {{"weight"|translate}}:{{data.weight}}
-        </h3>
+        </h3>-->
 
-        <p>
-          {{data.description}}
+        <p v-html="data.description">
+
         </p>
 
       </el-col>

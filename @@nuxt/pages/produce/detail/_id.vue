@@ -1,9 +1,9 @@
 <template>
   <div class="container" style="padding: 30px 20px; background: #fff">
 
-    <produce-page1 :data="produce">
+    <produce-detail :data="produce">
 
-    </produce-page1>
+    </produce-detail>
   </div>
 </template>
 

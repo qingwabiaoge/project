@@ -12,7 +12,7 @@ export const getters = {
     return _conponents
   },
   categorys: state => state.components.filter(item => item.isCategory === true),
-  produceCategory: (state, getters) => getters.components.produce.children,
+  produceCategory: (state, getters) => getters.components.produce.children.map(item => {item.href = item.href || `/produce/${item.name}?page=1`; return item}),
   articleCategory: (state, getters) => getters.components.article.children,
 
   /*  maxId(state, getters) {

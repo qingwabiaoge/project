@@ -280,7 +280,27 @@ console.log(reg.test(str))//true
     console.log(reg.exec('kid is a shabi'))// ['0':"kid is a"]
 ```
 
+######  非捕获后瞻 (?<=)
 
+```js
+ const reg = /(?<=doubi)\sme/
+
+  console.log(reg.test('kid is a doubi me')) // true
+  console.log(reg.test('kid is a shabi me')) // false
+  console.log(reg.exec('kid is a doubi me'))// [" ma", index: 14, input: "kid is a doubi ma", groups: undefined]
+  console.log(reg.exec('kid is a shabi me'))// null
+```
+
+###### 非捕获后瞻否定(?<!)
+
+```js
+  const reg = /(?<!doubi)\sme/
+
+  console.log(reg.test('kid is a doubi me')) // false
+  console.log(reg.test('kid is a shabi me')) // true
+  console.log(reg.exec('kid is a doubi me'))// null
+  console.log(reg.exec('kid is a shabi me'))// [" me", index: 14, input: "kid is a shabi me", groups: undefined]
+```
 
 # 实例的所有属性in(真实键值对)
 

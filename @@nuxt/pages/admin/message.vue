@@ -115,14 +115,8 @@
     methods: {
       //获得新闻列表-----------------------------------------------------
       async getMessages() {
-        const params = {
-          page: this.page,
-          name: this.keyword,
-          category: this.$route.params.category === '所有文案' ? '' : this.$route.params.category,
-          all: true
-        };
         this.listLoading = true;
-        const {total, messages} = await this.$axios.get('/getMessages', {params})
+        const {total, messages} = await this.$axios.get('/messages')
         this.total = total;
         this.messages = messages
         this.listLoading = false
@@ -138,15 +132,13 @@
         return row[property] === value;
 
       },
-//
-
 
       //删除----------------------------------------------------------------------
       handleDel: async function (index, row) {
         await  this.$confirm('确认删除该记录吗?', '提示', {
           type: 'warning'
         })
-        await this.$axios.post(`/delMessage/${row._id}`)
+        await this.$axios.delete(`/message/${row._id}`)
         this.listLoading = false;
         this.getMessages();
       },
@@ -159,7 +151,7 @@
         this.listLoading = true;
         const ids = this.sels.map(item => item._id);
 
-        await this.$axios.post('/delMessages', ids);
+        await this.$axios.delete('/messages', {data:{ids}});
         this.listLoading = false;
         this.getMessages();
       },

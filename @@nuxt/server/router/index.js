@@ -37,10 +37,10 @@ router
 
 //message
 router
-  .get('/getMessages', message.getMessages)
-  .post('/addMessage', message.addMessage)
-  .post('/delMessage/:_id', checkToken, message.delMessage)
-  .post('/delMessages/', message.delMessages)
+  .get('/messages', message.gets)
+  .post('/message', message.add)
+  .del('/message/:_id', checkToken, message.del)
+  .del('/messages/',checkToken, message.dels)
 
 //上传图片到oss
 
