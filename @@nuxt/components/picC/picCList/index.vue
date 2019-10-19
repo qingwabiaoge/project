@@ -4,15 +4,15 @@
   <el-row :gutter="5">
     <el-col :md="14">
 
-      <picC :data='produceCategory[0]'
+      <picC :data='data.children[0]'
             placement="left"
             :height="500">
-        
+
       </picC>
 
     </el-col>
     <el-col :md="10">
-      <picC :data='produceCategory[1]'
+      <picC :data='data.children[1]'
             placement="left"
             :height="500">
 
@@ -20,14 +20,14 @@
 
     </el-col>
     <el-col :md="14">
-      <picC :data='produceCategory[2]'
+      <picC :data='data.children[2]'
             placement="left"
             :height="280">
 
       </picC>
     </el-col>
     <el-col :md="10">
-      <picC :data='produceCategory[3]'
+      <picC :data='data.children[3]'
             placement="left"
             :height="280">
 

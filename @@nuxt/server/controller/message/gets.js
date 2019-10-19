@@ -15,7 +15,7 @@ module.exports = async (ctx) => {
       //
       // ]
     }
-  ).sort()
+  ).sort('-_id')
 
   ctx.body = {
     code: 0,

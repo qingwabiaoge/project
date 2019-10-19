@@ -7,7 +7,7 @@
       <div style=" margin-bottom: 60px; margin-top: 60px">
         <el-button-group :class="$style['button-group']">
 
-          <el-button v-for="item in produceCategory" :key="item.title" plain>
+          <el-button v-for="item in components.produce.children" :key="item.title" plain>
             <nuxt-link :to="item.href">
               {{item.subtitle}}
             </nuxt-link>

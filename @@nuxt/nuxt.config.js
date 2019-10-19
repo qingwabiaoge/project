@@ -1,3 +1,4 @@
+
 module.exports = {
 
   //不渲染ui目录
@@ -102,14 +103,13 @@ module.exports = {
     '~/plugins/vue-lazyload',
     "~/plugins/axios",
     "~/plugins/filter",
-    "~/plugins/vue.prototype",
+    "~/plugins/inject",
     "~/plugins/vuex-i18n",
     {src: "~/plugins/VueEditor.js", mode: 'client'},
     //vuex持久化
     //"~/plugins/vuex-persistedstate.client.js",
     //test----------------------
     "~/plugins/test-process",
-    "~/plugins/inject",
     "~/plugins/test"
 
   ],

@@ -16,7 +16,7 @@
 
               <span v-if="$nuxt.isOffline">您已离线</span>
               <span style="margin-right: 10px">{{global.title}} <i class="el-icon-success"></i>登录成功</span>
-              <a @click="$store.commit('user/logout');"  style="margin-right: 10px">
+              <a @click="$store.commit('user/logout');" style="margin-right: 10px">
                 <i class="el-icon-error"></i>退出登录
               </a>
             </div>
@@ -79,8 +79,8 @@
     </el-row>
 
 
-    <el-row class="uk-text-muted uk-text-center uk-padding">
-      <span>{{$store.state.global.name}}</span>
+    <el-row style="text-align: center">
+      <span>{{global.name}}</span>
     </el-row>
   </div>
 </template>
@@ -107,6 +107,7 @@
   import mixin from '@/mixins/map-mixin'
 
   export default {
+    middleware: 'auth',
     data() {
       return {isCollapse: true}
     },

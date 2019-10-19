@@ -1,16 +1,15 @@
 import Vuex from 'vuex'
-
 //const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('components')
 //把mixin挂载在vue实例
-const components = Vuex.createNamespacedHelpers('components')
-const global = Vuex.createNamespacedHelpers('global')
+const componentsMapObject = Vuex.createNamespacedHelpers('components')
+const globalMapObject = Vuex.createNamespacedHelpers('global')
 
 export default {
   computed: {
-    ...global.mapState([
+    ...globalMapObject.mapState([
       'global'
     ]),
-    ...components.mapGetters([
+    ...componentsMapObject.mapGetters([
       'components',
       'articleCategory',
       'categorys',

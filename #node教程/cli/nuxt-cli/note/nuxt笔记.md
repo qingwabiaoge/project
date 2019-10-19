@@ -76,7 +76,11 @@ actions: {
 
 
 nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 context.redirect() 和 context.error()。
-### 中间件路由钩子
+### 中间件
+
+##### 本质
+
+进路由时的钩子,猜测是router
 
 ##### 不同位置的中间件执行顺序
 

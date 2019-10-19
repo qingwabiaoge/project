@@ -6,7 +6,7 @@
     <title-zh-english :data="{...components.produce,background:'none'}">
 
     </title-zh-english>
-    <pic-c-list :data="components.produce">
+    <pic-c-list :data="categorys[2]">
 
     </pic-c-list>
 
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-  import head from '@/plugins/head-part'
+  // import head from '@/export/head'
   import mixin from '@/mixins/map-mixin'
 
   export default {
@@ -49,12 +49,14 @@
     async asyncData({$axios, store, app}) {
       const {produces} = await $axios.get('/produces', {params: {flag: true}})
       return {
+        //服务器渲染 不能用this
         produces, ...store.state.global.global
       }
     },
-    head,
+    //这里在head函数调用时赋值了this
+    // head,
+    //mixin的运行机制未知
     mixins: [mixin]
-
   }
 
 </script>

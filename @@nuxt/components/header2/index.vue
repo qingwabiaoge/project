@@ -64,7 +64,7 @@
     <nav class="nav">
       <div class="container">
         <nuxt-link to="/" :style="{color:$route.name==='index'?'#FB00C9':'#333'}">{{ 'home' | translate }}</nuxt-link>
-        <nuxt-link v-for="item in data.children" :to="'/'+item.name||'#'" class="hover-underline" :key="item.title">
+        <nuxt-link v-for="item in data.children" :to="item.href" class="hover-underline" :key="item.title">
           {{item.title}}
         </nuxt-link>
       </div>
