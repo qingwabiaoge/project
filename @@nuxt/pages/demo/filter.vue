@@ -7,6 +7,7 @@
 
 <script>
   export default {
+    layout:'demo',
     data() {
       return {
         n: 50,

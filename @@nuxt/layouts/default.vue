@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-  import mixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/page-mixin'
   export default {
     mixins:[mixin]
   }

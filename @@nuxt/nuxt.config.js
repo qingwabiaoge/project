@@ -109,9 +109,7 @@ module.exports = {
     //vuex持久化
     //"~/plugins/vuex-persistedstate.client.js",
     //test----------------------
-    "~/plugins/test-process",
-    "~/plugins/test"
-
+    "~/plugins/test-process"
   ],
   /*
   ** Nuxt.js modules

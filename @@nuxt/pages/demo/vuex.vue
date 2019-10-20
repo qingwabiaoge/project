@@ -8,6 +8,7 @@
 
   const {mapState, mapActions, mapMutations, mapGetters} = Vuex
   export default {
+    layout:'demo',
     computed: {
       ...mapState({obj:['test[0]']})
     },

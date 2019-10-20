@@ -9,6 +9,7 @@
 
 ![](./img/4.png)
 
+![1571561546509](img/1571561546509.png)
 
 # 详解流程
 
@@ -24,10 +25,10 @@ ctx.req.headers
 
 
 ### 把自定义数据注入到上下文对象
-##### nuxt.config.js ->plugins 注入的ctx
+#####  注入的ctx
 
 ```javascript
-
+//nuxt.config.js ->plugins
 export default(ctx)=> {
 //新建函数挂载在app上 app.fn
 //   console.log(ctx)
@@ -40,18 +41,20 @@ export default(ctx)=> {
 
 ```
 
-#####  nuxt.config.js ->plugins, 联合注入到 app  vm vm.store
+#####  注入到 app  vm  store router
 
 ```javascript
+//nuxt.config.js ->plugins, 
 export default ({ app }, inject) => {
   inject('myCombinedInjectedFunction', (string) => console.log('app联合注入', string))
   //注入到了 app  vm vm.store
 }
 ```
-##### nuxt.config.js ->env注入到ctx.env(只能注入变量)
+##### 注入到ctx.env(只能注入变量)
 
 ```javascript
-  env: {
+//nuxt.config.js ->env 
+env: {
     HOST: process.env.HOST ,
     PORT: 3333,
   }
@@ -236,9 +239,9 @@ export default {
 
 
 
-### 服务器端vue实例app数据下载到浏览器成为浏览器端vue实例vm数据
+### 服务器端vue实例下载到浏览器成为浏览器端vue根实例vm数据
 
-![](./img/18.png)
+
 
 ### 服务器上的vue根实例app的生命周期:
 
@@ -390,13 +393,14 @@ export default {
 
 在文件根目录创建(或已经存在)plugins/目录，创建名为：element-ui.js的文件，内容如下：
 	
-	import Vue from 'vue'
-	
-	import { Button } from 'element-ui'    //引入Button按钮
-	
-	export default ()=>{
-   	 Vue.use(Button)
+```js
+import Vue from 'vue'
+
+import { Button } from 'element-ui'    //引入Button按钮
+
+export default ()=>{  	 Vue.use(Button)
 	}
+```
 ##### 3引入插件
 ```
 	plugins:[

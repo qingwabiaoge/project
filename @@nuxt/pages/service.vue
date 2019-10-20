@@ -30,8 +30,11 @@
 </template>
 
 <script>
-  import mixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/page-mixin'
   export default {
+    asyncData({store}){
+      return{...store.getters['components/components'].service}
+    },
     mixins:[mixin]
   }
 </script>

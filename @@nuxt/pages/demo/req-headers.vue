@@ -1,7 +1,7 @@
 <template>
 <div>
-
-  {{header}}
+  必须服务器渲染才可以看到req.headers
+{{header}}
 </div>
 
 </template>

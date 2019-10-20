@@ -9,7 +9,7 @@
       </div>
       <el-form :model="loginForm"
                status-icon
-               :rules="$store.state.rules"
+               :rules="rules"
                ref="loginForm"
                label-width="100px"
                class="demo-ruleForm">
@@ -36,7 +36,7 @@
   </div>
 </template>
 <script>
-  import mixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/page-mixin'
   export default {
     name: 'login',
    layout: 'login',
@@ -44,6 +44,14 @@
       return {
         logo: '',
         loginForm: {},
+        rules:{
+          username: [
+            {required: true, message: '请输入用户名', trigger: 'blur'}
+          ],
+          password: [
+            {required: true, message: '请输入密码', trigger: 'blur'}
+          ],
+        }
       };
     },
     props: {value: Boolean},

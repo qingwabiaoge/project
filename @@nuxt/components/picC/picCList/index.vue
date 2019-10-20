@@ -41,7 +41,7 @@
 </template>
 <script>
   import mixin from '@/mixins/conponent-mixin'
-  import mapMixin from '@/mixins/map-mixin'
+  import mapMixin from '@/mixins/page-mixin'
 
   export default {
     mixins:[mixin,mapMixin],}

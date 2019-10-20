@@ -41,8 +41,8 @@
 </template>
 
 <script>
-  // import head from '@/export/head'
-  import mixin from '@/mixins/map-mixin'
+
+  import mixin from '@/mixins/page-mixin'
 
   export default {
     scrollToTop: true,
@@ -50,11 +50,12 @@
       const {produces} = await $axios.get('/produces', {params: {flag: true}})
       return {
         //服务器渲染 不能用this
-        produces, ...store.state.global.global
+        produces,
+        //提前服务器渲染为了head,早于computed
+        ...store.state.global.global
       }
     },
-    //这里在head函数调用时赋值了this
-    // head,
+
     //mixin的运行机制未知
     mixins: [mixin]
   }

@@ -55,7 +55,7 @@
 
 </template>
 <script>
-  import mixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/page-mixin'
   export default {
     scrollToTop: true,
     watchQuery: ['page','title'],
@@ -72,7 +72,7 @@
         }
       })
       return {
-        produces, total
+        produces, total,...store.getters['components/components'].produce
       }
     }
     ,

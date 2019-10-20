@@ -179,7 +179,7 @@
 
 <script>
 
-  import mapMixin from '@/mixins/map-mixin'
+  import mapMixin from '@/mixins/page-mixin'
   import adminMixin from '@/mixins/admin-page-mixin'
 
   export default {

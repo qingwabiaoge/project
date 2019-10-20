@@ -32,14 +32,14 @@
 
 <script>
 
-import mixin from '@/mixins/map-mixin'
+import mixin from '@/mixins/page-mixin'
   export default {
 
-    async asyncData({$axios}) {
+    async asyncData({$axios,store}) {
 
       const {produces} = await $axios.get('/produces', {params: {flag: '首页'}})
       return {
-        produces
+        produces,...store.getters['components/components'].trend
       }
     },
     mixins:[mixin]

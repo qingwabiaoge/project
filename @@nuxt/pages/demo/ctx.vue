@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>msg</div>
 </template>
 
 <script>
@@ -10,13 +10,8 @@
 
     async asyncData(ctx) {
 
-      console.log('ctx',ctx) //false
+      console.log(ctx) //false
 
-
-      // fn()
-      // app.$myCombinedInjectedFunction('asyncData')
-      // app.myInjectedFunction('asyncData')
-      // store.commit('injectedFunction','ctx.store')
     },
 
     mounted(){

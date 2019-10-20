@@ -8,7 +8,7 @@
     :before-close="close">
 
     <!--ref一定要写到这里 form的外层-->
-    <el-form :model="data" :rules="$store.state.rules" ref="form">
+    <el-form :model="data" :rules="rules" ref="form">
       <h4><span v-if="data.model">推广字段</span><span v-else>基本字段</span>:</h4>
       <section>
 
@@ -66,6 +66,7 @@
                       label="排序"
                       :label-width="formLabelWidth">
           <el-input type="number"
+                    :min="1"
                     v-model.number="data.sort"
                     placeholder="数字越大排序越靠前"
                     auto-complete="off">
@@ -152,19 +153,19 @@
       <h4 v-if="data.model==='produce'">产品字段:</h4>
       <section v-if="data.model==='produce'">
         <el-form-item label="原价" :label-width="formLabelWidth" prop="">
-          <el-input type="number" v-model.number="data.maxPrice" auto-complete="off"></el-input>
+          <el-input type="number" v-model.number="data.maxPrice" :min="1" auto-complete="off"></el-input>
         </el-form-item>
 
         <el-tooltip class="item" effect="dark"
                     :content="(data.price*10/data.maxPrice).toFixed(2).toString()+'折'" placement="right">
           <el-form-item label="实价" :label-width="formLabelWidth" prop="">
-            <el-input type="number" v-model.number="data.price" auto-complete="off"></el-input>
+            <el-input type="number" v-model.number="data.price" :min="1" auto-complete="off"></el-input>
           </el-form-item>
         </el-tooltip>
 
 
         <el-form-item label="数量" :label-width="formLabelWidth" prop="">
-          <el-input type="number" v-model.number="data.number" auto-complete="off"></el-input>
+          <el-input type="number" v-model.number="data.number" :min="1" auto-complete="off"></el-input>
         </el-form-item>
 
 
@@ -172,21 +173,21 @@
           <el-input type="text" v-model="data.material" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="重量 kg" :label-width="formLabelWidth" prop="">
-          <el-input type="number" v-model.number="data.number" auto-complete="off"></el-input>
+          <el-input type="number" v-model.number="data.weight" :min="1" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="尺寸" :label-width="formLabelWidth">
-          <el-input type="textarea" v-model="data.size" auto-complete="off"></el-input>
+          <el-input type="textarea" v-model="data.size" auto-complete="off" :min="1"></el-input>
         </el-form-item>
         <el-form-item label="颜色" :label-width="formLabelWidth">
           <el-input type="textarea" v-model="data.color" auto-complete="off" placeholder="多个颜色请换行"></el-input>
         </el-form-item>
 
         <el-form-item label="库存" :label-width="formLabelWidth">
-          <el-input type="number" v-model.number="data.suk" auto-complete="off"></el-input>
+          <el-input type="number" v-model.number="data.suk" auto-complete="off" :min="1"></el-input>
         </el-form-item>
 
         <el-form-item label="销售量" :label-width="formLabelWidth">
-          <el-input type="number" v-model.number="data.sales" auto-complete="off"></el-input>
+          <el-input type="number" v-model.number="data.sales" auto-complete="off" :min="1"></el-input>
         </el-form-item>
       </section>
 
@@ -361,12 +362,12 @@
       <section v-if="data.model!=='global'&&data.isCategory!==false">
 
 
-          <vue-editor id="editor"
-                       useCustomImageHandler
-                       @image-added="addImage"
-                       :class="$style.editor"
-                       v-model="data.content">
-          </vue-editor>
+        <vue-editor id="editor"
+                    useCustomImageHandler
+                    @image-added="addImage"
+                    :class="$style.editor"
+                    v-model="data.content">
+        </vue-editor>
 
       </section>
 
@@ -439,7 +440,7 @@
 
   import uploadList from '../uploadList/index'
   import upload from '../uploadSimple/index'
-  import mapMixin from '@/mixins/map-mixin'
+  import mapMixin from '@/mixins/page-mixin'
 
   export default {
     components: {
@@ -466,7 +467,60 @@
           'hsl(181, 100%, 37%)',
           'hsla(209, 100%, 56%, 0.73)',
           '#c7158577'
-        ]
+        ],
+        rules: {
+          title: [
+            {required: true, message: '请输入名称或标题', trigger: 'blur'}
+          ],
+          picture: [
+            {required: true, message: '请上传缩略图', trigger: 'blur'}
+          ],
+          image: [
+            {required: true, message: '请上传缩略图!', trigger: 'change'}
+          ],
+          images: [
+            {required: true, message: '请上传缩略图!', trigger: 'change'}
+          ],
+
+          href: [
+            {required: true, message: '请输入链接地址', trigger: 'change'}
+          ],
+          position: [
+            {required: true, message: '请选择投放位置', trigger: 'change'}
+          ],
+
+          content: [
+            {required: true, message: '你还没有编辑商品详情内容哦', trigger: 'blur'}
+          ],
+          beian: [
+            {required: true, message: '请输入备案号', trigger: 'blur'}
+          ],
+          category: [
+            {required: true, message: '请选择类别', trigger: 'blur'}
+          ],
+          // upCategory: [
+          //   {required: true, message: '请选择上级目录', trigger: 'blur'}
+          // ],
+          route: [
+            {required: true, message: '请输入路由', trigger: 'blur'}
+          ],
+          seoTitle: [{required: true, message: '尺寸对于百度收录很重要', trigger: 'blur'}],
+          src: [{required: true, message: '复制要链接的页面网址粘贴到此处', trigger: 'blur'}],
+          mark: [{required: true, message: '请输入唯一的组件标签,例:el-input', trigger: 'blur'}],
+
+          //范围
+
+          price: [
+            {required: true, message: '价格不能为空', trigger: 'blur'},
+            {validator: this.$tool.betweenInt(1, 999999), required: true}
+
+          ],
+          number: [
+            {required: true, message: '产品数量不能为空', trigger: 'blur'},
+            {validator: this.$tool.betweenInt(1, 999999), required: true}
+          ],
+        }
+
       }
     },
     props: {data: {type: Object, default: {}}},
@@ -544,6 +598,7 @@
 
       .editor {
         min-width: 100%;
+
         * + button {
           margin-top: 0px;
         }

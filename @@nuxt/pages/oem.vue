@@ -10,8 +10,11 @@
 </div>
 </template>
 <script>
-  import mixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/page-mixin'
   export default {
+    asyncData(){
+      return{...store.getters['components/components'].oem}
+    },
     mixins:[mixin]
   }
 </script>

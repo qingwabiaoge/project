@@ -1,21 +1,20 @@
 import Vue from 'vue'
-import betweenInt from './betweenInt'
-import cookie from './cookie'
-import deviceType from './deviceType'
-import randomNum from './randomNum'
-import randomString from './randomString'
-import getReqCookies from './getReqCookies'
+import betweenInt from './tool/betweenInt'
+import cookie from './tool/cookie'
+import deviceType from './tool/deviceType'
+import randomNum from './tool/randomNum'
+import randomString from './tool/randomString'
+import getReqCookies from './tool/getReqCookies'
 
 
 const tool = {betweenInt, cookie, deviceType, randomNum, randomString, getReqCookies}
 //必须先声明再注入要不页面不加载
 const isdev = process.env.NODE_ENV === "development"
-
 Vue.prototype.$primaryColor = "fb00c9"
 Vue.prototype.$isdev = isdev
-// Vue.prototype.$tool = tool
 
 export default ({app}, inject) => {
-  //inject('myCombinedInjectedFunction', (string) => console.log('app联合注入', string))
-  inject('$tool', tool)
+//注入打app  router vue.prototype
+  inject('tool', tool)
 }
+

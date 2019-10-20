@@ -27,7 +27,7 @@
 
 
 <script>
-  import mixin from '@/mixins/map-mixin'
+  import mixin from '@/mixins/page-mixin'
 
   export default {
     async asyncData({$axios}) {
