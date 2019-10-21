@@ -33,6 +33,7 @@
   import mixin from '@/mixins/page-mixin'
   export default {
     asyncData({store}){
+      //注入数据到当前组件,类似于prop的作用,为了head使用
       return{...store.getters['components/components'].service}
     },
     mixins:[mixin]

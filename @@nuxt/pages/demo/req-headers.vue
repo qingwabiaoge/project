@@ -10,8 +10,6 @@
   export default {
     layout:'demo',
     asyncData({req}){
-
-
       return{header:req.headers}
     }
 

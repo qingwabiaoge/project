@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <title-zh-english :data="{title:'trend',subtitle:'潮流'}">
+    <title-zh-english :data="components.trend">
 
     </title-zh-english>
    <!-- <div class="text-center">
@@ -39,10 +39,11 @@ import mixin from '@/mixins/page-mixin'
 
       const {produces} = await $axios.get('/produces', {params: {flag: '首页'}})
       return {
+        //注入数据到当前组件,类似于prop的作用,为了head使用
         produces,...store.getters['components/components'].trend
       }
     },
-    mixins:[mixin]
+    mixins:[mixin],
   }
 
 </script>

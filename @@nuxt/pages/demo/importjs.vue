@@ -1,15 +1,17 @@
 <template>
   <div>
-12
+    {{i}}
   </div>
 </template>
 
 <script>
   console.log('组件内引入js代码')
-export default {  layout:'demo',
-
-
-
-}
+  const i = 1
+  export default {
+    layout: 'demo',
+    data() {
+      return {i}
+    }
+  }
 
 </script>

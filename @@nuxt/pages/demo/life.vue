@@ -23,8 +23,6 @@
      fetch(){
       console.log(`fetch执行`)
     },
-
-
     data(){
       console.log('data执行')
       return{data:'data()-data'}

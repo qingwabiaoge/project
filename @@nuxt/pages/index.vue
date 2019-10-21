@@ -49,9 +49,9 @@
     async asyncData({$axios, store, app}) {
       const {produces} = await $axios.get('/produces', {params: {flag: true}})
       return {
-        //服务器渲染 不能用this
+        //服务器渲染 created钩子没有运行 不能用this
         produces,
-        //提前服务器渲染为了head,早于computed
+        //注入数据到当前组件,类似于prop的作用,为了head使用
         ...store.state.global.global
       }
     },

@@ -7,17 +7,15 @@
   let i = 1
 
   export default {
-    asyncData(ctx) {
-
+    data() {
       return {
-        ...ctx.store.state.global.global
+        ...this.$store.state.global.global
       }
     },
     layout: 'demo',
 
     head() {
-      //这里之所以能用this为服务器端的vue组件,app是根组件
-    //head晚于asyncData 所以head里可以使用this.xxx数据
+      //head晚于created 所以head里可以使用this.xxx数据
       console.log(this)
       return {
         title: this.title,

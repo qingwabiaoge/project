@@ -20,12 +20,14 @@
 
     </div>
 
+    <title-zh-english :data="components.article">
 
+    </title-zh-english>
     <div class="container">
 
-      <title-zh-english :data="components.article">
+      <pic-a-list :data="{...components.article,children:articles}">
 
-      </title-zh-english>
+      </pic-a-list>
 
       <!-- <div class="text-center">
          <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
@@ -34,16 +36,6 @@
          </h3>
        </div>-->
 
-      <el-row :gutter="30" v-if="components.article.show">
-        <el-col :md="8"
-                v-for="(item,index) in articles"
-                :key="'picA'+index">
-          <nuxt-link :to="`/article/${item._id}`">
-          <picA :data="item" style="margin: 50px 0 30px">
-          </picA>
-          </nuxt-link>
-        </el-col>
-      </el-row>
 
       <!-- <div class="text-center">
          <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
@@ -65,11 +57,13 @@
   import mixin from '@/mixins/page-mixin'
 
   export default {
-    async asyncData({$axios,store}) {
+    async asyncData({$axios, store}) {
       const {articles} = await $axios.get('/articles', {params: {}})
-      return {articles,
-        //提前服务器渲染为了head
-        ...store.getters['components/components'].brand}
+      return {
+        articles,
+        //注入数据到当前组件,类似于prop的作用,为了head使用
+        ...store.getters['components/components'].brand
+      }
     },
     mixins: [mixin]
   }

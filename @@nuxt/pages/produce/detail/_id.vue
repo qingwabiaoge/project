@@ -4,6 +4,9 @@
     <produce-detail :data="produce">
 
     </produce-detail>
+    <div v-if="$isdev">
+      {{produce}}
+    </div>
   </div>
 </template>
 

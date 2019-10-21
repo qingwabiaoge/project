@@ -13,8 +13,8 @@ const isdev = process.env.NODE_ENV === "development"
 Vue.prototype.$primaryColor = "fb00c9"
 Vue.prototype.$isdev = isdev
 
-export default ({app}, inject) => {
-//注入打app  router vue.prototype
+export default ({app,store,router}, inject) => {
+//注入到app  store router vue.prototype
   inject('tool', tool)
 }
 

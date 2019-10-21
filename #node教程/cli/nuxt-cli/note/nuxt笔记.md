@@ -7,9 +7,9 @@
 
 ### 生命周期
 
-![](./img/4.png)
+![ ](./img/4.png) 
 
-![1571561546509](img/1571561546509.png)
+![1571589091138](img/1571589091138.png)
 
 # 详解流程
 
@@ -239,7 +239,7 @@ export default {
 
 
 
-### 服务器端vue实例下载到浏览器成为浏览器端vue根实例vm数据
+### 服务器端vue实例下载到浏览器成为浏览器端vue数据
 
 
 
@@ -432,8 +432,6 @@ npm install babel-plugin-component --save-dev
 ````
 	build: {
 
-
-
   babel: {
       "plugins": [["component", 
         {
@@ -443,8 +441,6 @@ npm install babel-plugin-component --save-dev
         }
      ]]
     },
-
-
 
 
  	}

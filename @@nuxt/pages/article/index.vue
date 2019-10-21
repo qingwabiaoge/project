@@ -34,6 +34,9 @@
       const {articles} = await $axios.get('/articles', {params: {}})
       return {articles}
     },
+    data() {
+      return {...this.$store.getters['components/components'].article}
+    },
     mixins: [mixin]
   }
 </script>

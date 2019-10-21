@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-bottom: 90px; ">
+  <div style="padding-bottom: 90px; " v-if="data.show">
 
 
     <!--<div class="text-center">-->
@@ -9,7 +9,7 @@
     <!--</h3>-->
     <!--</div>-->
 
-    <el-row>
+    <el-row >
       <el-col v-for="item in data.children" :md="6" :lg="4" :xs="12" :key="item._id">
         <nuxt-link :to="`/produce/detail/${item._id}`">
           <picE :data="item" height="300">

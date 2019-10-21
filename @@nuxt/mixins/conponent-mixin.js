@@ -79,12 +79,12 @@ const test = {
 
 //把mixin挂载在vue实例
 export default {
-  props: {data: {type: [Object, Array], default: test}, inverse: Boolean},
+  props: {data: {type: [Object, Array], default(){return test}}, inverse: Boolean},
 
   mounted() {
-
+    //设置背景
     if (this.$el && this.data) {
-      this.$el.style.background = `${this.data.bg} url(${this.data.background}) 0% 0% / cover  fixed`
+     this.$el.style.background = `${this.data.bg} url(${this.data.background}) 0% 0% / cover  fixed`
       /*   if (!this.data.fullpage&&this.data.type==="component") {
 
            this.$el.className += " container"

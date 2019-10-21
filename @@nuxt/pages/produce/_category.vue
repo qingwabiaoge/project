@@ -72,7 +72,9 @@
         }
       })
       return {
-        produces, total,...store.getters['components/components'].produce
+        produces, total,
+        //注入数据到当前组件,类似于prop的作用,为了head使用
+        ...store.getters['components/components'].produce
       }
     }
     ,
