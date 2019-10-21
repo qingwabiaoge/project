@@ -1,2 +1,2 @@
-require('./global')
+require('./export')
 console.log(i)
