@@ -6,7 +6,7 @@
     <title-zh-english :data="{...components.produce,background:'none'}">
 
     </title-zh-english>
-    <pic-c-list :data="categorys[2]">
+    <pic-c-list :data="components.produce">
 
     </pic-c-list>
 
@@ -15,7 +15,7 @@
 
     </title-zh-english>
 
-    <pictext-history :data="components.history " class="container">
+    <pictext-history :data="components.history" >
 
     </pictext-history>
 

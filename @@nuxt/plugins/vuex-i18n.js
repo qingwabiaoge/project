@@ -19,7 +19,7 @@ export default ({store}) => {
     "Please enter your telephone number": "请输入电话号码",
     "Please enter a message": "请输入留言",
     "weight": "重量",
-    "color":"颜色",
+    "color":"说明",
     "message":'留言'
   };
 

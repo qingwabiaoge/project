@@ -1,0 +1,74 @@
+// Name:            Spinner
+// Description:     Component to create a loading spinner
+//
+// Component:       `spinner`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@spinner-size:                                  30px;
+@spinner-stroke-width:                          1;
+@spinner-radius:                                floor((@spinner-size - @spinner-stroke-width) / 2); // Minus stroke width to prevent overflow clipping
+@spinner-circumference:                         round(2 * 3.141 * @spinner-radius);
+@spinner-duration:                              1.4s;
+
+
+/* ========================================================================
+   Component: Spinner
+ ========================================================================== */
+
+/*
+ * Adopts `icon`
+ */
+
+.spinner {
+    .hook-spinner;
+}
+
+
+/* SVG
+ ========================================================================== */
+
+.spinner > * { animation: spinner-rotate @spinner-duration linear infinite; }
+
+@keyframes spinner-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+}
+
+/*
+ * Circle
+ */
+
+.spinner > * > * {
+    stroke-dasharray: @spinner-circumference;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: spinner-dash @spinner-duration ease-in-out infinite;
+    stroke-width: @spinner-stroke-width;
+    stroke-linecap: round;
+}
+
+@keyframes spinner-dash {
+    0% { stroke-dashoffset: @spinner-circumference; }
+    50% {
+        stroke-dashoffset: @spinner-circumference/4;
+        transform:rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: @spinner-circumference;
+        transform:rotate(450deg);
+    }
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-spinner-misc;
+
+.hook-spinner() {}
+.hook-spinner-misc() {}

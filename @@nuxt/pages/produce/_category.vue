@@ -9,7 +9,7 @@
 
           <el-button v-for="item in components.produce.children" :key="item.title" plain>
             <nuxt-link :to="item.href">
-              {{item.subtitle}}
+              {{item.title}}
             </nuxt-link>
 
           </el-button>

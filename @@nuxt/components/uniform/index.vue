@@ -17,7 +17,7 @@
         </el-form-item>
 
         <el-form-item label="name"
-                      v-if="data.model==='component'&&$isdev"
+                      v-if="data.model==='component'"
                       :label-width="formLabelWidth"
                       prop="name"
         >
@@ -62,7 +62,7 @@
           </el-input>
         </el-form-item>
 
-        <el-form-item v-if="data.model==='produce'||data.model==='article'"
+        <el-form-item v-if="data.model!=='global'"
                       label="排序"
                       :label-width="formLabelWidth">
           <el-input type="number"
@@ -355,7 +355,6 @@
         <span v-if="data.isCategory===true">
           栏目内页内容
         </span>
-        <span> 详细内容</span>
       </h4>
 
       <!-- undifine!==false-->

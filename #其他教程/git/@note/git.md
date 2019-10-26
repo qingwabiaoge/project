@@ -170,8 +170,6 @@ git checkout -b branchA //为分支命名
 
 ![8.png](./img/8.png )
 
-# 
-
 # git remote 
 
 ##### 添加远程主机和主机名
@@ -288,6 +286,18 @@ webstorm比较
 # .gitignore
 
 忽略监听的文件
+
+##### .gitignore规则不生效
+
+.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。
+
+解决方法就是先把本地缓存删除（改变成未track状态），然后再提交:
+
+```csharp
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+```
 
 # git config
 

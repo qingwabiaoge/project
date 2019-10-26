@@ -18,7 +18,7 @@ const port = config.env.PORT
 app.use(response) //捕捉错误和空返回值
   .use(static(path.join(__dirname, '../staticPath')))
   // .use(bodyParser())
-  // .use(cors())
+   .use(cors())
   .use(koaBody({
     parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],//允许解析delete
     multipart: true,
