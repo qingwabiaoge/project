@@ -1,6 +1,5 @@
 module.exports = {
 
-
     //不渲染ui目录
     ignore: [
         'pages/-ui/*',
@@ -40,8 +39,8 @@ module.exports = {
         },
         adminJwtString: 'qinshilei',
         vipJwtString: 'qinshilei',
-         //database: 'mongodb://localhost:27017/senboma',
-        database: 'mongodb://localhost:27017/bonniena',
+        database: 'mongodb://localhost:27017/senboma',
+         //database: 'mongodb://localhost:27017/bonniena',
         apiBase: '/api',
         uploadBase: '/upload',
 
@@ -49,8 +48,7 @@ module.exports = {
             region: 'oss-cn-shenzhen', //自定义项
             accessKeyId: 'LTAIyaBw7R06PSPd', //自定义项
             accessKeySecret: 'bn4PlObQQjbhBInkuxrNRd3P79dcHQ' //自定义项
-        }
-        ,
+        },
 
         // 小程序账户
         appid: 'wxcee026337cd578de',
@@ -75,7 +73,7 @@ module.exports = {
                 hid: 'description',
                 name: 'description',
                 //content: 'Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different markets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.'
-                content: this.description
+                content: 'description'
             }
         ],
         link: [
@@ -165,10 +163,11 @@ module.exports = {
         extend(config, ctx) {
             // 为 客户端打包 进行扩展配置
             if (ctx.isClient) {
-                console.log('打包时间使用')
+                console.log("打包时间使用");
 
             }
         }
+        }
     }
 
-}
+

@@ -9,9 +9,9 @@
             <h2>{{data.title}}</h2>
 
             <p><i class="el-icon-phone-outline" style="margin-right:-15px"></i>
-              <span v-for="item in data.tel.split('\n')" style="margin-left: 15px">
+          <!--    <span v-for="item in data.tel.split('\n')" style="margin-left: 15px">
            {{item}} <br>
-        </span></p>
+        </span>--></p>
             <!--  <p>
                 {{components.brand.description|setLength(100)}}...
               </p>-->

@@ -1,7 +1,7 @@
 <template>
 
 <div>
-<title-zh-english :data="components.oem">
+<title-zh-english  :data="components.oem">
 
 </title-zh-english>
 <div class="container" v-html="components.oem.content">

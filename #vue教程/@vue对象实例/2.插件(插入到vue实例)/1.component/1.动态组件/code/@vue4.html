@@ -10,7 +10,7 @@
   <button @click="cur='cl2'">cl2</button>
   <transition name="fade">
     <keep-alive>
-      <component :is="cur"></component>
+      <component :is="cur" msg="msg标签属性 "></component>
     </keep-alive>
   </transition>
 </div>

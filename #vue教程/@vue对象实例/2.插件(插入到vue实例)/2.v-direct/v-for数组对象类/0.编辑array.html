@@ -1,0 +1,21 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+    <ul>
+<!-- 点击循环元素
+     获得数组下标
+     通过数组下标修改数组
+     -->
+        <li v-for="(item,index) of todo" @click="todo.splice(index,1)">{{item}}</li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            todo: ['a', 'b', 'c']
+        }
+    })
+
+</script>

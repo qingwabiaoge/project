@@ -84,7 +84,8 @@ export default {
   mounted() {
     //设置背景
     if (this.$el && this.data) {
-     this.$el.style.background = `${this.data.bg} url(${this.data.background}) 0% 0% / cover  fixed`
+      console.log(this.$el)
+     // this.$el.style.background = `${this.data.bg} url(${this.data.background}) 0% 0% / cover  fixed`
       /*   if (!this.data.fullpage&&this.data.type==="component") {
 
            this.$el.className += " container"

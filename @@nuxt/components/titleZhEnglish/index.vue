@@ -1,6 +1,4 @@
 <template>
-
-
   <div :class="$style.title" v-if="data.show">
     <section class="hover-underline hover-underline-center">
 

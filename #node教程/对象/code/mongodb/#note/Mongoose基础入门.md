@@ -1306,6 +1306,8 @@ Model.findById(id, [projection], [options], [callback])
 
 ### 查询条件
 
+##### 逻辑运算符
+
 ```
 $or　　　　或关系
 $nor　　　 或关系取反
@@ -2091,6 +2093,10 @@ temp.find(function(err,docs){
 ### 修改字段名
 
 ![1569817757761](img/1569817757761.png)
+
+### 修改字段类型
+
+![1572177345305](img/1572177345305.png)
 
 ### 删除字段名
 

@@ -37,7 +37,7 @@ import mixin from '@/mixins/page-mixin'
 
     async asyncData({$axios,store}) {
 
-      const {produces} = await $axios.get('/produces', {params: {flag: '首页'}})
+      const {produces} = await $axios.get('/produces', {params: {flag:true}})
       return {
         //注入数据到当前组件,类似于prop的作用,为了head使用
         produces,...store.getters['components/components'].trend

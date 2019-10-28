@@ -44,6 +44,7 @@
 <script>
   import mixin from '@/mixins/conponent-mixin'
 export default {
+    name:'pictext1',
     mixins:[mixin],}
 </script>
 
