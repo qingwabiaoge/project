@@ -4,7 +4,8 @@
     <ul>
 <!-- 点击循环元素
      获得数组下标
-     通过数组下标修改数组
+     splice通过数组下标修改数组
+     数组todo变化,引起render
      -->
         <li v-for="(item,index) of todo" @click="todo.splice(index,1)">{{item}}</li>
     </ul>
