@@ -26,6 +26,8 @@
     <button @click="Object.assign(todo,[10,2])">Object.assign(todo,[10,2])</button>
     <!--    可以监听到添加新键值-->
     <button @click="$set(todo,'1',2)" class="btn-success">$set(todo,'1',2)"</button>
+    <!--    改变内存地址-->
+    <button @click="todo=[4,5,6]" class="btn-success" class="btn-success">todo=[4,5,6}</button>
 
 </div>
 
