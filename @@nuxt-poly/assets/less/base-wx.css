@@ -1,0 +1,483 @@
+/*h-shadow	必需。水平阴影的位置。允许负值。
+v-shadow	必需。垂直阴影的位置。允许负值。
+blur	可选。模糊距离。
+spread	可选。阴影的尺寸。
+color	可选。阴影的颜色。请参阅 CSS 颜色值。
+inset	可选。将外部阴影 (outset) 改为内部阴影。*/
+@keyframes animite-light {
+  from {
+    left: -100%;
+  }
+}
+.hover-light,
+.animation-light {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.hover-light:after,
+.animation-light:after {
+  position: absolute;
+  left: -100%;
+  /*改变left的值，让其相对box影藏*/
+  top: 0;
+  width: 40%;
+  height: 100%;
+  content: "";
+  /* Safari 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  /* 标准的语法 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-45deg);
+}
+.hover-light:hover:after,
+.animation-light:hover:after {
+  left: 150%;
+  transition: 1.5s ease;
+}
+.hover-underline {
+  position: relative;
+}
+.hover-underline::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: #fb00c9;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+.hover-underline.active::after,
+.hover-underline:hover::after,
+.hover-underline:focus .hover-underline:active::after {
+  width: 100%;
+}
+.hover-underline-center::after {
+  width: 100%;
+  transform: scale(0.5, 1);
+}
+.hover-underline-center:hover::after,
+.hover-underline-center:focus .hover-underline-center:active::after {
+  width: 100%;
+  transform: scale(1, 1);
+}
+.hover-underline-top::after {
+  top: 0;
+}
+.hover-underline-left {
+  display: inline-block;
+}
+.hover-underline-left:hover::after,
+.hover-underline-left.active::after {
+  height: 100% !important;
+  width: 2px !important;
+  position: absolute;
+  top: 0;
+}
+.hover-backgroud-primary-slideInLeft {
+  position: relative;
+  z-index: 2;
+}
+.hover-backgroud-primary-slideInLeft:after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fb00c9;
+  width: 0;
+  z-index: -1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.hover-backgroud-primary-slideInLeft:hover,
+.hover-backgroud-primary-slideInLeft.active {
+  color: #fff;
+}
+.hover-backgroud-primary-slideInLeft:hover:after,
+.hover-backgroud-primary-slideInLeft.active:after {
+  width: 100%;
+}
+.animation-light:after {
+  animation: animite-light 2s infinite;
+  left: 150%;
+}
+.hover-fade {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+.hover-fade:hover {
+  opacity: 1;
+}
+.hover-inverse-backgoud-fade-in {
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+.hover-inverse-backgoud-fade-in:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+.hover-shadow-transition {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s;
+}
+.hover-shadow-transition:hover {
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+.hover-child-image-scale {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.hover-child-image-scale > img {
+  transition: all 0.5s;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.hover-child-image-scale:hover img {
+  overflow: hidden;
+  transform: scale(1.1, 1.1);
+}
+.hover-child-image-fade img {
+  transition: all 0.5s;
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+.hover-child-image-fade:hover img {
+  -webkit-filter: brightness(1);
+  filter: brightness(1);
+}
+@font-face {
+  font-family: OpenSans;
+  src: url('../font/OpenSans-Light.ttf');
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  transition: all 0.5s;
+}
+*.active,
+*:hover,
+*:focus {
+  outline: #fb00c9;
+}
+page {
+  /* 字体 */
+  font-family: 'OpenSans', Arial, 'Times New Roman', 'Microsoft YaHei', SimHei, "宋体", sans-serif;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  color: #666;
+  /* 背景 */
+  background: #fff;
+  /* margin */
+  margin: 0;
+}
+page:after {
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* Headings
+ ========================================================================== */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0;
+  font-family: 'OpenSans', Arial, 'Times New Roman', 'Microsoft YaHei', SimHei, "宋体", sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+/*
+ * Sizes
+ */
+h1,
+.h1 {
+  font-size: 3.485rem;
+  line-height: 1.1;
+}
+h2,
+.h2 {
+  font-size: 2.72rem;
+  line-height: 1.1;
+}
+h3,
+.h3 {
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+h4,
+.h4 {
+  font-size: 1.6rem;
+}
+h5,
+.h5 {
+  font-size: 1.4rem;
+}
+h6,
+.h6 {
+  font-size: 1.2rem;
+}
+@media (min-width: 960px) {
+  h1,
+  .h1 {
+    font-size: 4.1rem;
+  }
+  h2,
+  .h2 {
+    font-size: 3.2rem;
+  }
+}
+/* Add margin if adjacent element */
+* + h1,
+* + .h1,
+* + h2,
+* + .h2,
+* + h3,
+* + .h3,
+* + h4,
+* + .h4,
+* + h5,
+* + .h5,
+* + h6,
+* + .h6 {
+  margin-top: 25px;
+}
+a,
+.link {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+.link:hover,
+a.active {
+  color: #fb00c9;
+  text-decoration: none;
+}
+p {
+  margin-top: 0px;
+}
+* + p {
+  margin-top: 25px;
+}
+* + button {
+  margin-top: 25px;
+}
+audio,
+canvas,
+img,
+image,
+svg,
+video {
+  vertical-align: middle;
+  /* 1 */
+  max-width: 100%;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  box-sizing: border-box;
+}
+img:not([src]) {
+  visibility: hidden;
+}
+svg {
+  fill: currentColor;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.15em;
+  overflow: hidden;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Lists
+ ========================================================================== */
+ul > li > ul,
+ul > li > ol,
+ol > li > ol,
+ol > li > ul {
+  margin: 0;
+}
+/* Description lists
+ ========================================================================== */
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+hr,
+.hr {
+  /* 1 */
+  box-sizing: content-box;
+  height: 0;
+  /* 2 */
+  overflow: visible;
+  /* 3 */
+  text-align: inherit;
+  /* 4 */
+  margin: 0 0 25px 0;
+  border: 0;
+  border-top: 1px solid #E6E6E6;
+}
+* + hr,
+* + .hr {
+  margin-top: 25px;
+}
+abbr[title] {
+  /* 1 */
+  border-bottom: none;
+  /* 2 */
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+  color: #333;
+}
+em {
+  color: #fb00c9;
+}
+ins {
+  background: #ffd;
+  color: #666;
+  text-decoration: none;
+}
+mark {
+  background: #ffd;
+  color: #666;
+}
+big {
+  font-size: 120%;
+}
+small {
+  font-size: 80%;
+}
+q {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 0 25px 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-style: none;
+  padding: 25px;
+  border-left: 5px solid #f5f5f5;
+  background: #fff;
+}
+* + blockquote {
+  margin-top: 25px;
+}
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+blockquote footer {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: right;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+.inverse-wrap {
+  /* &, *, *:hover {
+     color: @global-color-inverse;
+   }*/
+}
+.inverse-wrap svg {
+  fill: white;
+}
+.inverse-wrap,
+.inverse-wrap h1,
+.inverse-wrap .h1,
+.inverse-wrap h2,
+.inverse-wrap .h2,
+.inverse-wrap h3,
+.inverse-wrap .h3,
+.inverse-wrap h4,
+.inverse-wrap h5,
+.inverse-wrap h6,
+.inverse-wrap b,
+.inverse-wrap i,
+.inverse-wrap a,
+.inverse-wrap a:hover,
+.inverse-wrap .link,
+.inverse-wrap p,
+.inverse-wrap ul,
+.inverse-wrap li,
+.inverse-wrap div,
+.inverse-wrap button {
+  color: #fff;
+}
+/*---------------------- 滚动条-----------------*/
+/*定义滚动条高宽及背景 高宽分别对应 横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #Fff;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  background-color: #eee;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+::-moz-selection {
+  background: #fb00c9;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #fb00c9;
+  color: #fff;
+  text-shadow: none;
+}
+/*# sourceMappingURL=base-wx.css.map */

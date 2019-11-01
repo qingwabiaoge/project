@@ -1,0 +1,150 @@
+// Name:            Dropdown
+// Description:     Component to create dropdown menus
+//
+// Component:       `dropdown`
+//
+// Adopted:         `dropdown-nav`
+//
+// Modifiers:       `dropdown-top-*`
+//                  `dropdown-bottom-*`
+//                  `dropdown-left-*`
+//                  `dropdown-right-*`
+//                  `dropdown-stack`
+//                  `dropdown-grid`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dropdown-z-index:                              @global-z-index + 20;
+@dropdown-min-width:                            200px;
+@dropdown-padding:                              15px;
+@dropdown-background:                           @global-background-muted;
+@dropdown-color:                                @global-color;
+@dropdown-margin:                               @global-margin-small;
+
+@dropdown-nav-item-color:                       @global-background-muted;
+@dropdown-nav-item-hover-color:                 @global-color;
+@dropdown-nav-header-color:                     @global-color-emphasis;
+@dropdown-nav-divider-border-width:             @global-border-width;
+@dropdown-nav-divider-border:                   @global-border-color;
+@dropdown-nav-sublist-item-color:               @global-background-muted;
+@dropdown-nav-sublist-item-hover-color:         @global-color;
+
+
+/* ========================================================================
+   Component: Dropdown
+ ========================================================================== */
+
+/*
+ * 1. Hide by default
+ * 2. Set position
+ * 3. Set a default width
+ * 4. Style
+ */
+
+.dropdown {
+    /* 1 */
+    display: none;
+    /* 2 */
+    position: absolute;
+    z-index: @dropdown-z-index;
+    /* 3 */
+    box-sizing: border-box;
+    min-width: @dropdown-min-width;
+    /* 4 */
+    padding: @dropdown-padding;
+    background: @dropdown-background;
+    color: @dropdown-color;
+    .hook-dropdown;
+}
+
+/* Show */
+.dropdown.open { display: block; }
+
+
+/* Nav
+ * Adopts `nav`
+ ========================================================================== */
+
+.dropdown-nav {
+    white-space: nowrap;
+    .hook-dropdown-nav;
+}
+
+/*
+ * Items
+ */
+
+.dropdown-nav > li > a {
+    color: @dropdown-nav-item-color;
+    .hook-dropdown-nav-item;
+}
+
+/* Hover + Focus + Active */
+.dropdown-nav > li > a:hover,
+.dropdown-nav > li > a:focus,
+.dropdown-nav > li.active > a {
+    color: @dropdown-nav-item-hover-color;
+    .hook-dropdown-nav-item-hover;
+}
+
+/*
+ * Header
+ */
+
+.dropdown-nav .nav-header {
+    color: @dropdown-nav-header-color;
+    .hook-dropdown-nav-header;
+}
+
+/*
+ * Divider
+ */
+
+.dropdown-nav .nav-divider {
+    border-top: @dropdown-nav-divider-border-width solid @dropdown-nav-divider-border;
+    .hook-dropdown-nav-divider;
+}
+
+/*
+ * Sublists
+ */
+
+.dropdown-nav .nav-sub a { color: @dropdown-nav-sublist-item-color; }
+
+.dropdown-nav .nav-sub a:hover,
+.dropdown-nav .nav-sub a:focus { color: @dropdown-nav-sublist-item-hover-color; }
+
+
+/* Direction / Alignment modifiers
+ ========================================================================== */
+
+/* Direction */
+[class*='dropdown-top'] { margin-top: -@dropdown-margin; }
+[class*='dropdown-bottom'] { margin-top: @dropdown-margin; }
+[class*='dropdown-left'] { margin-left: -@dropdown-margin; }
+[class*='dropdown-right'] { margin-left: @dropdown-margin; }
+
+
+/* Grid modifiers
+ ========================================================================== */
+
+.dropdown-stack .dropdown-grid > * { width: 100% !important; }
+
+
+
+// Hooks
+// ========================================================================
+
+.hook-dropdown-misc;
+
+.hook-dropdown() {}
+.hook-dropdown-nav() {}
+.hook-dropdown-nav-item() {}
+.hook-dropdown-nav-item-hover() {}
+.hook-dropdown-nav-header() {}
+.hook-dropdown-nav-divider() {}
+.hook-dropdown-misc() {}

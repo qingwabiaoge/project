@@ -1,0 +1,70 @@
+<template>
+  <div>
+
+
+    <div class="container" style="background: #fff; padding: 20px;">
+
+      <title-zh-english :data="components.brand">
+
+      </title-zh-english>
+      <!--   <div class="text-center">
+           <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
+               style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
+             BRAND
+           </h3>
+         </div>
+   -->
+
+      <pictextCompany :data="components.brand"></pictextCompany>
+
+
+    </div>
+
+    <title-zh-english :data="components.article">
+
+    </title-zh-english>
+    <div class="container">
+
+      <pic-a-list :data="{...components.article,children:articles}">
+
+      </pic-a-list>
+
+      <!-- <div class="text-center">
+         <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
+             style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
+           article
+         </h3>
+       </div>-->
+
+
+      <!-- <div class="text-center">
+         <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
+             style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">
+           oem
+         </h3>
+       </div>
+       <div class="text-center">
+         <img v-lazy="$store.state.components['page-oem'].image"  :alt="$store.state.global.title">
+       </div>-->
+
+    </div>
+
+  </div>
+</template>
+
+
+<script>
+  import mixin from '@/mixins/page-mixin'
+
+  export default {
+    async asyncData({$axios, store}) {
+      const {articles} = await $axios.get('/articles', {params: {}})
+      return {
+        articles,
+        //注入数据到当前组件,类似于prop的作用,为了head使用
+        ...store.getters['components/components'].brand
+      }
+    },
+    mixins: [mixin]
+  }
+</script>

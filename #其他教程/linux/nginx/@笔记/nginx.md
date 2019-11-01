@@ -1,6 +1,6 @@
 ## 创建新站点的步骤
         1，chmod -R  777 /alidata/www
-        2，域名解析
+        2，阿里云域名解析,包含二级域名的解析
         3 vhost文件
         4重启service nginx restart
         如果是新服务器看是否设置了安全组(设置linux的端口)
@@ -40,7 +40,7 @@
     location ~* \.(eot|ttf|woff|svg|otf)$ {
          add_header Access-Control-Allow-Origin *;
     }
-
+    
     location / {
       add_header Access-Control-Allow-Origin *;
     }

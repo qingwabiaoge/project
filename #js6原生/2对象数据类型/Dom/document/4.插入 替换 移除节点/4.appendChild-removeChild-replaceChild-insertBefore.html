@@ -1,10 +1,11 @@
-<div id="wangjianlin">Íõ½¡ÁÖ</div>
+<meta charset="UTF-8">
+<div id="wangjianlin">ç‹å¥æ—</div>
 
 <div id="persons">
-    <div>ÂíÔÆ</div>
-    <div>Âí»¯ÌÚ</div>
-    <div>ÀîÑåºê</div>
-    <div>ÁõÇ¿¶«</div>
+    <div>é©¬äº‘</div>
+    <div>é©¬åŒ–è…¾</div>
+    <div>æå½¦å®</div>
+    <div>åˆ˜å¼ºä¸œ</div>
 </div>
 <button onclick="appendChild_()">appendChild_</button>
 <button onclick="replaceChild_()">replaceChild</button>
@@ -17,31 +18,31 @@
 
     var persons = document.getElementById('persons')
 
-    var shilei = document.createElement("div");//´´½¨Ò»¸öĞÂµÄ±êÇ©
-    shilei.innerHTML = "Ê¯ÀÚ";
+    var shilei = document.createElement("div");//åˆ›å»ºä¸€ä¸ªæ–°çš„æ ‡ç­¾
+    shilei.innerHTML = "çŸ³ç£Š";
 
     function appendChild_() {
-        persons.appendChild(wangjianlin);//Ìí¼Ó
+        persons.appendChild(wangjianlin);//æ·»åŠ 
 
     }
 
     function replaceChild_() {
-        persons.replaceChild(shilei, wangjianlin);//ĞŞ¸Ä
+        persons.replaceChild(shilei, wangjianlin);//ä¿®æ”¹
     }
 
     function removeChild_() {
-        persons.removeChild(shilei);//É¾³ı
+        persons.removeChild(shilei);//åˆ é™¤
     }
 
 
     /*
     target.insertBefore(newChild,existingChild)
 
-        £¨1£©.target£º±»²åÈë½ÚµãºÍ²Î¿¼½ÚµãµÄ¸¸½Úµã¡£
+        ï¼ˆ1ï¼‰.targetï¼šè¢«æ’å…¥èŠ‚ç‚¹å’Œå‚è€ƒèŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹ã€‚
 
-        £¨2£©.newChild£º±ØĞè£¬Òª±»²åÈëµÄĞÂ½Úµã¡£
+        ï¼ˆ2ï¼‰.newChildï¼šå¿…éœ€ï¼Œè¦è¢«æ’å…¥çš„æ–°èŠ‚ç‚¹ã€‚
 
-        £¨3£©.existingChild£º±ØĞè£¬¹æ¶¨ÔÚÄÄ¸ö½ÚµãÇ°Ãæ²åÈëĞÂ½Úµã¡£
+        ï¼ˆ3ï¼‰.existingChildï¼šå¿…éœ€ï¼Œè§„å®šåœ¨å“ªä¸ªèŠ‚ç‚¹å‰é¢æ’å…¥æ–°èŠ‚ç‚¹ã€‚
         */
 
     function InsertBefore_() {

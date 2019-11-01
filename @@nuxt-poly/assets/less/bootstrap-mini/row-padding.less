@@ -1,0 +1,23 @@
+.row-padding(@padding:0) {
+  & {
+    margin-left: -@padding;
+    margin-right: -@padding;
+  }
+  & > * {
+    position: relative;
+    min-height: 1px;
+    padding-left: @padding;
+    padding-right: @padding;
+  }
+}
+
+.row-children-padding-remove {
+  .row-padding(0)
+}
+
+.row-children-padding-small {
+  .row-padding(5px)
+}
+.row-children-padding-larger{
+  .row-padding(20px)
+}
