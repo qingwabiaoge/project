@@ -268,7 +268,7 @@ git remote add origin [url]
 
 # git push & git pull 
 
-##### 初次建立建立远程分支
+##### 初次建立建立远程分支/或者指定推送到哪个分支
 
 ```
 

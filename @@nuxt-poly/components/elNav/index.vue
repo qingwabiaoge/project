@@ -1,4 +1,5 @@
 <template>
+
     <el-menu :default-active="$route.path"
              class="el-menu-demo"
              :mode="mode"
