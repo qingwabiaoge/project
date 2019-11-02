@@ -1,3 +1,0 @@
-Ä¿±êÎ»ÖÃ
-
-"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --save-page-as-mhtml

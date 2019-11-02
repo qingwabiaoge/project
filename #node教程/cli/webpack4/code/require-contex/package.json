@@ -12,5 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "file-loader": "^4.2.0",
+    "url-loader": "^2.2.0"
+  }
 }

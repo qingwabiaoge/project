@@ -22,16 +22,18 @@ sudo apt-get install git
 
 在Windows上使用Git，可以从Git官网直接[下载安装程序](https://git-scm.com/downloads)，（网速慢的同学请移步[国内镜像](https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit)），然后按默认选项安装即可。
 
+
+
+##### **1.在[git官网](https://link.jianshu.com/?t=https://git-scm.com/)下载对应版本的git 并按提示安装；**
+
 安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
 
  ![install-git-on-windows](img/0.jpg) 
 
-##### **1.在[git官网](https://link.jianshu.com/?t=https://git-scm.com/)下载对应版本的git 并按提示安装；**
-
 ##### **2.安装成功后打开git Bash 设置用户名和邮箱**
 
 ```
-  git config --global user.name "YourName" 
+  git config --global user.name "qingwabiaoge" 
 
   git config --global user.email "393502736@qq.com"
 ```
@@ -40,24 +42,20 @@ sudo apt-get install git
 
 注意`git config`命令的`--global`参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
 
-##### 3.生成SSH Key
+##### 3.生成SSH Key(类似git帐户密码生成token的工具,可以粘贴到github和码云使用)
 
   在git Bash 中输入ssh-keygen -t rsa -C " 393502736@qq.com"，连按三次enter键，会看到生成了 一个id_rsa.pub文件
 
-> Your identification has been saved in /c/Users/asus/.ssh/id_rsa.
-> Your public key has been saved in /c/Users/asus/.ssh/id_rsa.pub. 
+> Your identification has been saved in /c/Administrator/asus/.ssh/id_rsa.
+> Your public key has been saved in /c/Administrator/asus/.ssh/id_rsa.pub. 
 
 ##### **4.登录码云并添加密钥**
 
-密匙`D:\Users\Administrator\.ssh\id_rsa`
-
-公匙  `D:\Users\Administrator\.ssh\id_rsa.pub`
-
-在提示的文件目录下打开id_rsa.pub文件（或在git Bash中执行 cat id_rsa.pub命令）复制全部内容到[码云添加密钥](https://link.jianshu.com/?t=https://gitee.com/profile/sshkeys)，
+在提示的文件目录 `D:\Users\Administrator\.ssh\`下打开id_rsa.pub文件（或在git Bash中执行 cat id_rsa.pub命令）复制全部内容到[码云添加密钥](https://link.jianshu.com/?t=https://gitee.com/profile/sshkeys)，
 
 ##### 5.测试是否连接成功
 
-git Bash中输入: ssh -T  393502736@qq.com， 返回 Welcome to Git@OSC, yourname!则成功
+git Bash中输入: ssh -T 393502736@qq.com， 返回 Welcome to Git@OSC, yourname!则成功
 
 
 

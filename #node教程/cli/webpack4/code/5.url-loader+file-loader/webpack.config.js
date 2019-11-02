@@ -18,7 +18,9 @@ module.exports = {
                 use: [
 
                     {
-                        loader: "url-loader",//url-loader会将引入的图片编码，生成dataURl
+                        //url-loader会将引入的图片编码，生成dataURl
+                        //url-loader在node_moudles中使用file-loader
+                        loader: "url-loader",
                         options: {
                             name:'[name].[ext]',
                             limit: 10 * 1000,

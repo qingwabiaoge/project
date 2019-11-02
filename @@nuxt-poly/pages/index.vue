@@ -1,7 +1,7 @@
 <template>
     <el-row :class="$style.index">
         <el-col :md="12">
-            <a href="http://www.poly-tl.com/index.php">
+            <a href="http://www.poty-tl.com/index.php">
                 <img src="@/assets/images/index/1.jpg" alt="">
             </a>
         </el-col>

@@ -68,7 +68,7 @@ module.exports = {
     */
     head: {
         // title: 'senboma_bonniena',
-        title: '瑞欣',
+        title: '上海博立科技发展有限公司',
         meta: [
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -76,7 +76,7 @@ module.exports = {
                 hid: 'description',
                 name: 'description',
                 //content: 'Guangzhou Senboma Artware Co., LTD. is a professional manufacturer and exporter that is concerned with the design, development and production of false nails. We are Established in 2 0 1 2, located in Panyu, Guangzhou. All of our products comply with international quality standards and are greatly appreciated in a variety of different markets throughout the world. Covering and area of 5,000 m2, we now have 150 workers, our production capacity is 2 million units per month. By focusing on new technology and new designs creation, we take our clients over 500 new colors and designs false nails to our customers every year. Our well-equipped facilities and excellent quality control throughout all stages of production enables us to guarantee customer satisfaction. Senboma have the G M P certificate. As a professional cosmetics factory, our false nails and nail glue passed S V H C, Heavy Metal, Microbial test and other related tests according the Europe and U S requirements. As a result of our high quality products, new creation designs and outstanding customer service, we have gained a global sales network reaching U K, U S, Europe, Australia, Korea. If you are interested in any of our products or would like to discuss a customized order, please feel free to contact us. We are looking forward to building a mutual beneficial business relationships with new clients around the world in the near future.'
-                content: 'description'
+                content: '上海博立科技发展有限公司'
             }
         ],
         link: [
