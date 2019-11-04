@@ -1,0 +1,224 @@
+// Name:            Tile
+// Description:     Component to create tiled boxes
+//
+// Component:       `tile`
+//
+// Modifiers:       `tile-xsmall`
+//                  `tile-small`
+//                  `tile-large`
+//                  `tile-xlarge`
+//                  `tile-default`
+//                  `tile-muted`
+//                  `tile-primary`
+//                  `tile-secondary`
+//
+// States:          `preserve-color`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@tile-padding-horizontal:                      15px;
+@tile-padding-horizontal-s:                    @global-padding;
+@tile-padding-horizontal-m:                    @global-padding-large;
+@tile-padding-vertical:                        @global-margin-large;
+@tile-padding-vertical-m:                      @global-margin-larger;
+
+@tile-xsmall-padding-vertical:                 @global-margin;
+
+@tile-small-padding-vertical:                  @global-margin-large;
+
+@tile-large-padding-vertical:                  @global-margin-larger;
+@tile-large-padding-vertical-m:                @global-margin-largest;
+
+@tile-xlarge-padding-vertical:                 @global-margin-largest;
+@tile-xlarge-padding-vertical-m:               (@global-margin-larger + @global-margin-largest);
+
+@tile-default-background:                      @global-color-inverse;
+
+@tile-muted-background:                        @global-background-muted;
+
+@tile-primary-background:                      @global-color-primary;
+@tile-primary-color-mode:                      light;
+
+@tile-black-background:                    @global-background-inverse;
+@tile-secondary-color-mode:                    light;
+
+
+/* ========================================================================
+   Component: Tile
+ ========================================================================== */
+
+.tile {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: @tile-padding-horizontal;
+    padding-right: @tile-padding-horizontal;
+    padding-top: @tile-padding-vertical;
+    padding-bottom: @tile-padding-vertical;
+    .hook-tile;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: @global-breakpoint-phone) {
+
+    .tile {
+        padding-left: @tile-padding-horizontal-s;
+        padding-right: @tile-padding-horizontal-s;
+    }
+
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @global-breakpoint-tablet) {
+
+    .tile {
+        padding-left: @tile-padding-horizontal-m;
+        padding-right: @tile-padding-horizontal-m;
+        padding-top: @tile-padding-vertical-m;
+        padding-bottom: @tile-padding-vertical-m;
+    }
+
+}
+
+/*
+ * Micro clearfix
+ */
+
+.tile::before,
+.tile::after {
+    content: "";
+    display: table;
+}
+
+.tile::after { clear: both; }
+
+/*
+ * Remove margin from the last-child
+ */
+
+.tile > :last-child { margin-bottom: 0; }
+
+
+/* Size modifiers
+ ========================================================================== */
+
+/*
+ * XSmall
+ */
+
+.tile-xsmall {
+    padding-top: @tile-xsmall-padding-vertical;
+    padding-bottom: @tile-xsmall-padding-vertical;
+}
+
+/*
+ * Small
+ */
+
+.tile-small {
+    padding-top: @tile-small-padding-vertical;
+    padding-bottom: @tile-small-padding-vertical;
+}
+
+/*
+ * Large
+ */
+
+.tile-large {
+    padding-top: @tile-large-padding-vertical;
+    padding-bottom: @tile-large-padding-vertical;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @global-breakpoint-tablet) {
+
+    .tile-large {
+        padding-top: @tile-large-padding-vertical-m;
+        padding-bottom: @tile-large-padding-vertical-m;
+    }
+
+}
+
+
+/*
+ * XLarge
+ */
+
+.tile-xlarge {
+    padding-top: @tile-xlarge-padding-vertical;
+    padding-bottom: @tile-xlarge-padding-vertical;
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @global-breakpoint-tablet) {
+
+    .tile-xlarge {
+        padding-top: @tile-xlarge-padding-vertical-m;
+        padding-bottom: @tile-xlarge-padding-vertical-m;
+    }
+
+}
+
+
+/* Style modifiers
+ ========================================================================== */
+
+/*
+ * Default
+ */
+
+.tile-default {
+    background: @tile-default-background;
+    .hook-tile-default;
+}
+
+/*
+ * Muted
+ */
+
+.tile-muted {
+    background: @tile-muted-background;
+    .hook-tile-muted;
+}
+
+/*
+ * Primary
+ */
+
+.tile-primary {
+    background: @tile-primary-background;
+    .hook-tile-primary;
+}
+
+// Color Mode
+.tile-primary:not(.preserve-color):extend(.light all) when (@tile-primary-color-mode = light) {}
+.tile-primary:not(.preserve-color):extend(.dark all) when (@tile-primary-color-mode = dark) {}
+
+/*
+ * Secondary
+ */
+
+.tile-secondary {
+    background: @tile-black-background;
+    .hook-tile-secondary;
+}
+
+// Color Mode
+.tile-secondary:not(.preserve-color):extend(.light all) when (@tile-secondary-color-mode = light) {}
+.tile-secondary:not(.preserve-color):extend(.dark all) when (@tile-secondary-color-mode = dark) {}
+
+
+// Hooks
+// ========================================================================
+
+.hook-tile-misc;
+
+.hook-tile() {}
+.hook-tile-default() {}
+.hook-tile-muted() {}
+.hook-tile-primary() {}
+.hook-tile-secondary() {}
+.hook-tile-misc() {}

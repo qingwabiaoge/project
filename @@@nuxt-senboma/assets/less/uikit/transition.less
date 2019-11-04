@@ -1,0 +1,145 @@
+// Name:            Transition
+// Description:     Utilities for transitions
+//
+// Component:       `transition-*`
+//
+// Modifiers:       `transition-fade`
+//                  `transition-scale-up`
+//                  `transition-scale-down`
+//                  `transition-slide-top-*`
+//                  `transition-slide-bottom-*`
+//                  `transition-slide-left-*`
+//                  `transition-slide-right-*`
+//                  `transition-opaque`
+//                  `transition-slow`
+//
+// Sub-objects:     `transition-toggle`,
+//                  `transition-active`
+//
+// States:          `hover`
+//                  `active`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@transition-duration:                           0.3s;
+
+@transition-scale:                              1.1;
+
+@transition-slide-small-translate:              10px;
+@transition-slide-medium-translate:             50px;
+
+@transition-slow-duration:                      0.7s;
+
+
+/* ========================================================================
+   Component: Transition
+ ========================================================================== */
+
+/*
+ * Using multiple selectors to exclude `transition-toggle`
+ * Note: Transitions don't work with `postion-center-*` classes because they also use `transform`
+ *       Just put the transition in an extra `div`
+ */
+
+.transition-fade,
+[class*='transition-scale'],
+[class*='transition-slide'] {
+    transition: @transition-duration ease-out;
+    transition-property: opacity, transform, filter;
+}
+
+.transition-toggle:focus { outline: none; }
+
+/*
+ * Fade
+ */
+
+.transition-fade { opacity: 0; }
+
+/* Show */
+.transition-toggle:hover [class*='transition-fade'],
+.transition-toggle.hover [class*='transition-fade'],
+.transition-toggle:focus [class*='transition-fade'],
+.transition-active.active [class*='transition-fade'] { opacity: 1; }
+
+/*
+ * Scale
+ * Note: Using `scale3d` for better image rendering
+ */
+
+[class*='transition-scale'] { opacity: 0; }
+
+.transition-scale-up { transform: scale3d(1,1,1); }
+
+.transition-scale-down { transform: scale3d(@transition-scale,@transition-scale,1); }
+
+/* Show */
+.transition-toggle:hover .transition-scale-up,
+.transition-toggle.hover .transition-scale-up,
+.transition-toggle:focus .transition-scale-up,
+.transition-active.active .transition-scale-up {
+    opacity: 1;
+    transform: scale3d(@transition-scale,@transition-scale,1);
+}
+
+.transition-toggle:hover .transition-scale-down,
+.transition-toggle.hover .transition-scale-down,
+.transition-toggle:focus .transition-scale-down,
+.transition-active.active .transition-scale-down {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+}
+
+/*
+ * Slide
+ */
+
+[class*='transition-slide'] { opacity: 0; }
+
+.transition-slide-top { transform: translateY(-100%); }
+.transition-slide-bottom { transform: translateY(100%); }
+.transition-slide-left { transform: translateX(-100%); }
+.transition-slide-right { transform: translateX(100%); }
+
+.transition-slide-top-small { transform: translateY(-@transition-slide-small-translate); }
+.transition-slide-bottom-small { transform: translateY(@transition-slide-small-translate); }
+.transition-slide-left-small { transform: translateX(-@transition-slide-small-translate); }
+.transition-slide-right-small { transform: translateX(@transition-slide-small-translate); }
+
+.transition-slide-top-medium { transform: translateY(-@transition-slide-medium-translate); }
+.transition-slide-bottom-medium { transform: translateY(@transition-slide-medium-translate); }
+.transition-slide-left-medium { transform: translateX(-@transition-slide-medium-translate); }
+.transition-slide-right-medium { transform: translateX(@transition-slide-medium-translate); }
+
+/* Show */
+.transition-toggle:hover [class*='transition-slide'],
+.transition-toggle.hover [class*='transition-slide'],
+.transition-toggle:focus [class*='transition-slide'],
+.transition-active.active [class*='transition-slide'] {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+/* Opacity modifier
+========================================================================== */
+
+.transition-opaque { opacity: 1; }
+
+
+/* Duration modifiers
+========================================================================== */
+
+.transition-slow { transition-duration: @transition-slow-duration; }
+
+
+// Hooks
+// ========================================================================
+
+.hook-transition-misc;
+
+.hook-transition-misc() {}

@@ -1,5 +1,5 @@
 
-# [Mongoose基础入门]
+# Mongoose
 
 
 
@@ -456,17 +456,11 @@ mongoose.connect(myUri, {
 });
 ```
 
-
-
-
-
 ### Schema
 
-　　Schema主要用于定义MongoDB中集合Collection里文档document的结构　　
+##### Schema主要用于定义MongoDB中集合Collection里文档document的结构　　
 
-　　定义Schema非常简单，指定字段名和类型即可，支持的类型包括以下8种
-
-
+定义Schema非常简单，指定字段名和类型即可，支持的类型包括以下8种
 
 ```
 String      字符串
@@ -479,11 +473,7 @@ ObjectId    对象ID
 Array       数组
 ```
 
-
-
-　　通过mongoose.Schema来调用Schema，然后使用new方法来创建schema对象
-
-
+通过mongoose.Schema来调用Schema，然后使用new方法来创建schema对象
 
 ```
 var mongoose = require('mongoose');
@@ -503,9 +493,7 @@ var mySchema = new Schema({
 });
 ```
 
-
-
-　　[注意]创建Schema对象时，声明字段类型有两种方法，一种是首字母大写的字段类型，另一种是引号包含的小写字段类型
+[注意]创建Schema对象时，声明字段类型有两种方法，一种是首字母大写的字段类型，另一种是引号包含的小写字段类型
 
 ```
 var mySchema = new Schema({title:String, author:String});
@@ -513,7 +501,7 @@ var mySchema = new Schema({title:String, author:String});
 var mySchema = new Schema({title:'string', author:'string'});
 ```
 
-　　如果需要在Schema定义后添加其他字段，可以使用add()方法
+如果需要在Schema定义后添加其他字段，可以使用add()方法
 
 ```
 var MySchema = new Schema;
@@ -538,6 +526,8 @@ var UserSchema = new Schema(
 
 
 ##### 文档验证
+
+###### 作用
 
 　　为什么需要文档验证呢？以一个例子作为说明，schema进行如下定义
 
@@ -583,9 +573,7 @@ new temp({age:true,name:10}).save(function(err,doc){
 {name: {type:String, validator:value}}
 ```
 
-　　常用验证包括以下几种
-
-
+###### 常用验证包括以下几种
 
 ```
 required: 数据必须填写
@@ -598,9 +586,7 @@ match: 正则匹配(只适用于字符串)
 enum:  枚举匹配(只适用于字符串)
 ```
 
-
-
-###### required
+* required
 
 　　将age设置为必填字段，如果没有age字段，文档将不被保存，且出现错误提示
 
@@ -615,9 +601,7 @@ new temp({name:"abc"}).save(function(err,doc){
 }); 
 ```
 
-
-
-###### default
+* default
 
 　　设置age字段的默认值为18，如果不设置age字段，则会取默认值
 
@@ -634,7 +618,7 @@ new temp({name:'a'}).save(function(err,doc){
 
 
 
-###### min | max
+* min | max
 
 　　将age的取值范围设置为[0,10]。如果age取值为20，文档将不被保存，且出现错误提示
 
@@ -651,7 +635,7 @@ new temp({age:20}).save(function(err,doc){
 
 
 
-###### match
+* match
 
 　　将name的match设置为必须存在'a'字符。如果name不存在'a'，文档将不被保存，且出现错误提示
 
@@ -668,7 +652,7 @@ new temp({name:'bbb'}).save(function(err,doc){
 
 
 
-###### enum
+* enum
 
 　　将name的枚举取值设置为['a','b','c']，如果name不在枚举范围内取值，文档将不被保存，且出现错误提示
 
@@ -686,11 +670,9 @@ new temp({name:'bbb'}).save(function(err,doc){
 
 
 
-###### validate
+* validate
 
 　　validate实际上是一个函数，函数的参数代表当前字段，返回true表示通过验证，返回false表示未通过验证。利用validate可以自定义任何条件。比如，定义名字name的长度必须在4个字符以上
-
-
 
 ```
 var validateLength = function(arg){
@@ -706,10 +688,6 @@ new temp({name:'abc'}).save(function(err,doc){
     console.log(err.errors['name'].message);
 }); 
 ```
-
-
-
- 
 
 ##### 前后钩子
 
@@ -760,6 +738,27 @@ temp.find(function(err,docs){
 我是pre方法2
 { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 }
 */
+```
+
+见树形目录实例
+
+```js
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema
+const schmema = new Schema({
+
+    title: String,
+    parent: [{type: Schema.Types.ObjectId, ref: 'Category'}],
+    children: [{type: Schema.Types.ObjectId, ref: 'Category'}]
+})
+
+schmema.pre('find', function (next) {
+    this.populate('children')
+    next()
+})
+const Category = mongoose.model('Category', schmema)
+module.exports = Category
 ```
 
 
@@ -2086,7 +2085,209 @@ temp.find(function(err,docs){
 
 ### 一对一
 
+例：夫妻
 
+```
+db.WifeAndHusband.insert([
+   {
+       name:"黄蓉",husband:{name:"郭靖"}
+       },
+   {
+       name:"潘金莲",husband:{name:"武大郎"}
+       },
+])
+db.WifeAndHusband.find()
+```
+
+###  一对多关系建模
+
+非常多刚从传统SQL开发转向MongoDB开发的朋友都会问到一个问题：怎样用MongoDB表达传统关系数据库中的一对多（1 to n）关系？
+
+基于MongoDB丰富的表达力，我们不能说我们必须採用一个标准的方法来进行1 to n的建模。
+
+稍后我们从3个详细场景来展开解说。
+
+首先。我们将1 to n中的n进行场景细化。这个n到底代表多大的量级呢？是几个到几十个？还是几个到几千个？还是成千上万个？
+
+##### 1） 1 to n（n代表好几个。或几十个，反正不太多）
+
+比方每一个Person会有多个Address。此种情况下，我们採用最简单的嵌入式文档来建模。
+
+```
+{
+  name: 'Kate Monster',
+  id: '123-456-7890',
+  addresses : [
+     { street: '123 Sesame St', city: 'Anytown', cc: 'USA' },
+     { street: '123 Avenue Q', city: 'New York', cc: 'USA' }
+  ]
+}
+```
+
+这样的建模的方式包括了显而易见的长处和缺点：
+
+长处：你不须要运行单独的查询就能够获得某个Person的全部Address信息。
+
+缺点：你无法像操作独立文档那样来操作Address信息。
+
+你必须首先操作（比方查询）Person文档后，才有可能继续操作Address。
+
+在本实例中，我们不须要对Address进行独立的操作。且Address信息仅仅有在关联到某一个详细Person后才有意义。所以结论是：採用这样的embedded（嵌入式）建模是很适合Person-Address场景的。
+
+##### 2）1 to n（n代表好些个，比方几十个。甚至几百个）
+
+###### 例1
+
+比方产品（Product）和零部件（part），每一个产品会有非常多个零部件。这样的场景下，我们能够採用引用方式来建模，例如以下：
+
+零部件（Part）：
+
+```
+{
+
+   _id : ObjectID('AAAA'),
+
+   partno : '123-aff-456',
+
+   name : '#4 grommet',
+
+  qty: 94,
+
+  cost: 0.94,
+
+  price: 3.99
+
+}
+
+ 
+```
+
+产品（Product）：
+
+```
+{
+    name : 'left-handed smoke shifter',
+    manufacturer : 'Acme Corp',
+    catalog_number: 1234,
+    parts : [     // array of references to Part documents
+        ObjectID('AAAA'),    // reference to the #4 grommet above
+        ObjectID('F17C'),    // reference to a different Part
+        ObjectID('D2AA'),
+        // etc
+    ]
+}
+```
+
+
+
+首先每一个part作为单独的文档存在。每一个产品中包括一个数组类型字段（parts），这个数组中存放的是全部该产品包括的零部件的编号（_id主键）。当你须要依据某一个产品编号查询该产品包括的全部部件信息时。你能够运行下面操作：
+
+
+
+```
+ product = db.products.findOne({catalog_number: 1234});
+   // Fetch all the Parts that are linked to this Product
+ product_parts = db.parts.find({_id: { $in : product.parts } } ).toArray() ;
+```
+
+这样的建模方式的优缺点也很明显：
+
+###### 例2： 用户-订单 文章-评论
+
+```
+db.users.insert([
+   {username:"swk"},{username:"zbj"}
+])
+db.order.insert({
+    list:["漫画","肉"],
+    user_id:ObjectId("5d48ef25c57dfb3261f4086c")
+})
+db.order.find()
+12345678
+```
+
+查找用户swk订单， 修改username 即可查询不同订单
+
+```
+var user_id = db.users.findOne({username:"zbj"})._id
+user_id
+db.order.find({user_id:user_id})
+```
+
+###### 缺点优点
+
+长处：部件是作为独立文档（document）存在的，你能够对某一部件进行独立的操作。比方查询或更新。
+
+缺点：如上，你必须通过两次查询才干找到某一个产品所属的全部部件信息。
+
+
+
+在本例中。这个缺点是能够接受的。本身实现起来也不难。并且，通过这样的建模，你能够轻易的将1 to n扩展到n to n。即一个产品能够包括多个部件，同一时候一个部件也能够被多个产品所引用（即同一部件能够被多个产品使用）。
+
+
+
+##### 3）1 to n（这个n代表非常大的数值，比方成千上万。甚至更大）
+
+比方。每个主机（host）会产生非常大数量的日志信息（logmsg）。
+
+在这样的情况下，假设你採用嵌入式建模，则一个host文档会非常庞大，从而轻易超过MongoDB的文档限制大小。所以不可行。假设你採用第二中方式建模，用数组来存放全部logmsg的_id值，这样的方式相同不可行。由于当日志非常多时，即使单单引用objectId也会轻易超过文档限制大小。所以此时，我们採用下面方式：
+
+
+
+```
+{
+    _id : ObjectID('AAAB'),
+    name : 'goofy.example.com',
+    ipaddr : '127.66.66.66'
+}
+ 
+```
+
+我们在logsmg中，存放对host的_id引用就可以。
+
+```
+{
+    time : ISODate("2014-03-28T09:42:41.382Z"),
+    message : 'cpu is on fire!',
+    host: ObjectID('AAAB')       // Reference to the Host document
+}
+```
+
+综上所述，在对1 to n关系建模时，我们须要考虑：
+
+1）n代表的数量级非常小。且n代表的实体不须要单独操作时，能够採用嵌入式建模。
+
+2）n代表的数量级比較大。或者n代表的实体须要单独进行操作时，採用在1中用Array存放引用的方式建模。
+
+3）n代表的数量级很大时，我们没有选择。仅仅能在n端加入一个引用到1端。
+
+### 多对多
+
+例：分类-商品，老师-学生*/
+
+```
+db.students.find()
+db.teachers.insert([
+    {name:"洪七公"},
+    {name:"黄药师"},
+    {name:"龟仙人"}
+]);
+db.students.insert([
+    {name:"郭靖",
+     teach_ids:[ObjectId("5d48f250c57dfb3261f40870"),ObjectId("5d48f250c57dfb3261f40871")]
+    }
+])
+db.students.insert([
+    {name:"孙悟空",
+     teach_ids:[ObjectId("5d48f250c57dfb3261f40870"),ObjectId("5d48f250c57dfb3261f40871"),ObjectId("5d48f250c57dfb3261f40872")]
+    }
+])
+12345678910111213141516
+```
+
+### 树型结构
+
+见实例tree
 
 # stuido 3t
 
@@ -2118,7 +2319,7 @@ temp.find(function(err,docs){
 
 ##### 忘记写await
 
-### ![1569377483274](img/1569377483274.png)
+![1569377483274](img/1569377483274.png)
 
 ![1569374563937](img/1569374563937.png)
 
