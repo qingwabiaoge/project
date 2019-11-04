@@ -523,6 +523,26 @@ var UserSchema = new Schema(
 
 　　每一个文档document都会被mongoose添加一个不重复的_id，_id的数据类型不是字符串，而是ObjectID类型。如果在查询语句中要使用_id，则需要使用findById语句，而不能使用find或findOne语句
 
+##### shortid
+
+```
+const mongoose = require('mongoose')
+var Schema = mongoose.Schema;
+const shortid = require('shortid')
+// shortid.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@');
+const schema = new Schema({
+
+    _id: {
+        type: String,
+
+        'default': shortid.generate
+    }
+
+})
+const Girl=mongoose.model('Girl',schema)
+module.exports=Girl
+```
+
 
 
 ##### 文档验证
@@ -814,8 +834,6 @@ var MyModel = mongoose.model('MyModel', schema);
 ##### 实例化文档document
 
 　　通过对原型Model1使用new方法，实例化出文档document对象
-
-
 
 ```
 var mongoose = require('mongoose');
@@ -1411,7 +1429,9 @@ temp.find({$where:function(){
 
 
 
-### 文档联表查询
+### populate文档联表查询
+
+##### 实例1
 
 　　下面以一个实例的形式来介绍下mongoose中的联表操作population
 
@@ -1565,7 +1585,91 @@ fnRelatedCategory = _id => {
 ...
 ```
 
+##### 实例2:在Mongoose中使用嵌套的populate处理数据
 
+　　假设有如下mongodb的schema定义：
+
+
+
+```
+drawApply = new Schema({
+    salesId: { type: Schema.ObjectId, ref: 'sales' },
+    money: Number,
+    status: { type: Number, default: 0 },
+    createTime: { type: Date, default: Date.now }
+});
+
+sales = new Schema({
+    name: { type: String, required: true, unique: true },
+    pwd: String,
+    phone: String,
+    merchant: { type: Schema.ObjectId, ref: 'merchant' },
+    status: { type: Number, default: 0 }
+});
+
+merchant = new Schema({
+    name: String,
+    sname: String,
+    type: String
+});
+```
+
+
+
+　　表drawApply的salesId属性指定表sales的_id，表sales的属性merchant指定表merchant的_id。这是一种嵌套级联的关系。
+
+　　查找drawApply表的数据，并同时返回对应的sales表的数据，可以使用下面的方法：
+
+```
+drawApply.find().populate('salesId', '_id name phone merchant').sort({createTime: -1}).exec(function(err, list) {
+  // list of drawApplies with salesIds populated
+});
+```
+
+　　返回的结果中除了drawApply表的数据外，还会包含salesId中_id，name，phone，merchant四个属性的值。但是merchant属性的值是以**ObjectId**的形式显示的，如果想知道对应的merchant其它属性的值，则需要使用到嵌套的**populate**。代码如下：
+
+
+
+```
+drawApply.find().populate({
+    path: 'salesId',
+    select: '_id name phone merchant',
+    model: 'sales',
+    populate: {
+        path: 'merchant',
+        select: '_id sname',
+        model: 'merchant'
+    }}).sort({createTime: -1}).exec(function(err, list) {
+  // list of drawApplies with salesIds populated and merchant populated
+});
+```
+
+
+
+　　如果drawApply表中还存在其它**ObjectId**类型的字段，则可以在**populate**方法后面继续跟其它的**populate**，使用方法相同，如：
+
+
+
+```
+drawApply.find().populate({
+    path: 'salesId',
+    select: '_id name phone merchant',
+    model: 'sales',
+    populate: {
+        path: 'merchant',
+        select: '_id sname',
+        model: 'merchant'
+    }})
+    .populate('approver', 'name')
+    .populate('operator', 'name')
+    .sort({createTime: -1}).exec(function(err, list) {
+  // list of drawApplies with salesIds populated and merchant populated
+});
+```
+
+
+
+　　有关**populate**的具体用法可以参考**mongoose**的官方文档http://mongoosejs.com/docs/populate.html#deep-populate
 
  
 
@@ -1573,18 +1677,12 @@ fnRelatedCategory = _id => {
 
 　　常用的查询后处理的方法如下所示
 
-
-
 ```
 sort     排序skip     跳过
 limit    限制
 select   显示字段
 exect    执行count    计数distinct 去重
 ```
-
-
-
-
 
 ```
 var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
