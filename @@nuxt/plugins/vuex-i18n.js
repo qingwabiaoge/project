@@ -1,7 +1,8 @@
 import Vue from 'vue'
 
 const vuexI18n = require('vuex-i18n/dist/vuex-i18n.umd.js')
-const {lang} = require('@/nuxt.config')
+import {lang} from'@/config.js'
+
 
 //修改app.sore
 export default ({store}) => {

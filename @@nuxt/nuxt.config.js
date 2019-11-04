@@ -12,12 +12,16 @@ module.exports = {
     env: {
         // HOST: process.env.HOST,
         //下方别忘了修改数据库地址+中英文配置!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        HOST: '127.0.0.1',
-        // HOST: '47.107.170.105',
+        //HOST: '127.0.0.1',
+         HOST: '47.107.170.105',
         // HOST: 'www.bonniena.com',
         PORT: 3001,
     },
-    lang: 'zh',//'en'
+
+
+    //
+    lang: 'en',//'en'
+
     mode: 'universal',
     router: {
         linkActiveClass: 'active',//当前流和上级栏目

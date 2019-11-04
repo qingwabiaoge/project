@@ -1,90 +1,98 @@
 <template>
-  <div v-if="data.show">
-    <div :class="$style['pictext']">
-      <el-row>
+<!--    v-if不能放到最外层目录会和mixin里的this.$style冲突-->
+    <div>
+        <div :class="$style['pictext']" v-if="data.show">
+            <el-row>
 
-        <el-col :md="12" :xs="24">
-          <img v-lazy="data.image" alt="title">
+                <el-col :md="12" :xs="24">
+                    <img v-lazy="data.image" alt="title">
 
-        </el-col>
+                </el-col>
 
-        <el-col :md="{span:8 ,offset:2}" :xs="{span:24 ,offset:0}">
-          <section>
-            <h3>{{data.subtitle}}</h3>
-            <h2>
-              {{data.title}}
-            </h2>
-            <div></div>
-            <h3 class="hidden-md-and-down">
-              {{data.info}}
-            </h3>
-            <p>
-              {{data.description|setLength(50)}}...
-            </p>
-            <nuxt-link :to="data.href">
-              <span></span>
-              <base-button>
+                <el-col :md="{span:8 ,offset:2}" :xs="{span:24 ,offset:0}">
+                    <section>
+                        <h3>{{data.subtitle}}</h3>
+                        <h2>
+                            {{data.title}}
+                        </h2>
+                        <div></div>
+                        <h3 class="hidden-md-and-down">
+                            {{data.info}}
+                        </h3>
+                        <p>
+                            {{data.description|setLength(50)}}...
+                        </p>
+                        <nuxt-link :to="data.href">
+                            <span></span>
+                            <base-button>
 
-                {{data.button}}
+                                {{data.button}}
 
-              </base-button>
-            </nuxt-link>
-          </section>
+                            </base-button>
+                        </nuxt-link>
+                    </section>
 
-        </el-col>
+                </el-col>
 
-      </el-row>
+            </el-row>
 
+
+        </div>
 
     </div>
-
-  </div>
 </template>
 
 <script>
-  import mixin from '@/mixins/conponent-mixin'
-export default {
-    name:'pictext1',
-    mixins:[mixin],}
+    import mixin from '@/mixins/conponent-mixin'
+
+    export default {
+        name: 'pictext1',
+        mixins: [mixin],
+
+    }
 </script>
 
 <style lang="less" module>
-  .pictext {
-    background: #f1f1f1;
-    img{object-fit: cover}
-    section {
-      padding: 70px 0;
+    .pictext {
+        background: #f1f1f1;
 
-      > * {
-        text-transform: uppercase;
-      }
+        img {
+            object-fit: cover
+        }
 
-      h2 {
-        font-size: 94px;
-        margin-top: 0;
-        font-family: Arial;
-        font-weight: bolder;
-        color: @global-color-primary;
-      }
+        section {
+            padding: 70px 0;
 
-      div {
-        margin-top: 10px;
-        height: 3px;
-        width: 30%;
-        background: @global-color-primary;
-      }
+            > * {
+                text-transform: uppercase;
+            }
 
-      h3 {
-        font-size: 42px;
-      }
+            h2 {
+                font-size: 94px;
+                margin-top: 0;
+                font-family: Arial;
+                font-weight: bolder;
+                color: @global-color-primary;
+            }
 
-      p {
-        font-size: 16px;
-        line-height: 2;
+            div {
+                margin-top: 10px;
+                height: 3px;
+                width: 30%;
+                background: @global-color-primary;
+            }
 
-      }
+            h3 {
+                font-size: 42px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 2;
+
+            }
+
+        }
 
     }
-
-  }
 </style>

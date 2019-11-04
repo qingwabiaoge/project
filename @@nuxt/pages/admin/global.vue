@@ -2,7 +2,7 @@
   <div>
     <el-breadcrumb separator=">" style="margin-bottom: 20px">
       <el-breadcrumb-item>首页</el-breadcrumb-item>
-      <el-breadcrumb-item>网站配置</el-breadcrumb-item>
+      <el-breadcrumb-item>网站配置1</el-breadcrumb-item>
     </el-breadcrumb>
 
     <el-button type="primary" @click="get">编辑全局信息</el-button>

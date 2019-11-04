@@ -13,85 +13,94 @@ const href = "/"
 
 const test = {
 
-  button: "more+",
-  subtitle,
-  description,
-  title,
-  info,
-  href,
-  image: image1,
-  icon,
-  map,
-  content,
-  background,
-  bg: '#fff'
-  ,
-  children:
-    [
-      {
-        button: "more+",
-        subtitle,
-        description,
-        title,
-        info,
-        href,
-        image: image1,
-        icon,
-        map,
-        content,
-        background,
-        bg: '#fff'
+    button: "more+",
+    subtitle,
+    description,
+    title,
+    info,
+    href,
+    image: image1,
+    icon,
+    map,
+    content,
+    background,
+    bg: '#fff'
+    ,
+    children:
+        [
+            {
+                button: "more+",
+                subtitle,
+                description,
+                title,
+                info,
+                href,
+                image: image1,
+                icon,
+                map,
+                content,
+                background,
+                bg: '#fff'
 
-      },
-      {
-        button: "more+",
-        subtitle,
-        description,
-        title,
-        info,
-        href,
-        image: image2,
-        icon,
-        map,
-        content,
-        background,
-        bg: '#fff'
+            },
+            {
+                button: "more+",
+                subtitle,
+                description,
+                title,
+                info,
+                href,
+                image: image2,
+                icon,
+                map,
+                content,
+                background,
+                bg: '#fff'
 
-      },
-      {
-        button: "more+",
-        subtitle,
-        description,
-        title,
-        info,
-        href,
-        image: image3,
-        icon,
-        map,
-        content,
-        background,
-        bg: '#fff'
+            },
+            {
+                button: "more+",
+                subtitle,
+                description,
+                title,
+                info,
+                href,
+                image: image3,
+                icon,
+                map,
+                content,
+                background,
+                bg: '#fff'
 
-      }
-    ]
+            }
+        ]
 }
 
 
 //把mixin挂载在vue实例
 export default {
-  props: {data: {type: [Object, Array], default(){return test}}, inverse: Boolean},
+    props: {
+        data: {
+            type: [Object, Array], default() {
+                return test
+            }
+        }, inverse: Boolean
+    },
 
-  mounted() {
-    //设置背景
-    if (this.$el && this.data) {
-      console.log(this.$el)
-     // this.$el.style.background = `${this.data.bg} url(${this.data.background}) 0% 0% / cover  fixed`
-      /*   if (!this.data.fullpage&&this.data.type==="component") {
+    mounted() {
+        //设置背景
+        if (this.$el.style) {
 
-           this.$el.className += " container"
-         }*/
+            // console.log(this.data.background)
+            //${this.data.bg?this.data.bg:''}这里三目很重要 不写css样式会失效
+            this.$el.style.background = `${this.data.bg?this.data.bg:''} url(${this.data.background}) 0% 0% / cover  fixed`
+
+            /*   if (!this.data.fullpage&&this.data.type==="component") {
+
+                 this.$el.className += " container"
+               }*/
+        }
     }
-  }
 
 }
 

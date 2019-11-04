@@ -1,0 +1,32 @@
+<style>
+    a:link {
+        /*未访问过*/
+        color: #000;
+    }
+    a:visited{
+        /*访问过的*/
+        color: #999;
+    }
+    *.active,
+    *:hover, /*当链接被聚焦时*/
+    *:focus {
+        color: red;
+        outline: 5px auto yellow;
+        border-bottom: #0ba3de 4px solid;
+        box-shadow: 0px 5px 15px rgba(3,3,3,1)
+    }
+
+
+
+</style>
+<a href="#">####</a> <a href="#a">#####</a>
+<a class="active" href="/">active</a>
+
+<br><br>
+<form id="a">
+
+    <input value="abcde"/>
+
+</form>
+
+

@@ -8,7 +8,7 @@
         <el-button-group :class="$style['button-group']">
 
           <el-button v-for="item in components.produce.children" :key="item.title" plain>
-            <nuxt-link :to="item.href">
+            <nuxt-link :to="`/produce/${item.name}?page=1`">
               {{item.title}}
             </nuxt-link>
 

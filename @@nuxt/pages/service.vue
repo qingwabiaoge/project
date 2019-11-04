@@ -2,9 +2,9 @@
   <div>
 
 
-    <title-zh-english :data="components.service">
+<!--    <title-zh-english :data="components.service">-->
 
-    </title-zh-english>
+<!--    </title-zh-english>-->
     <!--  <div class="text-center">
         <h3 class="hover-underline hover-underline-center  display-inline-block text-uppercase"
             style="font-size: 78px; line-height:1.5;margin-top: 60px; margin-bottom:60px ">

@@ -1,0 +1,46 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<!--
+.btn是一个类
+
+.btn:hover算另外一个类 叫**伪类**
+| 事件                    | 操作类                      | transition          |
+| ----------------------- | --------------------------- | ------------------- |
+| css的hover事件,         | dom添加了一个伪类.btn:hover | transition: all 1s; |
+| mousehover事件添加class | dom添加了一个类.rotate      | --                  |
+| 取消css的hover事件,     | dom减少了一个伪类.btn:hover | --                  |
+| mouseleave时间          | dom减少了一个类.rotate      | --                  |
+
+-->
+
+<div id="app">
+
+  <button class="btn">button</button>
+
+  <button
+    @mouseover="isRotate=true"
+    @mouseleave="isRotate=false"
+    :class="{rotate:isRotate}">button
+  </button>
+
+
+</div>
+
+<script>
+  new Vue({data: {isRotate: false}}).$mount('#app')
+
+</script>
+<style>
+  .btn {
+    background: red
+  }
+
+  .rotate, .btn:hover {
+    transform: rotate(90deg)
+  }
+
+  button {
+    transition: all 1s;
+  }
+
+</style>

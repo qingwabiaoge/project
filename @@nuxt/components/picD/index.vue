@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="data.href||`${$route.path}/detail/${data._id}`||'#'" class="inverse-wrap" :class="$style['picD']">
+  <nuxt-link :to="data.href||`/produce/detail/${data._id}`||'#'" class="inverse-wrap" :class="$style['picD']">
     <div>
 
       <section>

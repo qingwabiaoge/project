@@ -141,7 +141,6 @@ table {
   /* Firefox */
   -webkit-box-sizing: border-box;
   /* Safari */
-  transition: all 0.5s;
 }
 *.active,
 *:hover,

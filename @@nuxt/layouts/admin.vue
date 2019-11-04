@@ -57,7 +57,7 @@
 
             <el-menu-item index="/admin/message">
               <i class="el-icon-phone"></i>
-              <span slot="title">  留言</span>
+              <span slot="title">留言</span>
             </el-menu-item>
 
             <el-menu-item index="/admin/global">
