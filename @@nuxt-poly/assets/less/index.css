@@ -145,7 +145,7 @@ table {
 *.active,
 *:hover,
 *:focus {
-  outline: #fb00c9;
+  outline: #FE1D01;
 }
 html {
   font-size: 10px;
@@ -261,7 +261,7 @@ a,
 a:hover,
 .link:hover,
 a.active {
-  color: #fb00c9;
+  color: #FE1D01;
   text-decoration: none;
 }
 p {
@@ -345,7 +345,7 @@ strong {
   color: #333;
 }
 em {
-  color: #fb00c9;
+  color: #FE1D01;
 }
 ins {
   background: #ffd;
@@ -449,12 +449,12 @@ sub {
   background-color: #f5f5f5;
 }
 ::-moz-selection {
-  background: #fb00c9;
+  background: #FE1D01;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #fb00c9;
+  background: #FE1D01;
   color: #fff;
   text-shadow: none;
 }
@@ -534,5 +534,31 @@ sub {
   .hidden-xl-only {
     display: none !important;
   }
+}
+.el-dialog {
+  width: auto;
+  display: inline-block;
+}
+.el-dialog__wrapper {
+  text-align: center;
+}
+.infinite-list {
+  padding: 10px;
+}
+.infinite-list .el-card {
+  margin-top: 20px;
+}
+.infinite-list p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 5px;
+}
+.infinite-list * + p {
+  margin-top: 0;
+}
+.el-drawer {
+  width: 50% !important;
 }
 /*# sourceMappingURL=index.css.map */

@@ -61,8 +61,6 @@ module.exports = {
 // 微信商户
         mchid: 1499761962, //一定要数字
         apikey: '12313131adadsfdasdfDDFEWWWEEE111',
-
-        articlePageSize: 15
     },
     /*
     ** Headers of the page
@@ -103,6 +101,7 @@ module.exports = {
     */
     plugins: [
         '~/plugins/element-ui',
+        //'~/plugins/global-styles',
         //'~/plugins/swiper.client.js',
         '~/plugins/lei-ui',
         '~/plugins/vue-lazyload',
@@ -140,6 +139,7 @@ module.exports = {
     /*
     ** Build configuration
     */
+    //输出配置================================================
     build: {
 
         transpile: [/^element-ui/],
@@ -161,13 +161,13 @@ module.exports = {
         },
 
         /*
-        ** You can extend webpack config here
+        ** 防止重复打包
         */
         vendor: ['element-ui', '~/plugins/lei-ui', 'vue-lazyload'],
         extend(config, ctx) {
             // 为 客户端打包 进行扩展配置
             if (ctx.isClient) {
-                console.log("打包时间使用");
+                console.log("打包时的钩子");
 
             }
         }

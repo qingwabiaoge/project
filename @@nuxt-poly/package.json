@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "set NODE_ENV=production&&nodemon server/index.js",
     "pm2": "cross-env NODE_ENV=production pm2 start pm2.json --watch server",
-    "generate": "nuxt generate"
+    "g": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",

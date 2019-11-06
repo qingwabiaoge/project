@@ -93,8 +93,8 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ###### indexOf
 
 ```
-1. arr.indexOf(1)  //从前往后数第一个1的索引
-2. arr.lastindexOf(1’) //从后往前数第一个1的索引
+1. arr.indexOf(1)  //从前往后数第一个值为1的索引
+2. arr.lastindexOf(1’) //从后往前数第一个值为1的索引
 3. arr.indexOf({a: 10}) //无法使用,返回-1
 ```
 
@@ -138,6 +138,15 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
  Array.protype.filter((item,index,self) => {})
 ```
 
+数组去重
+
+```
+const arr=["apple","banner","pear","banner","aaa"]
+arr = arr.filter((item,index,self)=>{
+       return self.indexOf(item) === index
+      })
+```
+
 ###### forEach对每一项操作
 
 ```
@@ -149,15 +158,15 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ```
 3. arr.find(function(item, index, self) { return item>1 }) //查找第一个值
 ```
-###### findindex搜索第一个索引
+###### findindex搜索第一个符合条件的索引
 ```
 4. arr.findindex(function(item, index, self) { return item > 9 }) //查找第一个索引
 ```
 
-例
+ 已知id：2 可以删除{id:2,b:2}
 
 ```
-arr=[{a:1,id:1},{b:2,id:2}]    已知id：2 可以删除{b:2,id:2}吗?
+arr=[{a:1,id:1},{b:2,id:2}]   
 ------------------------
 arr=[{a:1,id:1},{b:2,id:2},{b:2,id:3}]
  const index =arr.findIndex((item,index,arr)=>{return item.id===3})
@@ -170,8 +179,7 @@ arr=[{a:1,id:1},{b:2,id:2},{b:2,id:3}]
 ```
 ###### reverse反转
 ```
-
- Array.protype.reverse()//反转
+Array.protype.reverse()//反转
 ```
 
 ###### reduce

@@ -4,12 +4,10 @@
 @import "base";
 //@import "uikit/_import";
 //@import "swiper.less";
-
 //体积很小分包加载animition.css
 //@import "animition.css/index";
 //
 //@import "elementDisplay.less";
-
 //响应式布局
 //@import "bootstrap-mini/_bootstrap";
 @import "container";
@@ -20,7 +18,6 @@
 //@import "vue.transition.less";
 //材草堆背景
 //@import "stack";
-
 //@import "vertical-align";
 @import "elementDisplay";
 //@import "iconfont";
@@ -28,5 +25,37 @@
 //@import "article";
 
 
+//additional
+.el-dialog {
+  width: auto;
+  display: inline-block;
+  &__wrapper {
+    text-align: center;
+  }
+}
 
 
+
+.infinite-list {
+  padding: 10px;
+  .el-card {
+    margin-top: 20px;
+  }
+
+  p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 5px;
+
+  }
+
+  * + p {
+    margin-top: 0;
+  }
+}
+
+.el-drawer {
+  width: 50% !important;
+}

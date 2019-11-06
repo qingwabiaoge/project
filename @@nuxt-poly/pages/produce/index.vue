@@ -1,22 +1,32 @@
 <template>
-    <el-row :gutter="20"
-            :class="$style.list"
-            class="infinite-list"
-            v-infinite-scroll="load"
-            style="overflow:auto;"
-            :style="{height:height+'px' }">
+    <div>
+        <el-row :gutter="20"
 
-        <el-col :md="6" :lg="4" v-for="item of list" :key="item.img"  class="infinite-list-item" :class="$style.card">
-            <el-card :body-style="{ padding: '0px' }">
-                <img v-lazy="item.img"
-                     class="image">
-                <div style="padding: 14px;">
-                    <span>{{item.title}}</span>
-                </div>
-            </el-card>
+                class="infinite-list"
+                v-infinite-scroll="load"
+                style="overflow:auto;"
+                :style="{height:height+'px' }">
 
-        </el-col>
-    </el-row>
+            <el-col :md="4" :lg="3" v-for="item of list" :key="item.img" class="infinite-list-item">
+                <el-card :body-style="{ padding: '0px' }">
+                    <img v-lazy="item.img"
+                         @click="dialogVisible=true; dialogTitle=item.title; dialogImg=item.img"
+                         class="image">
+                    <p :title="item.title">
+                        <span>{{item.title}}</span>
+                    </p>
+                </el-card>
+
+            </el-col>
+        </el-row>
+        <el-dialog
+                :title="dialogTitle"
+                :visible.sync="dialogVisible"
+                center>
+            <img :src="dialogImg" alt="">
+
+        </el-dialog>
+    </div>
 </template>
 
 <script>
@@ -24,9 +34,11 @@
         data() {
             return {
                 count: 0,
-                total: 11,
+                total: 4,
                 height: 0,
-
+                dialogVisible: false,
+                dialogTitle: '',
+                dialogImg: ''
             }
         },
         methods: {
@@ -50,22 +62,9 @@
                     return str2
                 }
 
-                return arr.map(item => ({img: r(item), title:getFileName(item)}))
+                return arr.map(item => ({img: r(item), title: getFileName(item)}))
 
             }
         }
     }
 </script>
-<style module lang="less" >
-    .list {
-        .card {
-            margin-top: 20px
-        }
-
-        img {
-            width: 100%;
-
-        }
-    }
-
-</style>

@@ -1,6 +1,6 @@
 # 构造函数建立实例
 
-```
+```js
 var re = new RegExp('hello','g');   //代替/hello/g
 ```
 

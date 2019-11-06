@@ -1,5 +1,5 @@
 const qs = require("querystring");
-export const state = () => ({})
+export const state = () => ({primary:'#0f0'})
 
 export const actions = {
     //第一个参数为store的ctx,第二个参数为nuxt的ctx

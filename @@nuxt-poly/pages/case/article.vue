@@ -1,7 +1,7 @@
 <template>
 <el-row class="infinite-list" style="padding: 30px 5px">
  <el-col :md="6">
-<h3>浙江瑞欣船舶客户案例</h3>
+<h3>船舶客户案例</h3>
 <pre>
 江阴澄西船舶修造有限公司
 3.5万吨散货船3条

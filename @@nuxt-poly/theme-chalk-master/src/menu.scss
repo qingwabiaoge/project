@@ -7,7 +7,7 @@
   height: 56px;
   line-height: 56px;
   font-size: $--menu-item-font-size;
-  color: $--menu-item-color;
+  color: $--menu-item-font-color;
   padding: 0 20px;
   list-style: none;
   cursor: pointer;
@@ -38,12 +38,12 @@
 }
 
 @include b(menu) {
-  //border-right: solid 1px #e6e6e6;
+  border-right: solid 1px #e6e6e6;
   list-style: none;
   position: relative;
   margin: 0;
   padding-left: 0;
-  background-color: $--menu-item-fill;
+  background-color: $--menu-background-color;
   @include utils-clearfix;
   &.el-menu--horizontal {
     border-bottom: solid 1px #e6e6e6;
@@ -214,7 +214,7 @@
     }
   }
 }
-
+  
 @include b(submenu) {
   list-style: none;
   margin: 0;

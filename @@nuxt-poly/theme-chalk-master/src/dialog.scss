@@ -6,11 +6,11 @@
 @include b(dialog) {
   position: relative;
   margin: 0 auto 50px;
-  background: $--color-white;
+  background: $--dialog-background-color;
   border-radius: $--border-radius-small;
   box-shadow: $--dialog-box-shadow;
   box-sizing: border-box;
-  width: 50%;
+  //width: 50%;
 
   @include when(fullscreen) {
     width: 100%;
@@ -58,15 +58,16 @@
   }
 
   @include e(title) {
-    line-height: $--dialog-line-height;
+    line-height: $--dialog-font-line-height;
     font-size: $--dialog-title-font-size;
     color: $--color-text-primary;
   }
 
   @include e(body) {
-    padding: 30px 20px;
+    padding: ($--dialog-padding-primary + 10px) $--dialog-padding-primary;
     color: $--color-text-regular;
-    font-size: $--dialog-font-size;
+    font-size: $--dialog-content-font-size;
+    word-break: break-all;
   }
 
   @include e(footer) {

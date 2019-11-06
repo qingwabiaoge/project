@@ -90,20 +90,22 @@ module.exports = {
     /*
     ** Customize the progress-bar color
     */
-    loading: {color: '#FB00C9'},
+    loading: {color: '#FA4F3C'},
     // loading: '~/loading/',
     /*
     ** Global CSS
     */
-    css: ['element-ui/lib/theme-chalk/index.css',
-       '~/assets/less/index.css'
+    css: [
+        // '~/theme-chalk-master/theme/index.css',
+        // 'element-ui/lib/theme-chalk/index.css',
+        '~/assets/less/index.css'
     ],
 
     /*
     ** Plugins to load before mounting the App
     */
     plugins: [
-        '~/plugins/element-all',
+        '~/plugins/element-ui.js',
         //'~/plugins/swiper.client.js',
         //'~/plugins/lei-ui',
         '~/plugins/vue-lazyload',
@@ -143,18 +145,16 @@ module.exports = {
     */
     build: {
 
-        /*
                 transpile: [/^element-ui/],
                 babel: {
                     "plugins": [["component",
                         {
                             "libraryName": "element-ui",
-                            "styleLibraryName": "~theme-chalk-master/lib" //默认css分散包,按需加载,~theme"为element et sass生成工具的目录
+                            "styleLibraryName": "~theme-chalk-master/theme" //默认css分散包,按需加载,~theme"为element et sass生成工具的目录
 
                         }
                     ]]
                 },
-        */
 
         loader: {
 

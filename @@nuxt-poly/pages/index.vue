@@ -6,7 +6,7 @@
             </a>
         </el-col>
         <el-col :md="12">
-            <nuxt-link to="/produce/">
+            <nuxt-link to="/advantage/">
                 <img src="@/assets/images/index/2.jpg" alt="">
             </nuxt-link>
         </el-col>
