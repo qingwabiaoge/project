@@ -4,10 +4,32 @@ blur	可选。模糊距离。
 spread	可选。阴影的尺寸。
 color	可选。阴影的颜色。请参阅 CSS 颜色值。
 inset	可选。将外部阴影 (outset) 改为内部阴影。*/
-/*
+/*包含了reset.css
 
+去除了
+body {
+ // line-height: 1;
+}
 
-*/
+ */
+@font-face {
+  font-family: OpenSans;
+  src: url('../font/OpenSans-Light.ttf');
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+}
+*.active,
+*:hover,
+*:focus {
+  outline: #fb00c9;
+}
 html,
 body,
 div,
@@ -110,43 +132,6 @@ nav,
 section {
   display: block;
 }
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-@font-face {
-  font-family: OpenSans;
-  src: url('../font/OpenSans-Light.ttf');
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  /* Firefox */
-  -webkit-box-sizing: border-box;
-  /* Safari */
-}
-*.active,
-*:hover,
-*:focus {
-  outline: #fb00c9;
-}
 html {
   font-size: 10px;
 }
@@ -159,7 +144,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   color: #666;
-  /* 背景 */
   background: #f1f1f1;
   /* margin */
   margin: 0;
@@ -177,7 +161,7 @@ body:after {
   background-size: cover;
   background-attachment: fixed;
 }
-/* Headings
+/* 容器
  ========================================================================== */
 h1,
 .h1,
@@ -251,6 +235,40 @@ h6,
 * + .h6 {
   margin-top: 25px;
 }
+/* article */
+.article,
+article {
+  padding: 30px auto;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+blockquote {
+  margin: 0 0 25px 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-style: none;
+  padding: 25px;
+  border-left: 5px solid #f5f5f5;
+  background: #fff;
+}
+blockquote footer {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: right;
+}
+* + blockquote {
+  margin-top: 25px;
+}
 a,
 .link {
   color: #333;
@@ -271,6 +289,27 @@ p {
 }
 * + button {
   margin-top: 25px;
+}
+ol,
+ul {
+  list-style: none;
+}
+/* Lists */
+ul > li > ul,
+ul > li > ol,
+ol > li > ol,
+ol > li > ul {
+  margin: 0;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 audio,
 canvas,
@@ -298,22 +337,6 @@ svg {
 svg:not(:root) {
   overflow: hidden;
 }
-/* Lists
- ========================================================================== */
-ul > li > ul,
-ul > li > ol,
-ol > li > ol,
-ol > li > ul {
-  margin: 0;
-}
-/* Description lists
- ========================================================================== */
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: 0;
-}
 hr,
 .hr {
   /* 1 */
@@ -332,12 +355,12 @@ hr,
 * + .hr {
   margin-top: 25px;
 }
-abbr[title] {
-  /* 1 */
+/*abbr[title] {
+  !* 1 *!
   border-bottom: none;
-  /* 2 */
+  !* 2 *!
   text-decoration: underline dotted;
-}
+}*/
 b,
 strong {
   font-weight: bolder;
@@ -347,8 +370,8 @@ em {
   color: #fb00c9;
 }
 ins {
-  background: #ffd;
-  color: #666;
+  background: #fb00c9;
+  color: white;
   text-decoration: none;
 }
 mark {
@@ -363,27 +386,6 @@ small {
 }
 q {
   font-style: italic;
-}
-blockquote {
-  margin: 0 0 25px 0;
-  font-size: 1.4rem;
-  line-height: 1.5;
-  font-style: none;
-  padding: 25px;
-  border-left: 5px solid #f5f5f5;
-  background: #fff;
-}
-* + blockquote {
-  margin-top: 25px;
-}
-blockquote p:last-of-type {
-  margin-bottom: 0;
-}
-blockquote footer {
-  margin-top: 25px;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  text-align: right;
 }
 sub,
 sup {
@@ -456,38 +458,6 @@ sub {
   background: #fb00c9;
   color: #fff;
   text-shadow: none;
-}
-/* article
- ========================================================================== */
-.artile,
-article {
-  padding: 30px auto;
-}
-.artile h1,
-article h1,
-.artile .h1,
-article .h1,
-.artile h2,
-article h2,
-.artile .h2,
-article .h2,
-.artile h3,
-article h3,
-.artile .h3,
-article .h3,
-.artile h4,
-article h4,
-.artile .h4,
-article .h4,
-.artile h5,
-article h5,
-.artile .h5,
-article .h5,
-.artile h6,
-article h6,
-.artile .h6,
-article .h6 {
-  margin: 0 0 50px 0;
 }
 .container {
   /* media>1200 */

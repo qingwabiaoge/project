@@ -1,6 +1,9 @@
-import { injectGlobal } from 'vue-styled-components';
+import {injectGlobal} from 'vue-styled-components';
+
 export default function ({$axios, store, redirect, env}) {
-injectGlobal`
-  
+    injectGlobal`
+  .vue-styled-components-cs{
+  color:${store.state.primary}
+  }
 `;
 }

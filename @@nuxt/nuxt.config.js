@@ -101,7 +101,10 @@ module.exports = {
     */
     plugins: [
         '~/plugins/element-ui',
-        //'~/plugins/global-styles',
+
+    /*    //style-vue-component的全局变量
+        '~/plugins/global-styles',
+*/
         //'~/plugins/swiper.client.js',
         '~/plugins/lei-ui',
         '~/plugins/vue-lazyload',

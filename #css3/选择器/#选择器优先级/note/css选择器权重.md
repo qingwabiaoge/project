@@ -12,7 +12,7 @@
 6. 群组选择器   `div,span,img {color:Red} `   /即具有相同样式的标签分组显示
 # 选择器的优先级
 
-### 不同的优先级
+### 标签优先级
 
 1. 级别10000 (直接在标签中的设置样式) `<div style="color:Red;"></div>`
 2. 级别1000（ID选择器 ）  ` #myDiv{color:Red;}`
@@ -30,9 +30,27 @@ p{color:Red;}
 div *{ color:blue}
 </style>
 ```
-5. 级别1 继承样式   （ 继承而来的样式,浏览器默认标签样式没有设置过此样式,比如背景）  ` body{color:#000} `
+5. 级别1 继承样式   （ 继承而来的样式,浏览器默认标签样式没有设置过此样式,比如背景）  ` body{color:#000} ` ![img](img/20170727_2050.png) 
 
-​       比如 .divClass  span { color:Red;}   优先级别就是：10+1=11
+   
+
+   不可继承的：`display、margin、border、padding、background、height、min-height、max- height、width、min-width、max-width、overflow、position、left、right、top、 bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、 page-bread-before和unicode-bidi`
+
+   所有元素可继承：`visibility和cursor`
+
+   内联元素可继承：`letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction`
+
+   块状元素可继承：`text-indent和text-align`
+
+   列表元素可继承：`list-style、list-style-type、list-style-position、list-style-image`
+
+   表格元素可继承：`border-collapse`
+
+   
+
+**例:**
+
+​    比如 .divClass  span { color:Red;}   优先级别就是：10+1=11
 
 ```html
 
@@ -107,7 +125,7 @@ div *{ color:blue}
 </style>
 ```
 
-### 同优先级css顺序
+### 同优先级受css顺序的影响
 
 和css代码的顺序有关,谁在后面谁决定样式,和标签里的class的位置无关 
 
@@ -131,5 +149,7 @@ color: blue;
 
 # !import 提升
 
-import的优先级最高, 加了!import,上面的样式都被覆盖,需要import覆盖
+import的优先级最高, 加了!import,上面的样式都被覆盖,
+
+需要更高的优先级标签+!import覆盖
 
