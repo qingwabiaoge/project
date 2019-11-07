@@ -1,6 +1,6 @@
 <template>
 
-  <titleScale :data="$store.state.test[1]">
+  <titleScale >
 
   </titleScale>
 </template>

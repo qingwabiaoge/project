@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <produce-page1 >
+    <produce-detail>
 
-    </produce-page1>
+    </produce-detail>
   </div>
 </template>
 

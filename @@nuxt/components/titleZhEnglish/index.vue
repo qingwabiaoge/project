@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.title" v-if="data.show">
+  <div :class="$style.title">
     <section class="hover-underline hover-underline-center">
 
       <h2 v-if="data.title" :style="{color:inverse?'#fff':''}">{{data.title}}</h2>

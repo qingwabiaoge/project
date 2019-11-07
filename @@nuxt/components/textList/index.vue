@@ -2,7 +2,7 @@
   <el-row :gutter="35" type="flex" style="flex-wrap: wrap">
     <el-col :md="12"
             style="background-origin:content-box; background-clip:content-box;"
-            class="background-default-transparentest   inverse-wrap  margin-top"
+            class="background-default-transparentest   inverse-color  margin-top"
             v-for="item in data"
             :key="item.title"
     >

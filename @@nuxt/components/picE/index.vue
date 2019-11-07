@@ -1,6 +1,6 @@
 <template>
 
-    <div :class="$style['picD']" class="inverse-wrap">
+    <div :class="$style['picD']" class="inverse-color">
 
       <section>
         <svg t="1552064836817" class="icon" style="" viewBox="0 0 1024 1024" version="1.1"

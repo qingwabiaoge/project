@@ -62,7 +62,7 @@
     background-position: center center;
     background-size: cover;
     position: relative;
-    .inverse-wrap();
+    .inverse-color();
 
     section {
       width: 50%;

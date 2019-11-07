@@ -9,7 +9,7 @@
     <transparentLay v-model="isShow"
                     type="black">
       <div class="inline padding-small">
-        <i class="iconfont icon-guanbi position-top-right inverse-wrap"></i>
+        <i class="iconfont icon-guanbi position-top-right inverse-color"></i>
         <img :src="imgZoomUrl">
       </div>
     </transparentLay>

@@ -400,34 +400,34 @@ sup {
 sub {
   bottom: -0.25em;
 }
-.inverse-wrap {
+.inverse-color {
   /* &, *, *:hover {
      color: @global-color-inverse;
    }*/
 }
-.inverse-wrap svg {
+.inverse-color svg {
   fill: white;
 }
-.inverse-wrap,
-.inverse-wrap h1,
-.inverse-wrap .h1,
-.inverse-wrap h2,
-.inverse-wrap .h2,
-.inverse-wrap h3,
-.inverse-wrap .h3,
-.inverse-wrap h4,
-.inverse-wrap h5,
-.inverse-wrap h6,
-.inverse-wrap b,
-.inverse-wrap i,
-.inverse-wrap a,
-.inverse-wrap a:hover,
-.inverse-wrap .link,
-.inverse-wrap p,
-.inverse-wrap ul,
-.inverse-wrap li,
-.inverse-wrap div,
-.inverse-wrap button {
+.inverse-color,
+.inverse-color h1,
+.inverse-color .h1,
+.inverse-color h2,
+.inverse-color .h2,
+.inverse-color h3,
+.inverse-color .h3,
+.inverse-color h4,
+.inverse-color h5,
+.inverse-color h6,
+.inverse-color b,
+.inverse-color i,
+.inverse-color a,
+.inverse-color a:hover,
+.inverse-color .link,
+.inverse-color p,
+.inverse-color ul,
+.inverse-color li,
+.inverse-color div,
+.inverse-color button {
   color: #fff;
 }
 /*---------------------- 滚动条-----------------*/
@@ -3402,6 +3402,25 @@ iframe.cover {
 }
 .icon-gouwuche:before {
   content: "\e61a";
+}
+.hover-underline {
+  position: relative;
+}
+.hover-underline::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: #fb00c9;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+}
+.hover-underline.active::after,
+.hover-underline:hover::after,
+.hover-underline:focus .hover-underline:active::after {
+  width: 100%;
 }
 /**
  * Swiper 4.4.5

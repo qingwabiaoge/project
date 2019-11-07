@@ -1,21 +1,16 @@
 <template>
 
-    <div :class="$style.punchy" :style="{'--accent-color':color}">
-        <style>
-            :root {
-            //记得末尾带;
-                --hero-image: url('{{ heroImage }}');
-            }
-        </style>
+    <div :class="$style.punchy" >
+
 
         <h1>Pow.</h1>
-
+    <button @click="setPrimary('red')">red</button>
     </div>
 
 </template>
 <script>
     import img from '@/assets/images/test/image1.jpg'
-
+    import mixin from '@/mixins/page-mixin'
     export default {
         layout: 'demo',
         data() {
@@ -23,12 +18,9 @@
                 heroImage: img,
             }
         },
-        computed: {
 
-            color() {
-                return this.$store.state.primary
-            }
-        }
+        mixins: [mixin]
+
     }
 
 </script>
@@ -37,14 +29,14 @@
     .punchy {
         background-image: var(--hero-image);
         background-size: cover;
-        border: 4px solid var(--accent-color);
+        border: 4px solid var(--primary-color);
         display: inline-block;
-        color: var(--accent-color);
+        color: var(--primary-color);
         width: 250px;
         height: 250px;
 
         h1 {
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
     }
 

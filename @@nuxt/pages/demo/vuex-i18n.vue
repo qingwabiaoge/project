@@ -4,3 +4,8 @@
     <p>{{ $t('content', {'type': 'nice'}) }}</p>
   </div>
 </template>
+<script>
+  export default {
+    layout:'demo'
+  }
+</script>

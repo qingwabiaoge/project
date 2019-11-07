@@ -1,7 +1,7 @@
 <template>
-  <headerA>
+  <header1>
 
-  </headerA>
+  </header1>
 
 </template>
 <script>

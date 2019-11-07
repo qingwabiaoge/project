@@ -17,13 +17,8 @@
 <script>
   import mixin from '@/mixins/conponent-mixin'
 export default {
-    mixins:[mixin],
-    props: {
-      data: {}
-    }
-
+  mixins:[mixin]
   }
-
 </script>
 
 <style lang="less" module>

@@ -7,31 +7,20 @@
 <link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">
 <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
 
-
 <div id="app">
 
-    <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto;" :style="{height:height+'px'}" >
-        <li v-for="i in count" class="infinite-list-item">{{ i }}</li>
-    </ul>
+
+        <el-pagination
+                layout="prev, pager, next"
+                :total="1000">
+
+        </el-pagination>
 
 </div>
 
 <script>
-    new Vue({
-        el: '#app',
-        data() {
-            return {
-                count: 0,
-                height:0
-            }
-        },
-        methods: {
-            load() {
-                this.count += 2
-            }
-        },
-        mounted(){
-            this.height = document.documentElement.clientHeight
-        }
+    new Vue({el:'#app'
+
+
     })
 </script>

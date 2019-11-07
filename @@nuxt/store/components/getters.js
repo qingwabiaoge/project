@@ -7,8 +7,9 @@ export default {
     return _conponents
   },
   categorys: state => {
-    let arr = state.components.filter(item => item.isCategory === true)
-    arr.forEach(item => {
+
+    let _arr = state.components.filter(item => item.isCategory === true)
+    _arr.forEach(item => {
       item.href = item.href || `/${item.name}`;
       if (item.children) {
         item.children.forEach(i => {
@@ -16,7 +17,7 @@ export default {
         })
       }
     })
-    return arr
+    return _arr
   },
   produceCategory: (state, getters) => getters.components.produce.children,
   articleCategory: (state, getters) => getters.components.article.children,

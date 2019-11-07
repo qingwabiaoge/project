@@ -1,3 +1,4 @@
+const { resolve } = require('path')
 module.exports = {
 
     //不渲染ui目录
@@ -13,7 +14,7 @@ module.exports = {
         // HOST: process.env.HOST,
         //下方别忘了修改数据库地址+中英文配置!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         HOST: '127.0.0.1',
-         //HOST: '47.107.170.105',
+        //HOST: '47.107.170.105',
         // HOST: 'www.bonniena.com',
         PORT: 3001,
     },
@@ -44,7 +45,7 @@ module.exports = {
         adminJwtString: 'qinshilei',
         vipJwtString: 'qinshilei',
         database: 'mongodb://localhost:27017/senboma',
-         //database: 'mongodb://localhost:27017/bonniena',
+        //database: 'mongodb://localhost:27017/bonniena',
         apiBase: '/api',
         uploadBase: '/upload',
 
@@ -102,10 +103,10 @@ module.exports = {
     plugins: [
         '~/plugins/element-ui',
 
-    /*    //style-vue-component的全局变量
-        '~/plugins/global-styles',
-*/
-        //'~/plugins/swiper.client.js',
+        /*    //style-vue-component的全局变量
+            '~/plugins/global-styles',
+    */
+        '~/plugins/swiper.client.js',
         '~/plugins/lei-ui',
         '~/plugins/vue-lazyload',
         "~/plugins/axios",
@@ -116,7 +117,7 @@ module.exports = {
         //vuex持久化
         //"~/plugins/vuex-persistedstate.client.js",
         //test----------------------
-        "~/plugins/test-process"
+        "~/plugins/test"
     ],
     /*
     ** Nuxt.js modules
@@ -145,6 +146,7 @@ module.exports = {
     //输出配置================================================
     build: {
 
+
         transpile: [/^element-ui/],
         babel: {
             "plugins": [["component",
@@ -167,6 +169,7 @@ module.exports = {
         ** 防止重复打包
         */
         vendor: ['element-ui', '~/plugins/lei-ui', 'vue-lazyload'],
+        //build时间可以补充一下loader
         extend(config, ctx) {
             // 为 客户端打包 进行扩展配置
             if (ctx.isClient) {
@@ -174,7 +177,7 @@ module.exports = {
 
             }
         }
-        }
     }
+}
 
 

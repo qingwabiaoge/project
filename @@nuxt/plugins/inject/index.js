@@ -8,9 +8,8 @@ import getReqCookies from './tool/getReqCookies'
 
 
 const tool = {betweenInt, cookie, deviceType, randomNum, randomString, getReqCookies}
-//必须先声明再注入要不页面不加载
+//必须先声明再注入要不页面不加载,原因可能是prototyp是非响应式的
 const isdev = process.env.NODE_ENV === "development"
-Vue.prototype.$primaryColor = "fb00c9"
 Vue.prototype.$isdev = isdev
 
 export default ({app,store,router}, inject) => {

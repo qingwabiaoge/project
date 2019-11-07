@@ -1,10 +1,16 @@
 <template>
-  <titleZhEnglish :data="$store.state.test[1]">
 
+    <titlebarA >
 
-  </titleZhEnglish>
+    </titlebarA>
+
 
 </template>
+
 <script>
   export default {   layout: 'ui',}
 </script>
+
+<style lang="less" scoped>
+
+</style>

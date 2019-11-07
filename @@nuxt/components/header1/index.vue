@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row
-      class="inverse-wrap clearfix background-black"
+      class="inverse-color clearfix background-black"
       style="height: 64px; line-height: 64px">
 
       <el-col :span="8"><span class="padding-left">{{$store.state.global.sitename}}</span></el-col>
@@ -57,7 +57,6 @@
         <nuxt-link :to="{ path: '/contact'}" class="hover-underline inline "
                    style="padding:30px 0; margin-right: 30px">联系我们
         </nuxt-link>
-
 
       </el-col>
     </el-row>

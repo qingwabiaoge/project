@@ -40,7 +40,7 @@ export default {
     position: relative;
     &:hover {
       background: #222;
-      .inverse-wrap()
+      .inverse-color()
     }
     img {
       margin-top: -50px;

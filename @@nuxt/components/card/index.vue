@@ -26,7 +26,7 @@ export default {
     padding: 15px;
     &.inverse {
       background: #222;
-      .inverse-wrap
+      .inverse-color
     }
     section {
       padding: 15px;

@@ -1,36 +1,33 @@
 <template>
-  <div class="shadow-small background-default">
-    <div class="flex child-width-1-2">
-      <div class="hover-child-image-scale">
-        <img v-lazy="data.image" alt="" style="object-fit: fill; width: auto">
-      </div>
-      <div class="padding-left-large padding-right-lg article flex flex-middle ">
-        <div>
-          <h2>{{data.title}}</h2>
-          <h5 class="text-uppercase">{{data.subtitle}}</h5>
-          <p class="margin-top-small">{{data.info}}</p>
+    <el-row class="shadow-small background-default">
 
-          <baseButton class="margin-medium-top">
-            <a :href="data.href">了解我们</a>
-          </baseButton>
-        </div>
-      </div>
-    </div>
+        <el-col :md="12" class="hover-child-image-scale">
+            <img v-lazy="data.image" :alt="data.title" style="object-fit: cover;">
+        </el-col>
+        <el-col :md="12" class="padding-left-large padding-right-lg article flex flex-middle ">
+            <div>
+                <h2>{{data.title}}</h2>
+                <h5 class="text-uppercase">{{data.subtitle}}</h5>
+                <p class="margin-top-small">{{data.description}}</p>
 
-  </div>
+                <baseButton class="margin-medium-top">
+                    <a :href="data.href">了解我们</a>
+                </baseButton>
+            </div>
+        </el-col>
+
+
+    </el-row>
 
 </template>
 
 <script>
-  import mixin from '@/mixins/conponent-mixin'
+    import mixin from '@/mixins/conponent-mixin'
 
-export default {
-    mixins:[mixin],
+    export default {
+        mixins: [mixin],
 
-    props: {
-      data: {type: Object, default: []}
     }
-  }
 
 
 </script>
