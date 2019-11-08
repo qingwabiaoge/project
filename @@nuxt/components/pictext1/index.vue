@@ -1,8 +1,8 @@
 <template>
 <!--    v-if不能放到最外层目录会和mixin里的this.$style冲突-->
     <div>
-        <div :class="$style['pictext']" v-if="data.show">
-            <el-row>
+        <div :class="$style['pictext']">
+            <el-row >
 
                 <el-col :md="12" :xs="24">
                     <img v-lazy="data.image" alt="title">
@@ -34,7 +34,7 @@
 
                 </el-col>
 
-            </el-row>
+            </el-row >
 
 
         </div>
@@ -46,15 +46,13 @@
     import mixin from '@/mixins/conponent-mixin'
 
     export default {
-        name: 'pictext1',
         mixins: [mixin],
-
     }
 </script>
 
 <style lang="less" module>
     .pictext {
-        background: #f1f1f1;
+        background: #fff;
 
         img {
             object-fit: cover
