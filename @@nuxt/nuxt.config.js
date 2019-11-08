@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const {resolve} = require('path')
 module.exports = {
 
     //不渲染ui目录
@@ -95,7 +95,9 @@ module.exports = {
     /*
     ** Global CSS
     */
-    css: ['~/assets/less/index.css'],
+    css: [
+        '~/assets/less/index.css'
+    ],
 
     /*
     ** Plugins to load before mounting the App
@@ -145,7 +147,24 @@ module.exports = {
     */
     //输出配置================================================
     build: {
-
+        postcss: {
+            plugins: {
+                // Disable `postcss-url`
+                'postcss-url': false,
+                // Add some plugins
+                'postcss-nested': {},
+                'postcss-simple-vars': {},
+                //不能用不知道原因
+                'postcss-mixins': {},
+                'postcss-responsive-type': {},
+                'postcss-hexrgba': {}
+            },
+            preset: {
+                autoprefixer: {
+                    grid: true
+                }
+            }
+        },
 
         transpile: [/^element-ui/],
         babel: {

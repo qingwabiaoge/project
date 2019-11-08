@@ -5,10 +5,10 @@
       <div v-else>online</div>
     </div>
 
-    <div class="position-fixed background-black ">
+    <div class="position-fixed background-black inverse-color">
       <router-link v-for="item in $router.options.routes.filter(item=>/^demo-/.test(item.name))" :key="item.path"
                    :to="{ path:item.path}"
-                   class="inverse-color">
+                   >
         {{item.name}}
       </router-link>
     </div>

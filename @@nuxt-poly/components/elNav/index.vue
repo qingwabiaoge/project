@@ -14,7 +14,10 @@
             <el-menu-item index="/produce/tone">石纹</el-menu-item>
             <el-menu-item index="/produce/wood">木纹</el-menu-item>
             <el-menu-item index="/produce/cloth">布纹</el-menu-item>
-
+            <el-menu-item index="/produce/abstract">抽象</el-menu-item>
+            <el-menu-item index="/produce/bamboo">免漆竹饰面</el-menu-item>
+            <el-menu-item index="/produce/no-paint-wood">免漆真木皮</el-menu-item>
+            <el-menu-item index="/produce/science-wood">科技木皮</el-menu-item>
         </el-submenu>
 
         <el-submenu index="/case/">

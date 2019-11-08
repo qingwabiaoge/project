@@ -3,6 +3,7 @@
     <!--则个div不能去掉,为了父组件使用margin-top-->
 
     <div :class="$style.picA"
+         class="hover-inverse-color"
          style="margin-top:50px"
     >
       <!--如果是组件 data.href存在,如果不是组件则是文章-->
@@ -40,7 +41,7 @@ export default {
     position: relative;
     &:hover {
       background: #222;
-      .inverse-color()
+
     }
     img {
       margin-top: -50px;

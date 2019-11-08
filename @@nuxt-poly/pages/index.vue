@@ -11,6 +11,7 @@
             </nuxt-link>
         </el-col>
     </el-row>
+
 </template>
 
 <script>

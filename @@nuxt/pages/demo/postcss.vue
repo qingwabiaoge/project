@@ -1,6 +1,11 @@
 <template>
-    <div :class="$style.wrap" :style="{'--primary-color':primary,'--bg-img':`url(${img})`}">
+    <div :class="$style.wrap" :style="{'--primary-color':primary,}">
         <a href="#">111</a>
+        <style>
+            :root {
+            //记得末尾带; --hero-image: url('{{ heroImage }}');
+            }
+        </style>
     </div>
 
 </template>
@@ -12,17 +17,25 @@
     export default {
         layout: 'demo',
         data() {
-            return {img}
+            return {heroImage: img}
         },
         mixins: [mixin]
     }
 
 </script>
-<style lang="postcss" module>
+
+<style lang="postcss"  module>
+    $primary:var(--primary-color);
+
     .wrap {
-        background-image: var(--bg-img);
 
-
+        background:$primary;
+        a {
+            background-image: var(--hero-image);
+            color: var(--primary-color);
+            transform: rotate(2deg);
+        }
     }
-    a {
-        color: var(--primary-c
+
+
+</style>

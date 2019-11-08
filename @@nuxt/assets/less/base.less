@@ -449,10 +449,21 @@ sub {
   bottom: -0.25em;
 }
 
+.inverse-color , .hover-inverse-color{
+  //必须放到最后 "inverse-color *"只是相当于一个下级标签的权限
 
-.inverse-color{
-  .inverse-color()
+  /* &, *, *:hover {
+     color: @global-color-inverse;
+   }*/
+  svg {
+    fill: white;
+  }
+
+  &, h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, b, i, a, a:hover, .link, p, ul, li, div, button {
+    color: @global-color-inverse;
+  }
 }
+
 /*---------------------- 滚动条-----------------*/
 /*定义滚动条高宽及背景 高宽分别对应 横竖滚动条的尺寸*/
 ::-webkit-scrollbar {
