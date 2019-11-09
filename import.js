@@ -1,2 +1,3 @@
-import fn from './export'
-fn()
+require( './export.js')
+
+console.log(i)

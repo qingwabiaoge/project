@@ -1,6 +1,6 @@
 # Windows
 
-<a href='./img/global.xmind'>![](./img/global.png)</a>
+[![](./img/global.png)](./img/global.xmind)
 
 ## setTimeout()执行一次
 
@@ -231,7 +231,7 @@ console.log(i.a)
 
 2、window对象：浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。
 
-![](./img/global.png)
+[![](./img/global.png)](./img/global.xmind)
 
 三、使用方式不同
 
@@ -305,19 +305,19 @@ document.location===window.location
 
 > JavaScript 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
 
-###### JavaScript 中，创建 cookie 如下所示：
+##### JavaScript 中，创建 cookie 如下所示：
 
 ```
 document.cookie="username=John Doe";
 ```
 
-###### 您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：
+##### 您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：
 
 ```
 document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
 ```
 
-###### 您可以使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。
+##### 您可以使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。
 
 1、服务器端每次访问的cookie是每次请求头中发送给服务器端的
 
@@ -331,7 +331,7 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
 document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
 ```
 
-######  JavaScript 读取 Cookie的函数封装
+#####  JavaScript 读取 Cookie的函数封装
 
 ```js
     function setCookie(cname, cvalue, exdays) {
@@ -362,7 +362,7 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 
 
 
-![](./img/global.png)
+[![](./img/global.png)](./img/global.xmind)
 
 
 
