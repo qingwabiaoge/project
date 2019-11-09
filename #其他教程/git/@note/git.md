@@ -109,6 +109,8 @@ git log --graph --abbrev-commit --decorate --date=relative --all
 
 ### webstorm git log
 
+![image-20191109235725288](img/image-20191109235725288.png)
+
 # git logref
 
 ```javascript
