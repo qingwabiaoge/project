@@ -225,6 +225,8 @@ git checkout a1a1a1 //head移动到任何一次提交,不隐藏以后版本的�
 git checkout -b branchA //为分支命名 
 ```
 
+![](img/7.png)
+
 # git revert
 
 
