@@ -24,7 +24,11 @@ const test = {
     map,
     content,
     background,
-    bg: '#fff'
+    bg: '#fff',
+    name: 'ModleName',
+    tel: '151666666\n888-888888',
+    qq: '888888\n6666',
+    address: '广东省中山市东城大道NO.001'
     ,
     children:
         [
@@ -93,7 +97,7 @@ export default {
 
             // console.log(this.data.background)
             //${this.data.bg?this.data.bg:''}这里三目很重要 不写css样式会失效
-            this.$el.style.background = `${this.data.bg?this.data.bg:''} url(${this.data.background}) 0% 0% / cover  fixed`
+            this.$el.style.background = `${this.data.bg ? this.data.bg : ''} url(${this.data.background}) 0% 0% / cover  fixed`
 
             /*   if (!this.data.fullpage&&this.data.type==="component") {
 

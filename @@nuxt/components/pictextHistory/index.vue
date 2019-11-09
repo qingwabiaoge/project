@@ -101,7 +101,7 @@
             position: relative;
 
             &:global(.active) {
-                background: url("./tabbg.png");
+                background: url("./bg/tabbg.png");
             }
 
             &:after {
@@ -117,7 +117,7 @@
 
         footer {
             height: 18px;
-            background: url("./timeline.png") repeat-x;
+            background: url("./bg/timeline.png") repeat-x;
         }
 
     }

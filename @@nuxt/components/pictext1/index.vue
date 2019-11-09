@@ -1,16 +1,17 @@
 <template>
-<!--    v-if不能放到最外层目录会和mixin里的this.$style冲突-->
+    <!--    v-if不能放到最外层目录会和mixin里的this.$style冲突-->
     <div>
         <div :class="$style['pictext']">
             <el-row >
 
-                <el-col :md="12" :xs="24">
-                    <img v-lazy="data.image" alt="title">
-
+                <el-col :md="12" :xs="24" >
+                    <div  >
+                    <img v-lazy="data.image" alt="title" ref="left">
+                    </div>
                 </el-col>
 
-                <el-col :md="{span:8 ,offset:2}" :xs="{span:24 ,offset:0}">
-                    <section>
+                <el-col :md="{span:8 ,offset:2}" :xs="{span:24 ,offset:0}" >
+                    <section ref="right">
                         <h3>{{data.subtitle}}</h3>
                         <h2>
                             {{data.title}}
@@ -34,7 +35,7 @@
 
                 </el-col>
 
-            </el-row >
+            </el-row>
 
 
         </div>
@@ -47,12 +48,17 @@
 
     export default {
         mixins: [mixin],
+        mounted(){
+
+            this.$refs.left.style.height=this.$refs.right.offsetHeight+'px'
+
+        }
     }
 </script>
 
 <style lang="less" module>
     .pictext {
-        background: #fff;
+
 
         img {
             object-fit: cover
