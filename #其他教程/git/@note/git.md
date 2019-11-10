@@ -74,7 +74,10 @@ git Bash中输入: ssh -T 393502736@qq.com， 返回 Welcome to Git@OSC, yournam
 
 ![](./img/2.png)
 
-# 版本操作
+# 整体图示
+
+
+
 ![](img/7.png)
 
 # git init
@@ -157,8 +160,6 @@ git add .
 
 # git reset xxx 
 
-![img](img/4428238-fcad08ebe26933a6.webp)
-
 
 
 ### reset三种模式区别和使用场景
@@ -169,43 +170,43 @@ git add .
 
 # git branch 
 
-### 列出分支
-
-本地分支
+### git branch列出本地分支
 
 ```
 git branch
 ```
-远程分支
+### git branch -r 查看远程分支
 
 ```
 git branch -r
 ```
-所有分支
+### git branch -a 列出所有分支
 
 ```
 git branch -a
 ```
 
-### 创建并切换分支
+### git branch dev创建并切换分支
 
 ```
 $ git branch dev
 ```
 
-### 重命名分支
+###  git branch -m重命名分支
 
 ```
  git branch -m oldBranchName newBranchName
 ```
 
-### 删除分支
+### git branch -d 删除分支
 
 ```
 git branch -d dev
 ```
 
-### 合并dev分支到当前分支
+# git merge
+
+### git merge dev合并dev分支到当前分支
 
 ```
 git merge dev
@@ -214,20 +215,26 @@ git merge dev
 
 # git checkout
 
-### 移动head到dev标签
+### gitcheckout 用缓存区的文件覆盖工作区
+
+```
+gitcheckout
+```
+
+### git checkout dev 移动head到dev标签,用当前的head(dev)版本覆盖工作区
 
 ```
 git checkout dev //移动head到dev标签,head移动到哪个节点就编辑哪个节点
 ```
 
-### head移动到任何一次提交
+### git checkout a1a1a1,head移动到任何一次提交,建立新分支,当前的head(temp branch name)覆盖到工作区,然后重命名为branchA
 
 ```
 git checkout a1a1a1 //head移动到任何一次提交,不隐藏以后版本的提交,建立新分支!,
 git checkout -b branchA //为分支命名 
 ```
 
-![](img/7.png)
+
 
 # git revert
 
@@ -237,14 +244,14 @@ git checkout -b branchA //为分支命名
 
 # git remote 
 
-##### 添加远程主机和主机名
+##### git remote add添加远程主机和主机名
 
 ```
 git remote add origin git@github.com:qingwabiaoge/test.git
 
 ```
 
-##### 检查配置是否成功
+##### git remote -v 检查配置是否成功
 ```
 git remote -v 
 ```
@@ -270,7 +277,9 @@ git remote add origin [url]
 
 # git push & git pull 
 
-##### 初次建立建立远程分支/或者指定推送到哪个分支
+##### git push -u
+
+初次建立建立远程分支/或者指定推送到哪个分支
 
 ```
 
@@ -294,13 +303,13 @@ git push
 
 ![](./img/9.png)
 
-##### 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
+##### git push -f 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
 
 ```
 git push -f
 ```
 
-##### 删除远程分支
+##### git push origin --delete xxx 删除远程分支
 
 ```
 git push origin --delete xxx

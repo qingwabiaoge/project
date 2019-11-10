@@ -3,7 +3,8 @@
         <a href="#">111</a>
         <style>
             :root {
-            //记得末尾带; --hero-image: url('{{ heroImage }}');
+            //记得末尾带;
+                --hero-image: url('{{ heroImage }}');
             }
         </style>
     </div>

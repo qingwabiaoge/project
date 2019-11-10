@@ -1,0 +1,16 @@
+.add-after {
+  position: relative;
+
+  &:after {
+    transition: all 0.2s;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: @global-color-primary;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 10px;
+  }
+}

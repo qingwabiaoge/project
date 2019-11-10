@@ -1,0 +1,223 @@
+//dom只有一個hover,hover下可以爲不同子dom配置多個動畫效果
+//图层fade
+@translation-time: 0.5s;
+.hover-fade() {
+  opacity: 0.7;
+  transition: all @translation-time;
+  &:hover {
+    opacity: 1
+
+  }
+
+}
+
+
+.hover-backgroud-primary-slideInLeft() {
+  & {
+    position: relative;
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @global-color-primary;
+    width: 0;
+    z-index: -1;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+  }
+  &:hover, &.active {
+    color: #fff;
+
+    &:after {
+      width: 100%;
+    }
+  }
+
+}
+
+
+//背景fade
+.hover-inverse-backgoud-fade-in() {
+  background: rgba(255, 255, 255, 0.5);
+  transition: all @translation-time;
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+//阴影
+.hover-shadow-transition() {
+
+  box-shadow: @global-shadow-smaller;
+  transition: all @translation-time;
+  &:hover {
+    box-shadow: @global-shadow-large;
+  }
+}
+
+
+//图片放大
+.hover-child-image-scale() {
+  & {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+  }
+  & > img {
+    transition: all @translation-time;
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
+
+  &:hover img {
+    overflow: hidden;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+
+//图片fade
+.hover-child-image-fade() {
+
+  img {
+    transition: all @translation-time;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+  }
+
+  &:hover {
+    img {
+      -webkit-filter: brightness(1);
+      filter: brightness(1);
+    }
+  }
+}
+
+//underline-------------------------------------------------------
+//从左边延长
+.text-underline() {
+  & {
+    display: inline-block;
+    position: relative;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background: @global-color-primary;
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+  }
+
+
+  //从中间延长
+  &-center {
+
+    &:after {
+      width: 100%;
+      transform: scale(0.5, 1);
+    }
+
+
+  }
+
+  //位置放到了上方
+  &-top {
+    &:after {
+      top: 0px
+    }
+
+  }
+
+  //用于竖形导航
+  &-left {
+    display: inline-block;
+
+  }
+
+}
+
+.hover-text-underline() {
+  &.active,
+  &:hover,
+  &:focus
+  &:active {
+
+    //color: @hover-underline-color;
+    &:after {
+      width: 100%;
+
+    }
+  }
+
+  &-center {
+    &:hover,
+    &:focus
+    &:active {
+      &:after {
+        width: 100%;
+        transform: scale(1, 1)
+      }
+    }
+  }
+  &-left {
+
+    &:hover:after,
+    &.active:after {
+
+      height: 100% !important;
+      width: 2px !important;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.text-underline {
+  .text-underline()
+}
+
+.hover-text-underline {
+  .hover-text-underline()
+}
+
+/*
+.hover-fade {
+  .hover-fade()
+}
+
+.hover-child-image-scale {
+  .hover-child-image-scale()
+}
+
+.hover-backgroud-primary-slideInLeft {
+  .hover-backgroud-primary-slideInLeft()
+}
+
+.hover-inverse-backgoud-fade-in {
+  .hover-inverse-backgoud-fade-in()
+}
+
+.hover-shadow-transition {
+  .hover-shadow-transition()
+}
+
+.hover-child-image-fade {
+  .hover-child-image-fade()
+}
+
+*/

@@ -18,7 +18,7 @@
                     色彩:</span> {{data.color}}
 
             </div>
-            <baseButton class="margin-top" size="small">点击咨询</baseButton>
+            <button1 class="margin-top" size="small">点击咨询</button1>
         </div>
 
     </div>

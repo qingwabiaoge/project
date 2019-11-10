@@ -10,7 +10,7 @@
     import mixin from '@/mixins/page-mixin'
 
     export default {
-        layout: 'demo',
+        layout: 'ui',
         mixins: [mixin]
     }
 

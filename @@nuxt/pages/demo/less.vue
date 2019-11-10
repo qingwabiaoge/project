@@ -1,14 +1,17 @@
 <template>
 
-    <div :class="$style.punchy" :style="{'--primary-color':primary}">
+    <div class="punchy" :style="{'--primary-color':primary}">
         <style>
             :root {
-            //记得末尾带; --hero-image: url('{{ heroImage }}');
+            //记得末尾带;
+                --hero-image: url('{{ heroImage }}');
             }
         </style>
 
         <h1>Pow.</h1>
-        <button @click="setPrimary('red')">red</button>
+        <button  class="red" @click="setPrimary('red')">red</button>
+
+
     </div>
 
 </template>
@@ -29,8 +32,9 @@
     }
 
 </script>
-<style module lang="less">
+<style scoped lang="less">
     @primary: var(--primary-color); //主色调
+
     .punchy {
         background-image: var(--hero-image);
         background-size: cover;
@@ -44,6 +48,7 @@
             color: @primary;
         }
     }
+
 
 
 </style>

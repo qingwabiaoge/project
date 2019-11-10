@@ -1,6 +1,33 @@
 # Windows
 
+**window对象：表示浏览器中打开的窗口。**
+
 [![](./img/global.png)](./img/global.xmind)
+
+**window的滚动条**
+
+```html
+<!--
+div撑大了documentElement
+documentElement的高度为1900px,超出了浏览器的窗口(window),
+ window默认css属性window{overflow: auto;} 不超出window滚动条不显示 超出了滚动条显示
+ -->
+<div style="height: 1900px">
+
+</div>
+
+<style>
+    window{overflow: auto;}
+</style>
+
+<script>
+
+  console.log(document.documentElement.offsetHeight)
+
+</script>
+```
+
+![image-20191109002549745](img/image-20191109002549745.png)
 
 ## setTimeout()执行一次
 
@@ -215,58 +242,21 @@ console.log(i.a)
 
 
 
-## document和window
-
-##### 两者区别
-
-一、指代不同
+## document
 
 1、document对象：代表给定浏览器窗口中的 HTML 文档。就是html标签
 
-2、window对象：表示浏览器中打开的窗口。
 
-二、作用不同
 
-1、document对象：使用 document 对象可以对 HTML文档进行检查、修改或添加内容，并处理该文档内部的事件。
 
-2、window对象：浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。
 
 [![](./img/global.png)](./img/global.xmind)
 
-三、使用方式不同
 
-1、document对象：在 Web 页面上，document 对象可通过 window 对象的 document 属性引用，或者直接引用。
 
-2、window对象：没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。
 
-#####  window的滚动条
 
-```html
-<!--
-div撑大了documentElement
-documentElement的高度为1900px,超出了浏览器的窗口(window),
- window默认css属性window{overflow: auto;} 不超出window滚动条不显示 超出了滚动条显示
- -->
-<div style="height: 1900px">
 
-</div>
-
-<style>
-    window{overflow: auto;}
-</style>
-
-<script>
-
-  console.log(document.documentElement.offsetHeight)
-
-</script>
-```
-
-![image-20191109002549745](img/image-20191109002549745.png)
-
-## document
-
-是HTMLdocument的实例
 
 ### 新建doucment对象
 
@@ -359,6 +349,8 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 >  通过 JavaScript访问document的对象， 可访问 创建 修改和删除document对象的某个节点。
 
 ##### document和document节点的关系
+
+注入关系,document节点是document的key
 
 
 

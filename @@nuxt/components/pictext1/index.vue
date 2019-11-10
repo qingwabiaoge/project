@@ -1,6 +1,6 @@
 <template>
     <!--    v-if不能放到最外层目录会和mixin里的this.$style冲突-->
-    <div>
+
         <div :class="$style['pictext']">
             <el-row >
 
@@ -16,20 +16,20 @@
                         <h2>
                             {{data.title}}
                         </h2>
-                        <div></div>
+
                         <h3 class="hidden-md-and-down">
                             {{data.info}}
                         </h3>
                         <p>
                             {{data.description|setLength(50)}}...
                         </p>
-                        <nuxt-link :to="data.href">
-                            <span></span>
-                            <base-button>
+                        <nuxt-link :to="data.href" >
+
+                            <button1>
 
                                 {{data.button}}
 
-                            </base-button>
+                            </button1>
                         </nuxt-link>
                     </section>
 
@@ -40,7 +40,7 @@
 
         </div>
 
-    </div>
+
 </template>
 
 <script>
@@ -93,6 +93,7 @@
             p {
                 font-size: 16px;
                 line-height: 2;
+                padding-bottom: 30px;
 
             }
 

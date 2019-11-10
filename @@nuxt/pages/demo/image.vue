@@ -1,7 +1,7 @@
 <template>
     <div style="background: #aaa">
         <img src="@/assets/images/test/image1.jpg" alt="">
-<!--        不支持svg暂时-->
+        <!--        不支持svg暂时-->
         <img src="@/assets/images/test/logo.svg" alt="">
         <img :src="img" alt="svg">
         <div style="height: 500px" :style="{background:`url(${img})`}">

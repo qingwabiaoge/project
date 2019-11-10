@@ -4,6 +4,89 @@ blur	可选。模糊距离。
 spread	可选。阴影的尺寸。
 color	可选。阴影的颜色。请参阅 CSS 颜色值。
 inset	可选。将外部阴影 (outset) 改为内部阴影。*/
+.text-underline {
+  display: inline-block;
+  position: relative;
+}
+.text-underline:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: #fb00c9;
+  transition: all 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.text-underline-center:after {
+  width: 100%;
+  transform: scale(0.5, 1);
+}
+.text-underline-top:after {
+  top: 0px;
+}
+.text-underline-left {
+  display: inline-block;
+}
+.hover-text-underline.active:after,
+.hover-text-underline:hover:after,
+.hover-text-underline:focus .hover-text-underline:active:after {
+  width: 100%;
+}
+.hover-text-underline-center:hover:after,
+.hover-text-underline-center:focus .hover-text-underline-center:active:after {
+  width: 100%;
+  transform: scale(1, 1);
+}
+.hover-text-underline-left:hover:after,
+.hover-text-underline-left.active:after {
+  height: 100% !important;
+  width: 2px !important;
+  position: absolute;
+  top: 0;
+}
+/*
+.hover-fade {
+  .hover-fade()
+}
+
+.hover-child-image-scale {
+  .hover-child-image-scale()
+}
+
+.hover-backgroud-primary-slideInLeft {
+  .hover-backgroud-primary-slideInLeft()
+}
+
+.hover-inverse-backgoud-fade-in {
+  .hover-inverse-backgoud-fade-in()
+}
+
+.hover-shadow-transition {
+  .hover-shadow-transition()
+}
+
+.hover-child-image-fade {
+  .hover-child-image-fade()
+}
+
+*/
+.add-after {
+  position: relative;
+}
+.add-after:after {
+  transition: all 0.2s;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: #fb00c9;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 10px;
+}
 /*包含了reset.css
 
 去除了
@@ -187,20 +270,24 @@ h1,
 .h1 {
   font-size: 3.485rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h2,
 .h2 {
   font-size: 2.72rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h3,
 .h3 {
   font-size: 1.8rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h4,
 .h4 {
   font-size: 1.6rem;
+  text-transform: uppercase;
 }
 h5,
 .h5 {
@@ -3376,116 +3463,6 @@ iframe.cover {
 }
 .line-height-2 {
   line-height: 2;
-}
-.hover-fade {
-  opacity: 0.7;
-  transition: all 0.5s;
-}
-.hover-fade:hover {
-  opacity: 1;
-}
-.hover-backgroud-primary-slideInLeft {
-  position: relative;
-  z-index: 2;
-}
-.hover-backgroud-primary-slideInLeft:after {
-  content: '';
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fb00c9;
-  width: 0;
-  z-index: -1;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.hover-backgroud-primary-slideInLeft:hover,
-.hover-backgroud-primary-slideInLeft.active {
-  color: #fff;
-}
-.hover-backgroud-primary-slideInLeft:hover:after,
-.hover-backgroud-primary-slideInLeft.active:after {
-  width: 100%;
-}
-.hover-inverse-backgoud-fade-in {
-  background: rgba(255, 255, 255, 0.5);
-  transition: all 0.5s;
-}
-.hover-inverse-backgoud-fade-in:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
-.hover-shadow-transition {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.5s;
-}
-.hover-shadow-transition:hover {
-  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
-}
-.hover-child-image-scale {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-.hover-child-image-scale > img {
-  transition: all 0.5s;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.hover-child-image-scale:hover img {
-  overflow: hidden;
-  transform: scale(1.1, 1.1);
-}
-.hover-child-image-fade img {
-  transition: all 0.5s;
-  -webkit-filter: brightness(0.5);
-  filter: brightness(0.5);
-}
-.hover-child-image-fade:hover img {
-  -webkit-filter: brightness(1);
-  filter: brightness(1);
-}
-.hover-underline {
-  position: relative;
-}
-.hover-underline::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 2px;
-  background: #fb00c9;
-  transition: all 0.5s;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-}
-.hover-underline.active::after,
-.hover-underline:hover::after,
-.hover-underline:focus .hover-underline:active::after {
-  width: 100%;
-}
-.hover-underline-center::after {
-  width: 100%;
-  transform: scale(0.5, 1);
-}
-.hover-underline-center:hover::after,
-.hover-underline-center:focus .hover-underline-center:active::after {
-  width: 100%;
-  transform: scale(1, 1);
-}
-.hover-underline-top::after {
-  top: 0;
-}
-.hover-underline-left {
-  display: inline-block;
-}
-.hover-underline-left:hover::after,
-.hover-underline-left.active::after {
-  height: 100% !important;
-  width: 2px !important;
-  position: absolute;
-  top: 0;
 }
 @font-face {
   font-family: "iconfont";

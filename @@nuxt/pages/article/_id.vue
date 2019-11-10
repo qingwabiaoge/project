@@ -1,10 +1,10 @@
 <template>
   <div class="container">
 
-    <articleA :data="article">
+    <articleDetail :data="article">
 
 
-    </articleA>
+    </articleDetail>
   </div>
 
 

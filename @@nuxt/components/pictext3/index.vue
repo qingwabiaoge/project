@@ -1,18 +1,22 @@
 <template>
-    <el-row class="shadow-small" :class="$style.pictext3" >
 
-        <el-col :md="12" class="hover-child-image-scale">
-            <img v-lazy="data.image" :alt="data.title" style="object-fit: cover;">
+    <el-row class="shadow-small" :class="$style.pictext3">
+
+        <el-col :md="12">
+            <figure>
+                <img v-lazy="data.image" :alt="data.title" ref="img">
+            </figure>
         </el-col>
-        <el-col :md="12" tag="section">
+        <el-col :md="12">
 
-            <h2>{{data.title}}</h2>
-            <h5 class="text-uppercase">{{data.subtitle}}</h5>
-            <p class="margin-top-small">{{data.description}}</p>
+            <section :style="{'--img-height':imgHeight+'px'}"><h2>{{data.title}}</h2>
+                <h5 class="text-uppercase">{{data.subtitle}}</h5>
+                <p class="margin-top-small">{{data.description}}</p>
 
-            <baseButton class="margin-medium-top">
-                <a :href="data.href">了解我们</a>
-            </baseButton>
+                <button1 class="margin-medium-top">
+                    <a :href="data.href">了解我们</a>
+                </button1>
+            </section>
         </el-col>
 
 
@@ -25,6 +29,19 @@
 
     export default {
         mixins: [mixin],
+        data() {
+            return {
+                imgHeight: 0
+            }
+        },
+        mounted() {
+            const el = this.$refs.img
+            el.onload = () => {
+                this.imgHeight = this.$refs.img.offsetHeight
+            }
+
+
+        }
 
     }
 
@@ -32,11 +49,26 @@
 </script>
 
 
-<style lang="postcss" module>
+<style lang="less" module>
+
+
     .pictext3 {
+        figure {
+            overflow: hidden;
+            img {
+                transition: all 0.5s;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1, 1.1);
+                }
+            }
+        }
+
         section {
-            height: 500px;
             display: flex;
+            height: var(--img-height);
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;

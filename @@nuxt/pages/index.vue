@@ -17,9 +17,9 @@
 
      </title-zh-english>
 
-     <pictext-history :data="components.history" >
+     <pictext-tab :data="components.history" >
 
-     </pictext-history>
+     </pictext-tab>
 
 
      <title-zh-english :data="components.trend"></title-zh-english>

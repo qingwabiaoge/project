@@ -1,3 +1,5 @@
+import Vuex from 'vuex'
+const themeMapObject = Vuex.createNamespacedHelpers('theme')
 const image1 = require('@/assets/images/test/image1.jpg')
 const image2 = require('@/assets/images/test/image2.jpg')
 const image3 = require('@/assets/images/test/image3.jpg')
@@ -90,7 +92,9 @@ export default {
             }
         }, inverse: Boolean
     },
-
+    computed: {
+        ...themeMapObject.mapState(['primary']),
+    },
     mounted() {
         //设置背景
         if (this.$el.style) {

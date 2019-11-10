@@ -13,7 +13,7 @@
                     {{item.description}}
                 </h4>
                 <nuxt-link :to="{path:item.href}">
-                    <base-button>{{item.button}}</base-button>
+                    <button1>{{item.button}}</button1>
                 </nuxt-link>
             </div>
         </el-col>

@@ -14,9 +14,9 @@
               {{data.description}}
             </p>
 
-            <baseButton v-if="data.button" type="inverse" size="small">
+            <button1 v-if="data.button" type="inverse" size="small">
               {{data.button}}
-            </baseButton>
+            </button1>
 
           </div>
         </section>
@@ -46,6 +46,7 @@ export default {
     overflow: hidden;
     position: relative;
     display: inline-block;
+
 
     section {
       text-transform: uppercase;
@@ -99,6 +100,7 @@ export default {
     img {
       object-fit: cover;
       width: 100%;
+      transition: all 0.2s;
     }
   }
 
