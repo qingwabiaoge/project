@@ -1,49 +1,86 @@
 <template>
-  <div class="pictextCompany">
 
+    <el-row :class="$style.pictext2">
 
-    <div>
-      <img v-lazy="data.image" :alt="data.title">
-    </div>
-    <card type="inverse" border="true" style="margin-top: 6px">
-      <h2 class="text-center" style="text-transform: uppercase">
-        {{data.title}}
-      </h2>
-      <p>
-        {{data.description|setLength(num)}}
-        <span v-if="more" @click="num=10000;more=false">...</span>
-      </p>
-      <p class="text-center color-primary">
-        <em v-if="more" @click="num=10000;more=false"> ▼</em> <em v-else @click="num=500;more=true"> ▲</em>
-      </p>
+        <el-col :md="12">
+            <figure>
+                <img v-lazy="data.image" alt="data.title" ref="img">
+            </figure>
 
-    </card>
-  </div>
+        </el-col>
+
+        <el-col :md="12">
+            <section ref="section" :style="{'--img-height':imgHeight+'px'}">
+                <h2>{{data.title}}</h2>
+                <underline :class="$style['underline']" placement="center"><h4>{{data.subtitle}}</h4></underline>
+                <p>{{data.description}}</p>
+                <h5>【查看更多】</h5>
+            </section>
+
+        </el-col>
+
+    </el-row>
 </template>
 
 <script>
-  import mixin from '@/mixins/conponent-mixin'
-
-export default {
-    mixins:[mixin],
-
-    data() {
-      return {
-        num: 500,
-        more: true,
-      }
-    },
+    import mixin from '@/mixins/conponent-mixin'
 
 
-  }
+    export default {
+
+        mixins: [mixin],
+        data() {
+            return {
+                imgHeight: 0
+            }
+        },
+        mounted() {
+            const el = this.$refs.img
+            el.onload = () => {
+                this.imgHeight = this.$refs.img.offsetHeight
+            }
+
+        }
+
+    }
 </script>
+<style lang="less" module>
+    .pictext2 {
+        * {
+            transition: all 0.5s;
+        }
 
-<style module>
-  .text {
-    background: rgba(0, 0, 0, 0.6);
-    margin: 15px;
-    padding: 20px 10px;
-  }
+        .underline {
+            margin-top: 30px;
+
+        }
+
+        h4 {
+            padding-bottom: 5px
+        }
+
+        figure {
+            overflow: hidden;
+        }
+
+        section {
+            padding: 0 30px;
+            height: var(--img-height);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+
+        }
+    }
 
 
 </style>

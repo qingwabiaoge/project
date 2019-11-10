@@ -18,17 +18,15 @@
     z-index: 2;
   }
   &:after {
-    content: '';
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    content: '';
+    height: 100%;
     background-color: @global-color-primary;
     width: 0;
     z-index: -1;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
-
   }
   &:hover, &.active {
     color: #fff;
@@ -102,98 +100,7 @@
   }
 }
 
-//underline-------------------------------------------------------
-//从左边延长
-.text-underline() {
-  & {
-    display: inline-block;
-    position: relative;
-  }
 
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 2px;
-    background: @global-color-primary;
-    transition: all 0.3s;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-  }
-
-
-  //从中间延长
-  &-center {
-
-    &:after {
-      width: 100%;
-      transform: scale(0.5, 1);
-    }
-
-
-  }
-
-  //位置放到了上方
-  &-top {
-    &:after {
-      top: 0px
-    }
-
-  }
-
-  //用于竖形导航
-  &-left {
-    display: inline-block;
-
-  }
-
-}
-
-.hover-text-underline() {
-  &.active,
-  &:hover,
-  &:focus
-  &:active {
-
-    //color: @hover-underline-color;
-    &:after {
-      width: 100%;
-
-    }
-  }
-
-  &-center {
-    &:hover,
-    &:focus
-    &:active {
-      &:after {
-        width: 100%;
-        transform: scale(1, 1)
-      }
-    }
-  }
-  &-left {
-
-    &:hover:after,
-    &.active:after {
-
-      height: 100% !important;
-      width: 2px !important;
-      position: absolute;
-      top: 0;
-    }
-  }
-}
-
-.text-underline {
-  .text-underline()
-}
-
-.hover-text-underline {
-  .hover-text-underline()
-}
 
 /*
 .hover-fade {

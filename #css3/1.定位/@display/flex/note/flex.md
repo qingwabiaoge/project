@@ -163,7 +163,7 @@ align-items: stretch(默认,一行内拉伸)|flex-start | flex-end | center | ba
 
 # .item{ }
 
-### 某个元素在一行内的排列方式
+### 设置某个item在一行内的排列方式
 ```
 align-self:flex-start | flex-end | center | baseline | stretch | auto;
 //align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性

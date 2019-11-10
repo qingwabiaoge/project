@@ -8,9 +8,9 @@
 
           </title-zh-english>
 
-    <pic-c-list :data="components.produce">
+    <pictext5-list :data="components.produce">
 
-    </pic-c-list>
+    </pictext5-list>
 
 
      <title-zh-english inverse :data="{...components.history}">

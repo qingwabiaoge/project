@@ -1,45 +1,30 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 
-<body>
 <div id="app">
 
+    <section>section</section>
+
+    <section
+            @mouseover="isRotate=true"
+            @mouseleave="isRotate=false"
+            :class="{rotate:isRotate}">section
+    </section>
 
 
 </div>
 
-<style type="">
-    html {
-        height: 100px;
-        overflow: scroll;
-        border: 1px solid #00a0e9;
-    }
-
-    body {
-        height: 1900px;
-        border: 1px solid red;
-    }
-</style>
-
-<script type="module">
-    import g1 from './export.js'
-
-    class Person {
-
-    }
-
-    const g2 = 0
-    let g3=3
-    function fn() {
-        const i = 1
-        var m = 2
-    }
-
-    fn()
+<script>
+    new Vue({data: {isRotate: false}}).$mount('#app')
 
 </script>
-</body>
-</html>
+<style>
+    section {
+        display: inline-block;
+        transition: all 1s;
+    }
+
+    .rotate, section:first-child:hover {
+        transform: rotate(90deg)
+    }
+
+</style>

@@ -4,48 +4,6 @@ blur	可选。模糊距离。
 spread	可选。阴影的尺寸。
 color	可选。阴影的颜色。请参阅 CSS 颜色值。
 inset	可选。将外部阴影 (outset) 改为内部阴影。*/
-.text-underline {
-  display: inline-block;
-  position: relative;
-}
-.text-underline:after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 2px;
-  background: #fb00c9;
-  transition: all 0.3s;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.text-underline-center:after {
-  width: 100%;
-  transform: scale(0.5, 1);
-}
-.text-underline-top:after {
-  top: 0px;
-}
-.text-underline-left {
-  display: inline-block;
-}
-.hover-text-underline.active:after,
-.hover-text-underline:hover:after,
-.hover-text-underline:focus .hover-text-underline:active:after {
-  width: 100%;
-}
-.hover-text-underline-center:hover:after,
-.hover-text-underline-center:focus .hover-text-underline-center:active:after {
-  width: 100%;
-  transform: scale(1, 1);
-}
-.hover-text-underline-left:hover:after,
-.hover-text-underline-left.active:after {
-  height: 100% !important;
-  width: 2px !important;
-  position: absolute;
-  top: 0;
-}
 /*
 .hover-fade {
   .hover-fade()

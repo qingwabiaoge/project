@@ -1,85 +1,118 @@
 <template>
+    <div class="inverse-color" :class="$style.pictext5">
+        <!--如果是组件 data.href存在,如果不是组件则是文章-->
+        <nuxt-link :to="data.href">
+            <div>
 
-    <el-row :class="$style.pictext5">
+                <img v-if="data.image" v-lazy="data.image" :style="{height: height+'px'}" alt="">
+                <section :class="placement?$style[placement]:''">
+                    <div>
+                        <h3 v-if="data.title">
+                            {{data.title}}
+                        </h3>
+                        <p v-if="data.description">
+                            {{data.description}}
+                        </p>
 
-        <el-col :md="12">
-            <figure>
-                <img v-lazy="data.image" alt="data.title" ref="img">
-            </figure>
+                        <button1 v-if="data.button" type="inverse" size="small">
+                            {{data.button}}
+                        </button1>
 
-        </el-col>
-
-        <el-col :md="12">
-            <section ref="section" :style="{'--img-height':imgHeight+'px'}">
-                <h2>{{data.title}}</h2>
-                <underline :class="$style['underline']" placement="center"><h4>{{data.subtitle}}</h4></underline>
-                <p>{{data.description}}</p>
-                <h5>【查看更多】</h5>
-            </section>
-
-        </el-col>
-
-    </el-row>
+                    </div>
+                </section>
+            </div>
+        </nuxt-link>
+    </div>
 </template>
 
 <script>
     import mixin from '@/mixins/conponent-mixin'
 
-
     export default {
-
         mixins: [mixin],
-        data() {
-            return {
-                imgHeight: 0
-            }
-        },
-        mounted() {
-            const el = this.$refs.img
-            el.onload = () => {
-                this.imgHeight = this.$refs.img.offsetHeight
-            }
 
-        }
+
+        props: {
+            height: Number,
+            placement: {type: String, default: ""}
+        },
 
     }
 </script>
+
 <style lang="less" module>
     .pictext5 {
-        * {
-            transition: all 0.5s;
-        }
-
-        .underline {
-            margin-top: 30px;
-
-        }
-
-        h4 {
-            padding-bottom: 5px
-        }
-
-        figure {
-            overflow: hidden;
-        }
+        word-wrap: break-word;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
 
         section {
-            padding: 0 30px;
-            height: var(--img-height);
-            text-align: center;
+            text-transform: uppercase;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: absolute;
+            padding: 0 10px;
+            z-index: 1;
+            background: rgba(0, 0, 0, .5);
+            transition: all 0.2s;
 
-        }
+            &.left {
+                width: 40%;
+                left: 0;
+                top: 0;
+                bottom: 0;
+            }
 
-        &:hover {
-            img {
-                transform: scale(1.2);
+            &.right {
+                width: 40%;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            &.bottom {
+                height: 40%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+            }
+
+            &.cover {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 30px;
             }
 
         }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            section {
+                background: rgba(0, 0, 0, 0.8);
+            }
+
+            img {
+                transform: scale(1.2, 1.2);
+            }
+        }
+
     }
 
 

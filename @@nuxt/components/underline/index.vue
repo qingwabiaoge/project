@@ -1,6 +1,6 @@
 <template>
-    <!--css=modele不支持 $style.['text-underline-'+placement],选择了scope-->
-    <div :class="[$style['text-underline'],$style[placementClassName]]"
+    <!--css=modele不支持 $style.['underline-'+placement],选择了scope-->
+    <div :class="[$style['underline'],$style[placementClassName]]"
          :style="{'--primary-color':primary}">
         <slot></slot>
     </div>
@@ -16,9 +16,8 @@
         },
         computed: {
             placementClassName() {
-                return this.placement ? ['text-underline-' + this.placement] : ''
+                return this.placement ? ['underline-' + this.placement] : ''
             }
-
         }
     }
 
@@ -26,7 +25,7 @@
 <style lang="less" module>
 
     //从左边延长
-    .text-underline {
+    .underline {
         & {
             display: inline-block;
             position: relative;

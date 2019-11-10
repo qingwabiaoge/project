@@ -12,7 +12,7 @@
 
         data() {
             return {
-                componentsData: [{name: 'picA'}, {name: 'picB'}, {name: 'picC'}, {name: 'elCarouselResponsive'}]
+                componentsData: [{name: 'picA'}, {name: 'picB'}, {name: 'pictext5'}, {name: 'elCarouselResponsive'}]
             }
         }
 
