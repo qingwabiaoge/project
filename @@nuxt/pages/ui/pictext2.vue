@@ -2,7 +2,6 @@
 
   <el-row :gutter="20">
 
-
       <pictext2>
 
       </pictext2>
