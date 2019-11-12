@@ -12,6 +12,7 @@ const schema = new Schema({
   //默认值
   age: {type: Number, default: 0},
   type: {type: String, default: '雄'},
+  image:{type: String, default: ''},
   date: {type: Date, default: Date.now},
   hidden: Boolean,
   //嵌套

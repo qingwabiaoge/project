@@ -2,29 +2,14 @@
 
 <div id="app">
 
-    <section>section</section>
-
-    <section
-            @mouseover="isRotate=true"
-            @mouseleave="isRotate=false"
-            :class="{rotate:isRotate}">section
-    </section>
-
 
 </div>
 
 <script>
-    new Vue({data: {isRotate: false}}).$mount('#app')
+
 
 </script>
-<style>
-    section {
-        display: inline-block;
-        transition: all 1s;
-    }
 
-    .rotate, section:first-child:hover {
-        transform: rotate(90deg)
-    }
+<style>
 
 </style>

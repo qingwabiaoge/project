@@ -1,7 +1,4 @@
-/**
- * Created by Administrator on 2016/7/12.
- * 流数据
- */
+
 var fs = require('fs');
 var stream = fs.createReadStream('../assets/1.json');
 var data = "";

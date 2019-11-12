@@ -109,6 +109,7 @@ module.exports = {
             '~/plugins/global-styles',
     */
         '~/plugins/swiper.client.js',
+        '~/plugins/waterfall.client.js',
         '~/plugins/lei-ui',
         '~/plugins/vue-lazyload',
         "~/plugins/axios",

@@ -2,7 +2,7 @@ var fs = require("fs");
 var data = '菜鸟教程官网地址：www.runoob.com';
 
 // 创建一个可以写入的流，写入到文件 output.txt 中
-var writerStream = fs.createWriteStream('./data/4.txt');
+var writerStream = fs.createWriteStream('../assets/4.txt');
 
 // 使用 utf8 编码写入数据
 writerStream.write(data,'UTF8');
@@ -19,4 +19,4 @@ writerStream.on('error', function(err){
     console.log(err.stack);
 });
 
-console.log("程序执行完毕");
+console.log("主程序");
