@@ -16,7 +16,7 @@
             </svg>
             <h3>{{data.title}}</h3>
         </section>
-        <img v-lazy="data.image" :style="{height:height+'px'}" alt="data.title"/>
+        <img v-lazy="data.image" :style="{height:height?height+'px':'',width:width?width+'px':''}" alt="data.title"/>
     </div>
 
 </template>
@@ -26,7 +26,7 @@
 
     export default {
         mixins: [mixin],
-        props: ['height']
+        props: ['height','width']
 
     }
 </script>

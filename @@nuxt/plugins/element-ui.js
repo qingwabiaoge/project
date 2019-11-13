@@ -2,6 +2,8 @@ import Vue from 'vue'
 
 
 import {
+  InfiniteScroll,
+  Drawer,
   //表单
 
   Form, FormItem, Button, ButtonGroup, Input, Table, TableColumn, Option, Switch, Select, Upload,colorPicker,
@@ -28,7 +30,9 @@ import {
   Notification,
 
 
-} from 'element-ui'    //引入Button按钮
+
+} from 'element-ui'
+
 
 export default () => {
 
@@ -55,6 +59,8 @@ export default () => {
   Vue.use(Row)
   Vue.use(Col)
   Vue.use(Container)
+  Vue.use(InfiniteScroll)
+  Vue.use(Drawer)
 
 //导航-------------
   Vue.use(Menu);

@@ -6,6 +6,7 @@ const image3 = require('@/assets/images/test/image3.jpg')
 const background = require('@/assets/images/test/backgroud.jpg')
 const icon = require('@/assets/images/test/icon.png')
 const map = require('@/assets/images/test/map.jpg')
+const qcode = require('@/assets/images/test/qcode.png')
 const title = 'Fast'
 const subtitle = "单层冲锋衣"
 const description = '稻城女款单层冲锋衣 OSY-TEX高度防水透气薄膜面料,精密磨砂质感方格图案表面;YKK 耐用顺滑高端拉链;全衣3D立体裁剪;全'
@@ -30,6 +31,7 @@ const test = {
     name: 'ModleName',
     tel: '151666666\n888-888888',
     qq: '888888\n6666',
+    qcode:qcode,
     address: '广东省中山市东城大道NO.001'
     ,
     children:

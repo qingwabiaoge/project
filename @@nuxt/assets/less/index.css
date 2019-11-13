@@ -603,6 +603,32 @@ sub {
     display: none !important;
   }
 }
+.el-dialog {
+  width: auto;
+  display: inline-block;
+}
+.el-dialog__wrapper {
+  text-align: center;
+}
+.infinite-list {
+  padding: 10px;
+}
+.infinite-list .el-card {
+  margin-top: 20px;
+}
+.infinite-list p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 5px;
+}
+.infinite-list * + p {
+  margin-top: 0;
+}
+.el-drawer {
+  width: 50% !important;
+}
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;

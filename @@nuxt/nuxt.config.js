@@ -116,6 +116,7 @@ module.exports = {
         "~/plugins/filter",
         "~/plugins/inject",
         "~/plugins/vuex-i18n",
+        { src: '~/plugins/vue-masonry',  mode: 'client'},
         {src: "~/plugins/VueEditor.js", mode: 'client'},
         //vuex持久化
         //"~/plugins/vuex-persistedstate.client.js",
