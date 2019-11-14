@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+<div id="app">
+
+
+</div>
+
+
+<script>
+    //构造函数的参数
+    const store = new Vuex.Store({
+        state: {m: 1},
+        getters: {
+            n(state) {
+                return m + 1
+            }
+        },
+        modules: {
+            moduleA: {
+                namespaced: true,
+                state: { //state===moduleA
+                    count: 0
+                },
+                mutations: {
+                    set: state => {
+
+                    }
+                },
+                actions: {
+                    //只有action里rootsate,rootgetters
+                    get: ctx => {
+                        console.log({'ctx': ctx})
+                    }
+                }
+            },
+
+        },
+
+
+    })
+    //打印出构造函数
+    console.log('instrust', Vuex.Store)
+    //打印出构造函数的静态函数,和protorype
+    console.log({class: Vuex.Store})
+    //打印出实例(protorype)
+    console.log({instance: store})
+
+    store.commit('moduleA/set')
+    store.dispatch('moduleA/get')
+
+
+</script>

@@ -1,13 +1,22 @@
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 
 <div id="app">
-
+{{a}}-{{b}}
 
 </div>
 
 <script>
 
+const vm=new Vue({
+    el:'#app',
+    data:{
+        a:''
 
+    }
+})
+
+Object.assign(vm,{a:1})
+Object.assign(vm,{b:2})
 </script>
 
 <style>
