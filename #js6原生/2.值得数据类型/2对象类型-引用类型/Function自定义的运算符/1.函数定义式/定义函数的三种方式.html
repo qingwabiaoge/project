@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src=""></script>
+</head>
+<body>
+
+<script>
+    //1.函数的定义
+    function sum1(a1,b1){
+        return a1+b1;
+    }
+    sum1.age = 100;
+    console.log(sum1(1,1));//2
+    console.log( sum1.age )
+
+
+    var sum2 = function(a1,b1){
+        return a1+b1;
+    };
+    console.log(sum2(1,1));//2
+    console.log(sum2)
+
+
+
+    var sum3 = new Function("a1,b1","return a1+b1;");
+    console.log({sum3})
+    sum3.age = 100;
+    console.log(sum3(1,1));//2
+    console.log(sum3.age);//100
+
+
+
+</script>
+</body>
+</html>

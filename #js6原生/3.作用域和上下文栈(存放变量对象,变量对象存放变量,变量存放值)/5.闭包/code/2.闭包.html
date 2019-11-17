@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function outer() {
+        var obj = {a: 1}
+
+        return function () {
+
+            console.log(obj.a)
+        };
+
+    }
+
+    var outObj = outer();
+    outObj();
+
+
+</script>
+
+
+</body>
+</html>

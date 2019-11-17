@@ -1,0 +1,29 @@
+<script>
+    {
+    const str="This is an\n antzone good";
+    const reg=/an$/;
+    console.log(str.match(reg));   //null
+
+    }
+    {
+
+        const str="This is an\n antzone good";
+        const reg=/an$/m;
+        console.log(str.match(reg));//[...........]
+    }
+
+    {
+        const reg = /^b/;
+        const str = 'test\nbbs';
+       console.log(str.match(reg)) //null
+
+    }
+
+    {
+        const reg = /^b/m;
+        const str = 'test\nbbs';
+        console.log(str.match(reg))//[...........]
+
+
+    }
+</script>

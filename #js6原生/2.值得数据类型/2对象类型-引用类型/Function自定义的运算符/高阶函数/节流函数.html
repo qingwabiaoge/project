@@ -1,0 +1,44 @@
+<div style="height: 2000px"></div>
+<script>
+    // 函数节流，频繁操作中间隔 delay 的时间才处理一次
+    function throttle(fn, delay) {
+        delay = delay || 200;
+
+        var timer = null;
+        // 每次滚动初始的标识
+        var timestamp = 0;
+
+        return function() {
+            var arg = arguments;
+            var now = Date.now();
+
+            // 设置开始时间
+            if (timestamp === 0) {
+                timestamp = now;
+            }
+
+            clearTimeout(timer);
+            timer = null;
+
+            // 已经到了delay的一段时间，进行处理
+            if (now - timestamp >= delay) {
+                fn.apply(this, arg);
+                timestamp = now;
+            }
+            // 添加定时器，确保最后一次的操作也能处理
+            else {
+                timer = setTimeout(function() {
+                    fn.apply(this, arg);
+                    // 恢复标识
+                    timestamp = 0;
+                }, delay);
+            }
+        }
+    };
+
+    var count = 0;
+
+    window.onscroll = throttle(function(e) {
+        console.log(e.type, ++count); // scroll
+    }, 500);
+</script>

@@ -14,164 +14,14 @@
 
 # 硬盘
 
-### BIOS/MBR UEFI/GPT关系与区别-资料整理
+### MBR  GPT
 
-##### 关系
+|             | 作为系统盘 | 作为数据盘   | 分区个数 | 引导文件 | 其他盘       |
+| ----------- | ---------- | ------------ | -------- | -------- | ------------ |
+| MBR系统分区 | Legacy引导 | 不受bios限制 | 4        | window盘 |              |
+| GPT硬盘分区 | UEFI引导   | 不受bios限制 | 不限     | ESP盘    | MSR  recover |
 
-关于 BIOS/MBR UEFI/GPT他们之间的关系一直比较疑惑，
-
-首先一点前提 BIOS UEFI 是一类，是控制硬件，引导启动的；MBR GPT是硬盘的分区定义.。 后者分别是前者的升级版。
-
-第一个问题：他们死者之间能相互搭配吗？比如GPT MBR能搭配启动吗？
-
-1、传统的主板就是传统 BIOS，可在使用 MBR 分区表的硬盘（俗称 MBR磁盘，就是传统常用的模式）上安装32或64位操作系统。同时也支持使用 GUID 分区表的硬盘（俗称GPT磁盘），**但该硬盘上不能安装操作系统。**
-
-2、新型主板使用 UEFI BIOS，只能在使用 GUID 分区表的硬盘（俗称GPT磁盘）上安装64位操作系统。同时也支持 MBR 磁盘，**但该硬盘上不能安装操作系统**。因此，无论主板是传统 BIOS，还是 UEFI BIOS，都可以同时使用 GPT 磁盘与 MBR 磁盘，但要安装操作系统，就有明确的区别：传统 BIOS 的主板只能使用 MBR 磁盘安装操作系统；UEFI BIOS 的主板只能在 GPT 磁盘上安装64位操作系统。另外，XP不能识别 GPT 磁盘，这与主板 BIOS 无关。
-
-第二个问题：GPT 分区是什么？
-
-**全局唯一标识分区表**（**[GUID](https://zh.wikipedia.org/wiki/GUID) Partition Table**，[缩写](https://zh.wikipedia.org/wiki/缩写)：**GPT**）是一个实体[硬盘](https://zh.wikipedia.org/wiki/硬盘)的[分区表](https://zh.wikipedia.org/wiki/分区表)的结构布局的标准。它是[可扩展固件接口](https://zh.wikipedia.org/wiki/可扩展固件接口)（[EFI](https://zh.wikipedia.org/wiki/EFI)）标准（被[Intel](https://zh.wikipedia.org/wiki/Intel)用于替代个人计算机的[BIOS](https://zh.wikipedia.org/wiki/BIOS)）的一部分，被用于替代[BIOS](https://zh.wikipedia.org/wiki/BIOS)系统中的一32bits来存储逻辑块地址和大小信息的[主引导记录](https://zh.wikipedia.org/wiki/主開機紀錄)（MBR）分区表。对于那些扇区为512字节的磁盘，[MBR](https://zh.wikipedia.org/wiki/MBR)分区表不支持容量大于2.2[TB](https://zh.wikipedia.org/wiki/Terabyte)（2.2×1012[字节](https://zh.wikipedia.org/wiki/字节)）[[1\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#cite_note-UEFIDrivePartitionFAQ-1)的[分区](https://zh.wikipedia.org/wiki/分区)，然而，一些硬盘制造商（诸如希捷和西部数据）注意到这个局限性，并且将他们的容量较大的磁盘升级到4KB的[扇区](https://zh.wikipedia.org/wiki/扇区)，这意味着MBR的有效容量上限提升到16 TiB。 这个看似“正确的”解决方案，在临时地降低人们对改进磁盘分配表的需求的同时，也给市场带来关于在有较大的块（[block](https://zh.wikipedia.org/w/index.php?title=Block&action=edit&redlink=1)）的设备上从BIOS启动时，如何最佳的划分磁盘分区的困惑。GPT分配64bits给逻辑块地址，因而使得最大分区大小在264-1个扇区成为可能。对于每个扇区大小为512字节的磁盘，那意味着可以有9.4[ZB](https://zh.wikipedia.org/wiki/ZB)（9.4×1021字节）或8 [ZiB](https://zh.wikipedia.org/wiki/ZiB)个512字节（9,444,732,965,739,290,426,880字节或18,446,744,073,709,551,615（264-1）个扇区×512（29）字节每扇区）[[1\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#cite_note-UEFIDrivePartitionFAQ-1)[[2\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#cite_note-Redmondmag64bitQuestion-2)。
-
-第三个问题：mbr gpt 分区数量？
-
-**mbr：只支持4个主分区或三个主分区和一个扩展分区，扩展分区下可以有多个逻辑分区。扩展分区中逻辑驱动器的引导记录是链式的。每一个逻辑分区都有一个和MBR结构类似的\**扩展引导记录\**(EBR)，其分区表的第一项指向该逻辑分区本身的引导扇区，第二项指向下一个逻辑驱动器的EBR，分区表第三、第四项没有用到。**
-
-**gpt：GPT，\**全局唯一标识分区表(GUID Partition Table)\**，与MBR最大4个分区表项的限制相比，GPT对分区数量没有限制，但
-\**Windows最大仅支持128个GPT分区，GPT可管理硬盘大小达到了18EB\**。只有\**基于UEFI平台的主板才支持GPT分区引导启\**动。下面是windowsgpt分区图：**
-
- 
-
-**[![img](img/275px-GUID_Partition_Table_Scheme.svg.png)](https://zh.wikipedia.org/wiki/File:GUID_Partition_Table_Scheme.svg)**
-
- 
-
-GPT分区表的结构。此例中，每个逻辑块（LBA）为512字节，每个分区的记录为128字节。负数的LBA地址表示从最后的块开始倒数，−1表示最后一个块。
-
- 
-
-第四个问题：efi msr分区是什么？
-
-ESP分区：EFI system partition，该分区用于采用了EFI BIOS的电脑系统，用来启动操作系统。分区内存放引导管理程序、驱动程序、
-系统维护工具等。如果电脑采用了EFI系统，或当前磁盘用于在EFI平台上启动操作系统，则应建议ESP分区。
-MSR分区：即微软保留分区，是GPT磁盘上用于保留空间以备用的分区，例如在将磁盘转换为动态磁盘时需要使用这些分区空间。
-
-
-
-第五个问题：GPT分区标志
-
-GPT硬盘结构：
-GPT硬盘在“保护MBR”450字节偏移处设置“EE”标志标明本硬盘为GPT
-
-第六个问题：gpt分区在硬盘中的格式
-
-| 起始字节 | 长度   | 内容                                                         |
-| -------- | ------ | ------------------------------------------------------------ |
-| 0        | 8字节  | 签名（"EFI PART", 45 46 49 20 50 41 52 54）                  |
-| 8        | 4字节  | 修订（在1.0版中，值是00 00 01 00）                           |
-| 12       | 4字节  | 分区表头的大小（单位是字节，通常是92字节，即5C 00 00 00）    |
-| 16       | 4字节  | 分区表头（第0－91字节）的[CRC32](https://zh.wikipedia.org/wiki/CRC32)校验，在计算时，把这个字段作为0处理，需要计算出分区序列的CRC32校验后再计算本字段 |
-| 20       | 4字节  | 保留，必须是0                                                |
-| 24       | 8字节  | 当前LBA（这个分区表头的位置）                                |
-| 32       | 8字节  | 备份LBA（另一个分区表头的位置）                              |
-| 40       | 8字节  | 第一个可用于分区的LBA（主分区表的最后一个LBA + 1）           |
-| 48       | 8字节  | 最后一个可用于分区的LBA（备份分区表的第一个LBA − 1）         |
-| 56       | 16字节 | 硬盘GUID（在[类UNIX](https://zh.wikipedia.org/wiki/類UNIX)系统中也叫[UUID](https://zh.wikipedia.org/wiki/UUID)） |
-| 72       | 8字节  | 分区表项的起始LBA（在主分区表中是2）                         |
-| 80       | 4字节  | 分区表项的数量                                               |
-| 84       | 4字节  | 一个分区表项的大小（通常是128）                              |
-| 88       | 4字节  | 分区序列的CRC32校验                                          |
-| 92       | *      | 保留，剩余的字节必须是0（对于512字节LBA的硬盘即是420个字节） |
-
-主分区表和备份分区表的头分别位于硬盘的第二个扇区（LBA 1）以及硬盘的最后一个扇区。备份分区表头中的信息是关于备份分区表的。
-
-**分区表项（LBA 2–33）**
-
-GPT分区表使用简单而直接的方式表示分区。一个分区表项的前16字节是分区类型[GUID](https://zh.wikipedia.org/wiki/GUID)。例如，[EFI系统分区](https://zh.wikipedia.org/w/index.php?title=EFI系统分区&action=edit&redlink=1)的GUID类型是`{C12A7328-F81F-11D2-BA4B-00A0C93EC93B}`。接下来的16字节是该分区唯一的GUID（这个GUID指的是该分区本身，而之前的GUID指的是该分区的类型）。再接下来是分区起始和末尾的64位LBA编号，以及分区的名字和属性。
-
-| 起始字节 | 长度   | 内容                                                         |
-| -------- | ------ | ------------------------------------------------------------ |
-| 0        | 16字节 | 分区类型GUID                                                 |
-| 16       | 16字节 | 分区GUID                                                     |
-| 32       | 8字节  | 起始LBA（[小端序](https://zh.wikipedia.org/wiki/小端序)）    |
-| 40       | 8字节  | 末尾LBA                                                      |
-| 48       | 8字节  | 属性标签（如：`60`表示“只读”）                               |
-| 56       | 72字节 | 分区名（可以包括36个[UTF-16](https://zh.wikipedia.org/wiki/UTF-16)（小端序）字符） |
-
-
-
-**第七个问题：分区类型GUID**
-
-| 相关操作系统                                                 | 分区类型                                                     | [GUID](https://zh.wikipedia.org/wiki/GUID)[[1\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#endnote_guidord) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| *（None）*                                                   | 未使用                                                       | `00000000-0000-0000-0000-000000000000`                       |
-| MBR分区表                                                    | `024DEE41-33E7-11D3-9D69-0008C781F39F`                       |                                                              |
-| [EFI系统分区](https://zh.wikipedia.org/w/index.php?title=EFI系统分区&action=edit&redlink=1) | `C12A7328-F81F-11D2-BA4B-00A0C93EC93B`                       |                                                              |
-| [BIOS引导分区](https://zh.wikipedia.org/w/index.php?title=BIOS引导分区&action=edit&redlink=1) | `21686148-6449-6E6F-744E-656564454649`                       |                                                              |
-| [Windows](https://zh.wikipedia.org/wiki/Microsoft_Windows)   | 微软保留分区                                                 | `E3C9E316-0B5C-4DB8-817D-F92DF00215AE`                       |
-| 基本数据分区[[2\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#endnote_linwina) | `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`                       |                                                              |
-| [逻辑软盘管理工具](https://zh.wikipedia.org/w/index.php?title=逻辑软盘管理工具&action=edit&redlink=1)元数据分区 | `5808C8AA-7E8F-42E0-85D2-E1E90434CFB3`                       |                                                              |
-| 逻辑软盘管理工具数据分区                                     | `AF9B60A0-1431-4F62-BC68-3311714A69AD`                       |                                                              |
-| Windows恢复环境                                              | `DE94BBA4-06D1-4D40-A16A-BFD50179D6AC`                       |                                                              |
-| [IBM通用并行文件系统](https://zh.wikipedia.org/w/index.php?title=IBM通用并行文件系统&action=edit&redlink=1)（GPFS）分区 | `37AFFC90-EF7D-4e96-91C3-2D7AE055B174`                       |                                                              |
-| [HP-UX](https://zh.wikipedia.org/wiki/HP-UX)                 | 数据分区                                                     | `75894C1E-3AEB-11D3-B7C1-7B03A0000000`                       |
-| 服务分区                                                     | `E2A1E728-32E3-11D6-A682-7B03A0000000`                       |                                                              |
-| [Linux](https://zh.wikipedia.org/wiki/Linux)                 | 数据分区[[2\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#endnote_linwinb) | `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`                       |
-| [RAID](https://zh.wikipedia.org/wiki/RAID)分区               | `A19D880F-05FC-4D3B-A006-743F0F84911E`                       |                                                              |
-| [交换分区](https://zh.wikipedia.org/wiki/交换分区)           | `0657FD6D-A4AB-43C4-84E5-0933C84B4F4F`                       |                                                              |
-| [逻辑卷管理员](https://zh.wikipedia.org/wiki/邏輯捲軸管理員)（LVM）分区 | `E6D6D379-F507-44C2-A23C-238F2A3DF928`                       |                                                              |
-| 保留                                                         | `8DA63339-0007-60C0-C436-083AC8230908`                       |                                                              |
-| [FreeBSD](https://zh.wikipedia.org/wiki/FreeBSD)             | 启动分区                                                     | `83BD6B9D-7F41-11DC-BE0B-001560B84F0F`                       |
-| 数据分区                                                     | `516E7CB4-6ECF-11D6-8FF8-00022D09712B`                       |                                                              |
-| 交换分区                                                     | `516E7CB5-6ECF-11D6-8FF8-00022D09712B`                       |                                                              |
-| [UFS](https://zh.wikipedia.org/wiki/UFS)分区                 | `516E7CB6-6ECF-11D6-8FF8-00022D09712B`                       |                                                              |
-| [Vinum volume manager](https://zh.wikipedia.org/w/index.php?title=Vinum_volume_manager&action=edit&redlink=1)分区 | `516E7CB8-6ECF-11D6-8FF8-00022D09712B`                       |                                                              |
-| [ZFS](https://zh.wikipedia.org/wiki/ZFS)分区                 | `516E7CBA-6ECF-11D6-8FF8-00022D09712B`                       |                                                              |
-| [Mac OS X](https://zh.wikipedia.org/wiki/Mac_OS_X)           | [HFS](https://zh.wikipedia.org/wiki/HFS)（HFS+）分区         | `48465300-0000-11AA-AA11-00306543ECAC`                       |
-| [苹果公司](https://zh.wikipedia.org/wiki/苹果公司)[UFS](https://zh.wikipedia.org/wiki/UFS) | `55465300-0000-11AA-AA11-00306543ECAC`                       |                                                              |
-| [ZFS](https://zh.wikipedia.org/wiki/ZFS)[[3\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#endnote_solmaca) | `6A898CC3-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| 苹果RAID分区                                                 | `52414944-0000-11AA-AA11-00306543ECAC`                       |                                                              |
-| 苹果RAID分区，下线                                           | `52414944-5F4F-11AA-AA11-00306543ECAC`                       |                                                              |
-| 苹果启动分区                                                 | `426F6F74-0000-11AA-AA11-00306543ECAC`                       |                                                              |
-| Apple Label                                                  | `4C616265-6C00-11AA-AA11-00306543ECAC`                       |                                                              |
-| Apple TV恢复分区                                             | `5265636F-7665-11AA-AA11-00306543ECAC`                       |                                                              |
-| [Solaris](https://zh.wikipedia.org/wiki/Solaris)             | 启动分区                                                     | `6A82CB45-1DD2-11B2-99A6-080020736631`                       |
-| 根分区                                                       | `6A85CF4D-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| 交换分区                                                     | `6A87C46F-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| 备份分区                                                     | `6A8B642B-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| /usr分区[[3\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#endnote_solmacb) | `6A898CC3-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| /var分区                                                     | `6A8EF2E9-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| /home分区                                                    | `6A90BA39-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| 备用扇区                                                     | `6A9283A5-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| 保留分区                                                     | `6A945A3B-1DD2-11B2-99A6-080020736631`                       |                                                              |
-| `6A9630D1-1DD2-11B2-99A6-080020736631`                       |                                                              |                                                              |
-| `6A980767-1DD2-11B2-99A6-080020736631`                       |                                                              |                                                              |
-| `6A96237F-1DD2-11B2-99A6-080020736631`                       |                                                              |                                                              |
-| `6A8D2AC7-1DD2-11B2-99A6-080020736631`                       |                                                              |                                                              |
-| [NetBSD](https://zh.wikipedia.org/wiki/NetBSD)[[4\]](https://zh.wikipedia.org/wiki/GUID磁碟分割表#endnote_netbsd^) | 交换分区                                                     | `49F48D32-B10E-11DC-B99B-0019D1879648`                       |
-| [FFS](https://zh.wikipedia.org/w/index.php?title=FFS&action=edit&redlink=1)分区 | `49F48D5A-B10E-11DC-B99B-0019D1879648`                       |                                                              |
-| [LFS](https://zh.wikipedia.org/w/index.php?title=Log-structured_File_System_(BSD)&action=edit&redlink=1)分区 | `49F48D82-B10E-11DC-B99B-0019D1879648`                       |                                                              |
-| RAID分区                                                     | `49F48DAA-B10E-11DC-B99B-0019D1879648`                       |                                                              |
-| concatenated分区                                             | `2DB519C4-B10F-11DC-B99B-0019D1879648`                       |                                                              |
-| 加密分区                                                     | `2DB519EC-B10F-11DC-B99B-0019D1879648`                       |                                                              |
-
-1. **[^](https://zh.wikipedia.org/wiki/GUID磁碟分割表#ref_guidord)** 本表中的GUID使用[小端序](https://zh.wikipedia.org/wiki/小端序)表示。例如，EFI系统分区的GUID在这里写成C12A7328-F81F-11D2-BA4B-00A0C93EC93B但实际上它对应的16字节的序列是28 73 2A C1 1F F8 D2 11 BA 4B 00 A0 C9 3E C9 3B——只有前3部分的字节序被交换了。
-2. [**a**](https://zh.wikipedia.org/wiki/GUID磁碟分割表#ref_linwina) [**b**](https://zh.wikipedia.org/wiki/GUID磁碟分割表#ref_linwinb) Linux和Windows的数据分区使用相同的GUID。
-3. [**a**](https://zh.wikipedia.org/wiki/GUID磁碟分割表#ref_solmaca) [**b**](https://zh.wikipedia.org/wiki/GUID磁碟分割表#ref_solmacb) Solaris系统中`/usr`分区的GUID在Mac OS X上被用作普通的[ZFS](https://zh.wikipedia.org/wiki/ZFS)分区。
-4. [**^**](https://zh.wikipedia.org/wiki/GUID磁碟分割表#ref_netbsd^) 具体定义见[src/sys/sys/disklabel_gpt.h](http://cvsweb.netbsd.org/bsdweb.cgi/src/sys/sys/disklabel_gpt.h?only_with_tag=MAIN)。NetBSD的GUID在单独定义之前曾经使用过FreeBSD的GUID。
-
-**第八问题：windows gpt定义及格式**
-
-默认配置：Windows RE 工具、系统、MSR 和 Windows 分区
-
-Windows 安装程序默认配置包含 Windows®恢复环境 (Windows RE) 工具分区、系统分区、MSR 和 Windows 分区。以下图表显示了该配置。该配置可让 BitLocker Drive Encryption 投入使用，并将 Windows RE 存储在隐藏的系统分区中。
-
-![默认 EFI 分区的图示](img/IC580741.jpg)
-
-通过使用该配置，可以将系统工具（如 Windows BitLocker 驱动器加密 和 Windows RE）添加到自定义 Windows 安装。
-
-
-
-##### 判断
+##### 判断硬盘是什么分区
 
 ###### 方法一
 
@@ -205,7 +55,7 @@ Windows 安装程序默认配置包含 Windows®恢复环境 (Windows RE) 工具
 
 
 
-### AHCI模式
+### SataAHCI模式
 
 高级主机控制器接口（英文：Advanced Host Controller Interface，缩写：AHCI），是一种由英特尔制定的技术标准，它允许软件与SATA存储设备沟通的硬件机制，可让SATA存储设备激活高级SATA功能，例如原生指令队列及热插拔。AHCI详细定义一个存储器架构规范给予硬件制造商，规范如何在系统存储器与SATA存储设备间传输数据，目前（2014年3月）最新AHC
 
@@ -308,7 +158,7 @@ line out则是声音输出用的，常用的方法是直接接音箱或者耳机
 1、以管理员身份运行命令提示符：
 快捷键win+R→输入cmd→回车
 2、启用并设定虚拟WiFi网卡：
-运行命令：netsh wlan set hostednetwork mode=allow ssid=wuminPC key=wuminWiFi
+运行命令：`netsh wlan set hostednetwork mode=allow ssid=qin key=shilei12`
 此命令有三个参数，mode：是否启用虚拟WiFi网卡，改为disallow则为禁用。
          ssid：无线网名称，最好用英文(以wuminPC为例)。
          key：无线网密码，八个以上字符(以wuminWiFi为例)。

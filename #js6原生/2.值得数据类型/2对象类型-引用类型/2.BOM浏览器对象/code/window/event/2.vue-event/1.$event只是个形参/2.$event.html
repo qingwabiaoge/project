@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+  <button @click="fn">button click</button>
+  <hr>
+
+
+  <cl @click="fn">
+    click
+  </cl>
+  <hr>
+
+<!--  @click直接落在最外层标签,函数地址也赋值到子对象的 $listening-->
+  <cl @click.native="fn">
+    click.native
+  </cl>
+
+
+</div>
+
+
+<script>
+  Vue.component('cl', {
+      template: `<button @click="$emit('click','data')"><slot></slot></button>`,
+    }
+  )
+
+  const vm = new Vue({
+    el: '#app',
+    methods: {
+      fn($event) {
+
+        console.log($event)
+        console.log($event === event)
+        console.log(`-----------`)
+      }
+    }
+  })
+
+  /*
+  本质可能是
+  fn($event=event){
+
+    }
+    */
+
+
+</script>
+
+
