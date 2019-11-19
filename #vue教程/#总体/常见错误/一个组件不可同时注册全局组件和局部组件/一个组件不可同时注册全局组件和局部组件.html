@@ -1,0 +1,16 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+    <cl></cl>
+
+</div>
+
+<script>
+    const cl = {template: `<div>cl</div>`}
+    Vue.component('cl', cl)
+
+    new Vue({
+        el: '#app',
+        components: {cl}
+    })
+</script>

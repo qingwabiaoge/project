@@ -33,9 +33,9 @@
     const def = {template: `<div>{{prop}}</div>`, props: {prop: {default: 'def组件props:{}默认属性'}}}
     const cl = {template: `<div>{{prop}}</div>`, props: {prop: {default: 'cl组件props:{}默认属性'}}}
 
-    //这里就像router-view的父组件,事实上也是----------------------------------------------------------------
+    //这里就像<router-view>的父组件,事实上也是----------------------------------------------------------------
     const router = new VueRouter({
-        routes: [// <router-view/>组件构造参数
+        routes: [
             {
                 path: '/def',
                 name: 'def',
@@ -45,7 +45,7 @@
                 path: '/cl',
                 name: 'index',
                 component: cl,
-                //这个和普通组件的props不同,写法也不同,意思就是设置router-view的属性值
+                //这个和普通组件的props不同,写法也不同,意思就是在父组件设置<router-view>的属性值,类似普通组件的data
                 props: {prop: '父data路由解耦属性'},
             }
         ]
