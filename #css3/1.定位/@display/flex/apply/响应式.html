@@ -1,0 +1,38 @@
+
+    <div class="demo">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+<style>
+
+
+.demo{
+width: 100%;
+
+/*flex布局（作用于容器）*/
+display: flex;
+
+/*两端对齐（作用于容器）*/
+justify-content: space-around;
+
+/*侧轴方向对齐方式（作用于容器）*/
+align-items: flex-end;
+
+/*换行（作用于容器）*/
+flex-wrap: wrap;
+}
+
+.demo .item{
+width: 300px;
+height: 50px;
+background: #444;
+margin-bottom: 20px;
+}
+</style>

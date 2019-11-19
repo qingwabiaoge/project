@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<div id="app">
+    <p>
+        <!--//router必须挂载在vue上才能用$store-->
+
+        <button @click="$store.commit('assign')">Object.assign</button>
+        <button @click="$store.commit('assign2')">Object.assign2</button>
+        <button @click="$store.commit('set')">Vue.prototype.$set</button>
+    </p>
+    <br>
+    <p>
+        {{$store.state.obj}}
+    </p>
+
+
+</div>
+<script>
+
+    const store = new Vuex.Store({
+        state: {
+            obj: {a: 1}
+        },
+        mutations: {
+            assign: state => Object.assign(state.obj, {b: 1}),
+            //原始键更新了,顺带把新键值也更新了
+            assign2: state => Object.assign(state.obj, {a: 10, b: 1}),
+            set: state => Vue.prototype.$set(state.obj, 'c', 3)
+        }
+    })
+
+    const vm = new Vue({
+        el: '#app',
+        store,
+
+
+    })
+</script>
+
+</body>
+</html>
