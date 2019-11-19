@@ -1,36 +1,12 @@
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 
-<div id="app">
-    {{a}}-{{b}}
-
-</div>
-
 <script>
-    function SuperType(name){
-        this.name = name;
-        this.colors = ["red", "blue", "green"];
+    function f({name,age}) {
+        console.log(name, age)
     }
-    SuperType.prototype.sayName = function(){
-        alert(this.name);
-    };
 
-    function SubType(name, age){
-        SuperType.call(this, name); //第二次调用SuperType()
-        this.age = age;
-    }
-    //掺杂了其他属性
-    SubType.prototype = new SuperType(); //第一次调用SuperType()
-    SubType.prototype.constructor = SubType; //补充原型
-    SubType.prototype.sayAge = function(){ //补充原型
-        alert(this.age);
-    };
+    f({age: 12, name: 'xiaoming'})
 
-
-    const i = new SubType('xiaoli', 20)
-    i.asyAge=function(){
-        console.log(1)
-    }
-    console.log(i)
 </script>
 
 <style>

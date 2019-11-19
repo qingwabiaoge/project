@@ -4,10 +4,10 @@
 
 ```html
 <mark v-direct></mark>
-<mark v-direct=''></mark>
-<mark v-direct:arg=''></mark>
-<mark v-direct.modifiers=''></mark>
-<mark v-direct:arg.modifiers=''></mark>
+<mark v-direct='value'></mark>
+<mark v-direct:arg='value'></mark>
+<mark v-direct.modifiers='value'></mark>
+<mark v-direct:arg.modifiers='value'></mark>
 ```
 
 ```html

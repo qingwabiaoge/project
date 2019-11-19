@@ -277,29 +277,38 @@ git remote add origin [url]
 
 # git push & git pull 
 
-##### git push -u
-
-初次建立建立远程分支/或者指定推送到哪个分支
+##### -u指定默认主机
 
 ```
 
 //推送master到远程
+//-u选项会指定一个默认主机
 
 git push -u origin master
 
 //推送dev分支到远程
 
-git push -u origin dev
+git push  origin dev
 
 ```
 
-##### 以后的推送和拉取
+##### 从默认远程分支主机的推送和拉取
 
 ```
-git pull
-
 git push
+
+git pull
 ```
+
+##### 推送的网络分支的指定主机
+
+```
+git push origin master
+
+git pull origin  dev
+```
+
+
 
 ![](./img/9.png)
 
