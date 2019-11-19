@@ -11,16 +11,16 @@
 
   <!--自动补全成@click="fn($event)或@click="fn(data,1)-->
   <!--click事件落到了组件的最外层标签-->
-  <cl @click.native="fn">
+  <btn @click.native="fn">
     click.native
-  </cl>
+  </btn>
 
 
 </div>
 
 
 <script>
-  Vue.component('cl', {
+  Vue.component('btn', {
       template: `<button><slot></slot></button>`,
     }
   )

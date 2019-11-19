@@ -284,6 +284,7 @@ navigator.userAgent
 
   btn.addEventListener('change', function () {
     let file = this.files[0];
+      //本地对象缩略图
     img.src = URL.createObjectURL(file)
   })
 
@@ -301,7 +302,7 @@ const obj = {a: 1, b: 2}
 
 ```
    let i = sessionStorage.getItem('obj')
-    console.log(i.a)
+console.log(i.a)
 ```
 
 ## localStorage
@@ -335,7 +336,7 @@ console.log(i.a)
 
 ### 新建doucment对象
 
-浏览器链接页面时间会初始化这个document对象,
+浏览器链接页面时间会初始化这个document对象,document是HTMLdocument的实例,注入在window上,代表整个文档
 
 ```
 <html>
@@ -349,8 +350,6 @@ console.log(i.a)
 ```
 
 ### document对象
-
-document是HTMLdocument的实例,注入在window上,代表整个文档
 
 ![1570967115231](img/1570967115231.png)
 
@@ -419,9 +418,17 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
     }
 ```
 
-### doument的节点
+### doument的节点对象
 
->  通过 JavaScript访问document的对象， 可访问 创建 修改和删除document对象的某个节点。
+div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
+
+##### el节点实例的所有属性(真实对象数据结构)
+
+
+
+![1570966004249](img/1570966004249.png)
+
+
 
 ##### document和document节点的关系
 
@@ -431,11 +438,7 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 
 [![](./img/global.png)](./img/global.xmind)
 
-
-
 ##### 创建新的document的节点
-
-> el是HTMLDivElement的实例,注意对比el的原型和document的原型是不同的
 
 ###### 字面量创建(用于新建对象和控制台打印)
 
@@ -481,17 +484,28 @@ const el=document.getElementById("app") //返回dom节点对象
 vue-$refs//返回dom节点对象和自定义组件对象
 ```
 
-##### el节点实例的所有属性(真实对象数据结构)
-
-
-
-![1570966004249](img/1570966004249.png)
-
-
-
-通过属性访问当前节点的父、子和同胞
+###### 通过属性访问当前节点的父、子和同胞
 
 ![](./6.png)
+
+###### 对子节点的操作
+
+```js
+   function appendChild_() {
+        persons.appendChild(wangjianlin);//添加
+
+    }
+
+    function replaceChild_() {
+        persons.replaceChild(shilei, wangjianlin);//修改
+    }
+
+    function removeChild_() {
+        persons.removeChild(shilei);//删除
+    }
+```
+
+
 
 ##### el节点对象和vue对象比较
 

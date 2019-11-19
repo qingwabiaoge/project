@@ -229,7 +229,7 @@ arr.filter(..)
 
 ```
 
-解决方法2 , ||
+解决方法2 ., ||
 
 ```
 const arr=null

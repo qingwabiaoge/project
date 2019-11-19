@@ -23,6 +23,8 @@
   </section>
 </div>
 <script>
+ /* var el = document.documentElement
+  var el = document.body*/
   var el = document.getElementById('app')
 
 
@@ -48,8 +50,8 @@
   console.log('-----------------------')
   // onscroll事件当然也可以写到dom里
   el.onscroll = function (event) {
-    console.log(el+'scrollTop', event.target.scrollTop)//滚动离顶部的距离
-    console.log(el+'scrollLeft', event.target.scrollLeft)//滚动离左边的距离
+    console.log( event.target.scrollTop)//滚动离顶部的距离
+    console.log( event.target.scrollLeft)//滚动离左边的距离
   }
 
 

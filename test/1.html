@@ -10,9 +10,22 @@
     <div id="app"></div>
 </body>
 <script>
-console.log(document)
-console.log({document})
-console.log(Object.getOwnPropertyNames(document))
-console.log(document.body.childNodes[1])
+
+    class Point {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        toString() {
+            return '(' + this.x + ', ' + this.y + ')';
+        }
+    }
 </script>
 </html>
+
+
+<style>
+
+        div{height: 2100px;}
+ </style>

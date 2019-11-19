@@ -13,17 +13,17 @@
     el.id = 'app'
     el.target = '_black'
 
-    //设置 获取系统属性和自定义属性
+    //设置和获取系统属性和自定义属性
     el.setAttribute('href', '#')
     el.getAttribute('href')//获得href
     el.setAttribute('someattr', '123')
     //移除系统属性和自定义属性
     el.removeAttribute('id')
-
-
-    //节点下级插入文本
+    //在el节点下级插入文本
     var text = document.createTextNode("Hi there and greetings!");
     el.appendChild(text);
+
+    //el插入到body
     document.body.appendChild(el)
   }
 

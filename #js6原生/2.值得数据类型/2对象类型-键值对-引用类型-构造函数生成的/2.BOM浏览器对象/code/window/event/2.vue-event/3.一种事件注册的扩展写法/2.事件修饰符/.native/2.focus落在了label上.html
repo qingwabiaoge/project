@@ -7,6 +7,7 @@
 
 <div id="app">
 
+<!--  2.focus落在了label上-->
   <base-input v-on:focus.native="onFocus"></base-input>
 
 
@@ -18,10 +19,10 @@
   const baseInput = {
     template: `
               <label>
-              label
+            label
                 <input
                   v-bind="$attrs"
-                  value="value"
+                  value="请输入"
 
                 >
               </label>

@@ -1,4 +1,4 @@
-# 实例化对象的所有属性(真实对象键值对)
+# 实例化包装对象的所有属性(真实对象键值对)
 
 ![1566952961137](img/1566952961137.png)
 
@@ -41,7 +41,6 @@ repeat()
 ```js
   const str=new String('hello')
   console.log(Object.getOwnPropertyNames(str))//["0", "1", "2", "3", "4", "length"]
-
 ```
 ### ennumerable属性
 

@@ -19,7 +19,7 @@
     template: `
                 <input
                   v-bind="$attrs"
-                  value="value"
+                  value="请输入"
                 >
               `
   }
@@ -28,8 +28,8 @@
     el: '#app',
     methods: {
       onFocus(e) {
-        console.log(123)
-        console.log(e)
+
+        console.log(e.target.value)
       }
     },
     components: {
