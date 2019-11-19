@@ -1,0 +1,70 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="router">
+
+    <ul>
+        <li>
+            <router-link to="/def">def</router-link>
+        </li>
+        <li>
+
+            <router-link to="/cl">/cl</router-link>
+        </li>
+
+        <li>
+
+            <router-link to="/cl+def">/cl+def</router-link>
+        </li>
+        </li>
+
+    </ul>
+
+
+    <hr>
+    <!--等价于 name='default'-->
+    <router-view></router-view>
+
+    <router-view name="cl"></router-view>
+</div>
+
+<script>
+    //这里就像router-view的父组件,事实上也是----------------------------------------------------------------
+    const def = {template: `<div>def</div>`}
+    const cl = {template: `<div>cl</div>`}
+
+
+
+    const router = new VueRouter({
+        //设置根部的<router-view></router-view>
+        routes: [
+            {
+                path: '/def',
+                name: 'def',
+                //只注册了default所以 <router-view name="cl"></router-view>没有要替代的组件不显示
+                component: def,
+            },
+            {
+
+                path: '/cl',
+                name: 'cl',
+            //只注册了cl所以 <router-view ></router-view>没有要替代的组件不显示
+                components: {cl},
+            },
+            {
+                path: '/cl+def',
+                name: 'cl+def',
+                //两个组件都注册了 所以都显示
+                components: {default: def, cl},
+            }
+        ]
+    })
+    const vm2 = new Vue({
+        el: '#router',
+        router,
+
+    })
+
+</script>

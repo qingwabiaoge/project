@@ -138,9 +138,9 @@ navigator.userAgent
 
 <br>
 <!--路由meta 原理history.state-->
-<button onclick='history.pushState({state: 1}, "newtitle","1.html?b=1"); render()'>pushState添加一条历史记录</button>
+<button onclick='history.pushState({msg: 1}, "newtitle","1.html?b=1"); render()'>pushState添加一条历史记录</button>
 
-<button onclick='history.pushState({state: 2}, "newtitle","2.html?b=1"); render()'>pushState添加一条历史记录</button>
+<button onclick='history.pushState({msg: 2}, "newtitle","2.html?b=1"); render()'>pushState添加一条历史记录</button>
 <div id="app">
 
 </div>
@@ -148,7 +148,7 @@ navigator.userAgent
 <script>
 
     function render() {
-        document.getElementById('app').innerText = history.state.state
+        document.getElementById('app').innerText = JSON.stringify(history.state)
         console.log(history)
     }
 

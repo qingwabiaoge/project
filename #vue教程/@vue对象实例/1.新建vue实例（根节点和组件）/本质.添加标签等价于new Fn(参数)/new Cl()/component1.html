@@ -3,9 +3,9 @@
 <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
-<!-- ÒıÈëÑùÊ½ -->
+<!-- å¼•å…¥æ ·å¼ -->
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<!-- ÒıÈë×é¼ş¿â -->
+<!-- å¼•å…¥ç»„ä»¶åº“ -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
 <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js">
@@ -15,20 +15,20 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
 
 <div id="app">
-    <!-- ÊµÀı»¯²¢Ñ¡Ôñ¹ÒÔØÎ»ÖÃ-->
+    <!-- å®ä¾‹åŒ–å¹¶é€‰æ‹©æŒ‚è½½ä½ç½®-->
     <cl></cl>
 
 </div>
 
 <script>
-    //¹¹Ôìº¯Êı
+    //æ„é€ å‡½æ•°
     const VueA = Vue.component('cl', {
 
         data() {
-            //¾Ö²¿±äÁ¿
+            //å±€éƒ¨å˜é‡
             return {a: 1}
         },
-        //²ÎÊı±äÁ¿,Ä¬ÈÏundifineÒòÎª¹¹Ôìº¯ÊıµÄÄ¬ÈÏ²ÎÊıÖµundefined
+        //å‚æ•°å˜é‡,é»˜è®¤undifineå› ä¸ºæ„é€ å‡½æ•°çš„é»˜è®¤å‚æ•°å€¼undefined
         props: ['display'],
         template: `<div  id="cl" @click="$emit('cs',1)">cl</div>`
     })
