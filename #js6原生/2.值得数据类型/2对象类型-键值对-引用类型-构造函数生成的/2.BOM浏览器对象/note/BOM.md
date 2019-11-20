@@ -272,9 +272,9 @@ navigator.userAgent
 
 ```
 
-## url
+## URL
 
-### url.createObjectURL()
+### URL.createObjectURL()
 
 ```html
 <input type="file" id="btn" accept="image/*" value="upload"/>
