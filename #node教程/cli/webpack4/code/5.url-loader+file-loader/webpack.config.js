@@ -19,7 +19,7 @@ module.exports = {
 
                     {
                         //url-loader会将引入的图片编码，生成dataURl
-                        //url-loader在node_moudles中使用file-loader
+                        //url-loader依赖file-loader,在node_moudles中使用file-loader
                         loader: "url-loader",
                         options: {
                             name:'[name].[ext]',

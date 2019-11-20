@@ -67,7 +67,7 @@ module.exports = {
 
     devServer:{
     //设置基本目录结构,用于找到程序打包地址
-    contentBase:path.resolve(__dirname,'./dist'),
+    contentBase:path.resolve(__dirname,'./'),
         //服务器的IP地址，可以使用IP也可以使用localhost
         host:'127.0.0.1',
         //服务端压缩是否开启

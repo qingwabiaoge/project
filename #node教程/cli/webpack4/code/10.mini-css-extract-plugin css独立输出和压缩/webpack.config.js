@@ -33,9 +33,10 @@ module.exports = {
       }
     ]
   },
-  //优化(optimization),替代webpack的默认处理选项
+  //optimization[英:优化],
+  // optimization替代webpack的默认处理选项
   optimization: {
-    //允许你通过提供一个或多个定制过的 TerserPlugin 实例，覆盖默认压缩工具(minimizer)。
+    //允许你通过提供一个或多个实例，覆盖默认压缩工具(minimizer)。
     minimizer: [
       /*
 uglifyJsPlugin 用来对js文件进行压缩，从而减小js文件的大小，加速load速度。

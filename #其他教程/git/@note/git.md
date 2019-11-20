@@ -244,7 +244,7 @@ git checkout -b branchA //为分支命名
 
 # git remote 
 
-##### git remote add添加远程主机和主机名
+##### git remote add为远程主机添加别名
 
 ```
 git remote add origin git@github.com:qingwabiaoge/test.git
@@ -256,7 +256,7 @@ git remote add origin git@github.com:qingwabiaoge/test.git
 git remote -v 
 ```
 
-##### 修改远程主机和主机名
+##### 修改远程主机的别名
 
 ```
 
@@ -292,7 +292,7 @@ git push  origin dev
 
 ```
 
-##### 从默认远程分支主机的推送和拉取
+##### 从默认远程主机推送和拉取
 
 ```
 git push
@@ -300,7 +300,7 @@ git push
 git pull
 ```
 
-##### 推送的网络分支的指定主机
+##### 推送分支到指定主机
 
 ```
 git push origin master

@@ -135,7 +135,7 @@ yarn upgrade
 console.log("hello world");
 ```
 
-4. npm link 命令和复制到C:\Users\Administrator\AppData\Roaming\npm\,       本质是mklink
+4. npm link 命令link到C:\Users\Administrator\AppData\Roaming\npm\, 本质mklink
 
 ```
 $ npm link
@@ -193,6 +193,8 @@ package.json设置dev命令
 
 如果没有会运行当前目录的`./node_modules/.bin/nuxt.cmd`
 
+下边是npm install自动生成的
+
 ```cmd
 @IF EXIST "%~dp0\node.exe" (
   "%~dp0\node.exe"  "%~dp0\..\@nuxt\cli\bin\nuxt-cli.js" %*
@@ -203,7 +205,7 @@ package.json设置dev命令
 )
 ```
 
-对应目录的  nuxt-cli.js文件内容
+%~dp0\..\@nuxt\cli\bin\nuxt-cli.js文件内容
 
 ```js
 //表示靠node运行下边的代码

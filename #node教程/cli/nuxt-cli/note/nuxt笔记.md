@@ -68,6 +68,7 @@ env: {
 
 ```javascript
 actions: {
+    //context作为第二个参数
   nuxtServerInit ({ commit,dispatch }, { req }) {
     if (req.session.user) {
    //如果已登陆过可以通过req拿到request的文件头,文件头里有session信息以及token

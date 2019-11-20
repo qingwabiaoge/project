@@ -14,15 +14,15 @@ var r = require.context('.', true, /^\.\/dir\/.*\.jpg$/);
 //r是一个函数
 console.log(r)
 
-
+console.log(1)
 //列出r函数的所有静态函数
 console.log({r})
 
 //使用r的静态函數
-console.log(r.keys()); // @return ["./dir/a.js", "./dir/b.js", "./dir/cs/c.js"]
+console.log(r.keys());
 
 //运行r函數// 返回export default的值// 引入的同时还运行了a.js的语句
-console.log(r('./dir/a.js'))  //@return 1,
+console.log(r("./dir/11.jpg"))  //@return 1,
 
 
 
