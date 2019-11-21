@@ -7,5 +7,4 @@ app.use(static(root))
 const port=3000
 app.listen(port)
 console.log(port)
-
 //http://localhost:3000/1.jpg

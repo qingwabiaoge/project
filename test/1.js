@@ -1,5 +1,5 @@
-import {a,fn} from './2'
+import { a, fn } from './2';
 
-fn()
+fn();
 
-console.log(a)
+console.log(a);

@@ -1,14 +1,15 @@
 import mongoose from 'mongoose'
-const Schema = mongoose.Schema
+
+const { Schema } = mongoose
 
 const CommentSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'User'
   },
-  article:{
+  article: {
     type: Schema.Types.ObjectId,
-    ref: 'Article',
+    ref: 'Article'
   },
   content: {
     type: String,
@@ -27,7 +28,7 @@ const CommentSchema = new Schema({
 CommentSchema.options.toJSON = {
   virtuals: true,
   versionKey: false,
-  transform(doc, ret) {
+  transform (doc, ret) {
     ret.id = ret._id
     delete ret._id
   }

@@ -420,16 +420,6 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 
 ### doument的节点对象
 
-div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
-
-##### el节点实例的所有属性(真实对象数据结构)
-
-
-
-![1570966004249](img/1570966004249.png)
-
-
-
 ##### document和document节点的关系
 
 注入关系,document节点是document的key
@@ -438,21 +428,21 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 [![](./img/global.png)](./img/global.xmind)
 
-##### 创建新的document的节点
 
-###### 字面量创建(用于新建对象和控制台打印)
-
-```
-<div id='app'></div>
-```
-
-###### document.createElement创建节点
-
-```
-var el = document.createElement("A");
-```
 
 ##### 获取已有节点对象
+
+###### 获得html
+
+```js
+ var el = document.documentElement
+```
+
+###### 获得body
+
+```
+  var el = document.body
+```
 
 ###### getElementById
 
@@ -504,6 +494,26 @@ vue-$refs//返回dom节点对象和自定义组件对象
         persons.removeChild(shilei);//删除
     }
 ```
+
+##### 创建新的document的节点
+
+###### 字面量创建(用于新建对象和控制台打印)
+
+```
+<div id='app'></div>
+```
+
+###### document.createElement创建节点
+
+```
+var el = document.createElement("A");
+```
+
+##### el节点实例的所有属性(真实对象数据结构)
+
+div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
+
+![1570966004249](img/1570966004249.png)
 
 
 

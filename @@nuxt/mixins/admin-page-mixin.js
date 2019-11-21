@@ -1,3 +1,3 @@
 export default {
-  layout: 'admin',
+  layout: 'admin'
 }
