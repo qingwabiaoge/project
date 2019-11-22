@@ -27,7 +27,7 @@
 </script>
 
 <style lang="postcss" module>
-  $primary-color:var(--primary-color) ;
+  $primary-color:var(--primary-color);
 
   @define-mixin bgBlue{
     background:$primary-color;

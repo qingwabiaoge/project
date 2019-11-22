@@ -1,17 +1,120 @@
 <div id="app">
 
-  1111111111111111
-
 </div>
-
+<meta charset="UTF-8">
 <script>
-
-  app.style.setProperty('--bg', 'red');
-</script>
-
-<style>
-  #app {
-    color: var(--bg)
+  //store实例化
+  const store = {
+    counter: 0,
+    add(n) {
+      this.counter += n
+    }
   }
 
-</style>
+  //组件构造器产生组件Person的工厂函数
+  class Person {
+    constructor({beforeCreate, data, created, store, methods, computed, watch, callbackProp, props, $father}) {
+      const datas = {beforeCreate, ...data, created, $store: store, ...methods}
+
+      for (let item in datas) {
+        this[item] = datas[item]
+      }
+
+      this.beforeCreate()
+      if (props) {
+        for (let item of props) {
+          this[item] = $father[item]
+        }
+      }
+
+      //计算属性和watch
+      for (let item in {...computed, ...watch}) {
+        Object.defineProperty(this, `${item}`, {
+          get: computed.com,
+          set: function () {
+            console.log('触发watch')
+          }
+        })
+      }
+
+      this.created()
+    }
+  }
+
+  //实例化组件,切换路由操作,出发这个构造函数运行-------------------------------------
+  const father = new Person({
+    data: {
+      name: 'father',
+      age: 18,
+      hometownProp: 'china',
+      callbackProp: function (n) {
+        console.log(this.age = n)
+      },
+    },
+
+    store,
+    beforeCreate() {
+      console.log('beforeCreateg钩子:对象将要建立,调用data' + this.name)
+      //undefined,因为com这时间还没初始化,函数运行数序,所谓的生命周期
+      console.log(this.com)
+    },
+    created() {
+      console.log('created钩子:对象建立了' + this.com)
+    },
+
+
+  })
+
+
+  const child = new Person({
+    data: {
+      name: '小黑',
+      age: 2
+    },
+    computed: {
+      com: function () {
+        return this.name + this.age
+      },
+
+    },
+    props: ['hometownProp', 'callbackProp']
+    ,
+    methods: {
+      $emit(n) {
+        this.callbackProp.call(this.$father, n)
+      }
+    },
+
+    beforeCreate() {
+      console.log('对象将要建立')
+    },
+    created() {
+      console.log('对象建立了')
+    },
+    store,
+    $father: father
+
+
+  })
+
+  //标签嵌套
+  father.$children = child
+  child.$father = father
+
+
+  //onlick等事件回调才运行--------------------------------------------------------------
+  child.$emit(10)
+  child.$father.sex = '男'
+
+
+  //onclick等事件驱动提交store负荷
+  father.$store.add(10)
+  child.$store.add(10)
+
+  console.log(father)
+  console.log(child)
+
+  document.getElementById('app').innerHTML = child.com
+
+
+</script>

@@ -8,18 +8,20 @@
 <div id="app">
 
     <span v-for="item in todo">{{item}} </span>
-
     <hr>
-    <!-- 和上面没差别 一样监视不了,不因渲染obj.key而变化,render默认还是监听obj-->
     {{todo[0]}} {{todo[1]}}
     <hr>
-    {{todo1}}
+  {{todo}}
+  <hr>
+  <!-- 和上面没差别 一样监视不了,不因渲染obj.key而变化,render默认还是监听obj-->
+    {{todoComponent}}
     <hr>
+
 <!-- 默认可以监听到vm.obj的原有键值变化,监听不到新加键值---------------------------------------------------------------   -->
     <!--    可以监听到添加todo[0]赋值-->
-    <button @click="todo[0]=10" class="btn-success">todo[0]=10</button>
+    <button @click="todo[0]=10" class="btn-success">已有键值的变化todo[0]=10</button>
     <!--    不能监听到添加新键值-->
-    <button @click="todo[1]=2">todo[1]=2</button>
+    <button @click="todo[1]=2">添加新键值todo[1]=2</button>
 
 
     <!--    不能监听到assign添加新键值-->
@@ -65,7 +67,7 @@
 
         },
         computed: {
-            todo1() {
+            todoComponent() {
                 console.log(`computed执行`)
                 return this.todo
             }
