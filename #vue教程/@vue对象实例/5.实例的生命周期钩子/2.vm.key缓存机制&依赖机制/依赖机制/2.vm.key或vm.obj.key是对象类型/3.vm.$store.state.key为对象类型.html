@@ -11,13 +11,14 @@
     <p>
         <!--//router必须挂载在vue上才能用$store-->
 
+      <button @click="$store.commit('setObjA')">setObjA</button>
         <button @click="$store.commit('assign')">Object.assign</button>
         <button @click="$store.commit('assign2')">Object.assign2</button>
         <button @click="$store.commit('set')">Vue.prototype.$set</button>
     </p>
     <br>
     <p>
-        {{$store.state.obj}}
+        {{$store.state}}
     </p>
 
 
@@ -26,13 +27,14 @@
 
     const store = new Vuex.Store({
         state: {
-            obj: {a: 1}
+           a: 1
         },
         mutations: {
-            assign: state => Object.assign(state.obj, {b: 1}),
+            setObjA:state=>state.a=10,
+            assign: state => Object.assign(state, {b: 1}),
             //原始键更新了,顺带把新键值也更新了
-            assign2: state => Object.assign(state.obj, {a: 10, b: 1}),
-            set: state => Vue.prototype.$set(state.obj, 'c', 3)
+            assign2: state => Object.assign(state, {a: 20, b: 20}),
+            set: state => Vue.prototype.$set(state, 'c', 3)
         }
     })
 

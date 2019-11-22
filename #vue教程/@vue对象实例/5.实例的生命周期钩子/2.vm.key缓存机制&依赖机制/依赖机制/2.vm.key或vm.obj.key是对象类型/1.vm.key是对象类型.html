@@ -12,9 +12,9 @@
     {{todo[0]}} {{todo[1]}}
     <hr>
   {{todo}}
-  <hr>
+    <hr>
   <!-- 和上面没差别 一样监视不了,不因渲染obj.key而变化,render默认还是监听obj-->
-    {{todoComponent}}
+    {{todoComputed}}
     <hr>
 
 <!-- 默认可以监听到vm.obj的原有键值变化,监听不到新加键值---------------------------------------------------------------   -->
@@ -67,7 +67,7 @@
 
         },
         computed: {
-            todoComponent() {
+            todoComputed() {
                 console.log(`computed执行`)
                 return this.todo
             }
