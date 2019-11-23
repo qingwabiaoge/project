@@ -1,13 +1,13 @@
 require('../db')
-var mongoose = require("mongoose");
+let mongoose = require('mongoose')
 
-var Schema = mongoose.Schema;
+let { Schema } = mongoose
 
-var personSchema = Schema({
-    _id: Schema.Types.ObjectId,
-    name: String,
-    age: Number,
+let personSchema = Schema({
+  _id: Schema.Types.ObjectId,
+  name: String,
+  age: Number
 
-});
-var Author = mongoose.model("Author", personSchema);
-module.exports=Author
+})
+let Author = mongoose.model('Author', personSchema)
+module.exports = Author

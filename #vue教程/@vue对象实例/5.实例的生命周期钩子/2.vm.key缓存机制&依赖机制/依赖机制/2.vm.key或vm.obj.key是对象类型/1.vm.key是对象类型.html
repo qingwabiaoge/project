@@ -9,33 +9,34 @@
 
     <span v-for="item in todo">{{item}} </span>
     <hr>
-    {{todo[0]}} {{todo[1]}}
+    {{todo.a}} {{todo.b}}
     <hr>
-  {{todo}}
+    {{todo}}
     <hr>
   <!-- 和上面没差别 一样监视不了,不因渲染obj.key而变化,render默认还是监听obj-->
     {{todoComputed}}
     <hr>
 
 <!-- 默认可以监听到vm.obj的原有键值变化,监听不到新加键值---------------------------------------------------------------   -->
-    <!--    可以监听到添加todo[0]赋值-->
-    <button @click="todo[0]=10" class="btn-success">已有键值的变化todo[0]=10</button>
+    <!--    可以监听到添加todo.a赋值-->
+    <button @click="todo.a=10" class="btn-success">todo.a=10</button>
+
     <!--    不能监听到添加新键值-->
-    <button @click="todo[1]=2">添加新键值todo[1]=2</button>
+    <button @click="todo.b=2">todo.b=2</button>
 
 
     <!--    不能监听到assign添加新键值-->
-    <button @click="Object.assign(todo,{1:2})">Object.assign(todo,{1:2})</button>
+    <button @click="Object.assign(todo,{b:2})">Object.assign(todo,{b:2})</button>
     <!--      //原始键更新了,顺带把新键值也更新了-->
-    <button @click="Object.assign(todo,{0:10,1:2})" class="btn-success">Object.assign(todo,{0:10,1:2})</button>
+    <button @click="Object.assign(todo,{a:10,b:2})" class="btn-success">Object.assign(todo,{a:10,b:2})</button>
 
 
     <!--    用set可以监听到添加新键值---------------------------------------------------------------------------------------------->
-    <button @click="$set(todo,'1',2)" class="btn-success">$set(todo,'1',2)"</button>
+    <button @click="$set(todo,'c',2)" class="btn-success">$set(todo,'c',2)"</button>
 
 
     <!--    更改对象的内存地址----------------------------------------------------------------------------------------->
-    <button @click="todo={0:10,1:20}" class="btn-success">todo={0:10,1:20}</button>
+    <button @click="todo={a:100,b:200}" class="btn-success">todo={a:10,b:20}</button>
 
 </div>
 
@@ -48,7 +49,7 @@
 
         data: {
 
-            todo: {0: 1}
+            todo: {a: 1}
         },
         //这些钩子和v-direct render 相应情况都是一致的
         watch: {

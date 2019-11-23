@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
-<span id="app">
+<div id="app">
 <!-- 调用函数setLongth(atr,num)-->
     {{str|setLongth(num)}}
     <span v-if="more" @click="num=1000;more=false">MORE▶</span>
     <span @click="num=30;more=true" v-else>◀LESS</span>
-</span>
+</div>
 
 
 <script>

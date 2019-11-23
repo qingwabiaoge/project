@@ -1,34 +1,29 @@
-const Master = require('../../../model/Master')
+const Tag = require('../../../model/Tag')
 const Dog = require('../../../model/Dog')
 
-const master = new Master({
-  name: "shilei",
+const tag = new Tag({
+  name: 'shilei',
   age: 35
 
 })
 
-master.save(err => {
-
+tag.save((err) => {
   if (err) {
     console.log(err)
   } else {
-
-    var dog = new Dog({
-      "name": "八公",
+    let dog = new Dog({
+      name: '八公',
       age: 10,
-      "type": "雌",
-      master: master._id
-    });
-
+      type: '雌',
+      tag: tag._id
+    })
 
     dog.save(
-      err => {
+      (err) => {
         if (err) {
           console.log(err)
         }
       }
     )
-
   }
-
 })

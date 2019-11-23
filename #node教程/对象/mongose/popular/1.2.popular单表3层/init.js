@@ -3,19 +3,15 @@
  */
 
 const User = require('./model/User')
-//初始化数据
+// 初始化数据
 
-var
-    shilei = new User({name: 'shilei'}),
-    lily = new User({name: 'lily'})
-    , lucy = new User({name: 'lucy'});
+let
+  shilei = new User({ name: 'shilei' })
+let lily = new User({ name: 'lily' })
+let lucy = new User({ name: 'lucy' })
 
-
-lily.save();
+lily.save()
 lucy.save()
 shilei.save()
 shilei.followings.push(lucy._id)
 lucy.followings.push(lily._id)
-
-
-

@@ -18,27 +18,26 @@
 
 </div>
 <script>
-  Vue.component('cl',
-    {
-      template: '<h1>{{clprop}}</h1>',
-      props: ['clprop']
-    })
-  const vm = new Vue({
-    el: '#app',
-    mounted() {
-
-      console.log({id: document.getElementById('div')})
-      //通过ref获取原生组件
-      console.log({ref: this.$refs.div})
-      //通过ref获取vue组件
-      console.log({'cl-ref': this.$refs.cl})
-      //id属性落到了子组件最外层
-      console.log({'cl-id': document.getElementById('cl')})
-
-
-      this.$refs.div.style.background = 'red'
-
-    }
+Vue.component('cl',
+  {
+    template: '<h1>{{clprop}}</h1>',
+    props: ['clprop']
   })
+const vm = new Vue({
+  el: '#app',
+  mounted () {
+
+    console.log({ id: document.getElementById('div') })
+    //通过ref获取原生组件
+    console.log({ ref: this.$refs.div })
+    //通过ref获取vue组件
+    console.log({ 'cl-ref': this.$refs.cl })
+    //id属性落到了子组件最外层
+    console.log({ 'cl-id': document.getElementById('cl') })
+
+    this.$refs.div.style.background = 'red'
+
+  }
+})
 
 </script>

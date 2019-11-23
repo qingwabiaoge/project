@@ -1,27 +1,27 @@
 const Koa = require('koa')
+
 const app = new Koa()
 const Router = require('koa-router')
+
 const router = new Router()
 
 const control = async (ctx, next) => {
-  ctx.body = '1'; //在路由执行前添加
-  await next();
-  ctx.body += '2';//在路由执行后添加
+  ctx.body = '1' // 在路由执行前添加
+  await next()
+  ctx.body += '2'// 在路由执行后添加
 }
 
 const routerMiddlewares = async (ctx, next) => {
-  ctx.body += '3';
-  await next();
-  ctx.body += '4';
+  ctx.body += '3'
+  await next()
+  ctx.body += '4'
 }
 
 router.get('/', routerMiddlewares)
-
 
 app.use(control)
   .use(router.routes())
   .use(router.allowedMethods())
 
-
 app.listen(3000)
-console.log(":3000")
+console.log(':3000')

@@ -1,5 +1,5 @@
 
-# 组件封装(类的复用)
+# 组件封装(类)
 
 **解藕:**
 
@@ -10,22 +10,33 @@
 **内聚封装:**
 
 模块化组件化标签化:把一个逻辑的dom  css  js逻辑  数据状态 封装在一起,简化成标签
+# 本质
 
-# 组件标签===构造函数
-```javascript
+| vue                         | 函数                                                      |
+| --------------------------- | --------------------------------------------------------- |
+| 自定义标签                  | 构造函数                                                      |
+| 标签的属性                  | 构造函数参数                                                  |
+| props:{msg:{default:'msg'}} | 构造函数参数的默认值<br />`function(p1){p1=P1||defultValue }` |
+
+## 组件标签===构造函数
+```html
 <cl age='age' @fn='fn'></cl>
+```
+
+```javascript
+new Vue({el:'#app'})
 new VueComponent({props: {age,fn}})
 ```
 
-#  组件属性===构造函数的参数
+##  组件属性===构造函数的参数
 
 ### 父标签的自定义属性
 
-###### 使用
+##### 使用
 
 子组件可以通过this.xxx或者this.$props.xxx访问
 
-###### 作用:
+##### 作用:
 
    1. 数据父传子  
 
@@ -33,7 +44,7 @@ new VueComponent({props: {age,fn}})
 
 ### 父标签自定义事件属性
 
-###### 使用
+##### 使用
 
 子组件里通过 this.$listeners访问,不包含.native
 
@@ -41,21 +52,114 @@ new VueComponent({props: {age,fn}})
 
 不包含构造函数的回调参数类型的参数 
 
-###### 作用:
+##### 作用:
 
 子传父
 
 ### 父标签默认属性
 
-编译后这些属性会加在了子组件最外层dom上
-
-###### 属性种类:
-
 1. class
 
 2. style
 
-4. attr
+3. attr
 
-   
+##### 使用
+
+父标签添加会落在子组件最外层dom上
+### 标签dom嵌套
+
+##### 使用
+
+###### 使用插槽的数据
+
+```html
+//父
+v-slot.xxx=''
+//子
+<slot value='value'></slot>
+```
+
+```js
+//子使用
+this.$slots.default
+```
+
+###### privide/inject使用上级dom的组件的数据
+
+```html
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<style>
+  form {
+    border: 1px solid #0bb20c
+  }
+</style>
+<div id="app">
+
+  <!--  <input type="text" disabled>-->
+
+  <l-input disabled>
+
+  </l-input>
+
+  <l-form >
+    <l-form-item disabled>
+      <l-input>
+
+      </l-input>
+
+    </l-form-item>
+
+  </l-form>
+</div>
+<script>
+
+
+  Vue.component('LInput', {
+    template: '<input :disabled="_disable" :value="null"/>',
+    inject: {
+      lForm: {default: {}},
+      lFormItem: {default: {}}
+    }, //引入父级的父级的父级的变量
+    props: {disabled: Boolean},
+    computed:{
+      _disable(){
+        return this.disabled||this.lFormItem.disabled||this.lForm.disabled
+      }
+
+    }
+  })
+
+  Vue.component('LFormItem', {
+    template: '<label for="name"> name: <slot></slot></label>',
+    provide() {
+      return {
+        lFormItem: this
+      };
+    },
+    props: {disabled: Boolean},
+  })
+
+  Vue.component('LForm', {
+    template: '<form> <slot></slot></form>',
+    provide() {
+      return {
+        lForm: this
+      };
+    },
+    props: {disabled: Boolean}
+  })
+
+
+  const vm = new Vue({
+    el: '#app',
+    data: {},
+  })
+</script>
+
+```
+
+
 

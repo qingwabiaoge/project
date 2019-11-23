@@ -28,7 +28,7 @@
 ```
 # 实质
 
-是dom函数
+是DOM函数
 
 # 常用指令
 
@@ -41,7 +41,9 @@
 </cl>
 ```
 
- 传递任何类型数据给子组件
+ 传递除字符串的值类型
+
+变量
 
 
 ```
@@ -60,7 +62,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
 
-### v-model  ,v-bind:prop. sync
+### v-model  ,:prop. sync
 
 *适合场景(子组件操作经常更新的父组件)*
 
@@ -111,7 +113,26 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 <input v-model.trim="msg">
 ```
 
-###### 单向数据流
+
+
+##### :propx:sync
+
+###### 原理
+
+propx:sync不限于value input,但是不能用于原生组件
+
+```javascript
+    <ch :prop1.sync="prop1"></ch>
+    <!--等价于下边-->
+    <ch :prop1="prop1"
+        @update:prop1="data => prop1 = data">
+
+    </ch>
+```
+
+##### 单向数据流
+
+###### v-model单向数据流
 
 要在父组件修改prop的值
 
@@ -163,56 +184,9 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 ```
 
-###### obj.a问题
 
-```html
-<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
 
-<div id="app">
-  <!--
-        当item=1时
-  v-model="1"  无法赋值
-
-  -->
-  <input type="text" v-for="item in arr" v-model="item"> <br>
-  <!--
-       当item=1时
-     :value=1
-     @input="arr[1]=data" 这里是给数组的键赋值,所以可行
-
-  -->
-
-  <input type="text" v-for="(item,index) in arr" v-model="arr[index]">
-  {{arr}}
-</div>
-
-<script>
-  new Vue({
-    el: '#app',
-    data: {
-      arr: ['1', '2']
-    }
-  })
-</script>
-
-```
-
-##### :propx:sync
-
-###### 原理
-
-propx:sync不限于value input,但是不能用于原生组件
-
-```javascript
-    <ch :prop1.sync="prop1"></ch>
-    <!--等价于下边-->
-    <ch :prop1="prop1"
-        @update:prop1="data => prop1 = data">
-
-    </ch>
-```
-
-###### 单向数据流
+###### prop:sync单向数据流
 
 要修改父组件的prop的值
 
@@ -266,6 +240,42 @@ propx:sync不限于value input,但是不能用于原生组件
 
 ```
 
+##### 值和obj.a表达式的区别
+
+```html
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+  <!--
+        当item=1时
+  v-model="1"  无法赋值
+
+  -->
+  <input type="text" v-for="item in arr" v-model="item"> <br>
+  <!--
+       当item=1时
+     :value=1
+     @input="arr[1]=data" 这里是给数组的键赋值,所以可行
+
+  -->
+
+  <input type="text" v-for="(item,index) in arr" v-model="arr[index]">
+  {{arr}}
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      arr: ['1', '2']
+    }
+  })
+</script>
+
+```
+
+
+
 # 自定义指令
 
 ### 格式
@@ -297,9 +307,7 @@ propx:sync不限于value input,但是不能用于原生组件
 
 接下来我们来看一下钩子函数的参数 (即 `el`、`binding`、`vnode` 和 `oldVnode`)。
 
-### 钩子函数参数
-
-指令钩子函数会被传入以下参数：
+##### 指令钩子函数会被传入以下参数：
 
 - `el`：指令所绑定的元素，可以用来直接操作 DOM 。
 

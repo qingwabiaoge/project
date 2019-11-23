@@ -1867,6 +1867,18 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　如果要同时更新多个记录，需要设置options里的multi为true。下面将名字中有'a'字符的年龄设置为10岁
 
+```js
+const Dog = require('../../../model/Dog.js')
+
+async function fn () {
+  const i = await Dog.updateMany({ name: '小黑' }, { $set: { age: 52 } })
+  console.log(i)
+}
+
+fn()
+
+```
+
 
 
 ```
@@ -2363,25 +2375,38 @@ db.order.find({user_id:user_id})
 
 例：分类-商品，老师-学生*/
 
+```js
+const schema = new Schema({
+  // required 不能为空
+  name: { type: String, required: true }, 
+  tag: [{ type: Schema.Types.ObjectId, ref: 'Tag' }]
+})
 ```
-db.students.find()
-db.teachers.insert([
-    {name:"洪七公"},
-    {name:"黄药师"},
-    {name:"龟仙人"}
-]);
-db.students.insert([
-    {name:"郭靖",
-     teach_ids:[ObjectId("5d48f250c57dfb3261f40870"),ObjectId("5d48f250c57dfb3261f40871")]
-    }
-])
-db.students.insert([
-    {name:"孙悟空",
-     teach_ids:[ObjectId("5d48f250c57dfb3261f40870"),ObjectId("5d48f250c57dfb3261f40871"),ObjectId("5d48f250c57dfb3261f40872")]
-    }
-])
-12345678910111213141516
+
+```js
+require('../db')
+const mongoose = require('mongoose')
+
+const { Schema } = mongoose
+const schema = new Schema({
+  title: { type: String, default: '' }
+})
+
+let Tag = mongoose.model('Tag', schema)
+module.exports = Tag
+
 ```
+
+```js
+const callback = require('../../callback')
+
+const Dog = require('../../../model/Dog')
+
+Dog.find({ tag: '5dd927451e520b21f0035d9a' }).exec(callback)
+
+```
+
+
 
 ### 树型结构
 
