@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 
 </head>
 <body>
 <div id="app">
-    <button @click="click1">父修改子</button>
-    <button @click="click2">父调用子</button>
+  <button @click="$refs.clild.msg='父修改子'">父修改子</button>
+  <button @click="$refs.clild.alert('父调用子')">父调用子</button>
 
-    <ch ref="ch">msg</ch>
+  <clild ref="clild">msg</clild>
 
 </div>
 
 
 <script>
-    var ch = {
-        template: `<div>{{msg}}</div>`,
-        data: function () {
-            return {
-            msg:'msg'
-            }
+  var clild = {
+    template: `<div>{{msg}}</div>`,
+    data: function () {
+      return {
+        msg: 'msg'
+      }
 
-        },
-        methods:{
-            alert(a){alert(a)}
-        }
-
+    },
+    methods: {
+      alert(a) {
+        alert(a)
+      }
     }
 
-    var vm = new Vue({
-        el: '#app',
-        components: {ch},
-        mounted(){
-            console.log(this.$refs.ch)
-        },
-        methods:{
-            click1(){this.$refs.ch.msg='父修改子'},
-            click2(){this.$refs.ch.alert('父调用子')}
-        }
+  }
 
-    })
+  var vm = new Vue({
+    el: '#app',
+    components: {clild},
+    mounted() {
+      console.log(this.$refs.clild)
+    },
+  })
 
 </script>
 

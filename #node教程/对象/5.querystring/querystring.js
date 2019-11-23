@@ -1,20 +1,15 @@
-const qs = require("querystring");
+const qs = require('querystring')
 
-var obj = qs.parse("uname=lilei&upwd=123456");
-console.log(obj);
+var obj = qs.parse('uname=lilei&upwd=123456')
+console.log(obj)
 
+let url = qs.stringify(obj)
+console.log(url)
 
-var url = qs.stringify(obj)
-console.log(url);
+// json--------------
 
-
-
-
-//json--------------
-
-var json=JSON.stringify(obj)
+let json = JSON.stringify(obj)
 console.log(json)
 
-
-var obj=JSON.parse(json)
+var obj = JSON.parse(json)
 console.log(obj)

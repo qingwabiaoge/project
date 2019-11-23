@@ -8,8 +8,8 @@
 </head>
 <body>
 <div id="app">
-    <button @click="click1">父修改子</button>
-    <button @click="click2">父调用子</button>
+    <button @click="$children[0].msg='子被修改'">父修改子</button>
+    <button @click="$children[0].alert('父调用子')">父调用子</button>
     <ch>
     </ch>
 
@@ -34,13 +34,7 @@
 
     var vm = new Vue({
         el: '#app',
-
         components: {ch},
-
-        methods:{
-            click1(){this.$children[0].msg='父修改子'},
-            click2(){this.$children[0].alert('父调用子')}
-        }
 
     })
 

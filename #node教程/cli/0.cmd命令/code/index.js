@@ -1,1 +1,1 @@
-﻿console.log("cmd命令");
+console.log('cmd命令')

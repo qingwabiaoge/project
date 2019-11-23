@@ -1,4 +1,4 @@
-var fs = require('fs');
-const callback=require('../callback')
-fs.mkdir("./test/a", callback)
+let fs = require('fs')
+const callback = require('../callback')
 
+fs.mkdir('./test/a', callback)

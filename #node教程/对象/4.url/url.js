@@ -1,6 +1,6 @@
-var url = require("url");
-var u = "http://www.baidu.com/index.html?name=lilei";
+let url = require('url')
 
+let u = 'http://www.baidu.com/index.html?name=lilei'
 
-var obj = url.parse(u);
-console.log(obj);
+let obj = url.parse(u)
+console.log(obj)

@@ -8,6 +8,7 @@
 <script>
     Vue.component('cl',
         {
+          //判断attrs是否落在子组件的最外层的标签
             inheritAttrs: false,
             template: `<div >
                        $attrs:{{$attrs}}
