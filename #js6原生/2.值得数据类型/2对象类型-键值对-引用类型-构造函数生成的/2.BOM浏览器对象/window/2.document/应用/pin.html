@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body style="height: 2000px">
-<div id="div" style="width:100px;height:100px;background:#ccc;position:absolute;"></div>
+
+<div style="">11111</div>
+<div id="pin"></div>
+
 <script>
-    console.log(document.documentElement.clientHeight)//    ->   视口的大小
-    console.log(document.documentElement.scrollHeight) // ->   文档的大小
-    window.onscroll = function ()
-    {
-        var oFix = document.getElementById("div");
-        oFix.style.top = document.documentElement.scrollTop + "px";
-        
 
-    }
-
+window.onscroll = function () {
+  const el = document.getElementById('pin')
+  if (document.documentElement.scrollTop - el.offsetTop > 0) {
+    el.style.position = 'fixed'
+    el.style.top = 0
+  } else {
+    el.style.position = 'relative'
+  }
+}
 </script>
+
+
+<style>
+  #pin {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    position: absolute;
+  }
+
+</style>
 </body>
 </html>

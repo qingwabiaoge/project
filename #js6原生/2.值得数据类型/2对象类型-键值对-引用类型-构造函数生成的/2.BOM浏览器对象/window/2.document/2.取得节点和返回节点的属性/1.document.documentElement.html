@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" id="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
 <!--
 div撑大了documentElement
 documentElement的高度为1900px,超出了浏览器的窗口(window),
@@ -13,6 +21,7 @@ documentElement的高度为1900px,超出了浏览器的窗口(window),
 
 <script>
 
-  console.log(document.documentElement.offsetHeight)
-
+  console.log(document.documentElement===document.getElementsByTagName('html')[0])
 </script>
+</body>
+</html>

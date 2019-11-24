@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" id="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<!--
+div撑大了documentElement
+documentElement的高度为1900px,超出了浏览器的窗口(window),
+ window默认css属性window{overflow: auto;} 不超出的话window滚动条不显示 超出了window滚动条显示
+ -->
+<div style="height: 1900px">
+
+</div>
+
+<style>
+    window{overflow: auto;}
+</style>
+
+<script>
+
+  console.log(document.body===document.getElementsByTagName('body')[0])
+</script>
+</body>
+</html>

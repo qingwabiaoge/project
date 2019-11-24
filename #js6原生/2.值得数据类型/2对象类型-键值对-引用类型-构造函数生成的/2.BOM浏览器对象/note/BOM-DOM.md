@@ -1,8 +1,6 @@
-# Windows
+# Windows(操纵浏览器)
 
 **window对象：表示浏览器中打开的窗口。**
-
-bom操控浏览器 dom操控页面
 
 [![](./img/global.png)](./img/global.xmind)
 
@@ -90,6 +88,11 @@ let i=0
 
 ```
 
+## alert()
+
+- alert()
+- prompt()
+- confirm()
 
 ## open() 新开window窗口打开链接
 
@@ -97,9 +100,26 @@ let i=0
   window.open("http://www.runoob.com");
 ```
 
+## onload
+
+```
+window.onload = function () {
+  // 当页面加载完成执行
+  // 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
+}
+```
+
+## onunload
+
+```
+window.onunload = function () {
+  // 当用户退出页面时执行
+}
+```
+
 ## location
 
-### location.href  读取和设置本窗口的地址
+##### location.href  读取和设置本窗口的地址
 
 ```js
   window.location.href = "http://www.baidu.com"
@@ -108,13 +128,13 @@ let i=0
 
 ## screen
 
-### screen.availWidth
+##### screen.availWidth
 
   `console.log(screen.availWidth, screen.availHeight);`
 
 ## navigator
 
-### navigator.userAgent
+##### navigator.userAgent
 
 ```
 navigator.userAgent
@@ -122,7 +142,7 @@ navigator.userAgent
 
 ## history
 
-### history.pushState()
+##### history.pushState()
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +219,7 @@ navigator.userAgent
 
 
 
-### history.go()
+##### history.go()
 
 ```html
 <!DOCTYPE html>
@@ -276,7 +296,7 @@ navigator.userAgent
 
 ## URL
 
-### URL.createObjectURL()
+##### URL.createObjectURL()
 
 ```html
 <input type="file" id="btn" accept="image/*" value="upload"/>
@@ -294,7 +314,7 @@ navigator.userAgent
 
 ```
 
-## session
+## sessionStorage
 
 ```js
 const obj = {a: 1, b: 2}
@@ -318,11 +338,7 @@ localStorage.setItem('obj', obj);
 console.log(i.a)
 ```
 
-
-
-## document
-
-作用:操控一页面
+## document(操控页面)
 
 1、document对象：代表给定浏览器窗口中的 HTML 文档。就是html标签
 
@@ -432,7 +448,7 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 
 
 
-[![](./img/global.png)](./img/global.xmind)
+[![](./img/global.svg)](./img/global.xmind)
 
 
 
