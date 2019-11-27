@@ -5,7 +5,8 @@ const globalSchema = mongoose.Schema({
   ...base,
   producePagerSize: Number,
   articlePagerSize: Number,
-  host: String,
+  cnhost: String,
+  enhost: String,
   beian: String,
   //全局背景
   bg: String,

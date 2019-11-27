@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 // const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('components')
 // 把mixin挂载在vue实例
-const componentsMapObject = Vuex.createNamespacedHelpers('components')
+const categoryMapObject = Vuex.createNamespacedHelpers('category')
 const globalMapObject = Vuex.createNamespacedHelpers('global')
 const themeMapObject = Vuex.createNamespacedHelpers('theme')
 
@@ -29,11 +29,8 @@ export default {
       'global'
     ]),
     ...themeMapObject.mapState(['primary']),
-    ...componentsMapObject.mapGetters([
-      'components',
-      'articleCategory',
-      'categorys',
-      'produceCategory'
+    ...categoryMapObject.mapGetters([
+      'category',
     ])
   },
   methods: {

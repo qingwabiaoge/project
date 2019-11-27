@@ -1,20 +1,25 @@
 <template>
-    <div :style="{background:`url(${global.background})`,backgroundAttachment: 'fixed','--primary-color':primary} ">
+  <div :style="{background:`url(${global.background})`,backgroundAttachment: 'fixed','--primary-color':primary} ">
+    <top></top>
+    <header1>
+      <el-nav class="hidden-sm-and-down"></el-nav>
+      <template v-slot:drawer>
+        <el-nav mode="horizontal ">
 
-        <header2 :data="{title:global.title,image:global.image,children:categorys}"></header2>
-        <!--    <bannerCategory></bannerCategory>-->
+        </el-nav>
+      </template>
+    </header1>
+    <nuxt/>
 
-        <nuxt/>
-
-        <footerMessage :data="{...components.contact,beian:global.beian}"></footerMessage>
-    </div>
+    <!-- <footerMessage :data="{...components.contact,beian:global.beian}"></footerMessage>-->
+  </div>
 </template>
 <script>
-    import mixin from '@/mixins/page-mixin'
+import mixin from '@/mixins/page-mixin'
 
-    export default {
-        mixins: [mixin]
-    }
+export default {
+  mixins: [mixin]
+}
 </script>
 
 

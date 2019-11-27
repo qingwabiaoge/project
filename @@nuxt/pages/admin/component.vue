@@ -33,7 +33,7 @@
 
     data() {
       return {
-        parentid: '',
+        parent: '',
         uniformData: {}
       }
 
@@ -44,8 +44,8 @@
         this.uniformData = component
         this.$refs.uniform.visible = true
       },
-      clickAdd(parentid) {
-        this.uniformData = {model: 'component', parentid, name: this.$tool.randomString(4)}
+      clickAdd(parent) {
+        this.uniformData = {model: 'component', parent, name: this.$tool.randomString(4)}
         this.$refs.uniform.visible = true
       },
       clickReduce({_id, title}) {

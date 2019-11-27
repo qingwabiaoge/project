@@ -26,65 +26,64 @@
 
 <script>
 
-  const vm = new Vue({
-    el: '#app',
+const vm = new Vue({
+  el: '#app',
 
-    data() {
-      return {
-        file: '',
-      };
-    },
-    computed: {
-      src() {
-        if (this.file) {
-          //本地图片预览------------------------------------
-          var windowURL = window.URL || window.webkitURL;  //兼容ie
-          //URL.createObjectURL() 静态方法会创建一个 DOMString，其中包含一个表示参数中给出的对象的URL。
-          return windowURL.createObjectURL(this.file);
-        }
-
-      }
-
-    },
-
-    methods: {
-
-      showThumb(event) {
-        //获取文件
-        this.file = event.target.files[0];
-      },
-
-      submit() {
-
-        event.preventDefault();//取消默认行为
-
-        let formdata = new FormData();
-
-        formdata.append('file', this  .file);
-        console.log(formdata)
-
-        let config = {
-          headers: {"Content-Type": "multipart/form-data"},
-
-        };
-        console.log(formdata)
-        axios.post('http://localhost:3000/api/request-file/', formdata, {
-          headers: {"Content-Type": "multipart/form-data"},
-
-        }).then((res) => {
-
-          //做处理
-
-        }).catch((error) => {
-
-
-        });
-
+  data () {
+    return {
+      file: '',
+    }
+  },
+  computed: {
+    src () {
+      if (this.file) {
+        //本地图片预览------------------------------------
+        var windowURL = window.URL || window.webkitURL  //兼容ie
+        //URL.createObjectURL() 静态方法会创建一个 DOMString，其中包含一个表示参数中给出的对象的URL。
+        return windowURL.createObjectURL(this.file)
       }
 
     }
 
-  });
+  },
+
+  methods: {
+
+    showThumb (event) {
+      //获取文件
+      this.file = event.target.files[0]
+    },
+
+    submit () {
+
+      event.preventDefault()//取消默认行为
+
+      let formdata = new FormData()
+
+      formdata.append('file', this.file)
+      console.log(formdata)
+
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' },
+
+      }
+      console.log(formdata)
+      axios.post('http://localhost:3000/api/request-file/', formdata, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+
+      }).then((res) => {
+
+        //做处理
+
+      }).catch((error) => {
+
+      })
+
+    }
+
+  }
+
+})
 
 </script>
 

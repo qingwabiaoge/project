@@ -1,6 +1,8 @@
 import Vuex from 'vuex'
 
 const themeMapObject = Vuex.createNamespacedHelpers('theme')
+const userMapObject = Vuex.createNamespacedHelpers('user')
+const globalMapObject = Vuex.createNamespacedHelpers('global')
 const image1 = require('@/assets/images/test/image1.jpg')
 const image2 = require('@/assets/images/test/image2.jpg')
 const image3 = require('@/assets/images/test/image3.jpg')
@@ -36,53 +38,53 @@ const test = {
   qcode,
   address: '广东省中山市东城大道NO.001',
   children:
-        [
-          {
-            button: 'more+',
-            subtitle,
-            description,
-            title,
-            info,
-            href,
-            image: image1,
-            icon,
-            map,
-            content,
-            background,
-            bg: '#fff'
+    [
+      {
+        button: 'more+',
+        subtitle,
+        description,
+        title,
+        info,
+        href,
+        image: image1,
+        icon,
+        map,
+        content,
+        background,
+        bg: '#fff'
 
-          },
-          {
-            button: 'more+',
-            subtitle,
-            description,
-            title,
-            info,
-            href,
-            image: image2,
-            icon,
-            map,
-            content,
-            background,
-            bg: '#fff'
+      },
+      {
+        button: 'more+',
+        subtitle,
+        description,
+        title,
+        info,
+        href,
+        image: image2,
+        icon,
+        map,
+        content,
+        background,
+        bg: '#fff'
 
-          },
-          {
-            button: 'more+',
-            subtitle,
-            description,
-            title,
-            info,
-            href,
-            image: image3,
-            icon,
-            map,
-            content,
-            background,
-            bg: '#fff'
+      },
+      {
+        button: 'more+',
+        subtitle,
+        description,
+        title,
+        info,
+        href,
+        image: image3,
+        icon,
+        map,
+        content,
+        background,
+        bg: '#fff'
 
-          }
-        ]
+      }
+    ]
 }
 
 // 把mixin挂载在vue实例
@@ -97,19 +99,21 @@ export default {
     inverse: Boolean
   },
   computed: {
-    ...themeMapObject.mapState(['primary'])
+
+    ...globalMapObject.mapState([
+      'global'
+    ]),
+
+    ...themeMapObject.mapState(['primary']),
+    ...userMapObject.mapState(['token'])
   },
   mounted () {
     // 设置背景
     if (this.$el.style) {
-      // console.log(this.data.background)
-      // ${this.data.bg?this.data.bg:''}这里三目很重要 不写css样式会失效
+
       this.$el.style.background = `${this.data.bg ? this.data.bg : ''} url(${this.data.background}) 0% 0% / cover  fixed`
       this.$el.style.setProperty('--primary-color', this.primary)
-      /*   if (!this.data.fullpage&&this.data.type==="component") {
 
-                 this.$el.className += " container"
-               } */
     }
   }
 

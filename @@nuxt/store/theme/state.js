@@ -1,1 +1,1 @@
-export default () => ({primary:'#0f0'});
+export default () => ({ primary: '#0f0' })

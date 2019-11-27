@@ -1326,30 +1326,41 @@ Model.findById(id, [projection], [options], [callback])
 ##### 逻辑运算符
 
 ```
-$or　　　　或关系
-$nor　　　 或关系取反
-$not      取反与正则表达式联合使用时极为有效，用来查找那些与特定模式不匹配的文档。
+$exists　　 字段是否存在
+
 $gt　　　　大于
 $gte　　　 大于等于
 $lt　　　　小于
 $lte　　　 小于等于
+$mod　　　　取模运算
+
+$regex　　 正则，用于模糊查询
+
+
+
 $eq       等于 equal
 $ne　　　　不等于 no eual
+
+
 $in　　　　[10,15,20]  在数组里的
 $nin　　　 不在多个值范围内
 $all　　　 匹配数组中多个值
-$regex　　 正则，用于模糊查询
 $size　　　匹配数组大小
-$maxDistance　范围查询，距离（基于LBS）
-$mod　　　　取模运算
-$near　　　 邻域查询，查询附近的位置（基于LBS）
-$exists　　 字段是否存在
 $elemMatch　匹配内数组内的元素
+
+
+$slice　　　　查询字段集合中的元素（比如从第几个之后，第N到第M个元素
+
+$or　　　　或关系
+$nor　　　 或关系取反
+$not      取反与正则表达式联合使用时极为有效，用来查找那些与特定模式不匹配的文档。
+$maxDistance　范围查询，距离（基于LBS）
+$near　　　 邻域查询，查询附近的位置（基于LBS）
 $within　　　范围查询（基于LBS）
 $box　　　　 范围查询，矩形范围（基于LBS）
 $center　　　范围醒询，圆形范围（基于LBS）
 $centerSphere　范围查询，球形范围（基于LBS）
-$slice　　　　查询字段集合中的元素（比如从第几个之后，第N到第M个元素
+
 ```
 
 ```

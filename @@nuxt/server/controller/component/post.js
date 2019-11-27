@@ -6,7 +6,7 @@ module.exports = async (ctx) => {
 
 
   component = await Component.create(component)
-  const father = await Component.findById(component.parentid)
+  const father = await Component.findById(component.parent)
   await father.children.push(component._id)
   father.save()
 

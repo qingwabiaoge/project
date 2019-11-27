@@ -1,5 +1,3 @@
-const { resolve } = require('path')
-
 module.exports = {
 
   // 不渲染ui目录
@@ -110,7 +108,8 @@ module.exports = {
     */
     '~/plugins/swiper.client.js',
     '~/plugins/waterfall.client.js',
-    '~/plugins/lei-ui',
+    '~/plugins/ui-components',
+    '~/plugins/module-components',
     '~/plugins/vue-lazyload',
     '~/plugins/axios',
     '~/plugins/filter',

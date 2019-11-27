@@ -2,7 +2,7 @@ const admin = require('../controller/admin/index')
 const user = require('../controller/user')
 const article = require('../controller/article/index.js')
 const produce = require('../controller/produce')
-
+const category = require('../controller/category')
 const component = require('../controller/component')
 const global = require('../controller/global')
 const contact = require('../controller/contact')
@@ -47,7 +47,15 @@ router
 router
   .post('/upload', checkToken, admin.upload)
 //carousel
-router.get('/components', component.gets)
+router .get('/category/:_id', category.get)
+  .get('/categorys', category.gets)
+  .post('/category', category.post)
+  .patch('/category', category.patch)
+  .del('/category/:_id',  category.del)
+
+
+router .get('/component/:_id', component.get)
+  .get('/components', component.gets)
   .post('/component', component.post)
   .patch('/component', component.patch)
   .del('/component/:_id',  component.del)

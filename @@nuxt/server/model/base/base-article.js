@@ -1,6 +1,6 @@
 module.exports = {
   //seo
-  seotitle: String,
+
   keyword: String,
   category: String,//关联Component的name
 

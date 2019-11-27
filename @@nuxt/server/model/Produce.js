@@ -7,6 +7,7 @@ const baseArticle =require('./base/base-article')
 const produceSchema = mongoose.Schema({
   ...base,
   ...baseArticle,
+  seotitle: String,
 //产品参数-------------------
   suk: Number,
   pv: Number,

@@ -1,7 +1,7 @@
 //Message在全局中所以不用页面vue实例初始化就可以用
 import {Message} from 'element-ui';
 
-//修改app.$axios
+//修改ctx.$axios
 export default function ({$axios, store, redirect, env}) {
   let axios = $axios;
 

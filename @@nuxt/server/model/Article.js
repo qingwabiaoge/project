@@ -6,7 +6,8 @@ const basePageDetail = require('./base/base-article')
 
 const articleSchema = mongoose.Schema({
   ...bash,
-  ...basePageDetail
+  ...basePageDetail,
+  seotitle: String,
 })
 
 // 根据schema生成model

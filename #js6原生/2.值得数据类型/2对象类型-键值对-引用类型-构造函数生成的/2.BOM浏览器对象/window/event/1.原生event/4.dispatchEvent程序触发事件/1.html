@@ -1,0 +1,13 @@
+<input type="text">
+<script>
+//建立事件
+window.addEventListener('resize', console.log('resize'))
+
+// 向 window派发一个resize内置事件
+window.dispatchEvent(new Event('resize'))
+
+const el=document.getElementsByTagName('input')[0]
+el.addEventListener('focus',console.log('focus'))
+el.dispatchEvent(new Event('focus'))
+
+</script>
