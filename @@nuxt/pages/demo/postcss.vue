@@ -1,5 +1,6 @@
 <template>
-  <div :class="$style.wrap" :style="{'--primary-color':primary}">
+  <div>
+  <div :class="$style.wrap" >
     <h1 href="#">h1</h1>
     <section>section</section>
     <style>
@@ -9,12 +10,12 @@
       }
     </style>
   </div>
-
+  </div>
 </template>
 
 <script>
   import img from '@/assets/images/test/image2.jpg'
-  import mixin from '@/mixins/page-mixin'
+  import mixin from '@/mixins/conponent-mixin'
 
   export default {
     layout: 'demo',
@@ -39,7 +40,7 @@
 
       background-image: var(--hero-image);
       /*这里要nuxt.config.js设置的颜色才行*/
-      color: color-mod(var(--color-blue) a(80%));
+      color: color(var(--color-blue) a(80%));
       transform: rotate(2deg);
     }
     section{

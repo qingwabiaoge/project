@@ -103,9 +103,7 @@ module.exports = {
   plugins: [
     '~/plugins/element-ui',
 
-    /*    //style-vue-component的全局变量
             '~/plugins/global-styles',
-    */
     '~/plugins/swiper.client.js',
     '~/plugins/waterfall.client.js',
     '~/plugins/ui-components',

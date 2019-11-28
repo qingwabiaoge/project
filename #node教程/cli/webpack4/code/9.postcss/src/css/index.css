@@ -4,6 +4,7 @@
 
 /* usage */
 :--headings {
-    color: var(--heading-color);
+  color: color(var(--heading-color) alpha(10%));
+
   transform: rotateX(30deg);
 }

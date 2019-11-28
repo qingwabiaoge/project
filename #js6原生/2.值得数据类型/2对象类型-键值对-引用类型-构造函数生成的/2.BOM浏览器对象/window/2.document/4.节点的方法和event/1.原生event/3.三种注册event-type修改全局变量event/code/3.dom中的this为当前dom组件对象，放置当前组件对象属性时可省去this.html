@@ -1,0 +1,13 @@
+                                                             <!--此处offsetHeight可省去this类似vue-->
+<button onclick="console.log('onclick:',this,offsetHeight)" id="btn">btn</button>
+
+<script>
+  btn.onmouseout = function () {
+    <!--此处offsetHeight不可可省去this类似vue-->
+    console.log("btn.onmouseout", this,this.offsetHeight)
+  }
+  btn.addEventListener('mousedown', function () {
+    <!--此处offsetHeight不可可省去this类似vue-->
+    console.log('addEventListener',this,this.offsetHeight)
+  })
+</script>

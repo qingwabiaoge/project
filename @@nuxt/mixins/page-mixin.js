@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 // 把mixin挂载在vue实例
 const categoryMapObject = Vuex.createNamespacedHelpers('category')
 const globalMapObject = Vuex.createNamespacedHelpers('global')
-const themeMapObject = Vuex.createNamespacedHelpers('theme')
+
 
 export default {
   head () {
@@ -26,15 +26,14 @@ export default {
   },
   computed: {
     ...globalMapObject.mapState([
-      'global'
+      'global','primary'
     ]),
-    ...themeMapObject.mapState(['primary']),
     ...categoryMapObject.mapGetters([
       'category',
     ])
   },
   methods: {
-    ...themeMapObject.mapMutations(['setPrimary'])
+    ...globalMapObject.mapMutations(['setPrimary'])
 
   }
 

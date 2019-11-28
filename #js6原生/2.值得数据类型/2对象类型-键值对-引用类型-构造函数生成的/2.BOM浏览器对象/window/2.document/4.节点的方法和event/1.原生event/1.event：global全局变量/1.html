@@ -1,0 +1,17 @@
+
+<button onclick="fn(),fn(event),console.log(event)" id="btn">btn</button>
+
+
+<script>
+
+    console.log(event) //undifine也不是err 说明event声明过,事件操作只是为event赋值
+
+
+    function fn() {
+        console.log(event,)
+        //event 其实是window全局变量,注意不是global
+        console.log(window.event)
+    }
+
+
+</script>

@@ -3,7 +3,7 @@
 
 **window对象：表示浏览器中打开的窗口。**
 
-[![](./img/global.png)](./img/global.xmind)
+[![](./img/global.svg)](./img/global.xmind)
 
 **window的滚动条**
 
@@ -118,6 +118,14 @@ window.onunload = function () {
 }
 ```
 
+## screenLeft 
+
+浏览器界面左上角 在屏幕中的坐标        
+
+![1574875632310](img/1574875632310.png)
+
+
+
 ## location
 
 ##### location.href  读取和设置本窗口的地址
@@ -130,6 +138,8 @@ window.onunload = function () {
 ## screen
 
 ##### screen.availWidth
+
+屏幕的尺寸
 
   `console.log(screen.availWidth, screen.availHeight);`
 
@@ -347,7 +357,7 @@ console.log(i.a)
 
 
 
-[![](./img/global.png)](./img/global.xmind)
+[![](./img/global.svg)](./img/global.xmind)
 
 
 

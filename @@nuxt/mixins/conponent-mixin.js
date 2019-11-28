@@ -1,6 +1,5 @@
 import Vuex from 'vuex'
 
-const themeMapObject = Vuex.createNamespacedHelpers('theme')
 const userMapObject = Vuex.createNamespacedHelpers('user')
 const globalMapObject = Vuex.createNamespacedHelpers('global')
 const image1 = require('@/assets/images/test/image1.jpg')
@@ -97,24 +96,34 @@ export default {
       }
     },
     inverse: Boolean
-  },
+  }
+  ,
+
   computed: {
 
     ...globalMapObject.mapState([
-      'global'
+      'global', 'primary'
     ]),
 
-    ...themeMapObject.mapState(['primary']),
     ...userMapObject.mapState(['token'])
   },
+  //mounted以后才有$el
   mounted () {
     // 设置背景
     if (this.$el.style) {
 
       this.$el.style.background = `${this.data.bg ? this.data.bg : ''} url(${this.data.background}) 0% 0% / cover  fixed`
+      //这是设置的--primary-color是一个字符串
       this.$el.style.setProperty('--primary-color', this.primary)
 
     }
+  },
+  watch: {
+    primary () {
+      this.$el.style.setProperty('--primary-color', this.primary)
+
+    }
+
   }
 
 }
