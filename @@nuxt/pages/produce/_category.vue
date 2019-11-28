@@ -43,7 +43,7 @@
         background
         layout="prev, pager, next"
 
-        :page-size="global.producePagerSize"
+        :page-size="global.producePagerNumber"
         :total="total"
         :current-page.sync="$route.query.page-0"
       >
@@ -68,7 +68,7 @@
           //有可搜索title
           title: route.query.title,
           page: route.query.page,
-          size: store.state.global.global.producePagerSize,
+          size: store.state.global.global.producePagerNumber,
         }
       })
       return {

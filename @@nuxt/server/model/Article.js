@@ -1,13 +1,14 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 const moment = require('moment')
 // 声明schema
-const bash = require('./base/base')
-const basePageDetail = require('./base/base-article')
 
+const base = require('./base')
+const addition = require('./base/addition')
 const articleSchema = mongoose.Schema({
-  ...bash,
-  ...basePageDetail,
-  seotitle: String,
+  //seo
+  ...base,
+  ...addition
 })
 
 // 根据schema生成model

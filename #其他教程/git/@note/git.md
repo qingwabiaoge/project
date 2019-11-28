@@ -61,7 +61,7 @@ git Bash中输入: ssh -T 393502736@qq.com， 返回 Welcome to Git@OSC, yournam
 
 # 工作区、暂存区和版本库
 
- ![工作区暂存区版本库](img/1716463609-5bf0fbfc7c3aa_articlex.jpg) 
+ ![工作区暂存区版本库](img/1716463609-5bf0fbfc7c3aa_articlex.png) 
 
 
 * 工作区：用来编辑保存项目文件的地方，也是用户能直接操作到的地方。

@@ -1,13 +1,14 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const base= require('./base/base')
-const baseArticle =require('./base/base-article')
 
+const base = require('./base/')
+const addition = require('./base/addition')
 //声明schema
 const produceSchema = mongoose.Schema({
+
   ...base,
-  ...baseArticle,
-  seotitle: String,
+  //和article相同的属性
+  ...addition,
 //产品参数-------------------
   suk: Number,
   pv: Number,
@@ -21,10 +22,10 @@ const produceSchema = mongoose.Schema({
   weight: Number,
   color: String,
 //购买者
-  buyer: {type: Schema.Types.ObjectId, ref: 'Customer'},
+//  buyer: {type: Schema.Types.ObjectId, ref: 'Customer'},
 
 
-});
+})
 //根据schema生成model
 
 const Produce = mongoose.model('Produce', produceSchema)

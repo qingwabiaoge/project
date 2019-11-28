@@ -94,8 +94,7 @@ export default {
       default () {
         return test
       }
-    },
-    inverse: Boolean
+    }
   }
   ,
 

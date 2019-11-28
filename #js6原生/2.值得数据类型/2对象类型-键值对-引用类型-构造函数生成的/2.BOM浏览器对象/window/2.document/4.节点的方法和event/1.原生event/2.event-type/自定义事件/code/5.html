@@ -1,0 +1,9 @@
+<a href="/cs" id="a">ceshi</a>
+
+<script>
+
+var a = document.getElementById('a')
+var evObj = document.createEvent('MouseEvents')
+evObj.initMouseEvent('click', true, true, window, 1, 12, 345, 7, 220, false, false, true, false, 0, null)
+a.dispatchEvent(evObj)//即触发了click事件
+</script>

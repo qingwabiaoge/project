@@ -5,7 +5,6 @@ const produce = require('../controller/produce')
 const category = require('../controller/category')
 const component = require('../controller/component')
 const global = require('../controller/global')
-const contact = require('../controller/contact')
 const message = require('../controller/message')
 const Router = require('koa-router')
 const router = new Router({prefix: '/api'})
@@ -65,9 +64,7 @@ router
   .get('/global', global.get)
   .patch('/global', checkToken, global.patch)
 
-router
-  .get('/getContact', contact.getContact)
-  .patch('/editContact', checkToken, contact.editContact)
+
 // 微信登录支付
 router
   .get('/login', user.login)

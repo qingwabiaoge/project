@@ -382,7 +382,7 @@
 
         <el-form-item label="产品分页" :label-width="formLabelWidth">
           <el-input type="number"
-                    v-model.number="data.producePagerSize"
+                    v-model.number="data.producePagerNumber"
                     auto-complete="off">
 
           </el-input>
@@ -391,7 +391,7 @@
 
         <el-form-item label="新闻分页" :label-width="formLabelWidth">
           <el-input type="number"
-                    v-model.number="data.articlePagerSize"
+                    v-model.number="data.articlePagerNumber"
                     auto-complete="off">
 
           </el-input>
