@@ -1,9 +1,15 @@
 //页面footer部分显示的组件
 const mongoose = require('mongoose')
 const { Schema } = mongoose
+const shortid = require('shortid')
 require('./Component')
 
 const footerSchema = Schema({
+  _id: {
+    type: String,
+
+    'default': shortid.generate
+  },
   background: String,
   bg: String,
   // 是否反色-----

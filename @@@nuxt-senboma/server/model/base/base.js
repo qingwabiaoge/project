@@ -1,5 +1,5 @@
 module.exports = {
-  //数据库模型 article,produces component global,为了uniform使用
+  //数据库模型 article,produces componen global,为了uniform使用
   model: String,
   //排序
   sort: Number,

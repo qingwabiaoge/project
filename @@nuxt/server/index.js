@@ -34,6 +34,7 @@ config.dev = !(app.env === 'production')
 
 async function start() {
   // Instantiate nuxt.js
+/*
   const nuxt = new Nuxt(config)
 
   // Build in development
@@ -43,19 +44,17 @@ async function start() {
   } else {
     await nuxt.ready()
   }
+*/
 
   app.use(ctx => {
     ctx.status = 200
     ctx.respond = false // Bypass Koa's built-in response handling
     ctx.req.ctx = ctx // This might be useful later on, e.g. in nuxtServerInit or with nuxt-stash
-    nuxt.render(ctx.req, ctx.res)
+    //nuxt.render(ctx.req, ctx.res)
   })
   app.listen(port)
 
-  /*  consola.ready({
-      message: `Server listening on http://${host}:${port}`,
-      badge: true
-    })*/
+
 
   console.log(`http://${host}:${port}`)
 }
@@ -66,7 +65,7 @@ start()
 // app.listen(port); //这里是巨坑 不要加host,加host画蛇添足,不填写服务器的host还无法运行
 // console.log('Server listening on ' + host + ':' + port)
 
-require('./db/index.js')//此文件有一个model引入即可
+// require('./db/index.js')//此文件有一个model引入即可
 
 
 

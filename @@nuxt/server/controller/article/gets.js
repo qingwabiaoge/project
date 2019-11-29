@@ -1,4 +1,4 @@
-const Article = require('../../model/Article');
+const {Article} = require('../../model/');
 
 module.exports = async (ctx) => {
   let {title, category, flag, admin, page = 1, size = 99999} = ctx.query

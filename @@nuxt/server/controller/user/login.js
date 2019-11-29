@@ -1,5 +1,5 @@
 const weixin = require('../../weixin')
-const User = require('../../model/User')
+const {User} = require('../../model/')
 
 
 module.exports = async (ctx, next) => {

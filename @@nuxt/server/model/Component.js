@@ -18,6 +18,9 @@ const componentSchema = Schema({
   // 子模块-----------------------
   children: [{ type: Schema.Types.ObjectId, ref: 'component' }],
 })
-
+componentSchema.pre('find', function (next) {
+  this.populate('children')
+  next()
+})
 const Component = mongoose.model('component', componentSchema)
 module.exports = Component

@@ -1,11 +1,14 @@
-const admin = require('../controller/admin/index')
+const admin = require('../controller/admin/')
 const user = require('../controller/user')
-const article = require('../controller/article/index.js')
+const article = require('../controller/article/')
 const produce = require('../controller/produce')
 const category = require('../controller/category')
 const component = require('../controller/component')
 const global = require('../controller/global')
 const message = require('../controller/message')
+
+
+
 const Router = require('koa-router')
 const router = new Router({prefix: '/api'})
 
@@ -71,6 +74,5 @@ router
 router
   .get('/getUser', user.getUser)
   .post('/addContact', user.addContact)
-
 router.get('/wOrder', checkToken, admin.wOrder);
 module.exports = router;

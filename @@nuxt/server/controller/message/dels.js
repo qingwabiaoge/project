@@ -1,4 +1,4 @@
-const Message = require('../../model/Message');
+const {Message} = require('../../model/');
 
 //批量删除商品
 module.exports = async (ctx) => {

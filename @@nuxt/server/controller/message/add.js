@@ -1,4 +1,4 @@
-const Message = require('../../model/Message');
+const {Message} = require('../../model/');
 //添加产品
 module.exports = async (ctx) => {
     let message = ctx.request.body

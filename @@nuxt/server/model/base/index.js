@@ -1,5 +1,12 @@
+const shortid = require('shortid')
 module.exports = {
   //数据库模型 article,produces component global,为了uniform使用
+  //
+  _id: {
+    type: String,
+
+    'default': shortid.generate
+  },
   model: String,
   //排序
   sort: Number,

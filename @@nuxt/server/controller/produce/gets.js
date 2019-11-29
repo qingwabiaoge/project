@@ -1,4 +1,4 @@
-const Produce = require('../../model/Produce');
+const {Produce} = require('../../model/');
 const i = 1
 // 获得所有产品
 module.exports = async (ctx) => {

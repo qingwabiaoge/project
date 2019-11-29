@@ -115,8 +115,6 @@ mongoose.connect(uri, options);
 
 　　可用选项如下所示
 
-
-
 ```
  db            -数据库设置
  server        -服务器设置
@@ -138,8 +136,11 @@ var options = {
     /*估计是用新的索引方法,
     如果不用会collection.ensure Index is deprecated. Use createIndexes instead */ 
   useCreateIndex: true,
+    //使用统一拓补
+  useUnifiedTopology: true,
   db: { native_parser: true },
   server: { poolSize: 5 },
+    //副本集设置
   replset: { rs_name: 'myReplicaSetName' },
   user: 'myUserName',
   pass: 'myPassword'
@@ -2421,7 +2422,137 @@ Dog.find({ tag: '5dd927451e520b21f0035d9a' }).exec(callback)
 
 ### 树型结构
 
-见实例tree
+
+![img](img/211752210493162.png)
+
+##### 第一种：父链接结构
+
+```
+db.categories.insert( { _id: "MongoDB", parent: "Databases" } )
+db.categories.insert( { _id: "dbm", parent: "Databases" } )
+db.categories.insert( { _id: "Databases", parent: "Programming" } )
+db.categories.insert( { _id: "Languages", parent: "Programming" } )
+db.categories.insert( { _id: "Programming", parent: "Books" } )
+db.categories.insert( { _id: "Books", parent: null } )
+```
+
+特征：
+
+1. 快速获取父节点：
+
+   db.categories.findOne( { _id: "MongoDB" } ).parent
+
+2. 方便创建父节点索引
+
+   db.categories.ensureIndex( { parent: 1 } )
+
+3. 通过查询父节点获取儿子节点
+
+   db.categories.find( { parent: "Databases" } )
+
+4. 需要多个查询来检索子树。
+
+##### 第二种：子链接结构
+
+```
+db.categories.insert( { _id: "MongoDB", children: [] } )
+db.categories.insert( { _id: "dbm", children: [] } )
+db.categories.insert( { _id: "Databases", children: [ "MongoDB", "dbm" ] } )
+db.categories.insert( { _id: "Languages", children: [] } )
+db.categories.insert( { _id: "Programming", children: [ "Databases", "Languages" ] } )
+db.categories.insert( { _id: "Books", children: [ "Programming" ] } )
+```
+
+特征：
+
+1. 快速获取儿子节点
+
+   db.categories.findOne( { _id: "Databases" } ).children
+
+2. 方便创建子节点索引
+
+   db.categories.ensureIndex( { children: 1 } )
+
+3. 通过查询儿子节点获取父节点
+
+   db.categories.find( { children: "MongoDB" } )
+
+4. 适合存储存储图,一个节点可能有多个父母。
+
+##### 第三种：祖先队列结构
+
+```
+db.categories.insert( { _id: "MongoDB", ancestors: [ "Books", "Programming", "Databases" ], parent: "Databases" } )
+db.categories.insert( { _id: "dbm", ancestors: [ "Books", "Programming", "Databases" ], parent: "Databases" } )
+db.categories.insert( { _id: "Databases", ancestors: [ "Books", "Programming" ], parent: "Programming" } )
+db.categories.insert( { _id: "Languages", ancestors: [ "Books", "Programming" ], parent: "Programming" } )
+db.categories.insert( { _id: "Programming", ancestors: [ "Books" ], parent: "Books" } )
+db.categories.insert( { _id: "Books", ancestors: [ ], parent: null } )
+```
+
+特征：
+
+1. 快速获取祖先
+
+   db.categories.findOne( { _id: "MongoDB" } ).ancestors
+
+2. 方便创建祖先节点索引
+
+   db.categories.ensureIndex( { ancestors: 1 } )
+
+3. 通过查询祖先来获取后代
+
+   db.categories.find( { ancestors: "Programming" } )
+
+4. 祖先模式略慢于物化路径模式
+
+##### 第四种：物化路径结构
+
+```
+db.categories.insert( { _id: "Books", path: null } )
+db.categories.insert( { _id: "Programming", path: ",Books," } )
+db.categories.insert( { _id: "Databases", path: ",Books,Programming," } )
+db.categories.insert( { _id: "Languages", path: ",Books,Programming," } )
+db.categories.insert( { _id: "MongoDB", path: ",Books,Programming,Databases," } )
+db.categories.insert( { _id: "dbm", path: ",Books,Programming,Databases," } )
+```
+
+特征：
+
+1. 通过查询检索排序
+
+   db.categories.find().sort( { path: 1 } )
+
+2. 快速查找子节点
+
+   db.categories.find( { path: /^,Books,/ } ) db.categories.find( { path: /^,Books,/ } )
+
+3. 为路径创建索引
+
+   db.categories.ensureIndex( { path: 1 } )
+
+##### 第五种：集合模型
+
+![img](img/211752398462904.png)
+
+```
+db.categories.insert( { _id: "Books", parent: 0, left: 1, right: 12 } )
+db.categories.insert( { _id: "Programming", parent: "Books", left: 2, right: 11 } )
+db.categories.insert( { _id: "Languages", parent: "Programming", left: 3, right: 4 } )
+db.categories.insert( { _id: "Databases", parent: "Programming", left: 5, right: 10 } )
+db.categories.insert( { _id: "MongoDB", parent: "Databases", left: 6, right: 7 } )
+db.categories.insert( { _id: "dbm", parent: "Databases", left: 8, right: 9 } )
+```
+
+特征：
+
+1. 快速获取子节点
+
+   var databaseCategory = db.categories.findOne( { _id: "Databases" } ); db.categories.find( { left: { $gt: databaseCategory.left }, right: { $lt: databaseCategory.right } } );
+
+2. 内容修改很低效适合静态树。
+
+ 
 
 # stuido 3t
 

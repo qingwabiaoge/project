@@ -1,4 +1,4 @@
-const Produce = require('../../model/Produce');
+const {Produce} = require('../../model/');
 
 //批量删除商品
 module.exports= async (ctx) => {

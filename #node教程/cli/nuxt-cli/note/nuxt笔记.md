@@ -157,6 +157,8 @@ export default {
 
 ##### page-> fetch()只能填充vuex
 
+**使用场景** 为了节省网速,不必一次性用nuxtServerInit 写入到$sotre的数据,用fetch再次补充$store
+
 如果页面组件设置了 fetch 方法，它会在组件每次加载前被调用__（在服务端或切换至目标路由之前）__。
 
 ```javascript

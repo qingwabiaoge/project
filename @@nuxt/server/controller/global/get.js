@@ -1,4 +1,4 @@
-const Global = require('../../model/Global');
+const {Global} = require('../../model/');
 
 // 获得产品列表
 module.exports = async (ctx) => {

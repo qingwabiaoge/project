@@ -1,4 +1,4 @@
-const Article = require('../../model/Article');
+const {Article} = require('../../model/');
 
 //编辑产品
 module.exports = async (ctx) => {

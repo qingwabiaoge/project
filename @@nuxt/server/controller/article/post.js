@@ -1,5 +1,5 @@
 
-const Article = require('../../model/Article');
+const {Article} = require('../../model/');
 
 module.exports = async (ctx) => {
     let article = ctx.request.body

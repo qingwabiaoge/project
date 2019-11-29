@@ -1,4 +1,4 @@
-const Global = require('../../model/Global');
+const {Global} = require('../../model/');
 
 
 //编辑产品

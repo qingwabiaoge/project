@@ -1,4 +1,4 @@
-const Message = require('../../model/Message');
+const {Message} = require('../../model/');
 
 // 获得所有message
 module.exports = async (ctx) => {
