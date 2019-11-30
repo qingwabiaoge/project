@@ -1,3 +1,0 @@
-
-import './export2'
-

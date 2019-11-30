@@ -1,34 +1,47 @@
 # Windows(操纵浏览器)
 
+## *outerWidth*
+
+...
+
+## *outerHeight*
+
+.....
 
 **window对象：表示浏览器中打开的窗口。**
 
-[![](./img/global.svg)](./img/global.xmind)
+## ==onload==
 
-**window的滚动条**
-
-```html
-<!--
-div撑大了documentElement
-documentElement的高度为1900px,超出了浏览器的窗口(window),
- window默认css属性window{overflow: auto;} 不超出window滚动条不显示 超出了滚动条显示
- -->
-<div style="height: 1900px">
-
-</div>
-
-<style>
-    window{overflow: auto;}
-</style>
-
-<script>
-
-  console.log(document.documentElement.offsetHeight)
-
-</script>
+```
+window.onload = function () {
+  // 当页面加载完成执行
+  // 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
+}
 ```
 
-![image-20191109002549745](img/image-20191109002549745.png)
+## ==onunload==
+
+```
+window.onunload = function () {
+  // 当用户退出页面时执行
+}
+```
+
+## ==onresize==
+
+ 重置浏览器窗口大小
+
+## ==scroll==
+
+....
+
+## ==close()==
+
+关闭窗口
+
+## ==closed()==
+
+....
 
 ## setTimeout()执行一次
 
@@ -95,36 +108,19 @@ let i=0
 - prompt()
 - confirm()
 
+
+
+
+
 ## open() 新开window窗口打开链接
 
 ```js
   window.open("http://www.runoob.com");
 ```
 
-## onload
+## replace
 
-```
-window.onload = function () {
-  // 当页面加载完成执行
-  // 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
-}
-```
-
-## onunload
-
-```
-window.onunload = function () {
-  // 当用户退出页面时执行
-}
-```
-
-## screenLeft 
-
-浏览器界面左上角 在屏幕中的坐标        
-
-![1574875632310](img/1574875632310.png)
-
-
+ 替换新的网址
 
 ## location
 
@@ -135,6 +131,16 @@ window.onunload = function () {
 
 ```
 
+##### location.reload() 
+
+刷新页面
+
+##### location.replace
+
+location.replace(“http://www.baidu.com”)
+
+
+
 ## screen
 
 ##### screen.availWidth
@@ -143,9 +149,21 @@ window.onunload = function () {
 
   `console.log(screen.availWidth, screen.availHeight);`
 
+## screenLeft 
+
+浏览器界面左上角 在屏幕中的坐标        
+
+![1574875632310](img/1574875632310.png)
+
+
+
+
+
 ## navigator
 
 ##### navigator.userAgent
+
+对象 记录浏览类型/内核/操作系统等信息
 
 ```
 navigator.userAgent
@@ -349,7 +367,7 @@ localStorage.setItem('obj', obj);
 console.log(i.a)
 ```
 
-## document(操控页面)
+## document(操控html)
 
 1、document对象：代表给定浏览器窗口中的 HTML 文档。就是html标签
 
@@ -365,7 +383,7 @@ console.log(i.a)
 
 
 
-### 新建doucment对象
+**新建doucment对象**
 
 浏览器链接页面时间会初始化这个document对象,document是HTMLdocument的实例,注入在window上,代表整个文档
 
@@ -380,7 +398,7 @@ console.log(i.a)
 </html>
 ```
 
-### document对象
+**document对象**
 
 ![1570967115231](img/1570967115231.png)
 
@@ -390,11 +408,24 @@ console.log(Object.getOwnPropertyNames(document))//["location"]
 console.log(Object.keys(document))//["location"]      
 ```
 
+### ==document.ready==
+
+ready 当标签节点加载完成以后执行，不会等待资源加载
+
+```
+document.ready = function(e){
+}
+```
+
+
+
 ### document.location
 
 ```
 document.location===window.location
 ```
+
+
 
 ### document.cookie
 
@@ -454,9 +485,7 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 
 ### doument的节点对象
 
-##### document和document节点的关系
-
-注入关系,document节点是document的key
+document节点是document的key
 
 
 
@@ -484,7 +513,7 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
 const el=document.getElementById("app") //返回dom节点对象
 ```
 
-###### id简写
+id绑定到了window
 
 ```html
 <img id="img"/>
@@ -508,11 +537,11 @@ const el=document.getElementById("app") //返回dom节点对象
 vue-$refs//返回dom节点对象和自定义组件对象
 ```
 
-###### 通过属性访问当前节点的父、子和同胞
+##### 通过属性访问当前节点的父、子和同胞
 
 ![](./6.png)
 
-###### 对子节点的操作
+##### 对子节点的操作的方法
 
 ```js
    function appendChild_() {
@@ -553,10 +582,10 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 ##### el节点对象和vue对象比较
 
-| dom                                  | vue组件                               |
-| ------------------------------------ | ------------------------------------- |
-| dom标签在html渲染时间运行dom构造函数 | vue组件标签在模板渲染时间运行构造函数 |
-| dom属性就是构造函数的参数            | 自定义标签的属性就是vue构造函数的属性 |
+| el                                    | vue组件                           |
+| ------------------------------------- | --------------------------------- |
+| div是HTMLDivElement的实例             | Cl是vue的实例                     |
+| div标签的属性就是HTMLDivElement的参数 | cl标签的的属性是Vue构造函数的参数 |
 
 ##### el节点对象的使用场景
 

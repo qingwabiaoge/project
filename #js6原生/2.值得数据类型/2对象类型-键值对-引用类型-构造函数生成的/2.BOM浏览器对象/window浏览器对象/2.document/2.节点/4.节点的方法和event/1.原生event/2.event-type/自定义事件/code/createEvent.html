@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+/* 创建一个事件对象，名字为newEvent，类型为build */
+var newEvent = new Event('build', { bubbles:true,cancelable:true,composed:true });
+
+/* 给这个事件对象创建一个属性并赋值 */
+newEvent.name = "新的事件！";
+
+/* 将自定义事件绑定在document对象上，这里绑定的事件要和我们创建的事件类型相同，不然无法触发 */
+document.addEventListener("build",function(){
+  alert("你触发了自定义事件！" + newEvent.name);
+},false)
+
+/* 触发自定义事件 */
+document.dispatchEvent(newEvent);
+console.log(newEvent)
+</script>

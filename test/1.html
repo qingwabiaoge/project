@@ -1,29 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <style>
-    #outer {
-      
-      margin: 100px 50px;
-      background: url(http://images.cnblogs.com/cnblogs_com/wenruo/873448/o_esdese.jpg);
-      height: 100px;
-      width: 50px;
-      padding: 10px 50px;
-      overflow: scroll;
-    }
-    #inner {
-      height: 200px;
-      width: 50px;
-      background-color: #d0ffe3;
-    }
-  </style>
-</head>
-<body>
-<div id="outer">
-  hello
-  <div id="inner"></div>
-</div>
-</body>
-</html>
+<script>
+
+function inheritPrototype (subType, superType) {
+  var prototype = Object.create(superType.prototype) //创建对象
+  prototype.constructor = subType //增强对象
+  subType.prototype = prototype //指定对象
+}
+
+
+function Person (name, age) {
+  this.name = name
+  this.age = age
+}
+
+
+inheritPrototype(Person, Object)
+Person.prototype.say = function () {
+  console.log('I am Person')
+}
+
+
+function Man (name, age, length) {
+  this.moustacheLength = length
+  Person.call(this, name, age)
+}
+
+inheritPrototype(Man, Person)
+Man.prototype.say = function () {
+  console.log('I am Man')
+}
+Man.prototype.haveAShave = function () {
+  console.log('I have a shave')
+}
+
+
+const xiaoming = new Man('xiaoming', 12, 1)
+
+console.log(xiaoming)
+</script>

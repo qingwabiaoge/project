@@ -1,0 +1,25 @@
+
+<input id="id" data-src="data-src" src="src" onfocus="fn(event)"/>
+
+<input id='id2'type="text" value="id2-value">
+<!--dom是一种回调传参机制所以能得到值-->
+
+<script>
+    function fn(e) {
+        console.log(e)
+        console.log(e.target.value)
+        console.log(e.target.id)
+        console.log(e.target.src)
+        console.log(e.target.dataset.src)
+
+
+
+        console.log(e.currentTarget.value)
+        console.log(e.currentTarget.id)
+        console.log(e.currentTarget.src)
+        console.log(e.currentTarget.dataset.src)
+
+        console.log(document.getElementById('id2').value)
+    }
+
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src=""></script>
+</head>
+<body>
+<div id="app">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+</div>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    #app {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #app > div {
+        height: 33.33%;
+    }
+
+
+</style>
+<script>
+    function a() {
+        var docHeight = document.documentElement.clientHeight;
+        console.log(docHeight)
+        document.getElementById("app").style.height = docHeight + 'px';
+    }
+
+    a()
+</script>
+</body>
+</html>
