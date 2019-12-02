@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<div style="height: 2000px">
+
+
+  <button onclick=" window.scroll(1000,2000)"> window.scroll(1000,2000)</button>
+
+  <button onclick=" document.documentElement.scroll(1000,2000)"> document.documentElement.scroll(1000,2000)</button>
+  <!--这个没有-->
+  <button onclick=" document.body.scroll(1000,2000)"> document.body.scroll(1000,2000)</button>
+
+  <button onclick="document.getElementById('app').scrollTo(100 ,100)">app.scroll(100 ,100)</button>
+  <div id="app" style="height: 200px; width: 200px; border: 1px; overflow: scroll">
+    <p style="width: 200%;height: 200%">
+      1111
+    </p>
+  </div>
+</div>
+</body>
+</html>
