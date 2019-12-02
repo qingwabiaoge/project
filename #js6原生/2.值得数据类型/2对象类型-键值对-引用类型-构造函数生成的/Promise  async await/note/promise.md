@@ -1,14 +1,26 @@
-# 实例的所有属性(真实对象键值对)
+# 实例的所有方法(真实对象键值对)
 
 ![1566963355851](img/1566963355851.png)
 
-# 创建对象
+### .then()  .catch()
 
 ```js
 new Promise((resolve,reject)=>{.....})
                          .then(res=>{})
                          .catch(err=>{})
 ```
+
+# Promise的静态函数
+
+### Promise.rejec( )
+
+拒绝的原因
+
+```
+  Promise.reject('renson');
+```
+
+
 
 # promise的作用
 
@@ -18,10 +30,10 @@ new Promise((resolve,reject)=>{.....})
 1. 返回异步的promise对象,
 
 
-2. 用.then().catch()或 async  fn( ){ await} 接收
+2. 用.then().catch()或 async  fn( ){ await} 接收值
 3. 普通程序流不能接受promise对象,
 
-![](1.png)
+![](./img/1.png)
 
 
 
@@ -46,8 +58,6 @@ await等待不到Promise对象 后面的代码绝不运行
 
 ```
 .then().catch(),
-
- async  fn(){ await f()} 
 ```
 
 
@@ -55,11 +65,11 @@ await等待不到Promise对象 后面的代码绝不运行
 
 
 
-![](异步.png)
+![](./img/异步.png)
 
 
 
-# 返回promise对象的函数
+# 返回值为promise对象的函数
 
 自定义return promise
 
@@ -156,11 +166,5 @@ return new Promise((resolve,reject)=>{})
     f()
 </script>
 
-```
-
-# Promise.rejec拒绝的原因
-
-```
-  Promise.reject('renson');
 ```
 

@@ -15,7 +15,7 @@ function fn (ctx) {
 
 const midware = async (ctx, next) => {
   ctx.body = '1'
-  next() // 接收next()返回的promise
+  next()
   await fn(ctx)// 等待接收异步函数的值undefined
 }
 const midware2 = (ctx, next) => {

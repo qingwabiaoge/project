@@ -94,7 +94,7 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 输出: /path
 ```
 
-##### 4.2.
+##### 4.2.相对路径
 
 ###### 4.2.1path.resolve('path1','path2','/path3') 
 

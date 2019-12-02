@@ -1,4 +1,4 @@
-# 构造函数建立实例
+# 构造函数参数
 
 ```js
 var re = new RegExp('hello','g');   //代替/hello/g
@@ -76,8 +76,6 @@ var re = new RegExp('hello','g');   //代替/hello/g
 
 [0-3]匹配0，1，2，3
 
-[0-9]* 匹配数字（注意后面有 *，可以为空）
-
 [0-9]+ 匹配数字（注意后面有 +，不可以为空）
 
 ##### [ ^  ]排除后的范围匹配
@@ -96,7 +94,6 @@ var str = 'my name is shilei'
 const reg = /lei$/
 
 console.log(reg.test(str)) //true
-
 console.log(reg.exec(str)) //['lei']
 
 ```
@@ -135,7 +132,7 @@ o{,3}
 
 (a|b){3,}
 
-##### 贪婪模式和懒惰模式
+##### 贪婪模式和懒惰模式?
 
 ###### 贪婪模式* +
 
@@ -153,8 +150,6 @@ o{,3}
 
 结果：`src="test.jpg"`因为匹配到第一个 **"** 就结束了一次匹配。不会继续向后匹配。因为他懒惰嘛。
 
-
-
 ```
 const str = `<img src="test.jpg" width="60px" height="80px"/>`
 
@@ -166,7 +161,7 @@ console.log(reg.exec(str))
 ```
 
 
-### ( )
+### ( )括号表达式
 
 ##### 分组
 
@@ -186,16 +181,19 @@ console.log(reg.exec(str))
 （a|b）匹配a或者b
 ```
 
-##### 捕获和不捕获
+##### 正则捕获和不捕获
 
-###### 捕获类型()
+###### 正则捕获
 
--  对reg.test()的影响: 括号分组
+-  对reg.test()的影响: 分组
 
--  对reg.exec()的影响: 括号部分捕获并把括号部分的捕获值赋值到reg.exec('xxx')[1]
+-  对reg.exec()的影响: ( )捕获并把( )捕获值,并把捕获值赋值到reg.exec('xxx')[1]
 
+   ```
+   [0: "doubi is a doubi" 1: "doubi"]
+   ```
 
->  访问捕获的内容
+访问捕获的内容
 
 1. reg.exec('xxx')[1]
 
@@ -221,15 +219,11 @@ console.log(reg.exec(str))
 
 ```
 
-
-
 ###### 非捕获(?:)
 
-- 对reg.test()的影响: 括号分组
+- 对reg.test()的影响: 分组
 
 - 对reg.exec()的影响: 括号部分不捕获
-
-
 
 ```
 
@@ -246,23 +240,22 @@ console.log(reg.exec(str))// [0:kid is]
 
 - 对reg.test()的影响:可以用括号分组,往前看一下是否有相等的值,有则返回true
 
+  ```
+  //开头就前瞻
+  const reg = /^(?=haha)/
+  const str = "hahahamimimi"
+  
+  console.log(reg.test(str))//true
+  ```
+
+  
+
 - 对reg.exec()的影响:括号部分不捕获
 
-
-```
-   const reg = /kid is a (?=doubi)/
-   console.log(reg.exec('kid is a doubi'))// [0:kid is a] 
-```
-
-
-```
-//开头就前瞻
-const reg = /^(?=haha)/
-const str = "hahahamimimi"
-
-
-console.log(reg.test(str))//true
-```
+    ```
+    const reg = /kid is a (?=doubi)/
+    console.log(reg.exec('kid is a doubi'))// [0:kid is a] 
+    ```
 
 ######  非捕获前瞻否定(?!)  
 
@@ -354,10 +347,9 @@ console.log(Object.getOwnPropertyNames(reg))//["lastIndex"] 记录test exec匹�
 
     console.log(reg.propertyIsEnumerable('lastIndex'))//false
     console.log(Object.keys(reg))//[]
-# 常用正则举例
+# 应用
 
 ``` javascript
-
 匹配中文：[\u4e00-\u9fa5]
 行首行尾空格：^\s*|\s*$
 Email：^\w+@[a-z0-9]+(\.[a-z]+){1,3}$

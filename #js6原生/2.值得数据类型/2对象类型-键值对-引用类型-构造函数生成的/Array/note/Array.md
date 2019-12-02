@@ -24,13 +24,13 @@ Array.from(ArrayLike)
 1. Array.isArray(arr)
 2. arr instanceof Array //操作符不用.和括号
 3. arr.instructor=Array
-4. Array.protype.isprotypeof(arr)
+4. Array.prototype.isprototypeof(arr)
 
 # 实例的所有属性(真实数据结构) in
 
-![](4.png)
+![](./img/4.png)
 
-### __ proto __:Array.prototype
+### Array.prototype
 
 ##### 栈方法修改数组(只有此组改变原数组)
 
@@ -94,8 +94,8 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 
 ```
 1. arr.indexOf(1)  //从前往后数第一个值为1的索引
-2. arr.lastindexOf(1’) //从后往前数第一个值为1的索引
-3. arr.indexOf({a: 10}) //无法使用,返回-1
+2. arr.lastindexOf(1) //从后往前数第一个值为1的索引
+3. arr.indexOf({a: 10}) //无法使用,返回-1,要用find
 ```
 
 ##### 数组和字符串互转
@@ -104,9 +104,8 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 
 ```
 [1, 2, 3, 4].join('-')
-[...'abc']
 ```
-###### split[^split] 字符串转数组
+   _split[^split] 字符串转数组_
 
 ```javascript
 '1234'.split('')
@@ -116,41 +115,32 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ###### every判断所有项符合某条件 返回boolen
 
 ```
- Array.protype.every((item,index,self) => {})
+ Array.prototype.every((item,index,self) => {})
 ```
 
 ###### some判断是否有符合某条件的项 返回boolen
 
 ```
- Array.protype.some((item,index,self) => {})
+ Array.prototype.some((item,index,self) => {})
  
 ```
 
 ###### map映射—>按照某条件返回数组
 
 ```
-  Array.protype.map((item,index,self) => {})
+  Array.prototype.map((item,index,self) => {})
 ```
 
 ###### filter过滤—>符合某条件的元素 返回数组
 
 ```
- Array.protype.filter((item,index,self) => {})
-```
-
-数组去重
-
-```
-const arr=["apple","banner","pear","banner","aaa"]
-arr = arr.filter((item,index,self)=>{
-       return self.indexOf(item) === index
-      })
+ Array.prototype.filter((item,index,self) => {})
 ```
 
 ###### forEach对每一项操作
 
 ```
- Array.protype.forEach((item,index,self) => {})
+ Array.prototype.forEach((item,index,self) => {})
 ```
 
 ###### find数组搜索
@@ -163,7 +153,7 @@ arr = arr.filter((item,index,self)=>{
 4. arr.findindex(function(item, index, self) { return item > 9 }) //查找第一个索引
 ```
 
- 已知id：2 可以删除{id:2,b:2}
+ _已知id：2  删除{id:2,b:2}_
 
 ```
 arr=[{a:1,id:1},{b:2,id:2}]   
@@ -175,11 +165,11 @@ arr=[{a:1,id:1},{b:2,id:2},{b:2,id:3}]
 ###### sort排序
 
 ```
- Array.protype.sort((a,b)=>b-a)
+ Array.prototype.sort((a,b)=>b-a)
 ```
 ###### reverse反转
 ```
-Array.protype.reverse()//反转
+Array.prototype.reverse()//反转
 ```
 
 ###### reduce
@@ -199,6 +189,41 @@ initialValue：可选项，其值用于第一次调用 callback 的第一个参�
 
 ```
 
+```html
+<script>
+    let array = [
+        {
+            name: 'apple',
+            price: 10
+        }, {
+            name: 'banana',
+            price: 9
+        }
+    ];
+
+    let sumprice = 0;
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        sumprice += element.price;
+    }
+    console.log('for example sumprice',sumprice);
+
+    /*
+        reduce 语法实现
+        total    必需。初始值, 或者计算结束后的返回值。
+        currentValue    必需。当前元素
+        currentIndex    可选。当前元素的索引
+        arr    可选。当前元素所属的数组对象。
+    */
+    sumprice = array.reduce(function (total, currentValue, currentIndex, arr) {
+        return total + currentValue.price;
+    }, 0);
+    console.log('for reduce sumprice',sumprice);
+</script>
+```
+
+
+
 ### ownProperty
 
 ```javascript
@@ -211,13 +236,64 @@ initialValue：可选项，其值用于第一次调用 callback 的第一个参�
 ['0','1']
 ```
 
+# 应用
+
+### 利用js找出数组中最大值
+
+1.es6拓展运算符...
+
+```
+Math.max(...arr)
+```
+
+2.es5 apply(与方法1原理相同)
+
+```
+Math.max.apply(null,arr)
+```
+
+3.for循环
+
+```
+let max = arr[0];
+for (let i = 0; i < arr.length - 1; i++) {
+    max = max < arr[i+1] ? arr[i+1] : max
+}
+```
+
+4.数组sort()
+
+```
+arr.sort((num1, num2) => {
+    return num1 - num2 < 0
+})
+arr[0]
+```
+
+5.数组reduce
+
+```
+arr.reduce((num1, num2) => {
+    return num1 > num2 ? num1 : num2}
+)
+```
+
+### 数组去重
+
+```
+const arr=["apple","banner","pear","banner","aaa"]
+arr = arr.filter((item,index,self)=>{
+       return self.indexOf(item) === index
+      })
+```
+
 # 错误
 
 ### null,undefine 报错的解决方法
 
 数组的方法的主题必须是数组 若为null,undefine就不是数组会报错
 
-![](1.png)
+![](./img/1.png)
 
 解决方法1 先判断是否爲数组
 

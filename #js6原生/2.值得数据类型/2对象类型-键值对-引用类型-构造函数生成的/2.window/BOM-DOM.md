@@ -1,8 +1,6 @@
 # Windows(js操纵浏览器)
 
-
-
-**window对象：表示浏览器中打开的窗口。**
+window对象：表示浏览器中打开的窗口。
 
 ## ==onload==
 
@@ -48,8 +46,6 @@ console.log('win-screenLeft', screenLeft)
 console.log('win-screenTop',  screenTop)
 console.log('-----------------------')
 ```
-
-
 
 ## screen
 

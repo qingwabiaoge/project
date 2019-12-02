@@ -4,15 +4,15 @@
   function out() {
     const i = 2
     const obj = {
-      a: 20,
+      i: 20,
       fn(arg) {
         console.log(arg)
-        console.log(this.a)
+        console.log(this.i)
         console.log(i)
-        console.log(`---------------`)
+
       }
     }
-    obj.fn(100)
+    obj.fn(200)
   }
 
 out()

@@ -28,7 +28,7 @@ npm是node自带的一个打包器插件,
 
 # 安装模块
 
-### 安装到全局文件夹
+### 安装cli到全局文件夹
 
  原理npm install xxx-cli -g 安裝xxx-cli到npm和yarn的目录下，这些目录已经设置了环境变量Path
 
@@ -37,14 +37,14 @@ npm install webpack -g
 yarn global add webpack 
 ```
 
-### 安装到项目文件夹
+### 安装cli到项目文件夹
 
 ```
 npm i nuxt -S //安装并保存到webpack.json生产环境配置
 yarn add nuxt 
 ```
 
-### 安装在项目文件夹和引入module对象
+### 安装对象在项目文件夹和引入module对象
 
 
 ```
@@ -70,10 +70,10 @@ npm会读取"./node_modules/koa/package.json"文件
 
 ### 安装指定版本
 
-```html
-yarn add package-name@1.2.3 会从 registry 里安装这个包的指定版本。
-yarn add package-name@tag 会安装某个 “tag” 标识的版本（比如 beta、next 或者 latest）
-yarn add package-name 会安装 latest 最新版本。
+```js
+yarn add package-name@1.2.3 //会从 registry 里安装这个包的指定版本。
+yarn add package-name@tag //会安装某个 “tag” 标识的版本（比如 beta、next 或者 latest）
+yarn add package-name //会安装 latest 最新版本。
 ```
 ```
 ~ 会匹配最近的小版本依赖包，比如~1.2.3会匹配所有1.2.x版本，但是不包括1.3.0
@@ -82,7 +82,7 @@ yarn add package-name 会安装 latest 最新版本。
 ```
 ### 局部安裝到开发模式
 
-```
+```js
 npm i nuxt -D //安装并保存到webpack.json开发环境配置
 yarn add webpack -D
 ```
@@ -98,8 +98,8 @@ yarn install
 # 删除模块
 
 ```
-yarn remove webpack # yarn
-npm uninstall webpack --save # npm 可以指定 --save | --save-dev
+yarn remove webpack 
+npm uninstall webpack -S 
 ```
 
 # 更新模块版本

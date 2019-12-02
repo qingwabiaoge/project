@@ -1,0 +1,14 @@
+<script>
+  const obj = {
+    fn() {
+      //2this===obj
+      const f = () => {
+        // 箭头函数的this作用域链 this===obj
+        console.log(this)
+      }
+      f()
+    }
+  }
+  obj.fn()//1
+
+</script>
