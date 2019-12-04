@@ -30,14 +30,6 @@ inset	可选。将外部阴影 (outset) 改为内部阴影。*/
 }
 
 */
-/*包含了reset.css
-
-去除了
-body {
- // line-height: 1;
-}
-
- */
 @font-face {
   font-family: OpenSans;
   src: url('../font/OpenSans-Light.ttf');
@@ -56,6 +48,11 @@ body {
 *:focus {
   outline: #fb00c9;
 }
+/*包含了reset.css================================================================================
+去除了
+body {
+ line-height: 1;
+}*/
 html,
 body,
 div,
@@ -187,8 +184,8 @@ body:after {
   background-size: cover;
   background-attachment: fixed;
 }
-/* 容器
- ========================================================================== */
+/*block
+ ======================================================================================== */
 h1,
 .h1,
 h2,
@@ -206,9 +203,6 @@ h6,
   font-weight: normal;
   color: #333;
 }
-/*
- * Sizes
- */
 h1,
 .h1 {
   font-size: 3.485rem;
@@ -268,7 +262,7 @@ h6,
 /* article */
 .article,
 article {
-  padding: 30px auto;
+  padding: 30 auto;
 }
 blockquote,
 q {
@@ -278,7 +272,6 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
   content: none;
 }
 blockquote {
@@ -312,7 +305,7 @@ a.active {
   text-decoration: none;
 }
 p {
-  margin-top: 0px;
+  margin-top: 0;
 }
 * + p {
   margin-top: 25px;
@@ -367,30 +360,6 @@ svg {
 svg:not(:root) {
   overflow: hidden;
 }
-hr,
-.hr {
-  /* 1 */
-  box-sizing: content-box;
-  height: 0;
-  /* 2 */
-  overflow: visible;
-  /* 3 */
-  text-align: inherit;
-  /* 4 */
-  margin: 0 0 25px 0;
-  border: 0;
-  border-top: 1px solid #E6E6E6;
-}
-* + hr,
-* + .hr {
-  margin-top: 25px;
-}
-/*abbr[title] {
-  !* 1 *!
-  border-bottom: none;
-  !* 2 *!
-  text-decoration: underline dotted;
-}*/
 b,
 strong {
   font-weight: bolder;
@@ -482,6 +451,30 @@ sub {
 .hover-inverse-color button {
   color: #fff;
 }
+hr,
+.hr {
+  /* 1 */
+  box-sizing: content-box;
+  height: 0;
+  /* 2 */
+  overflow: visible;
+  /* 3 */
+  text-align: inherit;
+  /* 4 */
+  margin: 0 0 25px 0;
+  border: 0;
+  border-top: 1px solid #E6E6E6;
+}
+* + hr,
+* + .hr {
+  margin-top: 25px;
+}
+/*abbr[title] {
+  !* 1 *!
+  border-bottom: none;
+  !* 2 *!
+  text-decoration: underline dotted;
+}*/
 /*---------------------- 滚动条-----------------*/
 /*定义滚动条高宽及背景 高宽分别对应 横竖滚动条的尺寸*/
 ::-webkit-scrollbar {
@@ -492,12 +485,12 @@ sub {
 /*定义滚动条轨道 内阴影+圆角*/
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #eee;
 }
 /*定义滑块 内阴影+圆角*/
 ::-webkit-scrollbar-thumb {
-  border-radius: 0px;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #f5f5f5;
 }
@@ -510,6 +503,21 @@ sub {
   background: #fb00c9;
   color: #fff;
   text-shadow: none;
+}
+.after {
+  position: relative;
+}
+.after:after {
+  transition: all 0.2s;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: #fb00c9;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 10px;
 }
 .container {
   /* media>1200 */

@@ -31,6 +31,7 @@ i='str'
 某种程度上来说，`void`类型像是与`any`类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是 `void`：
 
 ```ts
+                  //:在()后是针对返回值的
 function warnUser(): void {
     console.log("This is my warning message");
 }
@@ -121,9 +122,11 @@ x = [10, 'hello']; // Error
 ##### 函数
 
 ```ts
-//限制函数格式
-//限制了函数运行表达式的参数类型
-//限制了返回值的类型
+/*
+限制函数格式
+限制了函数运行表达式的参数类型
+限制了返回值的类型
+*/
 let myAdd: (x: number, y: number) => number 
  
 myAdd =function (x, y) {   
@@ -135,6 +138,7 @@ console.log(myAdd(1,2))
 ```
 
 ```js
+                                 //:在()后是针对返回值的
 function add(x: number, y: number): number {
   return x + y;
 }
@@ -660,7 +664,7 @@ let analog = createClock(AnalogClock, 7, 32);
 
 ### 带泛型的引用类型的接口(契约)
 
-##### 带泛型的对象类型的借口
+##### 带泛型的对象类型的接口
 
 ```ts
 interface LabelledValue<T> {
@@ -736,7 +740,7 @@ myArray = ["Bob", "Fred"];
 
 
 
-### 接口(契约)之间继承
+### 接口(契约)继承接口
 
 ```ts
 interface Shape {
@@ -771,7 +775,7 @@ square.sideLength = 10;
 square.penWidth = 5.0;
 ```
 
-### 把类当成接口
+### 接口继承类
 
 ```js
 class Point {
