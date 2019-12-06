@@ -388,8 +388,8 @@ sub {
 }
 
 
-.inverse-color {
-  .inverse-color()
+.color-inverse {
+  .color-inverse()
 }
 
 /*---------------------- 滚动条-----------------*/

@@ -3,6 +3,7 @@ const Koa = require('koa')
 const app = new Koa()
 
 function fn (ctx) {
+  //写入到response对象 所以放到哪个作用域写都可以
   ctx.body += 2
 }
 const midware = (ctx, next) => {

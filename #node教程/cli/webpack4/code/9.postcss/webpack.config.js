@@ -8,6 +8,12 @@ module.exports = {
     // 打包多出口文件
     // 生成 a.bundle.js  b.bundle.js  jquery.bundle.js
     filename: './js/[name].bundle.js'
+  },
+  resolve: {
+    extensions:['.css','.js','.vue'],//自动补全后缀名
+    alias: {
+      "@": path.resolve("./src") //替代目录
+    }
   }
   ,
   devServer: {

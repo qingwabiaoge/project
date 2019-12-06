@@ -5,18 +5,20 @@
 ```
 display:flex //下级dom都变成了类似inline-bolck显示
 ```
-### 水平方向
+### justify-content:水平方向的排布方式
 
-##### justify-content水平方向的排布方式
+justify表示水平方向,content表示排布
 
 ```
 justify-content:flex-start|flex-end|center|space-between|space-around|initial|inherit;
 ```
 ![img](img/bg2015071010.png)
 
-### 垂直方向
+### align-content:垂直方向行之间排布方式
 
-##### align-content垂直方向行之间排布方式(必须开启wrap那怕是一行)
+(必须开启wrap那怕是一行)
+
+align表示垂直方向,content表示排布
 
 ```js
 align-content:flex-start|flex-end|center|space-between|space-around  |initial|inherit|stretch(默认);
@@ -87,7 +89,9 @@ align-content:flex-start|flex-end|center|space-between|space-around  |initial|in
 
 ![1566102807339](img/1566102807339.png)
 
-##### align-items:每一行的元素 垂直方向的_对齐方式_
+### **align-items:**一行元素之间垂直方向的对齐方式
+
+ align表示垂直,items表示一行元素
 
 因为是垂直方向的一行,所以没有space-around,space-between等等
 
@@ -163,7 +167,7 @@ align-items: stretch(默认,一行内拉伸)|flex-start | flex-end | center | ba
 
 # .item{ }
 
-### 设置某个item在一行内的排列方式
+### align-self:设置某个item在一行内的排列方式
 ```
 align-self:flex-start | flex-end | center | baseline | stretch | auto;
 //align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性
@@ -186,6 +190,10 @@ width //优先级最低
 ```
 
 ### item的高度 
+
+```
+默认高度100%
+```
 
 
 ```

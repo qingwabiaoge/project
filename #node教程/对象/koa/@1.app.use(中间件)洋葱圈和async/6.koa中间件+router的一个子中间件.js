@@ -5,7 +5,7 @@ const Router = require('koa-router')
 
 const router = new Router()
 
-const control = async (ctx, next) => {
+const middlewares1 = async (ctx, next) => {
   ctx.body = '1' // 在路由执行前添加
   await next()
   ctx.body += '2'// 在路由执行后添加
@@ -19,7 +19,7 @@ const routerMiddlewares = async (ctx, next) => {
 
 router.get('/', routerMiddlewares)
 
-app.use(control)
+app.use(middlewares1)
   .use(router.routes())
   .use(router.allowedMethods())
 

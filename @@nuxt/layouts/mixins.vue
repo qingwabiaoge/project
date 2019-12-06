@@ -8,7 +8,7 @@
     <div class="position-fixed background-black ">
       <router-link v-for="item in $router.options.routes.filter(item=>/^mixins-/.test(item.name))" :key="item.path"
                    :to="{ path:item.path}"
-                   class="inverse-color">
+                   class="color-inverse">
         {{item.name}}
       </router-link>
     </div>

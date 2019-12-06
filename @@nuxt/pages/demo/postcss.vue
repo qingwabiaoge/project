@@ -28,10 +28,10 @@
 </script>
 
 <style lang="postcss" module>
-  $primary-color:var(--primary-color);
+
 
   @define-mixin bgBlue{
-    background:$primary-color;
+    background:var(--primary-color);
   }
 
   .wrap {
@@ -39,8 +39,8 @@
     h1 {
 
       background-image: var(--hero-image);
-      /*这里要nuxt.config.js设置的颜色才行*/
-      color: color(var(--color-blue) a(80%));
+      /*使用color函数,这里要nuxt.config.js-postcss-color-mod-function设置的颜色才行*/
+      color: color-mod(var(--nuxt-config-color) a(20%));
       transform: rotate(2deg);
     }
     section{

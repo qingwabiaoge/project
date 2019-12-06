@@ -10,8 +10,6 @@
 
       <h1>Pow.</h1>
 
-
-
     </div>
   </div>
 </template>

@@ -23,7 +23,6 @@ form.parse(ctx.req,function(err,fields){
         ctx.body = fields.name
     });
 
-
 });
 
 app.listen(3000);

@@ -1,5 +1,5 @@
 <template>
-    <div class="inverse-color" :class="$style.pictext5">
+    <div class="color-inverse" :class="$style.pictext5">
         <!--如果是组件 data.href存在,如果不是组件则是文章-->
         <nuxt-link :to="data.href">
             <div>

@@ -6,7 +6,7 @@
 
   //全局的 axios 默认值
   axios.defaults.baseURL = 'http://localhost:3000/api'
-//#1头文件加入方式1
+//*******************************#1头文件加入方式1
   axios.defaults.headers.common['Authorization'] = 'DEFAULT.TOKEN';
   axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -17,7 +17,7 @@
     config => {
       // 在headers里加入数据,会覆盖全局默认值
       if (store.state.token) {
-//#2头文件加入方式2
+//*******************************#2头文件加入方式2
         config.headers.Authorization = store.state.token;
       }
       // loadinginstace = Loading.service({fullscreen: true}) // 请求打开loading
@@ -71,8 +71,8 @@
 
   const config = {headers: {'X-Requested-With': 'shilei'}};
 
-//#3头文件加入方式3 额外添加head,不能覆盖拦截器里的同名字段
-  axios.get('/request', config).then(_ => console.log('这是过滤后的数据:', _))
+//*******************************#3头文件加入方式3 额外添加head,不能覆盖拦截器里的同名字段
+  axios.post('/author', config).then(_ => console.log('这是过滤后的数据:', _))
 
 
 </script>

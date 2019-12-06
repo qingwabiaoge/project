@@ -1,10 +1,10 @@
-@import "./export.css";
-/* custom selectors */
-@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+@import "./cssnext.css";
+@import "./postcss-url.css";
+
 
 /* usage */
 :--headings {
   color: color(var(--heading-color) alpha(10%));
-
   transform: rotateX(30deg);
 }
+

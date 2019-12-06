@@ -1,8 +1,13 @@
 <template>
   <div>
+    css3不支持使用模板里的变量--heading-color,运行color函数,无法半透明解决方案 <br>
+    color(var(--heading-color) alpha(10%));
+
+    <!--方案1--------------->
     <!--render晚于data可以找到rgba函数-->
     <h1 :style="{background: rgba(this.primary, 0.2)}">{{primary}} </h1>
-    <h2 :style="bg">css3不支持模板里的变量 使用 color(var(--heading-color) alpha(10%));不支持的半透明解决方案</h2>
+    <!--方案2 -----------------------------  -->
+    <h2 :style="bg">h2</h2>
   </div>
 </template>
 
@@ -15,13 +20,15 @@ export default {
   data () {
     return {
       rgba,
-      bg: undefined
+
     }
   },
   mixins: [mixin],
-  mounted () {
+  computed: {
     //data早于computed所能直接赋值计算属性primary所以要放这里
-    this.bg = { background: rgba(this.primary, 0.2) }
+    bg () {
+      return { background: rgba(this.primary, 0.2) }
+    }
 
   }
 }

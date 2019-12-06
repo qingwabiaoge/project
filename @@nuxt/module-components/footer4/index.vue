@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="inverse-color
+    <div class="color-inverse
                padding-bottom
                background-gray-darker ">
       <el-row class="container">
@@ -68,7 +68,7 @@
 
       </el-row>
     </div>
-    <div class="inverse-color background-black"
+    <div class="color-inverse background-black"
          style=" line-height: 67px; color: #666">
       <el-row class="container text-center@xs">
         <el-col :md="8">

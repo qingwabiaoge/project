@@ -31,10 +31,10 @@ const test = {
   content,
   background,
   bg: '#fff',
-  name: 'ModleName',
+/*  name: 'ModleName',
   tel: '151666666\n888-888888',
-  qq: '888888\n6666',
-  qcode,
+  qq: '888888\n6666',*/
+  // qcode,
   address: '广东省中山市东城大道NO.001',
   children:
     [
@@ -50,7 +50,7 @@ const test = {
         map,
         content,
         background,
-        bg: '#fff'
+        bg: '#fff',
 
       },
       {
@@ -65,7 +65,8 @@ const test = {
         map,
         content,
         background,
-        bg: '#fff'
+        bg: '#fff',
+        invert:true
 
       },
       {
@@ -115,6 +116,9 @@ export default {
       //这是设置的--primary-color是一个字符串
       this.$el.style.setProperty('--primary-color', this.primary)
 
+    };
+    if(this.data.invert){
+      this.$el.classList.add('color-invert')
     }
   },
   watch: {

@@ -102,11 +102,10 @@ module.exports = {
     */
   plugins: [
     '~/plugins/element-ui',
-
-            '~/plugins/global-styles',
+    '~/plugins/global-styles',
     '~/plugins/swiper.client.js',
     '~/plugins/waterfall.client.js',
-    '~/plugins/ui-components',
+    '~/plugins/components',
     '~/plugins/module-components',
     '~/plugins/vue-lazyload',
     '~/plugins/axios',
@@ -124,6 +123,7 @@ module.exports = {
     ** Nuxt.js modules
     */
   modules: [
+    //styled css`` 解析
     'styled-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/style-resources'
@@ -149,14 +149,20 @@ module.exports = {
     postcss: {
       plugins: {
         // Disable `postcss-url`
-        'postcss-url': false,
+        /*    'postcss-preset-env': {
+              /!* use stage 3 features + css color-mod (warning on unresolved) *!/
+              stage: 3,
+              features: {
+                'color-mod-function': { unresolved: 'warn' }
+              }
+            },*/
+        'postcss-url': true,
         // 下一代语法
         'postcss-nested': {},
-        // var变量
+        // var变量 $开头
         'postcss-simple-vars': {},
-        // 不能用不知道原因
-        'postcss-mixins': {
-        },
+
+        'postcss-mixins': {},
         // 颜色函数
         'postcss-color-mod-function': {
           // 忽略未解析的color-mod（）函数
@@ -165,7 +171,7 @@ module.exports = {
             {
               customProperties: {
                 // 全局变量
-                '--color-blue': 'blue'
+                '--nuxt-config-color': '#ff0000'
               }
             }
           ]

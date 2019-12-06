@@ -6,7 +6,6 @@
             <span>span</span>
         </div>
 
-
     </div>
 </template>
 

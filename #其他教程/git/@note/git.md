@@ -1,4 +1,4 @@
-# 安装
+# 安装git
 
 ### 在Linux上安装Git
 
@@ -22,7 +22,7 @@ sudo apt-get install git
 
 在Windows上使用Git，可以从Git官网直接[下载安装程序](https://git-scm.com/downloads)，（网速慢的同学请移步[国内镜像](https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit)），然后按默认选项安装即可。
 
-
+# 配置git
 
 ##### **1.在[git官网](https://link.jianshu.com/?t=https://git-scm.com/)下载对应版本的git 并按提示安装；**
 
@@ -40,26 +40,28 @@ sudo apt-get install git
 
 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。你也许会担心，如果有人故意冒充别人怎么办？这个不必担心，首先我们相信大家都是善良无知的群众，其次，真的有冒充的也是有办法可查的。
 
-注意`git config`命令的`--global`参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
+注意`git config`命令的`--global`参数，用了这个参数，表示你这台机器上==所有的Git仓库都会使用这个配置==，当然也可以对某个仓库指定不同的用户名和Email地址。
 
-##### 3.生成SSH Key(类似git帐户密码生成token的工具,可以粘贴到github和码云使用)
+##### 3.生成SSH Key(token)
 
-  在git Bash 中输入ssh-keygen -t rsa -C " 393502736@qq.com"，连按三次enter键，会看到生成了 一个id_rsa.pub文件
+  在git Bash 中输入ssh-keygen -t rsa -C " 393502736@qq.com"，连按三次enter键，会看到生成了 一个id_rsa.pub文件,git bash返回信息
 
-> Your identification has been saved in /c/Administrator/asus/.ssh/id_rsa.
-> Your public key has been saved in /c/Administrator/asus/.ssh/id_rsa.pub. 
+ ```
+ Your identification has been saved in /c/Administrator/asus/.ssh/id_rsa.
+ Your public key has been saved in /c/Administrator/asus/.ssh/id_rsa.pub. 
+ ```
 
 ##### **4.登录码云并添加密钥**
 
-在提示的文件目录 `D:\Users\Administrator\.ssh\`下打开id_rsa.pub文件（或在git Bash中执行 cat id_rsa.pub命令）复制全部内容到[码云添加密钥](https://link.jianshu.com/?t=https://gitee.com/profile/sshkeys)，
+在提示的文件目录 `D:\Users\Administrator\.ssh\`下打开id_rsa.pub文件（或在git Bash中执行 cat id_rsa.pub命令）复制全部内容到github或者[码云添加密钥](https://link.jianshu.com/?t=https://gitee.com/profile/sshkeys)，
 
-##### 5.测试是否连接成功
+##### 5.测试ssh是否连接github成功
 
-git Bash中输入: ssh -T 393502736@qq.com， 返回 Welcome to Git@OSC, yourname!则成功
+git Bash中输入:`ssh -T git@github.com `(此处不是邮箱)， 返回 Welcome to Git@OSC, yourname!则成功
 
 
 
-# 工作区、暂存区和版本库
+# 工作区 内存堆栈 暂存区和版本库 远程仓库
 
  ![工作区暂存区版本库](img/1716463609-5bf0fbfc7c3aa_articlex.png) 
 
@@ -68,15 +70,19 @@ git Bash中输入: ssh -T 393502736@qq.com， 返回 Welcome to Git@OSC, yournam
 * 暂存区：保存了下次将提交的文件列表信息，一般在 Git 仓库目录中，是一个叫index的文件，通常多数说法还是叫暂存区域；
 * 版本库：也叫本地版本库，之所以说git 快，是因为它是分布式版本控制系统，大部分提交都是对本地仓库而言的，不依赖网络，最后一次会推送的到远程仓库。
 
-# 标签
+# 版本标签
 
 
 
 ![](./img/2.png)
 
+### head标签
+
+指向正在编辑的分支的最新历史
+
+移动head时间覆盖工作区和暂存区
+
 # 整体图示
-
-
 
 ![](img/7.png)
 
@@ -84,6 +90,26 @@ git Bash中输入: ssh -T 393502736@qq.com， 返回 Welcome to Git@OSC, yournam
 
 ```
 git init 初始化新项目
+```
+
+# git clone
+
+### 克隆项目
+
+先github建立一个项目,会在远程仓库自动建一个分支mater ,web上提交一次版本
+
+![image-20191204193910352](img/image-20191204193910352.png)
+
+从远程主机拉取
+
+```
+git clone git@github.com:qingwabiaoge/test.git
+```
+
+看不到分支解决 
+
+```
+git checkout dev
 ```
 
 # git log
@@ -120,6 +146,134 @@ git log --graph --abbrev-commit --decorate --date=relative --all
 git logref //拉取操作日志
 ```
 
+#  git status			 			
+
+`git status`命令用于显示工作目录和暂存区的状态。使用此命令能看到那些修改被暂存到了, 哪些没有, 哪些文件没有被Git tracked到。`git status`不显示已经`commit`到项目历史中去的信息。看项目历史的信息要使用`git log`.
+
+**简介**
+
+```shell
+git status [<options>…] [--] [<pathspec>…]
+Shell
+```
+
+## 描述
+
+显示索引文件和当前HEAD提交之间的差异，在工作树和索引文件之间有差异的路径以及工作树中没有被Git跟踪的路径。 第一个是通过运行`git commit`来提交的; 第二个和第三个是你可以通过在运行`git commit`之前运行`git add`来提交的。
+
+`git status`相对来说是一个简单的命令，它简单的展示状态信息。输出的内容分为3个分类/组。
+
+```shell
+# On branch master
+# Changes to be committed:  (已经在stage区, 等待添加到HEAD中的文件)
+# (use "git reset HEAD <file>..." to unstage)
+#
+#modified: hello.py
+#
+# Changes not staged for commit: (有修改, 但是没有被添加到stage区的文件)
+# (use "git add <file>..." to update what will be committed)
+# (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#modified: main.py
+#
+# Untracked files:(没有tracked过的文件, 即从没有add过的文件)
+# (use "git add <file>..." to include in what will be committed)
+#
+#hello.pyc
+Shell
+```
+
+### 忽略文件(untracked文件)
+
+没有`tracked`的文件分为两类. 一是已经被放在工作目录下但是还没有执行 `git add` 的, 另一类是一些编译了的程序文件(如`.pyc`, `.obj`, `.exe`等)。当这些不想add的文件一多起来, `git status`的输出简直没法看, 一大堆的状态信息怎么看? 
+
+基于这个原因。 Git让我们能在一个特殊的文件`.gitignore`中把要忽略的文件放在其中， 每一个想忽略的文件应该独占一行, `*`这个符号可以作为通配符使用。例如在项目根目录下的`.gitignore`文件中加入下面内容能阻止`.pyc`和`.tmp`文件出现在`git status`中:
+
+```shell
+*.pyc
+*.tmp
+Shell
+```
+
+## 示例
+
+以下是一些示例 -
+
+在每次执行 `git commit`之前先使用`git status`检查文件状态是一个很好的习惯, 这样能防止你不小心提交了您不想提交的东西。 下面的例子展示 stage 前后的状态, 并最后提交一个快照.
+
+```shell
+# Edit hello.py
+$ git status
+# hello.py is listed under "Changes not staged for commit"
+$ git add hello.py
+$ git status
+# hello.py is listed under "Changes to be committed"
+$ git commit
+$ git status
+# nothing to commit (working directory clean)
+Shell
+```
+
+第一个状态输出显示了这个文件没有被放到暂存区(staged)。`git add`将影响第二个`git status`的输出, 最后一个`git status`告诉我们没有什么能可以提交了，工作目录已经和最近的提交相匹配了。有些命令 (如, `git merge`) 要求工作目录是`clean`状态, 这样就不会不小心覆盖更新了。
+
+`git status`命令可以列出当前目录所有还没有被git管理的文件和被git管理且被修改但还未提交(`git commit`)的文件。下面来看看如下一个示例 - 
+
+```shell
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   2.txt
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   1.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       1.log
+Shell
+```
+
+上面输出结果中”*Changes to be committed*“中所列的内容是在索引中的内容，提交之后进入Git工作目录。
+上面输出结果中“*Changed but not updated*”中所列的内容是在工作目录中的内容，`git add`之后将添加进入索引。
+上面输出结果中“*Untracked files*”中所列的内容是尚未被Git跟踪的内容，`git add`之后进入添加进入索引。
+通过`git status -uno`可以只列出所有已经被git管理的且被修改但没提交的文件。
+
+
+
+# git diff
+
+```
+git diff  //比较工作区和缓存区的不同
+
+git diff HEAD //比较工作区和HEAD
+
+git diff origin/master 比较工作区和网络分支
+
+git diff master dev 比较master和dev标签的节点内容
+
+```
+
+比较内容追加到文件
+
+
+```
+覆盖 git diff [branchA] [branchB] > a.txt
+追加 git diff [branchA] [branchB] >> a.txt
+git diff --color > foo.diff
+foo.diff用notepad++/sublime 之类的编辑器打开，高亮颜色
+
+```
+
+webstorm比较
+
+
+
 # git add 
 
 工作文件添加操作到缓存
@@ -151,6 +305,40 @@ git rm -r  --cached folder_path
 git rm -r  --cached .
 git add .
 ```
+
+# git mv
+
+移动文件
+
+不像其它的 VCS 系统，Git 并不显式跟踪文件移动操作。 如果在 Git 中重命名了某个文件，仓库中存储的元数据并不会体现出这是一次改名操作。 不过 Git 非常聪明，它会推断出究竟发生了什么，至于具体是如何做到的，我们稍后再谈。
+
+既然如此，当你看到 Git 的 `mv` 命令时一定会困惑不已。 要在 Git 中对文件改名，可以这么做：
+
+```console
+$ git mv file_from file_to
+```
+
+它会恰如预期般正常工作。 实际上，即便此时查看状态信息，也会明白无误地看到关于重命名操作的说明：
+
+```console
+$ git mv README.md README
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+```
+
+其实，运行 `git mv` 就相当于运行了下面三条命令：
+
+```console
+$ mv README.md README
+$ git rm README.md
+$ git add README
+```
+
+如此分开操作，Git 也会意识到这是一次改名，所以不管何种方式结果都一样。 两者唯一的区别是，`mv` 是一条命令而另一种方式需要三条命令，直接用 `git mv` 轻便得多。 不过有时候用其他工具批处理改名的话，要记得在提交前删除老的文件名，再添加新的文件名。
 
 # git stash
 
@@ -319,7 +507,9 @@ index a7e146c..711d63f 100644
 
 # git reset xxx 
 
-### reset三种模式区别和使用场景
+![image-20191204203757739](img/image-20191204203757739.png)
+
+### 三种模式区别和使用场景
 
 1. **--hard**：重置位置的同时，直接将 **working Tree工作目录**、 **index 暂存区**及 **repository** 都重置成目标**Reset**节点的內容,所以效果看起来等同于清空暂存区和工作区。
 2. **--soft**：重置位置的同时，保留**working Tree工作目录**和**index暂存区**的内容，只让**repository**中的内容和 **reset** 目标节点保持一致，因此原节点和**reset**节点之间的【差异变更集】会放入**index暂存区**中(**Staged files**)。所以效果看起来就是工作目录的内容不变，暂存区原有的内容也不变，只是原节点和**Reset**节点之间的所有差异都会放到暂存区中。
@@ -408,19 +598,25 @@ git push origin master
 
 # git checkout
 
-### gitcheckout 用缓存区的文件覆盖工作区
+### gitcheckout . 
+
+用缓存区的文件覆盖工作区
 
 ```
 gitcheckout
 ```
 
-### git checkout dev 移动head到dev标签,用当前的head(dev)版本覆盖工作区
+### git checkout dev 
+
+移动head到dev标签,用当前的head(dev)版本覆盖工作区和缓存区
 
 ```
 git checkout dev //移动head到dev标签,head移动到哪个节点就编辑哪个节点
 ```
 
-### git checkout a1a1a1,head移动到任何一次提交,建立新分支,当前的head(temp branch name)覆盖到工作区,然后重命名为branchA
+### git checkout a1a1a1,
+
+head移动到任何一次提交,建立新分支,当前的head(temp branch name)覆盖到工作区,然后重命名为branchA
 
 ```
 git checkout a1a1a1 //head移动到任何一次提交,不隐藏以后版本的提交,建立新分支!,
@@ -454,75 +650,27 @@ git remote -v
 
 ##### 修改远程主机的别名
 
-```
 
-方法有三种：
+方法有3种：
 
 1.修改命令
 
+```
 git remote origin set-url [url]
+```
 
 2.先删后加
 
+```
 git remote rm origin
 git remote add origin [url]
+```
 
 3.直接修改config文件
 
-```
-
-# git push 
-
-##### -u指定默认主机
-
-```
-
-//推送master到远程
-//-u选项会指定一个默认主机
-
-git push -u origin master
-
-//推送dev分支到远程
-
-git push  origin dev
-
-```
-
-##### 从默认远程主机推送和拉取
-
-```
-git push
-
-git pull
-```
-
-##### 推送分支到指定主机
-
-```
-git push origin master
-
-git pull origin  dev
-```
 
 
-
-![](./img/9.png)
-
-##### git push -f 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
-
-```
-git push -f
-```
-
-##### git push origin --delete xxx 删除远程分支
-
-```
-git push github --delete dev1
-```
-> 解决默认分支不可删除的情况
-![](./img/6.png)
-
-# git-pull
+# git pull
 
 ##### 语法
 
@@ -530,6 +678,10 @@ git pull的作用是从一个仓库或者本地的分支拉取并且整合代码
 
 ```
 git pull [<options>] [<repository> [<refspec>…]]
+```
+
+```
+git pull gitee master
 ```
 
 ##### 描述
@@ -579,8 +731,6 @@ D---E---F---G---H master
 
 `ff`选项，这几个选项是说合并时是否开启`fast-forward`，快速合并，这个有在[另外一篇帖子](https://www.oxysun.cn/git/git-git-merge-ff-no-ff.html)中详细讲解，这里就不赘述了。
 
-##### 实例
-
 **实例：**默认使用方式
 
 ```
@@ -595,45 +745,54 @@ git pull
 git pull origin master
 ```
 
-# git clone
+# git push 
 
-
-### 克隆项目
-```
-git clone git@github.com:qingwabiaoge/test.git
-```
-
-### 看不到分支解决 
+##### -u指定默认主机
 
 ```
-git checkout dev
-```
+//-u选项会指定一个默认主机
 
-# git diff
+git push -u origin master
 
-```
-git diff  //比较工作区和缓存区的不同
+//推送dev分支到远程
 
-git diff HEAD //比较工作区和HEAD
-
-git diff origin/master 比较工作区和网络分支
-
-git diff master dev 比较master和dev标签的节点内容
+git push  origin dev
 
 ```
 
-比较内容追加到文件
-
-
-```
-覆盖 git diff [branchA] [branchB] > a.txt
-追加 git diff [branchA] [branchB] >> a.txt
-git diff --color > foo.diff
-foo.diff用notepad++/sublime 之类的编辑器打开，高亮颜色
+##### 从默认远程主机推送和拉取
 
 ```
+git push
 
-webstorm比较
+git pull
+```
+
+##### 推送分支到指定主机
+
+```
+git push origin master
+
+git pull origin  dev
+```
+
+
+
+![](./img/9.png)
+
+##### git push -f 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
+
+```
+git push -f
+```
+
+##### git push origin --delete xxx 删除远程分支
+
+```
+git push github --delete dev1
+```
+> 解决默认分支不可删除的情况
+![](./img/6.png)
 
 
 
@@ -1089,34 +1248,3 @@ $ git rm \*~
 
 该命令为删除以 `~` 结尾的所有文件。
 
-### 移动文件
-
-不像其它的 VCS 系统，Git 并不显式跟踪文件移动操作。 如果在 Git 中重命名了某个文件，仓库中存储的元数据并不会体现出这是一次改名操作。 不过 Git 非常聪明，它会推断出究竟发生了什么，至于具体是如何做到的，我们稍后再谈。
-
-既然如此，当你看到 Git 的 `mv` 命令时一定会困惑不已。 要在 Git 中对文件改名，可以这么做：
-
-```console
-$ git mv file_from file_to
-```
-
-它会恰如预期般正常工作。 实际上，即便此时查看状态信息，也会明白无误地看到关于重命名操作的说明：
-
-```console
-$ git mv README.md README
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-    renamed:    README.md -> README
-```
-
-其实，运行 `git mv` 就相当于运行了下面三条命令：
-
-```console
-$ mv README.md README
-$ git rm README.md
-$ git add README
-```
-
-如此分开操作，Git 也会意识到这是一次改名，所以不管何种方式结果都一样。 两者唯一的区别是，`mv` 是一条命令而另一种方式需要三条命令，直接用 `git mv` 轻便得多。 不过有时候用其他工具批处理改名的话，要记得在提交前删除老的文件名，再添加新的文件名。

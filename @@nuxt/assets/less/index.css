@@ -399,57 +399,57 @@ sup {
 sub {
   bottom: -0.25em;
 }
-.inverse-color,
-.hover-inverse-color {
+.color-invert,
+.hover-color-invert {
   /* &, *, *:hover {
      color: @global-color-inverse;
    }*/
 }
-.inverse-color svg,
-.hover-inverse-color svg {
-  fill: white;
+.color-invert svg,
+.hover-color-invert svg {
+  fill: white!important;
 }
-.inverse-color,
-.hover-inverse-color,
-.inverse-color h1,
-.hover-inverse-color h1,
-.inverse-color .h1,
-.hover-inverse-color .h1,
-.inverse-color h2,
-.hover-inverse-color h2,
-.inverse-color .h2,
-.hover-inverse-color .h2,
-.inverse-color h3,
-.hover-inverse-color h3,
-.inverse-color .h3,
-.hover-inverse-color .h3,
-.inverse-color h4,
-.hover-inverse-color h4,
-.inverse-color h5,
-.hover-inverse-color h5,
-.inverse-color h6,
-.hover-inverse-color h6,
-.inverse-color b,
-.hover-inverse-color b,
-.inverse-color i,
-.hover-inverse-color i,
-.inverse-color a,
-.hover-inverse-color a,
-.inverse-color a:hover,
-.hover-inverse-color a:hover,
-.inverse-color .link,
-.hover-inverse-color .link,
-.inverse-color p,
-.hover-inverse-color p,
-.inverse-color ul,
-.hover-inverse-color ul,
-.inverse-color li,
-.hover-inverse-color li,
-.inverse-color div,
-.hover-inverse-color div,
-.inverse-color button,
-.hover-inverse-color button {
-  color: #fff;
+.color-invert,
+.hover-color-invert,
+.color-invert h1,
+.hover-color-invert h1,
+.color-invert .h1,
+.hover-color-invert .h1,
+.color-invert h2,
+.hover-color-invert h2,
+.color-invert .h2,
+.hover-color-invert .h2,
+.color-invert h3,
+.hover-color-invert h3,
+.color-invert .h3,
+.hover-color-invert .h3,
+.color-invert h4,
+.hover-color-invert h4,
+.color-invert h5,
+.hover-color-invert h5,
+.color-invert h6,
+.hover-color-invert h6,
+.color-invert b,
+.hover-color-invert b,
+.color-invert i,
+.hover-color-invert i,
+.color-invert a,
+.hover-color-invert a,
+.color-invert a:hover,
+.hover-color-invert a:hover,
+.color-invert .link,
+.hover-color-invert .link,
+.color-invert p,
+.hover-color-invert p,
+.color-invert ul,
+.hover-color-invert ul,
+.color-invert li,
+.hover-color-invert li,
+.color-invert div,
+.hover-color-invert div,
+.color-invert button,
+.hover-color-invert button {
+  color: #fff !important;
 }
 hr,
 .hr {

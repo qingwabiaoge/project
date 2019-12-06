@@ -4,8 +4,8 @@ module.exports = async (ctx, next) => {
 
   ctx.status = 200
   ctx.state.code = 0
-  ctx.state.msg = 'hello'
-  ctx.state.data = 'state.customData数据'
+  ctx.state.msg = 'msg'
+  ctx.state.data = 'state'
 
 
   console.log("ctx.req.rawHeaders-----------")
