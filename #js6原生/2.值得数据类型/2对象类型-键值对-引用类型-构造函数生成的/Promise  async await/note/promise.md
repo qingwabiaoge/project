@@ -2,7 +2,7 @@
 
 ![1566963355851](img/1566963355851.png)
 
-### .then()  .catch()
+### .then().catch()
 
 ```js
 new Promise((resolve,reject)=>{.....})
@@ -16,11 +16,9 @@ new Promise((resolve,reject)=>{.....})
 
 拒绝的原因
 
-```
+```js
   Promise.reject('renson');
 ```
-
-
 
 # promise的作用
 
@@ -56,7 +54,7 @@ await等待不到Promise对象 后面的代码绝不运行
 
 例: element的对话框
 
-```
+```js
 .then().catch(),
 ```
 
@@ -66,8 +64,6 @@ await等待不到Promise对象 后面的代码绝不运行
 
 
 ![](./img/异步.png)
-
-
 
 # 返回值为promise对象的函数
 

@@ -79,27 +79,6 @@ let n: null = null;
 
   T 类似函数的额外的参数
 
-##### 对象变量
-
-```js
-let obj:{a:number,b:number}
-obj={a:1,b:2}	
-```
-
-只读
-
-```ts
-let obj:{readonly a:number,readonly b:number}
-obj={a:1,b:2}
-```
-
-可缺失
-
-```ts
-let obj: { a?: number, b?: number }
-obj = {a: 1, },
-```
-
 
 
 ##### 枚举类型变量
@@ -171,7 +150,26 @@ let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
 let arr:Array<number>=[1,2,3]
 ```
 
+### 对象类型变量
 
+```js
+let obj:{a:number,b:number}
+obj={a:1,b:2}	
+```
+
+只读
+
+```ts
+let obj:{readonly a:number,readonly b:number}
+obj={a:1,b:2}
+```
+
+可缺失
+
+```ts
+let obj: { a?: number, b?: number }
+obj = {a: 1, },
+```
 
 ### 函数类型变量
 
@@ -226,7 +224,7 @@ let myAdd: (x: number, y: number) => number  //定义myAdd类型为函数
 console.log(myAdd(1,2))
 ```
 
-###### 泛型函数:
+##### 泛型函数:
 
 ```ts
 function identity<T>(arg: T): T { 
@@ -276,7 +274,7 @@ console.log(greeter)
 
 ```
 
-###### 修饰符
+##### 修饰符
 
 *  `public`(默认)
 
@@ -404,7 +402,7 @@ let dad = new Octopus("Man with the 8 strong legs");
 dad.name = "Man with the 3-piece suit"; // 错误! name 是只读的.
 ```
 
-###### extend
+##### extend
 
 ```ts
 class Animal {
@@ -432,7 +430,7 @@ dog.bark();
 
 ```
 
-###### 带泛型的类
+##### 带泛型的类
 
 ```ts
 class GenericNumber<T> {
@@ -555,28 +553,6 @@ console.log(p1)
 
 ```
 
-##### 函数标识符接口
-
-```ts
-interface SearchFunc { //函數類型接口
-  (source: string, subString: string): boolean;
-}
-
-let mySearch: SearchFunc;
-mySearch = function (source: string, subString: string) {
-  let result = source.search(subString);
-  return result > -1;
-}
-
-//对于函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相匹配。 比如，我们使用下面的代码重写上面的例子：
-
-mySearch = function (src: string, sub: string): boolean {
-  let result = src.search(sub);
-  return result > -1;
-}
-
-```
-
 ##### 索引类型标识符接口(包含数组)
 
 ```js
@@ -610,6 +586,30 @@ myArray = ["Bob", "Fred"];
 let myStr: string = myArray[0];
 
 ```
+
+##### 函数标识符接口
+
+```ts
+interface SearchFunc { //函數類型接口
+  (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+mySearch = function (source: string, subString: string) {
+  let result = source.search(subString);
+  return result > -1;
+}
+
+//对于函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相匹配。 比如，我们使用下面的代码重写上面的例子：
+
+mySearch = function (src: string, sub: string): boolean {
+  let result = src.search(sub);
+  return result > -1;
+}
+
+```
+
+
 
 ##### 类的接口
 
@@ -773,6 +773,18 @@ printLabel(myObj);
 
 ```
 
+##### 带泛型的索引类型标识符的接口
+
+```ts
+interface StringArray<T> {
+  [index:number]: T;
+}
+
+let myArray: StringArray<string>;
+myArray = ["Bob", "Fred"];
+
+```
+
 ##### 带泛型的函数标识符的接口(契约)
 
 ```ts
@@ -819,17 +831,7 @@ class Clock implements ClockInterface<Date> {
 
 ```
 
-##### 带泛型的索引类型标识符的接口
 
-```ts
-interface StringArray<T> {
-  [index:number]: T;
-}
-
-let myArray: StringArray<string>;
-myArray = ["Bob", "Fred"];
-
-```
 
 ### 接口(契约)继承接口
 
@@ -847,7 +849,7 @@ square.color = "blue";
 square.sideLength = 10;
 ```
 
-###### 接口继承多个接口
+##### 接口继承多个接口
 
 ```ts
 interface Shape {

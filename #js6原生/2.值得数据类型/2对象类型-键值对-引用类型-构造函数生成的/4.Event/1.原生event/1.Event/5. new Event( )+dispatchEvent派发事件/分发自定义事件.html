@@ -8,7 +8,7 @@
 var newEvent = new Event('build', { bubbles: true, cancelable: true, composed: true })
 
 /* 给这个事件对象创建一个属性并赋值 */
-newEvent.name = '新的事件！'
+newEvent.name = '事件名'
 
 /* 建立事件处理函数 */
 app.addEventListener('build', function () {
@@ -17,5 +17,7 @@ app.addEventListener('build', function () {
 
 /* 触发自定义事件 */
 app.dispatchEvent(newEvent)
+
+console.log({app})
 console.log(newEvent)
 </script>
