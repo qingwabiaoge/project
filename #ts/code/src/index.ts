@@ -1,12 +1,20 @@
-/*
-限制函数格式
-限制了变量函数运行表达式的参数类型
-限制了变量返回值的类型
-*/
-let myAdd: (x: number, y: number) => number
+@sealed
+class Greeter {
+ private greeting: string;
 
-myAdd =function (x, y) {
-  return x+y;
-};
+  constructor(message: string) {
+    this.greeting = message;
+  }
 
-console.log(myAdd(1,2))
+  greet() {
+    return "Hello, " + this.greeting;
+  }
+}
+
+function sealed(constructor: Function) {
+  Object.seal(constructor);
+  Object.seal(constructor.prototype);
+}
+
+const i=new Greeter('hello')
+console.log(i)

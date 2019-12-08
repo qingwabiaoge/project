@@ -158,10 +158,6 @@ let i=0
 
 location.replace(“http://www.baidu.com”)
 
-
-
-
-
 ## navigator
 
 ##### navigator.userAgent

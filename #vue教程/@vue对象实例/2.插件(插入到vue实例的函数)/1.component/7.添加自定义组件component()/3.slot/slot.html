@@ -18,20 +18,20 @@
 </div>
 
 <script>
-  Vue.component('cl', {
-    template: `<div>
+Vue.component('cl', {
+  template: `<div>
 <h1><slot></slot></h1>
 <h2><slot name="hasname"></slot></h2>
 <h3><slot name="scope" msg="123"></slot></h3>
 </div>`,
-    created(){
+  created () {
 
-      console.log(this.$slots)
-    }
-  })
-  const vm = new Vue({
-    el: '#app'
+    console.log(this.$slots)
+  }
+})
+const vm = new Vue({
+  el: '#app'
 
-  })
+})
 
 </script>

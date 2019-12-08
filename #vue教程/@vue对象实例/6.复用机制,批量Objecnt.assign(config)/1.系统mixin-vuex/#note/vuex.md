@@ -125,13 +125,11 @@ this.$emit("input",data)
 
 被不同非父子组件多次用到的数据
 
-
-
 # 对比vue组件
 
-|              | vuex                   | vue               |
-| ------------ | ---------------------- | ----------------- |
-| 状态         | state                  | data              |
-| 计算         | getters                | computed          |
-| 获取后台数据 | 异步actions +mutations | async get( ){   } |
+|              | vuex    | vue         |
+| ------------ | ------- | ----------- |
+| 状态         | state   | data        |
+| 计算         | getters | computed    |
+| 获取后台数据 | actions | get( ){   } |
 

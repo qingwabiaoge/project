@@ -11,10 +11,9 @@
 ```
 
 ```html
- <template v-slot="{xx}">     
- 
+<template v-slot="{xx}">      
 <template v-slot:myname>xxx</template>    
-<template v-slot:myname="scope">xxx</template>
+<template v-slot:myname="scopeData">xxx</template>
 
 <input v-model="msg">
 <input v-model.trim="msg">
@@ -48,7 +47,7 @@
 
 1. 是看起来不乱,
 
-2. data被监听可以随着data改变,重新渲染dom
+2. vue监听wm.data改变,重新渲染dom
 
 ```html
 <person :data='{...data,...other}' :class='class' :style="style"> </person>
@@ -261,14 +260,13 @@ computed:{
             {path: '/hello/:name', component: Hello, props: true}, // Pass route.params to props
 //2对象做属性值-----------------------------------               
             {path: '/static', component: Hello, props: {name: 'world'}}, // static values
-//4函数当属性值--------------------------------------------------- 函数生成props作为router-view的属性--------------------------------------
+//4函数当属性值------------------- 函数生成props作为router-view的属性------------------------------
             {path: '/dynamic/:years', component: Hello, props: dynamicPropsFn}, // custom logic for mapping between route and props
         ]
     })
 
     new Vue({
-        router,
-
+        router
 
     }).$mount('#app')
 

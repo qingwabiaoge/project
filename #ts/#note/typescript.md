@@ -8,12 +8,18 @@
 
 # 变量类型
 
-### 基本变量类型变量
+### 基本类型变量
 
 ##### :boolean
 
 ```ts
 let isDone: boolean = false;
+```
+
+##### :number
+
+```
+...
 ```
 
 ##### :any
@@ -23,10 +29,9 @@ let isDone: boolean = false;
 ```js
 let i:any=10
 i='str'
-
 ```
 
-##### :Void
+##### :void
 
 某种程度上来说，`void`类型像是与`any`类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是 `void`：
 
@@ -37,13 +42,26 @@ function warnUser(): void {
 }
 ```
 
-##### :number
+```js
+let i:void=undefined
+console.log(i)
+```
 
-...
+```
+let i:void=null
+console.log(i)
 
-##### :undefined
+```
 
-....
+##### :Null 和 :Undefined
+
+TypeScript里，`undefined`和`null`两者各自有自己的类型分别叫做`undefined`和`null`。 和 `void`相似，它们的本身的类型用处不是很大：
+
+```ts
+// Not much else we can assign to these variables!
+let u: undefined = undefined;
+let n: null = null;
+```
 
 ##### T (泛型,,宽泛的类型 可在使用阶段才设置的类型)
 
@@ -60,8 +78,6 @@ function warnUser(): void {
 5. 泛型一般用于批量操作;
 
   T 类似函数的额外的参数
-
-### 引用类型变量
 
 ##### 对象变量
 
@@ -84,6 +100,61 @@ let obj: { a?: number, b?: number }
 obj = {a: 1, },
 ```
 
+
+
+##### 枚举类型变量
+
+更像数字类型和字符串类型限制了取值范围
+
+```ts
+ enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+console.log(Direction.Up)//0
+
+```
+
+```ts
+ enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+console.log(Direction.Up)//1
+
+```
+
+```ts
+enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
+}
+
+console.log(Direction.Up)
+
+```
+
+
+
+##### 元组 Tuple变量
+
+(定义数组的每一个value)
+
+```js
+// Declare a tuple type
+let x: [string, number];
+// Initialize it
+x = ['hello', 10]; // OK
+// Initialize it incorrectly
+x = [10, 'hello']; // Error
+```
+
 ##### 数组变量
 
 1. 基本变量定义
@@ -100,22 +171,11 @@ let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
 let arr:Array<number>=[1,2,3]
 ```
 
-##### 元组 Tuple变量
 
-(定义数组的每一个value)
 
-```js
-// Declare a tuple type
-let x: [string, number];
-// Initialize it
-x = ['hello', 10]; // OK
-// Initialize it incorrectly
-x = [10, 'hello']; // Error
-```
+### 函数类型变量
 
-##### 函数类型变量和函数值
-
-为变量设置类型
+为变量设置类型检测
 
 ```ts
 /*
@@ -133,7 +193,7 @@ console.log(myAdd(1,2))
 
 ```
 
-函数定义式
+函数变量add
 
 ```js
                                  //:在()后是针对返回值的
@@ -144,16 +204,16 @@ function add(x: number, y: number): number {
 console.log(add(1,2))
 ```
 
-匿名函数赋值给变量
+匿名函数
 
 ```ts
-let myAdd = function(x: number, y: number): number { return x + y; };
+ function(x: number, y: number): number { return x + y; };
 ```
 
 ​            _ts会推断返回值类型所以可以省略返回值的设定_
 
-```
-let myAdd = function(x: number, y: number) { return x + y; };
+```js
+function(x: number, y: number) { return x + y; };
 ```
 
 匿名函数的值赋值给函数类型变量
@@ -194,45 +254,7 @@ function loggingIdentity<T>(arg: Array<T>): Array<T> {
 loggingIdentity<number>([1,2,3]) //为泛型T赋值
 ```
 
-##### 枚举类型变量
-
-更像数字类型和字符串类型限制了取值范围
-
-```ts
- enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-console.log(Direction.Up)//0
-
-```
-
-```ts
- enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-console.log(Direction.Up)//1
-
-```
-
-```ts
-enum Direction {
-  Up = "UP",
-  Down = "DOWN",
-  Left = "LEFT",
-  Right = "RIGHT",
-}
-
-console.log(Direction.Up)
-
-```
-
-##### class类型
+### 类类型
 
 (本质是构造函数)
 
@@ -589,7 +611,7 @@ let myStr: string = myArray[0];
 
 ```
 
-##### 类标识符的接口
+##### 类的接口
 
 ```ts
 interface ClockInterface {
@@ -667,6 +689,72 @@ let analog = createClock(AnalogClock, 7, 32);
 
 ```
 
+###### 类的多个接口
+
+```js
+interface InterfaceOne {
+    //
+    sports():void;
+}
+interface InterfaceTwo {
+    //
+    swimming():void
+}
+// 接口集成接口
+interface InterfaceThree extends InterfaceOne,InterfaceTwo {
+    //
+    coding():void;
+}
+
+class ParentCls {
+    name:string;
+    constructor(name:string){
+        this.name = name
+    }
+    //
+    ktv(){
+        console.log(this.name + '唱歌');
+    }
+}
+// 继承父类实现多接口
+class SubCls extends ParentCls implements InterfaceTwo, InterfaceOne {
+    
+    // 实现接口
+    sports(){
+        console.log(this.name + '运动')
+    }
+
+    swimming(){
+        console.log(this.name + '游泳')
+    }
+}
+let subCls = new SubCls('小明');
+subCls.sports()
+subCls.swimming();
+subCls.ktv()
+
+//
+class SubCls2 extends ParentCls implements InterfaceThree {
+    //
+    coding(){
+        console.log(this.name + '写代码');
+    }
+    sports(){
+        console.log(this.name + '运动');
+    }
+    swimming(){
+        console.log(this.name + '游泳')
+    }
+}
+let subCls2 = new SubCls2('小王');
+subCls2.coding();
+subCls2.sports();
+subCls2.ktv();
+subCls.swimming();
+```
+
+
+
 ### 带泛型的引用类型的接口(契约)
 
 ##### 带泛型的对象类型的接口
@@ -743,8 +831,6 @@ myArray = ["Bob", "Fred"];
 
 ```
 
-
-
 ### 接口(契约)继承接口
 
 ```ts
@@ -760,6 +846,8 @@ let square = <Square>{};
 square.color = "blue";
 square.sideLength = 10;
 ```
+
+###### 接口继承多个接口
 
 ```ts
 interface Shape {

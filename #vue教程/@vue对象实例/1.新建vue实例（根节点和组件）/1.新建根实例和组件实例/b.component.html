@@ -21,14 +21,12 @@
 
 <script>
 
-  const VueCoponent = Vue.component('cl', {
+  const Cl = Vue.component('cl', {
     template: `<div >{{prop}}</div>`,
     props: {prop: {default: 10}},
-    mounted() {
-      console.log(this)
-    }
+
   })
   //el形式挂载
-  new Cl({el: "#app", props: {prop: {default: 1, type: Number}}})
-
+ const obj= new Cl({el: "#app", props: {prop: {default: 1, type: Number}}})
+console.log(obj)
 </script>

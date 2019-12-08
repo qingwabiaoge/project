@@ -1,0 +1,12 @@
+<a href="/cs" id="a">ceshi</a>
+
+<script>
+
+var el = document.getElementById('a')
+//建立和初始化event,推测等同于 new Envent===============
+var evt = document.createEvent('MouseEvents')
+evt.initMouseEvent('click', true, true, window, 1, 12, 345, 7, 220, false, false, true, false, 0, null)
+//派发(发送类似$emit和$store.dispatch())事件
+el.dispatchEvent(evt)
+console.log(evt)
+</script>

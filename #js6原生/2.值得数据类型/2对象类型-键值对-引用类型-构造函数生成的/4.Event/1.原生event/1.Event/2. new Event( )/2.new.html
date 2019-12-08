@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+</head>
+<body>
+<button id="click">Click me!</button>
+</body>
+<script type="text/javascript">
+window.onload = function(){
+  var btn = document.querySelector('#click');
+  //绑定事件
+  btn.addEventListener('click', function(e){
+    alert('okk!');
+  }, false);
+
+  var e = new Event('click');
+  btn.dispatchEvent(e);
+}
+</script>
+</html>

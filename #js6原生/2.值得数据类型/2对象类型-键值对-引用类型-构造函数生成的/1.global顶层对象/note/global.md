@@ -1,4 +1,4 @@
-# 全局对象
+# global对象
 
 全局属性和函数可用于所有内建的 JavaScript 对象
 
@@ -85,7 +85,9 @@ URIstring 的副本，其中的某些字符将被十六进制的转义序列进�
 
 该方法的目的是对 URI 进行完整的编码，因此对以下在 URI 中具有特殊含义的 ASCII 标点符号，encodeURI() 函数是不会进行转义的：;/?:@&=+$,#
 
-#### 提示：如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。
+#### 提示：
+
+如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。
 
 ```
 encodeURI(URIstring)
@@ -94,7 +96,7 @@ encodeURI(URIstring)
 #### 参数
 
 - 必须
-- - URIstring 一个字符串，含有 URI 或其他要编码的文本。
+- URIstring 一个字符串，含有 URI 或其他要编码的文本。
 
 ```
 var test = "www.zshgrwz.cn/360"
@@ -125,7 +127,9 @@ URIstring 的副本，其中的某些字符将被十六进制的转义序列进�
 
 其他字符（比如 ：;/?:@&=+$,# 这些用于分隔 URI 组件的标点符号），都是由一个或多个十六进制的转义序列替换的。
 
-#### 提示：请注意 encodeURIComponent() 函数 与 encodeURI() 函数的区别之处，前者假定它的参数是 URI 的一部分（比如协议、主机名、路径或查询字符串）。因此 encodeURIComponent() 函数将转义用于分隔 URI 各个部分的标点符号。
+#### 提示：
+
+请注意 encodeURIComponent() 函数 与 encodeURI() 函数的区别之处，前者假定它的参数是 URI 的一部分（比如协议、主机名、路径或查询字符串）。因此 encodeURIComponent() 函数将转义用于分隔 URI 各个部分的标点符号。
 
 ```
 encodeURIComponent(URIstring)
@@ -154,7 +158,7 @@ document.write(encodeURIComponent("&,/?#=+:@$"))
 
 对字符串进行编码，这样就可以在所有的计算机上读取该字符串
 
-#### 注释：ECMAScript v3 反对使用该方法，应用使用 decodeURI() 和 decodeURIComponent() 替代它。
+注释：ECMAScript v3 反对使用该方法，应用使用 decodeURI() 和 decodeURIComponent() 替代它。
 
 ### 6. eval
 
@@ -321,13 +325,21 @@ parseFloat 将它的字符串参数解析成为浮点数并返回。如果在解
 
 如果参数字符串的第一个字符不能被解析成为数字，则 parseFloat 返回 NaN。
 
-#### 提示：您可以通过调用 isNaN 函数来判断 parseFloat 的返回结果是否是 NaN。如果让 NaN 作为了任意数学运算的操作数，则运算结果必定也是 NaN。
+#### 提示：
 
-#### 注释：开头和结尾的空格是允许的。
+您可以通过调用 isNaN 函数来判断 parseFloat 的返回结果是否是 NaN。如果让 NaN 作为了任意数学运算的操作数，则运算结果必定也是 NaN。
 
-#### 提示：如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。
+#### 注释：
 
-#### 提示：如果只想解析数字的整数部分，请使用 parseInt() 方法。
+开头和结尾的空格是允许的。
+
+#### 提示：
+
+如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。
+
+#### 提示：
+
+如果只想解析数字的整数部分，请使用 parseInt() 方法。
 
 ```
 parseFloat(string)
@@ -376,11 +388,17 @@ document.write(parseFloat("He was 40"))
 
 举例，如果 string 以 “0x” 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。如果 string 以 0 开头，那么 ECMAScript v3 允许 parseInt() 的一个实现把其后的字符解析为八进制或十六进制的数字。如果 string 以 1 ~ 9 的数字开头，parseInt() 将把它解析为十进制的整数。
 
-#### 注释：只有字符串中的第一个数字会被返回。
+#### 注释：
 
-#### 注释：开头和结尾的空格是允许的。
+只有字符串中的第一个数字会被返回。
 
-#### 提示：如果字符串的第一个字符不能被转换为数字，那么 parseInt() 会返回 NaN。
+#### 注释：
+
+开头和结尾的空格是允许的。
+
+#### 提示：
+
+如果字符串的第一个字符不能被转换为数字，那么 parseInt() 会返回 NaN。
 
 ```
 parseInt(string, radix)
@@ -488,7 +506,9 @@ document.write(t2)
 无法使用 for/in 循环来枚举 NaN 属性，也不能用 delete 运算符来删除它。
 NaN 不是常量，可以把它设置为其他值。
 
-#### 提示：请使用 isNaN() 来判断一个值是否是数字。原因是 NaN 与所有值都不相等，包括它自己。
+#### 提示：
+
+请使用 isNaN() 来判断一个值是否是数字。原因是 NaN 与所有值都不相等，包括它自己。
 
 ```
 NaN
@@ -519,9 +539,13 @@ document.write(isNaN(test2))
 undefined 不是常量，可以把它设置为其他值。
 当尝试读取不存在的对象属性时也会返回 undefined。
 
-#### 提示：只能用 === 运算来测试某个值是否是未定义的，因为 == 运算符认为 undefined 值等价于 null。
+#### 提示：
 
-#### 注释：null 表示无值，而 undefined 表示一个未声明的变量，或已声明但没有赋值的变量，或一个并不存在的对象属性。
+只能用 === 运算来测试某个值是否是未定义的，因为 == 运算符认为 undefined 值等价于 null。
+
+#### 注释：
+
+null 表示无值，而 undefined 表示一个未声明的变量，或已声明但没有赋值的变量，或一个并不存在的对象属性。
 
 ```
 undefined

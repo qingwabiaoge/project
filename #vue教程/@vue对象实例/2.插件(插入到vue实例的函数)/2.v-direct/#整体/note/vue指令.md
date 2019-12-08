@@ -28,22 +28,20 @@
 ```
 # 实质
 
-是DOM函数
+是DOM函数的封装
 
-# 常用指令
+# 系统指令
 
 ### v-bind:prop
 
-传递字符串给子组件
+传递字符串类型的值给子组件
 
 ```
 <cl x="str">
 </cl>
 ```
 
- 传递除字符串的值类型
-
-变量
+ 传递除字符串类型的值给值给子组件
 
 
 ```
@@ -64,15 +62,17 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 ### v-model  ,:prop. sync
 
-*适合场景(子组件操作经常更新的父组件)*
+##### 适合场景
 
-1. 输入更新到父组件(表单类组件,自定义表单组件)
+子组件操作实时更新到父组件 
 
-2. 类似表单
+##### 例
 
-   1. 内部选中项更新到外部(导航类,tab类,折叠面板),类似表单元素中的select
+* 表单类组件,
+* 自定义表单组件
 
-   1. 内部关闭更新的外部(对话框,shadow),类似表单元素中的switch
+    1. 类select(导航类,tab类,折叠面板),
+    2. 类switch(对话框,shadow),
 
 ##### v-model 修饰符
 
@@ -86,7 +86,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 ```
 ###### 修饰符
 
->  .lazy
+* .lazy
 
 在默认情况下，`v-model` 在每次 `input` 事件触发后将输入框的值与数据进行同步 (除了[上述](https://cn.vuejs.org/v2/guide/forms.html#vmodel-ime-tip)输入法组合文字时)。你可以添加 `lazy` 修饰符，从而转变为使用 `change` 事件进行同步：
 
@@ -95,7 +95,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 <input v-model.lazy="msg" >
 ```
 
-> .number
+* .number
 
 如果想自动将用户的输入值转为数值类型，可以给 `v-model` 添加 `number` 修饰符：
 
@@ -105,7 +105,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 这通常很有用，因为即使在 `type="number"` 时，HTML 输入元素的值也总会返回字符串。如果这个值无法被 `parseFloat()` 解析，则会返回原始的值。
 
->  .trim
+* .trim
 
 如果要自动过滤用户输入的首尾空白字符，可以给 `v-model` 添加 `trim` 修饰符：
 
@@ -247,16 +247,18 @@ propx:sync不限于value input,但是不能用于原生组件
 
 <div id="app">
   <!--
-        当item=1时
+  当item=1时
   v-model="1"  无法赋值
 
   -->
   <input type="text" v-for="item in arr" v-model="item"> <br>
-  <!--
-       当item=1时
-     :value=1
-     @input="arr[1]=data" 这里是给数组的键赋值,所以可行
-
+  
+    
+    
+    <!--
+     当item=1时
+     :value=arr[1]
+     @input="arr[1]=$event.target.value" 这里是给数组的键赋值,所以可行
   -->
 
   <input type="text" v-for="(item,index) in arr" v-model="arr[index]">
@@ -290,7 +292,7 @@ propx:sync不限于value input,但是不能用于原生组件
 
 ### 本质
 
-指令设置数据如何映射到dom
+指令是dom函数
 
 ### 钩子函数
 

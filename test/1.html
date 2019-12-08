@@ -2,6 +2,70 @@
 
 </div>
 
-<script>
-console.log({app})
+
+<script type="text/javascript">
+
+Array.prototype.remove = function (val) {
+  var index = this.indexOf(val)
+  if (index > -1) {
+    this.splice(index, 1)
+  }
+}
+
+
+//被观察者对象
+function Iobject () {
+  this.msg = null
+}
+
+Iobject.prototype = {
+  observorList: [],
+  //添加观察者
+  add: function (o) {
+    this.observorList.push(o)
+  },
+  //删除观察者
+  remove: function (o) {
+    this.observorList.remove(o)
+  },
+  //通知所有观察者，调用其更新的方法
+  notify: function () {
+    var msg = this.msg
+    this.observorList.forEach(function (i) {
+      i.update(msg)
+    })
+  },
+  //设置消息，在主体对象设置消息时，通知所有观察者，
+  setMessage: function (msg) {
+    this.msg = msg
+    this.notify()
+  }
+}
+
+//观察者对象
+function Iobservor () {
+  this.msg = null
+}
+
+Iobservor.prototype = {
+  //更新数据
+  update: function (msg) {
+    this.msg = msg
+    console.log(this.msg)
+  }
+}
+
+//创建一个被观察者
+var obj = new Iobject()
+//创建三个观察者
+var obs = new Iobservor()
+var obs1 = new Iobservor()
+var obs2 = new Iobservor()
+
+//给obj对象添加2个观察者
+obj.add(obs1)
+obj.add(obs2)
+//当主题对象数据发生变化时，观察者对象，立即更新数据
+obj.setMessage('hello world')
+</script>
 </script>
