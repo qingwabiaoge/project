@@ -1,52 +1,42 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-    <meta charset="UTF-8">
+<meta charset="utf-8">
 
 
-</head>
+<div class="padding-box">从padding-box处切clip割掉背景,</div>
 
-<body>
-<h1> background-clip切割背景 (颜色背景和图片背景一块切)</h1>
-.padding-box
-<div class="padding-box">正文部分文字内容......</div>
-.content-box
-<div class="content-box">正文部分文字内容......</div>
+<div class="content-box">从content-box处切clip割掉背景</div>
 
-<b style="color: red">.border-box 默认</b>
-<div class="border-box">正文部分文字内容......</div>
+
+<div class="border-box">从<b style="color: red">.border-box (默认)</b>处切clip割掉背景,</div>
 <style type="text/css">
 
-    div{
+  /*初始化样式*/
+  div {
 
-        width:300px;
-        height:200px;
-        color: yellow;
-        border:10px dashed #0f0;
-        padding:20px;
-        margin: 20px;
-        background:url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') #ccc no-repeat ;
-        background-origin: border-box;
+    width: 400px;
+    height: 400px;
+    color: yellow;
+    border: 10px dashed #0f0;
+    padding: 20px;
+    margin: 20px;
+    background: url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') #ccc no-repeat;
+    /*这里为了看起来更明白,*/
+    background-origin: border-box
 
-    }
-    .padding-box {
-        background-clip:padding-box;   /* 描述图片背景 图片的起始位置border-box content-box padding-box;*/
-    }
+  }
 
-    .content-box {
-        background-clip:content-box;
+  /*demo样式-------------------------------*/
+  .padding-box {
+    background-clip: padding-box; /* 描述图片背景 图片的起始位置border-box content-box padding-box;*/
+  }
 
-    }
+  .content-box {
+    background-clip: content-box;
 
-    .border-box {
-        background-clip:border-box;
+  }
 
-    }
+  .border-box {
+    background-clip: border-box;
+
+  }
 
 </style>
-</body>
-
-</html>

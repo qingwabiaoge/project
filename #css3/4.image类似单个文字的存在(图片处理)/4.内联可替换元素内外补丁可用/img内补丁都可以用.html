@@ -1,0 +1,30 @@
+<!--img内外补丁都可以用,-->
+<div style="border: 1px solid #ccc">
+
+    <img class="gutter"
+         src="http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320">
+
+</div>
+
+
+
+<br>
+
+
+<!--内联元素做布局会出现问题-->
+<div style="border: 1px solid #ccc">
+<span class="gutter">
+       <img  src="http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320">
+</span>
+
+</div>
+
+
+
+<style>
+    .gutter {
+        margin: 50px;
+        padding: 20px;
+        border: 1px solid #000;
+    }
+</style>

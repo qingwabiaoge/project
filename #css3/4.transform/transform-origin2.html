@@ -1,0 +1,42 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+  <section :class="{rotate}" @click="rotate=true">
+
+
+  </section>
+
+</div>
+
+<script>
+
+  new Vue({
+    el: '#app',
+    data: {
+      rotate: false
+    }
+  })
+
+</script>
+
+
+<style>
+  /*基本样式----------------------------------------*/
+  section {
+    background: red;
+    height: 100px;
+    width: 100px;
+    transition: all 1s;
+  }
+  .rotate {
+
+    transform: rotateZ(180deg);
+  }
+
+  /*demo样式-------------------------------------*/
+
+
+  section {
+    transform-origin: 100% 100%;
+  }
+</style>

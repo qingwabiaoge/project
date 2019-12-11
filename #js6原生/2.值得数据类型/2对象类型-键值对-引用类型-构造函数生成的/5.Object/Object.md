@@ -143,7 +143,7 @@ obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可�
  * 判断:Person.prototype.isprototypeof(xiaoming),
  * 列出: Object.getPrototypeOf(obj)
 
-###  __OwnProperty[^2]:__ 
+###  __ownProperty[^2]:__ 
 
  * 判断:obj.hasOwnProperty(propertyName) ,arr.hasOwnProperty('length')
 * 列出:Object.getOwnPropertyNames(obj)
@@ -191,7 +191,7 @@ for....of
      JSON.stringify(obj) 
 ###### 枚举类型合并
 
-  1. 合并后改变了内存地址
+  1. 合并后新建内存地址存储
 
   ```js
   const obj = {a: 1}, obj2 = {a:10,b: 20}
@@ -201,6 +201,9 @@ for....of
   ```js
   const obj = [10], obj2 =[10,20]
   console.log([...obj,...obj2]) //[10,10,20]
+  ```
+  ```js
+  Object.assign({},{a:1})
   ```
 
   2. Object.assign合并而不改变内存地址

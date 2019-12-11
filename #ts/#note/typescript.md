@@ -6,23 +6,21 @@
 | 引用类型 标识符                               | √                                           | √                                        |
 | class标识符<br />*class作用:生成指定格式对象* | √                                           | √                                        |
 
-# 变量类型
+# 基本类型
 
-### 基本类型变量
-
-##### :boolean
+### :boolean
 
 ```ts
 let isDone: boolean = false;
 ```
 
-##### :number
+### :number
 
 ```
 ...
 ```
 
-##### :any
+### :any
 
 会避开类型检查,和原生相同
 
@@ -31,7 +29,7 @@ let i:any=10
 i='str'
 ```
 
-##### :void
+### :void
 
 某种程度上来说，`void`类型像是与`any`类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是 `void`：
 
@@ -53,7 +51,7 @@ console.log(i)
 
 ```
 
-##### :Null 和 :Undefined
+### :Null 和 :Undefined
 
 TypeScript里，`undefined`和`null`两者各自有自己的类型分别叫做`undefined`和`null`。 和 `void`相似，它们的本身的类型用处不是很大：
 
@@ -63,25 +61,7 @@ let u: undefined = undefined;
 let n: null = null;
 ```
 
-##### T (泛型,,宽泛的类型 可在使用阶段才设置的类型)
-
-软件工程中，我们不仅要创建一致的定义良好的API，同时也要考虑可重用性。 组件不仅能够支持当前的数据类型，同时也能支持未来的数据类型，这在创建大型系统时为你提供了十分灵活的功能。
-
-在像C#和Java这样的语言中，可以使用`泛型`来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。
-
-------
-
-1. < T > 泛型是一种任意类型，类型是安全的;
-2. Any 类型会避开类型的检查
-3. T叫做占位符;
-4. 泛型是在实例化使用阶段才初始化;
-5. 泛型一般用于批量操作;
-
-  T 类似函数的额外的参数
-
-
-
-##### 枚举类型变量
+### 枚举类型变量
 
 更像数字类型和字符串类型限制了取值范围
 
@@ -121,7 +101,7 @@ console.log(Direction.Up)
 
 
 
-##### 元组 Tuple变量
+### 元组 Tuple变量
 
 (定义数组的每一个value)
 
@@ -134,9 +114,9 @@ x = ['hello', 10]; // OK
 x = [10, 'hello']; // Error
 ```
 
-##### 数组变量
 
-1. 基本变量定义
+
+### 数组类型
 
 ```
 let arrNum:number[] = [1, 2, 3]
@@ -144,13 +124,43 @@ let arrString:string[] = ['1', '2', '3']
 let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
 ```
 
-###### 泛型数组
+##### ==泛型数组==
 
 ```ts
 let arr:Array<number>=[1,2,3]
 ```
 
-### 对象类型变量
+Array被ts定义过
+
+```js
+interface Array<T> {
+  [index:number]: T;
+}
+//注意和Array<String>比较
+let arr: Array<string>;
+myArray = ["Bob", "Fred"];
+
+```
+
+# 泛型:T 
+
+(泛型,,宽泛的类型 可在使用阶段才设置的类型)
+
+软件工程中，我们不仅要创建一致的定义良好的API，同时也要考虑可重用性。 组件不仅能够支持当前的数据类型，同时也能支持未来的数据类型，这在创建大型系统时为你提供了十分灵活的功能。
+
+在像C#和Java这样的语言中，可以使用`泛型`来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。
+
+------
+
+1. < T > 泛型是一种任意类型，类型是安全的;
+2. Any 类型会避开类型的检查
+3. T叫做占位符;
+4. 泛型是在实例化使用阶段才初始化;
+5. 泛型一般用于批量操作;
+
+  T 类似函数的额外的参数
+
+# 对象
 
 ```js
 let obj:{a:number,b:number}
@@ -171,30 +181,14 @@ let obj: { a?: number, b?: number }
 obj = {a: 1, },
 ```
 
-### 函数类型变量
 
-为变量设置类型检测
 
-```ts
-/*
-限制函数格式
-限制了变量函数运行表达式的参数类型
-限制了变量返回值的类型
-*/
-let myAdd: (x: number, y: number) => number 
- 
-myAdd =function (x, y) {   
-  return x+y;
-};
+# 函数量
 
-console.log(myAdd(1,2))
-
-```
-
-函数变量add
+### 函数声明
 
 ```js
-                                 //:在()后是针对返回值的
+                                 //:在add()后是限制它的返回值的
 function add(x: number, y: number): number {
   return x + y;
 }
@@ -202,29 +196,16 @@ function add(x: number, y: number): number {
 console.log(add(1,2))
 ```
 
-匿名函数
-
-```ts
- function(x: number, y: number): number { return x + y; };
-```
-
-​            _ts会推断返回值类型所以可以省略返回值的设定_
+​          _ts会推断返回值类型所以可以省略返回值的设定_
 
 ```js
-function(x: number, y: number) { return x + y; };
+                            //:在add()后是限制它的返回值的
+function(x: number, y: number) { 
+    return x + y;
+};
 ```
 
-匿名函数的值赋值给函数类型变量
-
-```ts
-let myAdd: (x: number, y: number) => number  //定义myAdd类型为函数
-=function (x: number, y: number): number {   //定义函数参数类型和返回值类型
-    return x+y;
-  };
-console.log(myAdd(1,2))
-```
-
-##### 泛型函数:
+##### ==声名式函数泛型==
 
 ```ts
 function identity<T>(arg: T): T { 
@@ -252,7 +233,69 @@ function loggingIdentity<T>(arg: Array<T>): Array<T> {
 loggingIdentity<number>([1,2,3]) //为泛型T赋值
 ```
 
-### 类类型
+参数为对象
+
+```js
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key]
+}
+
+let obj = { a: 1, b: 2, c: 3 }
+
+getProperty(obj, 'a') // success
+
+```
+
+### 匿名函数
+
+为变量设置类型检测
+
+```ts
+
+             //:限制了参数类型       =>限制了变量返回值的类型
+let myAdd: (x: number, y: number) => number 
+ 
+myAdd =function (x, y) {   
+  return x+y;
+};
+
+console.log(myAdd(1,2))
+
+```
+
+匿名函数
+
+```ts
+                              //:在add()后是限制它的返回值的
+function(x: number, y: number): number { 
+     return x + y; 
+ };
+```
+
+匿名函数的值赋值给函数类型变量
+
+```ts
+let myAdd: (x: number, y: number) => number  //定义myAdd类型为函数
+=function (x: number, y: number): number {   //定义函数参数类型和返回值类型
+    return x+y;
+  };
+console.log(myAdd(1,2))
+```
+
+#####    ==匿名函数泛型==
+
+```js
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let myIdentity: {<T>(arg: T): T} = identity;
+
+```
+
+
+
+# 类类型
 
 (本质是构造函数)
 
@@ -274,7 +317,7 @@ console.log(greeter)
 
 ```
 
-##### 修饰符
+**修饰符**
 
 *  `public`(默认)
 
@@ -402,7 +445,7 @@ let dad = new Octopus("Man with the 8 strong legs");
 dad.name = "Man with the 3-piece suit"; // 错误! name 是只读的.
 ```
 
-##### extend
+**extend**
 
 ```ts
 class Animal {
@@ -430,7 +473,7 @@ dog.bark();
 
 ```
 
-##### 带泛型的类
+### ==泛型类==
 
 ```ts
 class GenericNumber<T> {
@@ -443,13 +486,13 @@ myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function(x, y) { return x + y; };
 ```
 
-### 类型断言
+# 类型断言
 
 有时候你会遇到这样的情况，你会比TypeScript更了解某个值的详细信息。 通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。
 
 通过*类型断言*这种方式可以告诉编译器，“相信我，我知道自己在干什么”。 类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。 它没有运行时的影响，只是在编译阶段起作用。 TypeScript会假设你，程序员，已经进行了必须的检查。
 
-##### 类型断言有两种形式。 
+### 类型断言有两种形式。 
 
 1.“尖括号”语法：
 
@@ -477,7 +520,7 @@ TypeScript的核心原则之一是对值所具有的*结构*进行类型检查�
 
 对变量限制的一组规则
 
-### 引用类型的接口
+### 接口语法
 
 ##### 对象标识符接口(契约)		
 
@@ -553,7 +596,25 @@ console.log(p1)
 
 ```
 
-##### 索引类型标识符接口(包含数组)
+###### ==带泛型==
+
+```ts
+interface LabelledValue<T> {
+  label: T; //只能使用label,不用使用size
+}
+
+function printLabel(labelledObj: LabelledValue<string>) {
+  console.log(labelledObj.label);
+}
+
+let myObj = {size: 10,label: "Size 10 Object"};
+printLabel(myObj);
+
+```
+
+
+
+##### 数组接口
 
 ```js
 interface NumberArr{
@@ -587,6 +648,20 @@ let myStr: string = myArray[0];
 
 ```
 
+###### ==带泛型==
+
+```ts
+interface StringArray<T> {
+  [index:number]: T;
+}
+//注意和Array<String>比较
+let myArray: StringArray<string>;
+myArray = ["Bob", "Fred"];
+
+```
+
+
+
 ##### 函数标识符接口
 
 ```ts
@@ -606,6 +681,35 @@ mySearch = function (src: string, sub: string): boolean {
   let result = src.search(sub);
   return result > -1;
 }
+
+```
+
+###### ==带泛型==
+
+```ts
+interface GenericIdentityFn {
+  <T>(m: T): T;
+}
+
+let myIdentity: GenericIdentityFn = function (m) {
+  return m
+};
+
+ myIdentity(1)
+
+```
+
+```
+interface GenericIdentityFn<T> {
+  (arg: T): T;
+}
+
+let myIdentity: GenericIdentityFn<number> = function (arg) {
+  return arg
+};
+
+const i: number = myIdentity(1)
+console.log(i)
 
 ```
 
@@ -753,69 +857,7 @@ subCls2.ktv();
 subCls.swimming();
 ```
 
-
-
-### 带泛型的引用类型的接口(契约)
-
-##### 带泛型的对象类型的接口
-
-```ts
-interface LabelledValue<T> {
-  label: T; //只能使用label,不用使用size
-}
-
-function printLabel(labelledObj: LabelledValue<string>) {
-  console.log(labelledObj.label);
-}
-
-let myObj = {size: 10,label: "Size 10 Object"};
-printLabel(myObj);
-
-```
-
-##### 带泛型的索引类型标识符的接口
-
-```ts
-interface StringArray<T> {
-  [index:number]: T;
-}
-
-let myArray: StringArray<string>;
-myArray = ["Bob", "Fred"];
-
-```
-
-##### 带泛型的函数标识符的接口(契约)
-
-```ts
-interface GenericIdentityFn {
-  <T>(m: T): T;
-}
-
-let myIdentity: GenericIdentityFn = function (m) {
-  return m
-};
-
- myIdentity(1)
-
-```
-
-```
-
-interface GenericIdentityFn<T> {
-  (arg: T): T;
-}
-
-let myIdentity: GenericIdentityFn<number> = function (arg) {
-  return arg
-};
-
-const i: number = myIdentity(1)
-console.log(i)
-
-```
-
-##### 带泛型的类标识符的接口(契约)
+###### ==带泛型==
 
 ```ts
 interface ClockInterface<T> {
@@ -830,8 +872,6 @@ class Clock implements ClockInterface<Date> {
 }
 
 ```
-
-
 
 ### 接口(契约)继承接口
 

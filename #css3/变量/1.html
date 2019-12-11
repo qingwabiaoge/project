@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+<p>我的紫色继承于根元素</p>
+<div>我的绿色来自直接设置</div>
+<div id='alert'>
+  ID选择器权重更高，因此阿拉是红色！
+  <p>我也是红色，占了继承的光</p>
+</div>
+
+<style>
+  * {
+    color: var(--color);
+  }
+  :root {
+    --color: purple;
+  }
+
+  div {
+    --color: green;
+  }
+
+  #alert {
+    --color: red;
+  }
+
+
+</style>

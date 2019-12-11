@@ -16,15 +16,16 @@
 ```javascript
 let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
 Array.from(ArrayLike)
-
 ```
 
 ###  Array.isArray( )判断是否数组类型
 
-1. Array.isArray(arr)
-2. arr instanceof Array //操作符不用.和括号
-3. arr.instructor=Array
-4. Array.prototype.isprototypeof(arr)
+```js
+   1. Array.isArray(arr)
+   2. arr instanceof Array //操作符不用.和括号
+   3. arr.instructor=Array
+   4. Array.prototype.isprototypeof(arr)
+```
 
 # 实例的所有属性(真实数据结构) in
 
@@ -137,6 +138,15 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
  Array.prototype.filter((item,index,self) => {})
 ```
 
+​           *数组去重*
+
+```
+const arr=["apple","banner","pear","banner","aaa"]
+arr = arr.filter((item,index,self)=>{
+       return self.indexOf(item) === index
+      })
+```
+
 ###### forEach对每一项操作
 
 ```
@@ -146,23 +156,23 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
 ###### find数组搜索
 
 ```
-3. arr.find(function(item, index, self) { return item>1 }) //查找第一个值
+arr.find(function(item, index, self) { return item>1 }) //查找第一个值
 ```
 ###### findindex搜索第一个符合条件的索引
 ```
-4. arr.findindex(function(item, index, self) { return item > 9 }) //查找第一个索引
+arr.findindex(function(item, index, self) { return item > 9 }) //查找第一个索引
 ```
 
- _已知id：2  删除{id:2,b:2}_
+​             _已知id：2 ,获得{id:2,b:2}的索引_
 
 ```
-arr=[{a:1,id:1},{b:2,id:2}]   
-------------------------
 arr=[{a:1,id:1},{b:2,id:2},{b:2,id:3}]
  const index =arr.findIndex((item,index,arr)=>{return item.id===3})
 ```
 
 ###### sort排序
+
+从大到小
 
 ```
  Array.prototype.sort((a,b)=>b-a)
@@ -200,8 +210,9 @@ initialValue：可选项，其值用于第一次调用 callback 的第一个参�
             price: 9
         }
     ];
-
+     //全局变量
     let sumprice = 0;
+    
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
         sumprice += element.price;
@@ -215,14 +226,12 @@ initialValue：可选项，其值用于第一次调用 callback 的第一个参�
         currentIndex    可选。当前元素的索引
         arr    可选。当前元素所属的数组对象。
     */
-    sumprice = array.reduce(function (total, currentValue, currentIndex, arr) {
+    sumprice = array.reduce(function (total, item, index, self) {
         return total + currentValue.price;
     }, 0);
     console.log('for reduce sumprice',sumprice);
 </script>
 ```
-
-
 
 ### ownProperty
 
@@ -278,14 +287,7 @@ arr.reduce((num1, num2) => {
 )
 ```
 
-### 数组去重
 
-```
-const arr=["apple","banner","pear","banner","aaa"]
-arr = arr.filter((item,index,self)=>{
-       return self.indexOf(item) === index
-      })
-```
 
 # 错误
 

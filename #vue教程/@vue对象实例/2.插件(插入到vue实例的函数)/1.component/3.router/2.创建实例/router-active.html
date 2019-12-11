@@ -27,9 +27,11 @@ const fa = {template: '<div>fa组件:<router-view></router-view></div>'}   // �
 
 const cs = {template: '<div>/fa/cs</div>'}
 
-//routes配置router-view组件和route-link组件
+
 const router = new VueRouter({
+  //配置actice
   linkActiveClass :'active',
+  //routes配置router-view组件和route-link组件
     routes: [{//配置最顶级的<route-view/>
       path: '/fa/', //<router-link/> 用什么path可以访问
       name: 'fa', //<router-link/> 用什么name可以访问
@@ -40,10 +42,8 @@ const router = new VueRouter({
           name: 'cs',
           component: cs,
         }
-
       ]
-    },
-
+    }
     ]
   }
 )

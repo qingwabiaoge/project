@@ -7,75 +7,76 @@
 
 <script>
 
-Vue.component('contain',{template:`<div class="module"><slot></slot></div>`})
+  Vue.component('contain', {template: `<div class="module"><slot></slot></div>`})
 
-//ui组件
-Vue.component('btn', { template: `<button class="ui"><slot></slot></button>` })
+  //ui组件
+  Vue.component('btn', {template: `<button class="ui"><slot></slot></button>`})
 
-//布局组件
-const app = {
-  template: `
+  //布局组件
+  const app = {
+    template: `
         <div class="app">
         <router-link to="/">/</router-link>
         <router-link to="/news/">/news/</router-link>
         <router-view class="page"></router-view>
         </div>`
-  // <rout-view/>类似nuxt的<nuxt/>
-}
-//布局组件
-const news = {
-  template: `<div>
+    // <rout-view/>类似nuxt的<nuxt/>
+  }
+  //布局组件
+  const news = {
+    template: `<div>
                     <btn><router-link to="/news/news_list"> news</router-link></btn>
                     <router-view />
                     </div>`
-}
+  }
 
-//最终页面组件
-const index = { template: '<div> <contain>index</contain></div>' }
-const news_index = { template: '<div><contain>news_index</contain> </div>' }
-const news_list = { template: '<div><router-link to="/news/1">/news/1</router-link></div>' }
-const news_id = { template: '<div> <contain>id:{{id}}</contain> </div>', props: ['id'] }
+  //最终页面组件
+  const index = {template: '<div> <contain>index</contain></div>'}
+  const news_index = {template: '<div><contain>news_index</contain> </div>'}
+  const news_list = {template: '<div><router-link to="/news/1">/news/1</router-link></div>'}
+  const news_id = {template: '<div> <contain>id:{{id}}</contain> </div>', props: ['id']}
 
 
-const router = new VueRouter({
-  linkActiveClass :'active',
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    },
-    {
-      path: '/news',
-      name: 'news',
-      component: news,
-      children: [{
+  const router = new VueRouter({
+    linkActiveClass: 'active',
+    routes: [
+      {
         path: '/',
-        name: 'news_index',
-        component: news_index
-
+        name: 'index',
+        component: index
       },
-        {
-          path: 'news_list',
-          name: 'news_list',
-          component: news_list
-        },
+      {
+        path: '/news',
+        name: 'news',
+        component: news,
+        children: [
+          {
+            path: '/',
+            name: 'news_index',
+            component: news_index
 
-        {
-          path: ':id',
-          name: 'news_id',
-          props: true,
-          component: news_id
-        }]
-    }
-  ]
+          },
+          {
+            path: 'news_list',
+            name: 'news_list',
+            component: news_list
+          },
 
-})
-const vm = new Vue({
-  router,
-  template: '<app/>',
-  components: { app }
-}).$mount('#app')
+          {
+            path: ':id',
+            name: 'news_id',
+            props: true,
+            component: news_id
+          }]
+      }
+    ]
+
+  })
+  const vm = new Vue({
+    router,
+    template: '<app/>',
+    components: {app}
+  }).$mount('#app')
 </script>
 
 <style>
@@ -99,10 +100,13 @@ const vm = new Vue({
   .module {
     border: 1px solid green
   }
-  .ui{
-    background: grey;color: black;
+
+  .ui {
+    background: grey;
+    color: black;
   }
-  .ui .active{
+
+  .ui .active {
     color: white;
   }
 </style>

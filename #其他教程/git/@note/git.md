@@ -530,10 +530,10 @@ git branch -r
 ### git branch -a 列出所有分支
 
 ```
-git branch -a
+git branch -a(all)
 ```
 
-### git branch dev创建并切换分支
+### git branch dev创建分支
 
 ```
 $ git branch dev
@@ -549,19 +549,12 @@ $ git branch dev
 
 ```
 git branch -d dev
-
 ```
 
 ### git branch -D 如果删除不了可以强制删除，
 
 ```
-git branch -D 
-```
-
-##### git push origin --delete xxx 删除远程分支
-
-```
-git push github --delete dev1
+git branch -D dev
 ```
 
 # git merge
@@ -633,7 +626,7 @@ git checkout -b branchA //为分支命名
 
 # git remote 
 
-##### 远程主机
+### 远程主机
 
 和本地主机一样的git系统,可能更多的节点,因为所有人都在push
 
@@ -667,6 +660,49 @@ git remote add origin [url]
 ```
 
 3.直接修改config文件
+
+# git push 
+
+##### 建立远程分支
+
+```
+git push origin master
+```
+
+##### 推送变化到指定主机/分支
+
+```
+git push origin master
+```
+
+##### -u  指定默认
+
+```
+git push -u origin master
+```
+
+从默认远程主机/分支推送和拉取
+
+```
+git push
+git pull
+```
+
+![](./img/9.png)
+
+#####  -f 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
+
+```
+git push -f
+```
+
+#####  -d  删除远程分支
+
+```
+git push -d github dev
+```
+> 解决默认分支不可删除的情况
+![](./img/6.png)
 
 
 
@@ -744,55 +780,6 @@ git pull
 ```
 git pull origin master
 ```
-
-# git push 
-
-##### -u指定默认主机
-
-```
-//-u选项会指定一个默认主机
-
-git push -u origin master
-
-//推送dev分支到远程
-
-git push  origin dev
-
-```
-
-##### 从默认远程主机推送和拉取
-
-```
-git push
-
-git pull
-```
-
-##### 推送分支到指定主机
-
-```
-git push origin master
-
-git pull origin  dev
-```
-
-
-
-![](./img/9.png)
-
-##### git push -f 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
-
-```
-git push -f
-```
-
-##### git push origin --delete xxx 删除远程分支
-
-```
-git push github --delete dev1
-```
-> 解决默认分支不可删除的情况
-![](./img/6.png)
 
 
 

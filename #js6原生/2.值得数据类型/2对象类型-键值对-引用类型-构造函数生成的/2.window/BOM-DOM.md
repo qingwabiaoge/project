@@ -1,5 +1,7 @@
 # Windows(js操纵浏览器)
 
+# 方法
+
 window对象：表示浏览器中打开的窗口。
 
 ## ==onload==
@@ -34,36 +36,6 @@ window.onunload = function () {
 ## ==closed()==
 
 ....
-
-## *outerWidth*-innerHeight-screenLeft-screenTop
-
-```
-console.log('win-innerHeight', innerHeight)
-console.log('win-outerHeight', outerHeight)
-console.log('win-innerWidth', innerWidth)
-console.log('win-outerWidth', outerWidth)
-console.log('win-screenLeft', screenLeft)
-console.log('win-screenTop',  screenTop)
-console.log('-----------------------')
-```
-
-## screen
-
-##### screen.availWidth
-
-屏幕的尺寸
-
-  `console.log(screen.availWidth, screen.availHeight);`
-
-## screenLeft 
-
-浏览器界面左上角 在屏幕中的坐标        
-
-![1574875632310](img/1574875632310.png)
-
-
-
-
 
 ## setTimeout()执行一次
 
@@ -141,13 +113,46 @@ let i=0
 
  替换新的网址
 
+# 属性
+
+## *outerWidth*-innerHeight-screenLeft-screenTop
+
+```
+console.log('win-innerHeight', innerHeight)
+console.log('win-outerHeight', outerHeight)
+console.log('win-innerWidth', innerWidth)
+console.log('win-outerWidth', outerWidth)
+console.log('win-screenLeft', screenLeft)
+console.log('win-screenTop',  screenTop)
+console.log('-----------------------')
+```
+
+## screen
+
+##### screen.availWidth
+
+屏幕的尺寸
+
+  `console.log(screen.availWidth, screen.availHeight);`
+
+## screenLeft 
+
+浏览器界面左上角 在屏幕中的坐标        
+
+![1574875632310](img/1574875632310.png)
+
+
+
+
+
+
+
 ## location
 
 ##### location.href  读取和设置本窗口的地址
 
 ```js
   window.location.href = "http://www.baidu.com"
-
 ```
 
 ##### location.reload() 
@@ -244,8 +249,6 @@ navigator.userAgent
 </html>
 
 ```
-
-
 
 ##### history.go()
 

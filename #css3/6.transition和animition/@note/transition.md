@@ -1,55 +1,53 @@
 # transition作用
 
-first-section是一个类, first-section:hover算另外一个类 叫**伪类**
-
-```
+```html
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 
 <div id="app">
 
-    <section class="first-section">section</section>
-
-    <section
-            @mouseover="isRotate=true"
-            @mouseleave="isRotate=false"
-            :class="{rotate:isRotate}">section
-    </section>
+  <button class="btn">button</button>
+  
+  <button
+    @mouseover="isRotate=true"
+    @mouseleave="isRotate=false"
+    :class="{rotate:isRotate}">button
+  </button>
 
 
 </div>
 
 <script>
-    new Vue({data: {isRotate: false}}).$mount('#app')
+  new Vue({data: {isRotate: false}}).$mount('#app')
 
 </script>
 <style>
-    section {
-        display: inline-block;
-        transition: all 1s;
-    }
+  .rotate, .btn:hover {
+    transform: rotate(90deg)
+  }
 
-    .rotate, .first-section:hover {
-        transform: rotate(90deg)
-    }
+  button {
+    transition: all 1s;
+  }
 
 </style>
 
 ```
 
+### hover伪类
+
+.btn是一个类
+
+.btn:hover算另外一个类 叫**伪类**
 
 
-| 事件                              | 添加或删除类                                       | transition                                                   |
-| --------------------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
-| first-section的css-hover事件,     | 为first-section添加了一个伪类section:hover         | 在css中为section的每个带动画的下级元素__分别添加__transition |
-| first-section的css-hover取消事件, | 为first-section减少了一个伪类.为section:hover      | --                                                           |
-| 第二个section的js-mousehover事件  | 为第二个section或者__其他标签__添加了一个类.rotate | 在css中为.rotate的每个带动画的下级元素__分别添加__transition |
-| 第二个section的js-mouseleave事件  | 为第二个section或者__其他标签__减少了一个类.rotate | --                                                           |
-
-```html
-
-```
+| 事件                             | 添加或删除类                                      | transition           |
+| -------------------------------- | ------------------------------------------------- | -------------------- |
+| 第一个button的css-hover事件,     | 为第一个button添加了一个伪类button:hover          | 为增加类添加过渡补间 |
+| 第一个button的css-hover取消事件, | 为第一个button减少了一个伪类button:hover          | 为减少类添加过渡补间 |
+| 第二个button的js-mousehover事件  | 为第二个button或者__其他标签__添加了一个类.rotate | 为增加类添加过渡补间 |
+| 第二个button的js-mouseleave事件  | 为第二个button或者__其他标签__减少了一个类.rotate | 为减少类添加过渡补间 |
 
 # animate的作用
 
-就是一个带动画效果的类
+就是一个带动画效果自动补间的类
 

@@ -4,49 +4,45 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-
+  <meta charset="UTF-8">
 
 
 </head>
 
 <body>
-<h1>background-origin图片背景的起始位置</h1>
 
-<b style="color: red">.padding-box 默认</b>
-<div class="padding-box">正文部分文字内容......</div>
-.content-box
-<div class="content-box">正文部分文字内容......</div>
+<div class="padding-box"> background-origin:(图片背景的起始位置为)<b style="color: red">.padding-box 默认</b></div>
 
-.border-box
-<div class="border-box">正文部分文字内容......</div>
+<div class="content-box"> background-origin:(图片背景的起始位置)为content-box</div>
+
+<div class="border-box"> background-origin:(图片背景的起始位置)为border-box</div>
 <style type="text/css">
+  /*初始化样式---------------------------------------------------------*/
+  div {
 
-    div{
+    width: 400px;
+    height: 400px;
+    color: yellow;
+    border: 10px dashed #0f0;
+    padding: 20px;
+    margin: 20px;
+    background:#ccc url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') no-repeat;
+  }
 
-        width:300px;
-        height:200px;
-        color: yellow;
-        border:10px dashed #0f0;
-        padding:20px;
-        margin: 20px;
-        background:url('http://img.hb.aicdn.com/ee9c62e8caf1b7907072b90b8058b87b2b92b237102ea-4LB0wq_sq320') no-repeat ;
+  /*demo样式--------------------------------------------------------*/
+  .padding-box {
+    background-origin: padding-box; /* 描述图片背景 图片的起始位置border-box content-box padding-box;*/
+  }
 
-    }
-    .padding-box {
-        background-origin:padding-box;   /* 描述图片背景 图片的起始位置border-box content-box padding-box;*/
-    }
+  .content-box {
+    background-origin: content-box;
 
-    .content-box {
-        background-origin:content-box;
+  }
 
-    }
+  .border-box {
+    background-origin: border-box;
 
-    .border-box {
-        background-origin:border-box;
-
-    }
+  }
 
 </style>
 </body>

@@ -1,19 +1,28 @@
 <div>
-    <section style="position: relative; background: red; left: 100%" >left: 100% position: relative;</section>
-    <section style="background: yellow; transform: translateX(100%)">transform: translateX(100%)</section>
+    <section >left: 100% position: relative;</section>
+    <section >transform: translateX(100%)</section>
 </div>
-<!--relative,left:以父元素为参照-->
 
-<!--transform是以本元素做参照物-->
 
 <style>
+  /*基本样式---------------------------------------------------------------------------------*/
     div{
-        width: 500px; height: 500px;border: 1px solid #f00;
+        width: 500px; height: 500px;border: 1px solid #000;
     }
 
     section{
-        width: 200px;height: 200px;
+        width: 200px;height: 200px;  background: red;
     }
 
+  /* relative,以父元素为参照 */
+   div section:first-child{
 
+     position: relative; left: 100%
+   }
+
+  /*transform是以本元素做参照物*/
+
+  div section:last-child{
+     transform:translateX(100%)
+  }
 </style>
