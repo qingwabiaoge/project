@@ -6,8 +6,8 @@
 
 
 <script>
-
-  Vue.component('contain', {template: `<div class="module"><slot></slot></div>`})
+  //module组件
+  Vue.component('module', {template: `<div class="module"><slot></slot></div>`})
 
   //ui组件
   Vue.component('btn', {template: `<button class="ui"><slot></slot></button>`})
@@ -16,35 +16,30 @@
   const app = {
     template: `
         <div class="app">
-        <router-link to="/">/</router-link>
         <router-link to="/news/">/news/</router-link>
-        <router-view class="page"></router-view>
+        <router-view ></router-view>
         </div>`
     // <rout-view/>类似nuxt的<nuxt/>
   }
   //布局组件
   const news = {
-    template: `<div>
-                    <btn><router-link to="/news/news_list"> news</router-link></btn>
+    template: `<div class="layout">
+                    <btn><router-link to="/news/news_list"> news-category</router-link></btn>
                     <router-view />
                     </div>`
   }
 
   //最终页面组件
-  const index = {template: '<div> <contain>index</contain></div>'}
-  const news_index = {template: '<div><contain>news_index</contain> </div>'}
-  const news_list = {template: '<div><router-link to="/news/1">/news/1</router-link></div>'}
-  const news_id = {template: '<div> <contain>id:{{id}}</contain> </div>', props: ['id']}
+
+  const news_index = {template: '<div class="page1"><module>news_index</module> </div>'}
+  const news_list = {template: '<div class="page2"><module><router-link to="/news/1">/news/1</router-link></module></div>'}
+  const news_id = {template: '<div class="page3"> <module>id:{{id}}</module> </div>', props: ['id']}
 
 
   const router = new VueRouter({
     linkActiveClass: 'active',
     routes: [
-      {
-        path: '/',
-        name: 'index',
-        component: index
-      },
+
       {
         path: '/news',
         name: 'news',
@@ -93,8 +88,19 @@
     border: 5px solid deeppink
   }
 
-  .page {
-    border: 1px solid blue
+  .layout {
+    border: 1px solid red
+  }
+
+  .page1 {
+    border: 5px solid blue
+  }
+
+  .page2 {
+    border: 5px dashed blue
+  }
+  .page3 {
+    border: 1px dotted  blue;
   }
 
   .module {
@@ -102,8 +108,7 @@
   }
 
   .ui {
-    background: grey;
-    color: black;
+    background: black;
   }
 
   .ui .active {

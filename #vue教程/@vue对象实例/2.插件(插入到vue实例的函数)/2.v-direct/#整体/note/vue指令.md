@@ -249,7 +249,6 @@ propx:sync不限于value input,但是不能用于原生组件
   <!--
   当item=1时
   v-model="1"  无法赋值
-
   -->
   <input type="text" v-for="item in arr" v-model="item"> <br>
   

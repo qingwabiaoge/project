@@ -23,9 +23,32 @@
 <cl age='age' @fn='fn'></cl>
 ```
 
-```javascript
-new Vue({el:'#app'})
-new VueComponent({props: {age,fn}})
+```html
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+
+
+</div>
+
+<script>
+
+    const VueComponent = Vue.component('cl', {
+        template: `<div>{{prop}}</div>`,
+        props: {prop: {default: 10}}
+    })
+    const vm = new VueComponent({props: {prop: {default: 100}}})
+
+    const dom = vm.$mount().$el
+    document.getElementById('app').appendChild(dom)
+</script>
+
+<style>
+    .red {
+        color: red;
+    }
+</style>
+
 ```
 
 ##  组件属性===构造函数的参数
