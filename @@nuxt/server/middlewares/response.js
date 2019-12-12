@@ -1,4 +1,4 @@
-const debug = require('debug')('koa-weapp-demo')
+//const debug = require('debug')('koa-weapp-demo')
 module.exports = async function (ctx, next) {
     try {
 
@@ -15,7 +15,7 @@ module.exports = async function (ctx, next) {
     }
     catch (e) {
          console.log(e)//输出错误到控制台 给pm2记录
-        debug('Catch Error: %o', e)
+       // debug('Catch Error: %o', e)
         // 设置状态码为 200 msg,给axios接收
         ctx.status = 200
         ctx.body = {

@@ -501,14 +501,3 @@ event.target===el
 
 ```
 
-## document.cookie
-
-```html
-<script>
-  document.cookie = "obj={'a':1}";
-  const i = document.cookie;
-  console.log(i)
-</script>
-
-```
-

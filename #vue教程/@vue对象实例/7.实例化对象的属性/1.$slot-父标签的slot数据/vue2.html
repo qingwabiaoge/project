@@ -11,14 +11,14 @@
 
 
   <cl>
-    测试
+    默认插槽
   </cl>
 </div>
 
 <script>
   Vue.component('cl', {
-    template: `<button><slot></slot></button>`, created() {
-      console.log(this.$slots.default ? '默认插槽有内容' : '')
+    template: `<div><slot></slot></div>`,
+    created() {
       console.log(this.$slots.default)
     }
   })

@@ -45,7 +45,8 @@
     "vue-waterfall2": "^1.9.4",
     "vue2-editor": "^2.6.6",
     "vuex-i18n": "^1.13.1",
-    "vuex-persistedstate": "^2.5.4"
+    "vuex-persistedstate": "^2.5.4",
+    "xml2js": "^0.4.22"
   },
   "devDependencies": {
     "babel-plugin-component": "^1.1.1",

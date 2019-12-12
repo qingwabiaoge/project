@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+
+</div>
+
+
+<script>
+  //带配置的Vue构造函数,类
+  var Evue = Vue.extend({
+    template: `<div>flower</div>`,
+    mounted() {
+      console.log('red flower')
+    }
+  })
+
+
+  new Evue({
+    el: '#app'
+  })
+</script>

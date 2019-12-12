@@ -47,7 +47,7 @@ export default(ctx)=> {
 
 ```
 
-#####  注入到 app  vm  store router
+#####  联合注入到注入到 app  vm  store router
 
 ```javascript
 //nuxt.config.js ->plugins, 
@@ -90,7 +90,7 @@ nuxtServerInit 方法接收的上下文对象和 fetch 的一样，但不包括 
 
 ##### 本质
 
-进路由时的钩子,猜测是router
+进路由时的钩子,猜测是router.eachBefore
 
 ##### 不同位置的中间件执行顺序
 
@@ -157,7 +157,9 @@ export default {
 
 ##### page-> fetch()只能填充vuex
 
-**使用场景** 为了节省网速,不必一次性用nuxtServerInit 写入到$sotre的数据,用fetch再次补充$store
+**使用场景** 
+
+为了节省网速,不必一次性用nuxtServerInit 写入到$sotre的数据,用fetch再次补充$store
 
 如果页面组件设置了 fetch 方法，它会在组件每次加载前被调用__（在服务端或切换至目标路由之前）__。
 
@@ -250,9 +252,7 @@ export default {
 
 ### 服务器端vue实例下载到浏览器成为浏览器端vue数据
 
-
-
-### 服务器上的vue根实例app的生命周期:
+服务器上的vue根实例app的生命周期:
 
 ```
 
@@ -291,9 +291,11 @@ export default {
 
 ### asyncData函数的异步请求
 
-__asyncData请求完成后__,才开始vue的生命周期(这点和vuecli的不同)
+==asyncData请求完成后==,才开始vue的生命周期(这点和vuecli的不同)
 
 ### 浏览器端Vue生命周期
+
+......
 
 # modules
 

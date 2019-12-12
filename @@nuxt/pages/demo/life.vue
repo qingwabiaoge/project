@@ -14,6 +14,7 @@
     meddleware:['test-life'],
     validate(){
       console.log('validate执行')
+      console.log(Object.getOwnPropertyNames())
       return true
     },
     async asyncData({app}) {
@@ -44,6 +45,7 @@
       //不能服务器渲染
       console.log('created服务器端+浏览器端运行', this.asyncData)
       this.$nextTick(() => {
+        console.log(Object.getOwnPropertyNames())
         console.log('$nextTick服务器+客户端执行')
       })
     },
