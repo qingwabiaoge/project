@@ -54,7 +54,8 @@ module.exports = async (ctx, next) => {
   console.log(ctx.request.body)
 
 
-  console.log('ctx.request.files.file--------------')
+  console.log('ctx.request.files--------------')
+  console.log(ctx.request.files===ctx.request)
   console.log(ctx.request.files)
 
 

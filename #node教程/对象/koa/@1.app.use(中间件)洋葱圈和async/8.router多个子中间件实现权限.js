@@ -3,7 +3,7 @@ const app = new Koa()
 const Router = require('koa-router')
 const router = new Router()
 
-const control = async (ctx, next) => {
+const normalMiddlewares = async (ctx, next) => {
 
   ctx.body = '1'
   await next()
@@ -13,6 +13,7 @@ const control = async (ctx, next) => {
 
 
 const i = 0
+
 const routerMiddlewares = (ctx, next) => {
   if (i) {
     //ctx.body += '3';
@@ -24,14 +25,16 @@ const routerMiddlewares = (ctx, next) => {
 
 
 const routerMiddlewares2 = (ctx, next) => {
-  ctx.body += '5'
+  ctx.body += '3'
   next()
-  ctx.body += '6'
+  ctx.body += '4'
 }
+
+
 router.get('/', routerMiddlewares, routerMiddlewares2)
 
 
-app.use(control)
+app.use(normalMiddlewares)
   .use(router.routes())
   .use(router.allowedMethods())
 

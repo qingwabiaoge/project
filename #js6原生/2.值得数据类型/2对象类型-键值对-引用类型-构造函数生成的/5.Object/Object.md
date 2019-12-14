@@ -184,6 +184,12 @@ for....of
   Object.values(obj)
 ```
 
+5. Object.entries遍历
+
+```
+console.log(Object.entries(object)) //['name', 'wang'],['age', 18]
+```
+
 ###### 枚举类型转JSON
 
   JSON.stringify( )   列出obj返回json字符串

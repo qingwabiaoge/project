@@ -611,7 +611,7 @@ enum:  枚举匹配(只适用于字符串)
 
 　　将age设置为必填字段，如果没有age字段，文档将不被保存，且出现错误提示
 
-​                 **唯一性,需要删除当前数据库重建才能用 **
+​                 ==唯一性,需要删除当前数据库重建才能用 ==
 
 ```
 var schema = new mongoose.Schema({ age:{type:Number,required:true}, name: String,x:Number,y:Number});  
@@ -894,9 +894,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　`Model`的实例是`document，`内置实例方法有很多，如 `save`，可以通过Schema对象的`methods`属性给实例自定义扩展方法
 
-
-
-```
+```js
 var mongoose = require('mongoose');
 mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
     if(!err){
@@ -930,9 +928,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　通过Schema对象的`statics`属性给 `Model` 添加静态方法
 
-
-
-```
+```js
 var mongoose = require('mongoose');
 mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
     if(!err){
@@ -965,9 +961,7 @@ mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
 
 　　通过schema对象的query属性，给model添加查询方法
 
-
-
-```
+```js
 var mongoose = require('mongoose');
 mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
     if(!err){

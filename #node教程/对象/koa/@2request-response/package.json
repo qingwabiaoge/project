@@ -19,7 +19,7 @@
   "main": "1.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server/index.js"
   },
   "author": "",
   "license": "ISC",

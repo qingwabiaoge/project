@@ -53,7 +53,7 @@
                 var windowURL = window.URL || window.webkitURL;
 
                 this.file = event.target.files[0];
-                console.log(this.file)
+
                 //获得src用于预览
 
                 this.src = windowURL.createObjectURL(event.target.files[0]);
@@ -68,7 +68,7 @@
                 let formdata = new FormData();
 
                 formdata.append('file', this.file);
-                console.log(formdata)
+
 
                 let config = {
 
@@ -82,7 +82,7 @@
 
                 axios.post('http://localhost:3000/uploadfile', formdata, config).then((res) => {
 
-                    //做处理
+                    console.log(res)
 
                 }).catch((error) => {
 

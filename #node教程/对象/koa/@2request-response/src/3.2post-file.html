@@ -31,16 +31,16 @@ const vm = new Vue({
 
   data () {
     return {
-      file: '',
+      img: '',
     }
   },
   computed: {
     src () {
-      if (this.file) {
+      if (this.img) {
         //本地图片预览------------------------------------
         var windowURL = window.URL || window.webkitURL  //兼容ie
         //URL.createObjectURL() 静态方法会创建一个 DOMString，其中包含一个表示参数中给出的对象的URL。
-        return windowURL.createObjectURL(this.file)
+        return windowURL.createObjectURL(this.img)
       }
 
     }
@@ -51,7 +51,7 @@ const vm = new Vue({
 
     showThumb (event) {
       //获取文件
-      this.file = event.target.files[0]
+      this.img = event.target.files[0]
     },
 
     submit () {
@@ -60,7 +60,7 @@ const vm = new Vue({
 
       let formdata = new FormData()
 
-      formdata.append('file', this.file)
+      formdata.append('img', this.img)
       console.log(formdata)
 
       let config = {

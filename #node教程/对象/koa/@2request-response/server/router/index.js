@@ -2,7 +2,7 @@ const Router = require('Koa-router')
 const router = new Router({prefix: '/api'})
 const request= require('../controller/request')
 const author = require('../middlewares/author')
-const setCookie=require('../controller/setCookie')
+
 const koaBody = require('koa-body')
 
 const koaBodyMidware = koaBody({
@@ -30,6 +30,6 @@ router
   .post('/request-file/', koaBodyMidware, request)
   //路由里指定路由使用author中间件
   .post('/author/', author, request)
-  .get('/setcookie/', setCookie)
+
 
 module.exports = router

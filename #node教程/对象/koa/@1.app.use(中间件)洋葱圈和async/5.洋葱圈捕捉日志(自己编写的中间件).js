@@ -10,8 +10,10 @@ const logger = async (ctx, next) => {
   console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`)
 }
 
-app.use(logger)
-app.use((ctx) => {
+const midware = (ctx) => {
   ctx.body = 1
-})
+}
+
+app.use(logger)
+app.use(midware)
 app.listen(3000)

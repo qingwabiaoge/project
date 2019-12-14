@@ -1,4 +1,4 @@
-const buf1 = new Buffer('一二三四五六');
+const buf1 = new Buffer.from('一二三四五六');
 console.log(console.log(buf1.length,buf1.toString()))
 
 const buf2 = new Buffer.alloc(1024)

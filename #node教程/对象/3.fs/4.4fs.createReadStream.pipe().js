@@ -11,4 +11,3 @@ var writerStream = fs.createWriteStream('../assets/2.txt');
 // 读取 input.txt 文件内容，并将内容写入到 output.txt 文件中
 readerStream.pipe(writerStream);
 
-console.log("主程序");

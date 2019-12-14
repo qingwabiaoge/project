@@ -1,15 +1,14 @@
 {
-  "name": "code",
+  "name": "1",
   "version": "1.0.0",
-  "description": "",
-  "main": "appendFile.js",
+  "description": "1",
+  "main": "1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "images": "^3.0.2",
-    "request": "^2.88.0"
+    "koa": "^2.11.0"
   }
 }

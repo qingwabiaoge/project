@@ -1,7 +1,7 @@
 module.exports = async (ctx) => {
   ctx.cookies.set(
     'cid',
-    'ddddd',    //可替换为token
+    'token',    //可替换为token
     {
       domain: 'localhost',  // 写cookie所在的域名
       path: '/',       // 写cookie所在的路径

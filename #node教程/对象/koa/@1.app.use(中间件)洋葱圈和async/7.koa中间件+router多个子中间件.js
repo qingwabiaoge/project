@@ -5,7 +5,7 @@ const Router = require('koa-router')
 
 const router = new Router()
 
-const control = async (ctx, next) => {
+const normalMiddlewares = async (ctx, next) => {
   ctx.body = '1'
   await next()
   ctx.body += '2'
@@ -22,9 +22,11 @@ const routerMiddlewares2 = async (ctx, next) => {
   await next()
   ctx.body += '6'
 }
+
+
 router.get('/', routerMiddlewares, routerMiddlewares2)
 
-app.use(control)
+app.use(normalMiddlewares)
   .use(router.routes())
   .use(router.allowedMethods())
 

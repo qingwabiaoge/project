@@ -398,7 +398,7 @@ export default {
 	    npm install element-ui --save
 
 
- 	
+ 
 ##### 2 创建插件配置文件
 安装好以后，按照nuxt.js中的规则，你需要在 plugins/ 目录下创建相应的插件文件
 

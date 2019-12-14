@@ -36,7 +36,7 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 
 ### 1.参数为空：
 
-*path.resolve()或者paht.resolve('')
+path.resolve()或者paht.resolve('')
 
 ```
 输出：当前文件所在文件夹路径  === __dirname
@@ -46,19 +46,19 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 
 ### 2.参数为文件夹名字(参数>=1):
 
-*path.resolve('path')
+path.resolve('path')
 
 ```
 输出：当前文件所在文件夹绝对路径/path
 ```
 
-*或者 path.resolve('path1','path2')
+或者 path.resolve('path1','path2')
 
 ```
 输出：当前文件所在文件夹绝对路径/path1/path2
 ```
 
-*或者 path.resolve('path1','path2'.......'pathX')
+或者 path.resolve('path1','path2'.......'pathX')
 
 ```
 输出：当前文件所在文件夹绝对路径/path1/path2...../pathX
@@ -66,19 +66,17 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 
 ### 3. 某个参数为'./'+文件名
 
-*path.resolve('./path')
+path.resolve('./path')
 
 ```
 输出：当前文件所在文件夹绝对路径/path
 ```
 
-*或者path.resolve('path1','./path2')
+或者path.resolve('path1','./path2')
 
 ```
 输出：当前文件所在文件夹绝对路径/path1/path2
 ```
-
- 
 
  
 
@@ -98,7 +96,7 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 
 ###### 4.2.1path.resolve('path1','path2','/path3') 
 
-*前两个path前没有斜杠，只最后一个有
+前两个path前没有斜杠，只最后一个有
 
 ```
 输出: /path2
@@ -106,7 +104,7 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 
 ###### 4.2.2.path.resolve('path1','/path2','/path3')
 
-*后面两个path都有斜杠
+后面两个path都有斜杠
 
 ```
 输出：/path2
@@ -116,7 +114,7 @@ path.resolve('./a', './b') // '/Users/username/Projects/webpack-demo/a/b'
 
 ##### 4.3.path.resolve('path1','/path2','path3') 
 
-*path2有斜杠，后面的path3没有斜杠
+path2有斜杠，后面的path3没有斜杠
 
 ```
 输出: /path2/path3
