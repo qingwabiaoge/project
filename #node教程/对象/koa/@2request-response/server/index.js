@@ -1,6 +1,8 @@
 const Koa = require('Koa')
 const app = new Koa()//实例化koa
+const static = require('koa-static')
 const router = require('./router')
+const path=require('path')
 
 
 const cors = require('koa2-cors')
@@ -10,6 +12,8 @@ const response = require('./middlewares/response')
 
 
 app.use(response)
+//静态目录插件
+  .use(static(path.join(__dirname,  './static')))
   .use(cors())
   //xmlParser必须和bodyParser一起用 并删除koaBody, 貌似还要放到全局
   .use(xmlParser())

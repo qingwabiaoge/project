@@ -7,7 +7,7 @@ module.exports = async (ctx, next) => {
         ctx.body = ctx.body || {
             code: ctx.state.code || 0,
             msg: ctx.state.msg || '操作成功',
-            data: ctx.state.data || {0: '默认返回值'}
+            data: ctx.state.data || '默认返回值'
         }
     }
     catch (e) {

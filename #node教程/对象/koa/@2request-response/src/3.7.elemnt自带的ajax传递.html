@@ -7,7 +7,7 @@
 <div id="app">
   {{imageUrl}}
   <el-upload
-    action="http://localhost:3000/uploadfile"
+    action="http://localhost:3000/api/file"
     :show-file-list="false"
     :on-success="handleAvatarSuccess"
     :before-upload="beforeAvatarUpload"
@@ -40,7 +40,7 @@
           return isJPG && isLt2M;
         },
         handleAvatarSuccess(data, file) {
-          this.imageUrl = URL.createObjectURL(file.raw)&&data;
+          this.imageUrl = URL.createObjectURL(file.raw)&&data.data.image;
 
         },
       }

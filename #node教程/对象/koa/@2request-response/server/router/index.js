@@ -1,11 +1,12 @@
 const Router = require('Koa-router')
 const router = new Router({prefix: '/api'})
+//controller---------------
 const request = require('../controller/request')
 const base64 = require('../controller/base64')
+const file=require('../controller/file')
+//中间件------------------
 const author = require('../middlewares/author')
-
 const koaBody = require('koa-body')
-
 const koaBodyMidware = koaBody({
   parsedMethods: [
     'POST',
@@ -31,7 +32,7 @@ router
 
 
   //路由里指定路由使用上传中间件,因为要使用koa-body中间件所以要单独路由
-  .post('/file/', koaBodyMidware, request)
+  .post('/file/', koaBodyMidware, file)
   //base64
   .post('/base64/', base64)
   //路由里指定路由使用author中间件
