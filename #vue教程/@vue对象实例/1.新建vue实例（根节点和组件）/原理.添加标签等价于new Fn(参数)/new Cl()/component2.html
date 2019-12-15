@@ -25,6 +25,7 @@
         template: `<div  id="cl" @click="$emit('cs',1)">{{prop}}</div>`,
         props: ['prop']
     })
+    console.log({Cl})
     //实例化
     const vm = new Cl({props: {prop: {default: 100}}})
     const dom = vm.$mount().$el

@@ -1,4 +1,4 @@
-## document(js操控html)
+## document(js模拟视图)
 
 **document对象**
 

@@ -69,6 +69,14 @@
 
  ![查看电脑是否开启ahci模式的方法](img/130105_99786606.png) 
 
+### m.2 cpu 内存速度
+
+![img](img/ubfBLQ.png)
+
+这是三星512nvme固态
+
+![img](img/ubhE6S.png)
+
 # 声卡
 
 ### 音频输入设备

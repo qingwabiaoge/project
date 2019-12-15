@@ -5,9 +5,6 @@ const app = new Koa()
 
 var fs = require("fs");
 
-console.log("程序执行完毕");
-
-
 app.use(logger((str, args) => {
   fs.appendFile('1.log', args, function (err) {
     if (err)

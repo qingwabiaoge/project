@@ -4,8 +4,8 @@ var router = new Router
 const app = new Koa()
 
 
-const token = true
-const routerMidware = (ctx, next) => {
+const token = false
+const autor = (ctx, next) => {
   if (token) {
     return next()
   } else {
@@ -18,10 +18,10 @@ const routerMidware = (ctx, next) => {
 }
 
 
-const nav = `<a href="/">index</a> <a href="/routerMidware">routerMidware</a><hr>`
+const nav = `<a href="/">index</a> <a href="/autor">autor</a><hr>`
 
 router.get('/', (ctx, next) => ctx.body = `${nav}index`)
-router.get('/autor', routerMidware, (ctx, next) => ctx.body = `${nav}routerMidware`)
+router.get('/autor', autor, (ctx, next) => ctx.body = `${nav}autor`)
 app.use(router.routes()).use(router.allowedMethods())
-app.listen(3004)
-console.log(3004)
+app.listen(3000)
+console.log(3000)
