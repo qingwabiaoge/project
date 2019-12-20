@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const { Schema } = mongoose
+const {Schema} = mongoose
 const schmema = new Schema({
   title: String,
-  top: { type: Boolean, default: false },
-  children: [{ type: Schema.Types.ObjectId, ref: 'Category' }]
+  top: {type: Boolean, default: false},
+  children: [{type: Schema.Types.ObjectId, ref: 'Category'}]
 })
 
 schmema.pre('find', function (next) {

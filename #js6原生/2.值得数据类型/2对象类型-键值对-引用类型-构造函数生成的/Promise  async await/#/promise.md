@@ -1,12 +1,4 @@
-# Promise的静态函数
-
-### Promise.rejec( )
-
-拒绝的原因
-
-```js
-  Promise.reject('renson');
-```
+# P
 
 # 返回promise实例的表达式
 
@@ -254,6 +246,24 @@ return new Promise((resolve,reject)=>{})
 
 ```
 
+# Promise的静态函数
+
+### Promise.reject( )
+
+```js
+Promise.reject('renson');
+//等价于
+new Promise((resolve,reject)=>{reject('renson')})
+```
+
+### Promise.resolve(1)
+
+```js
+Promise.resolve(1);
+//等价于
+new Promise((resolve,reject)=>{resolve(1)})
+```
+
 
 
 # Promise实例化对象
@@ -275,11 +285,10 @@ new Promise((resolve,reject)=>{.....})
 
 ##### 1异步队列,不影响执行主程序
 
-1. 返回异步的promise对象,
+-  返回异步的promise对象,
 
-
-2. 用.then().catch()或 async  fn( ){ await} 接收值
-3. 普通程序流不能接受promise对象,
+-  用.then().catch()或 async  fn( ){ await} 接收值
+- 普通程序流不能接受promise对象,
 
 ![](./img/1.png)
 

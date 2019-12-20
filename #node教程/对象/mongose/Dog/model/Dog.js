@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 /* ----------------新建Schema ,类似构造函数 ,this.name=name-------------------------------- */
-// 和vue的属性的配置类似
+
 const schema = new Schema({
   // required 不能为空
   name: { type: String, required: true },

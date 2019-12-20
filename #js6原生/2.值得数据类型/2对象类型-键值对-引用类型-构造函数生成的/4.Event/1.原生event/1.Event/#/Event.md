@@ -1,3 +1,7 @@
+
+
+
+
 # 三种方式可以为DOM元素注册事件的处理函数
 
 ```html
@@ -42,6 +46,8 @@ this===当前dom对象
 ![](img/image-20191209013500963.png)
 
 # 事件+触发
+
+### 关系
 
 | 事件       | 新建Envet实例(对象记录事件) | 为DOM元素注册事件处理函数     | 派发事件            |
 | ---------- | --------------------------- | ----------------------------- | ------------------- |
@@ -90,7 +96,7 @@ creatEvent-------initEvent--------dispatchEvent
 参数：eventType 共5种类型：
   Events ：包括所有的事件.
 
-```
+```js
      HTMLEvents：包括 'abort', 'blur', 'change', 'error', 'focus', 'load', 'reset', 'resize', 'scroll', 'select',
                   'submit', 'unload'. 事件
      UIEevents ：包括 'DOMActivate', 'DOMFocusIn', 'DOMFocusOut', 'keydown', 'keypress', 'keyup'.
@@ -101,12 +107,30 @@ creatEvent-------initEvent--------dispatchEvent
                    'DOMNodeRemovedFromDocument', 'DOMSubtreeModified'.
 ```
 
-```
+```js
  
   onload 事件会在页面或图像加载完成后立即发生
     支持onload事件的标签 <body>, <frame>, <frameset>, <iframe>, <img>, <link>, <script>
-    
+ 
+  window.onload = function () {
+  // 当页面加载完成执行
+  // 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
+}
 ```
+
+```js
+//## ==onunload==
+
+
+window.onunload = function () {
+  // 当用户退出页面时执行
+}
+
+
+
+```
+
+
 
 ##### 2.在createEvent后必须初始化，为大家介绍5种对应的初始化方法
 

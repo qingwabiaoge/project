@@ -23,6 +23,7 @@ const koaBodyMidware = koaBody({
 
 router
   .post('/request/', request)//可以接受一切类型数据
+  .post('/request-file/',koaBodyMidware, request)//可以接受一切类型数据
 
   .get('/request/', request)//koa的request对象
   .get('/request/:id', request)

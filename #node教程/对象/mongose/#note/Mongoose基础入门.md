@@ -2203,7 +2203,7 @@ temp.find(function(err,docs){
 
 例：夫妻
 
-```
+```js
 db.WifeAndHusband.insert([
    {
        name:"黄蓉",husband:{name:"郭靖"}
@@ -2229,7 +2229,7 @@ db.WifeAndHusband.find()
 
 比方每一个Person会有多个Address。此种情况下，我们採用最简单的嵌入式文档来建模。
 
-```
+```js
 {
   name: 'Kate Monster',
   id: '123-456-7890',

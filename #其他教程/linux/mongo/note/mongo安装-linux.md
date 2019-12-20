@@ -180,4 +180,10 @@ ERROR: child process failed, exited with error number 1
 
 这个错误原因是dbpath文件的权限问题,data和logs目录增加写权限即可，上面提到了。
 
- 
+4 .配置文件报错,提示config无效,是txt的编码问题转carset,再转utf-8,txt打开应该是不换行的样子
+
+```
+Error parsing INI config file: the options configuration file contains an invali
+d line '锘?
+```
+

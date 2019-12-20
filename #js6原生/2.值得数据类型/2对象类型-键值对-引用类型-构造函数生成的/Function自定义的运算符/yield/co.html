@@ -1,0 +1,40 @@
+<script src="https://cdn.bootcss.com/co/4.1.0/index.js"></script>
+<script>
+
+  co(function* () {
+    // 执行promise
+    var result = yield Promise.resolve(true);
+  }).catch(onerror);
+
+  co(function* () {
+    // 并行执行多个promise
+    var a = Promise.resolve(1);
+    var b = Promise.resolve(2);
+    var c = Promise.resolve(3);
+    var res = yield [a, b, c];
+    console.log(res);
+    // => [1, 2, 3]
+  }).catch(onerror);
+
+  // 错误捕捉
+  co(function* () {
+    try {
+      yield Promise.reject(new Error('boom'));
+    } catch (err) {
+      console.error(err.message); // "boom"
+    }
+  }).catch(onerror);
+
+  function onerror(err) {
+    console.error(err.stack);
+  }
+
+  // 将一个generator函数转换成返回一个promise函数的方法
+  var fn = co.wrap(function* (val) {
+    return yield Promise.resolve(val);
+  });
+
+  fn(true).then(function (val) {
+
+  });
+</script>

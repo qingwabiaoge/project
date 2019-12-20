@@ -59,8 +59,11 @@ module.exports = async (ctx, next) => {
   console.log(ctx.request.files)
 
 
+
   console.log('ctx.params---------')
+  console.log(ctx.request.params===ctx.params) //false
   console.log(ctx.params)
+
 
 
 }

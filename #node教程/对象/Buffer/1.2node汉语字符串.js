@@ -1,5 +1,5 @@
 const str = '您好，世界！'
-const buf = Buffer.from(str, 'utf-8');
+const buf = Buffer.from(str);
 
 // 输出 72756e6f6f62
 console.log(buf.toString('hex'));

@@ -3,7 +3,7 @@ const fs = require('fs')
 module.exports = async (ctx, next) => {
   // 上传单个文件
 
-
+console.log(ctx.request.files)
   // 获取上传文件
   const {file} = ctx.request.files
   // 创建可读流,读取浏览器端电脑上的文件路径

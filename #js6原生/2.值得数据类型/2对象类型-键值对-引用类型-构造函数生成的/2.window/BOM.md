@@ -4,22 +4,7 @@
 
 window对象：表示浏览器中打开的窗口。
 
-## ==onload==
 
-```
- window.onload = function () {
-  // 当页面加载完成执行
-  // 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
-}
-```
-
-## ==onunload==
-
-```
-window.onunload = function () {
-  // 当用户退出页面时执行
-}
-```
 
 ## ==onresize==
 

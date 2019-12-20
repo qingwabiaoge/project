@@ -18,9 +18,9 @@
 
 ```
 #数据库路径
-dbpath=D:\mongodb4.0.10\data
+dbpath=D:\mongodb\data
 #日志路径
-logpath=D:\mongodb4.0.10\log\mongo.log
+logpath=D:\mongodb\log\mongo.log
 #启用日志文件，默认也启用
 journal=true
 #日志模式为追加
@@ -35,6 +35,20 @@ port=27017
 
  
 
+```
+#bind_ip_all = true                 # 任何机器可以连接
+bind_ip = 127.0.0.1,192.168.0.3     # 本机和192.168.0.3可以访问
+port = 27017                        # 实例运行在27017端口（默认）
+dbpath = /usr/local/mongodb/db      # 数据文件夹存放地址（db要预先创建）
+logpath = /usr/local/mongodb/logs/27017.log  # 日志文件地址
+logappend = false                   # 启动时 添加还是重写日志文件
+fork = true                         # 是否后台运行
+auth = true                         # 开启校验用户
+
+```
+
+
+
 ### 3.安装mongo服务
 
 进入安装包的解压路径的bin目录下，bin目录为执行文件目录，内容如下
@@ -43,7 +57,7 @@ port=27017
 
  
 
- 打开cmd窗口，在bin目录下执行mongod --config "d:\mongodb4.0.10\mongo.conf"（其实可以不加双引号），执行结果如下
+ 打开cmd窗口，在bin目录下执行mongod --config "d:\mongodb\mongo.conf"（其实可以不加双引号），执行结果如下
 
 ![img](img/1491217-20190716105306081-1350666011.png)
 

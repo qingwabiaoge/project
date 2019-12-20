@@ -41,7 +41,8 @@
       }
 
     };
-    axios.post('http://localhost:3000/api/request', formdata, config).then((res) => {
+    //因为需要koa-body所以需要一个新路由
+    axios.post('http://localhost:3000/api/request-file', formdata, config).then((res) => {
 
       //做处理
 
