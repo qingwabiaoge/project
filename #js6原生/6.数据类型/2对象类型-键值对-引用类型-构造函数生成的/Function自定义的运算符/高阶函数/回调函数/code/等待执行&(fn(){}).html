@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function f(i, fn) {
+        setTimeout(() => {
+            console.log("等待我执行完后你再执行回调函数")
+            //回传
+            fn('开始执行:'+i)
+        }, 2000)
+    }
+
+    //传入
+    f(123, (i) => console.log(i))
+    console.log('主程序没有堵塞')
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+</head>
+<body>
+<span></span>
+<div id="App">
+  <li>1</li>
+  <li>2</li>
+  <a href="baidu">3</a>4
+</div><p>
+5
+</p>
+<script>
+  const el = document.getElementById('App')
+
+//列出下级节点 包含text和文档----------------------------------------------
+  console.log('el.parentNode', el.parentNode)
+
+  console.log('el.nextSibling',el.previousSibling)
+  console.log('el.nextSibling',el.nextSibling)
+
+  //列出下级的所有节点 包裹标签节点和文本节点(代码换行也算)  ie有兼容问题,-------------------------------
+  //判断是否有子节点
+  console.log('el.hasChildNodes', el.hasChildNodes())
+
+  console.log('el.childNodes', el.childNodes)
+  //第一个
+  console.log(' el.firstChild', el.firstChild);
+  //第二个
+  console.log('el.firstChild.nextSibling', el.firstChild.nextSibling)
+  //最后一个
+  console.log(' el.lastChild', el.lastChild);
+  //倒数第二个
+  console.log('el.lastChild.previousSibling', el.lastChild.previousSibling);
+
+
+  //列出下级标签节点----------------------------------------------------------------------------
+  console.log(el.children)
+
+
+  // 列出下级的li节点----------------------------------------------------------------------
+  console.log(el.querySelectorAll('li'))
+
+
+  //文本节点-------------------------------------------------------------------------------
+  console.log(el.querySelectorAll('li')[0].childNodes)
+
+</script>
+</body>
+</html>

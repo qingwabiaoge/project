@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+
+<body>
+
+
+<main>
+  <section id="app" onclick="go()" style="height: 310px">
+    <p>
+    </p>
+  </section>
+</main>
+<script>
+
+
+  function fn() {
+    var el
+    el = document.documentElement
+    // el = document.getElementById('app')
+    // el = document.body
+    //el = window
+
+
+    el.scrollTop = 200
+    //高度---------------------------xxxHeight-----------------------
+    //console.log('style.height:', el.style.height)
+
+    console.log('clientHeight', el.clientHeight)// 父区域视口高度   (包括滚动条槽),
+    console.log('scrollHeight', el.scrollHeight) //滚动区域的高度
+    console.log('offsetHeight', el.offsetHeight)//控件自身的高度css高度        (height+border)
+    //windows属性
+    console.log('win-innerHeight', el.innerHeight)
+    console.log('win-outerHeight', el.outerHeight)
+    console.log('-----------------------')
+
+
+    //高度---------------------------xxxWidth-----------------------
+    //console.log('style.width:', el.style.width)
+
+    console.log('clientWidth', el.clientWidth)
+    console.log('scrollWidth', el.scrollWidth)
+    console.log('offsetWidth', el.offsetWidth)
+
+    //windows属性
+    console.log('win-innerWidth', el.innerWidth)
+    console.log('win-outerWidth', el.outerWidth)
+    console.log('-----------------------')
+
+    //局部顶部的高度-----------------xxxTop------------------------------------------------------
+    console.log('clientTop', el.clientTop)//10 //控件的父区域(overflow)到上层区域的高度(就是边框)
+    console.log('offsetTop', el.offsetTop)//它返回当前元素相对于其 offsetParent 元素的顶部的距离。
+    console.log('el.scrollTop:', el.scrollTop)//控件顶端到垂直滚动条顶端的距离
+
+    //window属性
+    console.log('win-screenTop', screenTop)
+    console.log('-----------------------')
+
+    //局部顶部的高度--------------------------xxxLeft---------------------------------------------
+    console.log('clientLeft', el.clientLeft)//10
+    console.log('offsetLeft', el.offsetLeft)//50
+    console.log('el.scrollLeft:', el.scrollLeft)
+    //window属性
+    console.log('win-screenLeft', el.screenLeft)
+    console.log('-----------------------')
+  }
+
+  setTimeout(() => {
+    fn()
+  }, 10)
+</script>
+
+<style>
+
+  main {
+    width: 130%;
+    height: 2000px;
+  }
+
+  section {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    padding: 20px;
+    border: 10px solid gray;
+    overflow: scroll;
+  }
+
+  p {
+    height: 600px;
+    width: 600px;
+    background: red
+  }
+
+
+</style>
+
+</body>
+</html>
