@@ -6,11 +6,16 @@
 
 
 <script>
-  //module组件
-  Vue.component('module', {template: `<div class="module"><slot></slot></div>`})
-
   //ui组件
-  Vue.component('btn', {template: `<button class="ui"><slot></slot></button>`})
+  Vue.component('btn', {template: `<button class="ui"><slot></slot></button>`,created(){
+      console.log('module-creat')
+    }})
+  //module组件
+  Vue.component('module', {template: `<div class="module"><slot></slot></div>` ,created(){
+      console.log('btn-creat')
+    }})
+
+
 
   //布局组件
   const app = {
@@ -107,8 +112,17 @@
     border: 1px solid green
   }
 
+  .page2 .module {
+    border: 1px dashed green
+  }
+
+  .page3 .module {
+    border: 1px dotted green
+  }
+
+
   .ui {
-    background: black;
+    background: darkgrey;
   }
 
   .ui .active {

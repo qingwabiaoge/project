@@ -1,5 +1,13 @@
 <script>
+  const arr=Object.create(Array.prototype,{
+    "a":{value :1,congigurable :false,enumerable :true,writable:true},
+    "b":{value :2,congigurable :false,enumerable :true,writable:true},
+    "c":{value :3,congigurable :false,enumerable :true,writable:true}
+  })
+  console.log(arr)//Array.prototype
+  console.log(arr.a)//输出 1
+  console.log(arr.b)//输出 2
+  console.log(arr.c)//输出 3
 
-  const i=new Buffer(String).toString('base64');
-console.log(i)
+  console.log([1,2,3])
 </script>
