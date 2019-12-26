@@ -1,2 +1,2 @@
-const obj = require('./export[±æ÷ ].js')
+const obj = require('./export.js')
 console.log(obj)

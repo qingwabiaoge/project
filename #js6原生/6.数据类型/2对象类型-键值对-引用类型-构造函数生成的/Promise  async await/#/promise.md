@@ -146,7 +146,7 @@
 
 
 
-###  兼容回调  async和 promise的写法
+###  兼容 回调  async和 promise的写法
 
 ```html
  <script>
@@ -264,9 +264,7 @@ new Promise((resolve,reject)=>{resolve(1)})
 
 
 
-# Promise实例化对象
-
-### 实例的所有属性和方法(真实对象键值对)
+# Promise.ptototype
 
 ![1566963355851](img/1566963355851.png)
 
@@ -278,7 +276,7 @@ new Promise((resolve,reject)=>{.....})
                          .catch(err=>{})
 ```
 
-### promise实例对象的作用
+# promise实例对象的作用
 
 
 ##### 1异步队列,不影响执行主程序

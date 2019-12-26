@@ -1,5 +1,13 @@
+text.bat
+```
+node ./index.js
+control.exe ncpa.cpl
+```
+
 ### 访问
-本路径命令行输入`test`
+
+text.bat所在的路径命令行输入`test`
+
 ### 在任何路径访问
 本目录加入到系统变量path
 

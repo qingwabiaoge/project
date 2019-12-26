@@ -1,4 +1,4 @@
-# 新建正则对象化对象
+#  新建正则对象
 
 ## 构造函数新建对象
 
@@ -112,7 +112,7 @@ console.log(reg.exec(str)) //['lei']
   console.log(reg.exec(str)) //["lei", index: 16, input: "qinshilei↵qinshilei", groups: undefined]
 ```
 
-### 匹配次数
+### ?+*{}  匹配次数
 
 ##### ?
  runo? 可以匹配 run 或者 runo，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。**
@@ -163,39 +163,36 @@ console.log(reg.exec(str))
 ```
 
 
-### 分组 捕获 前后瞻
+### ( )
 
-##### 分组
-
-###### 多字符
-一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
-
-```
-/(ha){3}/
-/hahaha/
-
-```
-###### 或操作
-
-或操作（|）或操作
-
-```
-（a|b）匹配a或者b
-```
-
-##### 捕获和非捕获
-
-###### 捕获()
+##### ( )分组捕获
 
 -  对reg.test()的影响: 分组
 
--  对reg.exec()的影响: ( )捕获,并把( )捕获值,并把捕获值赋值到reg.exec('xxx')[1]
+   _多字符_
+
+   一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
    ```
+   /(ha){3}/
+   /hahaha/
+   ```
+
+   _或操作_
+
+   或操作（|）或操作
+
+   ```
+   （a|b）匹配a或者b
+   ```
+
+-  对reg.exec()的影响: 1.分组 2.捕获,并把捕获值赋值到reg.exec('xxx')[1]
+
+   ```js
    [0: "doubi is a doubi" 1: "doubi"]
    ```
 
-​               访问捕获的内容
+​           **访问捕获的内容**     
 
 1. reg.exec('xxx')[1]
 
@@ -204,7 +201,7 @@ console.log(reg.exec(str))
     const arr=reg.exec('doubi is a doubi')
     console.log(arr)// [0: "doubi is a doubi" 1: "doubi"]
 ```
-2. 可以通过RegExp.$1访问,
+2. 可以通过global变量RegExp.$1访问,
 
 ``` js
     console.log(RegExp.$1 )//doubi,记忆窍门:和$1===reg.exec('xxx')[1}
@@ -220,47 +217,41 @@ console.log(reg.exec(str))
 
 ```
 
-###### 非捕获(?:)
+##### (?:)分组不捕获
 
-- 对reg.test()的影响: 分组
+只起到分组的作用exec时不捕获了
 
-- 对reg.exec()的影响: 括号部分不捕获
+```js
 
-```
+  const reg = /kid is (?:doubi){2}/
+  const str='kid is doubidoubi'
 
-const reg = /kid is (?:doubi)*/
-const str='kid is  doubi'
-
-console.log(reg.test(str))// true
-console.log(reg.exec(str))// [0:kid is]
+  console.log(reg.test(str))// true
+  console.log(reg.exec(str))// [0:kid is doubidoubi]
 
 
 ```
 
-###### 非捕获前瞻(?=)  
+##### (?=)  分组不捕获前瞻
 
-- 对reg.test()的影响:可以用括号分组,往前看一下是否有相等的值,有则返回true
+1.分组2 .前瞻往前看一下是否有相等的值,有则返回true
 
-  ```js
-  //开头就前瞻
-  const reg = /^(?=haha)/
-  const str = "hahaha"
-  
-  console.log(reg.test(str))//true
-  ```
+```js
+//开头就前瞻
+const reg = /^(?=haha)/
+const str = "hahaha"
 
-- 对reg.exec()的影响:括号部分不捕获
+console.log(reg.test(str))//true
+```
 
-    ```
-    const reg = /kid is a (?=doubi)/
-    console.log(reg.exec('kid is a doubi'))// [0:kid is a] 
-    ```
+```js
+const reg = /kid is a (?=doubi)/
+console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组的第2个键值为空
+```
 
-######  非捕获前瞻否定(?!)  
+#####  (?!)  分组不捕获前瞻否定
 
-- 对reg.test()的影响: 往前看一下是否有不相等的值,有则返回true
-
-- 对reg.exec()的影响: 括号部分不捕获
+分组 往前看一下是否有不相等的值,有则返回true
 
 ```js
 
@@ -272,7 +263,7 @@ console.log(reg.exec(str))// [0:kid is]
     console.log(reg.exec('kid is a shabi'))// ['0':"kid is a"]
 ```
 
-######  非捕获后瞻 (?<=)
+#####   (?<=)分组不捕获后瞻
 
 ```js
  const reg = /(?<=doubi)\sme/
@@ -283,7 +274,7 @@ console.log(reg.exec(str))// [0:kid is]
   console.log(reg.exec('kid is a shabi me'))// null
 ```
 
-###### 非捕获后瞻否定(?<!)
+##### (?<!) 分组不捕获后瞻否定
 
 ```js
   const reg = /(?<!doubi)\sme/
@@ -304,6 +295,8 @@ console.log(reg.exec(str))// [0:kid is]
 
 ##### test exec
 
+test表示是否匹配 exec获得匹配的值
+
 reg.test(str),reg. exec(str)匹配第一个就结束
 
 ```javascript
@@ -316,7 +309,7 @@ const i = reg.test(str) //true
 const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
 ```
 
-reg.test(str),reg. exec(str) 正则加了全局修饰符
+reg_g.test(str), reg_g. exec(str) 
 
 ```js
   const reg = /[1-2]/g
@@ -340,7 +333,7 @@ reg.test判定为true, reg.exe(str)才不是undifined
 console.log(reg.hasOwnProperty('lastIndex'))//true
 console.log(Object.getOwnPropertyNames(reg))//["lastIndex"] 记录test exec匹配的字符串的最后一位的索引
 ```
-### numberable
+### ennumberable
 
 只包含一些用户自定义的key
 

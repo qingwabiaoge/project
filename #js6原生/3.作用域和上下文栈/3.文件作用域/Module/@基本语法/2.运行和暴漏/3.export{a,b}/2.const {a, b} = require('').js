@@ -1,2 +1,2 @@
-const {a, b} = require('./export[本质].js')
+const {a, b} = require('./export.js')
 console.log(a, b)

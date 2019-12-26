@@ -1,13 +1,7 @@
 <script>
-  const arr=Object.create(Array.prototype,{
-    "a":{value :1,congigurable :false,enumerable :true,writable:true},
-    "b":{value :2,congigurable :false,enumerable :true,writable:true},
-    "c":{value :3,congigurable :false,enumerable :true,writable:true}
-  })
-  console.log(arr)//Array.prototype
-  console.log(arr.a)//输出 1
-  console.log(arr.b)//输出 2
-  console.log(arr.c)//输出 3
 
-  console.log([1,2,3])
+  const reg = /kid is a (?=1doubi)/
+  console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组的第2个键值为空
+
+
 </script>

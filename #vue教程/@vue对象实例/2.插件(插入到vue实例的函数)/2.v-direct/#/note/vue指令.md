@@ -28,7 +28,35 @@
 ```
 # 实质
 
-是DOM函数的封装
+是DOM函数的封装,
+
+### 全局指令
+
+代码
+
+```
+vue.directive('model',function(){....})
+```
+
+原生实现
+
+```global.vModel=function(){ }```
+
+### 局部指令
+
+代码
+
+```
+
+```
+
+原生实现
+
+```
+function Cl(){
+const vModel=function(){ }
+}
+```
 
 # 系统指令
 
