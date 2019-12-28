@@ -443,3 +443,13 @@ set HOST
 
 363019417@139.com
 qingwabiaoge@qq.com
+
+# 系统文件夹路径
+
+### administer的
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+
+### 公共的
+
+HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders

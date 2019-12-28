@@ -1,0 +1,6 @@
+{
+  "name": "test2",
+  "bin": {
+    "test2": "bin/hello.js"
+  }
+}

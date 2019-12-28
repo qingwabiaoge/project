@@ -1,0 +1,17 @@
+### 全局安装
+```
+cnpm install -g --save-dev node-sass
+```
+
+### 命令
+批量sass跟文件夹生成
+
+```
+node-sass  ./sass -o ./css
+```
+
+监听sass目录改变生成css
+
+```
+node-sass -w ./sass -o ./css            //-w ,--watch 监听
+```

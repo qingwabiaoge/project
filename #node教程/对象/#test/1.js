@@ -1,4 +1,4 @@
-const fs=require('fs')
+ const fs=require('fs')
 const callback=require('../callback')
 /*fs.open('./cs/1.txt','a','777',function (err,fd) {
  const buf=new Buffer.from('一二三四五六七')

@@ -1,0 +1,38 @@
+div {
+  width: 50px;
+  width: 40px;
+  width: 30px;
+  width: 20px;
+  width: 10px;
+}
+.column-1 {
+  width: 25%;
+}
+.column-2 {
+  width: 50%;
+}
+.column-3 {
+  width: 75%;
+}
+.column-4 {
+  width: 100%;
+}
+ul li:nth-child(1) {
+  background: #ede8f8;
+}
+ul li:nth-child(2) {
+  background: #ffffff;
+}
+ul li:nth-child(3) {
+  background: #ffffff;
+}
+ul li:nth-child(4) {
+  background: #ffffff;
+}
+ul li:nth-child(5) {
+  background: #ffffff;
+}
+ul li:nth-child(6) {
+  background: #ffffff;
+}
+/*# sourceMappingURL=loop.css.map */

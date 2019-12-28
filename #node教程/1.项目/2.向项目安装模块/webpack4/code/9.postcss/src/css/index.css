@@ -1,0 +1,10 @@
+@import "./cssnext.css";
+@import "./postcss-url.css";
+
+
+/* usage */
+:--headings {
+  color: color(var(--heading-color) alpha(10%));
+  transform: rotateX(30deg);
+}
+

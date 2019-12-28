@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <ch>
+    默认插槽
+    <br>
+    <template v-slot:hasname>具名插槽</template>
+    <br>
+
+    <template v-slot:hasnamescope="scope">
+      <button>{{scope.xx}}</button>
+    </template>
+
+  </ch>
+  <ch>
+    <template v-slot="{xx}">
+      {{xx}}
+    </template>
+    <template v-slot:hasnamescope="{xx}">
+      <button>{{xx}}</button>
+    </template>
+  </ch>
+</div>
+<script>
+  var ch = {
+    template: `<div><slot :xx=" '默认作用域插槽'">....</slot>
+                        <slot name="hasname">.....</slot>
+                         <slot name="hasnamescope" :xx=" '具名作用域插槽'"></slot></div>`
+  }
+  const vm = new Vue({
+    el: '#app',
+    components: {ch},
+
+  })
+  console.log(vm)
+</script>
+</body>
+</html>

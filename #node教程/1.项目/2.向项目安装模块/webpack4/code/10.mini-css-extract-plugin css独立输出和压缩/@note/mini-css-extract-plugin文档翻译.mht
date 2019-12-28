@@ -1,0 +1,878 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://wangwl.net/static/pages/npm_minicssextractplugin.html#license
+Subject: mini-css-extract-plugin文档翻译
+Date: Thu, 29 Aug 2019 15:03:12 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--9zcKNqxyX2SelNS2TcQPxfTVLdlT6EqyJqC8LJ4pkI----"
+
+
+------MultipartBoundary--9zcKNqxyX2SelNS2TcQPxfTVLdlT6EqyJqC8LJ4pkI----
+Content-Type: text/html
+Content-ID: <frame-013D7A688D687C4642569341B3CA11CC@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wangwl.net/static/pages/npm_minicssextractplugin.html#license
+
+<!DOCTYPE html><html lang=3D"zh-CN"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><title>mini-css-extract-plugin=E6=
+=96=87=E6=A1=A3=E7=BF=BB=E8=AF=91</title><link rel=3D"icon" href=3D"http://=
+wangwl.net/favicon.ico" type=3D"image/x-icon"><link rel=3D"shortcut icon" h=
+ref=3D"http://wangwl.net/favicon.ico" type=3D"image/x-icon"><meta name=3D"f=
+ormat-detection" content=3D"telephone=3Dno"><meta name=3D"format-detection"=
+ content=3D"email=3Dno"><meta name=3D"msapplication-tap-highlight" content=
+=3D"no"><meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-sca=
+le=3D1,minimum-scale=3D1,maximum-scale=3D1,user-scalable=3Dno"><meta name=
+=3D"description" content=3D"mini-css-extract-plugin=E6=96=87=E6=A1=A3=E4=B8=
+=AD=E6=96=87=E7=BF=BB=E8=AF=91"><meta name=3D"keywords" content=3D"webpack,=
+minicssextractplugin,mini-css-extract-plugin =E6=95=99=E7=A8=8B,mini-css-ex=
+tract-plugin =E7=BF=BB=E8=AF=91,mini-css-extract-plugin =E4=B8=AD=E6=96=87,=
+mini-css-extract-plugin =E6=96=87=E6=A1=A3,css=E5=8E=8B=E7=BC=A9,mincss,wan=
+gweilin,wangwl,wwl,lxx"><link href=3D"http://wangwl.net/static/pages/templa=
+te/dd10e45d843c5b3d323a6842f611bcb5.css" rel=3D"stylesheet"><style>html, * =
+{-webkit-user-select:text!important; -moz-user-select:text!important;}</sty=
+le><style type=3D"text/css">
+button.btn[data-v-cef78672]{display:inline-block;font-weight:300;line-heigh=
+t:1.25;text-align:center;white-space:nowrap;vertical-align:middle;user-sele=
+ct:none;border:1px solid transparent;cursor:pointer;letter-spacing:1px;tran=
+sition:all .15s ease
+}
+button.btn.btn-sm[data-v-cef78672]{padding:.4rem .8rem;font-size:.8rem;bord=
+er-radius:.2rem
+}
+button.btn.btn-primary[data-v-cef78672]{color:#fff;background-color:#45C8F1=
+;border-color:#45C8F1
+}
+button.btn.btn-outline-primary[data-v-cef78672]{color:#45C8F1;background-co=
+lor:transparent;border-color:#45C8F1
+}
+button.btn.btn-danger[data-v-cef78672]{color:#fff;background-color:#FF4949;=
+border-color:#FF4949
+}
+.text-muted[data-v-cef78672]{color:#8492A6
+}
+.text-center[data-v-cef78672]{text-align:center
+}
+.drop-down-enter[data-v-cef78672],.drop-down-leave-to[data-v-cef78672]{tran=
+sform:translateX(0) translateY(-20px);transition-timing-function:cubic-bezi=
+er(0.74, 0.04, 0.26, 1.05);opacity:0
+}
+.drop-down-enter-active[data-v-cef78672],.drop-down-leave-active[data-v-cef=
+78672]{transition:all .15s
+}
+.move-left-enter[data-v-cef78672],.move-left-leave-to[data-v-cef78672]{tran=
+sform:translateY(0) translateX(-80px);transition-timing-function:cubic-bezi=
+er(0.74, 0.04, 0.26, 1.05);opacity:0
+}
+.move-left-enter-active[data-v-cef78672],.move-left-leave-active[data-v-cef=
+78672]{transition:all .15s
+}
+.shake[data-v-cef78672]{animation:shake-data-v-cef78672 0.82s cubic-bezier(=
+0.36, 0.07, 0.19, 0.97) both;transform:translate3d(0, 0, 0)
+}
+@keyframes shake-data-v-cef78672{
+10%,90%{transform:translate3d(-1px, 0, 0)
+}
+20%,80%{transform:translate3d(2px, 0, 0)
+}
+30%,50%,70%{transform:translate3d(-4px, 0, 0)
+}
+40%,60%{transform:translate3d(4px, 0, 0)
+}
+}
+.pulse[data-v-cef78672]{animation:pulse-data-v-cef78672 2s ease infinite
+}
+@keyframes pulse-data-v-cef78672{
+0%{opacity:.7
+}
+50%{opacity:.4
+}
+100%{opacity:.7
+}
+}
+.flash-once[data-v-cef78672]{animation:flash-once 3.5s ease 1
+}
+@keyframes fade-up-data-v-cef78672{
+0%{transform:translate3d(0, 10px, 0);opacity:0
+}
+100%{transform:translate3d(0, 0, 0);opacity:1
+}
+}
+.fade-in[data-v-cef78672]{animation:fade-in-data-v-cef78672 .3s ease-in-out
+}
+@keyframes fade-in-data-v-cef78672{
+0%{opacity:0
+}
+100%{opacity:1
+}
+}
+.spin[data-v-cef78672]{animation-name:spin-data-v-cef78672;animation-durati=
+on:2000ms;animation-iteration-count:infinite;animation-timing-function:line=
+ar
+}
+@keyframes spin-data-v-cef78672{
+from{transform:rotate(0deg)
+}
+to{transform:rotate(360deg)
+}
+}
+.bounceIn[data-v-cef78672]{animation-name:bounceIn-data-v-cef78672;transfor=
+m-origin:center bottom;animation-duration:1s;animation-fill-mode:both;anima=
+tion-iteration-count:1
+}
+@keyframes bounceIn-data-v-cef78672{
+0%,20%,40%,60%,80%,100%{-webkit-transition-timing-function:cubic-bezier(0.2=
+15, 0.61, 0.355, 1);transition-timing-function:cubic-bezier(0.215, 0.61, 0.=
+355, 1)
+}
+0%{opacity:1;-webkit-transform:scale3d(0.8, 0.8, 0.8);transform:scale3d(0.8=
+, 0.8, 0.8)
+}
+20%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.=
+1)
+}
+40%{-webkit-transform:scale3d(0.9, 0.9, 0.9);transform:scale3d(0.9, 0.9, 0.=
+9)
+}
+60%{opacity:1;-webkit-transform:scale3d(1.03, 1.03, 1.03);transform:scale3d=
+(1.03, 1.03, 1.03)
+}
+80%{-webkit-transform:scale3d(0.97, 0.97, 0.97);transform:scale3d(0.97, 0.9=
+7, 0.97)
+}
+100%{opacity:1;-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1=
+)
+}
+}
+@keyframes dots-data-v-cef78672{
+0%,20%{color:rgba(0,0,0,0);text-shadow:0.25em 0 0 rgba(0,0,0,0),0.5em 0 0 r=
+gba(0,0,0,0)
+}
+40%{color:#8492A6;text-shadow:0.25em 0 0 rgba(0,0,0,0),0.5em 0 0 rgba(0,0,0=
+,0)
+}
+60%{text-shadow:0.25em 0 0 #8492A6,0.5em 0 0 rgba(0,0,0,0)
+}
+80%,100%{text-shadow:.25em 0 0 #8492A6, .5em 0 0 #8492A6
+}
+}
+@keyframes recording-data-v-cef78672{
+0%{box-shadow:0px 0px 5px 0px rgba(173,0,0,0.3)
+}
+65%{box-shadow:0px 0px 5px 5px rgba(173,0,0,0.3)
+}
+90%{box-shadow:0px 0px 5px 5px rgba(173,0,0,0)
+}
+}
+html[data-v-cef78672]{max-height:500px
+}
+body[data-v-cef78672]{margin:0;font-size:100%;color:#3C4858;width:350px;max=
+-height:500px
+}
+a[data-v-cef78672]{text-decoration:none;color:#45C8F1
+}
+h1[data-v-cef78672],h2[data-v-cef78672],h3[data-v-cef78672],h4[data-v-cef78=
+672]{margin-top:0
+}
+.container_selected_area[data-v-cef78672]{padding:0px;position:fixed;z-inde=
+x:1000000;top:0px;left:0px;right:0px;bottom:0px;display:none;visibility:hid=
+den
+}
+.container_selected_area.active[data-v-cef78672]{visibility:visible;display=
+:block
+}
+.container_selected_area .label[data-v-cef78672]{font-family:"Didact Gothic=
+ Regular",sans-serif;font-size:22px;text-align:center;padding-top:15px
+}
+.container_selected_area .area[data-v-cef78672]{border:1px solid #1e83ff;ba=
+ckground:rgba(30,131,255,0.1);display:none;position:fixed;z-index:1000000;b=
+ox-sizing:border-box
+}
+.container_selected_area .area.active[data-v-cef78672]{display:block;top:0p=
+x;left:0px
+}
+.hide[data-v-cef78672]{display:none
+}
+</style></head><body class=3D"tocShow isPc"><nav class=3D"pageNav"><span cl=
+ass=3D"miniHeader show" id=3D"miniHeader">mini-css-extract-plugin=E6=96=87=
+=E6=A1=A3=E7=BF=BB=E8=AF=91</span></nav><div class=3D"rightLink"><a href=3D=
+"http://wangwl.net/" target=3D"_self" class=3D"rightLinkHome">=E9=A6=96=E9=
+=A1=B5</a></div><button class=3D"btnToc" id=3D"toggleToc"><span class=3D"ic=
+onBar"><span class=3D"iconBarItem iconBarTop"></span> <span class=3D"iconBa=
+rItem iconBarMid"></span> <span class=3D"iconBarItem iconBarMid"></span> <s=
+pan class=3D"iconBarItem iconBarBot"></span> </span><span class=3D"btnTocLa=
+bel">=E7=9B=AE=E5=BD=95</span></button><aside class=3D"pageToc" id=3D"toc">=
+<div class=3D"tocBg" id=3D"tocBg"></div><main class=3D"tocMain" id=3D"tocMa=
+in"><ul><li class=3D""><a href=3D"http://wangwl.net/static/pages/npm_minics=
+sextractplugin.html#%E5%AE%89%E8%A3%85">1 =E5=AE=89=E8=A3=85</a></li><li><a=
+ href=3D"http://wangwl.net/static/pages/npm_minicssextractplugin.html#%E4%B=
+D%BF%E7%94%A8">2 =E4=BD=BF=E7=94=A8</a><ul><li><a href=3D"http://wangwl.net=
+/static/pages/npm_minicssextractplugin.html#%E9%85%8D%E7%BD%AE">2.1 =E9=85=
+=8D=E7=BD=AE</a><ul><li><a href=3D"http://wangwl.net/static/pages/npm_minic=
+ssextractplugin.html#%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B=
+">2.1.1 =E7=AE=80=E5=8D=95=E9=85=8D=E7=BD=AE=E7=A4=BA=E4=BE=8B</a></li><li>=
+<a href=3D"http://wangwl.net/static/pages/npm_minicssextractplugin.html#%E9=
+%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B">2.1.2 =E9=AB=98=E7=BA=
+=A7=E9=85=8D=E7=BD=AE=E7=A4=BA=E4=BE=8B</a></li></ul></li><li class=3D""><a=
+ href=3D"http://wangwl.net/static/pages/npm_minicssextractplugin.html#%E5%8=
+E%8B%E7%BC%A9">2.2 =E5=8E=8B=E7=BC=A9</a></li><li><a href=3D"http://wangwl.=
+net/static/pages/npm_minicssextractplugin.html#features">2.3 Features</a><u=
+l><li><a href=3D"http://wangwl.net/static/pages/npm_minicssextractplugin.ht=
+ml#using-preloaded-or-inlined-css">2.3.1 Using preloaded or inlined CSS</a>=
+</li><li><a href=3D"http://wangwl.net/static/pages/npm_minicssextractplugin=
+.html#extracting-all-css-in-a-single-file">2.3.2 Extracting all CSS in a si=
+ngle file</a></li><li><a href=3D"http://wangwl.net/static/pages/npm_minicss=
+extractplugin.html#extracting-css-based-on-entry">2.3.3 Extracting CSS base=
+d on entry</a></li></ul></li></ul></li><li class=3D"active"><a href=3D"http=
+://wangwl.net/static/pages/npm_minicssextractplugin.html#maintainers">3 Mai=
+ntainers</a><ul><li><a href=3D"http://wangwl.net/static/pages/npm_minicssex=
+tractplugin.html#long-term-caching">3.1 Long Term Caching</a></li></ul></li=
+><li><a href=3D"http://wangwl.net/static/pages/npm_minicssextractplugin.htm=
+l#license">4 License</a></li></ul></main></aside><main class=3D"pageArticle=
+ content"><header class=3D"articleHeader" id=3D"pageHeader"><h1>mini-css-ex=
+tract-plugin=E6=96=87=E6=A1=A3=E7=BF=BB=E8=AF=91</h1><div class=3D"articleI=
+nfo"><span class=3D"articleDate">2018.7.9</span> | <span class=3D"articleTa=
+g">javascript=E3=80=81webpack</span></div></header><main class=3D"articleMa=
+in" id=3D"article"><p>=E8=AF=A5=E6=8F=92=E4=BB=B6=E7=94=A8=E4=BA=8E=E5=B0=
+=86css=E6=8F=90=E5=8F=96=E5=88=B0=E5=8D=95=E7=8B=AC=E7=9A=84=E6=96=87=E4=BB=
+=B6=E3=80=82=E4=B8=BA=E6=AF=8F=E4=B8=AA=E5=8C=85=E5=90=ABcss=E7=9A=84JS=E6=
+=96=87=E4=BB=B6=E5=88=9B=E5=BB=BA=E4=B8=80=E4=B8=AAcss=E6=96=87=E4=BB=B6=E3=
+=80=82=E6=94=AF=E6=8C=81css=E6=8C=89=E9=9C=80=E5=8A=A0=E8=BD=BD=E3=80=82</p=
+><p>=E6=94=AF=E6=8C=81webpack4.</p><p>=E5=AF=B9=E6=AF=94extract-text-webpac=
+k-plugin:</p><ul><li>Async loading</li><li>No duplicate compilation (perfor=
+mance)</li><li>Easier to use</li><li>Specific to CSS</li></ul><p>TODO:</p><=
+ul><li>HMR support</li></ul><h1 id=3D"=E5=AE=89=E8=A3=85">=E5=AE=89=E8=A3=
+=85</h1><p><code>npm install --save-dev mini-css-extract-plugin</code></p><=
+h1 id=3D"=E4=BD=BF=E7=94=A8">=E4=BD=BF=E7=94=A8</h1><h2 id=3D"=E9=85=8D=E7=
+=BD=AE">=E9=85=8D=E7=BD=AE</h2><h3 id=3D"=E7=AE=80=E5=8D=95=E9=85=8D=E7=BD=
+=AE=E7=A4=BA=E4=BE=8B">=E7=AE=80=E5=8D=95=E9=85=8D=E7=BD=AE=E7=A4=BA=E4=BE=
+=8B</h3><pre><code class=3D"javascript language-javascript hljs"><span clas=
+s=3D"hljs-keyword">const</span> MiniCssExtractPlugin =3D <span class=3D"hlj=
+s-built_in">require</span>(<span class=3D"hljs-string">"mini-css-extract-pl=
+ugin"</span>);
+<span class=3D"hljs-built_in">module</span>.exports =3D {
+  <span class=3D"hljs-attr">plugins</span>: [
+    <span class=3D"hljs-keyword">new</span> MiniCssExtractPlugin({
+      <span class=3D"hljs-comment">// Options similar to the same options i=
+n webpackOptions.output</span>
+      <span class=3D"hljs-comment">// both options are optional</span>
+      filename: <span class=3D"hljs-string">"[name].css"</span>,
+      <span class=3D"hljs-attr">chunkFilename</span>: <span class=3D"hljs-s=
+tring">"[id].css"</span>
+    })
+  ],
+  <span class=3D"hljs-attr">module</span>: {
+    <span class=3D"hljs-attr">rules</span>: [
+      {
+        <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-regexp">=
+/\.css$/</span>,
+        <span class=3D"hljs-attr">use</span>: [
+          {
+            <span class=3D"hljs-attr">loader</span>: MiniCssExtractPlugin.l=
+oader,
+            <span class=3D"hljs-attr">options</span>: {
+              <span class=3D"hljs-comment">// you can specify a publicPath =
+here</span>
+              <span class=3D"hljs-comment">// by default it use publicPath =
+in webpackOptions.output</span>
+              publicPath: <span class=3D"hljs-string">'../'</span>
+            }
+          },
+          <span class=3D"hljs-string">"css-loader"</span>
+        ]
+      }
+    ]
+  }
+}</code></pre><h3 id=3D"=E9=AB=98=E7=BA=A7=E9=85=8D=E7=BD=AE=E7=A4=BA=E4=BE=
+=8B">=E9=AB=98=E7=BA=A7=E9=85=8D=E7=BD=AE=E7=A4=BA=E4=BE=8B</h3><p>=E8=AF=
+=A5=E6=8F=92=E4=BB=B6=E5=BA=94=E5=BD=93=E4=BB=85=E7=94=A8=E4=BA=8E<code>pro=
+duction</code>=E6=A8=A1=E5=BC=8F=E4=B8=8B=EF=BC=8C=E4=B8=94=E5=92=8C<code>s=
+tyle-loader</code>=E4=B8=8D=E8=83=BD=E5=9C=A8=E4=B8=80=E4=B8=AALoader=E9=93=
+=BE=E4=B8=8A=E5=85=B1=E5=AD=98=E3=80=82=E5=B0=A4=E5=85=B6=E6=98=AF=E5=BD=93=
+=E4=BD=A0=E6=83=B3=E8=A6=81=E5=9C=A8<code>development</code>=E4=B8=8B=E4=BD=
+=BF=E7=94=A8HMR=E3=80=82</p><p>=E4=BB=A5=E4=B8=8B=E9=85=8D=E7=BD=AE=E7=A4=
+=BA=E4=BE=8B=E5=B1=95=E7=A4=BA=E4=BA=86=E5=9C=A8<code>development</code>=E4=
+=B8=8B=E6=94=AF=E6=8C=81HMR=E5=8F=8A=E5=9C=A8<code>production</code>=E4=B8=
+=8B=E6=8F=90=E5=89=8D=E6=A0=B7=E5=BC=8F=E5=88=B0=E5=8D=95=E7=8B=AC=E7=9A=84=
+=E6=96=87=E4=BB=B6=E3=80=82</p><p>(=E4=B8=BA=E7=A4=BA=E4=BE=8B=E6=B8=85=E6=
+=99=B0=EF=BC=8C=E7=9C=81=E5=8E=BB=E4=BA=86loader=E7=9A=84options=E5=8F=82=
+=E6=95=B0)</p><pre><code class=3D"javascript language-javascript hljs"><spa=
+n class=3D"hljs-keyword">const</span> MiniCssExtractPlugin =3D <span class=
+=3D"hljs-built_in">require</span>(<span class=3D"hljs-string">"mini-css-ext=
+ract-plugin"</span>);
+<span class=3D"hljs-keyword">const</span> devMode =3D process.env.NODE_ENV =
+!=3D=3D <span class=3D"hljs-string">'production'</span>
+
+<span class=3D"hljs-built_in">module</span>.exports =3D {
+  <span class=3D"hljs-attr">plugins</span>: [
+    <span class=3D"hljs-keyword">new</span> MiniCssExtractPlugin({
+      <span class=3D"hljs-comment">// Options similar to the same options i=
+n webpackOptions.output</span>
+      <span class=3D"hljs-comment">// both options are optional</span>
+      filename: devMode ? <span class=3D"hljs-string">'[name].css'</span> :=
+ <span class=3D"hljs-string">'[name].[hash].css'</span>,
+      <span class=3D"hljs-attr">chunkFilename</span>: devMode ? <span class=
+=3D"hljs-string">'[id].css'</span> : <span class=3D"hljs-string">'[id].[has=
+h].css'</span>,
+    })
+  ],
+  <span class=3D"hljs-attr">module</span>: {
+    <span class=3D"hljs-attr">rules</span>: [
+      {
+        <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-regexp">=
+/\.(sa|sc|c)ss$/</span>,
+        <span class=3D"hljs-attr">use</span>: [
+          devMode ? <span class=3D"hljs-string">'style-loader'</span> : Min=
+iCssExtractPlugin.loader,
+          <span class=3D"hljs-string">'css-loader'</span>,
+          <span class=3D"hljs-string">'postcss-loader'</span>,
+          <span class=3D"hljs-string">'sass-loader'</span>,
+        ],
+      }
+    ]
+  }
+}</code></pre><h2 id=3D"=E5=8E=8B=E7=BC=A9">=E5=8E=8B=E7=BC=A9</h2><p>=E5=
+=9C=A8webpack5=E5=BE=88=E5=8F=AF=E8=83=BD=E4=BC=9A=E5=86=85=E7=BD=AEcss=E5=
+=8E=8B=E7=BC=A9=EF=BC=8C=E7=9B=AE=E5=89=8D=E5=9C=A8webpack4=E8=BF=98=E9=9C=
+=80=E8=A6=81=E6=89=8B=E5=8A=A8=E9=85=8D=E7=BD=AE=E3=80=82=E4=B8=BA=E4=BA=86=
+=E5=8E=8B=E7=BC=A9=E8=BE=93=E5=87=BA=EF=BC=8C=E5=8F=AF=E4=BD=BF=E7=94=A8<a =
+href=3D"https://github.com/NMFR/optimize-css-assets-webpack-plugin" target=
+=3D"_blank">optimize-css-assets-webpack-plugin</a>=E6=8F=92=E4=BB=B6=E3=80=
+=82</p><p>=E9=BB=98=E8=AE=A4=E5=8F=AA=E5=8E=8B=E7=BC=A9js=EF=BC=8C=E6=89=80=
+=E4=BB=A5=E9=80=9A=E8=BF=87=E8=AE=BE=E7=BD=AE<code>optimization.minimizer</=
+code>=E8=A6=86=E7=9B=96=E9=BB=98=E8=AE=A4=E7=9A=84=E5=8E=8B=E7=BC=A9=E9=85=
+=8D=E7=BD=AE=EF=BC=8C=E5=90=8C=E6=97=B6=E5=BA=94=E7=A1=AE=E4=BF=9D=E6=8C=87=
+=E5=AE=9A=E4=BA=86=E4=B8=80=E4=B8=AAJS=E7=9A=84=E5=8E=8B=E7=BC=A9=E9=85=8D=
+=E7=BD=AE=E3=80=82</p><pre><code class=3D"javascript language-javascript hl=
+js"><span class=3D"hljs-keyword">const</span> UglifyJsPlugin =3D <span clas=
+s=3D"hljs-built_in">require</span>(<span class=3D"hljs-string">"uglifyjs-we=
+bpack-plugin"</span>);
+<span class=3D"hljs-keyword">const</span> MiniCssExtractPlugin =3D <span cl=
+ass=3D"hljs-built_in">require</span>(<span class=3D"hljs-string">"mini-css-=
+extract-plugin"</span>);
+<span class=3D"hljs-keyword">const</span> OptimizeCSSAssetsPlugin =3D <span=
+ class=3D"hljs-built_in">require</span>(<span class=3D"hljs-string">"optimi=
+ze-css-assets-webpack-plugin"</span>);
+<span class=3D"hljs-built_in">module</span>.exports =3D {
+  <span class=3D"hljs-attr">optimization</span>: {
+    <span class=3D"hljs-attr">minimizer</span>: [
+      <span class=3D"hljs-keyword">new</span> UglifyJsPlugin({
+        <span class=3D"hljs-attr">cache</span>: <span class=3D"hljs-literal=
+">true</span>,
+        <span class=3D"hljs-attr">parallel</span>: <span class=3D"hljs-lite=
+ral">true</span>,
+        <span class=3D"hljs-attr">sourceMap</span>: <span class=3D"hljs-lit=
+eral">true</span> <span class=3D"hljs-comment">// set to true if you want J=
+S source maps</span>
+      }),
+      <span class=3D"hljs-keyword">new</span> OptimizeCSSAssetsPlugin({})
+    ]
+  },
+  <span class=3D"hljs-attr">plugins</span>: [
+    <span class=3D"hljs-keyword">new</span> MiniCssExtractPlugin({
+      <span class=3D"hljs-attr">filename</span>: <span class=3D"hljs-string=
+">"[name].css"</span>,
+      <span class=3D"hljs-attr">chunkFilename</span>: <span class=3D"hljs-s=
+tring">"[id].css"</span>
+    })
+  ],
+  <span class=3D"hljs-attr">module</span>: {
+    <span class=3D"hljs-attr">rules</span>: [
+      {
+        <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-regexp">=
+/\.css$/</span>,
+        <span class=3D"hljs-attr">use</span>: [
+          MiniCssExtractPlugin.loader,
+          <span class=3D"hljs-string">"css-loader"</span>
+        ]
+      }
+    ]
+  }
+}</code></pre><h2 id=3D"features">Features</h2><h3 id=3D"using-preloaded-or=
+-inlined-css">Using preloaded or inlined CSS</h3><p>The runtime code detect=
+s already added CSS via &lt;link&gt; or &lt;style&gt; tag. This can be usef=
+ul when injecting CSS on server-side for Server-Side-Rendering. The href of=
+ the &lt;link&gt; tag has to match the URL that will be used for loading th=
+e CSS chunk. The data-href attribute can be used for &lt;link&gt; and &lt;s=
+tyle&gt; too. When inlining CSS data-href must be used.</p><h3 id=3D"extrac=
+ting-all-css-in-a-single-file">Extracting all CSS in a single file</h3><p>=
+=E7=B1=BB=E4=BC=BC<a href=3D"https://github.com/webpack-contrib/extract-tex=
+t-webpack-plugin" target=3D"_blank">extract-text-webpack-plugin</a>=EF=BC=
+=8C=E9=80=9A=E8=BF=87<code>optimization.splitChunks.cacheGroups</code>=E5=
+=8F=AF=E4=BB=A5=E5=B0=86css=E6=8F=90=E5=8F=96=E5=88=B0=E4=B8=80=E4=B8=AA=E6=
+=96=87=E4=BB=B6=E4=B8=AD=E3=80=82</p><pre><code class=3D"javascript languag=
+e-javascript hljs"><span class=3D"hljs-keyword">const</span> MiniCssExtract=
+Plugin =3D <span class=3D"hljs-built_in">require</span>(<span class=3D"hljs=
+-string">"mini-css-extract-plugin"</span>);
+<span class=3D"hljs-built_in">module</span>.exports =3D {
+  <span class=3D"hljs-attr">optimization</span>: {
+    <span class=3D"hljs-attr">splitChunks</span>: {
+      <span class=3D"hljs-attr">cacheGroups</span>: {
+        <span class=3D"hljs-attr">styles</span>: {
+          <span class=3D"hljs-attr">name</span>: <span class=3D"hljs-string=
+">'styles'</span>,
+          <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-regexp=
+">/\.css$/</span>,
+          <span class=3D"hljs-attr">chunks</span>: <span class=3D"hljs-stri=
+ng">'all'</span>,
+          <span class=3D"hljs-attr">enforce</span>: <span class=3D"hljs-lit=
+eral">true</span>
+        }
+      }
+    }
+  },
+  <span class=3D"hljs-attr">plugins</span>: [
+    <span class=3D"hljs-keyword">new</span> MiniCssExtractPlugin({
+      <span class=3D"hljs-attr">filename</span>: <span class=3D"hljs-string=
+">"[name].css"</span>,
+    })
+  ],
+  <span class=3D"hljs-attr">module</span>: {
+    <span class=3D"hljs-attr">rules</span>: [
+      {
+        <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-regexp">=
+/\.css$/</span>,
+        <span class=3D"hljs-attr">use</span>: [
+          MiniCssExtractPlugin.loader,
+          <span class=3D"hljs-string">"css-loader"</span>
+        ]
+      }
+    ]
+  }
+}</code></pre><h3 id=3D"extracting-css-based-on-entry">Extracting CSS based=
+ on entry</h3><p>=E5=8F=AF=E4=BB=A5=E6=A0=B9=E6=8D=AE<code>entry name</code=
+>=E6=8F=90=E5=8F=96css=E3=80=82=E4=BE=8B=E5=A6=82=E5=BD=93=E5=8A=A8=E6=80=
+=81=E6=A0=B9=E6=8D=AE=E8=B7=AF=E7=94=B1import=E7=9B=B8=E5=85=B3=E4=BB=A3=E7=
+=A0=81=E7=9A=84=E6=97=B6=E3=80=82=E5=B9=B6=E4=B8=94=E4=B9=9F=E9=98=B2=E6=AD=
+=A2=E4=BA=86ExtractTextPlugin=E4=B8=AD=E7=9A=84css=E9=87=8D=E5=A4=8D=E7=9A=
+=84=E9=97=AE=E9=A2=98=E3=80=82</p><pre><code class=3D"javascript language-j=
+avascript hljs"><span class=3D"hljs-keyword">const</span> path =3D <span cl=
+ass=3D"hljs-built_in">require</span>(<span class=3D"hljs-string">'path'</sp=
+an>);
+<span class=3D"hljs-keyword">const</span> MiniCssExtractPlugin =3D <span cl=
+ass=3D"hljs-built_in">require</span>(<span class=3D"hljs-string">"mini-css-=
+extract-plugin"</span>);
+
+<span class=3D"hljs-function"><span class=3D"hljs-keyword">function</span> =
+<span class=3D"hljs-title">recursiveIssuer</span>(<span class=3D"hljs-param=
+s">m</span>) </span>{
+  <span class=3D"hljs-keyword">if</span> (m.issuer) {
+    <span class=3D"hljs-keyword">return</span> recursiveIssuer(m.issuer);
+  } <span class=3D"hljs-keyword">else</span> <span class=3D"hljs-keyword">i=
+f</span> (m.name) {
+    <span class=3D"hljs-keyword">return</span> m.name;
+  } <span class=3D"hljs-keyword">else</span> {
+    <span class=3D"hljs-keyword">return</span> <span class=3D"hljs-literal"=
+>false</span>;
+  }
+}
+
+<span class=3D"hljs-built_in">module</span>.exports =3D {
+  <span class=3D"hljs-attr">entry</span>: {
+    <span class=3D"hljs-attr">foo</span>: path.resolve(__dirname, <span cla=
+ss=3D"hljs-string">'src/foo'</span>),
+    <span class=3D"hljs-attr">bar</span>: path.resolve(__dirname, <span cla=
+ss=3D"hljs-string">'src/bar'</span>)
+  },
+  <span class=3D"hljs-attr">optimization</span>: {
+    <span class=3D"hljs-attr">splitChunks</span>: {
+      <span class=3D"hljs-attr">cacheGroups</span>: {
+        <span class=3D"hljs-attr">fooStyles</span>: {
+          <span class=3D"hljs-attr">name</span>: <span class=3D"hljs-string=
+">'foo'</span>,
+          <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-functi=
+on">(<span class=3D"hljs-params">m,c,entry =3D <span class=3D"hljs-string">=
+'foo'</span></span>) =3D&gt;</span> m.constructor.name =3D=3D=3D <span clas=
+s=3D"hljs-string">'CssModule'</span> &amp;&amp; recursiveIssuer(m) =3D=3D=
+=3D entry,
+          <span class=3D"hljs-attr">chunks</span>: <span class=3D"hljs-stri=
+ng">'all'</span>,
+          <span class=3D"hljs-attr">enforce</span>: <span class=3D"hljs-lit=
+eral">true</span>
+        },
+        <span class=3D"hljs-attr">barStyles</span>: {
+          <span class=3D"hljs-attr">name</span>: <span class=3D"hljs-string=
+">'bar'</span>,
+          <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-functi=
+on">(<span class=3D"hljs-params">m,c,entry =3D <span class=3D"hljs-string">=
+'bar'</span></span>) =3D&gt;</span> m.constructor.name =3D=3D=3D <span clas=
+s=3D"hljs-string">'CssModule'</span> &amp;&amp; recursiveIssuer(m) =3D=3D=
+=3D entry,
+          <span class=3D"hljs-attr">chunks</span>: <span class=3D"hljs-stri=
+ng">'all'</span>,
+          <span class=3D"hljs-attr">enforce</span>: <span class=3D"hljs-lit=
+eral">true</span>
+        }
+      }
+    }
+  },
+  <span class=3D"hljs-attr">plugins</span>: [
+    <span class=3D"hljs-keyword">new</span> MiniCssExtractPlugin({
+      <span class=3D"hljs-attr">filename</span>: <span class=3D"hljs-string=
+">"[name].css"</span>,
+    })
+  ],
+  <span class=3D"hljs-attr">module</span>: {
+    <span class=3D"hljs-attr">rules</span>: [
+      {
+        <span class=3D"hljs-attr">test</span>: <span class=3D"hljs-regexp">=
+/\.css$/</span>,
+        <span class=3D"hljs-attr">use</span>: [
+          MiniCssExtractPlugin.loader,
+          <span class=3D"hljs-string">"css-loader"</span>
+        ]
+      }
+    ]
+  }
+}</code></pre><h1 id=3D"maintainers">Maintainers</h1><p><a href=3D"https://=
+github.com/sokra" target=3D"_blank">Tobias Koppers</a></p><h2 id=3D"long-te=
+rm-caching">Long Term Caching</h2><p>=E5=AF=B9=E4=BA=8E=E9=95=BF=E6=9C=9F=
+=E7=BC=93=E5=AD=98=EF=BC=8Cfilename=E5=8F=82=E6=95=B0=E4=BD=BF=E7=94=A8=EF=
+=BC=9A"[contenthash].css". [name]=E6=A0=87=E8=AF=86=E5=8F=AF=E9=80=89=E3=80=
+=82</p><h1 id=3D"license">License</h1><p><a href=3D"https://github.com/webp=
+ack-contrib/mini-css-extract-plugin/blob/master/LICENSE" target=3D"_blank">=
+MIT</a></p></main></main><footer><div class=3D"content"><h1>=E7=95=99=E8=A8=
+=80</h1><p>=E6=8A=B1=E6=AD=89=EF=BC=8C=E7=95=99=E8=A8=80=E5=8A=9F=E8=83=BD=
+=E8=BF=98=E5=9C=A8=E8=BF=9B=E4=B8=80=E6=AD=A5=E5=BC=80=E5=8F=91=E4=B8=AD=E3=
+=80=82=E7=83=A6=E8=AF=B7=E5=88=B0 <a href=3D"https://gitee.com/w-wl/myPages=
+/issues" target=3D"_blank">issue</a>=E3=80=81 <a href=3D"https://weibo.com/=
+homeEating" target=3D"_blank">=E5=BE=AE=E5=8D=9A</a>=E3=80=81 <a href=3D"ht=
+tps://www.zhihu.com/people/w-w-l" target=3D"_blank">=E7=9F=A5=E4=B9=8E</a> =
+=E8=BF=9B=E8=A1=8C=E7=95=99=E8=A8=80=E3=80=82</p></div></footer><input type=
+=3D"file" id=3D"" name=3D"file" style=3D"display: none;"><div data-v-cef786=
+72=3D"" class=3D"container_selected_area" style=3D"cursor: url(&quot;chrome=
+-extension://ialiedlpfknneamnbemcgmaboleiccdd/assets/images/cursor-imagen.s=
+vg&quot;) 9 9, crosshair;"><div data-v-cef78672=3D"" class=3D"area"></div><=
+/div></body><style id=3D"stylish-24" class=3D"stylish" type=3D"text/css">.w=
+960{width:auto} </style></html>
+------MultipartBoundary--9zcKNqxyX2SelNS2TcQPxfTVLdlT6EqyJqC8LJ4pkI----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wangwl.net/static/pages/template/dd10e45d843c5b3d323a6842f611bcb5.css
+
+@charset "utf-8";
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+
+html { text-align: left; background-color: rgb(255, 255, 255); font: 14px/1=
+4px -apple-system-font, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB"=
+, "Microsoft YaHei", sans-serif; color: rgb(51, 51, 51); text-size-adjust: =
+100%; width: 100%; }
+
+body, html { position: relative; }
+
+body { -webkit-font-smoothing: antialiased; font-size: inherit; }
+
+a, a:active, a:hover, a:visited, abbr { color: inherit; text-decoration: no=
+ne; }
+
+button { border: none; background: transparent; color: inherit; cursor: poi=
+nter; text-align: center; user-select: none; }
+
+[contenteditable], a, button, input, optgroup, select, textarea { outline: =
+none; color: inherit; font-size: inherit; -webkit-tap-highlight-color: rgba=
+(0, 0, 0, 0); }
+
+aside, div, li, ul { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+a { }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 400; font-size: inherit; cursor: defa=
+ult; color: rgb(34, 34, 34); }
+
+textarea { resize: none; }
+
+div, input, p, textarea { word-break: break-all; overflow-wrap: break-word;=
+ }
+
+li, ul { list-style: none; }
+
+input[type=3D"checkbox"], input[type=3D"radio"], label { cursor: pointer; u=
+ser-select: none; }
+
+code { font-family: Inconsolata, courier, monospace; background: rgb(238, 2=
+38, 238); outline: rgb(226, 226, 226) solid 1px; padding: 1px 2px; margin: =
+0px 2px; }
+
+@keyframes show {=20
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes hide {=20
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInToUp {=20
+  0% { opacity: 0; transform: translate3d(0px, 30px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes fadeOutToDown {=20
+  0% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translate3d(0px, 30px, 0px); }
+}
+
+.btnToc { position: fixed; display: block; z-index: 21; top: 0px; color: rg=
+b(158, 171, 179); white-space: nowrap; line-height: 40px; transition: color=
+ 0.3s ease-out 0s; padding-left: 35px; text-align: left; }
+
+.btnToc .iconBar { display: block; position: absolute; height: 1em; width: =
+15px; vertical-align: middle; left: 15px; top: 50%; margin-top: -0.5em; }
+
+.btnToc .iconBar .iconBarItem { display: block; position: absolute; height:=
+ 2px; width: 100%; background-color: rgb(158, 171, 179); left: 0px; transfo=
+rm-origin: center center; transition: transform 0.5s ease 0s, background-co=
+lor 0.5s ease 0s, opacity 0.5s ease 0s; }
+
+.btnToc .iconBar .iconBarTop { top: 0px; opacity: 1; transition-delay: 0.2s=
+; transform: translateY(0px); }
+
+.btnToc .iconBar .iconBarMid { top: 50%; margin-top: -1px; transition-delay=
+: 0s; }
+
+.btnToc .iconBar .iconBarBot { bottom: 0px; opacity: 1; transition-delay: 0=
+.2s; transform: translateY(0px); }
+
+.btnToc .btnTocLabel { position: relative; display: inline-block; opacity: =
+0; transform: translate3d(-50%, 0px, 0px); transition: transform 0.5s ease =
+0s, opacity 0.2s ease 0s; }
+
+@media screen and (min-width: 1024px) {
+  body.tocShow .btnToc { animation: 0.2s ease-out 0.2s 1 normal forwards ru=
+nning topBtn; }
+}
+
+body.tocShow .btnToc .iconBar .iconBarItem { background-color: rgb(255, 255=
+, 255); }
+
+body.tocShow .btnToc .iconBar .iconBarTop { opacity: 0; transform: translat=
+eY(200%); transition-delay: 0s; }
+
+body.tocShow .btnToc .iconBar .iconBarBot { opacity: 0; transform: translat=
+eY(-200%); transition-delay: 0s; }
+
+body.tocShow .btnToc .iconBar .iconBarMid:nth-child(2) { transform: scale(1=
+.1) rotate(45deg); transition-delay: 0.2s; }
+
+body.tocShow .btnToc .iconBar .iconBarMid:nth-child(3) { transform: scale(1=
+.1) rotate(-45deg); transition-delay: 0.2s; }
+
+body.tocShow .btnToc .btnTocLabel { opacity: 1; transform: translateZ(0px);=
+ color: rgb(255, 255, 255); }
+
+@keyframes topBtn {=20
+  0% { width: auto; background-color: transparent; }
+  99% { width: 234px; background-color: transparent; }
+  100% { width: 235px; background: linear-gradient(90deg, rgb(35, 37, 38), =
+rgb(65, 67, 69)); }
+}
+
+@keyframes topBtnHide {=20
+  0% { width: 235px; background: linear-gradient(90deg, rgb(35, 37, 38), rg=
+b(65, 67, 69)); }
+  1% { width: 234px; background-color: transparent; }
+  100% { width: auto; background-color: transparent; }
+}
+
+.pageToc { color: rgb(255, 255, 255); position: fixed; z-index: 20; transfo=
+rm: translate3d(-100%, 0px, 0px); transition: transform 0.2s ease-out 0s; }
+
+.pageToc, .pageToc .tocBg { top: 0px; left: 0px; width: 100%; height: 100%;=
+ }
+
+.pageToc .tocBg { position: absolute; background-color: rgb(51, 51, 51); op=
+acity: 0.3; }
+
+.pageToc .tocMain { position: relative; width: 85%; height: 100%; border-to=
+p: 40px solid transparent; overflow: visible auto; padding-bottom: 20px; ba=
+ckground: linear-gradient(90deg, rgb(35, 37, 38), rgb(65, 67, 69)); }
+
+.pageToc .tocMain ul li { line-height: 2em; padding-left: 15px; }
+
+.pageToc .tocMain ul li:last-child { padding-bottom: 0px; }
+
+.pageToc .tocMain ul li.active { background-color: rgb(65, 67, 69); }
+
+.tocShow .pageToc { transform: translateZ(0px); }
+
+@media screen and (min-width: 1024px) {
+  .pageToc { width: 250px; }
+  .pageToc .tocBg { display: none; }
+  .pageToc .tocMain { width: 100%; border: none; padding-top: 40px; }
+}
+
+.isPc .pageToc { width: 250px; }
+
+.isPc .pageToc .tocBg { display: none; }
+
+.isPc .pageToc .tocMain { width: 100%; border: none; padding-top: 40px; }
+
+.content { padding: 15px; }
+
+.pageNav { position: fixed; width: 100%; top: 0px; left: 0px; background-co=
+lor: rgb(255, 255, 255); z-index: 10; padding-left: 45px; padding-right: 55=
+px; color: rgb(158, 171, 179); font-size: 12px; line-height: 40px; height: =
+40px; }
+
+@media screen and (min-width: 1024px) {
+  .pageNav { display: none; }
+}
+
+.pageNav .miniHeader { display: inline-block; vertical-align: middle; posit=
+ion: relative; width: 100%; text-overflow: ellipsis; white-space: nowrap; o=
+verflow: hidden; animation-fill-mode: forwards; transform-origin: left cent=
+er; opacity: 0; }
+
+.pageNav .miniHeader.show { animation: 0.2s ease-out 0s 1 normal none runni=
+ng showMiniHeader; opacity: 1; }
+
+.pageNav .miniHeader.hide { animation: 0.2s ease-out 0s 1 normal none runni=
+ng hideMiniHeader; opacity: 0; }
+
+@keyframes showMiniHeader {=20
+  0% { opacity: 0; transform: translate3d(0px, 20px, 0px) scale(0.6); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes hideMiniHeader {=20
+  0% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translate3d(0px, 20px, 0px) scale(0.6); }
+}
+
+.rightLink { position: fixed; right: 15px; top: 0px; height: 40px; line-hei=
+ght: 40px; z-index: 11; }
+
+footer { background-color: rgb(242, 242, 242); color: rgb(165, 165, 165); p=
+adding-bottom: 50px; }
+
+footer h1 { font-size: 20px; color: rgb(165, 165, 165); margin-bottom: 0.5e=
+m; }
+
+footer a { text-decoration: underline; }
+
+.pageArticle { margin-top: 40px; position: relative; }
+
+.pageArticle .articleHeader { margin-bottom: 20px; }
+
+.pageArticle .articleHeader h1 { font-size: 24px; line-height: 26px; font-w=
+eight: bolder; cursor: default; margin-bottom: 8px; }
+
+.pageArticle .articleHeader .articleInfo { color: rgb(161, 161, 161); font-=
+size: 12px; line-height: 1em; }
+
+.pageArticle .articleMain { line-height: 1.5em; }
+
+.pageArticle .articleMain h1 { font-size: 20px; border-bottom: 1px solid rg=
+b(234, 236, 239); padding-bottom: 0.3em; }
+
+.pageArticle .articleMain h2 { font-size: 18px; }
+
+.pageArticle .articleMain h3 { font-size: 16px; }
+
+.pageArticle .articleMain h1, .pageArticle .articleMain h2, .pageArticle .a=
+rticleMain h3 { line-height: 1.25em; font-weight: 700; margin-top: 22px; ma=
+rgin-bottom: 14px; cursor: text; color: rgb(51, 51, 51); }
+
+.pageArticle .articleMain p { word-break: normal; }
+
+.pageArticle .articleMain p.singleImg { text-align: center; }
+
+.pageArticle .articleMain .echarts, .pageArticle .articleMain ol, .pageArti=
+cle .articleMain p, .pageArticle .articleMain pre, .pageArticle .articleMai=
+n table, .pageArticle .articleMain ul { margin-bottom: 0.6em; }
+
+.pageArticle .articleMain code { font-family: Consolas, "Liberation Mono", =
+Menlo, Monaco, Courier, monospace; }
+
+.pageArticle .articleMain .hljs { margin: 0px; }
+
+.pageArticle .articleMain img { max-width: 100%; max-height: 200px; cursor:=
+ pointer; }
+
+.pageArticle .articleMain a { border-bottom: 1px solid rgba(64, 64, 64, 0.7=
+2); transition: color 0.3s ease 0s; }
+
+.pageArticle .articleMain a:hover { color: rgb(23, 81, 153); border-color: =
+rgba(62, 122, 194, 0.72); }
+
+.pageArticle .articleMain li { padding-left: 15px; position: relative; }
+
+.pageArticle .articleMain li::before { width: 15px; display: inline-block; =
+position: absolute; left: 0px; top: 0px; }
+
+.pageArticle .articleMain ul > li::before { content: "-"; }
+
+.pageArticle .articleMain ol { counter-reset: order 0; }
+
+.pageArticle .articleMain ol > li::before { counter-increment: order 1; con=
+tent: counter(order) "."; }
+
+.pageArticle .articleMain .tableWrap, .pageArticle .articleMain .tableWrap =
+table { width: 100%; }
+
+.pageArticle .articleMain table { border-style: hidden; outline: rgb(199, 1=
+99, 199) solid 1px; }
+
+.pageArticle .articleMain table thead tr { height: 30px; }
+
+.pageArticle .articleMain table tr:nth-child(2n) td { background: rgb(243, =
+243, 243); }
+
+.pageArticle .articleMain table tr { border: 1px solid rgba(0, 0, 0, 0.08);=
+ }
+
+.pageArticle .articleMain table td { border: 1px solid rgba(0, 0, 0, 0.08);=
+ padding: 5px; }
+
+.pageArticle .articleMain table th { border: 1px solid rgba(0, 0, 0, 0.08);=
+ color: rgba(0, 0, 0, 0.9); text-align: center; }
+
+.pageArticle .articleMain blockquote { padding: 0px 15px; color: rgb(85, 85=
+, 85); border-left: 4px solid rgb(204, 204, 204); }
+
+.pageArticle .articleMain .echarts { width: 100%; height: 200px; }
+
+@media screen and (min-width: 1024px) {
+  .content { padding-left: 0px; margin-left: 100px; margin-right: 100px; tr=
+ansition: padding 0.3s ease-out 0s; box-sizing: content-box; }
+  .tocShow .content { padding-left: 250px; }
+}
+
+@media screen and (min-width: 1500px) {
+  .content { width: 1000px; margin-left: auto; margin-right: auto; }
+}
+
+.hljs { display: block; overflow-x: auto; padding: 0.5em; background: rgb(3=
+5, 36, 31); }
+
+.hljs, .hljs-subst, .hljs-tag { color: rgb(248, 248, 242); }
+
+.hljs-emphasis, .hljs-strong { color: rgb(168, 168, 162); }
+
+.hljs-bullet, .hljs-link, .hljs-literal, .hljs-number, .hljs-quote, .hljs-r=
+egexp { color: rgb(174, 129, 255); }
+
+.hljs-code, .hljs-section, .hljs-selector-class, .hljs-title { color: rgb(1=
+66, 226, 46); }
+
+.hljs-strong { font-weight: 700; }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-attr, .hljs-keyword, .hljs-name, .hljs-selector-tag { color: rgb(249,=
+ 38, 114); }
+
+.hljs-attribute, .hljs-symbol { color: rgb(102, 217, 239); }
+
+.hljs-class .hljs-title, .hljs-params { color: rgb(248, 248, 242); }
+
+.hljs-addition, .hljs-built_in, .hljs-builtin-name, .hljs-selector-attr, .h=
+ljs-selector-id, .hljs-selector-pseudo, .hljs-string, .hljs-template-variab=
+le, .hljs-type, .hljs-variable { color: rgb(230, 219, 116); }
+
+.hljs-comment, .hljs-deletion, .hljs-meta { color: rgb(117, 113, 94); }
+------MultipartBoundary--9zcKNqxyX2SelNS2TcQPxfTVLdlT6EqyJqC8LJ4pkI------
