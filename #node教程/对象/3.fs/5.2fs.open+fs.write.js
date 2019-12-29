@@ -20,7 +20,7 @@ fs.open('../assets/1.txt', 'a', function (err, fd) {
      *                 bufferSelf被读取的缓存区对象
      */
 
-   //附加buffer部分内容写入文件
+   //buffer写入到文件
     fs.write(fd, buffer, 3, 9, 12, function (err, writeByte, bufferSelf) {
       if (err) {
         console.error(err)

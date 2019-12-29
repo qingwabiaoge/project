@@ -1,4 +1,14 @@
-# [node.js fs.open 和 fs.write 读取文件和改写文件](https://www.cnblogs.com/wushanbao/p/7003308.html)
+## fs buffer 字符串的关系
+
+fs读取文件会返回buffer对象
+
+fs写入buffer内容到文件生成文件
+
+
+
+buffer实例和字符串实例可以互转
+
+
 
 ## Node.js的文件系统的Api
 
