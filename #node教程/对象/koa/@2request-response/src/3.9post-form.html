@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<!--非ajax浏览器会自动注入cookie到request.header.cookie,不用手动注入-->
 <form action="http://localhost:3000/api/file/" method="post" enctype="multipart/form-data">
     <input type="file" name="file" id="file" value="" multiple="multiple" />
     <input type="submit" value="提交"/>

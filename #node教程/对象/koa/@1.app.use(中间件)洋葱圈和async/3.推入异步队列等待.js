@@ -14,9 +14,9 @@ function fn (ctx) {
 }
 
 const midware = async (ctx, next) => {
-  ctx.body = '1'
-  next()
-  await fn(ctx)// 等待接收异步函数的值undefined
+  ctx.body = '1'//同步执行
+  next()//同步执行
+  await fn(ctx)// midware函数还没执行结束,等待接收异步函数的值undefined
 }
 const midware2 = (ctx, next) => {
   ctx.body += '3'

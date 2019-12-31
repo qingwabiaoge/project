@@ -17,7 +17,7 @@ const i = 0
 const routerMiddlewares = (ctx, next) => {
   if (i) {
     //ctx.body += '3';
-    return next() //如果没有next()则不执行下一个routerMiddlewares
+    return next() //如果没有next()则不执行下一个routerMiddlewares,能执行normalMiddlewares的ctx.bocy_=2估计是路由中间件做了设置
   } else {
     ctx.body += 'err'
   }

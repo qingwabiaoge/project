@@ -3,7 +3,7 @@ const app = new Koa()
 const setCookie = async (ctx) => {
   ctx.cookies.set(
     'cid',
-    'token',    //可替换为token
+    'token_code_xxx',
     {
       domain: 'localhost',  // 写cookie所在的域名
       path: '/',       // 写cookie所在的路径

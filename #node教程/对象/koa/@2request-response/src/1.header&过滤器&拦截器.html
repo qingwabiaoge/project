@@ -6,7 +6,7 @@
 
   //全局的 axios 默认值
   axios.defaults.baseURL = 'http://localhost:3000/api'
-//###############1头文件加入方式1
+  //###############1头文件加入方式1
   axios.defaults.headers.common['Authorization'] = 'DEFAULT.TOKEN';
   axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -26,7 +26,7 @@
     err => {
       // 对请求错误做些什么
       return Promise.reject(err);
-    //  等价于 new Promise((resolve, reject) => reject(err))
+      //  等价于 new Promise((resolve, reject) => reject(err))
     }
   );
 
@@ -72,8 +72,8 @@
 </script>
 
 <script>
-  //###############3头文件加入方式3 额外添加head,不能覆盖拦截器里的同名字段
-  const config = {headers: {'X-Requested-With': 'shilei'}};
-  axios.post('/author', config).then(_ => console.log('这是过滤后的数据:', _))
+  //###############3头文件加入方式3 额外添加head,不能覆盖拦截器里的同名字段 ,
+  const headers = {headers: {'X-Requested-With': 'ajax'}};//表明是ajax请求,可以随意写
+  axios.post('/author', {a: 1}, headers).then(_ => console.log('这是过滤后的数据:', _))
 
 </script>

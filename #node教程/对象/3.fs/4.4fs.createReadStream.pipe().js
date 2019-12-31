@@ -3,6 +3,7 @@ var fs = require("fs");
 
 // 创建一个可读流
 var readerStream = fs.createReadStream('../assets/1.txt');
+console.log(readerStream)
 
 // 创建一个可写流
 var writerStream = fs.createWriteStream('../assets/2.txt');
