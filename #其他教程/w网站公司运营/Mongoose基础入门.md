@@ -1,0 +1,2579 @@
+[^1]:require+d 必须的
+
+# NodeJS驱动
+
+　　在介绍Mongoose之前，首先介绍使用NodeJS操作MongoDB的方法
+
+　　如果使用程序操作数据库，就要使用MongoDB驱动。MongoDB驱动实际上就是为应用程序提供的一个接口，不同的语言对应不同的驱动，NodeJS驱动不能应用在其他后端语言中
+
+　　首先，安装mongodb
+
+```
+npm install mongodb
+```
+
+　　接着，使用require()方法引入mongodb数据库；然后使用MongoClient对象的connect()方法连接mongodb；最后通过node来对mongodb进行异步的增删改查
+
+　　在mongodb数据库中建立db1数据库，然后通过以下代码，建立col集合，并插入{"a":1}文档
+
+```
+var mongodb = require('mongodb');
+mongodb.MongoClient.connect("mongodb://localhost/db1",function(err,db){
+    if(!err){
+        db.collection("col").insert({"a":1},function(err,result){
+            if(!err){
+                console.log(result);
+            }
+        })
+    }
+})
+```
+
+　　最后返回结果如下
+
+```
+{ result: { ok: 1, n: 1 },
+  ops: [ { a: 1, _id: 597077dc271d092728caa362 } ],
+  insertedCount: 1,
+  insertedIds: [ 597077dc271d092728caa362 ] }
+```
+
+ 安装mongoose
+
+　　安装[nodejs](http://www.cnblogs.com/xiaohuochai/p/6223044.html#anchor1)和[mongodb](http://www.cnblogs.com/xiaohuochai/p/7192222.html#anchor3)之后 ，使用npm来安装mongoose
+
+```
+npm install mongoose
+```
+
+![img](img/740839-20170720114229505-521707664.png)
+
+　　安装成功后，就可以通过 require('mongoose') 来使用
+
+ 
+
+# 概述
+
+　　Mongoose是NodeJS的驱动，不能作为其他语言的驱动。Mongoose有两个特点
+
+　　1、通过关系型数据库的思想来设计非关系型数据库
+
+　　2、基于mongodb驱动，简化操作
+
+![img](img/740839-20170721123112068-7289503.jpg)
+
+　　Mongooose中，有三个比较重要的概念，分别是Schema、Model、Entity。它们的关系是：Schema生成Model，Model创造Document，Model和Document都可对数据库操作造成影响，但Model比Document更具操作性
+
+`　　Schema`用于定义数据库的结构。类似创建表时的数据定义(不仅仅可以定义文档的结构和属性，还可以定义文档的实例方法、静态模型方法、复合索引等)，每个`Schema`会映射到mongodb中的一个collection，`Schema`不具备操作数据库的能力
+
+　　Model是由Schema编译而成的构造器，具有抽象属性和行为，可以对数据库进行增删查改。Model的每一个实例（instance）就是一个文档document
+
+　　Document是由Model创建的实体，它的操作也会影响数据库
+
+ 
+
+
+
+# 连接数据库
+
+　　使用require()方法在项目中包含mongoose后，接下来使用connect()方法连接到MongoDB数据库
+
+##### connect(url,options,callback)
+
+###### url
+
+```
+mongoose.connect(url);
+```
+
+　　connect()最简单的使用方式，就是只要传入url参数即可，如下所示。连接到本地localhost的db1服务器
+
+```
+mongoose.connect('mongodb://localhost/db1');
+```
+
+　　如果还需要传递用户名、密码，则可以使用如下方式
+
+```
+mongoose.connect('mongodb://username:password@host:port/database?options...');
+```
+
+###### options　　
+
+connect()方法还接受一个选项对象options，该对象将传递给底层驱动程序。这里所包含的所有选项优先于连接字符串中传递的选项
+
+```
+mongoose.connect(uri, options);
+```
+
+　　可用选项如下所示
+
+```
+ db            -数据库设置
+ server        -服务器设置
+ replset       -副本集设置
+ user          -用户名
+ pass          -密码
+ auth          -鉴权选项
+ mongos        -连接多个数据库
+ promiseLibrary
+```
+
+```javascript
+var options = {
+  /*
+  useNewUrlParser - 底层MongoDB已经废弃当前连接字符串解析器。因为这是一个重大的改变，添加了  useNewUrlParser标记如果在用户遇到bug时，允许用户在新的解析器中返回旧的解析器。除非连接阻止设置，否则你应  该设置useNewUrlParser: true。
+
+*/
+ useNewUrlParser: true,
+    /*估计是用新的索引方法,
+    如果不用会collection.ensure Index is deprecated. Use createIndexes instead */ 
+  useCreateIndex: true,
+    //使用统一拓补
+  useUnifiedTopology: true,
+  db: { native_parser: true },
+  server: { poolSize: 5 },
+    //副本集设置
+  replset: { rs_name: 'myReplicaSetName' },
+  user: 'myUserName',
+  pass: 'myPassword'
+}
+mongoose.connect(uri, options);
+```
+
+　　如果要连接多个数据库，只需要设置多个url以`,`隔开，同时设置`mongos`为true
+
+```
+mongoose.connect('urlA,urlB,...', {
+   mongos : true 
+})
+```
+
+###### callback　　
+
+connect()函数还接受一个回调参数,执行下列代码后，控制台输出“连接成功”
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost/test", options,function(err) {
+    if(err){
+        console.log('连接失败');
+    }else{
+        console.log('连接成功');
+    }
+});
+```
+
+ 　　如果开启鉴权控制，以用户名"u1"，密码"123456"登录'db1'数据库。执行代码后，控制台输出“连接成功”
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(err){
+        console.log('连接失败');
+    }else{
+        console.log('连接成功');
+    }
+});
+```
+
+##### disconnect() 
+
+```
+mongoose.disconnect()
+```
+
+　　 使用disconnect()方法可以断开连接
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(err){
+        console.log('连接失败');
+    }else{
+        console.log('连接成功');
+    }
+});
+setTimeout(function(){
+    mongoose.disconnect(function(){
+        console.log("断开连接");
+    })
+}, 2000);
+```
+
+
+
+![img](img/740839-20170720232404255-1533749216.gif)
+
+ 
+
+# 连接数据库(官方5.2中文)
+
+你可以用`mongoose.connect()`方法连接MongoDB。
+
+```js
+mongoos.connect('mongodb://localhost:27017/myapp');
+```
+
+这是连接运行在本地`myapp`数据库最小的值（27017）。如果连接失败，尝试用`127.0.0.1`代替`localhost`。
+你可在`uri`中指定更多的参数：
+
+```js
+mongoose.connect('mongodb://username:password@host:port/database?options...');
+```
+
+有关更多细节查看mongodb连接字符串规范。
+
+##### 操作缓冲
+
+Mongoose可以让你立即使用模型，不用等待mongoose与MongoDB建立连接。
+
+```js
+mongoose.connect('mongodb://localhost:27017/myapp');
+var MyModel = mongoose.model('Test', new Schema({ name: String }));
+// Works
+MyModel.findOne(function(error, result) { /* ... */ });
+```
+
+这是因为mongoose缓冲模型函数被立即调用。这种缓冲非常方便，但也是造成混淆的常见原因。默认情况下，如果你用一个没有连接的模型，Mongoose不会报错。
+
+```js
+var MyModel = mongoose.model('Test', new Schema({ name: String }));
+// 将一直挂起，直到连接成功
+MyModel.findOne(function(error, result) { /* ... */ });
+
+setTimeout(function() {
+  mongoose.connect('mongodb://localhost:27017/myapp');
+}, 60000);
+```
+
+关闭schema的配置`bufferCommands`就可以禁用缓冲。如果在`bufferCommands`打开时有连接挂起，尝试关闭`bufferCommands`观察是否没有正确打开连接。你也可以全局禁用`bufferCommands`:
+
+```js
+mongoose.set('bufferCommands', false);
+```
+
+##### 选项
+
+`connect`方法也接收一个`options`对象，它将传递给底层的MongoDB驱动程序。
+
+```js
+mongoose.connect(uri, options);
+```
+
+可以在MongoDB Node.js驱动文档上找到`connect()`中选项的完整列表。Mongoose在没有修改的情况下将选项传递给驱动，除以下展示的例外。
+
+- `bufferCommands` - 这是mongoose中一个特殊的选项（不传递给MongoDB驱动），它可以禁用mongoose的缓冲机制
+- `user/pass` - 身份验证的用户名和密码。这是mongoose中特殊的选项，它们可以等同于MongoDB驱动中的auth.user和auth.password选项。
+- `autoIndex` - 默认的，mongoose在连接的时候自动会在schema中创建索引。这对开发来说非常好，但是对大型项目部署并不理想，因为索引的构建将会造成性能的降低。如果设置`autoIndex`为false,mongoose在连接的时候不会为任何与此连接相关的模型创建索引。
+- `dbName` - 指定连接哪个数据库，并覆盖连接字符串中任意的数据库。如果你用mongodb+srv语法连接MongoDB Atlas，你应该用`dbName`去指定数据库，因为当前不能再字符串中使用。
+
+以下是调用mongoose中一些重要的选项。
+
+- `useNewUrlParser` - 底层MongoDB已经废弃当前连接字符串解析器。因为这是一个重大的改变，添加了`useNewUrlParser`标记如果在用户遇到bug时，允许用户在新的解析器中返回旧的解析器。除非连接阻止设置，否则你应该设置`useNewUrlParser: true`。
+- `autoReconnect` - 当与MongoDB连接断开时，底层MongoDB驱动将会自动尝试重新连接。除非你是高级用户，想要控制他们自己的连接池，否则不要设置这个选项为`false`。
+- `reconnectTries` - 如果你连接到单个服务器或mongos代理（而不是副本集），MongoDB驱动将会在`reconnectTries`时间内的每一个`reconnectInterval`毫秒内重新连接，直到最后放弃连接。当驱动放弃连接的时候，mongoose连接将会触发`reconnectFailed`事件。此选项不会对副本集连接执行任何操作。
+- `reconnectInterval` - 查看`reconnectTries`
+- `promiseLibrary` - 设置底层驱动的promise库
+- `poolSize` - MongoDB驱动将为这个连接保持的最大socket数量。默认情况下，`poolSize`是5。请记住在MongoDB 3.4中，MongoDB每个socket每次只允许一个操作，如果你在进行中发现一些缓慢的查询阻止快的查询，你可以增加这个值。
+- `connectTimeoutMS` - MongoDB驱动在初始化连接失败时会等待多久。一旦Mongoose成功连接，`connectTimeoutMS`就不再有效。
+- `socketTimeoutMS` - MongoDB驱动在杀掉一个不活跃的socket时会等待多久。socket可能因为不再活动或长时间处于操作状态而处于不活跃状态。默认情况这个值是`30000`，如果你希望一些数据库操作运行事件超过20秒，你应该设置为最长运行时间的2-3倍。
+- `family` - 是否用IPv4或IPv6进行连接。这个选项传递个Node.js的`dns.lookup()`函数。如果你不设置这个选项，MongoDB驱动首先会尝试IPv6如果失败再尝试IPv4。如果`mongoose.connect(uri)`花费很长时间，尝试`mongoose.connect(uri, {family: 4})`
+
+例子：
+
+```js
+const options = {
+  useNewUrlParser: true,//不选有警告
+        //估计是用新的索引方法
+  useCreateIndex: true,//不选有警告
+ poolSize: 100, //必要 维护最多100个socket连接
+  autoIndex: false, // 不创建索引
+  reconnectTries: Number.MAX_VALUE, // 总是尝试重新连接
+  reconnectInterval: 500, // 每500ms重新连接一次
+
+  // 如果没有连接立即返回错误，而不是等待重新连接
+  bufferMaxEntries: 0,
+  connectTimeoutMS: 10000, // 10s后放弃重新连接
+  socketTimeoutMS: 45000, // 在45s不活跃后关闭sockets
+  family: 4 // 用IPv4, 跳过IPv6
+};
+mongoose.connect(uri, options);
+```
+
+有关`connectTimeoutMS`和`socketTimeoutMS`的更多信息，查阅此页面
+
+##### 回调
+
+`connect()`函数也接收一个回调参数，其返回一个promise。
+
+```js
+mongoose.connect(uri, options, function(error) {
+  // 检查错误，初始化连接。回调没有第二个参数。
+});
+
+// 或者用promise
+mongoose.connect(uri, options).then(
+  () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ },
+  err => { /** handle initial connection error */ }
+);
+```
+
+##### 连接字符串选项
+
+你还可以将连接字符串中的驱动选项指定为URI查询字符串中的部分参数。这只适用于传递给MongoDB驱动的选项。你不能在查询字符串中设置特定的Mongoose选项，类似`bufferCommands`
+
+```js
+mongoose.connect('mongodb://localhost:27017/test?connectTimeoutMS=1000&bufferCommands=false');
+// 以上等同于:
+mongoose.connect('mongodb://localhost:27017/test', {
+  connectTimeoutMS: 1000
+  // 注意mongoose将不会从查询字符串中提取`bufferCommands`
+});
+```
+
+将选项放入查询字符串选项不利于阅读。但是你只需要单独设置URI，而不是分开对`socketTimeoutMS`，`connectTimeoutMS`等设置。最佳实践是在开发和生产中将不同的选项，类似`replicaSet`或`ssl`放到连接字符串中，保持不变的类似`connectTimeoutMS`或`poolsize`放到对象中。 MongoDB文档具有支持连接字符串选项的完整列表。
+
+##### keepAlive注意
+
+对于长时间运行的应用，通常谨慎的做法是用毫秒数来激活`keepAlive`。没有它，一段时间后你或许会看到“连接关闭”的错误，这似乎是没有理由的。如果确实是这样，在阅读完本文后，你或许决定开启`keepAlive`：
+
+```js
+mongoose.connect(uri, { keepAlive: true, keepAliveInitialDelay: 300000 });
+```
+
+`keepAliveInitialDelay`是在socket上启动`keepAlive`时要等待的毫秒数。从mongoose 5.2.0开始`keepAlive`默认被启动。
+
+##### 副本集连接
+
+要连接到一个副本集需要通过逗号分隔的主机列表而不是单个主机。
+
+```js
+mongoose.connect('mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]' [, options]);
+```
+
+例如：
+
+```js
+mongoose.connect('mongodb://user:pw@host1.com:27017,host2.com:27017,host3.com:27017/testdb');
+```
+
+连接一个单点副本集，指定`replicaSet`选项
+
+```js
+mongoose.connect('mongodb://host1:port1/?replicaSet=rsName');
+```
+
+##### Multi-mongos支持
+
+你可以连接多个mongos实例，以便于分片集群中的高可用行。在mongoose 5.x中你不需要传递任何选项去连接多个mongos。
+
+```js
+// 连接2个服务器
+mongoose.connect('mongodb://mongosA:27501,mongosB:27501', cb);
+```
+
+##### 多连接
+
+到目前为止我们已经用mongoose的默认连接来连接上MongoDB。有时我们需要对mongo开放多个连接，每个具有不同的读/写设置，或者只是可能针对不同的数据库。在这些情况下，我们可以使用`mongoose.createConnection()`，他接受上面已经介绍过的所有参数，并返回一个新的连接给你。
+
+```js
+const conn = mongoose.createConnection('mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]', options);
+```
+
+这个连接对象用于创建和索引模型。模型总是作用于单个连接。当你调用`mongoose.connect()`时mongoose会创建一个默认连接。你可以用`mongoose.connection`访问默认连接。
+
+##### 连接池
+
+每个连接，无论由`mongoose.connect`或`mongoose.createConnection`创建都被内部配置连接池支持，默认最大值为5。可以修改连接选项来修改连接池大小。
+
+```js
+// With object options
+mongoose.createConnection(uri, { poolSize: 4 });
+
+const uri = 'mongodb://localhost:27017/test?poolSize=4';
+mongoose.createConnection(uri);
+```
+
+##### 在v5.x中选项的改变
+
+如果你在4.x中没有使用`useMongoClient`，当从4.x升级到5.x的时候，你或许会收到以下弃用警告：
+
+```
+the server/replset/mongos options are deprecated, all their options are supported at the top level of the options object
+```
+
+在较早版本的MongoDB驱动中，必须为服务器连接、副本集连接和mongos连接指定不同的选项：
+
+```js
+mongoose.connect(myUri, {
+  server: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      keepAlive: true
+    },
+    reconnectTries: 30
+  },
+  replset: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      keepAlive: true
+    },
+    reconnectTries: 30
+  },
+  mongos: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      keepAlive: true
+    },
+    reconnectTries: 30
+  }
+});
+```
+
+在mongoose v5.x中可以在顶级声明这些，不需要额外的嵌套，这里列出了所有支持的选项。
+
+```js
+// Equivalent to the above code
+mongoose.connect(myUri, {
+  socketTimeoutMS: 0,
+  keepAlive: true,
+  reconnectTries: 30
+});
+```
+
+# new Schema(validate:object, { timestamps: boolean })
+
+### 参数1:{验证}
+
+　　为什么需要文档验证呢？以一个例子作为说明，schema进行如下定义
+
+```
+var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
+```
+
+　　如果不进行文档验证，保存文档时，就可以不按照Schema设置的字段进行设置，分为以下几种情况
+
+　　1、缺少字段的文档可以保存成功
+
+```
+var temp = mongoose.model('temp', schema);
+new temp({age:10}).save(function(err,doc){
+    //{ __v: 0, age: 10, _id: 597304442b70086a1ce3cf05 }
+    console.log(doc);
+}); 
+```
+
+　　2、包含未设置的字段的文档也可以保存成功，未设置的字段不被保存
+
+```
+new temp({age:100,abc:"abc"}).save(function(err,doc){
+    //{ __v: 0, age: 100, _id: 5973046a2bb57565b474f48b }
+    console.log(doc);
+}); 
+```
+
+　　3、包含字段类型与设置不同的字段的文档也可以保存成功，不同字段类型的字段被保存为设置的字段类型
+
+```
+new temp({age:true,name:10}).save(function(err,doc){
+    //{ __v: 0, age: 1, name: '10', _id: 597304f7a926033060255366 }
+    console.log(doc);
+}); 
+```
+
+　　而通过文档验证，就可以避免以下几种情况发生
+
+　　文档验证在SchemaType中定义，格式如下
+
+```
+{name: {type:String, validator:value}}
+```
+
+
+
+##### 类型验证
+
+Schema主要用于定义MongoDB中集合Collection里文档document的结构　　
+
+定义Schema非常简单，指定字段名和类型即可，支持的类型包括以下8种
+
+```
+String      字符串
+Number      数字    
+Date        日期
+Buffer      二进制
+Boolean     布尔值
+Mixed       混合类型
+ObjectId    对象ID    
+Array       数组
+```
+
+通过mongoose.Schema来调用Schema，然后使用new方法来创建schema对象
+
+```
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var mySchema = new Schema({
+  title:  String,
+  author: String,
+  body:   String,
+  comments: [{ body: String, date: Date }],
+  date: { type: Date, default: Date.now },
+  hidden: Boolean,
+  meta: {
+    votes: Number,
+    favs:  Number
+  }
+});
+```
+
+[注意]创建Schema对象时，声明字段类型有两种方法，一种是首字母大写的字段类型，另一种是引号包含的小写字段类型
+
+```
+var mySchema = new Schema({title:String, author:String});
+//或者 
+var mySchema = new Schema({title:'string', author:'string'});
+```
+
+如果需要在Schema定义后添加其他字段，可以使用add()方法
+
+```
+var MySchema = new Schema;
+MySchema.add({ name: 'string', color: 'string', price: 'number' });
+```
+
+
+
+###### _id
+
+　　每一个文档document都会==mongoose添加一个不重复的_id==，`_id`的数据类型不是字符串，而是ObjectID类型。如果在查询语句中要使用_id，则需要使用findById语句，而不能使用find或findOne语句
+
+###### shortid
+
+```
+const mongoose = require('mongoose')
+var Schema = mongoose.Schema;
+const shortid = require('shortid')
+// shortid.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@');
+const schema = new Schema({
+
+    _id: {
+        type: String,
+
+        'default': shortid.generate
+    }
+
+})
+const Girl=mongoose.model('Girl',schema)
+module.exports=Girl
+```
+
+
+
+##### 附加验证
+
+```
+required: 数据必须填写
+default: 默认值
+validate: 自定义匹配
+index: true 普通索引
+unique: true, 唯一键值,必须删除表重新建立文档才行
+min: 最小值(只适用于数字)
+max: 最大值(只适用于数字)
+match: 正则匹配(只适用于字符串)
+enum:  枚举匹配(只适用于字符串)
+```
+* default
+
+　　设置age字段的默认值为18，如果不设置age字段，则会取默认值
+
+```
+var schema = new mongoose.Schema({ age:{type:Number,default:18}, name:String,x:Number,y:Number});  
+var temp = mongoose.model('temp', schema);
+new temp({name:'a'}).save(function(err,doc){
+    //{ __v: 0, name: 'a', _id: 59730d2e7a751d81582210c1, age: 18 }
+    console.log(doc);
+}); 
+```
+
+
+* required[^1]
+
+　　将age设置为必填字段，如果没有age字段，文档将不被保存，且出现错误提示,==唯一性,需要删除当前数据库重建才能用==
+
+```
+var schema = new mongoose.Schema({ age:{type:Number,required:true}, 
+                                   name: String});  
+var temp = mongoose.model('temp', schema);
+new temp({name:"abc"}).save(function(err,doc){
+    //Path `age` is required.
+    console.log(err.errors['age'].message);
+}); 
+```
+
+
+* index
+
+MongoDB支持[二级索引](http://docs.mongodb.org/manual/indexes/)。在mongoose， [at](http://mongoosejs.com/docs/api.html#schematype_SchemaType-index) [the](http://mongoosejs.com/docs/api.html#schematype_SchemaType-unique) [path](http://mongoosejs.com/docs/api.html#schematype_SchemaType-sparse) [level](http://mongoosejs.com/docs/api.html#schema_date_SchemaDate-expires)或schema层次定义Schema的索引。当创建[复合索引](http://www.cnblogs.com/compound indexes)时，在shema定义索引是必要的。
+
+```
+var animalSchema = new Schema({
+  name: String,
+  type: String,
+  tags: { type: [String], index: true } // field level
+});
+
+animalSchema.index({ name: 1, type: -1 }); // schema level
+```
+
+当程序启动时，Mongoose为每个在schema定义的索引自动地调用ensureIndex 。Mongoose会连续为每个索引调用ensureIndex，当所有ensureIndex调用成功或发生错误在model发出index事件。建议在生产中禁止这种行为因为索引创建能够导致[显著的性能影响](http://docs.mongodb.org/manual/core/indexes/#index-creation-operations)。通过给schema设置autoIndex选项为false来禁用行为，或者在connection全局设置选项config.autoIndex为false。
+
+```
+animalSchema.set('autoIndex', false);
+// or
+new Schema({..}, { autoIndex: false });
+```
+
+[ Model#ensureIndexes](http://mongoosejs.com/docs/api.html#model_Model.ensureIndexes) 方法
+
+
+
+* min | max
+
+　　将age的取值范围设置为[0,10]。如果age取值为20，文档将不被保存，且出现错误提示
+
+```
+var schema = new mongoose.Schema({ age:{type:Number,min:0,max:10}, name: String,x:Number,y:Number});  
+var temp = mongoose.model('temp', schema);
+new temp({age:20}).save(function(err,doc){
+    //Path `age` (20) is more than maximum allowed value (10).
+    console.log(err.errors['age'].message);
+}); 
+```
+
+
+
+* match
+
+　　将name的match设置为必须存在'a'字符。如果name不存在'a'，文档将不被保存，且出现错误提示
+
+```js
+var schema = new mongoose.Schema({ age:Number, name:{type:String,match:/a/},x:Number,y:Number});  
+var temp = mongoose.model('temp', schema);
+new temp({name:'bbb'}).save(function(err,doc){
+    //Path `name` is invalid (bbb).
+    console.log(err.errors['name'].message);
+}); 
+```
+
+
+
+* enum
+
+　　将name的枚举取值设置为['a','b','c']，如果name不在枚举范围内取值，文档将不被保存，且出现错误提示
+
+```
+var schema = new mongoose.Schema({ age:Number, name:{type:String,enum:['a','b','c']},x:Number,y:Number});  
+var temp = mongoose.model('temp', schema);
+new temp({name:'bbb'}).save(function(err,doc){
+    //`bbb` is not a valid enum value for path `name`.
+    console.log(err.errors['name'].message);
+
+}); 
+```
+
+
+
+* validate
+
+　　validate实际上是一个函数，函数的参数代表当前字段，返回true表示通过验证，返回false表示未通过验证。利用validate可以自定义任何条件。比如，定义名字name的长度必须在4个字符以上
+
+```
+var validateLength = function(arg){
+    if(arg.length > 4){
+        return true;
+    }
+    return false;
+};
+var schema = new mongoose.Schema({ name:{type:String,validate:validateLength}, age:Number,x:Number,y:Number});  
+var temp = mongoose.model('temp', schema);
+new temp({name:'abc'}).save(function(err,doc){
+    //Validator failed for path `name` with value `abc`
+    console.log(err.errors['name'].message);
+}); 
+```
+
+
+
+### 参数2: timestamps
+
+　　在schema中设置timestamps为true，schema映射的文档document会自动添加createdAt和updatedAt这两个字段，代表创建时间和更新时间
+
+```
+var UserSchema = new Schema(
+  {...},
+  { timestamps: true }
+);
+```
+
+
+
+### 实例的前后钩子
+
+　　前后钩子即pre()和post()方法，又称为中间件，是在执行某些操作时可以执行的函数。中间件在schema上指定，类似于静态方法或实例方法等
+
+　　可以在数据库执行下列操作时，设置前后钩子
+
+```
+    init
+    validate
+    save
+    remove
+    count
+    find
+    findOne
+    findOneAndRemove
+    findOneAndUpdate
+    insertMany
+    update
+```
+
+##### pre()
+
+　　以find()方法为例，在执行find()方法之前，执行pre()方法
+
+```
+var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
+schema.pre('find',function(next){
+    console.log('我是pre方法1');
+    next();
+});
+schema.pre('find',function(next){
+    console.log('我是pre方法2');
+    next();
+});  
+var temp = mongoose.model('temp', schema);
+temp.find(function(err,docs){
+    console.log(docs[0]);
+})    
+/*
+我是pre方法1
+我是pre方法2
+{ _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 }
+*/
+```
+
+应用 见树形目录实例
+
+```js
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema
+const schmema = new Schema({
+
+    title: String,
+    parent: [{type: Schema.Types.ObjectId, ref: 'Category'}],
+    children: [{type: Schema.Types.ObjectId, ref: 'Category'}]
+})
+
+schmema.pre('find', function (next) {
+    this.populate('children')
+    next()
+})
+const Category = mongoose.model('Category', schmema)
+module.exports = Category
+```
+
+
+
+##### post()
+
+　　post()方法并不是在执行某些操作后再去执行的方法，而在执行某些操作前最后执行的方法，post()方法里不可以使用next()
+
+```
+var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
+schema.post('find',function(docs){
+    console.log('我是post方法1');
+});
+schema.post('find',function(docs){
+    console.log('我是post方法2');
+});
+var temp = mongoose.model('temp', schema);
+temp.find(function(err,docs){
+    console.log(docs[0]);
+}) 
+/*
+我是post方法1
+我是post方法2
+{ _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 }
+ */   
+```
+
+# Model 类
+
+## 实例化对象-文档
+
+　　模型Model是根据Schema编译出的构造器，或者称为类，通过Model可以实例化出文档对象document
+
+　　文档document的创建和检索都需要通过模型Model来处理
+
+```js
+const MyModel = mongoose.model(MyModel, schema)
+```
+
+　　使用model()方法，将Schema编译为Model。model()方法的第一个参数是模型名称
+
+　==[注意]一定要将model()方法的第一个参数和其返回值设置为相同的值，否则会出现不可预知的结果==
+
+　　Mongoose会将集合名称设置为模型名称的小写版。如果名称的最后一个字符是字母，则会变成复数；如果名称的最后一个字符是数字，则不变；如果模型名称为"MyModel"，则集合名称为"mymodels"；如果模型名称为"Model1"，则集合名称为"model1"
+
+```
+var schema = new mongoose.Schema({ num:Number, name: String, size: String});
+var MyModel = mongoose.model('MyModel', schema);
+```
+
+　　通过对原型Model1使用new方法，实例化出文档document对象
+
+```js
+var schema = new mongoose.Schema({ num:Number, name: String, size: String});
+var MyModel = mongoose.model('MyModel', schema);
+var doc1 = new MyModel({ size: 'small' });
+```
+
+### 实例方法
+
+##### doc1.save( )
+
+​     实例化文档保存到数据库
+
+　　通过new Model1()创建的文档doc1，必须通过save()方法，才能将创建的文档保存到数据库的集合中，集合名称为模型名称的小写复数版
+
+　　回调函数是可选项，第一个参数为err，第二个参数为保存的文档对象
+
+```js
+doc1.save(function (err, doc) {})
+```
+
+　　由下图所示，db1数据库中的集合名称为mymodels，里面有一个{size:"small"}的文档
+
+![img](img/740839-20170721003232802-1510769411.png)
+
+
+
+
+
+##### 补充实例方法
+
+　　`Model`的实例是`document，`内置实例方法有很多，如 `save`，可以通过Schema对象的`methods`属性给实例自定义扩展方法
+
+```js
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ num:Number, name: String, size: String });        
+        schema.methods.findSimilarSizes = function(cb){
+            return this.model('MyModel').find({size:this.size},cb);
+        }
+        var MyModel = mongoose.model('MyModel', schema);
+        var doc1 = new MyModel({ name:'doc1', size: 'small' });
+        var doc2 = new MyModel({ name:'doc2', size: 'small' });
+        var doc3 = new MyModel({ name:'doc3', size: 'big' });
+        doc1.save();
+        doc2.save();
+        doc3.save();
+        setTimeout(function(){
+            doc1.findSimilarSizes(function(err,docs){
+                docs.forEach(function(item,index,arr){
+                    //doc1
+                    //doc2
+                     console.log(item.name)        
+                })
+            })  
+        },0)  
+    }
+});
+```
+
+##### 补充query对象的方法
+
+　　通过schema对象的query属性，给model添加查询方法
+
+```js
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        schema.query.byName = function(name){
+            return this.find({name: new RegExp(name)});
+        }
+        var temp = mongoose.model('temp', schema);   
+        temp.find().byName('huo').exec(function(err,docs){
+            //[ { _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 },
+            // { _id: 5971f93be6f98ec60e3dc86e, name: 'huo', age: 30 } ]
+            console.log(docs);
+        })  
+
+    }           
+});
+```
+
+## 补充静态方法
+
+　　通过Schema对象的`statics`属性给 `Model` 添加静态方法
+
+```js
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ num:Number, name: String, size: String });        
+        schema.statics.findByName = function(name,cb){
+            return this.find({name: new RegExp(name,'i')},cb);
+        }
+        var MyModel = mongoose.model('MyModel', schema);
+        var doc1 = new MyModel({ name:'doc1', size: 'small' });
+        var doc2 = new MyModel({ name:'doc2', size: 'small' });
+        var doc3 = new MyModel({ name:'doc3', size: 'big' });
+        doc1.save();
+        doc2.save();
+        doc3.save();
+        setTimeout(function(){
+            MyModel.findByName('doc1',function(err,docs){
+                //[ { _id: 5971e68f4f4216605880dca2,name: 'doc1',size: 'small',__v: 0 } ]
+                console.log(docs);
+            })  
+        },0)  
+    }
+});
+```
+
+## 新增文档
+
+　　文档新增有三种方法，一种是使用上面介绍过的文档的save()方法，另一种是使用模型model的create()方法，最后一种是模型model的insertMany()方法
+
+##### create()
+
+　　使用save()方法，需要先实例化为文档，再使用save()方法保存文档。而create()方法，则直接在模型Model上操作，并且可以同时新增多个文档
+
+```
+Model.create(doc(s), [callback])
+```
+
+　　新增{name:"xiaowang"}，{name:"xiaoli"}这两个文档
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        var temp = mongoose.model('temp', schema);   
+        temp.create({name:"xiaowang"},{name:"xiaoli"},function(err,doc1,doc2){
+      
+            console.log(doc1); 
+ 
+            console.log(doc2); 
+        });       
+    }           
+});
+```
+
+##### insertMany()
+
+```
+Model.insertMany(doc(s), [options], [callback])
+```
+
+　　新增{name:"a"}，{name:"b"}这两个文档
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        var temp = mongoose.model('temp', schema);   
+        temp.insertMany([{name:"a"},{name:"b"}],function(err,docs){
+            console.log(docs); 
+        });       
+
+    }           
+});
+```
+
+#####  new Model({...})save()
+
+```
+save([options], [options.safe], [options.validateBeforeSave], [fn])
+```
+
+　　新建{age:10,name:'save'}文档，并保存
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        var temp = mongoose.model('temp', schema);
+        //使用链式写法    
+        new temp({age:10,name:'save'}).save(function(err,doc){
+            console.log(doc);        
+        });         
+    }           
+});
+```
+
+
+
+　 
+
+## 查询文档
+
+　　使用Mongoose来查找文档很容易，有以下3种方法可供选择
+
+```
+find()
+findById()
+findOne()
+```
+
+### find()
+
+　　第一个参数表示查询条件，第二个参数用于控制返回的字段，第三个参数用于配置查询参数，第四个参数是回调函数，回调函数的形式为function(err,docs){}
+
+```
+Model.find(conditions, [projection], [options], [callback])
+```
+
+　　eg
+
+```js
+//对象写法
+userModel.find({'name':'张三'},{'name':1,'sex':1,'region':1,'createBy':1,'_id':0},{ limit:2, skip:1, sort:'-createBy.createTime'},callback)
+//链式写法
+userModel.find({'name':'张三'},{'name':1,'sex':1,'region':1,'createBy':1,'_id':0}).skip(7).limit(2).sort({'createBy.createTime' : -1})
+```
+
+
+
+在数据库db1的集合temps中存在如下数据
+
+![img](img/740839-20170721205332902-619241772.png)
+
+　　现在，使用find()方法找出所有数据
+
+
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        var temp = mongoose.model('temp', schema);
+        temp.find(function(err,docs){
+            //[ { _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 },
+            //{ _id: 5971f93be6f98ec60e3dc86d, name: 'wang', age: 18 },
+            //{ _id: 5971f93be6f98ec60e3dc86e, name: 'huo', age: 30 },
+            //{ _id: 5971f93be6f98ec60e3dc86f, name: 'li', age: 12 } ]
+            console.log(docs);
+        })
+    }
+});
+```
+
+
+
+　　找出年龄大于18的数据
+
+
+
+```
+        temp.find({age:{$gte:18}},function(err,docs){
+            //[ { _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 },
+            //{ _id: 5971f93be6f98ec60e3dc86d, name: 'wang', age: 18 },
+            //{ _id: 5971f93be6f98ec60e3dc86e, name: 'huo', age: 30 }]
+            console.log(docs);
+        })
+```
+
+
+
+　　找出年龄大于18且名字里存在'huo'的数据
+
+```
+        temp.find({name:/huo/,age:{$gte:18}},function(err,docs){
+            //[ { _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 },
+            //{ _id: 5971f93be6f98ec60e3dc86e, name: 'huo', age: 30 }]
+            console.log(docs);
+        })
+```
+
+　　找出名字里存在'a'的数据，且只输出'name'字段
+
+　　[注意]_id字段默认输出
+
+```
+        temp.find({name:/a/},'name',function(err,docs){
+            //[ { _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' },
+            //{ _id: 5971f93be6f98ec60e3dc86d, name: 'wang' } ]
+            console.log(docs);
+        })
+```
+
+　　如果确实不需要_id字段输出，可以进行如下设置
+
+```
+        temp.find({name:/a/},{name:1,_id:0},function(err,docs){
+            //[ { name: 'huochai' }, { name: 'wang' } ]
+            console.log(docs);
+        })
+```
+
+　　找出跳过前两条数据的其他所有数据
+
+　　[注意]如果使用第三个参数，前两个参数如果没有值，需要设置为null
+
+```
+        temp.find(null,null,{skip:2},function(err,docs){
+            //[ { _id: 5971f93be6f98ec60e3dc86e, name: 'huo', age: 30 },
+            //{ _id: 5971f93be6f98ec60e3dc86f, name: 'li', age: 12 } ]
+            console.log(docs);
+        })
+```
+
+
+
+### findOne()
+
+　　该方法返回查找到的所有实例的第一个
+
+```
+Model.findOne([conditions], [projection], [options], [callback])
+```
+
+　　找出age>20的文档中的第一个文档
+
+
+
+```
+temp.findOne({age:{$gt : 20}},function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
+    console.log(doc);
+})   
+temp.findOne({age:{$gt : 20}}).exec(function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
+    console.log(doc);
+})  
+```
+
+
+
+　　找出age>20的文档中的第一个文档，且只输出name字段
+
+
+
+```
+temp.findOne({age:{$gt : 20}},{name:1,_id:0},function(err,doc){
+    //{ name: 'huochai' }
+    console.log(doc);
+})   
+temp.findOne({age:{$gt : 20}},{name:1,_id:0}).exec(function(err,doc){
+    //{ name: 'huochai' }
+    console.log(doc);
+})     
+```
+
+
+
+　　找出age>20的文档中的第一个文档，且输出包含name字段在内的最短字段
+
+
+
+```
+temp.findOne({age:{$gt : 20}},"name",{lean:true},function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' }
+    console.log(doc);
+})   
+temp.findOne({age:{$gt : 20}},"name").lean().exec(function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai' }
+    console.log(doc);
+})   
+```
+
+
+
+### findById()
+
+```
+Model.findById(id, [projection], [options], [callback])
+```
+
+　　显示第0个元素的所有字段
+
+```
+        var aIDArr = [];
+        temp.find(function(err,docs){
+            docs.forEach(function(item,index,arr){
+                aIDArr.push(item._id);
+            })
+            temp.findById(aIDArr[0],function(err,doc){
+                //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
+                console.log(doc);
+            })            
+        })
+```
+
+
+
+　　以上代码的另一种写法如下
+
+
+
+```
+        var aIDArr = [];
+        temp.find(function(err,docs){
+            docs.forEach(function(item,index,arr){
+                aIDArr.push(item._id);
+            })
+            temp.findById(aIDArr[0]).exec(function(err,doc){
+                //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 27 }
+                console.log(doc);
+            })            
+        })
+```
+
+
+
+　　只输出name字段
+
+```
+            temp.findById(aIDArr[0],{name:1,_id:0},function(err,doc){
+                //{  name: 'huochai'}
+                console.log(doc);
+            })            
+```
+
+　　或者写成下面这种形式
+
+```
+            temp.findById(aIDArr[0],{name:1,_id:0}).exec(function(err,doc){
+                //{  name: 'huochai'}
+                console.log(doc);
+            })            
+```
+
+　　输出最少的字段
+
+```
+            temp.findById(aIDArr[0],{lean:true},function(err,doc){
+                //{ _id: 5971f93be6f98ec60e3dc86c }
+                console.log(doc);
+            })   
+            temp.findById(aIDArr[0],{lean:true}).exec(function(err,doc){
+                //{ _id: 5971f93be6f98ec60e3dc86c }
+                console.log(doc);
+            })     
+```
+
+### 参数1:查询条件
+
+##### 逻辑运算符
+
+```
+$exists　　 字段是否存在
+
+$gt　　　　大于
+$gte　　　 大于等于
+$lt　　　　小于
+$lte　　　 小于等于
+$mod　　　　取模运算
+
+$regex　　 正则，用于模糊查询
+
+
+
+$eq       等于 equal
+$ne　　　　不等于 no eual
+
+
+$in　　　　[10,15,20]  在数组里的
+$nin　　　 不在多个值范围内
+$all　　　 匹配数组中多个值
+$size　　　匹配数组大小
+$elemMatch　匹配内数组内的元素
+
+
+$slice　　　　查询字段集合中的元素（比如从第几个之后，第N到第M个元素
+
+$or　　　　或关系
+$nor　　　 或关系取反
+$not      取反与正则表达式联合使用时极为有效，用来查找那些与特定模式不匹配的文档。
+$maxDistance　范围查询，距离（基于LBS）
+$near　　　 邻域查询，查询附近的位置（基于LBS）
+$within　　　范围查询（基于LBS）
+$box　　　　 范围查询，矩形范围（基于LBS）
+$center　　　范围醒询，圆形范围（基于LBS）
+$centerSphere　范围查询，球形范围（基于LBS）
+
+```
+
+```
+Dog.find({name: 'xiaohua', age: {$in: [10, 20]}}, callback)
+```
+
+#####  $where
+
+1、$where操作的原理：
+
+当由where操作时，他将逐一遍历mongo集合中文档对象，将其属性由Bson格式转换为Json。然后能通过json找到对象属性，供js来调用。
+
+而如果不用where语句进行比较，则是通过文档对象的Bson二进制形式直接进行比较，类似于关系型数据库。
+
+2、缺点
+
+他的的比较操作，是必须逐一遍历该集合下所有文档对象，将二进制转换为json对象在磁盘上进行判断操作！！！这将带来多大的性能消耗，效率很低。
+
+3、优点
+
+1）、能写出比较复杂的操作语句
+
+2）、能使的表达式写的比较容易
+
+4、使用方法
+
+db.student.find({$where:'this.yuwen_score>70 && this.shuxue_score<90 || this.huaxue_score>88'},{name:1,_id:0})
+
+查询yuwen_score分数大于70且数学分数小于90或者化学大于88的人，输出名字，不输出id号
+
+
+
+
+
+　　如果要进行更复杂的查询，需要使用$where操作符，$where操作符功能强大而且灵活，它可以使用任意的JavaScript作为查询的一部分，包含JavaScript表达式的字符串或者JavaScript函数
+
+![img](img/740839-20170722141433964-2137472445.png)
+
+　　使用字符串
+
+```
+temp.find({$where:"this.x == this.y"},function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc889, name: 'li', age: 20, x: 2, y: 2 } ]
+    console.log(docs);
+}) 
+temp.find({$where:"obj.x == obj.y"},function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc889, name: 'li', age: 20, x: 2, y: 2 } ]
+    console.log(docs);
+}) 
+```
+
+　　使用函数
+
+```
+temp.find({$where:function(){
+        return obj.x !== obj.y;
+    }},function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 },
+    //{ _id: 5972ed35e6f98ec60e3dc888, name: 'huo', age: 30, x: 2, y: 1 } ]
+    console.log(docs);
+}) 
+```
+
+
+
+```
+temp.find({$where:function(){
+        return this.x !== this.y;
+    }},function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 },
+    //{ _id: 5972ed35e6f98ec60e3dc888, name: 'huo', age: 30, x: 2, y: 1 } ]
+    console.log(docs);
+}) 
+```
+
+
+
+###  方法:populate文档联表查询
+
+##### eg1
+
+　　下面以一个实例的形式来介绍下mongoose中的联表操作population
+
+　　以类别category和文章post之间的关联为例
+
+　　其中，category的model如下所示
+
+
+
+```
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const CategorySchema = new Schema(
+  {
+    number: { type: Number, required: true, index: true, unique: true, min:[1000000000, '位数不足'], max: [9999999999, '位数过长'] },
+    name: { type: String, required: true, validate: { validator: (v) => v.trim().length, message: '名称不能为空'} },
+    description: { type: String },
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
+    recommend: { type: Boolean },
+    index: { type: Number }
+  },
+  { timestamps: true }
+)
+
+module.exports = mongoose.model('Category', CategorySchema)
+```
+
+
+
+　　post的model如下所示
+
+
+
+```
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const PostSchema = new Schema(
+  {
+    title: { type: String, required: true, unique: true },
+    description: { type: String },
+    content: { type: String },
+    category: { type: Schema.Types.ObjectId, ref: 'Category', index: true },
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
+    likes: [{ type: Schema.Types.ObjectId, ref: 'Like' }],
+    imgUrl: { type: String },
+    recommend: { type: Boolean },
+    index: { type: Number }
+  },
+  {
+    timestamps: true
+  }
+)
+
+module.exports = mongoose.model('Post', PostSchema)
+```
+
+
+
+　　在对类别的操作中， 都需要使用populate操作符显示出所包括的posts中的title
+
+
+
+```
+  /* 加载所有类别 */
+  app.get('/categories', (req, res) => {
+    Category.find().populate('posts','title').select("number name description recommend index").exec((err, docs) => {
+      if (err) return res.status(500).json({code: 0, message: err.message, err})
+      return res.status(200).json({code: 1, message: '获取类别成功', result: {docs}})
+    })
+  })
+
+  /* 新增一个类别 */
+  app.post('/categories', adminAuth, (req, res) => {
+    new Category(req.body).save((err, doc) => {
+      if (err) return res.status(500).json({code: 0, message: err.message, err})
+      doc.populate({path:'posts',select:'title'}, (err, doc) => {
+        if (err) return res.status(500).json({code:0, message: err.message, err})
+        return res.status(200).json({code: 1, message: '新增成功', result: {doc}})
+      })      
+    })
+  })
+...
+```
+
+
+
+　　在对文章的操作中，则需要显示出类别category的number属性
+
+
+
+```
+  /* 按照id加载一篇文章 */
+  app.get('/posts/:id', (req, res) => {
+    Post.findById(req.params.id).populate('category','number').exec((err, doc) => {
+      if (err) return res.status(500).json({code:0, message:err.message, err})
+      if (doc === null) return res.status(404).json({code:0, message:'文章不存在'})
+      return res.status(200).json({code:1, message:'获取文章成功', result:{doc}})
+    })
+  })
+
+  /* 加载所有文章 */
+  app.get('/posts', (req, res) => {
+    Post.find().select("title likes comments recommend imgUrl index").populate('category','number').sort("-createdAt").exec((err, docs) => {
+      if (err) return res.status(500).json({code: 0, message: err.message, err})
+      return res.status(200).json({code: 1, message: '获取文章成功', result: {docs}})
+    })
+```
+
+
+
+　　在新增、更新和删除文章的操作中，都需要重建与category的关联
+
+
+
+```
+// 关联category的posts数组
+fnRelatedCategory = _id => {
+  Category.findById(_id).exec((err, categoryDoc) => {
+    if (err) return res.status(500).json({ code: 0, message: err.message, err })
+    if (categoryDoc === null) return res.status(404).json({code:0, message:'该类别不存在，请刷新后再试'})
+    Post.find({ category: _id }).exec((err, postsDocs) => {
+      if (err) return res.status(500).json({ code: 0, message: err.message, err })
+      categoryDoc.posts = postsDocs.map(t => t._id)
+      categoryDoc.save(err => {
+        if (err) return res.status(500).json({ code: 0, message: err.message, err })
+      })
+    })
+  })
+}
+
+  /* 按照id更新一篇文章 */
+  app.put('/posts/:id', adminAuth, (req, res) => {
+    Post.findById(req.params.id).exec((err, doc) => {
+      if (err) return res.status(500).json({code: 0, message: err.message, err})
+      if (doc === null) return res.status(404).json({code: 0, message: '文章不存在，请刷新后再试'})
+      for (prop in req.body) {
+        doc[prop] = req.body[prop]
+      }
+      doc.save((err) => {
+        if (err) return res.status(500).json({code: 0, message: err.message, err})
+        doc.populate({path:'category',select:'number'}, (err, doc) => {
+          if (err) return res.status(500).json({code:0, message: err.message, err})
+          fnRelatedCategory(doc.category._id)        
+          return res.status(200).json({code: 1, message: '更新成功', result: {doc}})
+        })
+      })
+    })
+  })
+...
+```
+
+##### eg2:在Mongoose中使用嵌套的populate处理数据
+
+　　假设有如下mongodb的schema定义：
+
+
+
+```
+drawApply = new Schema({
+    salesId: { type: Schema.ObjectId, ref: 'sales' },
+    money: Number,
+    status: { type: Number, default: 0 },
+    createTime: { type: Date, default: Date.now }
+});
+
+sales = new Schema({
+    name: { type: String, required: true, unique: true },
+    pwd: String,
+    phone: String,
+    merchant: { type: Schema.ObjectId, ref: 'merchant' },
+    status: { type: Number, default: 0 }
+});
+
+merchant = new Schema({
+    name: String,
+    sname: String,
+    type: String
+});
+```
+
+
+
+　　表drawApply的salesId属性指定表sales的_id，表sales的属性merchant指定表merchant的_id。这是一种嵌套级联的关系。
+
+　　查找drawApply表的数据，并同时返回对应的sales表的数据，可以使用下面的方法：
+
+```
+drawApply.find().populate('salesId', '_id name phone merchant').sort({createTime: -1}).exec(function(err, list) {
+  // list of drawApplies with salesIds populated
+});
+```
+
+　　返回的结果中除了drawApply表的数据外，还会包含salesId中_id，name，phone，merchant四个属性的值。但是merchant属性的值是以**ObjectId**的形式显示的，如果想知道对应的merchant其它属性的值，则需要使用到嵌套的**populate**。代码如下：
+
+
+
+```
+drawApply.find().populate({
+    path: 'salesId',
+    select: '_id name phone merchant',
+    model: 'sales',
+    populate: {
+        path: 'merchant',
+        select: '_id sname',
+        model: 'merchant'
+    }}).sort({createTime: -1}).exec(function(err, list) {
+  // list of drawApplies with salesIds populated and merchant populated
+});
+```
+
+
+
+　　如果drawApply表中还存在其它**ObjectId**类型的字段，则可以在**populate**方法后面继续跟其它的**populate**，使用方法相同，如：
+
+
+
+```
+drawApply.find().populate({
+    path: 'salesId',
+    select: '_id name phone merchant',
+    model: 'sales',
+    populate: {
+        path: 'merchant',
+        select: '_id sname',
+        model: 'merchant'
+    }})
+    .populate('approver', 'name')
+    .populate('operator', 'name')
+    .sort({createTime: -1}).exec(function(err, list) {
+  // list of drawApplies with salesIds populated and merchant populated
+});
+```
+
+
+
+　　有关**populate**的具体用法可以参考**mongoose**的官方文档http://mongoosejs.com/docs/populate.html#deep-populate
+
+ 
+
+###  方法:文档查询后处理
+
+　　常用的查询后处理的方法如下所示
+
+```
+sort     排序skip     跳过
+limit    限制
+select   显示字段
+exect    执行count    计数distinct 去重
+```
+
+```
+var schema = new mongoose.Schema({ age:Number, name: String,x:Number,y:Number});  
+var temp = mongoose.model('temp', schema);
+temp.find(function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 },
+    //{ _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc888, name: 'huo', age: 30, x: 2, y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc889, name: 'li', age: 20, x: 2, y: 2 } ]
+    console.log(docs);
+}) 
+```
+
+
+
+##### sort()
+
+　　按age从小到大排序
+
+
+
+```
+temp.find().sort("age").exec(function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc889, name: 'li', age: 20, x: 2, y: 2 },
+    //{ _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 },
+    //{ _id: 5972ed35e6f98ec60e3dc888, name: 'huo', age: 30, x: 2, y: 1 } ]
+    console.log(docs);
+}); 
+```
+
+
+
+　　按x从小到大，age从大到小排列
+
+
+
+```
+temp.find().sort("x -age").exec(function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 },
+    //{  _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc888, name: 'huo', age: 30, x: 2, y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc889, name: 'li', age: 20, x: 2, y: 2 } ]
+    console.log(docs);
+}); 
+```
+
+
+
+##### skip()
+
+　　跳过1个，显示其他
+
+
+
+```
+temp.find().skip(1).exec(function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc888, name: 'huo', age: 30, x: 2, y: 1 },
+    //{ _id: 5972ed35e6f98ec60e3dc889, name: 'li', age: 20, x: 2, y: 2 } ]
+    console.log(docs);
+}); 
+```
+
+
+
+##### limit()
+
+　　显示2个
+
+```
+temp.find().limit(2).exec(function(err,docs){
+    //[ { _id: 5972ed35e6f98ec60e3dc886,name: 'huochai',age: 27,x: 1,y: 2 },
+    //{ _id: 5972ed35e6f98ec60e3dc887,name: 'wang',age: 18,x: 1,y: 1 } ]
+    console.log(docs);
+}); 
+```
+
+##### select()
+
+　　显示name、age字段，不显示_id字段
+
+```
+temp.find().select("name age -_id").exec(function(err,docs){
+    //[ { name: 'huochai', age: 27 },{ name: 'wang', age: 18 },{ name: 'huo', age: 30 },{ name: 'li', age: 20 } ]
+    console.log(docs);
+}); 
+temp.find().select({name:1, age:1, _id:0}).exec(function(err,docs){
+    //[ { name: 'huochai', age: 27 },{ name: 'wang', age: 18 },{ name: 'huo', age: 30 },{ name: 'li', age: 20 } ]
+    console.log(docs);
+}); 
+```
+
+　　下面将以上方法结合起来使用，跳过第1个后，只显示2个数据，按照age由大到小排序，且不显示_id字段
+
+```
+temp.find().skip(1).limit(2).sort("-age").select("-_id").exec(function(err,docs){
+    //[ { name: 'huochai', age: 27, x: 1, y: 2 },
+    //{ name: 'li', age: 20, x: 2, y: 2 } ]
+    console.log(docs);
+}); 
+```
+
+##### count()
+
+　　显示集合temps中的文档数量
+
+```
+temp.find().count(function(err,count){
+    console.log(count);//4
+}); 
+```
+
+##### distinct()
+
+　　返回集合*temps*中的x的值
+
+```
+temp.find().distinct('x',function(err,distinct){
+    console.log(distinct);//[ 1, 2 ]
+}); 
+```
+
+## 文档更新
+
+　　文档更新可以使用以下几种方法
+
+
+
+```
+update()
+updateMany()find() + save()
+updateOne()findOne() + save()
+findByIdAndUpdate()
+fingOneAndUpdate()
+```
+
+
+
+##### update()
+
+第一个参数conditions为查询条件，第二个参数doc为需要修改的数据，第三个参数options为控制选项，第四个参数是回调函数
+
+```
+Model.update(conditions, doc, [options], [callback])
+```
+
+options有如下选项
+
+参数condition：更新的条件，要求是一个对象。
+参数doc：要更新的内容，要求是一个对象。
+参数[options]：可选参数，要求也是一个对象。
+参数[callback]：可选参数，要求是一个回调函数。
+
+[options]有效值：
+safe ：（布尔型）安全模式（默认为架构中设置的值（true））
+upsert ：（boolean）如果不匹配，是否创建文档（false）
+multi ：（boolean）是否应该更新多个文档（false）
+runValidators：如果为true，则在此命令上运行更新验证程序。更新验证器根据模型的模式验证更新操作。
+setDefaultsOnInsert：如果这upsert是真的，如果创建了新文档，猫鼬将应用模型模式中指定的默认值。该选项仅适用于MongoDB> = 2.4，因为它依赖于MongoDB的$setOnInsert操作符。
+strict：（布尔）覆盖strict此更新的选项
+overwrite： （布尔）禁用只更新模式，允许您覆盖文档（false）
+
+作用：该方法是根据condition这个条件去更新doc这个对象。
+例子：
+
+```js
+//匹配年龄大于18岁的那条数据，更新它的oldEnough值为true
+MyModel.update({ age: { $gt: 18 } }, { oldEnough: true }, fn);
+//把name值为“Tobi”的那个文档中的数据的ferret值更新为true;{multi:true}表明是要更新多个文档，也就是更新所有匹配name值的文档中的ferret值。1234567
+MyModel.update({ name: 'Tobi' }, { ferret: true }, { multi: true }, function (err, raw) {
+  if (err) return handleError(err);
+  console.log('The raw response from Mongo was ', raw);
+});
+
+```
+
+ 
+
+　　数据库temps中现有数据如下
+
+![img](img/740839-20170722102511714-669069142.png)
+
+　　现在使用update()方法查询age大于20的数据，并将其年龄更改为40岁
+
+
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        var temp = mongoose.model('temp', schema);   
+        temp.update({age:{$gte:20}},{age:40},function(err,raw){
+            //{ n: 1, nModified: 1, ok: 1 }
+            console.log(raw);
+        })
+
+    }           
+});
+```
+
+
+
+　　经过以上操作，数据库结果如下。只有第一个数据更改为40岁。而第三个数据没有发生变化
+
+![img](img/740839-20170722103806792-1390059167.png)
+
+　　如果要同时更新多个记录，需要设置options里的multi为true。下面将名字中有'a'字符的年龄设置为10岁
+
+```js
+const Dog = require('../../../model/Dog.js')
+
+async function fn () {
+  const i = await Dog.updateMany({ name: '小黑' }, { $set: { age: 52 } })
+  console.log(i)
+}
+
+fn()
+
+```
+
+
+
+```
+var mongoose = require('mongoose');
+mongoose.connect("mongodb://u1:123456@localhost/db1", function(err) {
+    if(!err){
+        var schema = new mongoose.Schema({ age:Number, name: String});        
+        var temp = mongoose.model('temp', schema);   
+        temp.update({name:/a/},{age: 10},{multi:true},function(err,raw){
+            //{ n: 2, nModified: 2, ok: 1 }
+            console.log(raw);
+        })
+
+    }           
+});
+```
+
+
+
+![img](img/740839-20170722105348933-1661967582.png)
+
+　　如果设置的查找条件，数据库里的数据并不满足，默认什么事都不发生
+
+```
+temp.update({age:100},{name: "hundred"},function(err,raw){
+    //{ n: 0, nModified: 0, ok: 1 }
+    console.log(raw);
+})
+```
+
+　　如果设置options里的upsert参数为true，若没有符合查询条件的文档，mongo将会综合第一第二个参数向集合插入一个新的文档
+
+```
+temp.update({age:100},{name: "hundred"},{upsert:true},function(err,raw){
+    //{ n: 1, nModified: 0,upserted: [ { index: 0, _id: 5972c202d46b621fca7fc8c7 } ], ok: 1 }
+    console.log(raw);
+})
+```
+
+![img](img/740839-20170722111059777-351477732.png)
+
+```
+temp.update({name:/aa/},{age: 0},{upsert:true},function(err,raw){
+    //{ n: 1, nModified: 0,upserted: [ { index: 0, _id: 5972c288d46b621fca7fdd8f } ], ok: 1 }
+    console.log(raw);
+})
+```
+
+![img](img/740839-20170722111300761-1926802847.png)
+
+　　[注意]update()方法中的回调函数不能省略，否则数据不会被更新。如果回调函数里并没有什么有用的信息，则可以使用exec()简化代码
+
+```
+temp.update({name:/aa/},{age: 0},{upsert:true}).exec();
+```
+
+##### updateOne()
+
+ 　　updateOne()方法只能更新找到的第一条数据，即使设置{multi:true}也无法同时更新多个文档
+
+　　将数据库中名字中带有'huo'的数据，年龄变为60岁
+
+```
+temp.updateOne({name:/huo/},{age:60},function(err,raw){
+    //{ n: 1, nModified: 1, ok: 1 }
+    console.log(raw);
+});
+```
+
+![img](img/740839-20170722113216183-374293061.png)
+
+##### updateMany()
+
+　　updateMany()与update()方法唯一的区别就是默认更新多个文档，即使设置{multi:false}也无法只更新第一个文档
+
+```
+Model.updateMany(conditions, doc, [options], [callback])
+```
+
+　　将数据库中名字中带有'huo'的数据，年龄变为50岁
+
+```
+temp.updateMany({name:/huo/},{age:50},function(err,raw){
+    //{ n: 2, nModified: 2, ok: 1 }
+    console.log(raw);
+});
+```
+
+![img](img/740839-20170722112834308-1873815423.png)
+
+
+
+
+
+
+
+##### findOneAndUpdate()
+
+　　fineOneAndUpdate()方法的第四个参数回调函数的形式如下function(err,doc){}
+
+```
+Model.findByIdAndUpdate(id, update, options, callback) // executes
+Model.findByIdAndUpdate(id, update, options)  // returns Query
+Model.findByIdAndUpdate(id, update, callback) // executes
+Model.findByIdAndUpdate(id, update)           // returns Query
+Model.findByIdAndUpdate()                     // returns Query
+```
+
+##### findByIdAndUpdate
+
+　　 fineByIdAndUpdate()方法的第四个参数回调函数的形式如下function(err,doc){}
+
+```
+Model.findOneAndUpdate([conditions], [update], [options], [callback])
+```
+
+##### find() + save()
+
+　　如果需要更新的操作比较复杂，可以使用find()+save()方法来处理，比如找到年龄小于30岁的数据，名字后面添加'30'字符
+
+```
+temp.find({age:{$lt:20}},function(err,docs){
+    //[ { _id: 5971f93be6f98ec60e3dc86d, name: 'wang', age: 10 },
+    //{ _id: 5971f93be6f98ec60e3dc86f, name: 'li', age: 12 }]
+    console.log(docs);
+    docs.forEach(function(item,index,arr){
+        item.name += '30';
+        item.save();
+    })
+    //[ { _id: 5971f93be6f98ec60e3dc86d, name: 'wang30', age: 10 },
+    // { _id: 5971f93be6f98ec60e3dc86f, name: 'li30', age: 12 }]
+    console.log(docs);
+});
+```
+
+##### findOne() + save()
+
+　　如果需要更新的操作比较复杂，可以使用findOne()+save()方法来处理，比如找到名字为'huochai'的数据，年龄加100岁
+
+
+
+```
+temp.findOne({name:'huochai'},function(err,doc){
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 10 }
+    console.log(doc);
+    doc.age += 100;
+    doc.save();
+    //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 110 }
+    console.log(doc);
+});
+```
+
+
+
+## 文档删除
+
+```
+remove()
+findOneAndRemove()
+findByIdAndRemove()
+deleteMany
+deleteOne
+```
+
+
+
+##### remove()
+
+　　remove有两种形式，一种是文档的remove()方法，一种是Model的remove()方法
+
+　　下面介绍Model的remove()方法，该方法的第一个参数conditions为查询条件，第二个参数回调函数的形式如下function(err){}　　
+
+```
+model.remove(conditions, [callback])
+```
+
+![img](img/740839-20170722115955136-435160244.png)
+
+　　删除数据库中名称包括'30'的数据
+
+```
+temp.remove({name:/30/},function(err){})
+```
+
+![img](img/740839-20170722120740730-207409461.png)
+
+　　[注意]remove()方法中的回调函数不能省略，否则数据不会被删除。当然，可以使用exec()方法来简写代码
+
+```
+temp.remove({name:/30/}).exec()
+```
+
+　　下面介绍文档的remove()方法，该方法的参数回调函数的形式如下function(err,doc){}
+
+```
+document.remove([callback])
+```
+
+　　删除数据库中名称包含'huo'的数据
+
+　　[注意]文档的remove()方法的回调函数参数可以省略
+
+
+
+```
+temp.find({name:/huo/},function(err,doc){
+    doc.forEach(function(item,index,arr){
+        item.remove(function(err,doc){
+            //{ _id: 5971f93be6f98ec60e3dc86c, name: 'huochai', age: 30 }
+            //{ _id: 5971f93be6f98ec60e3dc86e, name: 'huo', age: 60 }
+            console.log(doc);
+        })
+    })
+})  
+```
+
+
+
+![img](img/740839-20170722121538620-1318315817.png)
+
+
+
+##### deleteOne()
+
+```
+Dog.deleteOne( {name:'xiaohua'},callback)
+```
+
+##### deleteMany()
+
+```
+Dog.deleteMany( {_id:{$in:['5cecf36924298219842cd9c9','5cecf409aab26c113c1bd32f']}},callback)
+```
+
+##### findOneAndRemove()
+
+　　model的remove()会删除符合条件的所有数据，如果只删除符合条件的第一条数据，则可以使用model的findOneAndRemove()方法
+
+```
+Model.findOneAndRemove(conditions, [options], [callback])
+```
+
+conditions和potion和find格式一样 　　
+
+集合temps现有数据如下
+
+![img](img/740839-20170722122724527-1611550236.png)
+
+　　现在删除第一个年龄小于20的数据
+
+```
+temp.findOneAndRemove({age:{$lt:20}},function(err,doc){
+    //{ _id: 5972d3f3e6f98ec60e3dc873, name: 'wang', age: 18 }
+    console.log(doc);
+})
+```
+
+![img](img/740839-20170722123723214-1991458770.png)
+
+　　与model的remove()方法相同，回调函数不能省略，否则数据不会被删除。当然，可以使用exec()方法来简写代码
+
+```
+temp.findOneAndRemove({age:{$lt:20}}).exec()
+```
+
+##### findByIdAndRemove()
+
+```
+Model.findByIdAndRemove(id, [options], [callback])
+```
+
+![img](img/740839-20170722124111839-168768226.png)
+
+　　删除第0个元素
+
+
+
+```
+var aIDArr = [];
+temp.find(function(err,docs){
+    docs.forEach(function(item,index,arr){
+        aIDArr.push(item._id);
+    })
+    temp.findByIdAndRemove(aIDArr[0],function(err,doc){
+        //{ _id: 5972d754e6f98ec60e3dc882, name: 'huochai', age: 27 }
+        console.log(doc);
+    })            
+})
+```
+
+
+
+![img](img/740839-20170722124210105-1759533603.png)
+
+　　类似的，该方法也不能省略回调函数，否则数据不会被删除。当然，可以使用exec()方法来简写代码
+
+
+
+```
+var aIDArr = [];
+temp.find(function(err,docs){
+    docs.forEach(function(item,index,arr){
+        aIDArr.push(item._id);
+    })
+    temp.findByIdAndRemove(aIDArr[0]).exec()            
+})
+```
+
+
+
+![img](img/740839-20170722124335949-2088054111.png)
+
+ 
+
+
+
+# 数据库设计
+
+### 一对一
+
+例：夫妻
+
+```js
+db.WifeAndHusband.insert([
+   {
+       name:"黄蓉",husband:{name:"郭靖"}
+       },
+   {
+       name:"潘金莲",husband:{name:"武大郎"}
+       },
+])
+db.WifeAndHusband.find()
+```
+
+###  一对多关系建模
+
+非常多刚从传统SQL开发转向MongoDB开发的朋友都会问到一个问题：怎样用MongoDB表达传统关系数据库中的一对多（1 to n）关系？
+
+基于MongoDB丰富的表达力，我们不能说我们必须採用一个标准的方法来进行1 to n的建模。
+
+稍后我们从3个详细场景来展开解说。
+
+首先。我们将1 to n中的n进行场景细化。这个n到底代表多大的量级呢？是几个到几十个？还是几个到几千个？还是成千上万个？
+
+##### 1） 1 to n（n代表好几个。或几十个，反正不太多）
+
+比方每一个Person会有多个Address。此种情况下，我们採用最简单的嵌入式文档来建模。
+
+```js
+{
+  name: 'Kate Monster',
+  id: '123-456-7890',
+  addresses : [
+     { street: '123 Sesame St', city: 'Anytown', cc: 'USA' },
+     { street: '123 Avenue Q', city: 'New York', cc: 'USA' }
+  ]
+}
+```
+
+这样的建模的方式包括了显而易见的长处和缺点：
+
+长处：你不须要运行单独的查询就能够获得某个Person的全部Address信息。
+
+缺点：你无法像操作独立文档那样来操作Address信息。
+
+你必须首先操作（比方查询）Person文档后，才有可能继续操作Address。
+
+在本实例中，我们不须要对Address进行独立的操作。且Address信息仅仅有在关联到某一个详细Person后才有意义。所以结论是：採用这样的embedded（嵌入式）建模是很适合Person-Address场景的。
+
+##### 2）1 to n（n代表好些个，比方几十个。甚至几百个）
+
+###### 例1 零部件
+
+比方产品（Product）和零部件（part），每一个产品会有非常多个零部件。这样的场景下，我们能够採用引用方式来建模，例如以下：
+
+零部件（Part）：
+
+```
+{
+
+   _id : ObjectID('AAAA'),
+
+   partno : '123-aff-456',
+
+   name : '#4 grommet',
+
+  qty: 94,
+
+  cost: 0.94,
+
+  price: 3.99
+
+}
+
+ 
+```
+
+产品（Product）：
+
+```
+{
+    name : 'left-handed smoke shifter',
+    manufacturer : 'Acme Corp',
+    catalog_number: 1234,
+    parts : [     // array of references to Part documents
+        ObjectID('AAAA'),    // reference to the #4 grommet above
+        ObjectID('F17C'),    // reference to a different Part
+        ObjectID('D2AA'),
+        // etc
+    ]
+}
+```
+
+
+
+首先每一个part作为单独的文档存在。每一个产品中包括一个数组类型字段（parts），这个数组中存放的是全部该产品包括的零部件的编号（_id主键）。当你须要依据某一个产品编号查询该产品包括的全部部件信息时。你能够运行下面操作：
+
+
+
+```
+ product = db.products.findOne({catalog_number: 1234});
+   // Fetch all the Parts that are linked to this Product
+ product_parts = db.parts.find({_id: { $in : product.parts } } ).toArray() ;
+```
+
+这样的建模方式的优缺点也很明显：
+
+长处：部件是作为独立文档（document）存在的，你能够对某一部件进行独立的操作。比方查询或更新。
+
+缺点：如上，你必须通过两次查询才干找到某一个产品所属的全部部件信息。
+
+
+
+在本例中。这个缺点是能够接受的。本身实现起来也不难。并且，通过这样的建模，你能够轻易的将1 to n扩展到n to n。即一个产品能够包括多个部件，同一时候一个部件也能够被多个产品所引用（即同一部件能够被多个产品使用）。
+
+
+
+###### 例2： 用户-订单/文章-评论
+
+```
+db.users.insert([
+   {username:"swk"},{username:"zbj"}
+])
+db.order.insert({
+    list:["漫画","肉"],
+    user_id:ObjectId("5d48ef25c57dfb3261f4086c")
+})
+db.order.find()
+12345678
+```
+
+查找用户swk订单， 修改username 即可查询不同订单
+
+```
+var user_id = db.users.findOne({username:"zbj"})._id
+user_id
+db.order.find({user_id:user_id})
+```
+
+
+
+##### 3）1 to n（这个n代表非常大的数值，比方成千上万。甚至更大）
+
+比方。每个主机（host）会产生非常大数量的日志信息（logmsg）。
+
+在这样的情况下，假设你採用嵌入式建模，则一个host文档会非常庞大，从而轻易超过MongoDB的文档限制大小。所以不可行。假设你採用第二中方式建模，用数组来存放全部logmsg的_id值，这样的方式相同不可行。由于当日志非常多时，即使单单引用objectId也会轻易超过文档限制大小。所以此时，我们採用下面方式：
+
+
+
+```
+{
+    _id : ObjectID('AAAB'),
+    name : 'goofy.example.com',
+    ipaddr : '127.66.66.66'
+}
+ 
+```
+
+我们在logsmg中，存放对host的_id引用就可以。
+
+```
+{
+    time : ISODate("2014-03-28T09:42:41.382Z"),
+    message : 'cpu is on fire!',
+    host: ObjectID('AAAB')       // Reference to the Host document
+}
+```
+
+综上所述，在对1 to n关系建模时，我们须要考虑：
+
+1）n代表的数量级非常小。且n代表的实体不须要单独操作时，能够採用嵌入式建模。
+
+2）n代表的数量级比較大。或者n代表的实体须要单独进行操作时，採用在1中用Array存放引用的方式建模。
+
+3）n代表的数量级很大时，我们没有选择。仅仅能在n端加入一个引用到1端。
+
+### 多对多
+
+例：分类-商品/老师-学生*/
+
+产品
+
+```js
+const schema = new Schema({
+  // required 不能为空
+  name: { type: String, required: true }, 
+  tag: [{ type: Schema.Types.ObjectId, ref: 'Tag' }]
+})
+```
+
+tag
+
+```js
+
+
+const schema = new Schema({
+  title: { type: String, default: '' }
+})
+
+
+```
+
+查询指定tag的产品
+
+```js
+
+Dog.find({ tag: '5dd927451e520b21f0035d9a' }).exec(callback)
+
+```
+
+查询产品
+
+```
+Dog.findbyid()
+```
+
+
+
+### 树型结构
+
+
+![img](img/211752210493162.png)
+
+##### 第一种：父链接结构
+
+```
+db.categories.insert( { _id: "MongoDB", parent: "Databases" } )
+db.categories.insert( { _id: "dbm", parent: "Databases" } )
+db.categories.insert( { _id: "Databases", parent: "Programming" } )
+db.categories.insert( { _id: "Languages", parent: "Programming" } )
+db.categories.insert( { _id: "Programming", parent: "Books" } )
+db.categories.insert( { _id: "Books", parent: null } )
+```
+
+特征：
+
+1. 快速获取父节点：
+
+   db.categories.findOne( { _id: "MongoDB" } ).parent
+
+2. 方便创建父节点索引
+
+   db.categories.ensureIndex( { parent: 1 } )
+
+3. 通过查询父节点获取儿子节点
+
+   db.categories.find( { parent: "Databases" } )
+
+4. 需要多个查询来检索子树。
+
+##### 第二种：子链接结构
+
+```
+db.categories.insert( { _id: "MongoDB", children: [] } )
+db.categories.insert( { _id: "dbm", children: [] } )
+db.categories.insert( { _id: "Databases", children: [ "MongoDB", "dbm" ] } )
+db.categories.insert( { _id: "Languages", children: [] } )
+db.categories.insert( { _id: "Programming", children: [ "Databases", "Languages" ] } )
+db.categories.insert( { _id: "Books", children: [ "Programming" ] } )
+```
+
+特征：
+
+1. 快速获取儿子节点
+
+   db.categories.findOne( { _id: "Databases" } ).children
+
+2. 方便创建子节点索引
+
+   db.categories.ensureIndex( { children: 1 } )
+
+3. 通过查询儿子节点获取父节点
+
+   db.categories.find( { children: "MongoDB" } )
+
+4. 适合存储存储图,一个节点可能有多个父母。
+
+##### 第三种：祖先队列结构
+
+```
+db.categories.insert( { _id: "MongoDB", ancestors: [ "Books", "Programming", "Databases" ], parent: "Databases" } )
+db.categories.insert( { _id: "dbm", ancestors: [ "Books", "Programming", "Databases" ], parent: "Databases" } )
+db.categories.insert( { _id: "Databases", ancestors: [ "Books", "Programming" ], parent: "Programming" } )
+db.categories.insert( { _id: "Languages", ancestors: [ "Books", "Programming" ], parent: "Programming" } )
+db.categories.insert( { _id: "Programming", ancestors: [ "Books" ], parent: "Books" } )
+db.categories.insert( { _id: "Books", ancestors: [ ], parent: null } )
+```
+
+特征：
+
+1. 快速获取祖先
+
+   db.categories.findOne( { _id: "MongoDB" } ).ancestors
+
+2. 方便创建祖先节点索引
+
+   db.categories.ensureIndex( { ancestors: 1 } )
+
+3. 通过查询祖先来获取后代
+
+   db.categories.find( { ancestors: "Programming" } )
+
+4. 祖先模式略慢于物化路径模式
+
+##### 第四种：物化路径结构
+
+```
+db.categories.insert( { _id: "Books", path: null } )
+db.categories.insert( { _id: "Programming", path: ",Books," } )
+db.categories.insert( { _id: "Databases", path: ",Books,Programming," } )
+db.categories.insert( { _id: "Languages", path: ",Books,Programming," } )
+db.categories.insert( { _id: "MongoDB", path: ",Books,Programming,Databases," } )
+db.categories.insert( { _id: "dbm", path: ",Books,Programming,Databases," } )
+```
+
+特征：
+
+1. 通过查询检索排序
+
+   db.categories.find().sort( { path: 1 } )
+
+2. 快速查找子节点
+
+   db.categories.find( { path: /^,Books,/ } ) db.categories.find( { path: /^,Books,/ } )
+
+3. 为路径创建索引
+
+   db.categories.ensureIndex( { path: 1 } )
+
+##### 第五种：集合模型
+
+![img](img/211752398462904.png)
+
+```
+db.categories.insert( { _id: "Books", parent: 0, left: 1, right: 12 } )
+db.categories.insert( { _id: "Programming", parent: "Books", left: 2, right: 11 } )
+db.categories.insert( { _id: "Languages", parent: "Programming", left: 3, right: 4 } )
+db.categories.insert( { _id: "Databases", parent: "Programming", left: 5, right: 10 } )
+db.categories.insert( { _id: "MongoDB", parent: "Databases", left: 6, right: 7 } )
+db.categories.insert( { _id: "dbm", parent: "Databases", left: 8, right: 9 } )
+```
+
+特征：
+
+1. 快速获取子节点
+
+   var databaseCategory = db.categories.findOne( { _id: "Databases" } ); db.categories.find( { left: { $gt: databaseCategory.left }, right: { $lt: databaseCategory.right } } );
+
+2. 内容修改很低效适合静态树。
+
+ 
+
+
+
+# 常见错误
+
+### 控制器
+
+##### 忘记写await
+
+![1569377483274](img/1569377483274.png)
+
+![1569374563937](img/1569374563937.png)
+
+
+
+##### 路由写错了
+
+![1569378350466](img/1569378350466.png)
+
+### model
+
+##### model检测字段类型和字段值不匹配
+
+浏览器gets时将不会获取不匹配的字段值
+
+![1570457907265](img/1570457907265.png)
+
+
+
+
+
+
+
+添加新数据会出问题,删除旧数据也会出问题,原因看下图
+
+![1569478314515](img/1569478314515.png)
+

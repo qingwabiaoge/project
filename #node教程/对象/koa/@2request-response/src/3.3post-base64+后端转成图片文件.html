@@ -23,7 +23,6 @@
   image.src = img;
   image.onload = function () {
     var base64 = getBase64Image(image);
-    console.log(base64)
     axios.post('http://localhost:3000/api/base64/', {base64}).then((res) => {
 
       //做处理
