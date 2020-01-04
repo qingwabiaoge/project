@@ -1,11 +1,3 @@
-# 关系
-
-| 标识符                                        | 基本类型验证<br />boolen,:string,:number,:T | 一组基本类型验证的组合<br />:myInterface |
-| --------------------------------------------- | ------------------------------------------- | ---------------------------------------- |
-| 基本类型标识符                                | √                                           |                                          |
-| 引用类型 标识符                               | √                                           | √                                        |
-| class标识符<br />*class作用:生成指定格式对象* | √                                           | √                                        |
-
 # 变量基本类型
 
 ### :boolean
@@ -63,43 +55,49 @@ let n: null = null;
 
 ### 枚举类型变量
 
-更像数字类型和字符串类型限制了取值范围
+`enum`类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，==使用枚举类型可以为一组数值赋予友好的名字==。
 
 ```ts
- enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-console.log(Direction.Up)//0
-
+enum Color {Red, Green, Blue}
+let c: Color = Color.Green;
 ```
+
+默认情况下，从`0`开始为元素编号。 你也可以手动的指定成员的数值。 例如，我们将上面的例子改成从 `1`开始编号：
 
 ```ts
- enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-console.log(Direction.Up)//1
-
+enum Color {Red = 1, Green, Blue}
+let c: Color = Color.Green;
 ```
+
+或者，全部都采用手动赋值：
+
+```ts
+enum Color {Red = 1, Green = 2, Blue = 4}
+let c: Color = Color.Green;
+```
+
+枚举类型提供的一个便利是你可以由枚举的值得到它的名字。 例如，我们知道数值为2，但是不确定它映射到Color里的哪个名字，我们可以查找相应的名字：
+
+```ts
+enum Color {Red = 1, Green, Blue}
+let colorName: string = Color[2];
+
+console.log(colorName);  // 显示'Green'因为上面代码里它的值是2
+```
+
+字符串也是可以的
 
 ```ts
 enum Direction {
-  Up = "UP",
-  Down = "DOWN",
-  Left = "LEFT",
-  Right = "RIGHT",
+  Up = "PressUpkey",
+  Down = "PressDownKkey",
+  Left = "PressLeftKkey",
+  Right = "PressRightkey",
 }
 
 console.log(Direction.Up)
 
 ```
-
-
 
 ### 元组 Tuple变量
 
@@ -122,7 +120,7 @@ let arrString:string[] = ['1', '2', '3']
 let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
 ```
 
-### ==数组标识符的带接口带泛型的写法==
+### ==数组标识符2-> 的带泛型的接口的写法==
 
 ```ts
 let arr:Array<number>=[1,2,3]
@@ -178,8 +176,6 @@ interface LabelledValue {
 }
 
 ```
-
-
 
 ### 接口继承接口
 
@@ -258,7 +254,7 @@ let obj: { a?: number, b?: number }
 obj = {a: 1, },
 ```
 
-### 带接口	
+### 接口	
 
 ```ts
 interface LabelledValue {
@@ -332,7 +328,7 @@ console.log(p1)
 
 ```
 
-###### ==带接口带泛型==
+###### ==带泛型的接口==
 
 ```ts
 interface LabelledValue<T> {
@@ -350,7 +346,7 @@ printLabel(myObj);
 
 # 可索引的类型
 
-### 带接口
+### 接口
 
 ```js
 interface NumberArr{
@@ -384,7 +380,7 @@ let myStr: string = myArray[0];
 
 ```
 
-###### ==带接口带泛型==
+###### ==带泛型的接口==
 
 ```ts
 interface StringArray<T> {
@@ -420,7 +416,7 @@ function(x: number, y: number) {
 };
 ```
 
-###### ==带泛型==
+###### ==带泛型的函数==
 
 ```ts
 function identity<T>(arg: T): T { 
@@ -461,7 +457,7 @@ getProperty(obj, 'a') // success
 
 ```
 
-### 带接口
+### 接口
 
 ```ts
 interface SearchFunc { //函數類型接口
@@ -483,7 +479,7 @@ mySearch = function (src: string, sub: string): boolean {
 
 ```
 
-###### ==带接口带泛型==
+###### ==带泛型的接口==
 
 ```ts
 interface GenericIdentityFn {
@@ -498,23 +494,23 @@ let myIdentity: GenericIdentityFn = function (m) {
 
 ```
 
-```
+```ts
 interface GenericIdentityFn<T> {
   (arg: T): T;
 }
 
-let myIdentity: GenericIdentityFn<number> = function (arg) {
+let myIdentity: GenericIdentityFn<string> = function (arg) {
   return arg
 };
 
-const i: number = myIdentity(1)
+const i: string = myIdentity('1')
 console.log(i)
 
 ```
 
 
 
-# 匿名函数复制
+# 匿名函数
 
 为myAdd变量设置类型检测
 
@@ -544,9 +540,7 @@ let myAdd: (x: number, y: number) => number
 console.log(myAdd(1,2))
 ```
 
-
-
-######    ==带泛型==
+######    ==带泛型的接口==
 
 ```js
 let myIdentity= function <T>(arg: T): T {
@@ -566,8 +560,6 @@ let myIdentity: { <T>(arg: T): T } = function <T>(arg: T): T {
 console.log(myIdentity<number>(1))
 
 ```
-
-
 
 # 类
 
@@ -747,7 +739,7 @@ dog.bark();
 
 ```
 
-###### ==泛型类==
+###### ==带泛型的类==
 
 ```ts
 class GenericNumber<T> {
@@ -760,7 +752,7 @@ myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function(x, y) { return x + y; };
 ```
 
-### 带接口
+### 类实现接口
 
 ```ts
 interface ClockInterface {
@@ -838,7 +830,7 @@ let analog = createClock(AnalogClock, 7, 32);
 
 ```
 
-###### ==带接口带泛型==
+###### ==带泛型的接口==
 
 ```ts
 interface ClockInterface<T> {
@@ -854,9 +846,7 @@ class Clock implements ClockInterface<Date> {
 
 ```
 
-
-
-### 类带多个接口
+### 类实现多个接口
 
 ```js
 interface InterfaceOne {
@@ -947,8 +937,5 @@ let strLength: number = (someValue as string).length;
 ```
 
 两种形式是等价的。 至于使用哪个大多数情况下是凭个人喜好；然而，当你在TypeScript里使用JSX时，只有 `as`语法断言是被允许的。
-
-
-
 
 

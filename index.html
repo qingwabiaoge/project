@@ -1,31 +1,13 @@
+<input type="file" id="btn" accept="image/*" value="upload"/>
+<img id="img"/>
+
 <script>
 
-  import Validator from 'async-validator'
-
-  // 规则的描述
-  const rules = {
-    name: { type: 'string', required: true }
-  }
-
-  // 根据规则生成验证器
-  const validator = new Validator(rules)
-
-  // 要验证的数据源
-  const source = {
-    name: 'LanTuoXie'
-  }
-
-  // 验证后的回调函数
-  function callback (errors, fileds) {
-    if (errors) {
-      // 验证不通过，errors是一个数组，记录那些不通过的错误信息
-      // fileds是所有数据源的字段名，也即上面的source的'name'
-      // 验证是根据字段名来的，rules.name 对应 source.name。 字段名要一样才会验证
-    }
-    // 下面是验证通过的逻辑
-  }
-
-  // 验证数据源是否符合规则
-  validator.validate(source, callback)
+  btn.addEventListener('change', function () {
+    console.log({btn})
+    let file = this.files[0];
+    //本地对象缩略图
+    img.src = URL.createObjectURL(file)
+  })
 
 </script>

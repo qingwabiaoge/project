@@ -1,4 +1,4 @@
-# document对象(js模拟视图)
+# document对象(对象数据实现存储和改变html)
 
 代表整个文档 
 
@@ -160,7 +160,7 @@ var el = document.createElement("A");
 
 
 
-# doument的节点对象的状态
+# document的节点对象的状态
 
 ##### 通过属性访问当前节点的父、子和同胞
 
@@ -475,17 +475,9 @@ event.target===el
 
 ```
 
-# DOM节点事件
 
 
-
-## HTML DOM 事件
-
->  HTML DOM 事件允许Javascript在HTML文档元素中注册不同事件处理程序。
->
-> 事件通常与函数结合使用，函数不会在事件发生前被执行！ (如用户点击按钮)。
->
-> **提示：** 在 W3C 2 级 DOM 事件中规范了事件模型。 
+# document节点的事件
 
 ## 鼠标事件
 
@@ -500,7 +492,15 @@ event.target===el
 | [onmousemove](https://www.runoob.com/jsref/event-onmousemove.html) | 鼠标移动                    | 鼠标被移动。                           | 2    |
 | [onmouseover](https://www.runoob.com/jsref/event-onmouseover.html) | 鼠标移动某元素上---指定某个 | 鼠标移到某元素之上。                   | 2    |
 | [onmouseout](https://www.runoob.com/jsref/event-onmouseout.html) | 鼠标从某元素移开            | 鼠标从某元素移开。                     | 2    |
-| [onmouseup](https://www.runoob.com/jsref/event-onmouseup.html) | 松开                        | 鼠标按键被松开。                       |      |
+| [onmouseup](https://www.runoob.com/jsref/event-onmouseup.html) | 松开                        | 鼠标按键被松开。                       | 2    |
+
+ 
+
+ 
+
+ 
+
+ 
 
 ## 键盘事件
 
@@ -509,6 +509,8 @@ event.target===el
 | [onkeydown](https://www.runoob.com/jsref/event-onkeydown.html) | 某个键盘按键被按下。       | 2    |
 | [onkeypress](https://www.runoob.com/jsref/event-onkeypress.html) | 某个键盘按键被按下并松开。 | 2    |
 | [onkeyup](https://www.runoob.com/jsref/event-onkeyup.html)   | 某个键盘按键被松开。       | 2    |
+
+ 
 
 ## 框架/对象（Frame/Object）事件
 
@@ -524,6 +526,8 @@ event.target===el
 | [onresize](https://www.runoob.com/jsref/event-onresize.html) | 窗口或框架被重新调整大小。                                   | 2    |
 | [onscroll](https://www.runoob.com/jsref/event-onscroll.html) | 当文档被滚动时发生的事件。                                   | 2    |
 | [onunload](https://www.runoob.com/jsref/event-onunload.html) | 用户退出页面。 ( <body> 和 <frameset>)                       | 2    |
+
+ 
 
 ## 表单事件
 
@@ -622,31 +626,7 @@ event.target===el
 | [ontoggle](https://www.runoob.com/jsref/event-ontoggle.html) | 该事件在用户打开或关闭 <details> 元素时触发                  |      |
 | [onwheel](https://www.runoob.com/jsref/event-onwheel.html)   | 该事件在鼠标滚轮在元素上下滚动时触发                         |      |
 
-## 目标事件对象
 
-### 方法
-
-| 方法                  | 描述                                                    | DOM  |
-| --------------------- | ------------------------------------------------------- | ---- |
-| addEventListener()    | 允许在目标事件中注册监听事件(IE8 = attachEvent())       | 2    |
-| dispatchEvent()       | 允许发送事件到监听器上 (IE8 = fireEvent())              | 2    |
-| removeEventListener() | 运行一次注册在事件目标上的监听事件(IE8 = detachEvent()) | 2    |
-
-## 事件监听对象
-
-### 方法
-
-| 方法          | 描述                         | DOM  |
-| ------------- | ---------------------------- | ---- |
-| handleEvent() | 把任意对象注册为事件处理程序 | 2    |
-
-## 文档事件对象
-
-### 方法
-
-| 方法          | 描述 | DOM  |
-| ------------- | ---- | ---- |
-| createEvent() |      | 2    |
 
 ## 鼠标/键盘事件对象
 
@@ -677,6 +657,380 @@ event.target===el
 | initMouseEvent()    | 初始化鼠标事件对象的值 | 2    |
 | initKeyboardEvent() | 初始化键盘事件对象的值 | 3    |
 
- 
 
-1、路在何方？ 路在脚下 2、何去何从？ 每个人都在探索，未来的方向在何处。如果说某些方向是世人已经公认的，那么就先按照公认的去走吧（ps:站在巨人的肩膀上看世界会清晰）。 如果说方向，当今世人还不清晰准确。那么就大胆往前走吧，对与错并不重要。心中的方向更加重要。
+
+# 为dom事件(方法)添加/删除处理函数
+
+三种方式为DOM元素的事件的书写处理函数
+
+```html
+<!--方式1，
+双引号里可以放任何语句,
+this===当前dom对象
+优势可以自定义传参
+-->
+<button onmouseover="fn()" id="btn">btn</button>
+
+
+<script>
+
+  function fn() {
+    //event 其实是window全局变量,注意不是global
+    console.log(window.event)
+  }
+  const el = document.getElementById('btn')
+
+
+
+  //方式2
+    el.onmouseout = fn
+
+
+
+    //方式3
+    el.addEventListener('click', fn, false)
+    setTimeout(() => {
+            el.removeEventListener("click", fn, false);  //有效！
+        }, 3000
+    )
+
+</script>
+
+```
+
+![image-20191209013551481](img/image-20191209013551481.png)
+
+
+
+![](img/image-20191209013500963.png)
+
+# Event
+
+事件动作的数字化
+
+## 创建实例化对象
+
+##### 1 浏览器会自动实例化对象event 并注入到global.event
+
+```html
+<button onclick="fn(),fn(event),console.log(event)" id="btn">btn</button>
+
+
+<script>
+
+    console.log(event) //undifine也不是err 说明event声明过,事件操作只是为event赋值
+
+    function fn() {
+        console.log(event)
+        //event 其实是window全局变量,注意不是global
+        console.log(window.event)
+
+    }
+
+
+</script>
+
+```
+
+##### 2 `evt1=new  Event('build' )`
+
+## 实例化对象
+
+![](./img/a.png)
+
+### 常量
+
+| 静态变量        | 描述                                 |
+| --------------- | ------------------------------------ |
+| CAPTURING-PHASE | 当前事件阶段为捕获阶段(1)            |
+| AT-TARGET       | 当前事件是目标阶段,在评估目标事件(1) |
+| BUBBLING-PHASE  | 当前的事件为冒泡阶段 (3)             |
+
+### 属性
+
+| 属性                                                         | 描述                                           |
+| ------------------------------------------------------------ | ---------------------------------------------- |
+| [bubbles](https://www.runoob.com/jsref/event-bubbles.html)   | 返回布尔值，指示事件是否是起泡事件类型。       |
+| [cancelable](https://www.runoob.com/jsref/event-cancelable.html) | 返回布尔值，指示事件是否可拥可取消的默认动作。 |
+| [currentTarget](https://www.runoob.com/jsref/event-currenttarget.html) | 返回其事件监听器触发该事件的元素。             |
+| eventPhase                                                   | 返回事件传播的当前阶段。                       |
+| [target](https://www.runoob.com/jsref/event-target.html)     | 返回触发此事件的元素（事件的目标节点）。       |
+| [timeStamp](https://www.runoob.com/jsref/event-timestamp.html) | 返回事件生成的日期和时间。                     |
+| [type](https://www.runoob.com/jsref/event-type.html)         | 返回当前 Event 对象表示的事件的名称。          |
+
+### 方法
+
+| 方法              | 描述                                     |
+| ----------------- | ---------------------------------------- |
+| initEvent()       | 初始化新创建的 Event 对象的属性。        |
+| preventDefault()  | 通知浏览器不要执行与事件关联的默认动作。 |
+| stopPropagation() | 不再派发事件。                           |
+
+##### initEvent()
+
+[见下方触发dom事件](#触发DOM事件)
+
+##### preventDefault()
+
+阻止默认
+
+```html
+<meta charset="UTF-8">
+
+<div class="app">
+
+
+  <a onclick="stopDefault(event)" href="http://baidu.com"> 原始阻止默认</a> <br>
+</div>
+<script>
+
+  function stopDefault() {
+
+    event.preventDefault()
+    console.log('onlick')
+  }
+
+</script>
+
+```
+
+##### stopPropagation()
+
+```html
+<ul onclick="alert('ul')">
+
+  <li onclick="stopPropagation() ;  alert('li')">
+    li
+  </li>
+
+</ul>
+
+<script>
+  function stopPropagation(e) {
+
+    e = e || window.event
+    if (e.stopPropagation) { //W3C阻止冒泡方法
+      e.stopPropagation()
+    } else {
+      e.cancelBubble = true //IE阻止冒泡方法
+    }
+  }
+</script>
+
+```
+
+# Dom事件(方法)和event对象的关系
+
+## 方法和参数的关系
+
+```js
+el.onclick=event=>{}//onclick方法做什么   event 谁去做做参数
+```
+
+## 触发DOM事件
+
+| 事件种类       | 新建-Envet实例(数字化动作,el方法的参数,  对象格式 谁去做）   | 为DOM元素的事件的书写处理函数（el方法的函数体  做什么） | 派发事件（el的函数体）              |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- | ----------------------------------- |
+| **原生事件**   | 浏览器会自动实例化对象event 并注入到global.event             | 三种方式可以为DOM元素的事件的书写处理函数见下边de代码   | 鼠标键盘点击 /el.dispatchEvent(evt) |
+| **自定义事件** | `event1=new  Event('build' )`或<br />`var evt = document.createEvent('Event');                evt.initEvent(type,true,true);` | el.addEventListener( 'build',function(){ })             | el.dispatchEvent(evt)               |
+
+### 原生事件+键盘鼠标触发
+
+鼠标键盘触发
+
+### 原生事件+程序触发
+
+```html
+<button id="click">Click me!</button>
+
+<script type="text/javascript">
+window.onload = function () {
+  var btn = document.querySelector('#click')
+  //绑定事件
+  btn.addEventListener('click', function (e) {
+    alert('okk!')
+  }, false)
+
+  var e = new Event('click')
+  btn.dispatchEvent(e)
+  console.log(e)
+}
+</script>
+
+
+```
+
+### 自定义事件+程序触发
+
+dispatchEvent() 方法给节点分派(分给)一个==合成事件==。
+
+##### 第1种方式：
+
+document.creatEvent-------evt.initEvent--------el.dispatchEvent
+
+1. createEvent（eventType）
+
+该方法将创建一种新的事件类型，该类型由参数 *eventType* 指定。注意，该参数的值不是要创建的事件接口的名称，而是定义那个接口的 DOM 模块的名称。
+
+参数：dom的eventType 共5种类型：
+  Events ：包括所有的事件.
+
+```js
+     HTMLEvents：包括 'abort', 'blur', 'change', 'error', 'focus', 'load', 'reset', 'resize', 'scroll', 'select',
+                  'submit', 'unload'. 事件
+     UIEevents ：包括 'DOMActivate', 'DOMFocusIn', 'DOMFocusOut', 'keydown', 'keypress', 'keyup'.
+                 间接包含 MouseEvents.
+     MouseEvents：包括 'click', 'mousedown', 'mousemove', 'mouseout', 'mouseover', 'mouseup'.
+     MutationEvents:包括 'DOMAttrModified', 'DOMNodeInserted', 'DOMNodeRemoved',
+                   'DOMCharacterDataModified', 'DOMNodeInsertedIntoDocument',
+                   'DOMNodeRemovedFromDocument', 'DOMSubtreeModified'.
+```
+
+```js
+ 
+  onload 事件会在页面或图像加载完成后立即发生
+    支持onload事件的标签 <body>, <frame>, <frameset>, <iframe>, <img>, <link>, <script>
+ 
+  window.onload = function () {
+  // 当页面加载完成执行
+  // 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
+}
+```
+
+```js
+//## ==onunload==
+
+
+window.onunload = function () {
+  // 当用户退出页面时执行
+}
+
+
+
+
+```
+
+
+
+2. 在createEvent后必须初始化，为大家介绍5种对应的初始化方法
+
+>  HTMLEvents 和 通用 Events：
+>    **initEvent**( 'type', bubbles, cancelable )
+>  UIEvents ：
+>     **initUIEvent**( 'type', bubbles, cancelable, windowObject, detail )
+>  MouseEvents：
+>     **initMouseEvent**( 'type', bubbles, cancelable, windowObject, detail, screenX, screenY,
+>         clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget )
+>  MutationEvents ：
+>     **initMutationEvent**( 'type', bubbles, cancelable, relatedNode, prevValue, newValue, attrName, attrChange )
+
+
+
+3. dispatchEvent(eventObj),
+
+​       btn.dispatchEvent(eventObj ) 触发谁的事件
+
+​       eventObj 参数是一个描述事件的 ActionScript 对象
+
+==还可用自定义函数控制谁触发==
+
+在调用 dispatchEvent() 方法之前，必须在代码中对其进行声明，此外，还必须创建一个事件对象以传递给 dispatchEvent()。该事件对象包含侦听器可用来处理该事件的有关信息。
+
+eg
+
+```html
+<a href="/cs" id="a">ceshi</a>
+
+<script>
+
+var el = document.getElementById('a')
+//建立和初始化event,推测等同于 new Envent===============
+var evt = document.createEvent('MouseEvents')
+evt.initMouseEvent('click', true, true, window, 1, 12, 345, 7, 220, false, false, true, false, 0, null)
+//派发(发送类似$emit和$store.dispatch())事件
+el.dispatchEvent(evt)
+console.log(evt)
+</script>
+
+
+```
+
+eg
+
+```js
+var rect={   dispatch : function(el ,type){
+
+        try{
+
+            if(el.dispatchEvent){
+
+                var evt = document.createEvent('Event');
+
+                evt.initEvent(type,true,true);
+
+                el.dispatchEvent(evt);
+
+            }else if(el.fireEvent){
+
+                el.fireEvent('on'+type);
+
+            }
+
+        }catch(e){};
+
+    }};
+
+```
+
+##### 第2种方式
+
+new Event-------------el.dispatchEvent(newEvent )
+
+```html
+<meta charset="UTF-8">
+<div id="app">
+
+</div>
+
+<script type="text/javascript">
+/* 创建一个事件对象，名字为newEvent，类型为build */
+var newEvent = new Event('build', { bubbles: true, cancelable: true, composed: true })
+
+/* 给这个事件对象创建一个属性并赋值 */
+newEvent.name = '新的事件！'
+
+/* 建立事件处理函数 */
+app.addEventListener('build', function () {
+  alert('你触发了自定义事件！' + newEvent.name)
+}, false)
+
+/* 触发自定义事件 */
+app.dispatchEvent(newEvent)
+console.log(newEvent)
+</script>
+
+
+```
+
+new MouseEvent(Event的子类)+el.dispatch( )
+
+```html
+<input type="file">
+
+<button onclick="fn()">button</button>
+<script>
+
+
+const el = document.getElementsByTagName('input')[0]
+
+function fn () {
+  //注册鼠标事件
+  const browseEvent=new MouseEvent('click')
+  el.dispatchEvent(browseEvent)
+  console.log(browseEvent)
+}
+</script>
+
+
+```
+

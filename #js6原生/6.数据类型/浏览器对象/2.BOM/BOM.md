@@ -53,15 +53,11 @@ let i=0
 
 
     function stop() {
-
         clearInterval(interval); //关闭计时器
-
     }
 
 </script>
 </body>
-
-
 ```
 
 ## alert()
@@ -75,10 +71,6 @@ let i=0
 ```js
   window.open("http://www.runoob.com");
 ```
-
-## replace( )
-
- 替换新的网址
 
 # 属性
 
@@ -106,12 +98,12 @@ console.log('win-outerWidth', outerWidth)
 
 ![1574875632310](img/1574875632310.png)
 
-## location
+## location(地址)
 
 ##### location.href  读取和设置本窗口的地址
 
 ```js
-  window.location.href = "http://www.baidu.com"
+location.href = "http://www.baidu.com"
 ```
 
 ##### location.reload()
@@ -120,7 +112,9 @@ console.log('win-outerWidth', outerWidth)
 
 ##### location.replace
 
+```js
 location.replace(“http://www.baidu.com”)
+```
 
 ## navigator
 
@@ -128,7 +122,7 @@ location.replace(“http://www.baidu.com”)
 
 对象 记录浏览类型/内核/操作系统等信息
 
-```
+```js
 navigator.userAgent
 ```
 
@@ -286,7 +280,13 @@ navigator.userAgent
 
 ## URL
 
-##### URL.createObjectURL()
+##### URL.createObjectURL()   
+
+创建本地缩略图 
+
+参数:文件
+
+返回:本地缩略图的地址字符串
 
 ```html
 <input type="file" id="btn" accept="image/*" value="upload"/>
