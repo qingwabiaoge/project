@@ -10,6 +10,8 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 ### gmi修饰符:
 
+new  RegExp)( )的参数
+
 /g [英]globe: 全局匹配
 
 /m [英]multi-line :多行匹配
@@ -23,8 +25,8 @@ var reg = new RegExp('hello','g');   //代替/hello/g
     const reg_ = /^QIn/gmi
 
 
-    console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined]
-    console.log(str.match(reg_))//["qin", "qin"]
+    console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined],匹配第一个符合正则的字符串
+    console.log(str.match(reg_))//["qin", "qin"] ,可以用于知道匹配的数量
 
 
     console.log(str.replace(reg, 'wang')) //wangshilei↵qinshiwei
@@ -34,7 +36,7 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 
     console.log(str.search(reg)) //0
-    console.log(str.search(reg_))//0   //****唯一\g修饰符无效的,search只搜索的第一个词
+    console.log(str.search(reg_))//0   //**唯一\g修饰符无效的,search到第一个词就停止
 
 
     console.log(reg.test(str))//true
@@ -42,11 +44,13 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 
     console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  ,和str.match(reg)返回结果相同
-    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个,而不是所有
+    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个匹配,而不是所有
 ```
 
+### 替代单个字符
 
-###  转意字符匹配若干范围(单字符)
+####  转意字符匹配若干范围(单字符)
+
 ```
  . 代表任意字符   \. 表示真实的.
 
@@ -70,7 +74,7 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 ```
 
-### 自定义匹配(单字符) 
+#### 自定义匹配(单字符) 
 
 #####  [-] 自定义匹配范围 
 
@@ -86,7 +90,7 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 [^ 0-3 ]匹配 4，5，6，7，8，9
 
-### 匹配位置$ ^
+### $ ^匹配位置
 
 匹配输入字符串的结尾位置。
 
@@ -100,7 +104,7 @@ console.log(reg.exec(str)) //['lei']
 
 ```
 
-如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。
+如果设置了 RegExp 对象的 Multiline 属性，则 $ ^也匹配 '\n' 或 '\r'。
 
 ```js
   var str = 'qinshilei\nqinshilei'
@@ -123,18 +127,8 @@ console.log(reg.exec(str)) //['lei']
  runoo * b，可以匹配 runob、runoob、runoooooob 等，* 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。
 
 
-##### {}
-{}一般用来表示匹配的长度，
 
-\s{3} 表示匹配三个空格，
-
-\s{1,3}表示匹配一到三个空格。
-
-o{,3}
-
-(a|b){3,}
-
-##### 贪婪模式和懒惰模式?
+##### * +贪婪模式和?懒惰模式
 
 ###### 贪婪模式* +
 
@@ -162,8 +156,21 @@ console.log(reg.exec(str))
 
 ```
 
+##### {}自定义次数
+
+{}一般用来表示匹配的长度，
+
+\s{3} 表示匹配三个空格，
+
+\s{1,3}表示匹配一到三个空格。
+
+o{,3}
+
+(a|b){3,}
 
 ### ( )
+
+#### 分组+捕获
 
 ##### ( )分组捕获
 
@@ -192,7 +199,7 @@ console.log(reg.exec(str))
    [0: "doubi is a doubi" 1: "doubi"]
    ```
 
-​           **访问捕获的内容**     
+ *访问捕获的内容*     
 
 1. reg.exec('xxx')[1]
 
@@ -217,9 +224,11 @@ console.log(reg.exec(str))
 
 ```
 
+#### 分组+不捕获
+
 ##### (?:)分组不捕获
 
-只起到分组的作用exec时不捕获了
+只起到分组的作用exec时不捕获独数组第二个值
 
 ```js
 
@@ -234,7 +243,7 @@ console.log(reg.exec(str))
 
 ##### (?=)  分组不捕获前瞻
 
-1.分组2 .前瞻往前看一下是否有相等的值,有则返回true
+1.分组 2 .前瞻往前看一下是否有相等的值,有则reg.test( )返回true
 
 ```js
 //开头就前瞻
@@ -251,7 +260,7 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
 
 #####  (?!)  分组不捕获前瞻否定
 
-分组 往前看一下是否有不相等的值,有则返回true
+1.分组 2.往前看一下是否有不相等的值,有则reg.test( )返回true
 
 ```js
 
@@ -265,6 +274,8 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
 
 #####   (?<=)分组不捕获后瞻
 
+1.分组 2 .后瞻往后看一下是否有相等的值,有则reg.test( )返回true
+
 ```js
  const reg = /(?<=doubi)\sme/
 
@@ -276,6 +287,8 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
 
 ##### (?<!) 分组不捕获后瞻否定
 
+1.分组 2 .后瞻往后看一下是否有不相等的值,有则reg.test( )返回true
+
 ```js
   const reg = /(?<!doubi)\sme/
 
@@ -285,7 +298,7 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
   console.log(reg.exec('kid is a shabi me'))// [" me", index: 14, input: "kid is a shabi me", groups: undefined]
 ```
 
-# 实例的键值对和表达式
+# 实例
 
 ![1570960003705](img/1570960003705.png)
 
@@ -295,31 +308,7 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
 
 ##### test exec
 
-test表示是否匹配 exec获得匹配的值
-
-reg.test(str),reg. exec(str)匹配第一个就结束
-
-```javascript
-const reg = /[1-2]/
-const str = 'a123'
-
-//1.reg匹配部分字符串就为ture
-const i = reg.test(str) //true
-//2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
-const arr = reg.exec(str) //[ '1', index: 1, input: 'a123', groups: undefined ]
-```
-
-reg_g.test(str), reg_g. exec(str) 
-
-```js
-  const reg = /[1-2]/g
-  const str = 'a123'
-
-  //1.reg匹配部分字符串就为ture
-  const i = reg.test(str) //true
-  //2.reg匹配部分字符串 并把第一个匹配的部分放到返回值的数组arr0,括号捕获放到数组arr1
-  const arr = reg.exec(str) //["2", index: 2, input: "a123", groups: undefined]
-```
+见上方gmi修饰符
 
 若reg.test判定为true, reg.exe(str)才不是undifined 
 
@@ -365,13 +354,6 @@ QQ号：[1-9][0-9]{4,9}
     var str = '将一个用户输入的一段文字中的url替换成可以点击的link地址。测试一下：http://www.ablanxue.com紧接着中文，还有    http://www.baidu.com';
     document.write(replaceReg(reg, str));
 
-```
-
-# 常见错误
-正则在部分代码里必须使用new RegExp _否则无效_
-
-```
- const filter=new RegExp(this.filter)
 ```
 
 

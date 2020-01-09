@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+  A{{msg}}
+  <component-b :msg="msg"></component-b>
+</div>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      msg: '100'
+    },
+    components: {
+      'ComponentB': {
+        template: `<div>B<component-c v-bind="$attrs"></component-c></div>`,
+        components: {
+          'ComponentC': {
+            //注册prop 父级和爷爷级别不用prop
+            props: ['msg'],
+            template: '<div>C{{msg}}</div>'
+          }
+        }
+      },
+
+    }
+  })
+</script>
+

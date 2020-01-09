@@ -74,7 +74,7 @@ let i=0
 
 # 属性
 
-## *outerWidth*-innerHeight
+## *outerWidth*/innerHeight
 
 ```
 console.log('win-innerWidth', innerWidth)
@@ -110,7 +110,7 @@ location.href = "http://www.baidu.com"
 
 刷新页面
 
-##### location.replace
+##### location.replace()
 
 ```js
 location.replace(“http://www.baidu.com”)
@@ -335,3 +335,7 @@ console.log(i.a)
 ```
 event.target===el
 ```
+
+## duocment
+
+见目录

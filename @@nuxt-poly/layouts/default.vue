@@ -24,10 +24,18 @@
                 :visible.sync="drawer"
                 :direction="direction"
                >
-            <el-nav mode="horizontal ">
+
+            <el-nav mode="vertical">
 
             </el-nav>
         </el-drawer>
+
+<!--      <el-drawer-->
+<!--        title="我是标题"-->
+<!--        :visible.sync="drawer"-->
+<!--        :with-header="false">-->
+<!--        <span>我来啦!</span>-->
+<!--      </el-drawer>-->
 
         <el-backtop target=".infinite-list"></el-backtop>
     </div>

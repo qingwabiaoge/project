@@ -1,4 +1,4 @@
-# document对象(对象数据实现存储和改变html)
+# document对象(对象存储和改变html)
 
 代表整个文档 
 
@@ -44,22 +44,26 @@ document.location===window.location
 
 # document.cookie
 
-> JavaScript 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
+JavaScript 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
 
-##### JavaScript 中，创建 cookie 如下所示：
+JavaScript 中，创建 cookie 如下所示：
 
 
 ```
 document.cookie="username=John Doe";
 ```
 
-##### 您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：
+您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：
 
 ```
 document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
 ```
 
-##### 您可以使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。
+您可以使用 path 参数告诉浏览器 cookie 的路径。**默认情况下，cookie 属于当前页面**。
+
+```
+document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+```
 
 1、服务器端每次访问的cookie是每次请求头中发送给服务器端的
 
@@ -68,10 +72,6 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
 3、setcookie如果不设置路径，默认为当前页面的路径，父亲路径的页面是无法访问的
 
 4 "/"这个根路径可以在任何路径下访问，求简单可以把cookie都放在这里。
-
-```
-document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
-```
 
 #####  JavaScript 读取 Cookie的函数封装
 
@@ -158,9 +158,15 @@ vue-$refs//返回dom节点对象和自定义组件对象
 var el = document.createElement("A");
 ```
 
+# el节点实例的所有属性和方法(真实对象数据结构)
+
+div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
+
+![1570966004249](img/1570966004249.png)
 
 
-# document的节点对象的状态
+
+## document的节点对象的状态
 
 ##### 通过属性访问当前节点的父、子和同胞
 
@@ -239,15 +245,11 @@ var el = document.createElement("A");
     }
 ```
 
-##### el节点实例的所有属性(真实对象数据结构)
-
-div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
-
-![1570966004249](img/1570966004249.png)
 
 
 
-###### 节点的类型属性
+
+##### 节点的类型属性
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -293,7 +295,7 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 ```
 
-###### 节点的高度宽度属性
+##### 节点的高度宽度属性
 
 ```js
 <!DOCTYPE html>
@@ -390,7 +392,7 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 ```
 
-###### style属性
+##### 节点的style属性
 
 ```html
 <div id="app">
@@ -477,9 +479,9 @@ event.target===el
 
 
 
-# document节点的事件
+## document节点的事件
 
-## 鼠标事件
+##### 鼠标事件
 
 | 属性                                                         | 事件                        | 描述                                   | DOM  |
 | ------------------------------------------------------------ | --------------------------- | -------------------------------------- | ---- |
@@ -502,7 +504,7 @@ event.target===el
 
  
 
-## 键盘事件
+##### 键盘事件
 
 | 属性                                                         | 描述                       | DOM  |
 | ------------------------------------------------------------ | -------------------------- | ---- |
@@ -512,7 +514,7 @@ event.target===el
 
  
 
-## 框架/对象（Frame/Object）事件
+##### 框架/对象（Frame/Object）事件
 
 | 属性                                                         | 描述                                                         | DOM  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
@@ -529,7 +531,7 @@ event.target===el
 
  
 
-## 表单事件
+##### 表单事件
 
 | 属性                                                         | 描述                                                         | DOM  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
@@ -544,7 +546,7 @@ event.target===el
 | [onselect](https://www.runoob.com/jsref/event-onselect.html) | 用户选取文本时触发 ( <input> 和 <textarea>)                  | 2    |
 | [onsubmit](https://www.runoob.com/jsref/event-onsubmit.html) | 表单提交时触发                                               | 2    |
 
-## 剪贴板事件
+##### 剪贴板事件
 
 | 属性                                                       | 描述                           | DOM  |
 | ---------------------------------------------------------- | ------------------------------ | ---- |
@@ -552,14 +554,14 @@ event.target===el
 | [oncut](https://www.runoob.com/jsref/event-oncut.html)     | 该事件在用户剪切元素内容时触发 |      |
 | [onpaste](https://www.runoob.com/jsref/event-onpaste.html) | 该事件在用户粘贴元素内容时触发 |      |
 
-## 打印事件
+##### 打印事件
 
 | 属性                                                         | 描述                                                 | DOM  |
 | ------------------------------------------------------------ | ---------------------------------------------------- | ---- |
 | [onafterprint](https://www.runoob.com/jsref/event-onafterprint.html) | 该事件在页面已经开始打印，或者打印窗口已经关闭时触发 |      |
 | [onbeforeprint](https://www.runoob.com/jsref/event-onbeforeprint.html) | 该事件在页面即将开始打印时触发                       |      |
 
-## 拖动事件
+##### 拖动事件
 
 | 事件                                                         | 描述                                 | DOM  |
 | ------------------------------------------------------------ | ------------------------------------ | ---- |
@@ -571,7 +573,7 @@ event.target===el
 | [ondragstart](https://www.runoob.com/jsref/event-ondragstart.html) | 该事件在用户开始拖动元素时触发       |      |
 | [ondrop](https://www.runoob.com/jsref/event-ondrop.html)     | 该事件在拖动元素放置在目标区域时触发 |      |
 
-## 多媒体（Media）事件
+##### 多媒体（Media）事件
 
 | 事件                                                         | 描述                                                         | DOM  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
@@ -598,7 +600,7 @@ event.target===el
 | [onvolumechange](https://www.runoob.com/jsref/event-onvolumechange.html) | 事件在音量发生改变时触发。                                   |      |
 | [onwaiting](https://www.runoob.com/jsref/event-onwaiting.html) | 事件在视频由于要播放下一帧而需要缓冲时触发。                 |      |
 
-## 动画事件
+##### 动画事件
 
 | 事件                                                         | 描述                            | DOM  |
 | ------------------------------------------------------------ | ------------------------------- | ---- |
@@ -606,13 +608,13 @@ event.target===el
 | [animationiteration](https://www.runoob.com/jsref/event-animationiteration.html) | 该事件在 CSS 动画重复播放时触发 |      |
 | [animationstart](https://www.runoob.com/jsref/event-animationstart.html) | 该事件在 CSS 动画开始播放时触发 |      |
 
-## 过渡事件
+##### 过渡事件
 
 | 事件                                                         | 描述                          | DOM  |
 | ------------------------------------------------------------ | ----------------------------- | ---- |
 | [transitionend](https://www.runoob.com/jsref/event-transitionend.html) | 该事件在 CSS 完成过渡后触发。 |      |
 
-## 其他事件
+##### 其他事件
 
 | 事件                                                         | 描述                                                         | DOM  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
@@ -628,9 +630,9 @@ event.target===el
 
 
 
-## 鼠标/键盘事件对象
+##### 鼠标/键盘事件对象
 
-### 属性
+###### 属性
 
 | 属性                                                         | 描述                                                         | DOM  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
@@ -650,7 +652,7 @@ event.target===el
 | [screenY](https://www.runoob.com/jsref/event-screeny.html)   | 返回当某个事件被触发时，鼠标指针的垂直坐标。                 | 2    |
 | [shiftKey](https://www.runoob.com/jsref/event-shiftkey.html) | 返回当事件被触发时，"SHIFT" 键是否被按下。                   | 2    |
 
-### 方法
+###### 方法
 
 | 方法                | 描述                   | W3C  |
 | ------------------- | ---------------------- | ---- |
@@ -659,7 +661,7 @@ event.target===el
 
 
 
-# 为dom事件(方法)添加/删除处理函数
+# 为el的dom事件(方法)添加/删除处理函数
 
 三种方式为DOM元素的事件的书写处理函数
 
@@ -686,7 +688,6 @@ this===当前dom对象
     el.onmouseout = fn
 
 
-
     //方式3
     el.addEventListener('click', fn, false)
     setTimeout(() => {
@@ -705,6 +706,8 @@ this===当前dom对象
 ![](img/image-20191209013500963.png)
 
 # Event
+
+dom回调事件的实参
 
 事件动作的数字化
 
@@ -732,9 +735,9 @@ this===当前dom对象
 
 ```
 
-##### 2 `evt1=new  Event('build' )`
+##### 2 `evt=new  Event('build' )`
 
-## 实例化对象
+## event实例
 
 ![](./img/a.png)
 
@@ -821,18 +824,18 @@ this===当前dom对象
 
 # Dom事件(方法)和event对象的关系
 
-## 方法和参数的关系
+方法和实参的关系
 
 ```js
 el.onclick=event=>{}//onclick方法做什么   event 谁去做做参数
 ```
 
-## 触发DOM事件
+# 触发DOM事件
 
-| 事件种类       | 新建-Envet实例(数字化动作,el方法的参数,  对象格式 谁去做）   | 为DOM元素的事件的书写处理函数（el方法的函数体  做什么） | 派发事件（el的函数体）              |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- | ----------------------------------- |
-| **原生事件**   | 浏览器会自动实例化对象event 并注入到global.event             | 三种方式可以为DOM元素的事件的书写处理函数见下边de代码   | 鼠标键盘点击 /el.dispatchEvent(evt) |
-| **自定义事件** | `event1=new  Event('build' )`或<br />`var evt = document.createEvent('Event');                evt.initEvent(type,true,true);` | el.addEventListener( 'build',function(){ })             | el.dispatchEvent(evt)               |
+| 事件种类       | 新建-Envet实例(数字化动作,el方法的参数,  对象格式 谁去做）   | 为DOM元素的事件的书写处理函数（el方法的函数体  做什么） | 派发事件（el的函数体）               |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------ |
+| **原生事件**   | 浏览器会自动实例化对象event 并注入到global.event             | 三种方式可以为DOM元素的事件的书写处理函数见下边de代码   | 鼠标键盘点击 或el.dispatchEvent(evt) |
+| **自定义事件** | event1=new  Event('build' )或var evt = document.createEvent('Event');                evt.initEvent(type,true,true); | el.addEventListener( 'build',function(){ })             | el.dispatchEvent(evt)                |
 
 ### 原生事件+键盘鼠标触发
 
@@ -928,11 +931,11 @@ window.onunload = function () {
 
 3. dispatchEvent(eventObj),
 
-​       btn.dispatchEvent(eventObj ) 触发谁的事件
+​       el.dispatchEvent(eventObj ) 触发el的事件
 
 ​       eventObj 参数是一个描述事件的 ActionScript 对象
 
-==还可用自定义函数控制谁触发==
+==还可用自定义函数控制触发==
 
 在调用 dispatchEvent() 方法之前，必须在代码中对其进行声明，此外，还必须创建一个事件对象以传递给 dispatchEvent()。该事件对象包含侦听器可用来处理该事件的有关信息。
 

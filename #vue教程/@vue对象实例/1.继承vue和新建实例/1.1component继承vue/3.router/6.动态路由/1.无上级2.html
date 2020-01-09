@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<style>
+  div {
+    border: 1px solid #0f0;
+    margin: 20px
+  }
+
+  div > div {
+    border: 1px solid #f00;
+  }
+
+  div > div > div {
+    border: 1px solid #00f;
+  }
+
+
+</style>
+<div id="app">
+  vm根组件
+  <br>
+  <router-link to="/fa/">/fa/</router-link>
+  <br>
+  <router-link to="/fa/01">/fa/01</router-link>
+  <br>
+  <router-link to="/fa/02">/fa/02</router-link>
+  <br>
+  <router-link to="/fa/sub">/fa/sub (没有validate(),fa_sub组件无效了)</router-link>
+  <br>
+  <router-link :to="{name:'fa2_sub'}">{name:'fa2_sub'}(用name可以,没有validate()也可以)</router-link>
+  <router-view></router-view>
+
+</div>
+<script>
+  const fa_id = {
+    template: '<div>id组件:{{$route.params.id}}</div>',
+    created() {
+      console.log('02creat')
+    },
+    destroyed() {
+      console.log('02distroy')
+    }
+  }
+  const fa2_sub = {
+    template: '<div>sub组件_{{$route.name}}</div>',
+
+  }
+  const router = new VueRouter({
+      routes: [{
+
+        path: '/fa/:id',
+        name: 'fa_id',
+        component: fa_id
+      },
+        {
+
+          path: '/fa2/sub',
+          name: 'fa2_sub',
+          component: fa2_sub
+        },
+      ]
+    }
+  )
+  const vm = new Vue({
+    el: '#app',
+    router
+  })
+
+</script>
