@@ -27,7 +27,13 @@ let ArrayLike = { 0 : "a", 1 : "b", 2 : "c" ,length:3};
 Array.from(ArrayLike)
 ```
 
-# 实例的所有属性(真实数据结构) in
+```
+Array.from('abc')
+```
+
+
+
+# 实例的 in属性(真实数据结构)
 
 ![](./img/4.png)
 
@@ -64,23 +70,11 @@ console.log(arr2)//[2]
 
 ##### 和string相同的方法(包含和索引 合并和截取)(不改变原数组)
 
-###### slice[^3] 截取
+###### length
 
 ```
-instance.slice（1，4）\\截取数组2到5不包含5
-
-instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
-```
-
-###### contact(不改变原数组)
-
-```
-//arr和类数组拥有
-     const arr = [1, 2, 3], arr2 = [1,2,4, 5]
-    allarry=arr.concat(arr2)
-    console.log(arr) //[1,2,3]
-    console.log(allarry) //[1,2,3,4,5]
-
+const arr=[1,2,3]
+console.log(arr.length)
 ```
 
 ###### includes
@@ -91,12 +85,38 @@ instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
  arr.includes({a:1})  //不能判断深层次包含
 ```
 
-###### indexOf
+###### indexOf()
 
 ```
 1. arr.indexOf(1)  //从前往后数第一个值为1的索引
 2. arr.lastindexOf(1) //从后往前数第一个值为1的索引
 3. arr.indexOf({a: 10}) //无法使用,返回-1,要用find
+```
+
+###### lastIndexOf()
+
+```js
+const arr=[1,2,3]
+console.log(arr.lastIndexOf(2))
+```
+
+###### slice[^3] 截取
+
+```
+instance.slice（1，4）\\截取数组2到5不包含5
+
+instance.slice（-3，-1）\\倒数第4到倒数第2不包含4
+```
+
+###### contact
+
+```
+//arr和类数组拥有
+     const arr = [1, 2, 3], arr2 = [1,2,4, 5]
+    allarry=arr.concat(arr2)
+    console.log(arr) //[1,2,3]
+    console.log(allarry) //[1,2,3,4,5]
+
 ```
 
 ##### 数组和字符串互转

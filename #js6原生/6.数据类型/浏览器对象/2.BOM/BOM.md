@@ -84,19 +84,17 @@ console.log('win-outerHeight', outerHeight)
 console.log('win-outerWidth', outerWidth)
 ```
 
-## screen
-
-#### screen.availWidth
-
-屏幕的尺寸
-
-  `console.log(screen.availWidth, screen.availHeight);`
-
-#### screenLeft
+## screenLeft
 
 浏览器界面左上角 在屏幕中的坐标
 
 ![1574875632310](img/1574875632310.png)
+
+## screen
+
+#### screen.availWidth
+
+屏幕的尺寸 `console.log(screen.availWidth, screen.availHeight);`
 
 ## location(地址)
 
@@ -306,17 +304,13 @@ navigator.userAgent
 
 ## sessionStorage
 
-#####  sessionStorage.setItem()
+#####  sessionStorage.setItem()/sessionStorage.getItem
 
 ```js
-const obj = {a: 1, b: 2}
- sessionStorage.setItem("obj", obj);
-
-```
-
-```
-   let i = sessionStorage.getItem('obj')
-console.log(i.a)
+  const obj = [1,2]
+  localStorage.setItem('obj', obj);
+  const obj2 = localStorage.getItem('obj')
+  console.log(obj2)
 ```
 
 ## localStorage
@@ -324,18 +318,12 @@ console.log(i.a)
 ##### localStorage.setItem()
 
 ```js
- const obj = {a: 1, b: 2}
-localStorage.setItem('obj', obj);
-```
-
-```js
-console.log(i.a)
-```
-
-```
-event.target===el
+  const obj =JSON.stringify({a: 1, b: 2})
+  localStorage.setItem('obj', obj);
+  const obj2 = localStorage.getItem('obj')
+  console.log(JSON.parse(obj2))
 ```
 
 ## duocment
 
-见目录
+见目录40

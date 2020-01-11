@@ -228,7 +228,7 @@ o{,3}
 
 ##### (?:)分组不捕获
 
-只起到分组的作用exec时不捕获独数组第二个值
+只起到分组的作用 不捕获
 
 ```js
 
@@ -306,7 +306,7 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
 
 ### `__proto__:RegExp.prototype`
 
-##### test exec
+##### test( )  /  exec( )
 
 见上方gmi修饰符
 
@@ -326,8 +326,10 @@ console.log(Object.getOwnPropertyNames(reg))//["lastIndex"] 记录test exec匹�
 
 只包含一些用户自定义的key
 
-    console.log(reg.propertyIsEnumerable('lastIndex'))//false
-    console.log(Object.keys(reg))//[]
+```js
+console.log(reg.propertyIsEnumerable('lastIndex'))//false
+console.log(Object.keys(reg))//[]
+```
 # 应用
 
 ``` javascript
@@ -355,7 +357,5 @@ QQ号：[1-9][0-9]{4,9}
     document.write(replaceReg(reg, str));
 
 ```
-
-
 
 

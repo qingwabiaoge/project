@@ -4,7 +4,7 @@
 
 # Object的静态函数
 
-### Object.is()  ===  比较实例是否相等
+### Object.is()  / ===  比较实例是否相等
 
 ##### 相同处:
 
@@ -125,7 +125,7 @@ Object.is(NaN, NaN) // true
 
 ```js
 const obj={a:1}
-obj.hasOwnProperty(a) 返回boolen 
+obj.hasOwnProperty(a) 返回boolen    
 Object.getOwnPropertyNames(obj)//['a']
 ```
 
@@ -137,6 +137,8 @@ obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可�
 ```
 
 # Object实例化属性判断&Object静态函数列出对象的属性:
+
+==注:只有属性判断类型用的Object的实例方法==
 
  * 判断:in ,in判断对象是否有某属性(返回Boolean,in操作符是针对key的)
 
@@ -162,10 +164,6 @@ obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可�
 
  * 判断:obj.hasOwnProperty(propertyName) ,arr.hasOwnProperty('length')
 * 列出:Object.getOwnPropertyNames(obj)
-
-##### disnumerable
-
-.....
 
 #####  ennumerable[^3]
 
@@ -214,22 +212,7 @@ Object.entries(object) //['name', 'wang'],['age', 18]
      JSON.stringify(obj) 
 ###### 合并枚举类型
 
-  1. 操作符合并后新建内存地址存储
-
-  ```js
-  const obj = {a: 1}, obj2 = {a:10,b: 20}
-  console.log({...obj,...obj2}) //{a:10,b: 20}
-  ```
-
-  ```js
-  const obj = [10], obj2 =[10,20]
-  console.log([...obj,...obj2]) //[10,10,20]
-  ```
-  ```js
-  Object.assign({},{a:1})
-  ```
-
-  2. Object.assign静态函数合并而不改变内存地址
+1. Object.assign静态函数合并而不改变内存地址
 
   ```js
   Object.assign({a: 1}, {a:10,b: 20})//{a: 10,b: 22}
@@ -243,4 +226,17 @@ Object.entries(object) //['name', 'wang'],['age', 18]
   Object.assign([1,2,3],'456') //["4", "5", "6"]
   ```
 
-注:只有属性判断类型用的Object的实例方法
+2. 操作符合并后新建内存地址存储
+
+  ```js
+  const obj = {a: 1}, obj2 = {a:10,b: 20}
+  console.log({...obj,...obj2}) //{a:10,b: 20}
+  ```
+
+  ```js
+  const obj = [10], obj2 =[10,20]
+  console.log([...obj,...obj2]) //[10,10,20]
+  ```
+  ```js
+  Object.assign({},{a:1})
+  ```

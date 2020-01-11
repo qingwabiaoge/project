@@ -158,6 +158,92 @@ vue-$refs//返回dom节点对象和自定义组件对象
 var el = document.createElement("A");
 ```
 
+##### 插入替换移除节点 
+
+```js
+<meta charset="UTF-8">
+<div id="wangjianlin">王健林</div>
+
+<div id="persons">
+    <div>马云</div>
+    <div>马化腾</div>
+    <div>李彦宏</div>
+    <div>刘强东</div>
+</div>
+<button onclick="appendChild_()">appendChild_</button>
+<button onclick="replaceChild_()">replaceChild</button>
+<button onclick="removeChild_()">removeChild_</button>
+<button onclick="InsertBefore_()">InsertBefore_</button>
+<script>
+
+    var persons = document.getElementById('persons')
+    var wangjianlin = document.getElementById("wangjianlin");
+
+    var shilei = document.createElement("div");//创建一个新的标签
+    shilei.innerHTML = "石磊";
+
+    function appendChild_() {
+        persons.appendChild(wangjianlin);//添加
+
+    }
+
+    function replaceChild_() {
+        persons.replaceChild(shilei, wangjianlin);//修改
+    }
+
+    function removeChild_() {
+        persons.removeChild(shilei);//删除
+    }
+
+
+    /*
+    target.insertBefore(newChild,existingChild)
+
+        （1）.target：被插入节点和参考节点的父节点。
+
+        （2）.newChild：必需，要被插入的新节点。
+
+        （3）.existingChild：必需，规定在哪个节点前面插入新节点。
+        */
+
+    function InsertBefore_() {
+        persons.insertBefore(shilei, persons.childNodes[0])
+    }
+</script>
+```
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+</head>
+<body>
+
+<ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+</ul>
+
+<button onclick="myFunction()">单击按钮插入一个项目列表</button>
+<script>
+    function myFunction() {
+        const li = document.createElement("LI")
+        const text = document.createTextNode("Water")
+        li.appendChild(text)
+        const ul = document.getElementById("myList")
+        ul.insertBefore(li, ul.childNodes[0]);
+    }
+</script>
+
+
+</body>
+</html>
+```
+
+
+
 # el节点实例的所有属性和方法(真实对象数据结构)
 
 div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
@@ -227,25 +313,6 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 </html>
 
 ```
-
-##### 对子节点的操作的方法
-
-```js
-   function appendChild_() {
-        persons.appendChild(wangjianlin);//添加
-
-    }
-
-    function replaceChild_() {
-        persons.replaceChild(shilei, wangjianlin);//修改
-    }
-
-    function removeChild_() {
-        persons.removeChild(shilei);//删除
-    }
-```
-
-
 
 
 
@@ -392,6 +459,38 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 ```
 
+##### 节点的自定义属性
+
+```html
+<meta charset="uft-8">
+<script>
+  function addElement() {
+    //创建新节点对象
+    var el = document.createElement("A");
+
+    //通过 . 设置系统属性
+    el.id = 'app'
+    el.target = '_black'
+
+    //设置和获取系统属性和自定义属性
+    el.setAttribute('href', '#')
+    el.getAttribute('href')//获得href
+    el.setAttribute('someattr', '123')
+    //移除系统属性和自定义属性
+    el.removeAttribute('id')
+    //在el节点下级插入文本
+    var text = document.createTextNode("Hi there and greetings!");
+    el.appendChild(text);
+
+    //el插入到body
+    document.body.appendChild(el)
+  }
+
+  addElement()
+</script>
+
+```
+
 ##### 节点的style属性
 
 ```html
@@ -479,7 +578,7 @@ event.target===el
 
 
 
-## document节点的事件
+## document节点对象函数(监听dom event)
 
 ##### 鼠标事件
 
@@ -495,12 +594,6 @@ event.target===el
 | [onmouseover](https://www.runoob.com/jsref/event-onmouseover.html) | 鼠标移动某元素上---指定某个 | 鼠标移到某元素之上。                   | 2    |
 | [onmouseout](https://www.runoob.com/jsref/event-onmouseout.html) | 鼠标从某元素移开            | 鼠标从某元素移开。                     | 2    |
 | [onmouseup](https://www.runoob.com/jsref/event-onmouseup.html) | 松开                        | 鼠标按键被松开。                       | 2    |
-
- 
-
- 
-
- 
 
  
 
@@ -661,7 +754,7 @@ event.target===el
 
 
 
-# 为el的dom事件(方法)添加/删除处理函数
+## 为el的dom监听事件(方法)添加/删除处理函数
 
 三种方式为DOM元素的事件的书写处理函数
 
@@ -705,13 +798,19 @@ this===当前dom对象
 
 ![](img/image-20191209013500963.png)
 
-# Event
+# Event(记录dom事件)
 
-dom回调事件的实参
+1. `Event` 接口表示在 DOM 中发生的任何事件; 一些是用户生成的（例如鼠标或键盘事件），而其他由 API 生成（例如指示动画已经完成运行的事件，视频已被暂停等等）。事件通常由外部源触发，同样也会以编程方式触发，例如执行一个 `element` 的一个 [HTMLElement.click( )](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) 方法，或通过定义事件，然后使用 [EventTarget.dispatchEvent( )](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent) 将其派发到一个指定的目标。有许多类型的事件，其中一些使用基于主要事件接口的其他接口。事件本身包含所有事件通用的属性和方法。
 
-事件动作的数字化
+2. dom回调事件的实参
 
-## 创建实例化对象
+​            函数和实参的关系
+
+```js
+el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁去做 客户的鼠标键盘的动作包装成对象
+```
+
+## 创建Event类型的实例化对象
 
 ##### 1 浏览器会自动实例化对象event 并注入到global.event
 
@@ -822,20 +921,14 @@ dom回调事件的实参
 
 ```
 
-# Dom事件(方法)和event对象的关系
 
-方法和实参的关系
-
-```js
-el.onclick=event=>{}//onclick方法做什么   event 谁去做做参数
-```
 
 # 触发DOM事件
 
-| 事件种类       | 新建-Envet实例(数字化动作,el方法的参数,  对象格式 谁去做）   | 为DOM元素的事件的书写处理函数（el方法的函数体  做什么） | 派发事件（el的函数体）               |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------ |
-| **原生事件**   | 浏览器会自动实例化对象event 并注入到global.event             | 三种方式可以为DOM元素的事件的书写处理函数见下边de代码   | 鼠标键盘点击 或el.dispatchEvent(evt) |
-| **自定义事件** | event1=new  Event('build' )或var evt = document.createEvent('Event');                evt.initEvent(type,true,true); | el.addEventListener( 'build',function(){ })             | el.dispatchEvent(evt)                |
+| 事件种类       | 新建-Envet实例(el方法的参数,  对象格式 谁去做 记录一组事件动作） | 为DOM元素的事件的书写处理函数 ,监听event              | 派发事件（函数,触发动作）                      |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ---------------------------------------------- |
+| **原生事件**   | 浏览器会自动实例化对象event 并注入到global.event             | 三种方式可以为DOM元素的事件的书写处理函数见下边de代码 | 外部资源(鼠标键盘)点击 或el.dispatchEvent(evt) |
+| **自定义事件** | event1=new  Event('build' )或var evt = document.createEvent('Event');                evt.initEvent(type,true,true); | el.addEventListener( 'build',function(){ })           | el.dispatchEvent(evt)                          |
 
 ### 原生事件+键盘鼠标触发
 
@@ -869,7 +962,7 @@ dispatchEvent() 方法给节点分派(分给)一个==合成事件==。
 
 ##### 第1种方式：
 
-document.creatEvent-------evt.initEvent--------el.dispatchEvent
+document.creatEvent------->evt.initEvent-------->el.dispatchEvent
 
 1. createEvent（eventType）
 
@@ -908,9 +1001,6 @@ window.onunload = function () {
   // 当用户退出页面时执行
 }
 
-
-
-
 ```
 
 
@@ -929,11 +1019,11 @@ window.onunload = function () {
 
 
 
-3. dispatchEvent(eventObj),
+3. dispatchEvent(evt),
 
-​       el.dispatchEvent(eventObj ) 触发el的事件
+​       el.dispatchEvent(evt ) 触发el的事件
 
-​       eventObj 参数是一个描述事件的 ActionScript 对象
+​       evt 参数是一个描述事件的 ActionScript 对象
 
 ==还可用自定义函数控制触发==
 
@@ -1014,6 +1104,8 @@ console.log(newEvent)
 
 
 ```
+
+new Event的子类
 
 new MouseEvent(Event的子类)+el.dispatch( )
 

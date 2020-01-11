@@ -12,29 +12,6 @@
 </div>
 
 <script>
-  new Vue({
-    el: '#app',
-    template: `
-    <div>
-      <p>Name: <input type="text" v-model="name"/></p>
-      <p>{{firstName+lastName}}</p>
-    </div>
-  `,
-    data: {
-      firstName: 'Jokcy',
-      lastName: 'Lou',
-    },
-    computed: {
-      name: {
-        get () {
-          console.log('get')
-          return `${this.firstName} ${this.lastName}`
-        },
-        set (name) {
-          const names = name.split(' ')
-          this.firstName = names[0]
-          this.lastName = names[1]
-        }
-      }
-    }})
+const arr=[1,2,3]
+  console.log(arr.lastIndexOf(2))
 </script>

@@ -25,15 +25,21 @@
 str.trim('   123')
 ```
 
-##### endsWith判断是否以xxx开头结尾
+##### endsWith/startsWith判断是否以xxx开头结尾
 
+```
 endsWith()
 
 startsWith()
+```
 
-##### padStart填充开头结尾
+##### padStart/padEnd填充开头结尾
 
- padStart(7,'111111'),padEnd()
+```
+padStart(7,'111111'),
+
+padEnd()
+```
 
 ##### repeat重复
 
