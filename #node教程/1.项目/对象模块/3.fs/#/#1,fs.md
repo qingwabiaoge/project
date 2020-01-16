@@ -1,3 +1,4 @@
+
 ## fs buffer 字符串的关系
 
 fs.read( )读取文件会返回buffer对象

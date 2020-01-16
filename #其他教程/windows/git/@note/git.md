@@ -53,13 +53,17 @@ sudo apt-get install git
 
 ##### **4.登录码云并添加密钥**
 
-在提示的文件目录 `D:\Users\Administrator\.ssh\`下打开id_rsa.pub文件（或在git Bash中执行 cat id_rsa.pub命令）复制全部内容到github或者[码云添加密钥](https://link.jianshu.com/?t=https://gitee.com/profile/sshkeys)，
+在提示的文件目录 `c:\Users\Administrator\.ssh\`下打开id_rsa.pub文件（或在git Bash中执行 cat id_rsa.pub命令）复制全部内容到github或者[码云添加密钥](https://link.jianshu.com/?t=https://gitee.com/profile/sshkeys)，
 
 ##### 5.测试ssh是否连接github成功
 
 git Bash中输入:`ssh -T git@github.com `(此处不是邮箱)， 返回 Welcome to Git@OSC, yourname!则成功
 
+##### 6. 添加环境变量
 
+$  git --exec-path
+
+C:/Program Files/Git/mingw64/libexec/git-core
 
 # 工作区 内存堆栈 暂存区和版本库 远程仓库
 

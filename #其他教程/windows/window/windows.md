@@ -149,6 +149,172 @@ line out则是声音输出用的，常用的方法是直接接音箱或者耳机
 
 总而言之，这个应用用来控制系统声音是非常方便的，不需要再打开系统层层的设置面板了。
 
+# win7用户组与权限
+
+### 默认权限
+
+***\*WindowsXP用户组权限\****
+
+system（系统组）：该组拥有系统中最高的权限，系统和系统级服务的运行都是依靠System赋予的权限(任务管理器很多进程由System开启的)。但是System组只有一个用户
+
+就是System，它不允许任何用户的加入，在察看用户组的时候也不会显示出来。
+
+Everyone（所有人）组：该用户组较为特殊，以下的所有用户组都隶属于这个组，因此，以下的用户组也都拥有该组拥有的所有权限。
+
+Administrators组：该组默认拥有不受限制的完全访问权，可以对整个系统进行完全控制，是允许用户指定的用户组中权限最高的。
+
+PowerUser组：该组可以执行除了Administrators组保留任务外的其他任何操作，分配给PowerUser组的默认权限允许它修改整个计算机的设置，但不能将自己添加到。
+
+Administrators组，这个组的权限仅次于Administrators。
+
+Users组：该组的用户无法修改操作系统的设置，注册表或用户资料。它只能运行经过验证的应用程序或创建本地组，但只能修改创建的本地组。
+
+Guests组：该组的权限与Users组拥有的同等访问权，但操作系统对它的限制更多。
+
+注意：除了Administrators组之外的用户组即使权限高于其他用户也不能访问其他用户的文件，除非得到其他用户的授权。用户永远得不到system权限，如果你学过操作系统
+
+就会知道：system做的事对系统核心的东西进行操作，如果用户介入了，万一误操作，系统很容易就会崩溃的。
+
+
+***\*win7用户组和权限\****
+
+**内置普通组：**
+
+Administrators（管理员组）属于该Administators本地组内的用户，都具备系统管理员的权限，它们拥有对这台计算机最大的控制权限，可以执行整台计算机的管理任务。内
+
+置的系统管理员帐房Administrator就是本地组的成员，而且无法将它从该组删除。
+
+如果这台计算机已加入域，则域的Domain Admins会自动地加入到该计算机的Administrators组内。也就是说，域上的系统管理员在这台计算机上也具备着系统管理员的权限。
+
+Backup OPerators（备份操作组）在该组内的成员，不论它们是否有权访问这台计算机中的文件夹或文件，都可以通过“开始”－“所有程序”－“附件”－“系统工具”－
+
+“备份”的途径，备份与还原这些文件夹与文件。
+
+Guests（来宾用户组）该组是提供没有用户帐户，但是需要访问本地计算机内资源的用户使用，该组的成员无法永久地改变其桌面的工作环境。该组最常见的默认成员为用户
+
+帐号Guest。
+
+Network Configuration Operators　该组内的用户可以在客户端执行一般的网络设置任务，例如更改IP地址，但是不可以安装/删除驱动程序与服务，也不可以执行与网络
+
+服务器设置有关的任务，例如DNS服务器、DHCP服务器的设置。
+
+Power Users（高权限用户组）　该组内的用户具备比Users组更多的权利，但是比Administrators组拥有的权利更少一些，例如，可以：
+
+创建、删除、更改本地用户帐户
+
+创建、删除、管理本地计算机内的共享文件夹与共享打印机
+
+自定义系统设置，例如更改计算机时间、关闭计算机等
+
+Power Users　组的成员不可以更改Administrators与Backup Operators、无法夺取文件的所有权、无法备份与还原文件、无法安装删除与删除设备驱动程序、无法管理安全与
+
+审核日志。包括高级用户以向下兼容，高级用户拥有有限的管理权限
+
+Remote Desktop Users 此组中的成员被授予远程登录的权限该组的成员可以通过远程计算机登录，例如，利用终端服务器从远程计算机登录。
+
+Users　（普通用户组）该组员只拥有一些基本的权利，例如运行应用程序，但是他们不能修改操作系统的设置、不能更改其它用户的数据、不能关闭服务器级的计算机。
+
+所有添加的本地用户帐户者自动属于该组。
+
+如果这台计算机已经加入域，则域的Domain Users会自动地被加入到该计算机的Users组中。
+
+防止用户进行有意或无意的系统范围的更改，但是可以运行大部分应用程序
+
+Cryptographic Operators  授权成员执行加密操作。
+
+Distributed COM Users 成员允许启动、激活和使用此计算机上的分布式 COM 对象。
+
+Event Log Readers 此组的成员可以从本地计算机中读取事件日志。
+
+IIS_IUSRS  Internet 信息服务使用的内置组。默认成员NT AUTHORITY/IUSR。
+
+Network Configuration Operators 此组中的成员有部分管理权限来管理网络功能的配置。
+
+Performance Log Users 该组中的成员可以计划进行性能计数器日志记录、启用跟踪记录提供程序，以及在本地或通过远程访问此计算机来收集事件跟踪记录。
+
+Performance Monitor Users 此组的成员可以从本地和远程访问性能计数器数据。
+
+Replicator （文件复制组） 支持域中的文件复制。
+
+HomeUsers 家庭用户安全组。
+
+
+
+**内置特殊组：**
+
+***\*system（系统组）\****这个成员是系统产生的，真正拥有整台计算机管理权限的账户，一般的操作是无法获取与它等价的权限的.该组拥有系统中最高的权限，系统和系统级服务的
+
+运行都是依靠System赋予的权限(任务管理器很多进程由System开启的)。但是System组只有一个用户就是System，它不允许任何用户的加入，在察看用户组的时候也不会显示
+
+出来。
+
+***\*Everyone\**** 任何一个用户都属于这个组。注意，如果Guest帐号被启用时，则给Everyone这个组指派权限时必须小心，因为当一个没有帐户的用户连接计算机时，他被允许自动
+
+利用Guest帐户连接，但是因为Guest也是属于Everyone组，所以他将具备Everyone所拥有的权限。
+
+**Authenticated Users** 任何一个利用有效的用户帐户连接的用户都属于这个组。建议在设置权限时，尽量针对Authenticated Users组进行设置，而不要针对Everone进行设
+
+置。
+
+**Interactive \**Users\**** 任何在本地登录的用户都属于这个组。
+
+**Network \**Users\****　任何通过网络连接此计算机的用户都属于这个组。
+
+**Creator Owner(创建者）** 文件夹、文件或打印文件等资源的创建者，就是该资源的Creator Owner（创建所有者）。不过，如果创建者是属于Administrators组内的成员，则
+
+其Creator Owner为Administrators组。　被标记为“创建者”权限的文件只有建立文件的那个用户才能访问，做到了一定程度的隐私保护。但是，所有的文件访问权限均可以
+
+被管理员组用户和SYSTEM成员忽略，除非用户使用了NTFS加密。
+
+Anonymous Logon Users　任何未利用有效的Windows Server 2003帐户连接的用户，都属于这个组。注意，在windows 2003内，Everone 组内并不包含“Anonymous Logon”组。
+
+另：权限是取交集的
+ 如Remote Desktop Users组的成员在具有自身权限的同时它还属于everyone组享有everyone组所有权限但不想有其他非交集组的权限。
+
+### 设置权限
+
+1. 按住键盘**“Windows + R”**键，在弹出的运行对话框中输入**“secpol.msc”**进入本地安全策略，点击**“确定”**
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=80beef11abefce1bea2bc8ca9f50f3e8/a9d3fd1f4134970a201fbcc899cad1c8a6865dec.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=2)
+
+2. 2
+
+   进入**“本地策略”**后，依次点击**“本地策略——用户权限分配”**选项
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=7c62ae7f52df8db1bc2e7c643922dddb/d000baa1cd11728b671223c5c4fcc3cec3fd2c1d.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=3)
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=4878712f164c510faec4e21a50582528/30adcbef76094b366393b40aafcc7cd98c109dd0.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=4)
+
+3. 3
+
+   在**“用户权限分配”**选项，点击**“创建全局对象”**
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=195a0f1dddc8a786be2a4a0e5708c9c7/aa18972bd40735fada88e15e92510fb30e2408d8.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=5)
+
+4. 4
+
+   在用户对象中，点击**“添加用户和组”**选项；
+
+   在**“用户和组”**中，选择**“高级”**
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=f68ec078a80f4bfb8cd09e54334e788f/9f2f070828381f309da8224ea5014c086f06f0a0.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=6)
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=5b8209c4bc7eca80120539e7a1229712/a6efce1b9d16fdfa46c26909b88f8c5495ee7baf.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=7)
+
+5. 5
+
+   选择**“立即查找”**，查找到你要添加的账户，点击账户即可添加成功
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=984053c0733e6709be0045ff0bc59fb8/34fae6cd7b899e51307595f34ea7d933c9950d59.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=8)
+
+6. 6
+
+   添加好账户后，依次点击**“确定”**即可生效，这样就设置好用户权限了
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=101a3a5c8bd6277fe912323818391f63/472309f790529822e5159724dbca7bcb0a46d437.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=9)
+
+   [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=df4c06c1f1faaf5184e381bfbc5594ed/960a304e251f95cac09f3c51c5177f3e660952ea.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=10)
+
 # 网络
 
 ### 修改网卡地址

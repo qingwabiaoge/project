@@ -69,7 +69,7 @@ let i=0
 ## open() 新开window窗口打开链接
 
 ```js
-  window.open("http://www.runoob.com");
+open("http://www.runoob.com");
 ```
 
 # 属性
@@ -84,7 +84,7 @@ console.log('win-outerHeight', outerHeight)
 console.log('win-outerWidth', outerWidth)
 ```
 
-## screenLeft
+## screenLeft/screenTop
 
 浏览器界面左上角 在屏幕中的坐标
 
@@ -92,11 +92,11 @@ console.log('win-outerWidth', outerWidth)
 
 ## screen
 
-#### screen.availWidth
+#### screen.availWidth/screen.availHeight
 
 屏幕的尺寸 `console.log(screen.availWidth, screen.availHeight);`
 
-## location(地址)
+## location[^1] (地址)
 
 ##### location.href  读取和设置本窗口的地址
 
@@ -111,7 +111,7 @@ location.href = "http://www.baidu.com"
 ##### location.replace()
 
 ```js
-location.replace(“http://www.baidu.com”)
+  location.replace("http://www.baidu.com")
 ```
 
 ## navigator
@@ -327,3 +327,5 @@ navigator.userAgent
 ## duocment
 
 见目录40
+
+[^1]: local-  -tion

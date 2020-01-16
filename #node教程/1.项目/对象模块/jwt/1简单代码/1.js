@@ -4,9 +4,14 @@ const jwt = require('jsonwebtoken')
 const token = jwt.sign({
   name: 'qingwabiaoge',
   _id: 'shilei12'
-}, 'my_key', {expiresIn: 60}); //60s
+}, 'my_key', {expiresIn: 5}); //5s
 console.log(token)
 
 //解密token
 var decoded = jwt.verify(token, 'my_key');
 console.log(decoded)
+
+setTimeout(() => {
+  const decoded = jwt.verify(token, 'my_key');
+  console.log(decoded)
+},6000 )

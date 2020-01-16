@@ -1,6 +1,6 @@
 const {getCookies} = require('../../tools')
 const formdataTopic = require('../tool/formdataToPic.js')
-const base64ToPic=require('../tool/base64ToPic')
+const base64ToPic = require('../tool/base64ToPic')
 module.exports = async (ctx, next) => {
 
 
@@ -10,40 +10,41 @@ module.exports = async (ctx, next) => {
   ctx.state.data = 'data'
 
 
-  console.log(`///////////////http请求时 浏览器会主动注入cookie到request.cookie `)
-  //这里是设置localhost:3000/api 的cookie到浏览器,而不是locaohost:8888的
-  ctx.cookies.set(
-    'cid',
-    'token_code_xxx',
-    {
-      domain: 'localhost',  // 写cookie所在的域名
-      path: '/',       // 写cookie所在的路径
-      maxAge: 10 * 60 * 1000, // cookie有效时长
-      expires: new Date('2017-02-15'),  // cookie失效时间
-      httpOnly: false,  // 是否只用于http请求中获取
-      overwrite: false  // 是否允许重写
-    }
-  )
-  /*http请求的request会注入cookie----------------------*/
-  //node版
-  console.log("ctx.req.headers.cookie-----------")
-  console.log(ctx.req.headers.cookie)
-  //koa版
-  console.log(`ctx.cookies.get('username')------`)
-  console.log(ctx.cookies.get('username'))
 
 
-//不能自动ctx.headers.cookie,那就只能自己在axios注入token,代码为axios.defaults.headers.common['Authorization'] = 'DEFAULT.TOKEN';
-  console.log(`//////////////////////////ajax请求时不会自动向ctx.headers.cookie注入值`)
-  //ctx.req是node的request对象
+    //1.1后端设置ｃｏｏｋｉｅ:此方法仅用于ｈｔｔｐ请求localhost:3000/api时,后端向浏览器cookie设置toekn
+    ctx.cookies.set(
+      'cid',
+      'token_code_xxx',
+      {
+        domain: 'localhost',  // 写cookie所在的域名
+        path: '/',       // 写cookie所在的路径
+        maxAge: 10 * 60 * 1000, // cookie有效时长
+        expires: new Date('2017-02-15'),  // cookie失效时间
+        httpOnly: false,  // 是否只用于http请求中获取
+        overwrite: false  // 是否允许重写
+      }
+    )
+    //1.2 koa版后端获取cookie此方法仅用于获取ｈｔｔｐ请求localhost:3000/api时获取request.cookie里的token
+    console.log(`ctx.cookies.get('username')------`)
+    console.log(ctx.cookies.get('username'))
+
+
+
+  /*2.1 前端设置cookiee  ajax请求时浏览器不会自动向ctx.headers.cookie注入token值,就只能自己在axios注入token,代码为axios.defaults.headers.common['Authorization'] = 'DEFAULT.TOKEN';*/
+
+  //http和axios都可以使用获取token
   console.log("ctx.req.rawHeaders-----------")
   console.log(ctx.req.rawHeaders)
 
-  console.log('ctx.request.header=ctx.req.headers----------------')
-  console.log(ctx.request.header === ctx.req.headers)  //true
-  console.log(ctx.header === ctx.request.header) //true
-  console.log(ctx.header)
+  //http和axios都可以使用获取token
+  console.log("ctx.req.headers-----------")
+  console.log(ctx.req.headers)
 
+  //http和axios都可以使用获取token
+  console.log('ctx.header=ctx.request.header=ctx.req.headers----------------')
+  console.log(ctx.request.header === ctx.req.headers, ctx.header === ctx.request.header)  //true
+  console.log(ctx.header)
 
   console.log(`ctx.request.method------`)
   console.log(ctx.method === ctx.request.method)
@@ -73,7 +74,7 @@ module.exports = async (ctx, next) => {
   console.log(ctx.request.files === ctx.request)
   console.log(ctx.request.files)
   if (ctx.request.files) {
-    formdataTopic( ctx.request.files.file)
+    formdataTopic(ctx.request.files.file)
   }
 
 

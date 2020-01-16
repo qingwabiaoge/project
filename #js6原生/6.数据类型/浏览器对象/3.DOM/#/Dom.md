@@ -44,7 +44,7 @@ document.location===window.location
 
 # document.cookie
 
-JavaScript 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
+JavaScript ==前端== 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
 
 JavaScript 中，创建 cookie 如下所示：
 
@@ -96,11 +96,11 @@ document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=
     }
 ```
 
-# 获得doument的节点对象
+# doument节点对象
 
-document节点是document的key
+el是document的key
 
-##### 获取已有节点对象
+### 获取已有节点对象
 
 ###### 获得html
 
@@ -120,7 +120,7 @@ document节点是document的key
 const el=document.getElementById("app") //返回dom节点对象
 ```
 
-id注入到了window
+*id注入到了window*
 
 ```html
 <img id="img"/>
@@ -144,7 +144,7 @@ id注入到了window
 vue-$refs//返回dom节点对象和自定义组件对象
 ```
 
-##### 创建新的document的节点
+### 创建新的document的节点
 
 ###### 字面量创建(用于新建对象和控制台打印)
 
@@ -158,93 +158,9 @@ vue-$refs//返回dom节点对象和自定义组件对象
 var el = document.createElement("A");
 ```
 
-##### 插入替换移除节点 
-
-```js
-<meta charset="UTF-8">
-<div id="wangjianlin">王健林</div>
-
-<div id="persons">
-    <div>马云</div>
-    <div>马化腾</div>
-    <div>李彦宏</div>
-    <div>刘强东</div>
-</div>
-<button onclick="appendChild_()">appendChild_</button>
-<button onclick="replaceChild_()">replaceChild</button>
-<button onclick="removeChild_()">removeChild_</button>
-<button onclick="InsertBefore_()">InsertBefore_</button>
-<script>
-
-    var persons = document.getElementById('persons')
-    var wangjianlin = document.getElementById("wangjianlin");
-
-    var shilei = document.createElement("div");//创建一个新的标签
-    shilei.innerHTML = "石磊";
-
-    function appendChild_() {
-        persons.appendChild(wangjianlin);//添加
-
-    }
-
-    function replaceChild_() {
-        persons.replaceChild(shilei, wangjianlin);//修改
-    }
-
-    function removeChild_() {
-        persons.removeChild(shilei);//删除
-    }
 
 
-    /*
-    target.insertBefore(newChild,existingChild)
-
-        （1）.target：被插入节点和参考节点的父节点。
-
-        （2）.newChild：必需，要被插入的新节点。
-
-        （3）.existingChild：必需，规定在哪个节点前面插入新节点。
-        */
-
-    function InsertBefore_() {
-        persons.insertBefore(shilei, persons.childNodes[0])
-    }
-</script>
-```
-
-```
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-
-</head>
-<body>
-
-<ul id="myList">
-    <li>Coffee</li>
-    <li>Tea</li>
-</ul>
-
-<button onclick="myFunction()">单击按钮插入一个项目列表</button>
-<script>
-    function myFunction() {
-        const li = document.createElement("LI")
-        const text = document.createTextNode("Water")
-        li.appendChild(text)
-        const ul = document.getElementById("myList")
-        ul.insertBefore(li, ul.childNodes[0]);
-    }
-</script>
-
-
-</body>
-</html>
-```
-
-
-
-# el节点实例的所有属性和方法(真实对象数据结构)
+# el节点实例的所有属性和事件(真实对象数据结构)
 
 div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
 
@@ -459,6 +375,16 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 ```
 
+##### 表单节点的特别属性
+
+```
+<input type="file" onchange="console.log(this.files[0])"></input>
+```
+
+```
+<input onchange="console.log(this.value)" value="123" />
+```
+
 ##### 节点的自定义属性
 
 ```html
@@ -578,7 +504,9 @@ event.target===el
 
 
 
-## document节点对象函数(监听dom event)
+## el的事件(监听dom event)
+
+### 节点的事件名
 
 ##### 鼠标事件
 
@@ -745,7 +673,7 @@ event.target===el
 | [screenY](https://www.runoob.com/jsref/event-screeny.html)   | 返回当某个事件被触发时，鼠标指针的垂直坐标。                 | 2    |
 | [shiftKey](https://www.runoob.com/jsref/event-shiftkey.html) | 返回当事件被触发时，"SHIFT" 键是否被按下。                   | 2    |
 
-###### 方法
+###### 事件
 
 | 方法                | 描述                   | W3C  |
 | ------------------- | ---------------------- | ---- |
@@ -754,7 +682,7 @@ event.target===el
 
 
 
-## 为el的dom监听事件(方法)添加/删除处理函数
+### 为el的dom监听事件(事件)添加/删除处理函数
 
 三种方式为DOM元素的事件的书写处理函数
 
@@ -798,9 +726,95 @@ this===当前dom对象
 
 ![](img/image-20191209013500963.png)
 
+### 增删改查节点的el兄弟孩子节点 
+
+```js
+<meta charset="UTF-8">
+<div id="wangjianlin">王健林</div>
+
+<div id="persons">
+    <div>马云</div>
+    <div>马化腾</div>
+    <div>李彦宏</div>
+    <div>刘强东</div>
+</div>
+<button onclick="appendChild_()">appendChild_</button>
+<button onclick="replaceChild_()">replaceChild</button>
+<button onclick="removeChild_()">removeChild_</button>
+<button onclick="InsertBefore_()">InsertBefore_</button>
+<script>
+
+    var persons = document.getElementById('persons')
+    var wangjianlin = document.getElementById("wangjianlin");
+
+    var shilei = document.createElement("div");//创建一个新的标签
+    shilei.innerHTML = "石磊";
+
+    function appendChild_() {
+        persons.appendChild(wangjianlin);//添加
+
+    }
+
+    function replaceChild_() {
+        persons.replaceChild(shilei, wangjianlin);//修改
+    }
+
+    function removeChild_() {
+        persons.removeChild(shilei);//删除
+    }
+
+
+    /*
+    target.insertBefore(newChild,existingChild)
+
+        （1）.target：被插入节点和参考节点的父节点。
+
+        （2）.newChild：必需，要被插入的新节点。
+
+        （3）.existingChild：必需，规定在哪个节点前面插入新节点。
+        */
+
+    function InsertBefore_() {
+        persons.insertBefore(shilei, persons.childNodes[0])
+    }
+</script>
+```
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+</head>
+<body>
+
+<ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+</ul>
+
+<button onclick="myFunction()">单击按钮插入一个项目列表</button>
+<script>
+    function myFunction() {
+        const li = document.createElement("LI")
+        const text = document.createTextNode("Water")
+        li.appendChild(text)
+        const ul = document.getElementById("myList")
+        ul.insertBefore(li, ul.childNodes[0]);
+    }
+</script>
+
+
+</body>
+</html>
+```
+
+
+
 # Event(记录dom事件)
 
-1. `Event` 接口表示在 DOM 中发生的任何事件; 一些是用户生成的（例如鼠标或键盘事件），而其他由 API 生成（例如指示动画已经完成运行的事件，视频已被暂停等等）。事件通常由外部源触发，同样也会以编程方式触发，例如执行一个 `element` 的一个 [HTMLElement.click( )](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) 方法，或通过定义事件，然后使用 [EventTarget.dispatchEvent( )](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent) 将其派发到一个指定的目标。有许多类型的事件，其中一些使用基于主要事件接口的其他接口。事件本身包含所有事件通用的属性和方法。
+1. `Event` 接口表示在 DOM 中发生的任何事件; 一些是用户生成的（例如鼠标或键盘事件），而其他由 API 生成（例如指示动画已经完成运行的事件，视频已被暂停等等）。事件通常由外部源触发，同样也会以编程方式触发，例如执行一个 `element` 的一个 [HTMLElement.click( )](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) 事件，或通过定义事件，然后使用 [EventTarget.dispatchEvent( )](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent) 将其派发到一个指定的目标。有许多类型的事件，其中一些使用基于主要事件接口的其他接口。事件本身包含所有事件通用的属性和事件。
 
 2. dom回调事件的实参
 
@@ -812,7 +826,7 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
 
 ## 创建Event类型的实例化对象
 
-##### 1 浏览器会自动实例化对象event 并注入到global.event
+### 1 浏览器会自动实例化对象event 记录默认事件 并注入到global.event
 
 ```html
 <button onclick="fn(),fn(event),console.log(event)" id="btn">btn</button>
@@ -834,7 +848,7 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
 
 ```
 
-##### 2 `evt=new  Event('build' )`
+### 2 `evt=new  Event('build' )`
 
 ## event实例
 
@@ -860,7 +874,7 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
 | [timeStamp](https://www.runoob.com/jsref/event-timestamp.html) | 返回事件生成的日期和时间。                     |
 | [type](https://www.runoob.com/jsref/event-type.html)         | 返回当前 Event 对象表示的事件的名称。          |
 
-### 方法
+### 事件
 
 | 方法              | 描述                                     |
 | ----------------- | ---------------------------------------- |
@@ -911,10 +925,10 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
   function stopPropagation(e) {
 
     e = e || window.event
-    if (e.stopPropagation) { //W3C阻止冒泡方法
+    if (e.stopPropagation) { //W3C阻止冒泡事件
       e.stopPropagation()
     } else {
-      e.cancelBubble = true //IE阻止冒泡方法
+      e.cancelBubble = true //IE阻止冒泡事件
     }
   }
 </script>
@@ -958,7 +972,7 @@ window.onload = function () {
 
 ### 自定义事件+程序触发
 
-dispatchEvent() 方法给节点分派(分给)一个==合成事件==。
+dispatchEvent() 事件给节点分派(分给)一个==合成事件==。
 
 ##### 第1种方式：
 
@@ -966,7 +980,7 @@ document.creatEvent------->evt.initEvent-------->el.dispatchEvent
 
 1. createEvent（eventType）
 
-该方法将创建一种新的事件类型，该类型由参数 *eventType* 指定。注意，该参数的值不是要创建的事件接口的名称，而是定义那个接口的 DOM 模块的名称。
+该事件将创建一种新的事件类型，该类型由参数 *eventType* 指定。注意，该参数的值不是要创建的事件接口的名称，而是定义那个接口的 DOM 模块的名称。
 
 参数：dom的eventType 共5种类型：
   Events ：包括所有的事件.
@@ -1005,7 +1019,7 @@ window.onunload = function () {
 
 
 
-2. 在createEvent后必须初始化，为大家介绍5种对应的初始化方法
+2. 在createEvent后必须初始化，为大家介绍5种对应的初始化事件
 
 >  HTMLEvents 和 通用 Events：
 >    **initEvent**( 'type', bubbles, cancelable )
@@ -1027,7 +1041,7 @@ window.onunload = function () {
 
 ==还可用自定义函数控制触发==
 
-在调用 dispatchEvent() 方法之前，必须在代码中对其进行声明，此外，还必须创建一个事件对象以传递给 dispatchEvent()。该事件对象包含侦听器可用来处理该事件的有关信息。
+在调用 dispatchEvent() 事件之前，必须在代码中对其进行声明，此外，还必须创建一个事件对象以传递给 dispatchEvent()。该事件对象包含侦听器可用来处理该事件的有关信息。
 
 eg
 
@@ -1086,20 +1100,21 @@ new Event-------------el.dispatchEvent(newEvent )
 </div>
 
 <script type="text/javascript">
-/* 创建一个事件对象，名字为newEvent，类型为build */
-var newEvent = new Event('build', { bubbles: true, cancelable: true, composed: true })
+  /* 监听dom事件build */
+  app.addEventListener('build', function () {
+    alert('你触发了自定义事件！' + newEvent.name)
+  }, false)
 
-/* 给这个事件对象创建一个属性并赋值 */
-newEvent.name = '新的事件！'
+  /* 创建一个事件对象，名字为newEvent，类型为build ,记录build事件*/
+  var newEvent = new Event('build', { bubbles: true, cancelable: true, composed: true })
+           //给这个事件对象创建一个属性并赋值 
+  newEvent.name = '新的事件！'
 
-/* 建立事件处理函数 */
-app.addEventListener('build', function () {
-  alert('你触发了自定义事件！' + newEvent.name)
-}, false)
 
-/* 触发自定义事件 */
-app.dispatchEvent(newEvent)
-console.log(newEvent)
+  /* 触发自定义newEvent事件 */
+  app.dispatchEvent(newEvent)
+    
+  console.log(newEvent)
 </script>
 
 
@@ -1107,7 +1122,7 @@ console.log(newEvent)
 
 new Event的子类
 
-new MouseEvent(Event的子类)+el.dispatch( )
+new MouseEvent(Event的子类)+el.dispatch( )触发
 
 ```html
 <input type="file">

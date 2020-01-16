@@ -1,4 +1,4 @@
-# 跨域请求
+# ajax跨域请求
 
 ```
 Axios.defaults.headers.common['允许的请求头key'] = '请求头value';
