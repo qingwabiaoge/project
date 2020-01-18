@@ -7,8 +7,14 @@
 </html>
 
 
-
 <script type="text/javascript">
-console.log(document.documentElement)
+  /*  <!-- ① a暂时性死区开始 -->*/
+  function fn() {
 
+    console.log(fn.a)
+  }
+
+
+  fn.a = 10
+  fn()
 </script>

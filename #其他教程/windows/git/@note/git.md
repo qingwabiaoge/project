@@ -59,7 +59,7 @@ sudo apt-get install git
 
 git Bash中输入:`ssh -T git@github.com `(此处不是邮箱)， 返回 Welcome to Git@OSC, yourname!则成功
 
-##### 6. 添加环境变量
+##### 6. 添加环境变量(window自动添加)
 
 $  git --exec-path
 
