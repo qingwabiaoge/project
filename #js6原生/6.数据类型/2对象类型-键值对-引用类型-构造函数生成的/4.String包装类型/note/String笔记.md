@@ -18,6 +18,7 @@
 | lastIndexOf() | ✓                                                            | ✓                                                            |             |
 | concat()      | ✓                                                            | ✓                                                            |             |
 | 截取          | str.slice(1)      <br/>str.slice(1,3)  <br/>str.slice(-3,-1) | 1.slice(-10,-1 );<br />2. substring(0,30) //参数2的值要比参数1大 |             |
+| 填充          | fill('qsl',1,3)                                              | padStart(7,'111111'),<br/><br/>padEnd()                      |             |
 
 ##### trim去除空格
 
@@ -31,14 +32,6 @@ str.trim('   123')
 endsWith()
 
 startsWith()
-```
-
-##### padStart/padEnd填充开头结尾
-
-```
-padStart(7,'111111'),
-
-padEnd()
 ```
 
 ##### repeat重复

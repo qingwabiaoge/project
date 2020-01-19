@@ -8,48 +8,9 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 ## 字面量新建对象
 
-### gmi修饰符:
+### 匹配字符
 
-new  RegExp)( )的参数
-
-/g [英]globe: 全局匹配
-
-/m [英]multi-line :多行匹配
-
-/i  [英]ignoreCase:对大小写不敏感
-
-```javascript
-    const str = 'qinshilei\nqinshiwei'
-
-    const reg = /qin/
-    const reg_ = /^QIn/gmi
-
-
-    console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined],匹配第一个符合正则的字符串
-    console.log(str.match(reg_))//["qin", "qin"] ,可以用于知道匹配的数量
-
-
-    console.log(str.replace(reg, 'wang')) //wangshilei↵qinshiwei
-    console.log(str.replace(reg_, 'wang'))//wangshilei↵wangshiwei
-    console.log(str.replace(reg, item => item.toUpperCase())) //QINshilei↵qinshiwei
-    console.log(str.replace(reg_, item => item.toUpperCase()))//QINshilei↵QINshiwei
-
-
-    console.log(str.search(reg)) //0
-    console.log(str.search(reg_))//0   //**唯一\g修饰符无效的,search到第一个词就停止
-
-
-    console.log(reg.test(str))//true
-    console.log(reg_.test(str))//true
-
-
-    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  ,和str.match(reg)返回结果相同
-    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个匹配,而不是所有
-```
-
-### 替代单个字符
-
-####  转意字符匹配若干范围(单字符)
+####  转意字符匹配(单字符)
 
 ```
  . 代表任意字符   \. 表示真实的.
@@ -170,33 +131,38 @@ o{,3}
 
 ### ( )
 
-#### 分组+捕获
+#### ( )分组捕获
 
-##### ( )分组捕获
+##### 1.分组
 
--  对reg.test()的影响: 分组
+_多字符_
 
-   _多字符_
+一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
-   一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
+```
+/(ha){3}/
+/hahaha/
+```
 
-   ```
-   /(ha){3}/
-   /hahaha/
-   ```
+_或操作_
 
-   _或操作_
+或操作（|）或操作
 
-   或操作（|）或操作
+```
+（a|b）匹配a或者b
+```
 
-   ```
-   （a|b）匹配a或者b
-   ```
-
--  对reg.exec()的影响: 1.分组 2.捕获,并把捕获值赋值到reg.exec('xxx')[1]
+##### 2.捕获,捕获值赋值到reg.exec('xxx')[1]**
 
    ```js
-   [0: "doubi is a doubi" 1: "doubi"]
+const str = 'qinshilei\nqinshiwei'
+
+    const reg = /qin/
+    const reg_ = /^QIn/gmi
+
+
+    console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined],匹配第一个符合正则的字符串
+    console.log(str.match(reg_))//["qin", "qin"] ,可以用于知道匹配的数量
    ```
 
  *访问捕获的内容*     
@@ -224,9 +190,7 @@ o{,3}
 
 ```
 
-#### 分组+不捕获
-
-##### (?:)分组不捕获
+#### (?:)分组不捕获
 
 只起到分组的作用 不捕获
 
@@ -241,7 +205,7 @@ o{,3}
 
 ```
 
-##### (?=)  分组不捕获前瞻
+#### (?=)  分组不捕获前瞻
 
 1.分组 2 .前瞻往前看一下是否有相等的值,有则reg.test( )返回true
 
@@ -258,7 +222,7 @@ const reg = /kid is a (?=doubi)/
 console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组的第2个键值为空
 ```
 
-#####  (?!)  分组不捕获前瞻否定
+####  (?!)  分组不捕获前瞻否定
 
 1.分组 2.往前看一下是否有不相等的值,有则reg.test( )返回true
 
@@ -272,7 +236,7 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
     console.log(reg.exec('kid is a shabi'))// ['0':"kid is a"]
 ```
 
-#####   (?<=)分组不捕获后瞻
+####   (?<=)分组不捕获后瞻
 
 1.分组 2 .后瞻往后看一下是否有相等的值,有则reg.test( )返回true
 
@@ -285,7 +249,7 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
   console.log(reg.exec('kid is a shabi me'))// null
 ```
 
-##### (?<!) 分组不捕获后瞻否定
+#### (?<!) 分组不捕获后瞻否定
 
 1.分组 2 .后瞻往后看一下是否有不相等的值,有则reg.test( )返回true
 
@@ -297,6 +261,47 @@ console.log(reg.exec('kid is a doubi'))// [0:kid is a ]  不捕获的话数组�
   console.log(reg.exec('kid is a doubi me'))// null
   console.log(reg.exec('kid is a shabi me'))// [" me", index: 14, input: "kid is a shabi me", groups: undefined]
 ```
+
+### gmi修饰符:
+
+new  RegExp)( )的参数
+
+/g [英]globe: 全局匹配
+
+/m [英]multi-line :多行匹配
+
+/i  [英]ignoreCase:对大小写不敏感
+
+```javascript
+    const str = 'qinshilei\nqinshiwei'
+
+    const reg = /qin/
+    const reg_ = /^QIn/gmi
+
+
+    console.log(str.match(reg)) //["qin", index: 0, input: "qinshilei_qinshiwei", groups: undefined],匹配第一个符合正则的字符串
+    console.log(str.match(reg_))//["qin", "qin"] ,可以用于知道匹配的数量
+
+
+    console.log(str.replace(reg, 'wang')) //wangshilei↵qinshiwei
+    console.log(str.replace(reg_, 'wang'))//wangshilei↵wangshiwei
+    console.log(str.replace(reg, item => item.toUpperCase())) //QINshilei↵qinshiwei
+    console.log(str.replace(reg_, item => item.toUpperCase()))//QINshilei↵QINshiwei
+
+
+    console.log(str.search(reg)) //0
+    console.log(str.search(reg_))//0   //**唯一\g修饰符无效的,search到第一个词就停止
+
+
+    console.log(reg.test(str))//true
+    console.log(reg_.test(str))//true
+
+
+    console.log(reg.exec(str))//["qin", index: 0, input: "qinshilei↵qinshiwei", groups: undefined]  ,和str.match(reg)返回结果相同
+    console.log(reg_.exec(str))//["qin", index: 10, input: "qinshilei↵qinshiwei", groups: undefined]//匹配最后一个匹配,而不是所有
+```
+
+
 
 # 实例
 
