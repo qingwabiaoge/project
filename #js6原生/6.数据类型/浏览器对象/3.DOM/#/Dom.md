@@ -36,13 +36,13 @@
   
 ```
 
-# document.location
+### document.location
 
 ```
 document.location===window.location
 ```
 
-# document.cookie
+### document.cookie
 
 JavaScript ==前端== 可以使用 **document.cookie** 属性来创建 、读取、及删除 cookie。
 
@@ -160,7 +160,7 @@ var el = document.createElement("A");
 
 
 
-# el节点实例的所有属性和事件(真实对象数据结构)
+### el节点实例的所有属性和事件(真实对象数据结构)
 
 div是HTMLDivElement的实例,注意对比div的原型和document的原型是不同的
 
@@ -168,7 +168,7 @@ div是HTMLDivElement的实例,注意对比div的原型和document的原型是不
 
 
 
-## document的节点对象的状态
+### 节点对象的状态
 
 ##### 通过属性访问当前节点的父、子和同胞
 
@@ -504,9 +504,11 @@ event.target===el
 
 
 
-## el的事件(监听dom event)
+### el的方法: el.onXxx( )(==监听dom 异步事件==)
 
-### 节点的事件名
+估计像then监听promise一样
+
+#### 节点的事件名
 
 ##### 鼠标事件
 
@@ -682,7 +684,7 @@ event.target===el
 
 
 
-### 为el的dom监听事件(事件)添加/删除处理函数
+#### 为el的dom监听事件添加/删除处理函数
 
 三种方式为DOM元素的事件的书写处理函数
 
@@ -726,7 +728,7 @@ this===当前dom对象
 
 ![](img/image-20191209013500963.png)
 
-### 增删改查节点的el兄弟孩子节点 
+### el方法:增删改查el的兄弟和孩子节点 
 
 ```js
 <meta charset="UTF-8">
@@ -812,7 +814,7 @@ this===当前dom对象
 
 
 
-# Event(记录dom事件)
+# Event(==dom事件本身 需要触发才运行==)
 
 1. `Event` 接口表示在 DOM 中发生的任何事件; 一些是用户生成的（例如鼠标或键盘事件），而其他由 API 生成（例如指示动画已经完成运行的事件，视频已被暂停等等）。事件通常由外部源触发，同样也会以编程方式触发，例如执行一个 `element` 的一个 [HTMLElement.click( )](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) 事件，或通过定义事件，然后使用 [EventTarget.dispatchEvent( )](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent) 将其派发到一个指定的目标。有许多类型的事件，其中一些使用基于主要事件接口的其他接口。事件本身包含所有事件通用的属性和事件。
 
@@ -850,6 +852,8 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
 
 ### 2 `evt=new  Event('build' )`
 
+......
+
 ## event实例
 
 ![](./img/a.png)
@@ -874,7 +878,7 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
 | [timeStamp](https://www.runoob.com/jsref/event-timestamp.html) | 返回事件生成的日期和时间。                     |
 | [type](https://www.runoob.com/jsref/event-type.html)         | 返回当前 Event 对象表示的事件的名称。          |
 
-### 事件
+### 方法
 
 | 方法              | 描述                                     |
 | ----------------- | ---------------------------------------- |
@@ -937,7 +941,7 @@ el.onclick=event=>{}//onclick监听客户的鼠标键盘做了什么   event 谁
 
 
 
-# 触发DOM事件
+# el.dispatchEvent(==触发DOM事件==)
 
 | 事件种类       | 新建-Envet实例(el方法的参数,  对象格式 谁去做 记录一组事件动作） | 为DOM元素的事件的书写处理函数 ,监听event              | 派发事件（函数,触发动作）                      |
 | -------------- | ------------------------------------------------------------ | ----------------------------------------------------- | ---------------------------------------------- |
@@ -978,7 +982,7 @@ dispatchEvent() 事件给节点分派(分给)一个==合成事件==。
 
 document.creatEvent------->evt.initEvent-------->el.dispatchEvent
 
-1. createEvent（eventType）
+1. document.createEvent（eventType）
 
 该事件将创建一种新的事件类型，该类型由参数 *eventType* 指定。注意，该参数的值不是要创建的事件接口的名称，而是定义那个接口的 DOM 模块的名称。
 
@@ -1043,7 +1047,7 @@ window.onunload = function () {
 
 在调用 dispatchEvent() 事件之前，必须在代码中对其进行声明，此外，还必须创建一个事件对象以传递给 dispatchEvent()。该事件对象包含侦听器可用来处理该事件的有关信息。
 
-eg
+完整代码1
 
 ```html
 <a href="/cs" id="a">ceshi</a>
@@ -1062,7 +1066,7 @@ console.log(evt)
 
 ```
 
-eg
+完整代码2
 
 ```js
 var rect={   dispatch : function(el ,type){
