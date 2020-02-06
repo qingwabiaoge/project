@@ -17,7 +17,7 @@ app.use(async (ctx, next) => {
     // 允许来自所有域名请求
     ctx.set("Access-Control-Allow-Origin", "*");
     // 这样就能只允许 http://localhost:8080 这个域名的请求了
-    // ctx.set("Access-Control-Allow-Origin", "http://localhost:8080"); 
+    // ctx.set("Access-Control-Allow-Origin", "http://localhost:8080");
 
     // 设置所允许的HTTP请求方法
     ctx.set("Access-Control-Allow-Methods", "OPTIONS, GET, PUT, POST, DELETE");
@@ -52,10 +52,10 @@ app.use(async (ctx, next) => {
     // getResponseHeader('myData')可以返回我们所需的值
     //https://www.rails365.net/articles/cors-jin-jie-expose-headers-wu
     ctx.set("Access-Control-Expose-Headers", "myData");
-    
+
     await next();
 })
-123456789101112131415161718192021222324252627282930313233343536373839404142
+161718192021222324252627282930313233343536373839404142
 ```
 
 这一部分我认为这篇文章讲的很好[浅谈Koa2框架利用CORS完成跨域ajax请求](https://www.jb51.net/article/135924.htm)。

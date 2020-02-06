@@ -1,4 +1,9 @@
-# 基本类型
+# 实例化
+
+Boolean(p:any)
+
+### 基本类型
+
 ```
 console.log(Boolean(undefined))//false
 console.log(Boolean(null))//false
@@ -15,7 +20,7 @@ console.log(Boolean({}.a))//false
 ```
 
 
-# 对象类型和包装对象类型(键值对 全是true)
+### 对象类型和包装对象类型(键值对 全是true)
 
 ```
  console.log(Boolean(new String('')))//ture

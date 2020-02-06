@@ -233,7 +233,7 @@ document.write(isFinite("2017")+ "<br />")
     true
     false
     true
-123456789101112131415
+
 ```
 
 ### 8. isNaN
@@ -268,207 +268,9 @@ document.write(isNaN("2017")+ "<br />")
     false
     true
     false
-123456789101112131415
 ```
 
-### 9. Number
 
-把对象的值转换为数字
-
-#### 返回值
-
-如果参数是 Date 对象，Number() 返回从 1970 年 1 月 1 日至今的毫秒数。
-
-如果对象的值无法转换为数字，那么 Number() 函数返回 NaN。
-
-```
-Number(object)
-```
-
-#### 参数
-
-- 必需
-- - object JavaScript 对象
-
-```
-var arr = [1];
-
-document.write(Number(true)+ "<br />");
-document.write(Number(new Date())+ "<br />");
-document.write(Number("158")+ "<br />");
-document.write(Number("zsh")+ "<br />");
-document.write(Number(arr)+ "<br />");
-
-结果:
-    1
-    1499436337950
-    158
-    zsh
-    1
-123456789101112131415
-```
-
-### 10. parseFloat
-
-可解析一个字符串，并返回一个浮点数。
-该函数指定字符串中的首个字符是否是数字。如果是，则对字符串进行解析，直到到达数字的末端为止，然后以数字返回该数字，而不是作为字符串。
-
-#### 返回值
-
-返回解析后的数字。
-
-#### 说明
-
-parseFloat 是全局函数，不属于任何对象。
-
-parseFloat 将它的字符串参数解析成为浮点数并返回。如果在解析过程中遇到了正负号（+ 或 -）、数字 (0-9)、小数点，或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符，返回当前已经解析到的浮点数。同时参数字符串首位的空白符会被忽略。
-
-如果参数字符串的第一个字符不能被解析成为数字，则 parseFloat 返回 NaN。
-
-#### 提示：
-
-您可以通过调用 isNaN 函数来判断 parseFloat 的返回结果是否是 NaN。如果让 NaN 作为了任意数学运算的操作数，则运算结果必定也是 NaN。
-
-#### 注释：
-
-开头和结尾的空格是允许的。
-
-#### 提示：
-
-如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。
-
-#### 提示：
-
-如果只想解析数字的整数部分，请使用 parseInt() 方法。
-
-```
-parseFloat(string)
-```
-
-#### 参数
-
-- 必需
-- - string 要被解析的字符串。
-
-```
-var arr = [1];
-
-document.write(parseFloat(arr))
-document.write(parseFloat("10")) 
-document.write(parseFloat("10.00")) 
-document.write(parseFloat("10.33")) 
-document.write(parseFloat("34 45 66")) 
-document.write(parseFloat(" 60 ")) 
-document.write(parseFloat("40 years"))
-document.write(parseFloat("He was 40"))
-
-结果:
-    1
-    10
-    10
-    10.33
-    34
-    60
-    40
-    NaN
-123456789101112131415161718192021
-```
-
-### 11. parseInt
-
-可解析一个字符串，并返回一个整数
-
-#### 返回值
-
-返回解析后的数字。
-
-#### 说明
-
-当参数 radix 的值为 0，或没有设置该参数时，parseInt() 会根据 string 来判断数字的基数。
-
-举例，如果 string 以 “0x” 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。如果 string 以 0 开头，那么 ECMAScript v3 允许 parseInt() 的一个实现把其后的字符解析为八进制或十六进制的数字。如果 string 以 1 ~ 9 的数字开头，parseInt() 将把它解析为十进制的整数。
-
-#### 注释：
-
-只有字符串中的第一个数字会被返回。
-
-#### 注释：
-
-开头和结尾的空格是允许的。
-
-#### 提示：
-
-如果字符串的第一个字符不能被转换为数字，那么 parseInt() 会返回 NaN。
-
-```
-parseInt(string, radix)
-```
-
-#### 参数
-
-- 必需
-- - string 要被解析的字符串。
-- 可选
-- - radix 表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。
-
-```
-var arr = [1];
-
-document.write(parseInt(arr))
-// 1
-
-parseInt("10");         //返回 10
-parseInt("19",10);      //返回 19 (10+9)
-parseInt("11",2);       //返回 3 (2+1)
-parseInt("17",8);       //返回 15 (8+7)
-parseInt("1f",16);      //返回 31 (16+15)
-parseInt("010");        //未定：返回 10 或 8
-123456789101112
-```
-
-### 12.String
-
-把对象的值转换为字符串
-
-```
-String(object)
-```
-
-#### 参数
-
-- 必需
-- - string JavaScript 对象。
-
-```
-var test1= new Boolean(1);
-var test2= new Boolean(0);
-var test3= new Boolean(true);
-var test4= new Boolean(false);
-var test5= new Date();
-var test6= new String("999 888");
-var test7=12345;
-
-var arr = [12,35,65];
-document.write(String(arr))
-document.write(String(test1)+ "<br />");
-document.write(String(test2)+ "<br />");
-document.write(String(test3)+ "<br />");
-document.write(String(test4)+ "<br />");
-document.write(String(test5)+ "<br />");
-document.write(String(test6)+ "<br />");
-document.write(String(test7)+ "<br />");
-
-结果:
-    12,35,65
-    true
-    false
-    true
-    false
-    Wed Oct 28 00:17:40 UTC+0800 2009
-    999 888
-    12345
-12345678910111213141516171819202122232425262728
-```
 
 ## 全局属性
 
@@ -494,7 +296,6 @@ document.write(t2)
 结果:
     Infinity
     -Infinity
-12345678910111213
 ```
 
 ### 2. NaN
@@ -526,7 +327,7 @@ document.write(isNaN(test2))
     NaN
     false
     true
-123456789101112131415
+
 ```
 
 ### 3. undefined

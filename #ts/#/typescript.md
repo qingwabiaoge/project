@@ -1,3 +1,5 @@
+
+
 # 变量基本类型
 
 ### :boolean
@@ -12,6 +14,12 @@ let isDone: boolean = false;
 ...
 ```
 
+### :string
+
+```
+let str:string='abc'
+```
+
 ### :any
 
 会避开类型检查,和原生相同
@@ -24,6 +32,8 @@ i='str'
 ### :void
 
 某种程度上来说，`void`类型像是与`any`类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是 `void`：
+
+ *相当于null和undefined的合体*
 
 ```ts
                   //:在()后是针对返回值的
@@ -53,7 +63,11 @@ let u: undefined = undefined;
 let n: null = null;
 ```
 
-### 枚举类型变量
+### 枚举类型
+
+枚举类型也表示一类事物,一类里就几个成员,
+
+##### 由名称找值
 
 `enum`类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，==使用枚举类型可以为一组数值赋予友好的名字==。
 
@@ -62,7 +76,7 @@ enum Color {Red, Green, Blue}
 let c: Color = Color.Green;
 ```
 
-默认情况下，从`0`开始为元素编号。 你也可以手动的指定成员的数值。 例如，我们将上面的例子改成从 `1`开始编号： 
+默认情况下，从`0`开始为元素编号。 你也可以手动的指定成员的数值。 改成从 `1`开始编号： 
 
 ```ts
 enum Color {Red = 1, Green, Blue}
@@ -76,16 +90,7 @@ enum Color {Red = 1, Green = 2, Blue = 4}
 let c: Color = Color.Green;
 ```
 
-枚举类型提供的一个便利是你可以由枚举的值得到它的名字。 例如，我们知道数值为2，但是不确定它映射到Color里的哪个名字，我们可以查找相应的名字：
-
-```ts
-enum Color {Red = 1, Green, Blue}
-let colorName: string = Color[2];
-
-console.log(colorName);  // 显示'Green'因为上面代码里它的值是2
-```
-
-字符串也是可以的
+字符串做值
 
 ```ts
 enum Direction {
@@ -99,9 +104,30 @@ console.log(Direction.Up)
 
 ```
 
-### 元组 Tuple变量
+##### 由值找名称
 
-(定义数组的每一个value)
+枚举类型提供的一个便利是你可以由枚举的值得到它的名字。 例如，我们知道数值为2，但是不确定它映射到Color里的哪个名字，我们可以查找相应的名字：
+
+```ts
+enum Color {Red = 1, Green, Blue}
+let colorName: string = Color[2];
+
+console.log(colorName); 
+```
+
+### 数组
+
+```js
+let arrNum:number[] = [1, 2, 3]
+let arrString:string[] = ['1', '2', '3']
+let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
+```
+
+### 元组 
+
+元:多元的意思
+
+元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。 比如，你可以定义一对值分别为 `string`和`number`类型的元组。
 
 ```js
 // Declare a tuple type
@@ -112,33 +138,13 @@ x = ['hello', 10]; // OK
 x = [10, 'hello']; // Error
 ```
 
-### 数组标识符的基本写法
-
-```
-let arrNum:number[] = [1, 2, 3]
-let arrString:string[] = ['1', '2', '3']
-let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
-```
-
-### ==数组标识符2-> 的带泛型的接口的写法==
+### 联合类型
 
 ```ts
-let arr:Array<number>=[1,2,3]
+let myFavoriteNumber: string | number;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
 ```
-
-interface Array 接口估计作为默认接口被ts定义过
-
-```js
-interface Array<T> {
-  [index:number]: T;
-}
-//注意和Array<String>比较
-let arr: Array<string>;
-myArray = ["Bob", "Fred"];
-
-```
-
-
 
 ### 泛型:T 
 
@@ -153,7 +159,7 @@ myArray = ["Bob", "Fred"];
 1. < T > 泛型是一种任意类型，类型是安全的;
 2. Any 类型会避开类型的检查
 3. T叫做占位符;
-4. 泛型是在实例化使用阶段才初始化;
+4. 泛型是在==实例化==使用阶段才初始化;
 5. 泛型一般用于批量操作;
 
   T 类似函数的额外的参数
@@ -166,18 +172,61 @@ TypeScript的核心原则之一是对值所具有的*结构*进行类型检查�
 
 对变量限制的一组规则
 
-### 接口语法
+### 语法
 
-```
+对象接口
+
+```js
 interface LabelledValue {
-  label: string; //可以使用label和size
-  size:number
-
+  label: string; //只能使用label,不用使用size
 }
 
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label);
+}
+
+let myObj = {size: 10,label: "Size 10 Object"};
+printLabel(myObj);
 ```
 
-### 接口继承接口
+可索引类型接口
+
+```js
+interface NumberArr{
+    [index:number]: number
+}
+let numberArr:NumberArr = [1, 2, 3]
+```
+
+函数声明式接口
+
+```js
+interface SearchFunc { //函數類型接口
+  (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+
+mySearch = function (source: string, subString: string) {
+  let result = source.search(subString);
+  return result > -1;
+}
+```
+
+类的接口
+
+```ts
+interface ClockInterface {
+    currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    constructor(h: number, m: number) { }
+}
+```
+
+### 接口继承一个接口
 
 ```ts
 interface Shape {
@@ -193,7 +242,7 @@ square.color = "blue";
 square.sideLength = 10;
 ```
 
-##### 接口继承多个接口
+### 接口继承多个接口
 
 ```ts
 interface Shape {
@@ -250,8 +299,8 @@ obj={a:1,b:2}
 可缺失
 
 ```ts
-let obj: { a?: number, b?: number }
-obj = {a: 1, },
+let obj: { a: number, b?: number }
+obj = {a: 1 },
 ```
 
 ### 接口	
@@ -270,7 +319,7 @@ printLabel(myObj);
 
 ```
 
-```js
+```ts
 interface LabelledValue {
   label: string; //可以使用label和size
   size:number
@@ -328,7 +377,7 @@ console.log(p1)
 
 ```
 
-###### ==带泛型的接口==
+###### ==带泛型==
 
 ```ts
 interface LabelledValue<T> {
@@ -348,53 +397,66 @@ printLabel(myObj);
 
 ### 接口
 
+可索引接口对数组的约束
+
 ```js
 interface NumberArr{
     [index:number]: number
 }
-let arrNumber:NumberArr = [1, 2, 3]
+let numberArr:NumberArr = [1, 2, 3]
+```
 
+```js
 interface StringArr{
     [index:number]: string
 }
-let arrString:StringArr = ['1', '2', '3']
-
+let stringArr:StringArr = ['1', '2', '3']
+```
+```js
 interface ObjectArr{
     [index:number]: object
 }
-let arrObject:ObjectArr = [
+let  objectArr:ObjectArr = [
     {name: 'xiao ming'},
     {name: 'han mei mei'}
 ]
 ```
 
-```tsx
-interface StringArray {
-  [index: number]: string;
+可索引接口 对对象的约束
+
+```js
+interface UserObj {
+  [index: string]: string
 }
-
-let myArray: StringArray;
-myArray = ["Bob", "Fred"];
-
-let myStr: string = myArray[0];
-
+var arr: UserObj = { name: '张三' };
 ```
 
-###### ==带泛型的接口==
+###### ==带泛型==
 
 ```ts
-interface StringArray<T> {
+interface Arr<T> {
   [index:number]: T;
 }
-//注意和Array<String>比较
-let myArray: StringArray<string>;
-myArray = ["Bob", "Fred"];
+
+let arrString: Arr<string>;
+arrString = ["Bob", "Fred"];
+let ArrNumber:Arr<number>
+    
 
 ```
 
+ts的默认索引类型Array的接口
 
+```ts
 
+interface Array<T> {
+  [index:number]: T;
+}
 
+let arr: Array<string>;
+arr = ["Bob", "Fred"];
+
+```
 
 # 函数声明式
 
@@ -416,7 +478,17 @@ function(x: number, y: number) {
 };
 ```
 
-###### ==带泛型的函数==
+可缺失
+
+```js
+function(x: number, y: number,z?:number) { 
+    return x + y;
+};
+```
+
+
+
+###### ==带泛型==
 
 ```ts
 function identity<T>(arg: T): T { 
@@ -469,8 +541,9 @@ mySearch = function (source: string, subString: string) {
   let result = source.search(subString);
   return result > -1;
 }
-
-//对于函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相匹配。 比如，我们使用下面的代码重写上面的例子：
+```
+对于函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相同。 比如，我们使用下面的代码重写上面的例子
+```ts
 
 mySearch = function (src: string, sub: string): boolean {
   let result = src.search(sub);
@@ -479,14 +552,15 @@ mySearch = function (src: string, sub: string): boolean {
 
 ```
 
-###### ==带泛型的接口==
+###### ==带泛型==
 
 ```ts
 interface GenericIdentityFn {
   <T>(m: T): T;
 }
 
-let myIdentity: GenericIdentityFn = function (m) {
+let myIdentity: GenericIdentityFn 
+myIdentity= function (m) {
   return m
 };
 
@@ -499,13 +573,15 @@ interface GenericIdentityFn<T> {
   (arg: T): T;
 }
 
-let myIdentity: GenericIdentityFn<string> = function (arg) {
+//确定接口里的T的值
+let myIdentity: GenericIdentityFn<string>
+
+myIdentity = function (arg) {
   return arg
 };
 
 const i: string = myIdentity('1')
 console.log(i)
-
 ```
 
 
@@ -540,7 +616,7 @@ let myAdd: (x: number, y: number) => number
 console.log(myAdd(1,2))
 ```
 
-######    ==带泛型的接口==
+######    ==带泛型==
 
 ```js
 let myIdentity= function <T>(arg: T): T {
@@ -563,15 +639,16 @@ console.log(myIdentity<number>(1))
 
 # 类
 
-(本质是构造函数)
+本质是构造函数
 
 ```js
 class Greeter {
-    //ownprototype
-  greeting: string;
+ /**构造函数部分**/
+  greeting: string; //这里比原生多一个类型检测
   constructor(message: string) {
     this.greeting = message;
   }
+
 //原型属性
   greet() {
     return "Hello, " + this.greeting;
@@ -587,12 +664,14 @@ console.log(greeter)
 
 *  `public`(默认)
 
-可以让自己 子类 实例化对象使用
+可以让 子类 实例化对象(表现在prototype上)
 
 ```ts
 class Animal {
+    /*构造函数部分*/
   public name: string;
   public constructor(theName: string) { this.name = theName; }
+    /*原型部分*/
   public move(distanceInMeters: number) {
     console.log(`${this.name} moved ${distanceInMeters}m.`);
   }
@@ -613,9 +692,9 @@ class Animal {
   constructor(theName: string) { this.name = theName; }
 }
 
-const cat=new Animal("Cat") // 错误: 'name' 是私有的.
-console.log(cat) //{name: "Cat"}
-console.log(cat.name)// 错误: 'name' 是私有的.
+const cat=new Animal("cat") 
+console.log(cat) //{name: "cat"}
+console.log(cat.name)// err: 'name' 是私有的.只能在类Animal内使用,原理估计是ts还没有转成原生之前先检测,就是报错,和原生无关
 
 ```
 
@@ -670,7 +749,7 @@ animal = employee; // 错误: Animal 与 Employee 不兼容.
 
 * protect	
 
-​       可以让子类使用
+​       可以被继承 不可以被实例化
 
 ```ts
 class Person {
@@ -698,6 +777,8 @@ console.log(howard.getElevatorPitch());
 ```
 
 * readonly 只读
+
+  你可以使用 `readonly`关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。
 
 ```ts
 class Octopus {
@@ -739,7 +820,7 @@ dog.bark();
 
 ```
 
-###### ==带泛型的类==
+###### ==带泛型==
 
 ```ts
 class GenericNumber<T> {
@@ -830,7 +911,7 @@ let analog = createClock(AnalogClock, 7, 32);
 
 ```
 
-###### ==带泛型的接口==
+###### ==带泛型==
 
 ```ts
 interface ClockInterface<T> {

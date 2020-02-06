@@ -35,9 +35,9 @@ var reg = new RegExp('hello','g');   //代替/hello/g
 
 ```
 
-#### 自定义匹配(单字符) 
+#### 自定义匹配(单字符)
 
-#####  [-] 自定义匹配范围 
+#####  [-] 自定义匹配范围
 
 [a-z A-Z]匹配英文大小写
 
@@ -87,9 +87,7 @@ console.log(reg.exec(str)) //['lei']
 ##### *
  runoo * b，可以匹配 runob、runoob、runoooooob 等，* 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。
 
-
-
-##### * +贪婪模式和?懒惰模式
+##### *+的贪婪模式和?的懒惰模式
 
 ###### 贪婪模式* +
 
@@ -111,7 +109,7 @@ console.log(reg.exec(str)) //['lei']
 const str = `<img src="test.jpg" width="60px" height="80px"/>`
 
 const reg = /src=".*?"/
- 
+
 console.log(reg.test(str))
 console.log(reg.exec(str))
 
@@ -135,7 +133,7 @@ o{,3}
 
 ##### 1.分组
 
-_多字符_
+_多字符_(abc)
 
 一个分组中可以像上面这样有一个具体的表达式，这样可以优雅地表达一个重复的字符串
 
@@ -144,15 +142,13 @@ _多字符_
 /hahaha/
 ```
 
-_或操作_
-
-或操作（|）或操作
+_或操作_（a|b）
 
 ```
 （a|b）匹配a或者b
 ```
 
-##### 2.捕获,捕获值赋值到reg.exec('xxx')[1]**
+##### 2.捕获,捕获值赋值到reg.exec('xxx')[1]
 
    ```js
 const str = 'qinshilei\nqinshiwei'
@@ -165,7 +161,7 @@ const str = 'qinshilei\nqinshiwei'
     console.log(str.match(reg_))//["qin", "qin"] ,可以用于知道匹配的数量
    ```
 
- *访问捕获的内容*     
+ *访问捕获的内容*
 
 1. reg.exec('xxx')[1]
 
@@ -303,22 +299,22 @@ new  RegExp)( )的参数
 
 
 
-# 实例
+# 实例对象键值对
 
 ![1570960003705](img/1570960003705.png)
 
 
 
-### `__proto__:RegExp.prototype`
+### RegExp.prototype
 
 ##### test( )  /  exec( )
 
 见上方gmi修饰符
 
-若reg.test判定为true, reg.exe(str)才不是undifined 
+若reg.test判定为true, reg.exe(str)才不是undefined
 
 ```javascript
-reg.test判定为true, reg.exe(str)才不是undifined 
+reg.test判定为true, reg.exe(str)才不是undefined
 ```
 
 ### ownProperty
@@ -337,7 +333,7 @@ console.log(Object.keys(reg))//[]
 ```
 # 应用
 
-``` javascript
+``` js
 匹配中文：[\u4e00-\u9fa5]
 行首行尾空格：^\s*|\s*$
 Email：^\w+@[a-z0-9]+(\.[a-z]+){1,3}$
@@ -358,7 +354,7 @@ QQ号：[1-9][0-9]{4,9}
     }
 
     var reg = /http:\/\/[\w-]*(\.[\w-]*)+/ig;
-    var str = '将一个用户输入的一段文字中的url替换成可以点击的link地址。测试一下：http://www.ablanxue.com紧接着中文，还有    http://www.baidu.com';
+    var str = '将一个用户输入的一段文字中的url替换成可以点击的link地址http://www.baidu.com';
     document.write(replaceReg(reg, str));
 
 ```

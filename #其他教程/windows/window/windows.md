@@ -331,8 +331,11 @@ Anonymous Logon Users　任何未利用有效的Windows Server 2003帐户连接�
 netsh wlan set hostednetwork mode=allow ssid=qin key=shilei12
 
 此命令有三个参数，mode：是否启用虚拟WiFi网卡，改为disallow则为禁用。
-         ssid：无线网名称，最好用英文(以wuminPC为例)。
-         key：无线网密码，八个以上字符(以wuminWiFi为例)。
+
+netsh wlan set hostednetwork mode=disallow
+
+​         ssid：无线网名称，最好用英文(以wuminPC为例)。
+​         key：无线网密码，八个以上字符(以wuminWiFi为例)。
 
 以上三个参数可以单独使用，例如只使用mode=disallow可以直接禁用虚拟Wifi网卡。
 

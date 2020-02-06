@@ -18,15 +18,15 @@
 | dom                                        | vue                                                          | 函数                                                         |
 | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | HTMLDivElement是div的父类                  | Vue是Cl的父类                                                | function Cl(type){this.type=type}<br />Cl.prototype=Vue.prototype |
-| <div></div>是构造函数div实例化             | <cl></cl>       构造函数Cl实例化                             | Cl( )                                                        |
+| <div></div>是构造函数div实例化             | <cl></cl>       构造函数Cl实例化                             | new Cl( )                                                    |
 |                                            | props:{msg:{default:'msg'}}<br />构造函数Cl参数的默认值<br /> | function Cl(type="default"){this.type=type}                  |
 |                                            | prop类型检测                                                 | 类似ts的函数参数类型检测                                     |
-|                                            | Cl子组件里有局部btn组件                                      | function Cl(type){<br />this.type=type<br /><br />function Btn(){.......}<br /> Btn( )<br />} |
-|                                            | Cl子组件里有全局ui组件btn                                    | global.Btn=funciont(){...}<br />function Cl(type){<br />this.type=type<br /> Btn( )<br />} |
-|                                            | Cl组件有slot                                                 | function Cl(type,slot){this.type=type<br /><br />slot(p)<br /> }<br />Cl('default',function slot(p){<br />this.p=p}) |
+|                                            | Cl子组件里有局部注册的btn组件                                | function Cl(type){<br />this.type=type<br /><br />function Btn(){.......}<br /> Btn( )<br />} |
+|                                            | Cl子组件里有全局注册的btn组件                                | global.Btn=funciont(){...}<br />function Cl(type){<br />this.type=type<br /> Btn( )<br />} |
+|                                            | Cl组件有slot                                                 | function Cl(type,slot){this.type=type<br /><br />slot(p)<br /> }<br />Cl('default',function slot(p){this.p=p}) |
 |                                            | proviede/project                                             | function Fa({enable}){<br /><br />function Cl(enable){<br /><br />this.enable=enable}<br />} |
 |                                            | CL子组件里的data变量                                         | function Cl(type){this.type=type<br /><br />var data=msg<br /> btn( )} |
-| <div style=""/>的属性就是构造函数div的参数 | <cl type="default"/>的属性是构造函数Cl的参数                 | new Cl("defalt")                                             |
+| <div style=""/>的属性就是构造函数div的参数 | <cl type="primary"/>的属性是构造函数Cl的参数                 | new Cl("primary")                                            |
 |                                            | 递归组件                                                     | 函数递归嵌套                                                 |
 
 ## 组件标签<=>new Cl( )
