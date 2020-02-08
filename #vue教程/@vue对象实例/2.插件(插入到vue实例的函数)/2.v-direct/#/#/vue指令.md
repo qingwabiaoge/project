@@ -312,6 +312,10 @@ propx:sync不限于value input,但是不能用于原生组件
 
 ### 格式
 
+
+
+指令的本质是函数,渲染dom的函数.
+
 ```html
 <mark v-direct></mark>
 <mark v-direct='value'></mark>
@@ -320,7 +324,23 @@ propx:sync不限于value input,但是不能用于原生组件
 <mark v-direct:arg.modifiers='value'></mark>
 ```
 
+```html
+<template v-slot="{xx}">      
+<template v-slot:myname>xxx</template>    
+<template v-slot:myname="scopeData">xxx</template>
 
+<input v-model="msg">
+<input v-model.trim="msg">
+   
+<button v-on:onlick.stop='fn'></button>
+    
+```
+
+```html
+{{}}
+
+{{msg|myFilter(n)}}
+```
 
 ### 钩子函数
 

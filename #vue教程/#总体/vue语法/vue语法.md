@@ -1,32 +1,6 @@
 # 指令写法
 
-指令的本质是函数,渲染dom的函数.
-
-```html
-<mark v-direct></mark>
-<mark v-direct='value'></mark>
-<mark v-direct:arg='value'></mark>
-<mark v-direct.modifiers='value'></mark>
-<mark v-direct:arg.modifiers='value'></mark>
-```
-
-```html
-<template v-slot="{xx}">      
-<template v-slot:myname>xxx</template>    
-<template v-slot:myname="scopeData">xxx</template>
-
-<input v-model="msg">
-<input v-model.trim="msg">
-   
-<button v-on:onlick.stop='fn'></button>
-    
-```
-
-```html
-{{}}
-
-{{msg|myFilter(n)}}
-```
+参见指令
 
 # 标签属性写法
 
@@ -92,6 +66,8 @@ data(){
 
 ### listening
 
+观察者模式,订阅发布,本质是订阅vue实例订阅了event
+
 ##### 原始版
 
 ```html
@@ -131,31 +107,32 @@ methods:{
 
 ![](./img/对象属性值.svg)
 
+Vue.component
+
 ```js
 Vue.component('my-component', {
   props: {
-//1基本类型当属性值----------------------------------------
+//1基本类型当对象的属性值----------------------------------------
     // 基础的类型检查 (`null` 和 `undefined` 会通过任何类型验证)
     propA: Number,
     // 多个可能的类型
       
-//2数组当属性值---------------------------------------------------    
+//2数组当对象的属性值---------------------------------------------------    
     propB: [String, Number],
     // 必填的字符串
       
-//3对象当属性值---------------------------------------------------    
+//3对象当对象的属性值---------------------------------------------------    
     propC: {
       type: String,
       required: true
     },
-    // 带有默认值的数字
+    // vue组件属性为普通类型
     propD: {
       type: Number,
       default: 100
     },
-      
-             
-    // 带有默认值的对象
+            
+    // vue组件属性为对象类型
     propE: {
       type: Object,
       // 对象或数组默认值必须从一个工厂函数获取      
@@ -175,8 +152,10 @@ Vue.component('my-component', {
 })
 ```
 
+data/computed
+
 ```js
-//computed
+
 data:{msg:1},
 //----------------
 data(){
@@ -193,6 +172,8 @@ computed:{
     
 }
 ```
+
+路由解耦属性
 
 ```js
 //路由解耦
@@ -260,7 +241,7 @@ computed:{
             {path: '/hello/:name', component: Hello, props: true}, // Pass route.params to props
 //2对象做属性值-----------------------------------               
             {path: '/static', component: Hello, props: {name: 'world'}}, // static values
-//4函数当属性值------------------- 函数生成props作为router-view的属性------------------------------
+//3函数当属性值------------------- 函数生成props作为router-view的属性------------------------------
             {path: '/dynamic/:years', component: Hello, props: dynamicPropsFn}, // custom logic for mapping between route and props
         ]
     })

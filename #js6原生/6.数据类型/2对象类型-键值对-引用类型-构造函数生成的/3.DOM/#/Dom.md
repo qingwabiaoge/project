@@ -821,16 +821,12 @@ this===当前dom对象
 </html>
 ```
 
-
-
 #### el.dispatchEvent(==触发el的事件==)
 
-
-
-| 事件种类       | 设备操作     | 新建Envet实例                                                | 为DOM元素的事件的设置处理函数                                | 派发事件              |
-| -------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------- |
-| **原生事件**   | 鼠标键盘点击 | 浏览器会自动实例化全局变量event,存储鼠标键盘的事件信息       | 1.onlick="fn"<br />2.el.onmouseout = fn<br />3.el.addEventListener( 'build',fn) |                       |
-| **自定义事件** |              | evt=new  Event('build' )或<br />var evt = document.createEvent('Event');                evt.initEvent(type,true,true); | el.addEventListener( 'build',function(){ })                  | el.dispatchEvent(evt) |
+| 事件种类       | 设备交互         | 新建Envet实例                                                | 派发事件              | 为DOM元素的事件的设置处理函数(订阅event的发布信息)           |
+| -------------- | ---------------- | ------------------------------------------------------------ | --------------------- | ------------------------------------------------------------ |
+| **原生事件**   | 鼠标键盘点击按钮 | 浏览器会自动实例化全局变量event,并用来存储鼠标键盘的事件信息 | 不需要                | 1.onlick="fn"<br />2.el.onmouseout = fn<br />3.el.addEventListener( 'build',fn) |
+| **自定义事件** |                  | 新建存有鼠标或键盘交互dom的信息 的event实例<br />evt=new  Event('build' )或<br />var evt = document.createEvent('Event');                evt.initEvent(type,true,true); | el.dispatchEvent(evt) | el.addEventListener( 'build',function(){ })                  |
 
 
 

@@ -1,0 +1,53 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<button onclick="i++ ;console.log(i)">global.i++</button>
+<button onclick="vm.setMsg()">vm.setMsg()</button>
+<hr>
+<div id="app">
+
+
+
+    render: {{msg}}
+    <hr>
+
+    methods: {{a}}
+
+    <hr>
+
+    computed: {{msg1}}
+
+
+</div>
+
+
+<script>
+    var i = 1
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                //  对外部数据缓存机制不监听vm对象外的i的变化进项渲染
+                msg: i,
+                a: 0
+            }
+        },
+        methods: {
+            setMsg() {
+                //没有对外部数据缓存,运行methods ,监听vm对象外i的变化
+                this.a = i
+            }
+        },
+        computed: {
+            msg1() {
+                //有对外部数据缓存,computed监听不到vm对象外i的变化
+                return i + 1
+            },
+
+        }
+
+    })
+</script>
+<style>
+
+</style>
+

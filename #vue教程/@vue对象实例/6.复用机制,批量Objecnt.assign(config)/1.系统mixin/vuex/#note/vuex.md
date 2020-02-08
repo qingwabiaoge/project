@@ -97,13 +97,13 @@
 
 对比$emit,都是回调函数
 
-```
-this.$emit("input",data)
-
-< div input="fn(event,data)"></div>
-
+```html
+< cl @click="fn(event,data)"></div>
 ```
 
+```js
+this.$emit("click",data)
+```
 
 ### store/$store对象
 
@@ -128,11 +128,11 @@ this.$emit("input",data)
 
 被不同非父子组件多次用到的数据
 
-# 对比vue的config
+# 对比vue的配置文件
 
-|              | vuex    | vue         |
-| ------------ | ------- | ----------- |
-| 状态         | state   | data        |
-| 计算         | getters | computed    |
-| 获取后台数据 | actions | get( ){   } |
+|              | vuex    | vue               |
+| ------------ | ------- | ----------------- |
+| 状态         | state   | data              |
+| 计算         | getters | computed          |
+| 获取后台数据 | actions | async get( ){   } |
 

@@ -7,8 +7,6 @@
 
 
 
-
-
 <script>
 
     //  vue构造器的配置文件  es6-module输出
@@ -25,9 +23,6 @@
     }
 
 </script>
-
-
-
 
 <!--style被css-loader解析爲js-->
 <style>

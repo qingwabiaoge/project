@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="App">
+    <async-example></async-example>
+</div>
+
+<script>
+    Vue.component('async-example', function (resolve, reject) {
+        setTimeout(function () {
+            // 向 `resolve` 回调传递组件定义
+            resolve({
+                template: '<div>I am async!</div>'
+            })
+        }, 1000)
+    })
+    const vm = new Vue({el: '#App'})
+</script>
