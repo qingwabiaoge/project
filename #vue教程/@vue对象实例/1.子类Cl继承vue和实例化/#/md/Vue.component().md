@@ -85,7 +85,9 @@
 </style>
 ```
 
-### 3.slot组件再解藕(slot嵌套更完全解耦,不相互依赖)
+### slot组件再解藕
+
+slot嵌套更完全解耦,不相互依赖
 
 ```html
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
@@ -127,7 +129,7 @@
 </style>
 ```
 
-### fileter再解耦(处理数据的过滤器)
+### filters再解耦(处理数据的过滤器)
 
 ```html
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
@@ -231,7 +233,9 @@
 
 # 构造函数
 
-| dom                                        | Cl                                                           | 函数                                                         |
+### 组件和函数的联系
+
+| dom                                        | Cl                                                           | 构造函数  Cl({prop,fn})                                      |
 | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | HTMLDivElement是div的父类                  | Vue是Cl的父类                                                | function Cl(type){this.type=type}<br />Cl.prototype=Vue.prototype |
 | <div></div>是构造函数div实例化             | <cl></cl>       构造函数Cl实例化                             | new Cl( )                                                    |
@@ -239,14 +243,14 @@
 |                                            | prop类型检测                                                 | 类似ts的函数参数类型检测                                     |
 |                                            | Cl子组件里有局部注册的btn组件                                | function Cl(type){<br />this.type=type<br /><br />function Btn(){.......}<br /> Btn( )<br />} |
 |                                            | Cl子组件里有全局注册的btn组件                                | global.Btn=funciont(){...}<br />function Cl(type){<br />this.type=type<br /> Btn( )<br />} |
-|                                            | Cl组件有slot                                                 | function Cl(type,slot){this.type=type<br /><br />slot(p)<br /> }<br />Cl('default',function slot(p){this.p=p}) |
-|                                            | proviede/project                                             | function Fa({enable}){<br /><br />function Cl(enable){<br /><br />this.enable=enable}<br />} |
-|                                            | CL子组件里的data变量                                         | function Cl(type){this.type=type<br /><br />var data=msg<br /> btn( )} |
+|                                            | Cl组件有slot                                                 | function slot(data){<br />}<br />function Fa(slot){<br />let data={}<br />slot(data)<br /> }<br /><br />Fa(slot) |
+|                                            | proviede/project                                             | <br />function Cl(enable){ <br />this.enable=enable<br />}<br /><br />function slot(enable){<br />Cl(enable)<br />}<br /><br />function Fa(enable,slot){<br />slot(enable)<br /> }<br /><br />Fa(true,slot) |
+|                                            | CL子组件里的data变量                                         | function Cl(type){<br />this.type=type<br />var data=msg<br /> btn( )} |
 | <div style=""/>的属性就是构造函数div的参数 | <cl type="primary"/>的属性是构造函数Cl的参数                 | new Cl("primary")                                            |
 |                                            | 递归组件                                                     | 函数递归嵌套                                                 |
 |                                            |                                                              | Vue.compoennt( )继承                                         |
 
-组件标签<=>new Cl( )
+### 组件标签<=>new Cl( )
 
 ```html
 <cl age='age' @fn='fn'></cl>
@@ -280,9 +284,28 @@
 
 ```
 
-##  组件标签的属性和方法<=>new Cl({prop,fn})
+
 
 ### `prop`父标签的自定义属性
+
+##### 语法
+
+```vue
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+<!--  驼峰变横杠要不会警告和不显示-->
+  <c-l is-show></c-l>
+</div>
+<script>
+  Vue.component('cL', {template: `<div v-show="isShow">1</div>`, props: {isShow: Boolean}})
+  const vm = new Vue({
+    el: '#app'
+  })
+
+
+</script>
+
+```
 
 ##### 访问
 
@@ -429,9 +452,11 @@ this.$slots.myname
 
 ```
 
-# 继承:组件(子类)用于继承Vue的工具函数
+# 继承:
 
-
+> vue.extend(config:Object) ,vue.extend(config:Object) 组件(子类)用于继承Vue的工具函数
+>
+> ==关系：vue构造->vue组件->vue实例==
 
 在Vue.js中，Vue本身是一个constructor。
 
@@ -448,8 +473,6 @@ Vue.js支持两种不同的API模型：一种是基于类的，命令式的，Ba
 这两种方法都对指定的类型很有用，Vue.js提供这两者只是为了更好的灵活性。
 
 vue构造、vue组件和vue实例这三个是不同的概念，它们的关系有点类似于Java的继承概念：
-
-==关系：vue构造->vue组件->vue实例==
 
 也就是说不同的vue组件可以共用同一个vue构造，不同的vue实例可以共用同一个vue组件。在大型项目中，用过java开发的都知道，继承是非常重要的，前端也一样。我们先看看他们之间的实现代码区别
 

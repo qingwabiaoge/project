@@ -10,8 +10,9 @@ module.exports = {
   //本配置可以在server ,插件$axios使用
   env: {
     // HOST: process.env.HOST,
-    HOST: '127.0.0.1',
-    PORT: 3003
+    HOST: '47.107.170.105',
+    // HOST: 'www.bonniena.com',
+    PORT: 3002,
   },
 
 

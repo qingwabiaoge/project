@@ -565,7 +565,7 @@ export default {
 
 
 ```javascript
-//context里注入的env,機器設置永久的HOST環境變量,則個地方才方便
+//context里注入的env,如果机器設置永久的HOST環境變量,这個地方才方便
   env: {
     HOST: "120.0.0.1"||process.env.HOST ,
     PORT: 3333

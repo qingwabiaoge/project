@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+
+
+    <div>
+
+        <button @click="faDate='父data-def'">def</button>
+        <button @click="faDate='父data-cl'">cl</button>
+    </div>
+    <cl></cl>
+    <cl prop="标签prop"></cl>
+    <cl :prop="faDate"></cl>
+</div>
+
+<script>
+
+    const cl = {template: `<div>{{prop}}</div>`, props: {prop: {default: 'cl组件props:{}默认属性'}}}
+
+
+    const vm2 = new Vue({
+        el: '#app',
+        data: {
+            faDate: ''
+        },
+
+        components: {cl}//注册组件
+    })
+
+</script>

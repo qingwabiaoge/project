@@ -79,6 +79,105 @@ const vModel=function(){ }
 </cl>
 ```
 
+组件本质是构造器函数,属性本质是函数调用的参数
+
+##### 原始版
+
+```html
+<person :data='{...{name:'li',age:'12'},...{sex:'男'}}' 
+        :class='[{red:true},'blue']'
+        :style='{color:'red',backgroud:'white'}'> 
+</person>
+```
+
+##### 进化版data
+
+1. 是看起来不乱,
+
+2. vue监听wm.data改变,重新渲染dom
+
+```html
+<person :data='{...data,...other}' :class='class' :style="style"> </person>
+
+<script>
+data(){
+    return{
+        data:{name:'li',age:'12'},
+        other:{sex:'男'},
+        class:[{red:true},'blue'],
+        style:{color:'red',backgroud:'white'}
+        
+    }
+}
+</script>
+```
+
+##### 再进化版 computed
+
+```html
+<person :data='computedData' :class='class' :style="style"> </person>
+
+<script>
+data(){
+    return{
+        data:{name:'li',age:'12'},
+        other:{sex:'男'}
+        class:[{red:true},'blue'],
+        style:{color:'red',backgroud:'white'}
+        
+    }
+}
+    computed:{
+        computedData(){
+            return{...data,...other}
+        }
+        
+    }
+</script>
+
+```
+
+### v-on
+
+观察者模式,订阅发布,本质是订阅vue实例订阅了event
+
+##### 原始版
+
+```html
+<person @myevent='obj.age++'> </person>
+
+<script>
+data(){
+    return{
+        obj:{name:'li',age:'12',sex:'男'}
+    }
+}
+</script>
+```
+
+##### methods进化版
+
+好处看起来不乱
+
+```html
+<person @myevent='addOneAge'> </person>
+
+<script>
+methods:{
+    data(){
+    return{
+        obj:{name:'li',age:'12',sex:'男'}
+    }
+},
+  addOneAge(){
+      this.obj.age++
+  }
+}
+</script>
+```
+
+
+
 ###  v-if / v-show
 
 

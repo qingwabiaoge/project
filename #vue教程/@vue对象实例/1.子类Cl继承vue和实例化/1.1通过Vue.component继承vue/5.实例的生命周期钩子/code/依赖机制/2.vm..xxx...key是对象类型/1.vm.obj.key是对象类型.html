@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+
+
+<div id="app">
+
+  {{todo}}
+
+  <hr>
+  <!-- 和上面没差别 一样监视不了,不因渲染todo.key而变化,render默认还是监听todo-->
+  {{todo.a}} {{todo.b}}
+  <hr>
+
+  <!-------------------------------------- 默认可以监听到vm和Object.assingn的原有键值变化,监听不到新加键值---------------------------   -->
+  <!--    可以监听到添加todo[0]赋值-->
+  <button @click="todo.a=1" class="btn-success">todo.a=1</button>
+
+  <!--    不能监听到添加新键值-->
+  <button @click="todo.b=2">todo.b=2</button>
+
+  <!--    不能监听到assign添加新键值-->
+  <button @click="Object.assign(todo,{a:10})" class="btn-success">Object.assign(todo,{a:10}}</button>
+  <button @click="Object.assign(todo,{b:20})  ">Object.assign(todo,{b:20})</button>
+
+  <!--      //原始键更新了,顺带把新键值也更新了-->
+  <button @click="Object.assign(todo,{a:10,b:20})" class="btn-success">Object.assign(todo,{a:10,b:20})</button>
+
+
+
+  <!--    用set可以监听到添加新键值---------------------------------------------------------------------------------------------->
+  <button @click="$set(todo, 'c' ,100)" class="btn-success">$set(todo, 'c' ,100)</button>
+
+
+  <!--    更改对象的内存地址-------------------------------------------------------------------------------------------->
+  <button @click="todo={a:4,b:5,c:6}" class="btn-success">todo={a:4,b:5,c:6}</button>
+
+</div>
+
+
+<script>
+
+
+  const vm = new Vue({
+    el: '#app',
+
+    data: {
+
+      todo: {a: 0}
+    },
+    //这些钩子和v-direct render 相应情况都是一致的
+    watch: {
+
+      /*  todo(_new, _old) {
+            console.log(_new)
+        },*/
+      todo: {
+        //watch比较弱,必须深度监听才能监听到对象的原键值的变化
+        deep: true,
+        immediate: true,
+        handler(_new, _old) {
+          console.log(_new)
+        }
+      },
+
+    },
+
+
+    beforeUpdate() {
+      console.log('beforeUpdate')
+      this.$nextTick().then(res => {
+        console.log('$nextTick')
+      })
+    },
+    updated() {
+      console.log('updated')
+    },
+
+  })
+
+</script>
+
+<style>
+
+  .btn-success {
+    background: greenyellow;
+  }
+
+</style>
