@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<div id="app">
+
+    <navs :navs="navs" v-model="value"></navs>
+    value的值:{{value}}
+</div>
+
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script>
+    Vue.component('navs', {
+        template: ` <ul>
+                          <li v-for="item in navs"
+                            :class="[item===value? 'active':'']"
+                            @click="$emit('input', item)"
+                          >
+                           {{item}}
+                            </li>
+                            </ul>`,
+        props: ['navs', 'value'],
+
+
+    })
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            navs: ["列表1", "列表2", "列表3"],
+            value: "列表2"
+        }
+
+    })
+</script>
+
+<style>
+
+    .active {
+        color: red
+    }
+</style>

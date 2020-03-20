@@ -15,7 +15,7 @@ const callback = (err, res) => {
 // 同步读取1
 //文字自动转buffer对象
 var data = fs.readFileSync('../assets/1.txt');
-console.log(data)
+console.log('data:',data)
 //buffer对象转字符串
 console.log("同步读取: " + data.toString());
 

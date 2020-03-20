@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<style>
+    div {
+        border: 1px solid #0f0;
+        margin: 20px
+    }
+
+    div > div {
+        border: 1px solid #f00;
+    }
+
+    div > div > div {
+        border: 1px solid #00f;
+    }
+
+
+</style>
+<div id="app">
+    vm根组件
+    <router-link to="/">首页</router-link>
+
+
+    <router-view></router-view>
+
+</div>
+<script>
+    const id = {
+        template: '<div>id组件:{{$route.params.id}}</div>',
+
+    }
+    const sub1 = {
+        template: '<div>sub1_{{$route.name}}</div>',
+
+    }
+    const router = new VueRouter({
+            routes: [
+                {
+
+                    path: '/',
+                    redirect: 'fa/02',
+                    name: 'id',
+                    component: id
+                },
+                {
+
+                    path: '/fa/:id',
+                    name: 'id',
+                    component: id
+                }
+            ]
+        }
+    )
+    const vm = new Vue({
+        el: '#app',
+        router
+    })
+
+</script>

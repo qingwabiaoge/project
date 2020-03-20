@@ -1,6 +1,20 @@
+# 类型验证
 
+对基本值和对象进行约束
 
-# 变量基本类型
+### 对基本值约束
+
+```js
+let isDone: boolean = false;
+```
+
+### 对对象类型约束
+
+```js
+let i :InterfaceName
+```
+
+# 对基本类型变量的约束
 
 ### :boolean
 
@@ -29,6 +43,24 @@ let i:any=10
 i='str'
 ```
 
+### 泛型:T 
+
+(泛型,,宽泛的类型 可在使用阶段才设置的类型)
+
+软件工程中，我们不仅要创建一致的定义良好的API，同时也要考虑可重用性。 组件不仅能够支持当前的数据类型，同时也能支持未来的数据类型，这在创建大型系统时为你提供了十分灵活的功能。
+
+在像C#和Java这样的语言中，可以使用`泛型`来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。
+
+------
+
+1. < T > 泛型是一种任意类型，类型是安全的;
+2. Any 类型会避开类型的检查
+3. T叫做占位符;
+4. 泛型是在==实例化==使用阶段才初始化;
+5. 泛型一般用于批量操作;
+
+  T 类似函数的额外的参数
+
 ### :void
 
 某种程度上来说，`void`类型像是与`any`类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是 `void`：
@@ -52,6 +84,8 @@ let i:void=null
 console.log(i)
 
 ```
+
+
 
 ### :Null 和 :Undefined
 
@@ -146,498 +180,19 @@ myFavoriteNumber = 'seven';
 myFavoriteNumber = 7;
 ```
 
-### 泛型:T 
+# Class和interface
 
-(泛型,,宽泛的类型 可在使用阶段才设置的类型)
+## 区别
 
-软件工程中，我们不仅要创建一致的定义良好的API，同时也要考虑可重用性。 组件不仅能够支持当前的数据类型，同时也能支持未来的数据类型，这在创建大型系统时为你提供了十分灵活的功能。
+##### 相同点
 
-在像C#和Java这样的语言中，可以使用`泛型`来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。
+为结构化值做一组验证
 
-------
-
-1. < T > 泛型是一种任意类型，类型是安全的;
-2. Any 类型会避开类型的检查
-3. T叫做占位符;
-4. 泛型是在==实例化==使用阶段才初始化;
-5. 泛型一般用于批量操作;
-
-  T 类似函数的额外的参数
-
-# interface
-
-==为引用类型和class类型的值设置一组规则==
-
-TypeScript的核心原则之一是对值所具有的*结构*进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。
-
-对变量限制的一组规则
-
-### 语法
-
-对象接口
-
-```js
-interface LabelledValue {
-  label: string; //只能使用label,不用使用size
-}
-
-function printLabel(labelledObj: LabelledValue) {
-  console.log(labelledObj.label);
-}
-
-let myObj = {size: 10,label: "Size 10 Object"};
-printLabel(myObj);
-```
-
-可索引类型接口
-
-```js
-interface NumberArr{
-    [index:number]: number
-}
-let numberArr:NumberArr = [1, 2, 3]
-```
-
-函数声明式接口
-
-```js
-interface SearchFunc { //函數類型接口
-  (source: string, subString: string): boolean;
-}
-
-let mySearch: SearchFunc;
-
-mySearch = function (source: string, subString: string) {
-  let result = source.search(subString);
-  return result > -1;
-}
-```
-
-类的接口
-
-```ts
-interface ClockInterface {
-    currentTime: Date;
-}
-
-class Clock implements ClockInterface {
-    currentTime: Date;
-    constructor(h: number, m: number) { }
-}
-```
-
-### 接口继承一个接口
-
-```ts
-interface Shape {
-    color: string;
-}
-
-interface Square extends Shape {
-    sideLength: number;
-}
-
-let square = <Square>{};
-square.color = "blue";
-square.sideLength = 10;
-```
-
-### 接口继承多个接口
-
-```ts
-interface Shape {
-    color: string;
-}
-
-interface PenStroke {
-    penWidth: number;
-}
-
-interface Square extends Shape, PenStroke {
-    sideLength: number;
-}
-
-let square = <Square>{};
-square.color = "blue";
-square.sideLength = 10;
-square.penWidth = 5.0;
-```
-
-### 接口继承类
-
-```js
-class Point {
-    x: number;
-    y: number;
-}
-
-interface Point3d extends Point {
-    z: number;
-}
-
-let point3d: Point3d = {x: 1, y: 2, z: 3};
-```
-
-### 接口和类的区别
+##### 不同点
 
 接口不能实例化 类可以
 
-# 对象
-
-```js
-let obj:{a:number,b:number}
-obj={a:1,b:2}	
-```
-
-只读
-
-```ts
-let obj:{readonly a:number,readonly b:number}
-obj={a:1,b:2}
-```
-
-可缺失
-
-```ts
-let obj: { a: number, b?: number }
-obj = {a: 1 },
-```
-
-### 接口	
-
-```ts
-interface LabelledValue {
-  label: string; //只能使用label,不用使用size
-}
-
-function printLabel(labelledObj: LabelledValue) {
-  console.log(labelledObj.label);
-}
-
-let myObj = {size: 10,label: "Size 10 Object"};
-printLabel(myObj);
-
-```
-
-```ts
-interface LabelledValue {
-  label: string; //可以使用label和size
-  size:number
-
-}
-
-function printLabel(labelledObj: LabelledValue) {
-  console.log(labelledObj.label,labelledObj.size);
-}
-
-let myObj = {size: 10,label: "Size 10 Object"};//參數必須有label和size
-printLabel(myObj);
-
-```
-
-```ts
-interface LabelledValue {
-  label?: string;
-  size?:number
-
-}
-
-function printLabel(labelledObj: LabelledValue) {
-  console.log(labelledObj.label,labelledObj.size);
-}
-
-let myObj = {size: 10}; //參數可以選擇使用或者不使用label和size
-printLabel(myObj);
-
-```
-
-只读对象
-
-```ts
-interface Point {
-  readonly x: number; 
-  readonly y: number;
-}
-
-let p1: Point = { x: 10, y: 20 };
-p1.x = 5; // error!只讀不能改變
-
-```
-
-可缺失
-
-```
-interface Point {
-   x: number;
-   y?: number;
-}
-
-let p1: Point = { x: 10, };
-console.log(p1)
-
-```
-
-###### ==带泛型==
-
-```ts
-interface LabelledValue<T> {
-  label: T; //只能使用label,不用使用size
-}
-
-function printLabel(labelledObj: LabelledValue<string>) {
-  console.log(labelledObj.label);
-}
-
-let myObj = {size: 10,label: "Size 10 Object"};
-printLabel(myObj);
-
-```
-
-# 可索引的类型
-
-### 接口
-
-可索引接口对数组的约束
-
-```js
-interface NumberArr{
-    [index:number]: number
-}
-let numberArr:NumberArr = [1, 2, 3]
-```
-
-```js
-interface StringArr{
-    [index:number]: string
-}
-let stringArr:StringArr = ['1', '2', '3']
-```
-```js
-interface ObjectArr{
-    [index:number]: object
-}
-let  objectArr:ObjectArr = [
-    {name: 'xiao ming'},
-    {name: 'han mei mei'}
-]
-```
-
-可索引接口 对对象的约束
-
-```js
-interface UserObj {
-  [index: string]: string
-}
-var arr: UserObj = { name: '张三' };
-```
-
-###### ==带泛型==
-
-```ts
-interface Arr<T> {
-  [index:number]: T;
-}
-
-let arrString: Arr<string>;
-arrString = ["Bob", "Fred"];
-let ArrNumber:Arr<number>
-    
-
-```
-
-ts的默认索引类型Array的接口
-
-```ts
-
-interface Array<T> {
-  [index:number]: T;
-}
-
-let arr: Array<string>;
-arr = ["Bob", "Fred"];
-
-```
-
-# 函数声明式
-
-```js
-                                 //:在add()后是限制它的返回值的
-function add(x: number, y: number): number {
-  return x + y;
-}
-
-console.log(add(1,2))
-```
-
-​          _ts会推断返回值类型所以可以省略返回值的设定_
-
-```js
-
-function(x: number, y: number) { 
-    return x + y;
-};
-```
-
-可缺失
-
-```js
-function(x: number, y: number,z?:number) { 
-    return x + y;
-};
-```
-
-
-
-###### ==带泛型==
-
-```ts
-function identity<T>(arg: T): T { 
-  return arg;
-}
-identity<string>("myString");  //运行方式1(函数指定T数据类型)'string'
-identity("myString");  //运行方式2 type of output will be 'string'
-
-```
-
-```ts
-function loggingIdentity<T>(arg: T[]): T[] {
-    console.log(arg.length);  // Array has a .length, so no more error
-    return arg;
-}
-loggingIdentity<string>(['1','2','3']) //为泛型T赋值
-```
-
-```ts
-function loggingIdentity<T>(arg: Array<T>): Array<T> {
-    console.log(arg.length);  // Array has a .length, so no more error
-    return arg;
-}
-
-loggingIdentity<number>([1,2,3]) //为泛型T赋值
-```
-
-多个参数泛型
-
-```js
-function getProperty<T, K extends keyof T>(obj: T, key: K) {
-  return obj[key]
-}
-
-let obj = { a: 1, b: 2, c: 3 }
-
-getProperty(obj, 'a') // success
-
-```
-
-### 接口
-
-```ts
-interface SearchFunc { //函數類型接口
-  (source: string, subString: string): boolean;
-}
-
-let mySearch: SearchFunc;
-mySearch = function (source: string, subString: string) {
-  let result = source.search(subString);
-  return result > -1;
-}
-```
-对于函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相同。 比如，我们使用下面的代码重写上面的例子
-```ts
-
-mySearch = function (src: string, sub: string): boolean {
-  let result = src.search(sub);
-  return result > -1;
-}
-
-```
-
-###### ==带泛型==
-
-```ts
-interface GenericIdentityFn {
-  <T>(m: T): T;
-}
-
-let myIdentity: GenericIdentityFn 
-myIdentity= function (m) {
-  return m
-};
-
- myIdentity(1)
-
-```
-
-```ts
-interface GenericIdentityFn<T> {
-  (arg: T): T;
-}
-
-//确定接口里的T的值
-let myIdentity: GenericIdentityFn<string>
-
-myIdentity = function (arg) {
-  return arg
-};
-
-const i: string = myIdentity('1')
-console.log(i)
-```
-
-
-
-# 匿名函数
-
-为myAdd变量设置类型检测
-
-```ts
-//检测变量myAdd类型为函数   //:限制了参数类型       =>限制了变量返回值的类型
-let myAdd: (x: number, y: number) => number 
- 
-```
-
-匿名函数内部变量的类型设置类型检测
-
-```ts
-//检测函数作用域的参数变量的类型和return变量的类型 
-                              //在add()后加冒号是限制它的返回值的类型的意思
-function(x: number, y: number): number { 
-     return x + y; 
- };
-```
-
-匿名函数的值赋值给函数类型变量
-
-```ts
-let myAdd: (x: number, y: number) => number  
-=function (x: number, y: number): number {   
-    return x+y;
-  };
-console.log(myAdd(1,2))
-```
-
-######    ==带泛型==
-
-```js
-let myIdentity= function <T>(arg: T): T {
-  return arg;
-}
-
-console.log(myIdentity<number>(1))
-
-```
-
-```js
-
-let myIdentity: { <T>(arg: T): T } = function <T>(arg: T): T {
-  return arg;
-}
-
-console.log(myIdentity<number>(1))
-
-```
-
-# 类
+## Class
 
 本质是构造函数
 
@@ -820,7 +375,7 @@ dog.bark();
 
 ```
 
-###### ==带泛型==
+###### ==泛型类==
 
 ```ts
 class GenericNumber<T> {
@@ -833,7 +388,144 @@ myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function(x, y) { return x + y; };
 ```
 
-### 类实现接口
+
+
+## interface
+
+==为引用类型和class类型的值设置一组规则==
+
+TypeScript的核心原则之一是对值所具有的*结构*进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。
+
+对变量限制的一组规则
+
+对象接口
+
+```js
+interface LabelledValue {
+  label: string; //只能使用label,不用使用size
+}
+
+
+let myObj = {size: 10,label: "Size 10 Object"};
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label);
+}
+
+printLabel(myObj);
+```
+
+可索引类型接口
+
+```js
+interface NumberArr{
+    [index:number]: number
+}
+let numberArr:NumberArr = [1, 2, 3]
+```
+
+函数声明式接口
+
+```js
+interface SearchFunc { //函數類型接口
+  (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+
+mySearch = function (source: string, subString: string) {
+  let result = source.search(subString);
+  return result > -1;
+}
+```
+
+###### ==泛型接口==
+
+```ts
+interface ClockInterface<T> {
+  currentTime: T;
+}
+
+class Clock implements ClockInterface<Date> {
+  currentTime: Date;
+
+  constructor(h: number, m: number) {
+  }
+}
+
+```
+
+## Class和interface的继承
+
+```js
+interface InterfaceOne {
+  //
+  sports():void;
+}
+interface InterfaceTwo {
+  //
+  swimming():void
+}
+// 1.接口集成接口
+interface InterfaceThree extends InterfaceOne,InterfaceTwo {
+  //
+  coding():void;
+}
+
+
+class ParentCls {
+  name:string;
+  constructor(name:string){
+    this.name = name
+  }
+  //
+  ktv(){
+    console.log(this.name + '唱歌');
+  }
+}
+// 2继承父类+实现多接口
+class SubCls extends ParentCls implements InterfaceTwo, InterfaceOne {
+
+  // 实现接口
+  sports(){
+    console.log(this.name + '运动')
+  }
+
+  swimming(){
+    console.log(this.name + '游泳')
+  }
+}
+let subCls = new SubCls('小明');
+subCls.sports()
+subCls.swimming();
+subCls.ktv()
+
+//3继承父类+实现单个接口
+class SubCls2 extends ParentCls implements InterfaceThree {
+  //
+  coding(){
+    console.log(this.name + '写代码');
+  }
+  sports(){
+    console.log(this.name + '运动');
+  }
+  swimming(){
+    console.log(this.name + '游泳')
+  }
+}
+//4.接口继承类
+interface InterfaceFour extends SubCls2{
+sleeping():void
+}
+
+let subCls2 = new SubCls2('小王');
+subCls2.coding();
+subCls2.sports();
+subCls2.ktv();
+subCls.swimming();
+
+
+```
 
 ```ts
 interface ClockInterface {
@@ -911,87 +603,437 @@ let analog = createClock(AnalogClock, 7, 32);
 
 ```
 
-###### ==带泛型==
+
+
+##### 接口继承一个接口
 
 ```ts
-interface ClockInterface<T> {
-  currentTime: T;
+interface Shape {
+    color: string;
 }
 
-class Clock implements ClockInterface<Date> {
-  currentTime: Date;
-
-  constructor(h: number, m: number) {
-  }
+interface Square extends Shape {
+    sideLength: number;
 }
 
+let square = <Square>{};
+square.color = "blue";
+square.sideLength = 10;
 ```
 
-### 类实现多个接口
+##### 接口继承多个接口
+
+```ts
+interface Shape {
+    color: string;
+}
+
+interface PenStroke {
+    penWidth: number;
+}
+
+interface Square extends Shape, PenStroke {
+    sideLength: number;
+}
+
+let square = <Square>{};
+square.color = "blue";
+square.sideLength = 10;
+square.penWidth = 5.0;
+```
+
+##### 接口继承类
 
 ```js
-interface InterfaceOne {
-    //
-    sports():void;
-}
-interface InterfaceTwo {
-    //
-    swimming():void
-}
-// 接口集成接口
-interface InterfaceThree extends InterfaceOne,InterfaceTwo {
-    //
-    coding():void;
+class Point {
+    x: number;
+    y: number;
 }
 
-class ParentCls {
-    name:string;
-    constructor(name:string){
-        this.name = name
-    }
-    //
-    ktv(){
-        console.log(this.name + '唱歌');
-    }
+interface Point3d extends Point {
+    z: number;
 }
-// 继承父类实现多接口
-class SubCls extends ParentCls implements InterfaceTwo, InterfaceOne {
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
+```
+
+##### 类继承一个类
+
+##### 类实现一个接口
+
+```ts
+interface ClockInterface {
+    currentTime: Date;
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    constructor(h: number, m: number) { }
+}
+```
+
+##### 类实现多个接口
+
+
+
+# 对对象类型约束
+
+## 对对象约束
+
+```js
+let obj:{a:number,2:number}
+obj={a:1,2:2}	
+```
+
+只读
+
+```ts
+let obj:{readonly a:number,readonly b:number}
+obj={a:1,b:2}
+```
+
+可缺失
+
+```ts
+let obj: { a: number, b?: number }
+obj = {a: 1 },
+```
+
+### 接口	
+
+```ts
+interface LabelledValue {
+  label: string; //只能使用label,不用使用size
+}
+
+
+let myObj = {size: 10,label: "Size 10 Object"};
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label);
+}
+printLabel(myObj);
+
+```
+
+```ts
+interface LabelledValue {
+  label: string; //可以使用label和size
+  size:number
+
+}
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label,labelledObj.size);
+}
+
+let myObj = {size: 10,label: "Size 10 Object"};//參數必須有label和size
+printLabel(myObj);
+
+```
+
+```ts
+interface LabelledValue {
+  label?: string;
+  size?:number
+
+}
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label,labelledObj.size);
+}
+
+let myObj = {size: 10}; //參數可以選擇使用或者不使用label和size
+printLabel(myObj);
+
+```
+
+只读对象
+
+```ts
+interface Point {
+  readonly x: number; 
+  readonly y: number;
+}
+
+let p1: Point = { x: 10, y: 20 };
+p1.x = 5; // error!只讀不能改變
+
+```
+
+可缺失
+
+```
+interface Point {
+   x: number;
+   y?: number;
+}
+
+let p1: Point = { x: 10, };
+console.log(p1)
+
+```
+
+###### ==泛型接口==
+
+```ts
+interface LabelledValue<T> {
+  label: T; //只能使用label,不用使用size
+}
+
+function printLabel(labelledObj: LabelledValue<string>) {
+  console.log(labelledObj.label);
+}
+
+let myObj = {size: 10,label: "Size 10 Object"};
+printLabel(myObj);
+
+```
+
+## 对可索引类型的约束
+
+包括数组和类数组
+
+### 接口
+
+可索引接口对数组的约束
+
+```js
+interface NumberArr{
+    [index:number]: number
+}
+let numberArr:NumberArr = [1, 2, 3]
+```
+
+```js
+interface StringArr{
+    [index:number]: string
+}
+let stringArr:StringArr = ['1', '2', '3']
+```
+```js
+interface ObjectArr{
+    [index:number]: object
+}
+let  objectArr:ObjectArr = [
+    {name: 'xiao ming'}, {name: 'han mei mei'}
+]
+```
+
+对类数组对象的约束
+
+```js
+interface UserObj {
+  [index: string]: string
+}
+var arr: UserObj = { name: '张三' };
+```
+
+###### ==泛型接口==
+
+```ts
+interface Arr<T> {
+  [index:number]: T;
+}
+
+let arrString: Arr<string>;
+arrString = ["Bob", "Fred"];
+let ArrNumber:Arr<number>
     
-    // 实现接口
-    sports(){
-        console.log(this.name + '运动')
-    }
 
-    swimming(){
-        console.log(this.name + '游泳')
-    }
-}
-let subCls = new SubCls('小明');
-subCls.sports()
-subCls.swimming();
-subCls.ktv()
+```
 
-//
-class SubCls2 extends ParentCls implements InterfaceThree {
-    //
-    coding(){
-        console.log(this.name + '写代码');
-    }
-    sports(){
-        console.log(this.name + '运动');
-    }
-    swimming(){
-        console.log(this.name + '游泳')
-    }
+ts的默认索引类型Array的接口
+
+```ts
+
+interface Array<T> {
+  [index:number]: T;
 }
-let subCls2 = new SubCls2('小王');
-subCls2.coding();
-subCls2.sports();
-subCls2.ktv();
-subCls.swimming();
+
+let arr: Array<string>;
+arr = ["Bob", "Fred"];
+
+```
+
+## 对函数的约束
+
+### 函数声明式
+
+```js
+                                 //:在add()后是限制它的返回值的
+function add(x: number, y: number): number {
+  return x + y;
+}
+
+console.log(add(1,2))
+```
+
+​          _ts会推断返回值类型所以可以省略返回值的设定_
+
+```js
+
+function(x: number, y: number) { 
+    return x + y;
+};
+```
+
+可缺失
+
+```js
+function(x: number, y: number,z?:number) { 
+    return x + y;
+};
+```
+
+###### ==泛型函数==
+
+```ts
+function identity<T>(arg: T): T { 
+  return arg;
+}
+identity<string>("myString");  //运行方式1(函数指定T数据类型)'string'
+identity("myString");  //运行方式2 type of output will be 'string'
+
+```
+
+```ts
+function loggingIdentity<T>(arg: T[]): T[] {
+    console.log(arg.length);  // Array has a .length, so no more error
+    return arg;
+}
+loggingIdentity<string>(['1','2','3']) //为泛型T赋值
+```
+
+```ts
+function loggingIdentity<T>(arg: Array<T>): Array<T> {
+    console.log(arg.length);  // Array has a .length, so no more error
+    return arg;
+}
+
+loggingIdentity<number>([1,2,3]) //为泛型T赋值
+```
+
+多个参数泛型
+
+```js
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key]
+}
+
+let obj = { a: 1, b: 2, c: 3 }
+
+getProperty(obj, 'a') // success
+
+```
+
+#### 接口
+
+```ts
+interface SearchFunc { //函數類型接口
+  (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+mySearch = function (source: string, subString: string) {
+  let result = source.search(subString);
+  return result > -1;
+}
+```
+
+对于函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相同。 比如，我们使用下面的代码重写上面的例子
+
+```ts
+mySearch = function (src: string, sub: string): boolean {
+  let result = src.search(sub);
+  return result > -1;
+}
+
+```
+
+###### ==泛型接口==
+
+```ts
+interface GenericIdentityFn {
+  <T>(m: T): T;
+}
+
+let myIdentity: GenericIdentityFn 
+myIdentity= function (m) {
+  return m
+};
+
+ myIdentity(1)
+
+```
+
+```ts
+interface GenericIdentityFn<T> {
+  (arg: T): T;
+}
+
+//确定接口里的T的值
+let myIdentity: GenericIdentityFn<string>
+
+myIdentity = function (arg) {
+  return arg
+};
+
+const i: string = myIdentity('1')
+console.log(i)
 ```
 
 
+
+### 匿名函数
+
+为myAdd变量设置类型检测
+
+```ts
+//检测变量myAdd类型为函数   //:限制了参数类型       =>限制了变量返回值的类型
+let myAdd: (x: number, y: number) => number 
+ 
+```
+
+匿名函数内部变量的类型设置类型检测
+
+```ts
+//检测函数作用域的参数变量的类型和return变量的类型 
+                              //在add()后加冒号是限制它的返回值的类型的意思
+function(x: number, y: number): number { 
+     return x + y; 
+ };
+```
+
+匿名函数的值赋值给函数类型变量
+
+```ts
+let myAdd: (x: number, y: number) => number  
+=function (x: number, y: number): number {   
+    return x+y;
+  };
+console.log(myAdd(1,2))
+```
+
+######    ==泛型函数==
+
+```js
+let myIdentity= function <T>(arg: T): T {
+  return arg;
+}
+
+console.log(myIdentity<number>(1))
+
+```
+
+```js
+let myIdentity: { <T>(arg: T): T } = function <T>(arg: T): T {
+  return arg;
+}
+
+console.log(myIdentity<number>(1))
+
+```
 
 # 类型断言
 

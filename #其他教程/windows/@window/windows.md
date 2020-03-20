@@ -595,11 +595,7 @@ set HOST
 
 # 删除登陆临时配置文件
 
-### 第一种
-
-然后你就会看到这里有一个临时文件了，把它删除掉，选择正确的配置文件，点击确定就好。如果那个临时的配置文件不能删除或者删除了也没有用的话那就用第二种方法把。
-
-[![电脑提示您已使用临时配置文件登陆，怎么办？](img/b2de9c82d158ccbf3474c47c14d8bc3eb03541af.jpg)](http://jingyan.baidu.com/album/9989c746fcb3fcf648ecfee9.html?picindex=5)
+http://jingyan.baidu.com/album/9989c746fcb3fcf648ecfee9.html?picindex=5)
 
 ### 第二种
 
@@ -626,3 +622,9 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folde
 ### 公共的
 
 HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+
+# .NET安装
+
+net framework 4.5无法安装，提示等待另一个安装过程完成  
+关掉msiexec.exe即可
+

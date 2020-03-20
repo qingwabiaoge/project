@@ -1,0 +1,105 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+<div id="app">
+    <h1>Route props</h1>
+    <ul>
+
+        <li>
+            <router-link to="/">/</router-link>
+        </li>
+
+        <li>
+            <router-link to="/hello/lucy">/hello/lucy</router-link>
+        </li>
+        <li>
+            <router-link to="/static">/static</router-link>
+        </li>
+
+        <li>
+            <router-link to="/params/1">/param/1</router-link>
+        </li>
+
+        <li>
+            <router-link to="/query?q=2">/query</router-link>
+        </li>
+
+    </ul>
+
+    <hr>
+
+    <router-view></router-view>
+</div>
+
+
+<script>
+
+
+    const Hello = {
+        template: `<span>{{name}}</span>`,
+        props: {
+            name: {
+                type: String,
+                default: '组件prop默认值'
+            }
+        }
+    }
+
+
+    const router = new VueRouter({
+        mode: 'history',
+
+        routes: [
+            //不设置解耦属性
+            {path: '/', component: Hello}, // No props, no nothing
+
+            //设置
+            {
+                path: '/hello/:name',
+                component: Hello,
+                props: true
+            },
+            {
+                path: '/static',
+                component: Hello,
+                //!!!!!!!!!!这里是设置prop的值,类似data:{props:{...}}, 不是声明组件的属性
+                props: {name: 'world'}
+            }, // static values
+
+            //函数生成静态props作为router-view的属性
+
+            {
+                path: '/params/:id',
+                component: Hello,
+                props(route) {
+                    return {
+                        name: route.params.id
+                    }
+                }
+            },
+            {
+                path: '/query',
+                component: Hello,
+                props(route) {
+                    return {
+                        name: route.query.q
+                    }
+                }
+            },
+        ]
+    })
+
+    new Vue({
+        router,
+
+
+    }).$mount('#app')
+
+</script>
+
+<style>
+    .red {
+        color: red
+    }
+</style>

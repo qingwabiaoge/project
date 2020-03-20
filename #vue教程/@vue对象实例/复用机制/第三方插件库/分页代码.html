@@ -1,0 +1,33 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="item in pages" :class="{active:item===cur?true:false}">
+        {{item}}
+        </li>
+
+    </ul>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data() {
+           return{
+               pages:[1, 2, 3, 4, 5],
+               cur:3
+           }
+        },
+
+
+    })
+
+</script>
+
+<style>
+    .active{
+     font-weight: bolder;
+    }
+
+
+</style>

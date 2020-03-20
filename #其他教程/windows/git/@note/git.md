@@ -1,3 +1,78 @@
+# 分布式版本控制系统  
+
+代表就是今天要说的GIT了。想知道GIT有多流行吗？看看GITHUB就知道了，现在很多公司都已经把自己的代码库迁移到了GIT。可见GIT在如今的流行程度，也说明分布式版本控制系统是如今的趋势。如下基本架构图：
+
+![img](img/v2-0cebc93587c9e3bf0773b6d63be8f5fa_720w.jpg)
+
+
+关于分布式版本控制系统，这里只说优点：
+
+- 适合多人团队协作开发；
+- 代码集中化管理；
+- 可以离线工作；
+- 每个计算机都是一个完整仓库；
+
+前面两点SVN也可以做到，说一下后两点。
+
+可以离线工作，分布式版本管理系统每个计算机都有一个完整的仓库，可本地提交，可以做到离线工作。没有了SVN令人抓狂的断网无法工作问题;
+
+每个计算机都是一个完整的仓库，也就没有了SVN的单点故障。
+
+# GIT架构
+
+
+![img](img/v2-ae4d52c15caae9b22fe6063fa96bbbcf_720w.jpg)
+
+  上图展示了git的整体架构，以及和各部分相关的主要命令。先说明下其中涉及的各部分。
+
+  **工作区(working directory)，**简言之就是你工作的区域。对于git而言，就是的本地工作目录。工作区的内容会包含提交到暂存区和版本库(当前提交点)的内容，同时也包含自己的修改内容。
+
+  **暂存区(stage area, 又称为索引区index)，**是git中一个非常重要的概念。是我们把修改提交版本库前的一个过渡阶段。查看GIT自带帮助手册的时候，通常以index来表示暂存区。在工作目录下有一个.git的目录，里面有个index文件，存储着关于暂存区的内容。git add命令将工作区内容添加到暂存区。
+
+  **本地仓库(local repository)，**版本控制系统的仓库，存在于本地。当执行git commit命令后，会将暂存区内容提交到仓库之中。在工作区下面有.git的目录，这个目录下的内容不属于工作区，里面便是仓库的数据信息，暂存区相关内容也在其中。
+
+  **远程版本库(remote repository)，**与本地仓库概念基本一致，不同之处在于一个存在远程，可用于远程协作，一个却是存在于本地。通过push/pull可实现本地与远程的交互；
+
+**远程仓库副本，**可以理解为存在于本地的远程仓库缓存。如需更新，可通过git fetch/pull命令获取远程仓库内容。使用fech获取时，并未合并到本地仓库，此时可使用git merge实现远程仓库副本与本地仓库的合并。git pull 根据配置的不同，可为git fetch + git merge 或 git fetch + git rebase。rebase和merge的区别可以自己去网上找些资料了解下。
+
+
+
+
+
+# GIT文件一览
+
+看看.git这个目录的下文件结构，如下图：
+
+![img](img/v2-f47bbc66862fcdef88f40cd7c1864ab8_720w.jpg)
+
+简要说明一下各个文件中所存放的内容信息：
+
+**HEAD，**当前所在位置，其实就是工作区的在版本库中的那个提交点，最终会指向一个40位的HASH值；
+
+**config，**当前版本库的专有配置文件，如使用命令git config user.name poloxue便会记录在此文件；
+
+**description，**被gitweb (Github的原型)用来显示对repo的描述。
+
+**hooks，**git有可自动运行在 git 任有意义阶段的脚本hooks, 如commit/release/pull/push等状态之前或者之后。个人思考的一个用处，如pre-push可以用来强制进行代码检查。
+
+**index，**存放暂存区(stage area)的相关信息；
+
+**info/exclue，**可以做到和.gitignore相同的事情，用于排除不要包含进版本库的文件。区别就是，此文件不会被共享。
+
+**refs/heads，**目录下有关于本地仓库的所有分支；
+
+**refs/remote，**目录下有关于远程仓库的所有分支；
+
+**object，**目录下存放的就是实际的数据文件，关于其中的存放方式暂时还不了解，有兴趣可以研究一下；
+
+本节从版本控制引出分布式版本控制，比较分布式版本控制系统与其他版本控制系统的区别，从而引入GIT。与SVN的比较明显可看出GIT的优秀之处。对GIT的架构也进行整体简单介绍。内容比较理论，期望在理清自己思路的同时，不会误导他人。
+
+# 操作图示
+
+ ![工作区暂存区版本库](img/1716463609-5bf0fbfc7c3aa_articlex.png) 
+
+![](img/7.png)
+
 # 安装git
 
 ### 在Linux上安装Git
@@ -65,14 +140,7 @@ $  git --exec-path
 
 C:/Program Files/Git/mingw64/libexec/git-core
 
-# 工作区 内存堆栈 暂存区和版本库 远程仓库
 
- ![工作区暂存区版本库](img/1716463609-5bf0fbfc7c3aa_articlex.png) 
-
-
-* 工作区：用来编辑保存项目文件的地方，也是用户能直接操作到的地方。
-* 暂存区：保存了下次将提交的文件列表信息，一般在 Git 仓库目录中，是一个叫index的文件，通常多数说法还是叫暂存区域；
-* 版本库：也叫本地版本库，之所以说git 快，是因为它是分布式版本控制系统，大部分提交都是对本地仓库而言的，不依赖网络，最后一次会推送的到远程仓库。
 
 # 版本标签
 
@@ -86,9 +154,7 @@ C:/Program Files/Git/mingw64/libexec/git-core
 
 移动head时间覆盖工作区和暂存区
 
-# 整体图示
 
-![](img/7.png)
 
 # git init
 
@@ -96,25 +162,173 @@ C:/Program Files/Git/mingw64/libexec/git-core
 git init 初始化新项目
 ```
 
-# git clone
+# git clone/git fetch/git pull
 
-### 克隆项目
+**区别**
 
-先github建立一个项目,会在远程仓库自动建一个分支mater ,web上提交一次版本
+|                      | git clone                                                    | git fetch                                                    | git pull                                                     |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 是否需要git init     | 不需要                                                       | 需要                                                         | 需要                                                         |
+| 是否携带远程主机信息 | √                                                            | x                                                            | x                                                            |
+| 作用                 | git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。 | `git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中。 | 而`git pull` 则是将远程主机的最新内容拉下来后直接合并，即：`git pull = git fetch + git merge`，这样可能会产生冲突，需要手动解决。 |
+
+
+
+### git clone克隆项目
+
+git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。因为是克隆来的，所以 .git 文件夹里存放着与远程仓库一模一样的版本库记录，clone 操作是一个从无到有的克隆操作。
+
+先github建立一个项目,会在远程仓库自动建一个分支mater ,web操作提交了一次版本
 
 ![image-20191204193910352](img/image-20191204193910352.png)
 
-从远程主机拉取
+基本用法：
 
 ```
-git clone git@github.com:qingwabiaoge/test.git
+$ git clone <版本库的URL> [本地目录名]
 ```
+
+如果不指定本地目录，则会在本地生成一个远程仓库同名的目录。
 
 看不到分支解决 
 
 ```
 git checkout dev
 ```
+
+git克隆项目到一个非空目录
+
+1. 进入非空目录，假设是 /workdir/proj1
+
+2. git clone --no-checkout https://git.oschina.net/NextApp/platform.git tmp
+
+3. mv tmp/.git .  #将 tmp 目录下的 .git 目录移到当前目录
+
+4. rmdir tmp
+
+5. git reset --hard HEAD
+
+### git pull
+
+git pull 是拉取远程分支更新到本地仓库再与本地分支进行合并，即：git pull = git fetch + git merge
+
+基本用法：
+
+```
+$ git pull <远程主机名> [远程分支名]:[本地分支名]
+```
+
+如果不指定远程分支名和本地分支名，则会将远程 master 分支拉取下来和本地的当前分支合并。
+
+##### 语法
+
+git pull的作用是从一个仓库或者本地的分支拉取并且整合代码。
+
+```
+git pull [<options>] [<repository> [<refspec>…]]
+```
+
+```
+git pull gitee master
+```
+
+##### 描述
+
+`git pull`相当于 `git fetch` +`git merge FETCH_HEAD`。``是仓库的名字，`` 是分支的名字。如果都不写，会有一个默认值。
+
+一个例子：
+
+```
+     A---B---C master on origin
+    /
+D---E---F---G master
+    ^
+    origin/master in your repository
+```
+
+远程的`master`分支到了`C`，本地的开发到了`G`。
+
+```
+     A---B---C origin/master
+    /         \
+D---E---F---G---H master
+```
+
+`git pull`之后会生成一个新的`H`，合并两个分支。
+
+如果发生了冲突，可以使用`git reset --merge`进行回退。
+
+##### options（选项）
+
+下面摘录几个常用的选项。
+
+> –allow-unrelated-histories
+> By default, git merge command refuses to merge histories that do not share a common ancestor. This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare
+> occasion, no configuration variable to enable this by default exists and will not be added.
+
+允许无关的历史，这个选项，更多是在更改远程仓库的时候用到。
+
+> –ff
+> When the merge resolves as a fast-forward, only update the branch pointer, without creating a merge commit. This is the default behavior.
+>
+> –no-ff
+> Create a merge commit even when the merge resolves as a fast-forward. This is the default behaviour when merging an annotated (and possibly signed) tag that is not stored in its natural place in refs/tags/ hierarchy.
+>
+> –ff-only
+> Refuse to merge and exit with a non-zero status unless the current HEAD is already up to date or the merge can be resolved as a fast-forward.
+
+`ff`选项，这几个选项是说合并时是否开启`fast-forward`，快速合并，这个有在[另外一篇帖子](https://www.oxysun.cn/git/git-git-merge-ff-no-ff.html)中详细讲解，这里就不赘述了。
+
+按照`git branch` 设置的默认跟踪的服务器和分支来拉取。
+
+```
+git pull
+```
+
+ 拉取远程服务器`origin`的`master`分支
+
+```
+git pull origin master
+```
+
+### git fetch
+
+`git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中
+
+git fetch 并没更改本地仓库的代码，只是拉取了远程 commit 数据，将远程仓库的 commit id 更新为latest。
+
+具体的行为你可以尝试看看.git文件夹：./git/refs 里面有三个文件夹：heads、remotes、tags。
+heads 和 remotes 分别记录的就是本地和远程不同仓库的最新 commit id
+
+![img](img/v2-cb2fd21d633a8bae817a088bff5ec20c_hd.jpg)![img](img/v2-cb2fd21d633a8bae817a088bff5ec20c_720w.jpg)
+
+fetch 改变的是 remotes 里面相应分支的 commit id。
+
+
+
+
+
+理解 fetch 的关键, 是理解 FETCH_HEAD，FETCH_HEAD 指的是：某个 branch 在服务器上的最新状态。这个列表保存在 .git/FETCH_HEAD 文件中，其中每一行对应于远程服务器的一个分支。
+当前分支指向的 FETCH_HEAD，就是这个文件第一行对应的那个分支。一般来说，存在两种情况：
+
+- 如果没有显式的指定远程分支，则远程分支的 master 将作为默认的 FETCH_HEAD
+- 如果指定了远程分支，就将这个远程分支作为 FETCH_HEAD
+
+git fetch 更新本地仓库的两种用法：
+
+```
+# 方法一
+$ git fetch origin master                #从远程的origin仓库的master分支下载代码到本地的origin master
+$ git log -p master.. origin/master      #比较本地的仓库和远程参考的区别
+$ git merge origin/master                #把远程下载下来的代码合并到本地仓库，远程的和本地的合并
+# 方法二
+$ git fetch origin master:temp           #从远程的origin仓库的master分支下载到本地并新建一个分支temp
+$ git diff temp                          #比较master分支和temp分支的不同
+$ git merge temp                         #合并temp分支到master分支
+$ git branch -d temp                     #删除temp
+```
+
+
 
 # git log
 
@@ -354,7 +568,7 @@ $ git add README
 
 #### 1 git stash
 
-能够将所有未提交的修改（工作区和暂存区）保存至堆栈中，用于后续恢复当前工作目录。
+能够将所有未提交的修改（工作区==track过==的文件和暂存区）保存至堆栈中，用于后续恢复当前工作目录。
 
 ```
 $ git status
@@ -513,79 +727,108 @@ index a7e146c..711d63f 100644
 
 见上图
 
-# git branch 
+# git branch /git merge 分支建立和合并
 
-### git branch列出本地分支
+**分支的概念**
 
-```
-git branch
-```
-### git branch -r 查看远程分支
 
-```
-git branch -r
-```
-### git branch -a 列出所有分支
+分支是用来标记特定代码的提交，每一个分支通过SHA1sum值来标识，所以对分支的操作是轻量级的，你改变的仅仅是SHA1sum值。
+
+如下图所示，当前有2个分支，A,C,E属于master分支，而A,B，D,F属于dev分支。
 
 ```
-git branch -a(all)
+A----C----E（master）
+ \
+  B---D---F(dev)
 ```
 
-### git branch dev创建分支
+- 1
+- 2
+- 3
+
+它们的head指针分别指向E和F，对上述做如下操作：
 
 ```
-$ git branch dev
+git checkout master  //选择or切换到master分支
+git merge dev        //将dev分支合并到当前分支(master)中
 ```
 
-###  git branch -m重命名分支
+- 1
+- 2
+
+合并完成后：
 
 ```
- git branch -m oldBranchName newBranchName
+A---C---E---G(master)
+ \         /
+  B---D---F（dev）
 ```
 
-### git branch -d 删除分支
+- 1
+- 2
+- 3
+
+现在ABCDEFG属于master，G是一次合并后的结果，是将E和Ｆ的代码合并后的结果，可能会出现冲突。而ABDF依然属于dev分支。可以继续在dev的分支上进行开发:
 
 ```
-git branch -d dev
+A---C---E---G---H(master)
+ \         /
+  B---D---F---I（dev）
 ```
 
-### git branch -D 如果删除不了可以强制删除，
+- 1
+- 2
+- 3
+- 4
+
+分支（branch）的基本操作：
 
 ```
-git branch -D dev
+git branch //查看本地所有分支 
+
+git branch -r //查看远程所有分支
+
+git branch -a //查看本地和远程的所有分支
+
+git branch <branchname> //新建分支
+
+git branch -d <branchname> //删除本地分支
+
+git branch -d -r <branchname> //删除远程分支，删除后还需推送到服务器
+git push origin:<branchname>  //删除后推送至服务器
+
+git branch -m <oldbranch> <newbranch> //重命名本地分支
+/**
+*重命名远程分支：
+*1、删除远程待修改分支
+*2、push本地新分支到远程服务器
+*/
+
+//git中一些选项解释:
+
+-d
+--delete：删除
+
+-D
+--delete --force的快捷键
+
+-f
+--force：强制
+
+-m
+--move：移动或重命名
+
+-M
+--move --force的快捷键
+
+-r
+--remote：远程
+
+-a
+--all：所有
 ```
 
-# git merge
 
-### git merge dev合并dev分支到当前分支
-
-```
-git merge dev
-```
-
-### 合并远程分支到本地
-
-1、把源码clone到本地库中。
-
-git clone [gitsite git远程网址]
-
-2、在本地新建一个与远程的dev版本相同(被合并的版本)的dev分支
-
-git checkout -b dev origin/dev
-
-3、返回到master版本
-
-git checkout master
-
-4、把本地的dev合并到master
-
-git merge dev
-
-5、把本地的master同步到远程
-
-git push origin master
-
-6、如果你不需远程的dev版本了，也可以把它删除
 
 # git checkout
 
@@ -624,14 +867,12 @@ git checkout -b branchA //为分支命名
 
 # git remote 
 
-### 远程主机
-
 和本地主机一样的git系统,可能更多的节点,因为所有人都在push
 
 ##### git remote add为远程主机添加别名
 
 ```
-git remote add origin git@github.com:qingwabiaoge/test.git
+git remote add [originHostName] git@github.com:qingwabiaoge/project.git
 ```
 
 ##### git remote -v 查看所有的远程主机
@@ -639,21 +880,27 @@ git remote add origin git@github.com:qingwabiaoge/test.git
 git remote -v 
 ```
 
-##### 修改远程主机的别名
+##### 删除主机别名 git remote rm 
+
+```
+git remote rm [originHostName]
+```
+
+##### 修改远程主机别名的对应的地址
 
 
 方法有3种：
 
-1.修改命令
+1.使用修改命令
 
 ```
-git remote origin set-url [url]
+git remote [originHostName] set-url [url]
 ```
 
 2.先删后加
 
 ```
-git remote rm origin
+git remote rm [originHostName]
 git remote add origin [url]
 ```
 
@@ -661,22 +908,17 @@ git remote add origin [url]
 
 # git push 
 
-##### 建立远程分支
+##### git push [origin]  [master]建立/推送本地分支到远程主机的分支
 
 ```
 git push origin master
 ```
 
-##### 推送变化到指定主机/分支
-
-```
-git push origin master
-```
-
-##### -u  指定默认
+##### git push -u [origin]  [master] 指定默认主机和主机分支
 
 ```
 git push -u origin master
+         -undefine
 ```
 
 从默认远程主机/分支推送和拉取
@@ -688,13 +930,14 @@ git pull
 
 ![](./img/9.png)
 
-#####  -f 若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
+#####  git push -f [origin]  [master]  若当本地版本低于远程版本,想要本地版本覆盖远程版本 -f强制推入到远程
 
 ```
 git push -f
+        -force
 ```
 
-#####  -d  删除远程分支
+#####  git push -d [origin]  [master]   删除远程分支
 
 ```
 git push -d github dev
@@ -704,80 +947,7 @@ git push -d github dev
 
 
 
-# git pull
 
-##### 语法
-
-git pull的作用是从一个仓库或者本地的分支拉取并且整合代码。
-
-```
-git pull [<options>] [<repository> [<refspec>…]]
-```
-
-```
-git pull gitee master
-```
-
-##### 描述
-
-`git pull`相当于 `git fetch` 跟着一个 `git merge FETCH_HEAD`。``是仓库的名字，`` 是分支的名字。如果都不写，会有一个默认值。
-
-一个例子：
-
-```
-     A---B---C master on origin
-    /
-D---E---F---G master
-    ^
-    origin/master in your repository
-```
-
-远程的`master`分支到了`C`，本地的开发到了`G`。
-
-```
-     A---B---C origin/master
-    /         \
-D---E---F---G---H master
-```
-
-`git pull`之后会生成一个新的`H`，合并两个分支。
-
-如果发生了冲突，可以使用`git reset --merge`进行回退。
-
-##### options（选项）
-
-下面摘录几个常用的选项。
-
-> –allow-unrelated-histories
-> By default, git merge command refuses to merge histories that do not share a common ancestor. This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare
-> occasion, no configuration variable to enable this by default exists and will not be added.
-
-允许无关的历史，这个选项，更多是在更改远程仓库的时候用到。
-
-> –ff
-> When the merge resolves as a fast-forward, only update the branch pointer, without creating a merge commit. This is the default behavior.
->
-> –no-ff
-> Create a merge commit even when the merge resolves as a fast-forward. This is the default behaviour when merging an annotated (and possibly signed) tag that is not stored in its natural place in refs/tags/ hierarchy.
->
-> –ff-only
-> Refuse to merge and exit with a non-zero status unless the current HEAD is already up to date or the merge can be resolved as a fast-forward.
-
-`ff`选项，这几个选项是说合并时是否开启`fast-forward`，快速合并，这个有在[另外一篇帖子](https://www.oxysun.cn/git/git-git-merge-ff-no-ff.html)中详细讲解，这里就不赘述了。
-
-**实例：**默认使用方式
-
-```
-git pull
-```
-
-按照`git branch` 设置的默认跟踪的服务器和分支来拉取。
-
-**实例：** 拉取远程服务器`origin`的`master`分支
-
-```
-git pull origin master
-```
 
 
 
@@ -1232,4 +1402,29 @@ $ git rm \*~
 ```
 
 该命令为删除以 `~` 结尾的所有文件。
+
+# 设置域名跳转
+
+阿里云设置解析主机 ==这里不是senboma.http6.com而是qingwabiaoge.http6.com==
+
+![image-20200309170728767](img/image-20200309170728767.png)
+
+github-setting
+
+![image-20200309151615419](img/image-20200309151615419.png)
+
+如果是https网址
+
+![image-20200309151652240](img/image-20200309151652240.png)
+
+设置github项目根目录的index.html文件
+
+```html
+<html>
+<body>
+  <script>window.location.href="http://senboma.http6.net"</script>
+</body>
+</html>
+
+```
 
