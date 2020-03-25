@@ -151,6 +151,48 @@ line out则是声音输出用的，常用的方法是直接接音箱或者耳机
 
 # win7用户组与权限
 
+### WINDOWS NTFS文件系统的权限机制
+
+1、WINDOWS文件权限是基于NTFS的，FAT32没有权限功能；
+
+2、文件系统的最基本NTFS权限有：
+
+完全控制、遍历文件夹/运行文件、列出文件夹/读取数据、读取属性、读取扩展属性、创建文件/写入数据、创建文件夹/附加数据、写入属性、写入扩展属性、删除子文件夹及文件、删除、读取权限、更改权限、取得所有权
+
+共15种，所有的权限都是由这些基本权限组合而来；
+
+3、每个基本权限都有“允许”和“拒绝”，按照WINDOWS安全性机制，“拒绝”的优先级比“允许”高，也就是说同时存在“允许”和“拒绝”时，等于“拒绝”；
+
+4、文件系统中默认采用==继承父目录权限的方式==来授予文件权限； 
+
+5、文件（夹）创建者默认为文件（夹）的所有者，具有完全控制权限，高于系统管理员权限；但系统管理员具有强制性的、最高级别的“取得所有权”权限，该权限无法被“拒绝”；
+
+6、当同一分区内文件移动，移动后的文件权限将保留不变；跨分区移动文件，则移动后文件继承目标父目录的权限；而对于复制文件，不管是否跨域分区，复制后的文件权限都继承于父目录权限；
+
+##### 右键-获得管理员权限做了什么
+
+![image-20200325080009530](img/windows/image-20200325080009530.png)
+
+意思是*Authenticated Users*：（Windows系统中所有使用用户名、密码登录并通过身份验证的账户，不包括来宾账户Guest）都有读写的权限
+
+![image-20200325080412838](img/windows/image-20200325080412838.png)
+
+
+
+administer还有对此文件完全控制的权限
+![image-20200325080458279](img/windows/image-20200325080458279.png)
+
+users对此文件的权限
+![image-20200325080623939](img/windows/image-20200325080623939.png)
+
+##### 更改权限
+
+![image-20200325081210197](img/windows/image-20200325081210197.png)
+
+
+
+### ![image-20200325081349767](img/windows/image-20200325081349767.png)
+
 ### 默认权限
 
 ***\*WindowsXP用户组权限\****
@@ -398,7 +440,31 @@ netsh wlan set hostednetwork mode=disallow
 \7.     Windows7打开休眠功能：powercfg -h on
 
 \8.     windos记住密码rundll32 netplwiz.dll,UsersRunDll
+
 ```
+
+```
+设置当前目录及子目录(/r)下所有文件(/f *)的所有者为管理员(/a)
+takeown /f * /a /r 
+
+我试用如下：
+takeown /f C:\test  /a /r
+
+
+设置当前目录及子目录下的所有文件(* /t)的权限为对所有人都为最高权限(everyone:f)
+icacls * /t /grant:r everyone:f
+
+
+我使用如下：
+icacls C:\test /t /grant:r everyone:r
+
+```
+
+```
+rd /s /q "C:\test"
+```
+
+
 
 ```
 1.复制User目录到D盘：　robocopy “C:\Users” “D:\Users” /E /COPYALL /XJ
@@ -628,3 +694,21 @@ HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Fol
 net framework 4.5无法安装，提示等待另一个安装过程完成  
 关掉msiexec.exe即可
 
+# 权限问题
+
+1。设置文件所有者为administer
+
+```
+设置当前目录及子目录(/r)下所有文件(/f *)的所有者为管理员(/a)
+takeown /f * /a /r 
+
+我试用如下：
+takeown /f C:\test  /a /r
+```
+
+
+
+2. 另一个程序正在使用此文件,进程无法访问，这种情况有管理员权限也不行
+
+原因是因为在操作这个文件的时候，这个文件已经被其他的进程占用了。
+很可能是IO没关掉的原因。
