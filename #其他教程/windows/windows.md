@@ -1,4 +1,6 @@
-# bios定时开机
+# bios设置
+
+### 定时开机
 
 首先在启动计算机时，按“Delete”键进入BIOS界面。
 
@@ -6,13 +8,15 @@
 
 默认情况下，“Automatic Power Up(定时开机，有些机器选项为Resume By Alarm，或者Power alarm)”选项是关闭的，将光标移到该项，用PageUp或PageDown翻页键将“Disabled”改为“Enabled”，而后在“Date (of Month) Alarm”和“Time (hh:mm:ss) Alarm”中分别设定开机的日期和时间。
 
-# 设备管理器(驱动)
+# GUI
+
+## 设备管理器(驱动)
 
 其实是驱动管理
 
 ![image-20191101213136143](img/image-20191101213136143.png)
 
-# 硬盘
+## 硬盘
 
 ### MBR  GPT
 
@@ -77,7 +81,7 @@
 
 ![img](img/ubhE6S.png)
 
-# 声卡
+## 声卡
 
 ### 音频输入设备
 
@@ -149,7 +153,7 @@ line out则是声音输出用的，常用的方法是直接接音箱或者耳机
 
 总而言之，这个应用用来控制系统声音是非常方便的，不需要再打开系统层层的设置面板了。
 
-# win7用户组与权限
+## win7用户组的操作权限
 
 ### WINDOWS NTFS文件系统的权限机制
 
@@ -357,7 +361,26 @@ Anonymous Logon Users　任何未利用有效的Windows Server 2003帐户连接�
 
    [![如何设置用户权限](https://imgsa.baidu.com/exp/w=500/sign=df4c06c1f1faaf5184e381bfbc5594ed/960a304e251f95cac09f3c51c5177f3e660952ea.jpg)](http://jingyan.baidu.com/album/ea24bc39d8ba7eda63b3314b.html?picindex=10)
 
-# 网络
+## win7用户与组的文件权限
+
+1。设置文件的所有者为administer
+
+```
+设置当前目录及子目录(/r)下所有文件(/f *)的所有者为管理员(/a)
+takeown /f * /a /r 
+
+我试用如下：
+takeown /f C:\test  /a /r
+```
+
+
+
+2. 另一个程序正在使用此文件,进程无法访问，这种情况有管理员权限也不行
+
+原因是因为在操作这个文件的时候，这个文件已经被其他的进程占用了。
+很可能是IO没关掉的原因。
+
+## 网络
 
 ### 修改网卡地址
 
@@ -422,75 +445,11 @@ netsh wlan set hostednetwork mode=disallow
 
 
 
-# dos cli命令
-
-```
-\1.     磁盘检测 chkdsk /f d:
-
-\2.     远程桌面 mstsc
-
-\3.     立即关机shutdown -p
-
-\4.     立即重启shutdown -r -t 00
-
-\5.     进入休眠状态（若关闭休眠则进入待机状）态rundll32.exe powrProf.dll,SetSuspendState
-
-\6.     Windows7关闭休眠功能：powercfg -h off
-
-\7.     Windows7打开休眠功能：powercfg -h on
-
-\8.     windos记住密码rundll32 netplwiz.dll,UsersRunDll
-
-```
-
-```
-设置当前目录及子目录(/r)下所有文件(/f *)的所有者为管理员(/a)
-takeown /f * /a /r 
-
-我试用如下：
-takeown /f C:\test  /a /r
 
 
-设置当前目录及子目录下的所有文件(* /t)的权限为对所有人都为最高权限(everyone:f)
-icacls * /t /grant:r everyone:f
+## 系统配置
 
 
-我使用如下：
-icacls C:\test /t /grant:r everyone:r
-
-```
-
-```
-rd /s /q "C:\test"
-```
-
-
-
-```
-1.复制User目录到D盘：　robocopy “C:\Users” “D:\Users” /E /COPYALL /XJ
-2.强制删除User目录：　rmdir “C:\Users” /S /Q
-3.创建C盘下的User的软件链接，链接到D盘User目录：mklink /J "C:\Users" "D:\Users"
-```
-
-
-
-# 系统配置
-
-### Win7任务栏上的图标保存在哪个位置？
-
-Win7任务栏上可以很方便的锁定程序图标，这样我们点击就可以打开，而不用去桌面上寻找了，那么有的朋友问了，当程序图标锁定到任务栏之后是保存到哪里的呢？下面小编教大家一个技巧来查看任务栏图标保存的位置。
-
-1、首先按住“SHIFT”键，然后右键点击图标，然后选择 复制为路径 选项；
-
-2、随便往什么地方粘贴，可以得到"C:\Users\你的用户名\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Internet Explorer.lnk" 类似路径；
-
-（注意，上面的你的用户名，改成你自己的）；
-
-4、最后我们就找到任务栏上的图标保存文件夹了，大家可以对其中的图标（其实是快捷方式）进行操作了。
-
-### 删除回收站图标
-
-![image-20191102205237247](img/image-20191102205237247.png)
 
 ### 右键复制文件路径
 
@@ -499,6 +458,108 @@ Win7任务栏上可以很方便的锁定程序图标，这样我们点击就可�
 
 
 
+
+
+
+### 禁用程序
+
+![image-20191102205601437](img/image-20191102205601437.png)
+
+## 任务和计划
+
+### 关机前运行任务
+
+ ![img](img/6c224f4a20a446234d1c618f9e22720e0df3d70d.jpg)
+
+
+
+
+
+## window服务
+
+不过是开机启动的cli命令
+
+### 建立服务
+
+使用管理员权限打开一个新的cmd窗口，bin目录下执行`mongod --config "E:\mongodb-win32-x86_64-2012plus-4.2.1\mongo.conf" --install --serviceName MongoDB`，安装完成后可在windows的服务中看到MongoDB，可以在服务中启动或停止服务，或者在cmd的任意路径中执行net start/stop MongoDB来启停，并且启动后如果不手动停止，服务回一直为启动状态，后续连接数据库之前不需要先启动服务。
+
+ ![1572148904700](./img/1572148904700.png)
+
+如果不使用管理员权限安装服务，执行不报错但是服务无法注册成功，即无法在windows服务中找到mongoDB服务；使用管理员权限，如果有其他运行mongo服务的cmd窗口，也无法成功，查看日志如下，此时关闭其他cmd窗口重新执行安装服务即可。
+
+### 服务操作
+
+![1572148650833](./img/1572148650833.png)
+
+
+
+### 删除服务
+
+ sc delete MongoDB
+
+
+
+## windows 环境变量
+
+### 配置永久的环境变量
+
+##### windows的path让程序能在命令行全局运行
+
+![](./img/8.png)
+
+因为npm目录被配置了path   , npm下方的运行文件也可以命令行全局运行,npm i -g xxx 安装到了npm下级文件夹
+
+![](./img/9.png)
+
+##### 永久设置windown环境变量让程序用
+
+![](./img/2.png)
+
+
+
+###  设置临时环境变量
+
+
+
+![](./img/3.png)
+
+关闭命令行再打开
+
+![](./img/4.png)
+
+(多个命令用&间隔,不可以在webpack如此配置)
+
+
+```
+set HOST=47.107.170.105&set PORT=3000&set NODE_ENV=development&npm run start
+```
+
+### 查看环境变量
+
+显示所有环境变量
+
+```
+set
+```
+
+显示path
+
+```
+set path
+```
+
+显示指定
+
+```
+set HOST
+```
+
+## .NET安装
+
+net framework 4.5无法安装，提示等待另一个安装过程完成  
+关掉msiexec.exe即可
+
+# 注册表配置
 
 ### windows 7-默认资源管理器
 
@@ -566,104 +627,18 @@ Win7任务栏上可以很方便的锁定程序图标，这样我们点击就可�
 
 ![Win7下将TC作为默认资源管理器的解决方法](img/77545cc5jw1dz9kge1cgpj.jpg)
 
-### 禁用程序
-
-![image-20191102205601437](img/image-20191102205601437.png)
-
-# 任务和计划
-
-### 关机前运行任务
-
- ![img](img/6c224f4a20a446234d1c618f9e22720e0df3d70d.jpg)
 
 
+# 存储目录
 
+## Users目录
 
+### 安装完系统,和已有的`D:\Users`建立软连接`mklink /J "C:\Users" "D:\Users"`出错解决方案
 
-# window服务
-
-不过是开机启动的cli命令
-
-### 建立服务
-
-使用管理员权限打开一个新的cmd窗口，bin目录下执行`mongod --config "E:\mongodb-win32-x86_64-2012plus-4.2.1\mongo.conf" --install --serviceName MongoDB`，安装完成后可在windows的服务中看到MongoDB，可以在服务中启动或停止服务，或者在cmd的任意路径中执行net start/stop MongoDB来启停，并且启动后如果不手动停止，服务回一直为启动状态，后续连接数据库之前不需要先启动服务。
-
- ![1572148904700](./img/1572148904700.png)
-
-如果不使用管理员权限安装服务，执行不报错但是服务无法注册成功，即无法在windows服务中找到mongoDB服务；使用管理员权限，如果有其他运行mongo服务的cmd窗口，也无法成功，查看日志如下，此时关闭其他cmd窗口重新执行安装服务即可。
-
-### 服务操作
-
-![1572148650833](./img/1572148650833.png)
-
-
-
-### 删除服务
-
- sc delete MongoDB
-
-
-
-# windows 环境变量
-
-### 配置永久的环境变量
-
-##### windows的path让程序能在命令行全局运行
-
-![](./img/8.png)
-
-因为npm目录被配置了path   , npm下方的运行文件也可以命令行全局运行,npm i -g xxx 安装到了npm下级文件夹
-
-![](./img/9.png)
-
-##### 永久设置windown环境变量让程序用
-
-![](./img/2.png)
-
-
-
-###  设置临时环境变量
-
-
-
-![](./img/3.png)
-
-关闭命令行再打开
-
-![](./img/4.png)
-
-(多个命令用&间隔,不可以在webpack如此配置)
-
-
-```
-set HOST=47.107.170.105&set PORT=3000&set NODE_ENV=development&npm run start
-```
-
-### 查看环境变量
-
-显示所有环境变量
-
-```
-set
-```
-
-显示path
-
-```
-set path
-```
-
-显示指定
-
-```
-set HOST
-```
-
-# 删除登陆临时配置文件
-
-http://jingyan.baidu.com/album/9989c746fcb3fcf648ecfee9.html?picindex=5)
-
-### 第二种
+1. window不同版本间的users不兼容，要复制新装系统的users文件夹覆盖`D:\Users`
+2. `D:\Users`文件夹不存在 盘符发生了变化，修正盘符
+3. 用户没有访问Users文件夹的访问权限
+4. 系统找不到`D:\Users`文件夹 ,就会生成账户的临时配置目录 ,删除账户的临时配置目录
 
 然后按照这个目录查找HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\，把这个文件夹下面有你登陆的那个账号的文件夹都删掉。然后重启。
 
@@ -674,29 +649,64 @@ http://jingyan.baidu.com/album/9989c746fcb3fcf648ecfee9.html?picindex=5)
 [![电脑提示您已使用临时配置文件登陆，怎么办？](img/c2fdfc039245d688a9cac3e2a9c27d1ed31b24af-1576552370635.jpg)](http://jingyan.baidu.com/album/9989c746fcb3fcf648ecfee9.html?picindex=8)
 
 
-# 账户信息
+
+
+
+## 注册表修改桌面我的文档开始菜单等文件夹路径
+
+**administer的**
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+
+**公共的**
+
+HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+
+
+
+## Win7任务栏上的图标保存在哪个位置？
+
+Win7任务栏上可以很方便的锁定程序图标，这样我们点击就可以打开，而不用去桌面上寻找了，那么有的朋友问了，当程序图标锁定到任务栏之后是保存到哪里的呢？下面小编教大家一个技巧来查看任务栏图标保存的位置。
+
+1、首先按住“SHIFT”键，然后右键点击图标，然后选择 复制为路径 选项；
+
+2、随便往什么地方粘贴，可以得到"C:\Users\你的用户名\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Internet Explorer.lnk" 类似路径；
+
+（注意，上面的你的用户名，改成你自己的）；
+
+4、最后我们就找到任务栏上的图标保存文件夹了，大家可以对其中的图标（其实是快捷方式）进行操作了。
+
+
+
+# 账户密码 
 
 363019417@139.com
 qingwabiaoge@qq.com
 
-# 系统文件夹路径
 
-### administer的
 
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
 
-### 公共的
 
-HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+# dos cli命令
 
-# .NET安装
+```
+\1.     磁盘检测 chkdsk /f d:
 
-net framework 4.5无法安装，提示等待另一个安装过程完成  
-关掉msiexec.exe即可
+\2.     远程桌面 mstsc
 
-# 权限问题
+\3.     立即关机shutdown -p
 
-1。设置文件所有者为administer
+\4.     立即重启shutdown -r -t 00
+
+\5.     进入休眠状态（若关闭休眠则进入待机状）态rundll32.exe powrProf.dll,SetSuspendState
+
+\6.     Windows7关闭休眠功能：powercfg -h off
+
+\7.     Windows7打开休眠功能：powercfg -h on
+
+\8.     windos记住密码rundll32 netplwiz.dll,UsersRunDll
+
+```
 
 ```
 设置当前目录及子目录(/r)下所有文件(/f *)的所有者为管理员(/a)
@@ -704,11 +714,26 @@ takeown /f * /a /r
 
 我试用如下：
 takeown /f C:\test  /a /r
+
+
+设置当前目录及子目录下的所有文件(* /t)的权限为对所有人都为最高权限(everyone:f)
+icacls * /t /grant:r everyone:f
+
+
+我使用如下：
+icacls C:\test /t /grant:r everyone:r
+
+```
+
+```
+rd /s /q "C:\test"
 ```
 
 
 
-2. 另一个程序正在使用此文件,进程无法访问，这种情况有管理员权限也不行
+```
+1.复制User目录到D盘：　robocopy “C:\Users” “D:\Users” /E /COPYALL /XJ
+2.强制删除User目录：　rmdir “C:\Users” /S /Q
+3.创建C盘下的User的软件链接，链接到D盘User目录：mklink /J "C:\Users" "D:\Users"
+```
 
-原因是因为在操作这个文件的时候，这个文件已经被其他的进程占用了。
-很可能是IO没关掉的原因。
