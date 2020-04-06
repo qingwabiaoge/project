@@ -62,7 +62,7 @@ CHANGELOG.md
 
 
 # 更多的
-
+*.~$lock
 *.pdf
 
 nuxt_koa_best
