@@ -1,0 +1,20 @@
+<div id="app">
+
+
+</div>
+
+
+<script>
+    var arr = ['https://hbimg.huabanimg.com/54a289215bc254202714a9599796f1afabec778f736da-scrrFY_fw658',
+        'https://hbimg.huabanimg.com/20642a9ddf9a75d5c1f6f47601b7ccea106be59f61dbd-cIxAT8_fw658',
+        'https://hbimg.huabanimg.com/ad8e341e01980139ae60464e729e3e254038a86429c14-duC60X_fw658'];
+
+    let i = 0
+    while (i <= arr.length - 1) {
+        var img = new Image();
+        img.src = arr[i]
+        const el = document.getElementById('app')
+        el.insertBefore(img, el.childNodes[0])
+        i++
+    }
+</script>

@@ -33,7 +33,7 @@
 
   **远程版本库(remote repository)，**与本地仓库概念基本一致，不同之处在于一个存在远程，可用于远程协作，一个却是存在于本地。通过push/pull可实现本地与远程的交互；
 
-**远程仓库副本，**可以理解为存在于本地的远程仓库缓存。如需更新，可通过git fetch/pull命令获取远程仓库内容。使用fech获取时，并未合并到本地仓库，此时可使用git merge实现远程仓库副本与本地仓库的合并。git pull 根据配置的不同，可为git fetch + git merge 或 git fetch + git rebase。rebase和merge的区别可以自己去网上找些资料了解下。
+**远程仓库副本，**可以理解为存在于本地的远程仓库缓存。如需更新，可通过git fetch/pull命令获取远程仓库内容。使用fech获取时，并未合并到本地仓库，此时可使用git merge实现远程仓库副本与本地仓库的合并。git pull =git fetch + git merge 或git pull --rebase= git fetch + git rebase。
 
 
 
@@ -166,11 +166,11 @@ git init 初始化新项目
 
 **区别**
 
-|                      | git clone                                                    | git fetch                                                    | git pull                                                     |
-| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 是否需要git init     | 不需要                                                       | 需要                                                         | 需要                                                         |
-| 是否携带远程主机信息 | √                                                            | x                                                            | x                                                            |
-| 作用                 | git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。 | `git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中。 | 而`git pull` 则是将远程主机的最新内容拉下来后直接合并，即：`git pull = git fetch + git merge`，这样可能会产生冲突，需要手动解决。 |
+|                      | git clone                                                    | git fetch                                                    | git pull                                                     | git pull --rebase                                            |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 是否需要git init     | 不需要                                                       | 需要                                                         | 需要                                                         | 需要                                                         |
+| 是否携带远程主机信息 | √                                                            | x                                                            | x                                                            |                                                              |
+| 作用                 | git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。 | `git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中。 | 而`git pull` 则是将远程主机的最新内容拉下来后直接合并，即：`git pull = git fetch + git merge`，这样可能会产生冲突，需要手动解决。 | `git pull --rebase=git fetch origin+git rebase origin/master` |
 
 
 
@@ -828,7 +828,273 @@ git branch -m <oldbranch> <newbranch> //重命名本地分支
 --all：所有
 ```
 
+# get rebash
 
+关于Git 我们之前有很多文章介绍过相关的功能和扩展应用。我也介绍过如何在Git中自由穿梭重置redo。当然有的时候我们需要改变Git的提交历史。Git也提交很多工具，本文虫虫带领大家来实例深入学习其中的一个工具rebase。
+
+![img](https://pics1.baidu.com/feed/18d8bc3eb13533fa693ea2c547fe2c1b40345b07.jpeg?token=dcfed00f407dab30b72901ba0ee2fe11&s=8CE6E416E7E05EA20049B8CF02008023)
+
+**准备**
+
+为了不破坏现有的仓库，我们首先创建一个新建一个实验repo，所有操作都在该仓库下操作。创建命令如下：
+
+mkdir rebase-repo
+
+cd rebase-repo
+
+git init rebase-repo
+
+git commit --allow-empty -m "init"
+
+注意我们给git commit -m "init"，增加了一个参数"--allow-empt"，否则如果是一个空库的时候会报错,如下
+
+![img](https://pics3.baidu.com/feed/9358d109b3de9c82e6137c7083ac510e18d84389.jpeg?token=0e7d97586db61e9b45b0c21c5c36f4e6&s=0540BB42EBA593704E6DFD050000E0C1)
+
+通过实验环境rebas-rep仓库，任何时候出现问题搞不定了，只需删除掉rm -rf rebase-repo/.git目录并重新运行这些命令就可以初始化整个实验环境。
+
+**git pull --rebase**
+
+如果远程git服务器仓库分支已经有了更新上，通常git pull时候将会默认执行merge合并提交。相当于执行两个操作：
+
+git fetch origin
+
+git merge origin/master
+
+实际上除了合并外还有一种方法，那就是执行rebase来同步变化，它通常更有用，git提交历史也更清晰，rebase方法需要显性指定--rebase参数：
+
+git pull --rebase ，他相当执行:
+
+git fetch origin
+
+git rebase origin/master
+
+合并方法更简单，更容易理解。但是很多时候我们更需要的是rebase，我们也可以通过设置，设置rebase为pull时候默认执行的动作：
+
+git config --global pull.rebase true
+
+**使用git rebase改变分支依赖**
+
+当然git最初始的功能是和其字面上意义一样，改变分支的依赖分支。假设有以下分支：
+
+![img](https://pics2.baidu.com/feed/359b033b5bb5c9ead085e46e3a1467043bf3b3f8.jpeg?token=75651f02897d4f83bc2a0c1e68645b9a&s=1E287423CCA06D035E7400DF010080B1)
+
+而且feature-2不依赖于feature-1中的任何变化，就可以rebase让它基于master。
+
+git checkout feature-2
+
+git rebase master
+
+git rebase对所有涉及的commit（"pick"）执行默认操作，它只是将历史记录回滚到最后一个公共父节点，并重新生成两个分支的commit。git就会变成历史现在看起来像这样：
+
+![img](https://pics6.baidu.com/feed/bba1cd11728b47104682c03d2ce312f9fd032340.jpeg?token=f1e79dff106b1600a4e1fce886177254&s=1AA87423CD247C015E7C00DE000080B1)
+
+**修改最近的commit**
+
+先做一个最简单的的操作：修复最近的提交。让我们在rebase-repo中增加一个文件，但是commit信息有问题：
+
+echo "Hello Chongchong" > one.txt
+
+git add one.txt
+
+git commit -m "添加Hello"
+
+修改commit非常简单，只需使用"—amend"选项就可以。我们可以编辑文件并用--amend提交，如下所示：
+
+echo 'Hello Chongchong!' > one.txt
+
+git commit -a --amend
+
+指定-a添加所有更改的，而--amend会将更改添加到最近一个提交中。保存并退出编辑器（vim的话wq，也可以修改提交消息）。你可以通过运行git show来看提交的信息：
+
+![img](https://pics6.baidu.com/feed/5243fbf2b2119313a56d45e99515ddd391238d6b.jpeg?token=9493c6b119a27eed64830f9ad4291da2&s=0562FB021940AF720ED5D40F0000E0C1)
+
+**修改历史commit**
+
+"—amend"选项仅仅可以修改最近的一次提交。如果我们要需要修改更老的呢？我们先多创建一个提交历史环境
+
+echo 'Hello ' >one.txt
+
+git add one.txt
+
+git commit -m "添加Hello"
+
+echo "第二个文件" > two.txt
+
+git add two.txt
+
+git commit -m "添加two"
+
+现在发现one.txt少了"Chongchong!"。现在需要添加上：
+
+echo 'Hello Chongchong!' > one.txt
+
+git commit -a -m "添加Chongchong"
+
+这样既可以，但是为了commit历史更好看，需要把最后一个提交修改删除最后面这次提交历史。为此，为实现这个功能，我们需要使用rebase命令。下面我们使用交互式分时修改这三个提交：
+
+git rebase -i HEAD~3
+
+命令会在你默认的编辑器中打开最近三次的commit历史，-i表示用交互式打开，如下所示：
+
+![img](https://pics3.baidu.com/feed/43a7d933c895d143c4e010a783dd53065baf0756.jpeg?token=ed10c2da2814cc2328a887f66c6e1496&s=4542BB425BE4874F4C5D940B000070C0)
+
+如上图，编辑器中显示了最经三次的历史，三个pick comit哈希。修改这个文件，我们可以告诉git修改历史记录。当我们保存推出编辑器时，git将从其历史记录中删除所有这些提交，然后一次执行每一行。默认情况下，会使用（pick）每个提交，并将其添加到分支。现在我们使用fixup，修改将操作从"pick"修改为"fixup"并在我们想要"fixup"，移动到"添加two"commit的前面：
+
+![img](https://pics2.baidu.com/feed/9358d109b3de9c8244329d959cac510e19d84303.jpeg?token=b21fcd2c24aae04b645b9584d338fa0f&s=4542BB424BE49E494CDDD50B000030C2)
+
+wq保存退出编辑器 ， git会自动运行这些命令。git log看下git历史：
+
+![img](https://pics1.baidu.com/feed/0824ab18972bd407edcdaf2694a44f550eb30991.jpeg?token=e863ad490e8bc0e186af20dff0a1a929&s=2D523BC2CFADBF704E4548030000E0C2)
+
+**将几个提交合并成一个**
+
+有时候，我们需要将本地大量的提交合并为一个，然后提交到远程仓库或者合并到master时，以确保整个提交历史的清晰洁净，这也是rebase最常用的功能之一。为了合并提交，需要使用squash操作。我们先写脚本实现多次提交的环境,
+
+git checkout -b squash
+
+先创建一个新的分支，来执行下面shell：
+
+for i in H e l l o , ' ' C h o n g c h o n g; do
+
+echo "$i" >>hello.txt
+
+git add hello.txt
+
+git commit -m "增加Hello，$i"
+
+done
+
+执行该脚本，通过shell for循环多次，按照多个字母提交到文件文件，每次增加一个字母，最后实现"你好，Chongchong"。复制以上脚本到shell终端执行，
+
+![img](https://pics1.baidu.com/feed/b3119313b07eca808800b6187e0e46d9a04483ff.jpeg?token=64b469891ec76165a087bf235f805c9e&s=4442BB427BACB37A1CD1DC0F0000A0C2)
+
+我们使用交互式rebase执行将它们合并到一起。我们执行git rebase -i master结果：
+
+![img](https://pics5.baidu.com/feed/7af40ad162d9f2d31738356858c15b176327cc3a.jpeg?token=c392a0e4db906e09563ea1a74ed73f31&s=4542BB42D3F5967F4E51DC0E0000E0C2)
+
+先我们要将所有这些更改压都合并为一个commit，要实现这个目的，只需将每个"pick"操作更改为"squash"，第一行除外，如下所示：
+
+我们使用vim批量修改命令:2:$ s/pick/squash/
+
+![img](https://pics3.baidu.com/feed/cdbf6c81800a19d883fe1dbbc3d7538fa71e4645.jpeg?token=921e60061d00f282163a8dfc372cb777&s=4542BB425BAC977E0C78F50F0000A0C2)
+
+使用wq保存并退出编辑器时，git处理，并次打开编辑器以修改最终的提交消息。显示如下：
+
+![img](https://pics2.baidu.com/feed/14ce36d3d539b60087b5e798197de42ec65cb75d.jpeg?token=68080dc64537d36a70893e628ed71936&s=0D42AB425BECB77A0C7DCC0F0000E0C2)
+
+提醒我们为该合并使用一个合适的commit消息，默认显示了所有提交历史的commit，我们修改为我们需要显示的commit消息，然后推出保存。git show显示，提交信息如下：
+
+![img](https://pics2.baidu.com/feed/77c6a7efce1b9d1608a3776e03f3658b8c546408.jpeg?token=2b99875ed8f557e7133873d4c3fb2ff6&s=2C42BB425BA4B7680C59E5070000E0C3)
+
+现在我们可以将master分支rebase到squash分支，并删除临时的squash分支，这样就消除了所有分支合并的过程。git rebase这时的效果和git merge一样但是不会进行合并提交：
+
+git checkout master
+
+git rebase squash
+
+git branch -D squash
+
+**将一个提交分成几个**
+
+上面我们介绍了将多个提交合并为一个。但是实际中也有需要将某一个比较重的提交分割成多个小提交的需求,我们此处就介绍这个。我从增加一个perl的md5检查程序（你可以用其他任何文件来代替）来开始：
+
+vim md5check.pl
+
+git add md5check.pl
+
+git commit -m "增加一个perl程序"
+
+接下来，给文件增加代码：
+
+git commit -a -m "增加md5check"
+
+git show 显示下本地提交的内容:
+
+![img](https://pics0.baidu.com/feed/962bd40735fae6cd0b142cbaff9ede2043a70f7f.jpeg?token=df400168e78b5dca434c46af2a9c6e32&s=915B3BCA5BA4B77C0CD9ED0F0000A0C2)
+
+现在我们学习如何拆分该commit：
+
+首先启动交互式rebase。让我们用git rebase -i HEAD~2来修改这个提交，显示：
+
+![img](https://pics3.baidu.com/feed/962bd40735fae6cd07283853ff9ede2042a70f12.jpeg?token=3c729ddd7a6a21f19b4adf3df662dc33&s=4542BB424BE49A595ADD5D0B0000E0C0)
+
+我们把第二个条指令从"pick"更改为"edit"，然后wq保存并退出vim。Git会显示:
+
+![img](https://pics5.baidu.com/feed/9345d688d43f879420b2f1f33d36dff01ad53a54.jpeg?token=e0132715e370baaaccd3f785f15da655&s=0D42BB4297E0BF704C55DC060000A0C2)
+
+我们可以按照上面的说明给该次提交添加更改, 在此我们执行git reset HEAD^来执行软reset。将最新一次的文件状态修改为未提交状态。现在运行git status，我们可以看到它取消提交最新提交并将其更改添加到工作树：
+
+![img](https://pics1.baidu.com/feed/a1ec08fa513d269702902b79a5d663ff4316d801.jpeg?token=d8239cbd46c7762b69f48cc2d28b4654&s=C540BB42CBB096590C51BC0F0000E0C1)
+
+为了解决这个问题，我们换用交互式提交。它可以让我们选择地提交工作树中的特定更改。运行git commit -p以启动此过程，将看到以下提示：
+
+![img](https://pics0.baidu.com/feed/c8177f3e6709c93d0a3fb8716f1029d8d000541d.jpeg?token=4bcd3067f6b479c5bec33cd51c5d9ef6&s=6B69E34ADBA4936E48552406000070C2)
+
+上图显示有一个大段的代码修改，我们来对该commit拆分。我们需要使用 "s"命令将大的提交拆分成更小的部分。
+
+![img](https://pics2.baidu.com/feed/80cb39dbb6fd5266d9b51ac24435462fd507367f.jpeg?token=28ba4b0456c9e08dcfc21b2b0ab49590&s=45513BC2ABA4BB700EDDFD070000E0C0)
+
+git自动分析，并将该修改分成6块，让我们点击"y"修改为分割的状态。然后点击"q" 完成交互式会话并继续提交。这是会显示未编辑界面，我们在此输入合适commit消息。
+
+![img](https://pics0.baidu.com/feed/e1fe9925bc315c60ddfaafca7d9c1a174954775f.jpeg?token=ea47a9db7d0b1fcee5738bbaf76b66ea&s=C542BB42CBE0BB701C79380F0000E0C0)
+
+wq 保存退出编辑器。 执行保存该次拆分：
+
+git commit -a -m"增加md5_check"
+
+最后我们私用rebase --continue完成edit操作，并继续执行rebase。
+
+git rebase --continue
+
+使用git log来查看拆分结果
+
+![img](https://pics0.baidu.com/feed/5882b2b7d0a20cf4ffc32aa787249a32acaf992e.jpeg?token=5621dd8693dd22997a33501226229737)
+
+**对commit重新排序**
+
+这个很容易。我们提交三个commit：
+
+echo "one" >one.txt
+
+git add one.txt
+
+git commit -m "add one"
+
+echo "two" >two.txt
+
+git add two.txt
+
+git commit -m "add two"
+
+echo "three" >three.txt
+
+git add three.txt
+
+git commit -m "add three"
+
+git log查看历史：
+
+![img](https://pics0.baidu.com/feed/64380cd7912397dd2c54b02ca9af63b3d0a2879f.jpeg?token=95405f4db557231b032f7d3d0e1dbdea&s=4562BB424978A6C8507138010000E0D1)
+
+现在我们想要改变下commit的历史，以3，2，1顺序显示。运行git rebase -i HEAD~3，将会启动编辑器，媳那是rebase的操作列表：
+
+![img](https://pics0.baidu.com/feed/8c1001e93901213f69f690c0a4cae7d52e2e959c.jpeg?token=3b352f89cae8b92ce0e06a622a8e12d1&s=C542BB424BE4964B4ECD550B0000E0C1)
+
+修改列表顺序，如下：
+
+![img](https://pics2.baidu.com/feed/91529822720e0cf39a654986fa6b231bbf09aaeb.jpeg?token=baf2a9f9bcc6aec7c2a50f413ae4307d&s=C542BB424BE48E495ED95D0B000030C1)
+
+wq保存并退出编辑器，git就会按照新的顺序重新生成commit历史。
+
+![img](https://pics6.baidu.com/feed/21a4462309f790527d28eafbe3de06ce7acbd5f7.jpeg?token=9bfc878fa9bd4c3adc7a879d305ffc1c&s=7D5A3BC2EFAFB3704E654C070000E0C2)
+
+**解决rebase冲突**
+
+有时你在做一个rebase时会遇到合并冲突，解决方法和其他时候冲突解决方法也一样。git也会对受影响的文件设置冲突标记，可以用git status显示需要解决的冲突行，使用git add或git rm将文件标记为添加。但是在使用git rebase情况下，我们需要注意的是：完成冲突解决的方法不同，在解决git merge引起的冲突时是用的是commit，而在rebase时候用的是git rebase --continue，也可以使用git rebase --skip忽略此次最该的提交，这样就不会包含在rebase中。
+
+**总结**
+
+本文我们深入了git rebase的各种用法，善用git rebase可以让我们的提交历史变得更加优雅，虽然他不是一个必须的，但是对一个处女座的码农来说，rebase是必不可少的神器。
 
 # git checkout
 

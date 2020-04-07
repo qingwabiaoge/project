@@ -1,0 +1,22 @@
+<!-- import Vue from 'vue' 转为-->
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+
+<!--import'animate.min.css' 转为-->
+<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+
+<!-- main.js -->
+<script>
+<!--  解构赋值-->
+  const {mapState, mapActions, mapMutations, mapGetters} = Vuex.createNamespacedHelpers('moduleA')
+
+
+  var wow = new WOW({
+    live: false
+  })
+  wow.init()
+</script>
+

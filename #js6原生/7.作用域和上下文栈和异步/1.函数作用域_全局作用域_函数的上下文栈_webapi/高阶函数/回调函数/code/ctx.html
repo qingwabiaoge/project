@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function Person({name, age, sayName, created}) {
+        this.name = name
+        this.age = age
+        //ctx就是一个大对象
+        sayName({sex: '男', theClass: '11'})
+        created()
+    }
+
+    person = new Person({
+        name: '小明',
+        age: '18',
+        sayName({sex, theClass}) {
+            console.log(
+                sex, theClass
+            )
+        }
+        ,
+        created() {
+            console.log('created钩子')
+        }
+
+    })
+
+</script>
+</body>
+</html>

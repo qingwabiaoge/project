@@ -1,0 +1,2736 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://deerchao.net/tutorials/regex/regex-1.htm
+Subject: =?utf-8?Q?=E6=AD=A3=E5=88=99=E8=A1=A8=E8=BE=BE=E5=BC=8F30=E5=88=86=E9=92?=
+ =?utf-8?Q?=9F=E5=85=A5=E9=97=A8=E6=95=99=E7=A8=8B?=
+Date: Fri, 31 May 2019 07:16:12 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--F7B32B6yuguzpYuelpkNbY7V6rN4rJWnjlHuuukaXv----"
+
+
+------MultipartBoundary--F7B32B6yuguzpYuelpkNbY7V6rN4rJWnjlHuuukaXv----
+Content-Type: text/html
+Content-ID: <frame-5B50C068C54F1E4AEAEB394D5BD358D2@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://deerchao.net/tutorials/regex/regex-1.htm
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns=3D"http://www.w3.org/1999/xht=
+ml" xml:lang=3D"zh-cn" lang=3D"zh-cn"><head><meta http-equiv=3D"Content-Typ=
+e" content=3D"text/html; charset=3DGBK">
+
+
+       =20
+        <meta http-equiv=3D"Content-Language" content=3D"zh-CN">
+   =20
+    <title>=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD30=B7=D6=D6=D3=C8=EB=C3=C5=BD=CC=
+=B3=CC</title><meta name=3D"keywords" content=3D"=D5=FD=D4=F2=B1=ED=B4=EF=
+=CA=BD,=BD=CC=B3=CC,=C8=EB=C3=C5,=CE=C4=B1=BE=C6=A5=C5=E4,=D3=EF=B7=A8">
+    <meta name=3D"description" content=3D"30=B7=D6=D6=D3=C4=DA=C8=C3=C4=E3=
+=C3=F7=B0=D7=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=CA=C7=CA=B2=C3=B4=A3=AC=B2=A2=B6=
+=D4=CB=FC=D3=D0=D2=BB=D0=A9=BB=F9=B1=BE=B5=C4=C1=CB=BD=E2=A3=AC=C8=C3=C4=E3=
+=BF=C9=D2=D4=D4=DA=D7=D4=BC=BA=B5=C4=B3=CC=D0=F2=BB=F2=CD=F8=D2=B3=C0=EF=CA=
+=B9=D3=C3=CB=FC=A1=A3">
+    <meta name=3D"author" content=3D"deerchao">
+    <link rel=3D"SHORTCUT ICON" href=3D"http://deerchao.net/images/regex.ic=
+o">
+    <style type=3D"text/css">
+            h1 {text-align:center}
+            p {text-indent:2em; line-height:140%; margin:auto 10px}
+            span {margin:3px}
+            table {margin:auto; border-style:solid; border-width:1px 1px 0 =
+0; border-color:gray}
+            td, th {border-style:solid; border-width:0 0 1px 1px; border-co=
+lor:gray}
+            caption {margin:auto; font-weight:bold}
+            dl {margin-left:20px}
+            dt {font-weight:bold}
+            .name {font-weight:bold}
+            .code {color:blue}
+            .regex {color:red}
+            .part {color:green}
+            .string {font-style:italic}
+            #top {background:#eee; line-height:200%;}
+            #top a {text-decoration: none; vertical-align:middle; color:Bla=
+ck; display:block; display:inline-block; text-align: center; padding:3px 15=
+px; }
+            #top a:hover { background:#ccc;}
+            .desc {text-decoration:underline}
+        </style>
+       =20
+       =20
+    <style type=3D"text/css">:root a[href*=3D".com?intr=3D"], :root .f-sign=
+-cont[data-dysign-adid], :root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5, :root =
+a[href*=3D"mfroute.com/"], :root a[href^=3D"http://ffxitrack.com/"], :root =
+a[href^=3D"http://ad-apac.doubleclick.net/"], :root a[href^=3D"http://www.a=
+mazon.co.uk/exec/obidos/external-search?"], :root .content-video > .ads-pla=
+yer, :root #\5f _mom_ad_2, :root .right > .content > .ads, :root #rhs_block=
+ .mod > .luhb-div > div[data-async-type=3D"updateHotelBookingModule"], :roo=
+t #\5f _admvnlb_modal_container, :root #MAIN.ShowTopic > .ad, :root a[href^=
+=3D"https://www.arthrozene.com/"][href*=3D"?tid=3D"], :root a[href^=3D"http=
+://pubads.g.doubleclick.net/"], :root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-=
+, :root #main_col > #center_col div[style=3D"font-size:14px;margin:0 4px;pa=
+dding:1px 5px;background:#fff7ed"], :root div[class*=3D"-storyBodyAd-"], :r=
+oot #center_col > #main > .dfrd > .mnr-c > .c._oc._zs, :root a[href^=3D"htt=
+p://ul.to/ref/"], :root #\5f _nq__hh[style=3D"display:block!important"], :r=
+oot a[href^=3D"http://cdn.adstract.com/"], :root a[href^=3D"//tracking.cont=
+ent-recommendation.net/"][href*=3D"/sponsored/click.html?"], :root a[href^=
+=3D"https://hi.potvpn.com/?from=3D"], :root .heg > .div-list, :root div[cla=
+ss^=3D"ads-partner-"], :root #\5f _mom_ad_12, :root a[href^=3D"http://lp.nc=
+downloader.com/"], :root a[href^=3D"https://fileboom.me/pr/"], :root .inlin=
+eNewsletterSubscription + .inlineNewsletterSubscription div[class$=3D"_item=
+"], :root div[id^=3D"google_ads_iframe_"], :root #ads > .dose > .dosesingle=
+, :root a[href^=3D"http://3wr110.net/"], :root a[href^=3D"http://bestorican=
+.com/"], :root div[id^=3D"ad_script_"], :root a[href^=3D"http://get.slickvp=
+n.com/"], :root .gbfwa > div[class$=3D"_item"], :root a[href*=3D".wjLkj.com=
+/"], :root #assetsListings[style=3D"display: block;"], :root #center_col > =
+#\5f Emc, :root a[href^=3D"http://marketgid.com"], :root a[href=3D"http://t=
+.cn/Ex0cCbt"], :root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe =
+> ol > ._DJe > .luhb-div, :root AD-SLOT, :root a[href^=3D"http://go.mobisla=
+.com/"], :root a[href^=3D"http://bodelen.com/"], :root a[href^=3D"http://ww=
+w.webtrackerplus.com/"], :root #center_col > #res > #topstuff + #search > d=
+iv > #ires > #rso > #flun, :root a[href^=3D"https://watchmygirlfriend.tv/"]=
+, :root a[href^=3D"http://www.affbuzzads.com/affiliate/"], :root #center_co=
+l > #resultStats + #tads, :root #main-content > [style=3D"padding:10px 0 0 =
+0 !important;"], :root #center_col > #resultStats + #tads + #res + #tads, :=
+root #cnt #center_col > #taw > #tvcap > .c._oc._Lp, :root a[href^=3D"http:/=
+/www.paddypower.com/?AFF_ID=3D"], :root a[onmousedown^=3D"this.href=3D'http=
+://staffpicks.outbrain.com/network/redir?"][target=3D"_blank"], :root #cent=
+er_col > #resultStats + div + #res + #tads, :root div[id^=3D"crt-"][style],=
+ :root div[class^=3D"Ad__container"], :root a[href^=3D"http://centertrust.x=
+yz/"], :root a[href^=3D"http://g1.v.fwmrm.net/ad/"], :root a[href^=3D"http:=
+//www.fbooksluts.com/"], :root #center_col > #resultStats + div[style=3D"bo=
+rder:1px solid #dedede;margin-bottom:11px;padding:5px 7px 5px 6px"], :root =
+a[href^=3D"http://ads.integral-marketing.com/"], :root div[id^=3D"advads_"]=
+, :root a[data-obtrack^=3D"http://paid.outbrain.com/network/redir?"], :root=
+ .__y_inner > .__y_item, :root div[id^=3D"ads300_100-widget"], :root #cente=
+r_col > #taw > #tvcap > .rscontainer, :root #center_col > div[style=3D"font=
+-size:14px;margin-right:0;min-height:5px"] > div[style=3D"font-size:14px;ma=
+rgin:0 4px;padding:1px 5px;background:#fff8e7"], :root span[title=3D"neteas=
+efooter"], :root div[id^=3D"MarketGid"], :root a[href^=3D"https://www.finan=
+ceads.net/tc.php?"], :root #cnt #center_col > #res > #topstuff > .ts, :root=
+ a[href^=3D"https://aaucwbe.com/"], :root a[href^=3D"http://espn.zlbu.net/"=
+], :root a[href^=3D"https://ads.trafficpoizon.com/"], :root #content > #cen=
+ter > .dose > .dosesingle, :root #content > #right > .dose > .dosesingle, :=
+root #flowplayer > div[style=3D"position: absolute; width: 300px; height: 2=
+75px; left: 222.5px; top: 85px; z-index: 999;"], :root a[href^=3D"http://ad=
+s.betfair.com/redirect.aspx?"], :root #flowplayer > div[style=3D"z-index: 2=
+08; position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85=
+px;"], :root a[href*=3D"emprestimo.eu"], :root #header + #content > #left >=
+ #rlblock_left, :root a[href^=3D"http://9amq5z4y1y.com/"], :root a[href^=3D=
+"https://traffic.bannerator.com/"], :root .__zinit .__y_item, :root a[href^=
+=3D"//40ceexln7929.com/"], :root #mbEnd[cellspacing=3D"0"][cellpadding=3D"0=
+"], :root a[href^=3D"http://banners.victor.com/processing/"], :root #mn #ce=
+nter_col > div > h2.spon:first-child, :root .ch[onclick=3D"ga(this,event)"]=
+, :root [class][data-sitename][data-header-version] > div[id^=3D"detection-=
+block"], :root a[href^=3D"//go.vedohd.org/"], :root #mn #center_col > div >=
+ h2.spon:first-child + ol:last-child, :root a[href^=3D"http://affiliate.cor=
+al.co.uk/processing/"], :root a[href*=3D".com/Register.aspx?aid=3D"], :root=
+ div[id^=3D"yandex_ad"], :root #mn div[style=3D"position:relative"] > #cent=
+er_col > ._Ak, :root a[href*=3D".clksite.com/"], :root script + #rbbox, :ro=
+ot #mn div[style=3D"position:relative"] > #center_col > div > ._dPg, :root =
+.__yinit .__y_item, :root a[href*=3D"/Register?a=3D"], :root a[href^=3D"htt=
+p://finaljuyu.com/"], :root div[id^=3D"mainads"], :root #rhs_block > .ts[ce=
+llspacing=3D"0"][cellpadding=3D"0"][style=3D"padding:0"], :root #resultspan=
+el > #topads, :root #rhs_block > #mbEnd, :root a[href^=3D"http://traffic.tc=
+-clicks.com/"], :root #rhs_block .mod > .gws-local-hotels__booking-module, =
+:root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf, :root a[href^=3D"ht=
+tp://data.ad.yieldmanager.net/"], :root .mw > #rcnt > #center_col > #taw > =
+#tvcap > .c, :root #rhs_block > script + .c._oc._Ve.rhsvw, :root a[data-red=
+irect^=3D"https://paid.outbrain.com/network/redir?"], :root a[href*=3D"deli=
+ver.trafficfabrik.com"], :root a[href^=3D"http://track.adform.net/"], :root=
+ #tads + div + .c, :root img[src*=3D".sinaimg."][style=3D"width:150px;heigh=
+t:300px"], :root #rhswrapper > #rhssection[border=3D"0"][bgcolor=3D"#ffffff=
+"], :root a[href^=3D"http://admingame.info/"], :root #ssmiwdiv[jsdisplay], =
+:root a[href^=3D"http://www.dealcent.com/register.php?affid=3D"], :root #to=
+pstuff > #tads, :root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5, :root a[href^=
+=3D"http://www.linkbucks.com/referral/"], :root a[href*=3D".hbjimin.com/"],=
+ :root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5, :root .GFYY1SVE2 > .GFYY1SV=
+D2 > .GFYY1SVG5, :root a[href^=3D"https://ad.atdmt.com/"], :root .jobs-info=
+rmation-call-to-action + .jobs-information-call-to-action div[class$=3D"_it=
+em"], :root .__ywvr .__y_item, :root a[href^=3D"//00ae8b5a9c1d597.com/"], :=
+root a[href^=3D"http://www.terraclicks.com/"], :root a[href*=3D".qertewrt.c=
+om/"], :root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4, :root a[href^=3D"http://=
+s5prou7ulr.com/"], :root #body > #left-promotion, :root .GPMV2XEDA2 > .GPMV=
+2XEDP1 > .GPMV2XEDJBB, :root a[href^=3D"http://4c7og3qcob.com/"], :root a[h=
+ref^=3D"http://aff.ironsocket.com/"], :root .Mpopup + #Mad > #MadZone, :roo=
+t aside[itemtype=3D"https://schema.org/WPAdBlock"], :root .__y_elastic .__y=
+_item, :root a[href^=3D"http://www.adxpansion.com"], :root a[href^=3D"http:=
+//trk.mdrtrck.com/"], :root .__ywl .__y_item, :root .l-container > #fishtan=
+k, :root a[href^=3D"https://a.adtng.com/"], :root .icons-rss-feed + .icons-=
+rss-feed div[class$=3D"_item"], :root a[href^=3D"http://dethao.com/"], :roo=
+t .lads[width=3D"100%"][style=3D"background:#FFF8DD"], :root #right_couple =
++ #left_float, :root iframe[src^=3D"http://cdn2.adexprt.com/"], :root a[hre=
+f^=3D"https://retiremely.com/"], :root .mod > ._jH + .rscontainer, :root a[=
+href^=3D"http://clicks.binarypromos.com/"], :root .mw > #rcnt > #center_col=
+ > #taw > .c, :root .nrelate .nr_partner, :root a[href^=3D"http://tezfiles.=
+com/pr/"], :root [lazy-ad=3D"leftbottom_banner"], :root .ob_container .item=
+-container-obpd, :root a[href^=3D"http://partner.sbaffiliates.com/"], :root=
+ a[href^=3D"http://www.firstload.com/affiliate/"], :root a[href^=3D"http://=
+www.myfreepaysite.com/sfw_int.php?aid"], :root a[href^=3D"//srv.buysellads.=
+com/"], :root a[href^=3D"http://click.payserve.com/"], :root a[href^=3D"htt=
+p://pwrads.net/"], :root a[href=3D"http://www.yabovip5.cc/"], :root .ob_dua=
+l_right > .ob_ads_header ~ .odb_div, :root .plistaList > .itemLinkPET, :roo=
+t a[href^=3D"http://www.download-provider.org/"], :root a[href^=3D"//88d7b6=
+aa44fb8eb.com/"], :root .plistaList > .plista_widget_underArticle_item[data=
+-type=3D"pet"], :root .con_search + #carousel-example-generic[style^=3D"max=
+-width: 1170px;"], :root a[href^=3D"http://www.pinkvisualgames.com/?revid=
+=3D"], :root .plista_widget_belowArticleRelaunch_item[data-type=3D"pet"], :=
+root .ra[align=3D"left"][width=3D"30%"], :root a[href^=3D"http://ads.affbuz=
+zads.com/"], :root a[href^=3D"http://promos.bwin.com/"], :root a[href^=3D"h=
+ttp://tracker.mybroadband.co.za/"], :root .ra[align=3D"right"][width=3D"30%=
+"], :root a[href^=3D"http://bs.serving-sys.com/"], :root a[href^=3D"http://=
+api.content.ad/"], :root a[href^=3D"https://www.googleadservices.com/pagead=
+/aclk?"], :root .ra[width=3D"30%"][align=3D"right"] + table[width=3D"70%"][=
+cellpadding=3D"0"], :root a[href^=3D"http://n217adserv.com/"], :root .rc-ct=
+a[data-target], :root .rhsvw[style=3D"background-color:#fff;margin:0 0 14px=
+;padding-bottom:1px;padding-top:1px;"], :root a[href^=3D"https://land.rk.co=
+m/landing/"], :root .rscontainer > .ellip, :root a[href^=3D"http://refpaano=
+.host/"], :root a[href*=3D".com/?p=3D"][target=3D"_blank"] > img[src$=3D".g=
+if"], :root .widget-pane-section-result[data-result-ad-type], :root a[href^=
+=3D"http://adserver.adtechus.com/"], :root .section-result[data-result-ad-t=
+ype], :root img[data-link][data-src*=3D"/u/"]:not([data-link*=3D"/i/"]), :r=
+oot .trc_rbox .syndicatedItem, :root .trc_rbox_border_elm .syndicatedItem, =
+:root a[href^=3D"http://taboola-"][href*=3D"/redirect.php?app.type=3D"], :r=
+oot a[href^=3D"https://topoffers.com/"][href*=3D"/?pid=3D"], :root .trc_rbo=
+x_div .syndicatedItem, :root .trc_rbox_div .syndicatedItemUB, :root div[id^=
+=3D"div_openx_ad_"], :root .trc_rbox_div a[target=3D"_blank"][href^=3D"http=
+://tab"], :root a[href*=3D".irtyc.com/"], :root a[href^=3D"//porngames.adul=
+t/?SID=3D"], :root a[href^=3D"http://engine.newsmaxfeednetwork.com/"], :roo=
+t a[href^=3D"https://www.camsoda.com/enter.php?id=3D"], :root a[href*=3D"=
+=3Dexoclick"], :root a[href^=3D"//zenhppyad.com/"], :root a[href^=3D"http:/=
+/ddownload39.club/"], :root a[href*=3D".yyk2.com/"], :root .trc_related_con=
+tainer div[data-item-syndicated=3D"true"], :root .vi-lb-placeholder[title=
+=3D"ADVERTISEMENT"], :root a[href^=3D"http://landingpagegenius.com/"], :roo=
+t a[href*=3D".gsxzq.com/"], :root a[href^=3D"//api.ad-goi.com/"], :root a[h=
+ref^=3D"https://dcs.adgear.com/clicks/"], :root a[href^=3D"http://refer.web=
+hostingbuzz.com/"], :root AD-TRIPLE-BOX, :root ADS-RIGHT, :root a[href^=3D"=
+http://campaign.bharatmatrimony.com/track/"], :root a[href*=3D"/adServe/ban=
+ners?"], :root #player_banner[style*=3D"fixed;"], :root a[href^=3D"https://=
+www.secureupload.eu/suprerefid=3D"], :root AFS-AD, :root a[href^=3D"http://=
+www.myvpn.pro/"], :root a[href^=3D"http://www.elfdoll.cn/?=3D"], :root a[on=
+mousedown^=3D"this.href=3D'http://paid.outbrain.com/network/redir?"][target=
+=3D"_blank"], :root AMP-AD, :root [onclick^=3D"window.open('window.open('//=
+delivery.trafficfabrik.com/"], :root DFP-AD, :root FBS-AD, :root a[href^=3D=
+"http://clickandjoinyourgirl.com/"], :root div[id^=3D"advads-"], :root a[hr=
+ef^=3D"http://buysellads.com/"], :root LEADERBOARD-AD, :root a[href^=3D"htt=
+p://sharesuper.info/"], :root [ad-id^=3D"googlead"], :root [href*=3D"//xml.=
+revrtb.com/"], :root a[href^=3D"https://djtcollectorclub.org/"][href*=3D"?a=
+ffiliate_id=3D"], :root a[href^=3D"http://rekoverr.com/"], :root [href^=3D"=
+https://maskip.co/"], :root [id*=3D"MGWrap"], :root a[href^=3D"//ads.ad-cen=
+ter.com/"], :root a[href^=3D"http://websitedhoome.com/"], :root [id*=3D"Mar=
+ketGid"], :root a[href^=3D"https://www.pornhat.com/"][rel=3D"nofollow"], :r=
+oot [id*=3D"ScriptRoot"], :root a[href^=3D"http://secure.cbdpure.com/aff/"]=
+, :root a[href^=3D"http://www.seekbang.com/cs/"], :root [id^=3D"bunyad_ads_=
+"], :root [lazy-ad=3D"leftthin_banner"], :root a[onmousedown^=3D"this.href=
+=3D'http://staffpicks.outbrain.com/network/redir?"][target=3D"_blank"] + .o=
+b_source, :root a[href^=3D"http://games.ucoz.ru/"][target=3D"_blank"], :roo=
+t [lazy-ad=3D"lefttop_banner"], :root [lazy-ad=3D"top_banner"], :root a[hre=
+f^=3D"http://go.gotourl.xyz/"], :root [onclick*=3D"content.ad/"], :root a[h=
+ref^=3D"http://see-work.info/"], :root a[href^=3D"http://www.graboid.com/af=
+filiates/"], :root a[href^=3D"http://papi.mynativeplatform.com:80/pub2/"], =
+:root [onclick^=3D"window.open('http://adultfriendfinder.com/search/"], :ro=
+ot a[href^=3D"http://www.ducksnetwork.com/"], :root [onclick^=3D"window.ope=
+n('https://www.brazzersnetwork.com/landing/"], :root a[href^=3D"http://www.=
+bet365.com/"][href*=3D"?affiliate=3D"], :root [src^=3D"/Redirect.a2b?"], :r=
+oot #container > #pic_container, :root a[data-oburl^=3D"http://paid.outbrai=
+n.com/network/redir?"], :root a[data-oburl^=3D"https://paid.outbrain.com/ne=
+twork/redir?"], :root img[src*=3D".sinaimg."][style=3D"width:1025px;height:=
+80px"], :root a[data-redirect^=3D"http://click.plista.com/pets"], :root a[d=
+ata-redirect^=3D"http://paid.outbrain.com/network/redir?"], :root a[href^=
+=3D"http://go.ad2up.com/"], :root a[href^=3D"http://adtransfer.net/"], :roo=
+t a[href^=3D"http://adclick.g.doubleclick.net/"], :root .tooltip > #tp, :ro=
+ot a[data-redirect^=3D"this.href=3D'http://paid.outbrain.com/network/redir?=
+"], :root div[class*=3D"_AdInArticle_"], :root a[href^=3D"https://track.cli=
+ckmoi.xyz/"], :root a[data-url^=3D"http://paid.outbrain.com/network/redir?"=
+], :root a[href*=3D".ahhxwavi.cn"], :root a[data-url^=3D"http://paid.outbra=
+in.com/network/redir?"] + .author, :root a[href^=3D"http://ad.yieldmanager.=
+com/"], :root a[href^=3D"http://www.myfreepaysite.com/sfw.php?aid"], :root =
+a[href^=3D"//4f6b2af479d337cf.com/"], :root a[href^=3D"http://lp.ezdownload=
+pro.info/"], :root a[data-widget-outbrain-redirect^=3D"http://paid.outbrain=
+.com/network/redir?"], :root a[href$=3D"/vghd.shtml"], :root a[href^=3D"htt=
+p://amzn.to/"] > img[src^=3D"data"], :root a[href*=3D".adk2x.com/"], :root =
+a[href^=3D"//z6naousb.com/"], :root a[href^=3D"//5e1fcb75b6d662d.com/"], :r=
+oot a[href*=3D".adsrv.eacdn.com/"] > img, :root a[href^=3D"//www.mgid.com/"=
+], :root a[href^=3D"http://www.clkads.com/adServe/"], :root a[href^=3D"http=
+://ad.doubleclick.net/"], :root a[href^=3D"http://googleads.g.doubleclick.n=
+et/pcs/click"], :root a[href^=3D"https://uncensored.game/"], :root a[href*=
+=3D".approvallamp.club/"], :root a[href^=3D"http://connectlinking6.com/"], =
+:root div[id^=3D"ad-position-"], :root a[href*=3D".bang.com/"][href*=3D"&af=
+f=3D"], :root a[href*=3D".clkcln.com/"], :root a[href^=3D"http://guideways.=
+info/"], :root a[href*=3D".ichlnk.com/"], :root div[class^=3D"largeRectangl=
+eAd_"], :root a[href*=3D".inclk.com/"], :root a[href*=3D".intab.fun/"], :ro=
+ot a[href^=3D"//awejmp.com/"], :root a[href*=3D".revimedia.com/"], :root a[=
+href*=3D".trust.zone"], :root a[href*=3D"//xml.revrtb.com/"], :root a[href^=
+=3D"http://www.1clickmoviedownloader.info/"], :root a[href^=3D"https://www.=
+friendlyduck.com/AF_"], :root a[href^=3D"http://feeds1.validclick.com/"], :=
+root a[href*=3D"//3wr110.xyz/"], :root a[href^=3D"http://eclkmpsa.com/"], :=
+root a[href*=3D"//ridingintractable.com/"], :root a[href^=3D"http://www.coi=
+nducks.com/"], :root div[id^=3D"dfp-ad-"], :root a[href*=3D"/adrotate-out.p=
+hp?"], :root a[href^=3D"https://servedbyadbutler.com/"], :root a[href*=3D"/=
+cmd.php?ad=3D"], :root a[href*=3D"/servlet/click/zone?"], :root a[href*=3D"=
+5iclx7wa4q.com"], :root a[href^=3D"http://feedads.g.doubleclick.net/"], :ro=
+ot div[style^=3D"width: 100%;"]:not([id]):not([class]) > iframe[scrolling=
+=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height=
+][frameborder=3D"0"], :root a[href*=3D"=3DAdtracker"], :root a[href^=3D"htt=
+p://www.downloadweb.org/"], :root a[href^=3D"http://affiliates.score-affili=
+ates.com/"], :root a[href*=3D"=3Dadscript"], :root div[id^=3D"ad_thread"], =
+:root div > [class][onclick*=3D".updateAnalyticsEvents"], :root a[href*=3D"=
+?adlivk=3D"][href*=3D"&refer=3D"], :root a[href^=3D"http://www.afco2go.com/=
+srv.php?"], :root a[onmousedown^=3D"this.href=3D'https://paid.outbrain.com/=
+network/redir?"][target=3D"_blank"] + .ob_source, :root a[href^=3D"http://b=
+etahit.click/"], :root a[href^=3D"http://hyperies.info/"], :root iframe[id^=
+=3D"google_ads_frame"], :root a[href*=3D"a2g-secure.com"], :root a[href*=3D=
+"ad2upapp.com/"], :root a[href*=3D"delivery.trafficfabrik.com"], :root a[hr=
+ef^=3D"https://members.linkifier.com/public/affiliateLanding?refCode=3D"], =
+:root a[href^=3D"//www.pd-news.com/"], :root a[href*=3D"googleme.eu"], :roo=
+t a[href*=3D"letsadvertisetogether.com"], :root a[href^=3D"http://bonusfapt=
+urbo.nmvsite.com/"], :root a[href^=3D"http://www.streamtunerhd.com/signup?"=
+], :root a[href*=3D"onclkds."], :root a[href*=3D"pussl3.com"], :root a[href=
+^=3D"https://iactrivago.ampxdirect.com/"], :root a[href^=3D" http://ads.ad-=
+center.com/"], :root a[href^=3D" http://n47adshostnet.com/"], :root div[id^=
+=3D"ads300_250-widget"], :root a[href^=3D" http://www.sex.com/"][href*=3D"&=
+utm_"], :root a[href^=3D"//4c7og3qcob.com/"], :root a[href^=3D"http://join3=
+.bannedsextapes.com/track/"], :root a[href^=3D"//adbit.co/?a=3DAdvertise&"]=
+, :root a[href^=3D"http://secure.signup-way.com/"], :root a[href^=3D"//bwnj=
+ijl7w.com/"], :root a[href^=3D"//db52cc91beabf7e8.com/"], :root a[href^=3D"=
+http://tracking.deltamediallc.com/"], :root a[href^=3D"//go.onclasrv.com/"]=
+, :root a[href^=3D"//healthaffiliate.center/"], :root a[href^=3D"http://www=
+.revenuehits.com/"], :root a[href^=3D"//jsmptjmp.com/"], :root a[href^=3D"/=
+/look.djfiln.com/"], :root #wp > .V-videoFloat, :root a[href^=3D"//medleyad=
+s.com/spot/"], :root a[href^=3D"http://onclickads.net/"], :root a[href^=3D"=
+//nlkdom.com/"], :root a[href^=3D"http://www.streamate.com/exports/"], :roo=
+t a[href^=3D"http://click.plista.com/pets"], :root a[href^=3D"//t.MtagMonet=
+izationA.com/"], :root a[href^=3D"http://spygasm.com/track?"], :root a[href=
+^=3D"//voyeurhit.com/cs/"], :root a[href^=3D"http://1phads.com/"], :root di=
+v[id^=3D"ads250_250-widget"], :root a[href^=3D"http://2pxg8bcf.top/"], :roo=
+t a[href^=3D"http://www.clickansave.net/"], :root a[href^=3D"http://360ads.=
+go2cloud.org/"], :root a[href^=3D"http://paid.outbrain.com/network/redir?"]=
+, :root a[href^=3D"http://track.affiliatenetwork.co.za/"], :root a[href^=3D=
+"http://45eijvhgj2.com/"], :root #fwin_popad_7ree + #fwin_dialog, :root a[h=
+ref^=3D"http://6kup12tgxx.com/"], :root a[href^=3D"http://9nl.es/"], :root =
+a[href^=3D"http://NowDownloadAll.com"], :root a[href^=3D"http://www.sex.com=
+/videos/?utm_"], :root a[href^=3D"http://www.mysuperpharm.com/"], :root a[h=
+ref^=3D"http://a.adquantix.com/"], :root a[href^=3D"http://a63t9o1azf.com/"=
+], :root a[href^=3D"http://abc2.mobile-10.com/"], :root #piao_div_1[style*=
+=3D"width:140px;"], :root a[href^=3D"http://ad-emea.doubleclick.net/"], :ro=
+ot a[href*=3D".wenpie.com/"], :root a[href^=3D"http://ad.au.doubleclick.net=
+/"], :root a[href^=3D"http://vo2.qrlsx.com/"], :root a[href^=3D"http://adex=
+prt.me/"], :root a[href^=3D"http://adf.ly/?id=3D"], :root a[href^=3D"http:/=
+/api.ringtonematcher.com/"], :root a[href^=3D"http://adfarm.mediaplex.com/"=
+], :root a[href^=3D"http://www.babylon.com/welcome/index?affID"], :root a[h=
+ref^=3D"http://adserving.unibet.com/"], :root a[href^=3D"https://secure.adn=
+xs.com/clktrb?"], :root a[href^=3D"http://adlev.neodatagroup.com/"], :root =
+a[href^=3D"http://adprovider.adlure.net/"], :root a[href^=3D"http://pan.adr=
+accoon.com?"], :root div[id^=3D"lazyad-"], :root a[href^=3D"http://bcp.crwd=
+cntrl.net/"], :root body[class|=3D"view"] > .ad-box, :root a[href^=3D"http:=
+//adrunnr.com/"], :root a[href^=3D"http://www.fpcTraffic2.com/blind/in.cgi?=
+"], :root a[href^=3D"http://ads.activtrades.com/"], :root a[href^=3D"http:/=
+/mmo123.co/"], :root div[class^=3D"index_adAfterContent_"], :root a[href^=
+=3D"http://ads.ad-center.com/"], :root a[href*=3D".123ch.cn"], :root a[href=
+^=3D"http://ads.sprintrade.com/"], :root a[href^=3D"http://zevera.com/afi.h=
+tml"], :root a[href^=3D"http://ads.expekt.com/affiliates/"], :root a[href^=
+=3D"http://ads.pheedo.com/"], :root a[href^=3D"http://ads2.williamhill.com/=
+redirect.aspx?"], :root a[href^=3D"http://cwcams.com/landing/click/"], :roo=
+t a[href^=3D"http://adserver.adreactor.com/"], :root a[href^=3D"http://adse=
+rver.adtech.de/"], :root a[href^=3D"http://www.1clickdownloader.com/"], :ro=
+ot a[href^=3D"http://cdn3.adbrau.com/"], :root #body > #right-promotion, :r=
+oot a[href^=3D"http://adserver.itsfogo.com/"], :root a[href*=3D".mieseng.co=
+m/"], :root a[href^=3D"http://adserving.liveuniversenetwork.com/"], :root .=
+listok > a > img[style^=3D"width:980px;height:"], :root a[href^=3D"http://a=
+dsrv.keycaptcha.com"], :root a[href^=3D"http://adtrack123.pl/"], :root a[hr=
+ef^=3D"http://green.trafficinvest.com/"], :root a[href^=3D"http://clickserv=
+.sitescout.com/"], :root a[href^=3D"http://www.adshost2.com/"], :root a[hre=
+f^=3D"http://adtrackone.eu/"], :root a[href^=3D"http://adultfriendfinder.co=
+m/p/register.cgi?pid=3D"], :root a[href^=3D"http://linksnappy.com/?ref=3D"]=
+, :root a[href^=3D"http://affiliate.glbtracker.com/"], :root a[href^=3D"htt=
+p://affiliate.godaddy.com/"], :root a[href^=3D"http://www.accuserveadsystem=
+.com/accuserve-go.php?"], :root #table1[width=3D"468"][height=3D"50"], :roo=
+t a[href^=3D"https://sexdatingz.live/"], :root a[href^=3D"http://lp.ilivid.=
+com/"], :root a[href^=3D"http://searchtabnew.com/"], :root a[href^=3D"http:=
+//affiliates.pinnaclesports.com/processing/"], :root div[id^=3D"block-views=
+-topheader-ad-block-"], :root a[href^=3D"http://www.gamebookers.com/cgi-bin=
+/intro.cgi?"], :root a[href^=3D"http://aflrm.com/"], :root a[href^=3D"http:=
+//anonymous-net.com/"], :root a[href^=3D"http://mojofun.info/"], :root a[hr=
+ef^=3D"http://findersocket.com/"], :root iframe[src^=3D"http://ad.yieldmana=
+ger.com/"], :root a[href^=3D"http://at.atwola.com/"], :root a[href^=3D"http=
+://record.sportsbetaffiliates.com.au/"], :root .container > a.mid-wrapper, =
+:root a[href^=3D"http://azmobilestore.co/"], :root a[href^=3D"http://easydo=
+wnload4you.com/"], :root a[href^=3D"http://www.moneyducks.com/"], :root a[h=
+ref^=3D"http://b.bestcompleteusa.info/"], :root a[href^=3D"http://bc.vc/?r=
+=3D"], :root a[href^=3D"http://bcntrack.com/"], :root a[href^=3D"http://pok=
+ershibes.com/index.php?ref=3D"], :root a[href^=3D"http://www.friendlyadvert=
+isements.com/"], :root div[id^=3D"ads300_600-widget"], :root a[href^=3D"htt=
+p://bestchickshere.com/"], :root a[href^=3D"http://bluehost.com/track/"], :=
+root a[href^=3D"https://jmp.awempire.com/"], :root a[href^=3D"http://databa=
+ss.info/"], :root a[href^=3D"http://c.actiondesk.com/"], :root #navcontaine=
+r + .moneyarea, :root a[href^=3D"http://c.jumia.io/"], :root a[href^=3D"htt=
+p://c.ketads.com/"], :root a[href^=3D"http://www.bet365.com/"][href*=3D"&af=
+filiate=3D"], :root a[href^=3D"http://callville.xyz/"], :root a[href^=3D"ht=
+tp://media.paddypower.com/redirect.aspx?"], :root a[href^=3D"http://campaig=
+n.bharatmatrimony.com/cbstrack/"], :root a[href^=3D"http://campeeks.com/"][=
+href*=3D"&utm_"], :root a[href^=3D"http://casino-x.com/?partner"], :root #r=
+ightCouplet + #leftFloat, :root a[href^=3D"http://cdn.adsrvmedia.net/"], :r=
+oot a[href*=3D".downok.com"], :root a[href^=3D"https://land.brazzersnetwork=
+.com/landing/"], :root a[href^=3D"http://web.adblade.com/"], :root div[data=
+-subscript=3D"Advertising"], :root a[href^=3D"http://cdn3.adexprts.com/"], =
+:root a[href^=3D"http://go.oclaserver.com/"], :root a[href^=3D"http://chatu=
+rbate.com/affiliates/"], :root script[src^=3D"http://free-shoutbox.net/app/=
+webroot/shoutbox/sb.php?shoutbox=3D"] + #freeshoutbox_content, :root div[it=
+emtype=3D"http://schema.org/WPAdBlock"], :root a[href^=3D"http://cinema.fri=
+endscout24.de?"], :root a[href^=3D"http://click.guamwnvgashbkashawhgkhahshm=
+ashcas.pw/"], :root a[href^=3D"http://www.down1oads.com/"], :root a[href^=
+=3D"http://www.pheedo.com/"], :root a[href^=3D"http://clicks.guamwnvgashbka=
+shawhgkhahshmashcas.pw/"], :root a[href^=3D"http://clk.directrev.com/"], :r=
+oot a[href^=3D"http://galleries.pinballpublishernetwork.com/"], :root div[c=
+lass^=3D"lifeOnwerAd"], :root a[target=3D"_blank"][href^=3D"http://api.tabo=
+ola.com/"], :root a[href^=3D"http://clkmon.com/adServe/"], :root a[href^=3D=
+"http://hdplugin.flashplayer-updates.com/"], :root a[href^=3D"http://track.=
+incognitovpn.com/"], :root #img-txt-wrapper > #title_desc_div, :root div[id=
+^=3D"acm-ad-tag-"], :root a[href^=3D"https://www.brazzersnetwork.com/landin=
+g/"], :root a[href^=3D"http://codec.codecm.com/"], :root a[href^=3D"http://=
+n.admagnet.net/"], :root a[href^=3D"http://prochina.space/"], :root a[href^=
+=3D"http://contractallsticker.net/"], :root a[href^=3D"http://wgpartner.com=
+/"], :root a[href^=3D"https://go.stripchat.com/"][href*=3D"&campaignId=3D"]=
+, :root a[href^=3D"http://cpaway.afftrack.com/"], :root a[href^=3D"http://d=
+2.zedo.com/"], :root div[id^=3D"advt-"], :root a[href^=3D"https://affiliate=
+s.bet-at-home.com/processing/"], :root a[href^=3D"http://data.committeemene=
+ncyclopedicrepertory.info/"], :root div[class^=3D"Ad__bigBox"], :root a[hre=
+f^=3D"http://data.linoleictanzaniatitanic.com/"], :root .top_box > #indexto=
+p, :root div[itemtype=3D"http://www.schema.org/WPAdBlock"], :root a[href^=
+=3D"http://dftrck.com/"], :root #downdiv > .downcode, :root a[href^=3D"http=
+://down1oads.com/"], :root a[href^=3D"http://download-performance.com/"], :=
+root a[href^=3D"http://www.myfreecams.com/?co_id=3D"][href*=3D"&track=3D"],=
+ :root a[href^=3D"https://bs.serving-sys.com"], :root a[href^=3D"http://duc=
+kcash.eu/"], :root a[href^=3D"http://server.cpmstar.com/click.aspx?poolid=
+=3D"], :root a[href^=3D"https://track.themadtrcker.com/"], :root a[href^=3D=
+"http://dwn.pushtraffic.net/"], :root a[href^=3D"http://earandmarketing.com=
+/"], :root a[href^=3D"https://gogoman.me/"], :root a[href^=3D"http://elite-=
+sex-finder.com/?"], :root a[href^=3D"https://transfer.xe.com/signup/track/r=
+edirect?"], :root a[href^=3D"http://elitefuckbook.com/"], :root .player + .=
+sponsor, :root a[href^=3D"http://ethfw0370q.com/"], :root a[href^=3D"http:/=
+/extra.bet365.com/"][href*=3D"?affiliate=3D"], :root div#xinxi, :root a[hre=
+f*=3D".gongnou.com/"], :root #leftFloat + #rightFloat, :root a[href^=3D"htt=
+p://farm.plista.com/pets"], :root a[href^=3D"http://freesoftwarelive.com/"]=
+, :root div[data-mediatype=3D"advertising"], :root a[href^=3D"http://webgir=
+lz.online/landing/"], :root a[href^=3D"http://fileloadr.com/"], :root a[hre=
+f*=3D"/mobads.php?"], :root a[href^=3D"https://secure.eveonline.com/ft/?aid=
+=3D"], :root a[href^=3D"http://fileupnow.rocks/"], :root a[href^=3D"http://=
+prousa.work/"], :root a[href^=3D"http://fsoft4down.com/"], :root a[href^=3D=
+"http://track.trkvluum.com/"], :root a[href^=3D"https://bullads.net/get/"],=
+ :root a[href^=3D"http://fusionads.net"], :root a[href^=3D"https://farm.pli=
+sta.com/pets"], :root a[href^=3D"http://galleries.securewebsiteaccess.com/"=
+], :root a[href^=3D"http://gca.sh/user/register?ref=3D"], :root a[href^=3D"=
+http://www.on2url.com/app/adtrack.asp"], :root a[href^=3D"http://getlinksin=
+aseconds.com/"], :root a[href^=3D"https://bongacams2.com/track?"], :root a[=
+href^=3D"http://go.seomojo.com/tracking202/"], :root a[href^=3D"http://go.t=
+rafficshop.com/"], :root a[href^=3D"http://www.getyourguide.com/?partner_id=
+=3D"], :root a[href^=3D"http://goldmoney.com/?gmrefcode=3D"], :root a[href^=
+=3D"http://greensmoke.com/"], :root a[href^=3D"http://hd-plugins.com/downlo=
+ad/"], :root a[href^=3D"http://hpn.houzz.com/"], :root a[href*=3D".com?aff=
+=3D"], :root a[href^=3D"http://tracking.crazylead.com/"], :root a[href^=3D"=
+http://hyperlinksecure.com/go/"], :root a[href*=3D".com/?Extend=3D"], :root=
+ a[href^=3D"http://igromir.info/"], :root a[href^=3D"https://awejmp.com/"],=
+ :root a[href^=3D"http://imads.integral-marketing.com/"], :root a[href^=3D"=
+http://install.securewebsiteaccess.com/"], :root a[href^=3D"http://secure.s=
+ignup-page.com/"], :root a[href^=3D"http://www.brightwheel.info/"], :root a=
+[href^=3D"http://www.greenmangaming.com/?tap_a=3D"], :root a[href^=3D"http:=
+//intent.bingads.com/"], :root a[href^=3D"http://internalredirect.site/"], =
+:root a[href^=3D"http://istri.it/?"], :root a[href^=3D"http://jobitem.org/"=
+], :root a[href^=3D"http://liversely.com/"], :root a[href^=3D"http://k2s.cc=
+/code/"], :root a[href^=3D"http://tracking.toroadvertising.com/"], :root a[=
+href^=3D"http://k2s.cc/pr/"], :root a[href^=3D"http://keep2share.cc/pr/"], =
+:root a[href^=3D"http://latestdownloads.net/download.php?"], :root div[id^=
+=3D"ADV-SLOT-"], :root a[href^=3D"http://liversely.net/"], :root a[href^=3D=
+"http://t.mdn2015x2.com/"], :root a[href^=3D"http://mgid.com/"], :root a[hr=
+ef^=3D"http://www.freefilesdownloader.com/"], :root a[href^=3D"http://mo8mw=
+xi1.com/"], :root div[class^=3D"gemini-ad"], :root a[href^=3D"http://online=
+.ladbrokes.com/promoRedirect?"], :root a[href^=3D"https://redirect.ero-adve=
+rtising.com/"], :root a[href^=3D"http://play4k.co/"], :root div[id^=3D"ad-d=
+iv-"], :root a[href^=3D"http://popup.taboola.com/"], :root a[href^=3D"http:=
+//uploaded.net/ref/"], :root a[href^=3D"https://www.spyoff.com/"], :root a[=
+href^=3D"http://prochina.link/"], :root adblock-detect, :root a[href^=3D"ht=
+tp://record.betsafe.com/"], :root a[href^=3D"http://record.commissionking.c=
+om/"], :root a[href^=3D"http://s9kkremkr0.com/"], :root a[href^=3D"http://w=
+ww.123-reg.co.uk/affiliate2.cgi"], :root a[href^=3D"http://secure.hostgator=
+.com/~affiliat/"], :root a[href^=3D"http://serve.williamhill.com/promoRedir=
+ect?"], :root a[href^=3D"http://servicegetbook.net/"], :root a[href^=3D"htt=
+p://srvpub.com/"], :root a[href^=3D"https://porngames.adult/?SID=3D"], :roo=
+t a[href^=3D"http://stateresolver.link/"], :root a[href^=3D"http://www.drow=
+le.com/"], :root a[href*=3D".17yyba.com/"], :root a[href^=3D"https://keep2s=
+hare.cc/pr/"], :root a[href^=3D"http://steel.starflavor.bid/"], :root a[hre=
+f^=3D"https://www.adskeeper.co.uk/"], :root a[href^=3D"http://syndication.e=
+xoclick.com/"], :root a[href^=3D"https://www.firstload.com/affiliate/"], :r=
+oot a[href^=3D"https://control.trafficfabrik.com/"], :root a[href^=3D"http:=
+//t.mdn2015x1.com/"], :root a[href^=3D"http://t.mdn2015x3.com/"], :root a[h=
+ref^=3D"http://t.wowtrk.com/"], :root a[href^=3D"http://tour.affbuzzads.com=
+/"], :root a[href^=3D"http://us.marketgid.com"], :root a[href^=3D"http://vi=
+nfdv6b4j.com/"], :root a[href^=3D"http://webtrackerplus.com/"], :root a[hre=
+f^=3D"http://wopertific.info/"], :root div[id^=3D"cns_ads_"], :root a[href^=
+=3D"http://www.twinplan.com/AF_"], :root a[href^=3D"http://www.TwinPlan.com=
+/AF_"], :root a[href^=3D"http://www.afgr3.com/"], :root a[href^=3D"http://w=
+ww.adbrite.com/mb/commerce/purchase_form.php?"], :root a[href^=3D"http://ww=
+w.adskeeper.co.uk/"], :root a[href^=3D"https://understandsolar.com/signup/?=
+lead_source=3D"][href*=3D"&tracking_code=3D"], :root a[href^=3D"http://www.=
+affiliates1128.com/processing/"], :root a[href^=3D"http://www.downloadplaye=
+r1.com/"], :root a[href^=3D"http://www.afgr2.com/"], :root a[href^=3D"http:=
+//www.badoink.com/go.php?"], :root #toptb + div[align=3D"center"], :root a[=
+href^=3D"http://www.bitlord.me/share/"], :root a[href^=3D"http://www.blueho=
+st.com/track/"] > img, :root bottomadblock, :root a[href^=3D"http://www.cas=
+h-duck.com/"], :root a[href^=3D"http://www.friendlyduck.com/AF_"], :root a[=
+href^=3D"https://windscribe.com/promo/"], :root a[href^=3D"http://yads.zedo=
+.com/"], :root a[href^=3D"http://www.cdjapan.co.jp/aff/click.cgi/"], :root =
+a[href^=3D"http://www.dl-provider.com/search/"], :root a[href^=3D"http://ww=
+w.downloadthesefiles.com/"], :root a[href^=3D"http://www.duckcash.eu/"], :r=
+oot a[href^=3D"http://www.duckssolutions.com/"], :root a[href^=3D"http://ww=
+w.easydownloadnow.com/"], :root a[href^=3D"http://www.epicgameads.com/"], :=
+root a[href^=3D"http://www.faceporn.net/free?"], :root a[href^=3D"http://ww=
+w.fducks.com/"], :root a[href^=3D"https://torguard.net/aff.php"], :root a[h=
+ref^=3D"http://www.firstclass-download.com/"], :root a[href^=3D"http://www.=
+firstload.de/affiliate/"], :root a[href^=3D"http://www.fonts.com/BannerScri=
+pt/"], :root a[href^=3D"http://www.flashx.tv/downloadthis"], :root a[href^=
+=3D"http://www.fleshlight.com/"], :root a[href^=3D"http://www.friendlyquack=
+s.com/"], :root .ads > a > img[src*=3D".sinaimg."], :root a[href^=3D"https:=
+//www.goldenfrog.com/vyprvpn?offer_id=3D"][href*=3D"&aff_id=3D"], :root a[h=
+ref^=3D"http://www.hitcpm.com/"], :root a[href^=3D"https://pubads.g.doublec=
+lick.net/"], :root a[href^=3D"http://www.idownloadplay.com/"], :root a[href=
+^=3D"http://www.incredimail.com/?id=3D"], :root a[href^=3D"https://tracking=
+.truthfinder.com/?a=3D"], :root a[href^=3D"http://www.installads.net/"], :r=
+oot a[href^=3D"http://www.ireel.com/signup?ref"], :root a[href^=3D"http://w=
+ww.liutilities.com/"], :root a[href^=3D"http://www.liversely.net/"], :root =
+a[href^=3D"http://www.menaon.com/installs/"], :root a[href^=3D"http://www.m=
+obileandinternetadvertising.com/"], :root a[href^=3D"http://www.my-dirty-ho=
+bby.com/?sub=3D"], :root div[id][style=3D"width: 100%;"] > iframe[scrolling=
+=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height=
+][frameborder=3D"0"], :root a[href^=3D"http://www.pinkvisualpad.com/?revid=
+=3D"], :root a[href^=3D"http://www.plus500.com/?id=3D"], :root header#hdr +=
+ #main > div[data-hveid], :root a[href^=3D"http://www.quick-torrent.com/dow=
+nload.html?aff"], :root a[href^=3D"http://www.ragazzeinvendita.com/?rcid=3D=
+"], :root a[href^=3D"http://www.richducks.com/"], :root a[href^=3D"http://w=
+ww.ringtonematcher.com/"], :root a[href^=3D"http://www.roboform.com/php/lan=
+d.php"], :root a[href^=3D"http://www.securegfm.com/"], :root a[href^=3D"htt=
+p://www.sex.com/?utm_"], :root a[href^=3D"http://www.sex.com/pics/?utm_"], =
+:root div[class^=3D"Ad__adContainer"], :root a[href^=3D"http://www.sexgangs=
+ters.com/?pid=3D"], :root a[href*=3D".qpzqxz.com/"], :root a[href^=3D"http:=
+//www.sfippa.com/"], :root a[href^=3D"http://www.socialsex.com/"], :root a[=
+href^=3D"http://www.text-link-ads.com/"], :root a[href^=3D"http://www.tirer=
+ack.com/affiliates/"], :root a[href^=3D"http://www.torntv-downloader.com/"]=
+, :root a[href^=3D"http://www.torntvdl.com/"], :root #table1[width=3D"812"]=
+[height=3D"50"], :root a[href^=3D"http://www.uniblue.com/cm/"], :root a[hre=
+f^=3D"http://www.urmediazone.com/signup"], :root a[href^=3D"http://www.usea=
+rchmedia.com/signup?"], :root a[href^=3D"https://secure.cbdpure.com/aff/"],=
+ :root a[href^=3D"http://www.wantstraffic.com/"], :root a[href^=3D"http://w=
+ww.xmediaserve.com/"], :root a[href^=3D"http://www.yourfuckbook.com/?"], :r=
+oot a[href^=3D"http://www.zergnet.com/i/"], :root a[onclick*=3D"//m.economi=
+ctimes.com/etmack/click.htm"], :root a[href^=3D"http://www1.clickdownloader=
+.com/"], :root A[href*=3D".com/?Agent=3D"], :root a[href^=3D"http://www5.sm=
+artadserver.com/call/pubjumpi/"], :root a[href^=3D"http://wxdownloadmanager=
+.com/dl/"], :root a[href^=3D"http://xads.zedo.com/"], :root a[href^=3D"http=
+://xtgem.com/click?"], :root div[id^=3D"div-adtech-ad-"], :root div[id^=3D"=
+ad-gpt-"], :root a[href^=3D"http://y1jxiqds7v.com/"], :root div[id^=3D"div_=
+ad_stack_"], :root a[href^=3D"http://z1.zedo.com/"], :root a[href^=3D"https=
+://ad.doubleclick.net/"], :root a[href^=3D"https://adclick.g.doubleclick.ne=
+t/"], :root a[href^=3D"https://adhealers.com/"], :root a[href^=3D"https://a=
+ds.ad4game.com/"], :root a[href^=3D"https://adserver.adreactor.com/"], :roo=
+t a[href^=3D"https://www.incontri-matura.com/"], :root a[href^=3D"https://a=
+dultfriendfinder.com/go/page/landing"], :root a[href^=3D"https://adswick.co=
+m/"], :root a[href^=3D"https://atomidownload.com/"], :root a[href^=3D"https=
+://awentw.com/"], :root a[href*=3D".tduou.com/"], :root #rightCouple + #lef=
+tFloat, :root a[href^=3D"https://betway.com/"][href*=3D"&a=3D"], :root a[hr=
+ef^=3D"https://chaturbate.com/in/?track=3D"], :root a[href^=3D"https://chat=
+urbate.com/affiliates/"], :root body[onload*=3D"u()"] > #x, :root a[href^=
+=3D"https://chaturbate.com/in/?tour=3D"], :root a[href^=3D"https://chaturba=
+te.jjgirls.com/"][href*=3D"?tour=3D"], :root a[href^=3D"https://chaturbate.=
+xyz/"], :root div[id][style=3D"width: 100%;"] > div > div > iframe[scrollin=
+g=3D"no"][src^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][heigh=
+t][frameborder=3D"0"], :root #piao_div_4[style*=3D"width:140px;"], :root a[=
+href^=3D"https://click.plista.com/pets"], :root a[href^=3D"https://clixtrac=
+.com/"], :root a[href^=3D"https://dediseedbox.com/clients/aff.php?"], :root=
+ a[href^=3D"https://dltags.com/"], :root a[href^=3D"https://evaporate.pw/"]=
+, :root .content-video > .ads, :root td[valign=3D"top"] > .mainmenu[style=
+=3D"padding:10px 0 0 0 !important;"], :root a[href^=3D"https://flirtaescopa=
+.com/"], :root a[href^=3D"https://freeadult.games/"], :root a[href^=3D"http=
+s://intrev.co/"], :root a[href^=3D"https://gamescarousel.com/"], :root a[hr=
+ef^=3D"https://m.do.co/c/"] > img, :root a[href^=3D"https://gghf.mobi/"], :=
+root a[href^=3D"https://go.ad2up.com/"], :root a[href^=3D"https://go.onclas=
+rv.com/"], :root a[href^=3D"https://go.trkclick2.com/"], :root a[href^=3D"h=
+ttps://googleads.g.doubleclick.net/pcs/click"], :root a[href^=3D"https://ia=
+c.ampxdirect.com/"], :root a[href^=3D"https://ilovemyfreedoms.com/"][href*=
+=3D"?affiliate_id=3D"], :root a[href^=3D"https://incisivetrk.cvtr.io/click?=
+"], :root a[href^=3D"https://lingthatsparleso.info/"], :root a[href^=3D"htt=
+ps://medleyads.com/"], :root a[href^=3D"https://mk-ads.com/"], :root a[href=
+^=3D"https://mk-cdn.net/"], :root a[href^=3D"https://paid.outbrain.com/netw=
+ork/redir?"], :root a[href^=3D"https://zononi.com/"], :root a[href^=3D"http=
+s://porndeals.com/?track=3D"], :root .maomi-content > .section-banner, :roo=
+t a[href^=3D"https://prf.hn/click/"][href*=3D"/adref:"], :root a[href^=3D"h=
+ttps://refpaano.host/"], :root a[href^=3D"https://www.moscarossa.biz/"], :r=
+oot a[href^=3D"https://rev.adsession.com/"], :root a[href^=3D"https://secur=
+e.bstlnk.com/"], :root a[href^=3D"https://spygasm.com/track?"], :root a[hre=
+f^=3D"https://squren.com/rotator/?atomid=3D"], :root a[href^=3D"https://syn=
+dication.exoclick.com/splash.php?"], :root a[href^=3D"https://t.mobtya.com/=
+"], :root a[href^=3D"https://track.52zxzh.com/"], :root a[href^=3D"https://=
+track.adform.net/"], :root a[href^=3D"https://track.healthtrader.com/"], :r=
+oot a[href^=3D"https://track.trkinator.com/"], :root div[id^=3D"ad-server-"=
+], :root a[href^=3D"https://trackjs.com/?utm_source"], :root a[href^=3D"htt=
+ps://trafficmedia.center/"], :root a[href^=3D"https://trklvs.com/"], :root =
+a[href^=3D"https://trust.zone/go/r.php?RID=3D"], :root a[href^=3D"https://w=
+ww.oboom.com/ad/"], :root a[href^=3D"https://uncensored3d.com/"], :root p[i=
+d^=3D"div-gpt-ad-"], :root a[href^=3D"https://vodexor.us/"], :root a[href^=
+=3D"https://www.adultempire.com/"][href*=3D"?partner_id=3D"], :root a[href^=
+=3D"https://www.adxtro.com/"], :root a[href^=3D"https://www.bebi.com"], :ro=
+ot a[href^=3D"https://www.camyou.com/?cam=3D"][href*=3D"&track=3D"], :root =
+a[href^=3D"https://www.dsct1.com/"], :root a[href^=3D"https://www.nutaku.ne=
+t/signup/landing/"], :root a[href^=3D"https://www.popads.net/users/"], :roo=
+t a[href^=3D"https://www.share-online.biz/affiliate/"], :root a[href^=3D"ht=
+tps://www.what-sexdating.com/"], :root a[onmousedown^=3D"this.href=3D'/wp-c=
+ontent/embed-ad-content/"], :root a[href*=3D".05cg.com/"], :root a[onmoused=
+own^=3D"this.href=3D'http://paid.outbrain.com/network/redir?"][target=3D"_b=
+lank"] + .ob_source, :root a[onmousedown^=3D"this.href=3D'https://paid.outb=
+rain.com/network/redir?"][target=3D"_blank"], :root div[id^=3D"div-gpt-ad"]=
+, :root a[style=3D"display:block;width:300px;min-height:250px"][href^=3D"ht=
+tp://li.cnet.com/click?"], :root a[target=3D"_blank"][onmousedown=3D"this.h=
+ref^=3D'http://paid.outbrain.com/network/redir?"], :root aside[id^=3D"adrot=
+ate_widgets-"], :root div#ad_id, :root aside[id^=3D"advads_ad_widget-"], :r=
+oot aside[id^=3D"div-gpt-ad"], :root a[href*=3D"/?INTR=3D"], :root aside[id=
+^=3D"tn_ads_widget-"], :root div[class$=3D"dealnews"] > .dealnews, :root .f=
+ooter > #box[style=3D"width:100%;height:100%;position:fixed;top:0"], :root =
+div[class^=3D"AdhesionAd_"], :root div[class^=3D"BlockAdvert-"], :root div[=
+class^=3D"ResponsiveAd-"], :root div[class^=3D"ad_border_"], :root div[clas=
+s^=3D"ad_position_"], :root div[class^=3D"adbanner_"], :root div[class^=3D"=
+adpubs-"], :root div[class^=3D"awpcp-random-ads"], :root div[class^=3D"back=
+fill-taboola-home-slot-"], :root div[class^=3D"block-openx-"], :root div[cl=
+ass^=3D"index_adBeforeContent_"], :root div[class^=3D"index_displayAd_"], :=
+root div[class^=3D"local-feed-banner-ads"], :root div[class^=3D"pane-google=
+-admanager-"], :root div[class^=3D"proadszone-"], :root div[data-ad-underpl=
+ayer], :root div[data-flt-ve=3D"sponsored_search_ads"], :root div[data-nati=
+ve_ad], :root div[style^=3D"width: 100%;"][style$=3D"z-index: inherit;"] if=
+rame[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][w=
+idth][height][frameborder=3D"0"], :root div[data-spotim-slot], :root div[id=
+^=3D"YFBMSN"], :root div[id^=3D"ad-cid-"], :root div[id^=3D"proadszone-"], =
+:root div[id^=3D"ad_bigbox_"], :root div[id^=3D"adfox_"], :root div[id^=3D"=
+adrotate_widgets-"], :root div[id^=3D"ads120_600-widget"], :root div[id^=3D=
+"adspot-"], :root div[id^=3D"dfp-slot-"], :root div[id^=3D"div-ads-"], :roo=
+t div[id^=3D"dmRosAdWrapper"], :root topadblock, :root div[id^=3D"drudge-co=
+lumn-ads-"], :root div[id^=3D"google_dfp_"], :root div[id^=3D"q1-adset-"], =
+:root div[id^=3D"tms-ad-dfp-"], :root div[id^=3D"zergnet-widget"], :root di=
+v[role=3D"navigation"] + c-wiz > div > .kxhcC, :root div[role=3D"navigation=
+"] + c-wiz > script + div > .kxhcC, :root iframe[id^=3D"google_ads_iframe"]=
+, :root [style=3D"display:none"] + iframe[scrolling=3D"no"][src*=3D"//"][sr=
+c*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :roo=
+t iframe[src^=3D"http://cdn1.adexprt.com/"], :root iframe[src^=3D"http://st=
+atic.mozo.com.au/strips/"], :root img[alt^=3D"Fuckbook"], :root input[oncli=
+ck^=3D"window.open('http://www.friendlyduck.com/"], :root input[onclick^=3D=
+"window.open('http://www.FriendlyDuck.com/"], :root #left_float + #right_fl=
+oat, :root #piao_div_0[style*=3D"width:140px;"], :root #piao_div_2[style*=
+=3D"width:140px;"], :root #piao_div_3[style*=3D"width:140px;"], :root #piao=
+_div_5[style*=3D"width:140px;"], :root #results.content-main > .eLeft, :roo=
+t #table1[width=3D"794"][height=3D"60"], :root #table1[width=3D"812"][heigh=
+t=3D"60"], :root .ad[style=3D"margin-bottom: 10px; width: 100%;"], :root .a=
+d_top_close + .bd, :root .content > a > .topline, :root .error > #qqs, :roo=
+t a[href^=3D"/dasp.php?a=3D"], :root .his-sign-cont[data-dysign-adid], :roo=
+t .main[style=3D"border:#7D8C8E solid 1px;height: 23px;"], :root .mylist > =
+a[target=3D"_bank"] > img[src*=3D".alicdn.com/"], :root .subject_link[href$=
+=3D"/thread-index-fid-1-tid-12848.htm"], :root div:not([id]):not([class]):n=
+ot([style]) > div:not([id]):not([class]):not([style]) > iframe[scrolling=3D=
+"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][fra=
+meborder=3D"0"]:not([src^=3D"http://www.facebook.com/"]), :root .top_box > =
+#foot, :root a#wrapper_left_bg[target=3D"_blank"], :root a#wrapper_right_bg=
+[target=3D"_blank"], :root a[href*=3D".08an.com/"], :root a[href*=3D".222bz=
+.com/"], :root a[href*=3D".41gw.com/"], :root a[href*=3D".7wkw.com"], :root=
+ a[href*=3D".9xiazaiqi.com"], :root a[href=3D"https://7449k.com/"], :root a=
+[href*=3D".acuxrecv.cn"], :root a[href*=3D".biwbmsyt.cn"], :root a[href*=3D=
+".cangpie.com/"], :root a[href*=3D".com/Register/?a=3D"], :root a[href*=3D"=
+.dpcpfw.com/"], :root a[href*=3D".guzaosf.com/"], :root a[href*=3D".iziyo.c=
+om/"], :root a[href*=3D".qtj5.com/"], :root a[href*=3D".ttz5.cn"], :root a[=
+href*=3D".tudown.com/"], :root a[href*=3D"/?Intr=3D"], :root a[href*=3D"/?i=
+ntr=3D"], :root a[href=3D"http://t.cn/E2PgiG1"], :root a[href=3D"https://t.=
+cn/Rr4eSOx"], :root a[href^=3D"http://172.247.157.176/"], :root a[href^=3D"=
+http://ad.moemoe."], :root a[href^=3D"http://fa999.cn/"], :root a[href^=3D"=
+http://pic.gunqiu.com/"], :root a[href^=3D"http://www.upupoo.com"], :root d=
+iv[class^=3D"hongbao_hd_"], :root table[style=3D"border:#7D8C8E solid 1px;h=
+eight: 30px;text-align: center;"], :root table[style=3D"border:#e8e8e8 1px =
+solid;"] + div[style=3D"margin-top:5px"] > table[style=3D"width:100%;"][cel=
+lspacing=3D"0"][cellpadding=3D"1"][bordercolor=3D"#22222"][border=3D"1"], :=
+root div[style^=3D"width: 100%;"][style$=3D"display: block;"] iframe[scroll=
+ing=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][heigh=
+t][frameborder=3D"0"], :root div[style^=3D"width: 100%;"][style$=3D"margin:=
+ 0px;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src=
+*=3D"&"][width][height][frameborder=3D"0"], :root div[style^=3D"width: 100%=
+;"][style$=3D"opacity: 100;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=3D=
+"?"][src*=3D"=3D"][src*=3D"&"][width][height][frameborder=3D"0"], :root div=
+[style^=3D"width: 100%;"][style$=3D"overflow: hidden;"] iframe[scrolling=3D=
+"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][fra=
+meborder=3D"0"], :root div[style^=3D"width: 100%;"][style$=3D"visibility: v=
+isible;"] iframe[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][s=
+rc*=3D"&"][width][height][frameborder=3D"0"], :root #container > .item.titl=
+e_normal, :root .heg > .partner-list, :root #container > .item.title_top, :=
+root #container.container > a.item, :root #container > .wrapper > .fl, :roo=
+t #container > a.block, :root #wrapper > div[style=3D"padding:3px;"] > #pic=
+, :root div[id][style=3D"width: 100%;"] > div > iframe[scrolling=3D"no"][sr=
+c^=3D"http"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][width][height][framebord=
+er=3D"0"], :root div[style=3D"width: 100%;"]:not([id]):not([class]) > ifram=
+e[scrolling=3D"no"][src*=3D"//"][src*=3D"?"][src*=3D"=3D"][src*=3D"&"][widt=
+h][height][frameborder=3D"0"], :root a[href*=3D".gotourls.bid"], :root a[hr=
+ef^=3D"http://yunbofangbt."], :root a[href^=3D"https://uds24.com/"] { displ=
+ay: none !important; }</style></head>
+    <body>
+    <div id=3D"top">
+        <a href=3D"http://deerchao.net/">=CA=D7=D2=B3</a> | <a href=3D"http=
+://deerchao.net/tutorials/regex/common.htm">=B3=A3=D3=C3=D5=FD=D4=F2=B1=ED=
+=B4=EF=CA=BD</a> | <a href=3D"http://deerchao.net/tools/regester/index.htm"=
+>=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B2=E2=CA=D4=B9=A4=BE=DF</a>
+    </div>
+    <h1>
+        =D5=FD=D4=F2=B1=ED=B4=EF=CA=BD30=B7=D6=D6=D3=C8=EB=C3=C5=BD=CC=B3=
+=CC</h1>
+    <p style=3D"text-align:center">=D7=F7=D5=DF=A3=BA<a href=3D"http://deer=
+chao.net/">deerchao</a> =D7=AA=D4=D8=C7=EB=D7=A2=C3=F7<a href=3D"http://dee=
+rchao.net/tutorials/regex/regex-old.htm">=C0=B4=D4=B4</a></p>
+    <p style=3D"color:blue;">=B1=BE=CE=C4=D2=D1=B8=FC=D0=C2=A3=AC=CD=C6=BC=
+=F6=C4=FA=B2=E9=BF=B4<a href=3D"http://deerchao.net/tutorials/regex/regex.h=
+tm">=B5=DA=B6=FE=B0=E6</a>=A1=A3</p>
+    <h2>
+        =B1=BE=CE=C4=C4=BF=B1=EA</h2>
+    <p>
+        30=B7=D6=D6=D3=C4=DA=C8=C3=C4=E3=C3=F7=B0=D7=D5=FD=D4=F2=B1=ED=B4=
+=EF=CA=BD=CA=C7=CA=B2=C3=B4=A3=AC=B2=A2=B6=D4=CB=FC=D3=D0=D2=BB=D0=A9=BB=F9=
+=B1=BE=B5=C4=C1=CB=BD=E2=A3=AC=C8=C3=C4=E3=BF=C9=D2=D4=D4=DA=D7=D4=BC=BA=B5=
+=C4=B3=CC=D0=F2=BB=F2=CD=F8=D2=B3=C0=EF=CA=B9=D3=C3=CB=FC=A1=A3=D2=BB=B5=A9=
+=C8=EB=C3=C5=BA=F3=A3=AC=C4=E3=BF=C9=D2=D4=B4=D3=CD=F8=C9=CF=D5=D2=B5=BD=B8=
+=FC=B6=E0=B8=FC=CF=EA=CF=B8=B5=C4=D7=CA=C1=CF=C0=B4=BC=CC=D0=F8=D1=A7=CF=B0=
+=A1=A3</p>
+     <p>
+=B1=F0=B1=BB=CF=C2=C3=E6=C4=C7=D0=A9=B8=B4=D4=D3=B5=C4=B1=ED=B4=EF=CA=BD=CF=
+=C5=B5=B9=A3=AC=D6=BB=D2=AA=B8=FA=D7=C5=CE=D2=D2=BB=B2=BD=D2=BB=B2=BD=C0=B4=
+=A3=AC=C4=E3=BB=E1=B7=A2=CF=D6=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=C6=E4=CA=B5=B2=
+=A2=B2=BB=CF=F1=C4=E3=CF=EB=CF=F1=D6=D0=B5=C4=C4=C7=C3=B4=C0=A7=C4=D1=A1=A3=
+=B5=B1=C8=BB=A3=AC=C8=E7=B9=FB=C4=E3=BF=B4=CD=EA=C1=CB=D5=E2=C6=AA=BD=CC=B3=
+=CC=D6=AE=BA=F3=B7=A2=CF=D6=D7=D4=BC=BA=C3=F7=B0=D7=C1=CB
+=BA=DC=B6=E0=A3=AC=C8=B4=D3=D6=BC=B8=BA=F5=CA=B2=C3=B4=B6=BC=BC=C7=B2=BB=B5=
+=C3=A3=AC=C4=C7=D2=B2=CA=C7=BA=DC=D5=FD=B3=A3=B5=C4--=C6=E4=CA=B5=CE=D2=C8=
+=CF=CE=AA=C3=BB=BD=D3=B4=A5=B9=FD=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=C8=CB=
+=D4=DA=BF=B4=CD=EA=D5=E2=C6=AA=BD=CC=B3=CC=BA=F3=C4=DC=B0=D1=CC=E1=B5=BD=B9=
+=FD=B5=C4=D3=EF=B7=A8=BC=C7=D7=A180%=D2=D4=C9=CF=B5=C4=BF=C9=C4=DC=D0=D4=CE=
+=AA=C1=E3=A1=A3=D5=E2=C0=EF=D6=BB
+=CA=C7=C8=C3=C4=E3=C3=F7=B0=D7=BB=F9=B1=BE=B5=C0=C0=ED=A3=AC=D2=D4=BA=F3=C4=
+=E3=BB=B9=D0=E8=D2=AA=B6=E0=C1=B7=CF=B0=A3=AC=B6=E0=B2=E9=D7=CA=C1=CF=A3=AC=
+=B2=C5=C4=DC=CA=EC=C1=B7=D5=C6=CE=D5=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=A1=A3</p=
+>
+   <h2>
+        =CB=B5=C3=F7</h2>
+    <p>
+        =D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=CA=C7=D3=C3=D3=DA=BD=F8=D0=D0=CE=C4=
+=B1=BE=C6=A5=C5=E4=B5=C4=B9=A4=BE=DF=A3=AC=CB=F9=D2=D4=B1=BE=CE=C4=C0=EF=B6=
+=E0=B4=CE=CC=E1=B5=BD=C1=CB=D4=DA=D7=D6=B7=FB=B4=AE=C0=EF=CB=D1=CB=F7/=B2=
+=E9=D5=D2=A3=AC=D5=E2=D6=D6=CB=B5=B7=A8=B5=C4=D2=E2=CB=BC=CA=C7=D4=DA=B8=F8=
+=B6=A8=B5=C4=D7=D6=B7=FB=B4=AE=D6=D0=A3=AC=B2=E9=D5=D2=D3=EB=B8=F8=B6=A8=B5=
+=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=CF=E0=C6=A5=C5=E4=B5=C4=B2=BF=B7=D6=A1=A3=
+=D3=D0=BF=C9=C4=DC=D7=D6=B7=FB=B4=AE=C0=EF=D3=D0=B2=BB=D6=B9=D2=BB=B8=F6=B2=
+=BF=B7=D6=C2=FA=D7=E3=B8=F8=B6=A8=B5=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=A3=AC=
+=D5=E2=CA=B1=C3=BF=D2=BB=B8=F6=D5=E2=D1=F9=B5=C4=B2=BF=B7=D6=B1=BB=B3=C6=CE=
+=AA=D2=BB=B8=F6=C6=A5=C5=E4=A1=A3<span class=3D"name">=C6=A5=C5=E4</span>=
+=D4=DA=B1=BE=CE=C4=C0=EF=BF=C9=C4=DC=BB=E1=D3=D0=C8=FD=D6=D6=D2=E2=CB=BC=A3=
+=BA=D2=BB=D6=D6=CA=C7=D0=CE=C8=DD=B4=CA=D0=D4=B5=C4=A3=AC=B1=C8=C8=E7=CB=B5=
+=D2=BB=B8=F6=D7=D6=B7=FB=B4=AE=C6=A5=C5=E4=D2=BB=B8=F6=B1=ED=B4=EF=CA=BD=A3=
+=BB=D2=BB=D6=D6=CA=C7=B6=AF=B4=CA=D0=D4=B5=C4=A3=AC=B1=C8=C8=E7=CB=B5=D4=DA=
+=D7=D6=B7=FB=B4=AE=C0=EF=C6=A5=C5=E4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=A3=BB=BB=
+=B9=D3=D0=D2=BB=D6=D6=CA=C7=C3=FB=B4=CA=D0=D4=B5=C4=A3=AC=BE=CD=CA=C7=B8=D5=
+=B8=D5=CB=B5=B5=BD=B5=C4=A1=B0=D7=D6=B7=FB=B4=AE=D6=D0=C2=FA=D7=E3=B8=F8=B6=
+=A8=B5=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=D2=BB=B2=BF=B7=D6=A1=B1=A1=A3=
+</p>
+    <p>
+        =CE=C4=B1=BE=B8=F1=CA=BD=D4=BC=B6=A8=A3=BA<span class=3D"name">=D7=
+=A8=D2=B5=CA=F5=D3=EF</span>&nbsp;<span class=3D"code">=CC=D8=CA=E2=B4=FA=
+=C2=EB/=D3=EF=B7=A8=B8=F1=CA=BD</span>&nbsp;<span class=3D"regex">=D5=FD=D4=
+=F2=B1=ED=B4=EF=CA=BD</span>&nbsp;<span class=3D"part">=D5=FD=D4=F2=B1=ED=
+=B4=EF=CA=BD=D6=D0=B5=C4=D2=BB=B2=BF=B7=D6(=D3=C3=D3=DA=B7=D6=CE=F6)</span>=
+&nbsp;<span class=3D"string">=D3=C3=D3=DA=D4=DA=C6=E4=D6=D0=CB=D1=CB=F7=B5=
+=C4=D7=D6=B7=FB=B4=AE</span>&nbsp;<span class=3D"desc">=B6=D4=D5=FD=D4=F2=
+=B1=ED=B4=EF=CA=BD=BB=F2=C6=E4=D6=D0=D2=BB=B2=BF=B7=D6=B5=C4=CB=B5=C3=F7</s=
+pan><input id=3D"clearButton" accesskey=3D"c" value=3D"=C7=E5=B3=FD=B8=F1=
+=CA=BD(Alt+C)" type=3D"button"></p>
+    <h2>
+        =CA=B2=C3=B4=CA=C7=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=A3=BF</h2>
+    <p>
+        =BA=DC=BF=C9=C4=DC=C4=E3=CA=B9=D3=C3=B9=FDWindows/Dos=CF=C2=D3=C3=
+=D3=DA=CE=C4=BC=FE=B2=E9=D5=D2=B5=C4<span class=3D"name">=CD=A8=C5=E4=B7=FB=
+</span>=A3=AC=D2=B2=BE=CD=CA=C7<span class=3D"code">*</span>=BA=CD<span cla=
+ss=3D"code">?</span>=A1=A3=C8=E7=B9=FB=C4=E3=CF=EB=B2=E9=D5=D2=C4=B3=B8=F6=
+=C4=BF=C2=BC=CF=C2=B5=C4=CB=F9=D3=D0=B5=C4Word=CE=C4=B5=B5=B5=C4=BB=B0=A3=
+=AC=C4=E3=BB=E1=CB=D1=CB=F7<span style=3D"color: red;">*.doc</span>=A1=A3=
+=D4=DA=D5=E2=C0=EF=A3=AC<span class=3D"code">*</span>=BB=E1=B1=BB=BD=E2=CA=
+=CD=B3=C9=C8=CE=D2=E2=B5=C4<a href=3D"http://deerchao.net/tutorials/regex/r=
+egex-1.htm#reference" title=3D"=B2=CE=BF=BC">=D7=D6=B7=FB=B4=AE</a>=A1=A3=
+=BA=CD=CD=A8=C5=E4=B7=FB=C0=E0=CB=C6=A3=AC<span class=3D"name">=D5=FD=D4=F2=
+=B1=ED=B4=EF=CA=BD</span>=D2=B2=CA=C7=D3=C3=C0=B4=BD=F8=D0=D0<a href=3D"htt=
+p://deerchao.net/tutorials/regex/regex-1.htm#reference" title=3D"=B2=CE=BF=
+=BC">=CE=C4=B1=BE</a><a href=3D"http://deerchao.net/tutorials/regex/regex-1=
+.htm#reference" title=3D"=B2=CE=BF=BC">=C6=A5=C5=E4</a>=B5=C4=B9=A4=BE=DF=
+=A3=AC=D6=BB=B2=BB=B9=FD=B1=C8=CD=A8=C5=E4=B7=FB=B8=FC=C4=DC=BE=AB=C8=B7=B5=
+=D8=C3=E8=CA=F6=C4=E3=B5=C4=D0=E8=C7=F3--=B5=B1=C8=BB=A3=AC=B4=FA=BC=DB=BE=
+=CD=CA=C7=B8=FC=B8=B4=D4=D3=A1=A3=B1=C8=C8=E7=C4=E3=BF=C9=D2=D4=B1=E0=D0=B4=
+=D2=BB=B8=F6=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=C0=B4=B2=E9=D5=D2<span class=3D"=
+desc">=CB=F9=D3=D0=D2=D40=BF=AA=CD=B7=A3=AC=BA=F3=C3=E6=B8=FA=D7=C52-3=B8=
+=F6=CA=FD=D7=D6=A3=AC=C8=BB=BA=F3=CA=C7=D2=BB=B8=F6=C1=AC=D7=D6=BA=C5=A1=B0=
+-=A1=B1=A3=AC=D7=EE=BA=F3=CA=C77=BB=F28=CE=BB=CA=FD=D7=D6=B5=C4=D7=D6=B7=FB=
+=B4=AE</span>(=CF=F1<span class=3D"string">010-12345678</span>=BB=F2<span c=
+lass=3D"string">0376-7654321</span>)=A1=A3</p>
+    <h2>
+        =C8=EB=C3=C5</h2>
+    <p>
+        =D4=DA=B1=E0=D0=B4=B4=A6=C0=ED=D7=D6=B7=FB=B4=AE=B5=C4=B3=CC=D0=F2=
+=BB=F2=CD=F8=D2=B3=CA=B1=A3=AC=BE=AD=B3=A3=BB=E1=D3=D0=B2=E9=D5=D2=B7=FB=BA=
+=CF=C4=B3=D0=A9=B8=B4=D4=D3=B9=E6=D4=F2=B5=C4=D7=D6=B7=FB=B4=AE=B5=C4=D0=E8=
+=D2=AA=A1=A3=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=BE=CD=CA=C7=D3=C3=D3=DA=C3=E8=CA=
+=F6=D5=E2=D0=A9=B9=E6=D4=F2=B5=C4=B9=A4=BE=DF=A1=A3=BB=BB=BE=E4=BB=B0=CB=B5=
+=A3=AC=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=BE=CD=CA=C7=BC=C7=C2=BC=CE=C4=B1=BE=B9=
+=E6=D4=F2=B5=C4=B4=FA=C2=EB=A1=A3=C0=FD=C8=E7=A3=AC<span class=3D"regex">\d=
++</span>=BE=CD=CA=C7=D2=BB=B8=F6=BC=F2=BD=E0=B5=C4=B4=FA=C2=EB=A3=AC=B4=FA=
+=B1=ED=D7=C5=B9=E6=D4=F2<span class=3D"desc">1=CE=BB=BB=F2=B8=FC=B6=E0=CE=
+=BB=CA=FD=D7=D6</span>=A3=AC<span class=3D"string">2008</span>=BE=CD=B7=FB=
+=BA=CF=D5=E2=B8=F6=B9=E6=D4=F2=A3=AC=B6=F8<span class=3D"string">A3</span>=
+=D4=F2=B2=BB=B7=FB=BA=CF(=CB=FC=B0=FC=BA=AC=C1=CB=B2=BB=CA=C7=CA=FD=D7=D6=
+=B5=C4=D7=D6=B7=FB)=A1=A3</p>
+    <p>
+        =D1=A7=CF=B0=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=D7=EE=BA=C3=B7=BD=
+=B7=A8=CA=C7=B4=D3=C0=FD=D7=D3=BF=AA=CA=BC=A3=AC=C0=ED=BD=E2=C0=FD=D7=D3=D6=
+=AE=BA=F3=D4=D9=D7=D4=BC=BA=B6=D4=C0=FD=D7=D3=BD=F8=D0=D0=D0=DE=B8=C4=A3=AC=
+=CA=B5=D1=E9=A1=A3=CF=C2=C3=E6=B8=F8=B3=F6=C1=CB=B2=BB=C9=D9=BC=F2=B5=A5=B5=
+=C4=C0=FD=D7=D3=A3=AC=B2=A2=B6=D4=CB=FC=C3=C7=D7=F7=C1=CB=CF=EA=CF=B8=B5=C4=
+=CB=B5=C3=F7=A1=A3</p>
+    <p>
+        =BC=D9=C9=E8=C4=E3=D4=DA=D2=BB=C6=AA=D3=A2=CE=C4=D0=A1=CB=B5=C0=EF=
+=B2=E9=D5=D2<span class=3D"desc">hi</span>=A3=AC=C4=E3=BF=C9=D2=D4=CA=B9=D3=
+=C3=D5=FD=D4=F2=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD<span class=3D"regex">hi</span=
+>=A1=A3</p>
+    <p>
+        =D5=E2=CA=C7=D7=EE=BC=F2=B5=A5=B5=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=
+=C1=CB=A3=AC=CB=FC=BF=C9=D2=D4=BE=AB=C8=B7=C6=A5=C5=E4=D5=E2=D1=F9=B5=C4=D7=
+=D6=B7=FB=B4=AE=A3=BA<span class=3D"desc">=D3=C9=C1=BD=B8=F6=D7=D6=B7=FB=D7=
+=E9=B3=C9=A3=AC=C7=B0=D2=BB=B8=F6=D7=D6=B7=FB=CA=C7h,=BA=F3=D2=BB=B8=F6=CA=
+=C7i</span>=A1=A3=CD=A8=B3=A3=A3=AC=B4=A6=C0=ED=D5=FD=D4=F2=B1=ED=B4=EF=CA=
+=BD=B5=C4=B9=A4=BE=DF=BB=E1=CC=E1=B9=A9=D2=BB=B8=F6=BA=F6=C2=D4=B4=F3=D0=A1=
+=D0=B4=B5=C4=D1=A1=CF=EE=A3=AC=C8=E7=B9=FB=D1=A1=D6=D0=C1=CB=D5=E2=B8=F6=D1=
+=A1=CF=EE=A3=AC=CB=FC=BF=C9=D2=D4=C6=A5=C5=E4<span class=3D"string">hi</spa=
+n>,<span class=3D"string">HI</span>,<span class=3D"string">Hi</span>,<span =
+class=3D"string">hI</span>=A1=A3</p>
+    <p>
+        =B2=BB=D0=D2=B5=C4=CA=C7=A3=AC=BA=DC=B6=E0=B5=A5=B4=CA=C0=EF=B0=FC=
+=BA=AC<span class=3D"string">hi</span>=D5=E2=C1=BD=B8=F6=C1=AC=D0=F8=B5=C4=
+=D7=D6=B7=FB=A3=AC=B1=C8=C8=E7<span class=3D"string">him</span>,<span class=
+=3D"string">history</span>,<span class=3D"string">high</span>=B5=C8=B5=C8=
+=A1=A3=D3=C3<span class=3D"regex">hi</span>=C0=B4=B2=E9=D5=D2=B5=C4=BB=B0=
+=A3=AC=D5=E2=C0=EF=B1=DF=B5=C4<span class=3D"string">hi</span>=D2=B2=BB=E1=
+=B1=BB=D5=D2=B3=F6=C0=B4=A1=A3=C8=E7=B9=FB=D2=AA<span class=3D"desc">=BE=AB=
+=C8=B7=B5=D8=B2=E9=D5=D2hi=D5=E2=B8=F6=B5=A5=B4=CA</span>=B5=C4=BB=B0=A3=AC=
+=CE=D2=C3=C7=D3=A6=B8=C3=CA=B9=D3=C3<span class=3D"regex">\bhi\b</span>=A1=
+=A3</p>
+    <p>
+        <span class=3D"part">\b</span>=CA=C7=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=
+=B9=E6=B6=A8=B5=C4=D2=BB=B8=F6=CC=D8=CA=E2=B4=FA=C2=EB=A3=AC=B4=FA=B1=ED=D7=
+=C5<span class=3D"desc">=B5=A5=B4=CA=B5=C4=BF=AA=CD=B7=BB=F2=BD=E1=CE=B2</s=
+pan>=A1=A3=CB=E4=C8=BB=CD=A8=B3=A3=D3=A2=CE=C4=B5=C4=B5=A5=B4=CA=CA=C7=D3=
+=C9=BF=D5=B8=F1=BB=F2=B1=EA=B5=E3=B7=FB=BA=C5=BB=F2=BB=BB=D0=D0=CE=AA=B7=D6=
+=B8=F4=B5=C4=A3=AC=B5=AB=CA=C7<span class=3D"code">\b</span>=B2=A2=B2=BB=B4=
+=FA=B1=ED=D5=E2=D0=A9=B5=A5=B4=CA=B7=D6=B8=F4=B7=FB=D6=D0=B5=C4=C8=CE=BA=CE=
+=D2=BB=B8=F6=A3=AC<strong>=D6=BB=B4=FA=B1=ED=D2=BB=B8=F6=CE=BB=D6=C3</stron=
+g>=A1=A3</p>
+    <p>
+        =BC=D9=C8=E7=C4=E3=D2=AA=D5=D2=B5=C4=CA=C7<span class=3D"desc">hi=
+=BA=F3=C3=E6=B2=BB=D4=B6=B4=A6=B8=FA=D7=C5=D2=BB=B8=F6Lucy</span>=A3=AC=C4=
+=E3=D3=A6=B8=C3=D3=C3<span class=3D"regex">\bhi\b.*\bLucy\b</span>=A1=A3</p=
+>
+    <p>
+        =D5=E2=C0=EF=A3=AC<span class=3D"part">.</span>=CA=C7=C1=ED=D2=BB=
+=B8=F6=CC=D8=CA=E2=B4=FA=C2=EB=A3=AC=B4=FA=B1=ED<span class=3D"desc">=B3=FD=
+=C1=CB=BB=BB=D0=D0=B7=FB=D2=D4=CD=E2=B5=C4=C8=CE=D2=E2=D7=D6=B7=FB</span>=
+=A1=A3<span class=3D"part">*</span>=CD=AC=D1=F9=CA=C7=CC=D8=CA=E2=B5=C4=B4=
+=FA=C2=EB=A3=AC=B2=BB=B9=FD=CB=FC=B4=FA=B1=ED=B5=C4=B2=BB=CA=C7=D7=D6=B7=FB=
+=A3=AC=D2=B2=B2=BB=CA=C7=CE=BB=D6=C3=A3=AC=B6=F8=CA=C7=CA=FD=C1=BF--=CB=FC=
+=D6=B8=B6=A8*<span class=3D"desc">=C7=B0=B1=DF=B5=C4=C4=DA=C8=DD=BF=C9=D2=
+=D4=D6=D8=B8=B4=C8=CE=D2=E2=B4=CE=D2=D4=CA=B9=D5=FB=B8=F6=B1=ED=B4=EF=CA=BD=
+=B5=C3=B5=BD=C6=A5=C5=E4</span>=A1=A3=D2=F2=B4=CB=A3=AC<span class=3D"part"=
+>.*</span>=C1=AC=D4=DA=D2=BB=C6=F0=BE=CD=D2=E2=CE=B6=D7=C5<span class=3D"de=
+sc">=C8=CE=D2=E2=CA=FD=C1=BF=B5=C4=B2=BB=B0=FC=BA=AC=BB=BB=D0=D0=B5=C4=D7=
+=D6=B7=FB</span>=A1=A3=CF=D6=D4=DA<span class=3D"regex">\bhi\b.*\bLucy\b</s=
+pan>=B5=C4=D2=E2=CB=BC=BE=CD=BA=DC=C3=F7=CF=D4=C1=CB=A3=BA<span class=3D"de=
+sc">=CF=C8=CA=C7=D2=BB=B8=F6=B5=A5=B4=CAhi,=C8=BB=BA=F3=CA=C7=C8=CE=D2=E2=
+=B8=F6=C8=CE=D2=E2=D7=D6=B7=FB(=B5=AB=B2=BB=C4=DC=CA=C7=BB=BB=D0=D0)=A3=AC=
+=D7=EE=BA=F3=CA=C7Lucy=D5=E2=B8=F6=B5=A5=B4=CA</span>=A1=A3</p>
+    <p>
+        =C8=E7=B9=FB=CD=AC=CA=B1=CA=B9=D3=C3=C6=E4=CB=FC=B5=C4=D2=BB=D0=A9=
+=CC=D8=CA=E2=B4=FA=C2=EB=A3=AC=CE=D2=C3=C7=BE=CD=C4=DC=B9=B9=D4=EC=B3=F6=B9=
+=A6=C4=DC=B8=FC=C7=BF=B4=F3=B5=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=A1=A3=B1=C8=
+=C8=E7=CF=C2=C3=E6=D5=E2=B8=F6=C0=FD=D7=D3=A3=BA</p>
+    <p>
+        <span class=3D"regex">0\d\d-\d\d\d\d\d\d\d\d</span>=B4=FA=B1=ED=D7=
+=C5=D5=E2=D1=F9=B5=C4=D7=D6=B7=FB=B4=AE=A3=BA<span class=3D"desc">=D2=D40=
+=BF=AA=CD=B7=A3=AC=C8=BB=BA=F3=CA=C7=C1=BD=B8=F6=CA=FD=D7=D6=A3=AC=C8=BB=BA=
+=F3=CA=C7=D2=BB=B8=F6=C1=AC=D7=D6=BA=C5=A1=B0-=A1=B1=A3=AC=D7=EE=BA=F3=CA=
+=C78=B8=F6=CA=FD=D7=D6</span>(=D2=B2=BE=CD=CA=C7=D6=D0=B9=FA=B5=C4=B5=E7=BB=
+=B0=BA=C5=C2=EB=A3=AC=B5=B1=C8=BB=A3=AC=D5=E2=B8=F6=C0=FD=D7=D3=D6=BB=C4=DC=
+=C6=A5=C5=E4=C7=F8=BA=C5=CE=AA3=CE=BB=B5=C4=C7=E9=D0=CE=A3=AC=CF=EB=CD=AC=
+=CA=B1=C6=A5=C5=E4=C7=F8=BA=C5=CE=AA4=CE=BB=B5=C4=BB=B0=A3=AC=C7=EB=D4=DA=
+=BD=CC=B3=CC=B5=C4=CF=C2=C3=E6=D1=B0=D5=D2=B4=F0=B0=B8)=A1=A3</p>
+    <p>
+        =D5=E2=C0=EF=B5=C4<span class=3D"part">\d</span>=CA=C7=D2=BB=B8=F6=
+=D0=C2=B5=C4=CC=D8=CA=E2=B4=FA=C2=EB=A3=AC=B4=FA=B1=ED<span class=3D"desc">=
+=C8=CE=D2=E2=B5=C4=CA=FD=D7=D6(0=A3=AC=BB=F21=A3=AC=BB=F22=A3=AC=BB=F2=A1=
+=A3=A1=A3=A1=A3)</span>=A1=A3<span class=3D"part">-</span>=B2=BB=CA=C7=CC=
+=D8=CA=E2=B4=FA=C2=EB=A3=AC=D6=BB=B4=FA=B1=ED=CB=FC=B1=BE=C9=ED--=C1=AC=D7=
+=D6=BA=C5=A1=A3</p>
+    <p>
+        =CE=AA=C1=CB=B1=DC=C3=E2=C4=C7=C3=B4=B6=E0=B7=B3=C8=CB=B5=C4=D6=D8=
+=B8=B4=A3=AC=CE=D2=C3=C7=D2=B2=BF=C9=D2=D4=D5=E2=D1=F9=D0=B4=D5=E2=B8=F6=B1=
+=ED=B4=EF=CA=BD=A3=BA<span class=3D"regex">0\d{2}-\d{8}</span></p>
+    <p>
+        =D5=E2=C0=EF<span class=3D"part">\d</span>=BA=F3=C3=E6=B5=C4<span c=
+lass=3D"part">{2}</span>(<span class=3D"part">{8}</span>)=D6=B8=B6=A8=B5=C4=
+=CA=C7=C7=B0=C3=E6<span class=3D"part">\d</span><span class=3D"desc">=B1=D8=
+=D0=EB=C1=AC=D0=F8=D6=D8=B8=B4=B3=F6=CF=D62=B4=CE(8=B4=CE)</span>=A1=A3</p>
+    <h2>
+        =B2=E2=CA=D4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD</h2>
+    <p>
+        =C8=E7=B9=FB=C4=E3=B2=BB=BE=F5=B5=C3=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=
+=BA=DC=C4=D1=B6=C1=D0=B4=B5=C4=BB=B0=A3=AC=D2=AA=C3=B4=C4=E3=CA=C7=D2=BB=B8=
+=F6=CC=EC=B2=C5=A3=AC=D2=AA=C3=B4=A3=AC=C4=E3=B2=BB=CA=C7=B5=D8=C7=F2=C8=CB=
+=A1=A3=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=D3=EF=B7=A8=BA=DC=C1=EE=C8=CB=CD=
+=B7=CC=DB=A3=AC=BC=B4=CA=B9=B6=D4=BE=AD=B3=A3=CA=B9=D3=C3=CB=FC=B5=C4=C8=CB=
+=C0=B4=CB=B5=D2=B2=CA=C7=C8=E7=B4=CB=A1=A3=D3=C9=D3=DA=C4=D1=D3=DA=B6=C1=D0=
+=B4=A3=AC=C8=DD=D2=D7=B3=F6=B4=ED=A3=AC=CB=F9=D2=D4=BA=DC=D3=D0=B1=D8=D2=AA=
+=B4=B4=BD=A8=D2=BB=D6=D6=B9=A4=BE=DF=C0=B4=B2=E2=CA=D4=D5=FD=D4=F2=B1=ED=B4=
+=EF=CA=BD=A1=A3</p>
+    <p>
+        =D3=C9=D3=DA=D4=DA=B2=BB=CD=AC=B5=C4=BB=B7=BE=B3=CF=C2=D5=FD=D4=F2=
+=B1=ED=B4=EF=CA=BD=B5=C4=D2=BB=D0=A9=CF=B8=BD=DA=CA=C7=B2=BB=CF=E0=CD=AC=B5=
+=C4=A3=AC=B1=BE=BD=CC=B3=CC=BD=E9=C9=DC=B5=C4=CA=C7Microsoft .net=CF=C2=D5=
+=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=D0=D0=CE=AA=A3=AC=CB=F9=D2=D4=A3=AC=CE=D2=
+=CF=F2=C4=E3=BD=E9=C9=DC=D2=BB=B8=F6.net=CF=C2=B5=C4=B9=A4=BE=DFThe Regulat=
+or=A1=A3=CA=D7=CF=C8=C4=E3=C8=B7=B1=A3=D2=D1=BE=AD=B0=B2=D7=B0=C1=CB<a href=
+=3D"http://www.microsoft.com/downloads/details.aspx?FamilyID=3D262D25E3-F58=
+9-4842-8157-034D1E7CF3A3&amp;displaylang=3Dzh-cn" title=3D"=D7=AA=B5=BD=CF=
+=C2=D4=D8.net Framework 1.1=B5=C4=D2=B3=C3=E6">.net Framework1.1</a>=A3=AC=
+=C8=BB=BA=F3<a href=3D"http://deerchao.net/tutorials/regex/downloads/Regula=
+tor203.dotnet.1.1.zip" title=3D"=B1=BE=B5=D8=CF=C2=D4=D8The Regulator=B0=B2=
+=D7=B0=B0=FC,3196KB">=CF=C2=D4=D8The Regulator</a>=A3=AC=CF=C2=D4=D8=CD=EA=
+=BA=F3=B4=F2=BF=AA=D1=B9=CB=F5=B0=FC=A3=AC=D4=CB=D0=D0setup.exe=B0=B2=D7=B0=
+=A1=A3</p>
+    <p>
+        =CF=C2=C3=E6=CA=C7the Regulator=D4=CB=D0=D0=CA=B1=B5=C4=BD=D8=CD=BC=
+=A3=BA</p>
+    <p>
+          <img src=3D"http://deerchao.net/tutorials/regex/images/TheRegulat=
+or.jpg" alt=3D"the Regulator=D4=CB=D0=D0=CA=B1=B5=C4=BD=D8=CD=BC"></p>
+    <h2>
+        =CC=D8=CA=E2=B4=FA=C2=EB</h2>
+    <p>
+        =CF=D6=D4=DA=C4=E3=D2=D1=BE=AD=D6=AA=B5=C0=BC=B8=B8=F6=BE=DF=D3=D0=
+=CC=D8=CA=E2=D2=E2=D2=E5=B5=C4=B4=FA=C2=EB=C1=CB=A3=AC=C8=E7<span class=3D"=
+code">\b</span>,<span class=3D"code">.</span>,<span class=3D"code">*</span>=
+=A3=AC=BB=B9=D3=D0<span class=3D"code">\d</span>.=CA=C2=CA=B5=C9=CF=BB=B9=
+=D3=D0=B8=FC=B6=E0=B5=C4=CC=D8=CA=E2=B4=FA=C2=EB=A3=AC=B1=C8=C8=E7<span cla=
+ss=3D"code">\s</span>=B4=FA=B1=ED<span class=3D"desc">=C8=CE=D2=E2=B5=C4=BF=
+=D5=B0=D7=B7=FB=A3=AC=B0=FC=C0=A8=BF=D5=B8=F1=A3=AC=D6=C6=B1=ED=B7=FB(Tab),=
+=BB=BB=D0=D0=B7=FB</span>=A1=A3<span class=3D"code">\w</span>=B4=FA=B1=ED=
+=D7=C5<span class=3D"desc">=D7=D6=C4=B8=BB=F2=CA=FD=D7=D6</span>=A1=A3</p>
+    <p>
+        =CF=C2=C3=E6=C0=B4=CA=D4=CA=D4=B8=FC=B6=E0=B5=C4=C0=FD=D7=D3=A3=BA<=
+/p>
+    <p>
+        <span class=3D"regex">\ba\w*\b</span>=C6=A5=C5=E4<span class=3D"des=
+c">=D2=D4=D7=D6=C4=B8<span class=3D"part">a</span>=BF=AA=CD=B7=B5=C4=B5=A5=
+=B4=CA-=CF=C8=CA=C7=C4=B3=B8=F6=B5=A5=B4=CA=BF=AA=CA=BC=B4=A6(<span class=
+=3D"part">\b</span>)=A3=AC=C8=BB=BA=F3=CA=C7=D7=D6=C4=B8<span class=3D"part=
+">a</span>,=C8=BB=BA=F3=CA=C7=C8=CE=D2=E2=CA=FD=C1=BF=B5=C4=D7=D6=C4=B8=BB=
+=F2=CA=FD=D7=D6(<span class=3D"part">\w*</span>)=A3=AC=D7=EE=BA=F3=CA=C7=B5=
+=A5=B4=CA=BD=E1=CA=F8=B4=A6(<span class=3D"part">\b</span>)</span>=A1=A3</p=
+>
+    <p>
+        <span class=3D"regex">\d+</span>=C6=A5=C5=E4<span class=3D"desc">1=
+=B8=F6=BB=F2=B8=FC=B6=E0=C1=AC=D0=F8=B5=C4=CA=FD=D7=D6</span>=A1=A3=D5=E2=
+=C0=EF=B5=C4<span class=3D"part">+</span>=CA=C7=BA=CD<span class=3D"code">*=
+</span>=C0=E0=CB=C6=B5=C4=CC=D8=CA=E2=B4=FA=C2=EB=A3=AC=B2=BB=CD=AC=B5=C4=
+=CA=C7<span class=3D"code">*</span>=B4=FA=B1=ED<span class=3D"desc">=D6=D8=
+=B8=B4=C8=CE=D2=E2=B4=CE(=BF=C9=C4=DC=CA=C70=B4=CE)</span>=A3=AC=B6=F8<span=
+ class=3D"code">+</span>=D4=F2=B4=FA=B1=ED<span class=3D"desc">=D6=D8=B8=B4=
+1=B4=CE=BB=F2=B8=FC=B6=E0=B4=CE</span>=A1=A3</p>
+    <p>
+        <span class=3D"regex">\b\w{6}\b</span> =C6=A5=C5=E4<span class=3D"d=
+esc">=B8=D5=BA=C36=B8=F6=D7=D6=C4=B8/=CA=FD=D7=D6=B5=C4=B5=A5=B4=CA</span>=
+=A1=A3</p>
+    <table cellspacing=3D"0">
+        <caption>
+            =B1=ED1.=B3=A3=D3=C3=B5=C4=CC=D8=CA=E2=B4=FA=C2=EB</caption>
+        <tbody><tr>
+            <th>
+                =B4=FA=C2=EB/=D3=EF=B7=A8</th>
+            <th>
+                =CB=B5=C3=F7</th>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">.</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=B3=FD=BB=BB=D0=D0=B7=FB=
+=D2=D4=CD=E2=B5=C4=C8=CE=D2=E2=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\w</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=D7=D6=C4=B8=BB=F2=CA=FD=
+=D7=D6</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\s</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=C8=CE=D2=E2=B5=C4=BF=D5=
+=B0=D7=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\d</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=CA=FD=D7=D6</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\b</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=B5=A5=B4=CA=B5=C4=BF=AA=
+=CA=BC=BB=F2=BD=E1=CA=F8</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">^</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=D7=D6=B7=FB=B4=AE=B5=C4=
+=BF=AA=CA=BC</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">$</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=D7=D6=B7=FB=B4=AE=B5=C4=
+=BD=E1=CA=F8</span></td>
+        </tr>
+    </tbody></table>
+    <p>
+        =CC=D8=CA=E2=B4=FA=C2=EB<span class=3D"code">^</span>=D2=D4=BC=B0<s=
+pan class=3D"code">$</span>=BA=CD<span class=3D"code">\b</span>=D3=D0=B5=E3=
+=C0=E0=CB=C6=A3=AC=B6=BC=C6=A5=C5=E4=D2=BB=B8=F6=CE=BB=D6=C3=A1=A3<span cla=
+ss=3D"code">^</span>=C6=A5=C5=E4=C4=E3=D2=AA=D3=C3=C0=B4=B2=E9=D5=D2=B5=C4=
+=D7=D6=B7=FB=B4=AE=B5=C4=BF=AA=CD=B7=A3=AC<span class=3D"code">$</span>=C6=
+=A5=C5=E4=BD=E1=CE=B2=A1=A3=D5=E2=C1=BD=B8=F6=B4=FA=C2=EB=D4=DA=D1=E9=D6=A4=
+=CA=E4=C8=EB=B5=C4=C4=DA=C8=DD=CA=B1=B7=C7=B3=A3=D3=D0=D3=C3=A3=AC=B1=C8=C8=
+=E7=D2=BB=B8=F6=CD=F8=D5=BE=C8=E7=B9=FB=D2=AA=C7=F3=C4=E3=CC=EE=D0=B4=B5=C4=
+QQ=BA=C5=B1=D8=D0=EB=CE=AA5=CE=BB=B5=BD12=CE=BB=CA=FD=D7=D6=CA=B1=A3=AC=BF=
+=C9=D2=D4=CA=B9=D3=C3=A3=BA<span class=3D"regex">^\d{5,12}$</span>=A1=A3</p=
+>
+    <p>
+        =D5=E2=C0=EF=B5=C4<span class=3D"part">{5,12}</span>=BA=CD=C7=B0=C3=
+=E6=BD=E9=C9=DC=B9=FD=B5=C4<span class=3D"part">{2}</span>=CA=C7=C0=E0=CB=
+=C6=B5=C4=A3=AC=D6=BB=B2=BB=B9=FD<span class=3D"part">{2}</span>=B4=FA=B1=
+=ED<span class=3D"desc">=D6=BB=C4=DC=B2=BB=B6=E0=B2=BB=C9=D9=D6=D8=B8=B42=
+=B4=CE</span>=A3=AC<span class=3D"part">{5,12}</span>=D4=F2=CA=C7<span clas=
+s=3D"desc">=B1=D8=D0=EB=D6=D8=B8=B4=D7=EE=C9=D95=B4=CE=A3=AC=D7=EE=B6=E012=
+=B4=CE</span>=A3=AC=B7=F1=D4=F2=B6=BC=B2=BB=C6=A5=C5=E4=A1=A3</p>
+    <p>
+        =D2=F2=CE=AA=CA=B9=D3=C3=C1=CB<span class=3D"part">^</span>=BA=CD<s=
+pan class=3D"part">$</span>=A3=AC=CB=F9=D2=D4=CA=E4=C8=EB=B5=C4=D5=FB=B8=F6=
+=D7=D6=B7=FB=B4=AE=B6=BC=D2=AA=D3=C3=C0=B4=BA=CD<span class=3D"part">\d{5,1=
+2}</span>=C0=B4=C6=A5=C5=E4=A3=AC=D2=B2=BE=CD=CA=C7=CB=B5=D5=FB=B8=F6=CA=E4=
+=C8=EB<span class=3D"desc">=B1=D8=D0=EB=CA=C75=B5=BD12=B8=F6=CA=FD=D7=D6</s=
+pan>=A3=AC=D2=F2=B4=CB=C8=E7=B9=FB=CA=E4=C8=EB=B5=C4QQ=BA=C5=C4=DC=C6=A5=C5=
+=E4=D5=E2=B8=F6=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=BB=B0=A3=AC=C4=C7=BE=CD=
+=B7=FB=BA=CF=D2=AA=C7=F3=C1=CB=A1=A3</p>
+    <p>
+        =BA=CD=BA=F6=C2=D4=B4=F3=D0=A1=D0=B4=B5=C4=D1=A1=CF=EE=C0=E0=CB=C6=
+=A3=AC=D3=D0=D0=A9=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B4=A6=C0=ED=B9=A4=BE=DF=BB=
+=B9=D3=D0=D2=BB=B8=F6=B4=A6=C0=ED=B6=E0=D0=D0=B5=C4=D1=A1=CF=EE=A1=A3=C8=E7=
+=B9=FB=D1=A1=D6=D0=C1=CB=D5=E2=B8=F6=D1=A1=CF=EE=A3=AC<span class=3D"code">=
+^</span>=BA=CD<span class=3D"code">$</span>=B5=C4=D2=E2=D2=E5=BE=CD=B1=E4=
+=B3=C9=C1=CB<span class=3D"desc">=C6=A5=C5=E4=D0=D0=B5=C4=BF=AA=CA=BC=B4=A6=
+=BA=CD=BD=E1=CA=F8=B4=A6</span>=A1=A3</p>
+    <h2>
+        =D7=D6=B7=FB=D7=AA=D2=E5</h2>
+    <p>
+        =C8=E7=B9=FB=C4=E3=CF=EB=B2=E9=D5=D2=CC=D8=CA=E2=B4=FA=C2=EB=B1=BE=
+=C9=ED=B5=C4=BB=B0=A3=AC=B1=C8=C8=E7=C4=E3=B2=E9=D5=D2<span class=3D"desc">=
+.</span>,=BB=F2=D5=DF<span class=3D"desc">*</span>,=BE=CD=B3=F6=CF=D6=C1=CB=
+=CE=CA=CC=E2=A3=BA=C4=E3=C3=BB=B7=A8=D6=B8=B6=A8=CB=FC=C3=C7=A3=AC=D2=F2=CE=
+=AA=CB=FC=C3=C7=BB=E1=B1=BB=BD=E2=CA=CD=B3=C9=C6=E4=CB=FC=B5=C4=D2=E2=CB=BC=
+=A1=A3=D5=E2=CA=B1=C4=E3=BE=CD=B1=D8=D0=EB=CA=B9=D3=C3<span class=3D"code">=
+\</span>=C0=B4=C8=A1=CF=FB=D5=E2=D0=A9=D7=D6=B7=FB=B5=C4=CC=D8=CA=E2=D2=E2=
+=D2=E5=A1=A3=D2=F2=B4=CB=A3=AC=C4=E3=D3=A6=B8=C3=CA=B9=D3=C3<span class=3D"=
+regex">\.</span>=BA=CD<span class=3D"regex">\*</span>=A1=A3=B5=B1=C8=BB=A3=
+=AC=D2=AA=B2=E9=D5=D2<span class=3D"desc">\</span>=B1=BE=C9=ED=A3=AC=C4=E3=
+=D2=B2=B5=C3=D3=C3<span class=3D"regex">\\</span>.</p>
+    <p>
+        =C0=FD=C8=E7=A3=BA<span class=3D"regex">deerchao\.net</span>=C6=A5=
+=C5=E4<span class=3D"desc"><span class=3D"textlinkplus"><a class=3D"textlin=
+kplus" href=3D"http://deerchao.net/">deerchao.net</a></span></span>=A3=AC<s=
+pan class=3D"regex">c:\\windows</span>=C6=A5=C5=E4<span class=3D"desc">c:\w=
+indows</span>,<span class=3D"regex">2\^8</span>=C6=A5=C5=E4<span class=3D"d=
+esc">2^8</span>(=CD=A8=B3=A3=D5=E2=CA=C72=B5=C48=B4=CE=B7=BD=B5=C4=CA=E9=D0=
+=B4=B7=BD=CA=BD)=A1=A3</p>
+    <h2>
+        =D6=D8=B8=B4</h2>
+    <p>
+        =C4=E3=D2=D1=BE=AD=BF=B4=B9=FD=C1=CB=C7=B0=C3=E6=B5=C4<span class=
+=3D"code">*</span>,<span class=3D"code">+</span>,<span class=3D"code">{2}</=
+span>,<span class=3D"code">{5,12}</span>=D5=E2=BC=B8=B8=F6=B4=FA=B1=ED=D6=
+=D8=B8=B4=B5=C4=B7=BD=CA=BD=C1=CB=A1=A3=CF=C2=C3=E6=CA=C7=D5=FD=D4=F2=B1=ED=
+=B4=EF=CA=BD=D6=D0=CB=F9=D3=D0=D6=B8=B6=A8=D6=D8=B8=B4=B5=C4=B7=BD=CA=BD=A3=
+=BA</p>
+    <table cellspacing=3D"0">
+        <caption>
+            =B1=ED2.=B3=A3=D3=C3=B5=C4=C1=BF=B4=CA</caption>
+        <tbody><tr>
+            <th>
+                =B4=FA=C2=EB/=D3=EF=B7=A8</th>
+            <th>
+                =CB=B5=C3=F7</th>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">*</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4=C1=E3=B4=CE=BB=F2=B8=FC=
+=B6=E0=B4=CE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">+</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4=D2=BB=B4=CE=BB=F2=B8=FC=
+=B6=E0=B4=CE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">?</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4=C1=E3=B4=CE=BB=F2=D2=BB=
+=B4=CE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">{n}</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4n=B4=CE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">{n,}</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4n=B4=CE=BB=F2=B8=FC=B6=E0=
+=B4=CE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">{n,m}</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4n=B5=BDm=B4=CE</span></td>
+        </tr>
+    </tbody></table>
+    <p>
+        =CF=C2=C3=E6=CA=C7=D2=BB=D0=A9=CA=B9=D3=C3=D6=D8=B8=B4=B5=C4=C0=FD=
+=D7=D3=A3=BA</p>
+    <p>
+        <span class=3D"regex">Windows\d+</span>=C6=A5=C5=E4<span class=3D"d=
+esc">Windows=BA=F3=C3=E6=B8=FA1=B8=F6=BB=F2=B8=FC=B6=E0=CA=FD=D7=D6</span><=
+/p>
+    <p>
+        <span class=3D"regex">13\d{9}</span>=C6=A5=C5=E4<span class=3D"desc=
+">=D2=D413=BA=F3=C3=E6=B8=FA9=B8=F6=CA=FD=D7=D6(=D6=D0=B9=FA=B5=C4=CA=D6=BB=
+=FA=BA=C5)</span></p>
+    <p>
+        <span class=3D"regex">^\w+</span>=C6=A5=C5=E4<span class=3D"desc">=
+=D2=BB=D0=D0=B5=C4=B5=DA=D2=BB=B8=F6=B5=A5=B4=CA(=BB=F2=D5=FB=B8=F6=D7=D6=
+=B7=FB=B4=AE=B5=C4=B5=DA=D2=BB=B8=F6=B5=A5=B4=CA=A3=AC=BE=DF=CC=E5=B4=FA=B1=
+=ED=C4=C4=B8=F6=D2=E2=CB=BC=B5=C3=BF=B4=D1=A1=CF=EE=C9=E8=D6=C3)</span></p>
+    <h2>
+        =D7=D6=B7=FB=C0=E0</h2>
+    <p>
+        =D2=AA=CF=EB=B2=E9=D5=D2=CA=FD=D7=D6=A3=AC=D7=D6=C4=B8=BB=F2=CA=FD=
+=D7=D6=A3=AC=BF=D5=B0=D7=CA=C7=BA=DC=BC=F2=B5=A5=B5=C4=A3=AC=D2=F2=CE=AA=D2=
+=D1=BE=AD=D3=D0=C1=CB=B6=D4=D3=A6=D5=E2=D0=A9=D7=D6=B7=FB=BC=AF=B5=C4=CC=D8=
+=CA=E2=B4=FA=C2=EB=A3=AC=B5=AB=CA=C7=C8=E7=B9=FB=C4=E3=CF=EB=C6=A5=C5=E4=C3=
+=BB=D3=D0=D4=A4=B6=A8=D2=E5=CC=D8=CA=E2=B4=FA=C2=EB=B5=C4=D7=D6=B7=FB=BC=AF=
+=B1=C8=C8=E7=D4=AA=D2=F4=D7=D6=C4=B8(a,e,i,o,u),=D4=F5=C3=B4=B0=EC=A3=BF</p=
+>
+    <p>
+        =BA=DC=BC=F2=B5=A5=A3=AC=C4=E3=D6=BB=D0=E8=D2=AA=D4=DA=D6=D0=C0=A8=
+=BA=C5=C0=EF=C1=D0=B3=F6=CB=FC=C3=C7=BE=CD=D0=D0=C1=CB=A3=AC=CF=F1<span cla=
+ss=3D"regex">[aeiou]</span>=BE=CD=C6=A5=C5=E4<span class=3D"desc">=C8=CE=BA=
+=CE=D2=BB=B8=F6=D4=AA=D2=F4=D7=D6=C4=B8</span>=A3=AC<span class=3D"regex">[=
+.?!]</span>=C6=A5=C5=E4<span class=3D"desc">=B1=EA=B5=E3=B7=FB=BA=C5(.=BB=
+=F2?=BB=F2!)</span>(=D3=A2=CE=C4=D3=EF=BE=E4=CD=A8=B3=A3=D6=BB=D2=D4=D5=E2=
+=C8=FD=B8=F6=B1=EA=B5=E3=BD=E1=CA=F8)=A1=A3=D2=AA=D7=A2=D2=E2=B5=C4=CA=C7=
+=A3=AC=D4=DA=D6=D0=C0=A8=BA=C5=D6=D0=A3=AC=CC=D8=CA=E2=B4=FA=C2=EB=B2=BB=BB=
+=E1=B1=BB=BD=E2=CA=CD=B3=C9=C6=E4=CB=FC=D2=E2=D2=E5=A3=AC=CB=F9=D2=D4=CE=D2=
+=C3=C7=B2=BB=D0=E8=D2=AA=D0=B4=B3=C9[\.\?!](=CA=C2=CA=B5=C9=CF=D5=E2=D1=F9=
+=D0=B4=BB=E1=B3=F6=B4=ED=A3=AC=D2=F2=CE=AA=B3=F6=CF=D6=C1=CB=C1=BD=B4=CE<sp=
+an class=3D"code">\</span>)=A1=A3</p>
+    <p>
+        =CE=D2=C3=C7=D2=B2=BF=C9=D2=D4=C7=E1=CB=C9=B5=D8=D6=B8=B6=A8=D2=BB=
+=B8=F6=D7=D6=B7=FB<span class=3D"name">=B7=B6=CE=A7</span>=A3=AC=CF=F1<span=
+ class=3D"regex">[0-9]</span>=B4=FA=B1=ED=B5=C4=BA=AC=D2=E2=D3=EB<span clas=
+s=3D"regex">\d</span>=BE=CD=CA=C7=CD=EA=C8=AB=D2=BB=D6=C2=B5=C4=A3=BA<span =
+class=3D"desc">=D2=BB=CE=BB=CA=FD=D7=D6</span>=A3=AC=CD=AC=C0=ED<span class=
+=3D"regex">[a-z0-9A-Z]</span>=D2=B2=CD=EA=C8=AB=B5=C8=CD=AC=D3=DA\w=A1=A3</=
+p>
+    <p>
+        =CF=C2=C3=E6=CA=C7=D2=BB=B8=F6=B8=FC=B8=B4=D4=D3=B5=C4=B1=ED=B4=EF=
+=CA=BD=A3=BA<span class=3D"regex">\(?0\d{2}[) -]?\d{8}</span>=A1=A3</p>
+    <p>
+        =D5=E2=B8=F6=B1=ED=B4=EF=CA=BD=BF=C9=D2=D4=C6=A5=C5=E4<span class=
+=3D"desc">=BC=B8=D6=D6=B8=F1=CA=BD=B5=C4=B5=E7=BB=B0=BA=C5=C2=EB</span>=A3=
+=AC=CF=F1<span class=3D"string">(010)88886666</span>=A3=AC=BB=F2<span class=
+=3D"string">022-22334455</span>=A3=AC=BB=F2<span class=3D"string">029123456=
+78</span>=B5=C8=A1=A3=CE=D2=C3=C7=B6=D4=CB=FC=BD=F8=D0=D0=D2=BB=D0=A9=B7=D6=
+=CE=F6=B0=C9=A3=BA=CA=D7=CF=C8=CA=C7=D2=BB=B8=F6=D7=AA=D2=E5=D7=D6=B7=FB<sp=
+an class=3D"part">\(</span>,=CB=FC=C4=DC=B3=F6=CF=D60=B4=CE=BB=F21=B4=CE(<s=
+pan class=3D"part">?</span>),=C8=BB=BA=F3=CA=C7=D2=BB=B8=F6<span class=3D"p=
+art">0</span>=A3=AC=BA=F3=C3=E6=B8=FA=D7=C52=B8=F6=CA=FD=D7=D6(<span class=
+=3D"part">{2}</span>)=A3=AC=C8=BB=BA=F3=CA=C7<span class=3D"part">)</span>=
+=BB=F2<span class=3D"part">-</span>=BB=F2<span class=3D"part">=BF=D5=B8=F1<=
+/span>=D6=D0=B5=C4=D2=BB=B8=F6=A3=AC=CB=FC=B3=F6=CF=D61=B4=CE=BB=F2=B2=BB=
+=B3=F6=CF=D6(<span class=3D"part">?</span>)=A3=AC=D7=EE=BA=F3=CA=C78=B8=F6=
+=CA=FD=D7=D6(<span class=3D"part">\d{8}</span>)=A1=A3=B2=BB=D0=D2=B5=C4=CA=
+=C7=A3=AC=CB=FC=D2=B2=C4=DC=C6=A5=C5=E4<span class=3D"string">010)12345678<=
+/span>=BB=F2<span class=3D"string">(022-87654321</span>=D5=E2=D1=F9=B5=C4=
+=A1=B0=B2=BB=D5=FD=C8=B7=A1=B1=B5=C4=B8=F1=CA=BD=A1=A3=D2=AA=BD=E2=BE=F6=D5=
+=E2=B8=F6=CE=CA=CC=E2=A3=AC=C7=EB=D4=DA=B1=BE=BD=CC=B3=CC=B5=C4=CF=C2=C3=E6=
+=B2=E9=D5=D2=B4=F0=B0=B8=A1=A3</p>
+    <h2>
+        =B7=B4=D2=E5</h2>
+    <p>
+        =D3=D0=CA=B1=D0=E8=D2=AA=B2=E9=D5=D2=B2=BB=CA=F4=D3=DA=C4=B3=B8=F6=
+=BC=F2=B5=A5=B6=A8=D2=E5=B5=C4=D7=D6=B7=FB=C0=E0=B5=C4=D7=D6=B7=FB=A1=A3=B1=
+=C8=C8=E7=CF=EB=B2=E9=D5=D2=B3=FD=C1=CB=CA=FD=D7=D6=D2=D4=CD=E2=A3=AC=C6=E4=
+=CB=FC=C8=CE=D2=E2=D7=D6=B7=FB=B6=BC=D0=D0=B5=C4=C7=E9=BF=F6=A3=AC=D5=E2=CA=
+=B1=D0=E8=D2=AA=D3=C3=B5=BD<span class=3D"name">=B7=B4=D2=E5</span>=A3=BA</=
+p>
+    <table cellspacing=3D"0">
+        <caption>
+            =B1=ED3.=B3=A3=D3=C3=B5=C4=B7=B4=D2=E5=B4=FA=C2=EB</caption>
+        <tbody><tr>
+            <th>
+                =B4=FA=C2=EB/=D3=EF=B7=A8</th>
+            <th>
+                =CB=B5=C3=F7</th>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\W</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=C8=CE=D2=E2=B2=BB=CA=C7=
+=D7=D6=C4=B8=BA=CD=CA=FD=D7=D6=B5=C4=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\S</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=C8=CE=D2=E2=B2=BB=CA=C7=
+=BF=D5=B0=D7=B7=FB=B5=C4=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\D</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=C8=CE=D2=E2=B7=C7=CA=FD=
+=D7=D6=B5=C4=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\B</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=B2=BB=CA=C7=B5=A5=B4=CA=
+=BF=AA=CD=B7=BB=F2=BD=E1=CA=F8=B5=C4=CE=BB=D6=C3</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">[^x]</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=B3=FD=C1=CBx=D2=D4=CD=E2=
+=B5=C4=C8=CE=D2=E2=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">[^aeiou]</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=B3=FD=C1=CBaeiou=D5=E2=BC=
+=B8=B8=F6=D7=D6=C4=B8=D2=D4=CD=E2=B5=C4=C8=CE=D2=E2=D7=D6=B7=FB</span></td>
+        </tr>
+    </tbody></table>
+    <p>
+        =C0=FD=D7=D3=A3=BA<span class=3D"regex">\S+</span>=B4=FA=B1=ED<span=
+ class=3D"desc">=B2=BB=B0=FC=BA=AC=BF=D5=B0=D7=B7=FB=B5=C4=D7=D6=B7=FB=B4=
+=AE</span>=A1=A3</p>
+    <p>
+        <span class=3D"regex">&lt;a[^&gt;]+&gt;</span>=B4=FA=B1=ED<span cla=
+ss=3D"desc">=D3=C3=BC=E2=C0=A8=BA=C5=C0=A8=C6=F0=C0=B4=B5=C4=D2=D4a=BF=AA=
+=CD=B7=B5=C4=D7=D6=B7=FB=B4=AE</span>=A1=A3</p>
+    <h2>
+        =CC=E6=BB=BB</h2>
+    <p>
+        =BA=C3=C1=CB=A3=AC=CF=D6=D4=DA=D6=D5=D3=DA=B5=BD=C1=CB=BD=E2=BE=F63=
+=CE=BB=BB=F24=CE=BB=C7=F8=BA=C5=CE=CA=CC=E2=B5=C4=CA=B1=BC=E4=C1=CB=A1=A3=
+=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=C0=EF=B5=C4<span class=3D"name">=CC=E6=BB=BB=
+</span>=D6=B8=B5=C4=CA=C7=D3=D0=BC=B8=D6=D6=B9=E6=D4=F2=A3=AC=C8=E7=B9=FB=
+=C2=FA=D7=E3=C6=E4=D6=D0=C8=CE=D2=E2=D2=BB=D6=D6=B9=E6=D4=F2=B6=BC=D3=A6=B8=
+=C3=B5=B1=B3=C9=C6=A5=C5=E4=A3=AC=BE=DF=CC=E5=B7=BD=B7=A8=CA=C7=D3=C3<span =
+class=3D"code">|</span>=B0=D1=B2=BB=CD=AC=B5=C4=B9=E6=D4=F2=B7=D6=B8=F4=BF=
+=AA=A1=A3=CC=FD=B2=BB=C3=F7=B0=D7=A3=BF=C3=BB=B9=D8=CF=B5=A3=AC=BF=B4=C0=FD=
+=D7=D3=A3=BA</p>
+    <p>
+        <span class=3D"regex">0\d{2}-\d{8}|0\d{3}-\d{7}</span>=D5=E2=B8=F6=
+=B1=ED=B4=EF=CA=BD=C4=DC<span class=3D"desc">=C6=A5=C5=E4=C1=BD=D6=D6=D2=D4=
+=C1=AC=D7=D6=BA=C5=B7=D6=B8=F4=B5=C4=B5=E7=BB=B0=BA=C5=C2=EB=A3=BA=D2=BB=D6=
+=D6=CA=C7=C8=FD=CE=BB=C7=F8=BA=C5=A3=AC8=CE=BB=B1=BE=B5=D8=BA=C5(=C8=E7010-=
+12345678)=A3=AC=D2=BB=D6=D6=CA=C74=CE=BB=C7=F8=BA=C5=A3=AC7=CE=BB=B1=BE=B5=
+=D8=BA=C5(0376-2233445)</span>=A1=A3</p>
+    <p>
+        <span class=3D"regex">\(0\d{2}\)[- ]?\d{8}|0\d{2}[- ]?\d{8}</span>=
+=D5=E2=B8=F6=B1=ED=B4=EF=CA=BD<span class=3D"desc">=C6=A5=C5=E43=CE=BB=C7=
+=F8=BA=C5=B5=C4=B5=E7=BB=B0=BA=C5=C2=EB=A3=AC=C6=E4=D6=D0=C7=F8=BA=C5=BF=C9=
+=D2=D4=D3=C3=D0=A1=C0=A8=BA=C5=C0=A8=C6=F0=C0=B4=A3=AC=D2=B2=BF=C9=D2=D4=B2=
+=BB=D3=C3=A3=AC=C7=F8=BA=C5=D3=EB=B1=BE=B5=D8=BA=C5=BC=E4=BF=C9=D2=D4=D3=C3=
+=C1=AC=D7=D6=BA=C5=BB=F2=BF=D5=B8=F1=BC=E4=B8=F4=A3=AC=D2=B2=BF=C9=D2=D4=C3=
+=BB=D3=D0=BC=E4=B8=F4</span>=A1=A3=C4=E3=BF=C9=D2=D4=CA=D4=CA=D4=D3=C3=CC=
+=E6=BB=BB|=B0=D1=D5=E2=B8=F6=B1=ED=B4=EF=CA=BD=C0=A9=D5=B9=B3=C9=D2=B2=D6=
+=A7=B3=D64=CE=BB=C7=F8=BA=C5=B5=C4=A1=A3</p>
+    <p>
+        <span class=3D"regex">\d{5}-\d{4}|\d{5}</span>=D5=E2=B8=F6=B1=ED=B4=
+=EF=CA=BD=D3=C3=D3=DA=C6=A5=C5=E4=C3=C0=B9=FA=B5=C4=D3=CA=D5=FE=B1=E0=C2=EB=
+=A1=A3=C3=C0=B9=FA=D3=CA=B1=E0=B5=C4=B9=E6=D4=F2=CA=C75=CE=BB=CA=FD=D7=D6=
+=A3=AC=BB=F2=D5=DF=D3=C3=C1=AC=D7=D6=BA=C5=BC=E4=B8=F4=B5=C49=CE=BB=CA=FD=
+=D7=D6=A1=A3=D6=AE=CB=F9=D2=D4=D2=AA=B8=F8=B3=F6=D5=E2=B8=F6=C0=FD=D7=D3=CA=
+=C7=D2=F2=CE=AA=CB=FC=C4=DC=CB=B5=C3=F7=D2=BB=B8=F6=CE=CA=CC=E2=A3=BA<stron=
+g>=CA=B9=D3=C3=CC=E6=BB=BB=CA=B1=A3=AC=CB=B3=D0=F2=CA=C7=BA=DC=D6=D8=D2=AA=
+=B5=C4</strong>=A1=A3=C8=E7=B9=FB=C4=E3=B0=D1=CB=FC=B8=C4=B3=C9<span class=
+=3D"regex">\d{5}|\d{5}-\d{4}</span>=B5=C4=BB=B0=A3=AC=C4=C7=C3=B4=BE=CD=D6=
+=BB=BB=E1=C6=A5=C5=E45=CE=BB=B5=C4=D3=CA=B1=E0(=D2=D4=BC=B09=CE=BB=D3=CA=B1=
+=E0=B5=C4=C7=B05=CE=BB)=A1=A3=D4=AD=D2=F2=CA=C7=C6=A5=C5=E4=CC=E6=BB=BB=CA=
+=B1=A3=AC=BD=AB=BB=E1=B4=D3=D7=F3=B5=BD=D3=D2=B5=D8=B2=E2=CA=D4=C3=BF=B8=F6=
+=CC=F5=BC=FE=A3=AC=C8=E7=B9=FB=C2=FA=D7=E3=C1=CB=C4=B3=B8=F6=CC=F5=BC=FE=B5=
+=C4=BB=B0=A3=AC=BE=CD=B2=BB=BB=E1=C8=A5=B9=DC=C6=E4=CB=FC=B5=C4=CC=E6=BB=BB=
+=CC=F5=BC=FE=C1=CB=A1=A3</p>
+    <p>
+        <span class=3D"regex">Windows98|Windows2000|WindosXP</span>=D5=E2=
+=B8=F6=C0=FD=D7=D3=CA=C7=CE=AA=C1=CB=B8=E6=CB=DF=C4=E3=CC=E6=BB=BB=B2=BB=BD=
+=F6=BD=F6=C4=DC=D3=C3=D3=DA=C1=BD=D6=D6=B9=E6=D4=F2=A3=AC=D2=B2=C4=DC=D3=C3=
+=D3=DA=B8=FC=B6=E0=D6=D6=B9=E6=D4=F2=A1=A3</p>
+    <h2>
+        =B7=D6=D7=E9</h2>
+    <p>
+        =CE=D2=C3=C7=D2=D1=BE=AD=CC=E1=B5=BD=C1=CB=D4=F5=C3=B4=D6=D8=B8=B4=
+=B5=A5=B8=F6=D7=D6=B7=FB=A3=BB=B5=AB=C8=E7=B9=FB=CF=EB=D2=AA=D6=D8=B8=B4=D2=
+=BB=B8=F6=D7=D6=B7=FB=B4=AE=D3=D6=B8=C3=D4=F5=C3=B4=B0=EC=A3=BF=C4=E3=BF=C9=
+=D2=D4=D3=C3=D0=A1=C0=A8=BA=C5=C0=B4=D6=B8=B6=A8<span class=3D"name">=D7=D3=
+=B1=ED=B4=EF=CA=BD</span>(=D2=B2=BD=D0=D7=F6<span class=3D"name">=B7=D6=D7=
+=E9</span>)=A3=AC=C8=BB=BA=F3=C4=E3=BE=CD=BF=C9=D2=D4=D6=B8=B6=A8=D5=E2=B8=
+=F6=D7=D3=B1=ED=B4=EF=CA=BD=B5=C4=D6=D8=B8=B4=B4=CE=CA=FD=C1=CB=A3=AC=C4=E3=
+=D2=B2=BF=C9=D2=D4=B6=D4=D7=D3=B1=ED=B4=EF=CA=BD=BD=F8=D0=D0=C6=E4=CB=FC=D2=
+=BB=D0=A9=B2=D9=D7=F7(=BD=CC=B3=CC=BA=F3=C3=E6=BB=E1=D3=D0=BD=E9=C9=DC)=A1=
+=A3</p>
+    <p>
+        <span class=3D"regex">(\d{1,3}\.){3}\d{1,3}</span>=CA=C7=D2=BB=B8=
+=F6<span class=3D"desc">=BC=F2=B5=A5=B5=C4IP=B5=D8=D6=B7=C6=A5=C5=E4</span>=
+=B1=ED=B4=EF=CA=BD=A1=A3=D2=AA=C0=ED=BD=E2=D5=E2=B8=F6=B1=ED=B4=EF=CA=BD=A3=
+=AC=C7=EB=B0=B4=CF=C2=C1=D0=CB=B3=D0=F2=B7=D6=CE=F6=CB=FC=A3=BA<span class=
+=3D"part">\d{1,3}</span>=B4=FA=B1=ED<span class=3D"desc">1=B5=BD3=CE=BB=B5=
+=C4=CA=FD=D7=D6</span>=A3=AC<span class=3D"part">(\d{1,3}\.}{3}</span>=B4=
+=FA=B1=ED<span class=3D"desc">=C8=FD=CE=BB=CA=FD=D7=D6=BC=D3=C9=CF=D2=BB=B8=
+=F6=D3=A2=CE=C4=BE=E4=BA=C5(=D5=E2=B8=F6=D5=FB=CC=E5=D2=B2=BE=CD=CA=C7=D5=
+=E2=B8=F6<span class=3D"name">=B7=D6=D7=E9</span>)=D6=D8=B8=B43=B4=CE</span=
+>=A3=AC=D7=EE=BA=F3=D4=D9=BC=D3=C9=CF<span class=3D"desc">=D2=BB=B8=F6=D2=
+=BB=B5=BD=C8=FD=CE=BB=B5=C4=CA=FD=D7=D6</span>(<span class=3D"part">\d{1,3}=
+</span>)=A1=A3</p>
+    <p>
+        =B2=BB=D0=D2=B5=C4=CA=C7=A3=AC=CB=FC=D2=B2=BD=AB=C6=A5=C5=E4<span c=
+lass=3D"string">256.300.888.999</span>=D5=E2=D6=D6=B2=BB=BF=C9=C4=DC=B4=E6=
+=D4=DA=B5=C4IP=B5=D8=D6=B7(IP=B5=D8=D6=B7=D6=D0=C3=BF=B8=F6=CA=FD=D7=D6=B6=
+=BC=B2=BB=C4=DC=B4=F3=D3=DA255)=A1=A3=C8=E7=B9=FB=C4=DC=CA=B9=D3=C3=CB=E3=
+=CA=F5=B1=C8=BD=CF=B5=C4=BB=B0=A3=AC=BB=F2=D0=ED=C4=DC=BC=F2=B5=A5=B5=D8=BD=
+=E2=BE=F6=D5=E2=B8=F6=CE=CA=CC=E2=A3=AC=B5=AB=CA=C7=D5=FD=D4=F2=B1=ED=B4=EF=
+=CA=BD=D6=D0=B2=A2=B2=BB=CC=E1=B9=A9=B9=D8=D3=DA=CA=FD=D1=A7=B5=C4=C8=CE=BA=
+=CE=B9=A6=C4=DC=A3=AC=CB=F9=D2=D4=D6=BB=C4=DC=CA=B9=D3=C3=C8=DF=B3=A4=B5=C4=
+=B7=D6=D7=E9=A3=AC=D1=A1=D4=F1=A3=AC=D7=D6=B7=FB=C0=E0=C0=B4=C3=E8=CA=F6=D2=
+=BB=B8=F6=D5=FD=C8=B7=B5=C4IP=B5=D8=D6=B7=A3=BA<span class=3D"regex">((2[0-=
+4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</span>=A1=A3</p=
+>
+    <p>
+        =C0=ED=BD=E2=D5=E2=B8=F6=B1=ED=B4=EF=CA=BD=B5=C4=B9=D8=BC=FC=CA=C7=
+=C0=ED=BD=E2<span class=3D"part">2[0-4]\d|25[0-5]|[01]?\d\d?</span>=A3=AC=
+=D5=E2=C0=EF=CE=D2=BE=CD=B2=BB=CF=B8=CB=B5=C1=CB=A3=AC=C4=E3=D7=D4=BC=BA=D3=
+=A6=B8=C3=C4=DC=B7=D6=CE=F6=B5=C3=B3=F6=C0=B4=CB=FC=B5=C4=D2=E2=D2=E5=A1=A3=
+</p>
+    <h2>
+        =BA=F3=CF=F2=D2=FD=D3=C3</h2>
+    <p>
+        =CA=B9=D3=C3=D0=A1=C0=A8=BA=C5=D6=B8=B6=A8=D2=BB=B8=F6=D7=D3=B1=ED=
+=B4=EF=CA=BD=BA=F3=A3=AC<strong>=C6=A5=C5=E4=D5=E2=B8=F6=D7=D3=B1=ED=B4=EF=
+=CA=BD=B5=C4=CE=C4=B1=BE</strong>=BF=C9=D2=D4=D4=DA=B1=ED=B4=EF=CA=BD=BB=F2=
+=C6=E4=CB=FC=B3=CC=D0=F2=D6=D0=D7=F7=BD=F8=D2=BB=B2=BD=B5=C4=B4=A6=C0=ED=A1=
+=A3=C4=AC=C8=CF=C7=E9=BF=F6=CF=C2=A3=AC=C3=BF=B8=F6=B7=D6=D7=E9=BB=E1=D7=D4=
+=B6=AF=D3=B5=D3=D0=D2=BB=B8=F6<span class=3D"name">=D7=E9=BA=C5</span>=A3=
+=AC=B9=E6=D4=F2=CA=C7=A3=BA=D2=D4=B7=D6=D7=E9=B5=C4=D7=F3=C0=A8=BA=C5=CE=AA=
+=B1=EA=D6=BE=A3=AC=B4=D3=D7=F3=CF=F2=D3=D2=A3=AC=B5=DA=D2=BB=B8=F6=B7=D6=D7=
+=E9=B5=C4=D7=E9=BA=C5=CE=AA1=A3=AC=B5=DA=B6=FE=B8=F6=CE=AA2=A3=AC=D2=D4=B4=
+=CB=C0=E0=CD=C6=A1=A3</p>
+    <p>
+        <span class=3D"name">=BA=F3=CF=F2=D2=FD=D3=C3</span>=D3=C3=D3=DA=D6=
+=D8=B8=B4=CB=D1=CB=F7=C7=B0=C3=E6=C4=B3=B8=F6=B7=D6=D7=E9=C6=A5=C5=E4=B5=C4=
+=CE=C4=B1=BE=A1=A3=C0=FD=C8=E7=A3=AC<span class=3D"part">\1</span>=B4=FA=B1=
+=ED<span class=3D"desc">=B7=D6=D7=E91=C6=A5=C5=E4=B5=C4=CE=C4=B1=BE</span>=
+=A1=A3=C4=D1=D2=D4=C0=ED=BD=E2=A3=BF=C7=EB=BF=B4=CA=BE=C0=FD=A3=BA</p>
+    <p>
+        <span class=3D"regex">\b(\w+)\b\s+\1\b</span>=BF=C9=D2=D4=D3=C3=C0=
+=B4=C6=A5=C5=E4<span class=3D"desc">=D6=D8=B8=B4=B5=C4=B5=A5=B4=CA</span>=
+=A3=AC=CF=F1<span class=3D"string">go go</span>, <span class=3D"string">kit=
+ty kitty</span>=A1=A3=CA=D7=CF=C8=CA=C7<span class=3D"desc">=D2=BB=B8=F6=B5=
+=A5=B4=CA</span>=A3=AC=D2=B2=BE=CD=CA=C7<span class=3D"desc">=B5=A5=B4=CA=
+=BF=AA=CA=BC=B4=A6=BA=CD=BD=E1=CA=F8=B4=A6=D6=AE=BC=E4=B5=C4=B6=E0=D3=DA=D2=
+=BB=B8=F6=B5=C4=D7=D6=C4=B8=BB=F2=CA=FD=D7=D6</span>(<span class=3D"part">\=
+b(\w+)\b</span>)=A3=AC=C8=BB=BA=F3=CA=C7<span class=3D"desc">1=B8=F6=BB=F2=
+=BC=B8=B8=F6=BF=D5=B0=D7=B7=FB</span>(<span class=3D"part">\s+</span>=A3=AC=
+=D7=EE=BA=F3=CA=C7<span class=3D"desc">=C7=B0=C3=E6=C6=A5=C5=E4=B5=C4=C4=C7=
+=B8=F6=B5=A5=B4=CA</span>(<span class=3D"part">\1</span>)=A1=A3</p>
+    <p>
+        =C4=E3=D2=B2=BF=C9=D2=D4=D7=D4=BC=BA=D6=B8=B6=A8=D7=D3=B1=ED=B4=EF=
+=CA=BD=B5=C4=D7=E9=BA=C5=BB=F2<span class=3D"name">=D7=E9=C3=FB</span>=A1=
+=A3=D2=AA=D6=B8=B6=A8=D2=BB=B8=F6=D7=D3=B1=ED=B4=EF=CA=BD=B5=C4=D7=E9=C3=FB=
+=A3=AC=C7=EB=CA=B9=D3=C3=D5=E2=D1=F9=B5=C4=D3=EF=B7=A8=A3=BA<span class=3D"=
+code">(?&lt;Word&gt;\w+)</span>,=D5=E2=D1=F9=BE=CD=B0=D1<span class=3D"part=
+">\w+</span>=B5=C4=D7=E9=C3=FB=D6=B8=B6=A8=CE=AA<span class=3D"part">Word</=
+span>=C1=CB=A1=A3=D2=AA=B7=B4=CF=F2=D2=FD=D3=C3=D5=E2=B8=F6=B7=D6=D7=E9<spa=
+n class=3D"name">=B2=B6=BB=F1</span>=B5=C4=C4=DA=C8=DD=A3=AC=C4=E3=BF=C9=D2=
+=D4=CA=B9=D3=C3<span class=3D"code">\k&lt;Word&gt;</span>,=CB=F9=D2=D4=C9=
+=CF=D2=BB=B8=F6=C0=FD=D7=D3=D2=B2=BF=C9=D2=D4=D0=B4=B3=C9=D5=E2=D1=F9=A3=BA=
+<span class=3D"regex">\b(?&lt;Word&gt;\w+)\b\s*\k&lt;Word&gt;\b</span>=A1=
+=A3</p>
+    <p>
+        =CA=B9=D3=C3=D0=A1=C0=A8=BA=C5=B5=C4=CA=B1=BA=F2=A3=AC=BB=B9=D3=D0=
+=BA=DC=B6=E0=CC=D8=B6=A8=D3=C3=CD=BE=B5=C4=D3=EF=B7=A8=A1=A3=CF=C2=C3=E6=C1=
+=D0=B3=F6=C1=CB=D7=EE=B3=A3=D3=C3=B5=C4=D2=BB=D0=A9=A3=BA</p>
+    <table cellspacing=3D"0">
+        <caption>
+            =B1=ED4.=B7=D6=D7=E9=D3=EF=B7=A8</caption>
+        <tbody><tr>
+            <th colspan=3D"2">
+                =B2=B6=BB=F1</th>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4exp,=B2=A2=B2=B6=BB=F1=CE=
+=C4=B1=BE=B5=BD=D7=D4=B6=AF=C3=FC=C3=FB=B5=C4=D7=E9=C0=EF</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?&lt;name&gt;exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4exp,=B2=A2=B2=B6=BB=F1=CE=
+=C4=B1=BE=B5=BD=C3=FB=B3=C6=CE=AAname=B5=C4=D7=E9=C0=EF</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?:exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4exp,=B2=BB=B2=B6=BB=F1=C6=
+=A5=C5=E4=B5=C4=CE=C4=B1=BE</span></td>
+        </tr>
+        <tr>
+            <th colspan=3D"2">
+                =CE=BB=D6=C3=D6=B8=B6=A8</th>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?=3Dexp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4exp=C7=B0=C3=E6=B5=C4=CE=
+=BB=D6=C3</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?&lt;=3Dexp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4exp=BA=F3=C3=E6=B5=C4=CE=
+=BB=D6=C3</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?!exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=BA=F3=C3=E6=B8=FA=B5=C4=
+=B2=BB=CA=C7exp=B5=C4=CE=BB=D6=C3</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?&lt;!exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=A5=C5=E4=C7=B0=C3=E6=B2=BB=CA=C7ex=
+p=B5=C4=CE=BB=D6=C3</span></td>
+        </tr>
+        <tr>
+            <th colspan=3D"2">
+                =D7=A2=CA=CD</th>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?#comment)</span></td>
+            <td>
+                <span class=3D"desc">=D5=E2=D6=D6=C0=E0=D0=CD=B5=C4=D7=E9=
+=B2=BB=B6=D4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=B4=A6=C0=ED=B2=FA=C9=FA=C8=
+=CE=BA=CE=D3=B0=CF=EC=A3=AC=D6=BB=CA=C7=CE=AA=C1=CB=CC=E1=B9=A9=C8=C3=C8=CB=
+=D4=C4=B6=C1=D7=A2=CA=CD</span></td>
+        </tr>
+    </tbody></table>
+    <p>
+        =CE=D2=C3=C7=D2=D1=BE=AD=CC=D6=C2=DB=C1=CB=C7=B0=C1=BD=D6=D6=D3=EF=
+=B7=A8=A1=A3=B5=DA=C8=FD=B8=F6<span class=3D"code">(?:exp)</span>=B2=BB=BB=
+=E1=B8=C4=B1=E4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=B5=C4=B4=A6=C0=ED=B7=BD=CA=BD=
+=A3=AC=D6=BB=CA=C7=D5=E2=D1=F9=B5=C4=D7=E9=C6=A5=C5=E4=B5=C4=C4=DA=C8=DD<sp=
+an class=3D"desc">=B2=BB=BB=E1=CF=F1=C7=B0=C1=BD=D6=D6=C4=C7=D1=F9=B1=BB=B2=
+=B6=BB=F1=B5=BD=C4=B3=B8=F6=D7=E9=C0=EF=C3=E6</span>=A1=A3</p>
+    <h2>
+        =CE=BB=D6=C3=D6=B8=B6=A8</h2>
+    <p>
+        =BD=D3=CF=C2=C0=B4=B5=C4=CB=C4=B8=F6=D3=C3=D3=DA=B2=E9=D5=D2=D4=DA=
+=C4=B3=D0=A9=C4=DA=C8=DD(=B5=AB=B2=A2=B2=BB=B0=FC=C0=A8=D5=E2=D0=A9=C4=DA=
+=C8=DD)=D6=AE=C7=B0=BB=F2=D6=AE=BA=F3=B5=C4=B6=AB=CE=F7=A3=AC=D2=B2=BE=CD=
+=CA=C7=CB=B5=CB=FC=C3=C7=D3=C3=D3=DA=D6=B8=B6=A8=D2=BB=B8=F6=CE=BB=D6=C3=A3=
+=AC=BE=CD=CF=F1<span class=3D"code">\b</span>,<span class=3D"code">^</span>=
+,<span class=3D"code">$</span>=C4=C7=D1=F9=A3=AC=D2=F2=B4=CB=CB=FC=C3=C7=D2=
+=B2=B1=BB=B3=C6=CE=AA<span class=3D"name">=C1=E3=BF=ED=B6=CF=D1=D4</span>=
+=A1=A3=D7=EE=BA=C3=BB=B9=CA=C7=C4=C3=C0=FD=D7=D3=C0=B4=CB=B5=C3=F7=B0=C9=A3=
+=BA</p>
+    <p>
+        <span class=3D"code">(?=3Dexp)</span>=D2=B2=BD=D0<span class=3D"nam=
+e">=C1=E3=BF=ED=CF=C8=D0=D0=B6=CF=D1=D4</span>=A3=AC=CB=FC<span class=3D"de=
+sc">=C6=A5=C5=E4=CE=C4=B1=BE=D6=D0=B5=C4=C4=B3=D0=A9=CE=BB=D6=C3=A3=AC=D5=
+=E2=D0=A9=CE=BB=D6=C3=B5=C4=BA=F3=C3=E6=C4=DC=C6=A5=C5=E4=B8=F8=B6=A8=B5=C4=
+=BA=F3=D7=BAexp</span>=A1=A3=B1=C8=C8=E7<span class=3D"regex">\b\w+(?=3Ding=
+\b)</span>=A3=AC=C6=A5=C5=E4<span class=3D"desc">=D2=D4ing=BD=E1=CE=B2=B5=
+=C4=B5=A5=B4=CA=B5=C4=C7=B0=C3=E6=B2=BF=B7=D6(=B3=FD=C1=CBing=D2=D4=CD=E2=
+=B5=C4=B2=BF=B7=D6)</span>=A3=AC=C8=E7=B9=FB=D4=DA=B2=E9=D5=D2<span class=
+=3D"string">I'm singing while you're dancing.</span>=CA=B1=A3=AC=CB=FC=BB=
+=E1=C6=A5=C5=E4<span class=3D"desc">sing</span>=BA=CD<span class=3D"desc">d=
+anc</span>=A1=A3</p>
+    <p>
+        <span class=3D"code">(?&lt;=3Dexp)</span>=D2=B2=BD=D0<span class=3D=
+"name">=C1=E3=BF=ED=BA=F3=D0=D0=B6=CF=D1=D4</span>=A3=AC=CB=FC<span class=
+=3D"desc">=C6=A5=C5=E4=CE=C4=B1=BE=D6=D0=B5=C4=C4=B3=D0=A9=CE=BB=D6=C3=A3=
+=AC=D5=E2=D0=A9=CE=BB=D6=C3=B5=C4=C7=B0=C3=E6=C4=DC=B8=F8=B6=A8=B5=C4=C7=B0=
+=D7=BA=C6=A5=C5=E4exp</span>=A1=A3=B1=C8=C8=E7<span class=3D"regex">(?&lt;=
+=3D\bre)\w+\b</span>=BB=E1=C6=A5=C5=E4<span class=3D"desc">=D2=D4re=BF=AA=
+=CD=B7=B5=C4=B5=A5=B4=CA=B5=C4=BA=F3=B0=EB=B2=BF=B7=D6(=B3=FD=C1=CBre=D2=D4=
+=CD=E2=B5=C4=B2=BF=B7=D6)</span>=A3=AC=C0=FD=C8=E7=D4=DA=B2=E9=D5=D2<span c=
+lass=3D"string">reading a book</span>=CA=B1=A3=AC=CB=FC=C6=A5=C5=E4<span cl=
+ass=3D"desc">ading</span>=A1=A3</p>
+    <p>
+        =BC=D9=C8=E7=C4=E3=CF=EB=D2=AA=B8=F8=D2=BB=B8=F6=BA=DC=B3=A4=B5=C4=
+=CA=FD=D7=D6=D6=D0=C3=BF=C8=FD=CE=BB=BC=E4=BC=D3=D2=BB=B8=F6=B6=BA=BA=C5(=
+=B5=B1=C8=BB=CA=C7=B4=D3=D3=D2=B1=DF=BC=D3=C6=F0=C1=CB)=A3=AC=C4=E3=BF=C9=
+=D2=D4=D5=E2=D1=F9=B2=E9=D5=D2=D0=E8=D2=AA=D4=DA=C7=B0=C3=E6=BA=CD=C0=EF=C3=
+=E6=CC=ED=BC=D3=B6=BA=BA=C5=B5=C4=B2=BF=B7=D6=A3=BA<span class=3D"regex">((=
+?&lt;=3D\d)\d{3})*\b</span>=A1=A3=C7=EB=D7=D0=CF=B8=B7=D6=CE=F6=D5=E2=B8=F6=
+=B1=ED=B4=EF=CA=BD=A3=AC=CB=FC=BF=C9=C4=DC=B2=BB=CF=F1=C4=E3=B5=DA=D2=BB=D1=
+=DB=BF=B4=B3=F6=C0=B4=B5=C4=C4=C7=C3=B4=BC=F2=B5=A5=A1=A3</p>
+    <p>
+        =CF=C2=C3=E6=D5=E2=B8=F6=C0=FD=D7=D3=CD=AC=CA=B1=CA=B9=D3=C3=C1=CB=
+=C7=B0=D7=BA=BA=CD=BA=F3=D7=BA=A3=BA<span class=3D"regex">(?&lt;=3D\s)\d+(?=
+=3D\s)</span>=C6=A5=C5=E4<span class=3D"desc">=D2=D4=BF=D5=B0=D7=B7=FB=BC=
+=E4=B8=F4=B5=C4=CA=FD=D7=D6(=D4=D9=B4=CE=C7=BF=B5=F7=A3=AC=B2=BB=B0=FC=C0=
+=A8=D5=E2=D0=A9=BF=D5=B0=D7=B7=FB)</span>=A1=A3</p>
+    <h2>
+        =B8=BA=CF=F2=CE=BB=D6=C3=D6=B8=B6=A8</h2>
+    <p>
+        =C7=B0=C3=E6=CE=D2=C3=C7=CC=E1=B5=BD=B9=FD=D4=F5=C3=B4=B2=E9=D5=D2<=
+strong>=B2=BB=CA=C7=C4=B3=B8=F6=D7=D6=B7=FB=BB=F2=B2=BB=D4=DA=C4=B3=B8=F6=
+=D7=D6=B7=FB=C0=E0=C0=EF</strong>=B5=C4=D7=D6=B7=FB=B5=C4=B7=BD=B7=A8(=B7=
+=B4=D2=E5)=A1=A3=B5=AB=CA=C7=C8=E7=B9=FB=CE=D2=C3=C7=D6=BB=CA=C7=CF=EB=D2=
+=AA<strong>=C8=B7=B1=A3=C4=B3=B8=F6=D7=D6=B7=FB=C3=BB=D3=D0=B3=F6=CF=D6=A3=
+=AC=B5=AB=B2=A2=B2=BB=CF=EB=C8=A5=C6=A5=C5=E4=CB=FC</strong>=CA=B1=D4=F5=C3=
+=B4=B0=EC=A3=BF=C0=FD=C8=E7=A3=AC=C8=E7=B9=FB=CE=D2=C3=C7=CF=EB=B2=E9=D5=D2=
+=D5=E2=D1=F9=B5=C4=B5=A5=B4=CA--=CB=FC=C0=EF=C3=E6=B3=F6=CF=D6=C1=CB=D7=D6=
+=C4=B8q,=B5=AB=CA=C7q=BA=F3=C3=E6=B8=FA=B5=C4=B2=BB=CA=C7=D7=D6=C4=B8u,=CE=
+=D2=C3=C7=BF=C9=D2=D4=B3=A2=CA=D4=D5=E2=D1=F9=A3=BA</p>
+    <p>
+        <span class=3D"regex">\b\w*q[^u]\w*\b</span>=C6=A5=C5=E4<span class=
+=3D"desc">=B0=FC=BA=AC<strong>=BA=F3=C3=E6=B2=BB=CA=C7=D7=D6=C4=B8u=B5=C4=
+=D7=D6=C4=B8q</strong>=B5=C4=B5=A5=B4=CA</span>=A1=A3=B5=AB=CA=C7=C8=E7=B9=
+=FB=B6=E0=D7=F6=B2=E2=CA=D4(=BB=F2=D5=DF=C4=E3=CB=BC=CE=AC=D7=E3=B9=BB=C3=
+=F4=C8=F1=A3=AC=D6=B1=BD=D3=BE=CD=B9=DB=B2=EC=B3=F6=C0=B4=C1=CB)=A3=AC=C4=
+=E3=BB=E1=B7=A2=CF=D6=A3=AC=C8=E7=B9=FBq=B3=F6=CF=D6=D4=DA=B5=A5=B4=CA=B5=
+=C4=BD=E1=CE=B2=B5=C4=BB=B0=A3=AC=CF=F1<strong>Iraq</strong>,<strong>Benq</=
+strong>=A3=AC=D5=E2=B8=F6=B1=ED=B4=EF=CA=BD=BE=CD=BB=E1=B3=F6=B4=ED=A1=A3=
+=D5=E2=CA=C7=D2=F2=CE=AA<span class=3D"part">[^u]</span>=D7=DC=CA=C7=C6=A5=
+=C5=E4=D2=BB=B8=F6=D7=D6=B7=FB=A3=AC=CB=F9=D2=D4=C8=E7=B9=FBq=CA=C7=B5=A5=
+=B4=CA=B5=C4=D7=EE=BA=F3=D2=BB=B8=F6=D7=D6=B7=FB=B5=C4=BB=B0=A3=AC=BA=F3=C3=
+=E6=B5=C4<span class=3D"part">[^u]</span>=BD=AB=BB=E1=C6=A5=C5=E4q=BA=F3=C3=
+=E6=B5=C4=B5=A5=B4=CA=B7=D6=B8=F4=B7=FB(=BF=C9=C4=DC=CA=C7=BF=D5=B8=F1=A3=
+=AC=BB=F2=D5=DF=CA=C7=BE=E4=BA=C5=BB=F2=C6=E4=CB=FC=B5=C4=CA=B2=C3=B4)=A3=
+=AC=BA=F3=C3=E6=B5=C4<span class=3D"part">\w+\b</span>=BD=AB=BB=E1=C6=A5=C5=
+=E4=CF=C2=D2=BB=B8=F6=B5=A5=B4=CA=A3=AC=D3=DA=CA=C7<span class=3D"regex">\b=
+\w*q[^u]\w*\b</span>=BE=CD=C4=DC=C6=A5=C5=E4=D5=FB=B8=F6<span class=3D"stri=
+ng">Iraq fighting</span>=A1=A3<span class=3D"name">=B8=BA=CF=F2=CE=BB=D6=C3=
+=D6=B8=B6=A8</span>=C4=DC=BD=E2=BE=F6=D5=E2=D1=F9=B5=C4=CE=CA=CC=E2=A3=AC=
+=D2=F2=CE=AA=CB=FC=D6=BB=C6=A5=C5=E4=D2=BB=B8=F6=CE=BB=D6=C3=A3=AC=B2=A2=B2=
+=BB<strong>=CF=FB=B7=D1</strong>=C8=CE=BA=CE=D7=D6=B7=FB=A1=A3=CF=D6=D4=DA=
+=A3=AC=CE=D2=C3=C7=BF=C9=D2=D4=D5=E2=D1=F9=C0=B4=BD=E2=BE=F6=D5=E2=B8=F6=CE=
+=CA=CC=E2=A3=BA<span class=3D"regex">\b\w*q(?!u)\w*\b</span>=A1=A3</p>
+    <p>
+        <span class=3D"name">=C1=E3=BF=ED=B8=BA=CF=F2=CF=C8=D0=D0=B6=CF=D1=
+=D4</span><span class=3D"code">(?!exp)</span>=A3=AC=D6=BB=BB=E1=C6=A5=C5=E4=
+<span class=3D"desc"><span class=3D"name">=BA=F3=D7=BA</span>exp=B2=BB=B4=
+=E6=D4=DA=B5=C4=CE=BB=D6=C3</span>=A1=A3<span class=3D"regex">\d{3}(?!\d)</=
+span>=C6=A5=C5=E4<span class=3D"desc">=C8=FD=CE=BB=CA=FD=D7=D6=A3=AC=B6=F8=
+=C7=D2=D5=E2=C8=FD=CE=BB=CA=FD=D7=D6=B5=C4=BA=F3=C3=E6=B2=BB=C4=DC=CA=C7=CA=
+=FD=D7=D6</span>=A1=A3</p>
+    <p>
+        =CD=AC=C0=ED=A3=AC=CE=D2=C3=C7=BF=C9=D2=D4=D3=C3<span class=3D"code=
+">(?&lt;!exp)</span>,<span class=3D"name">=C1=E3=BF=ED=B8=BA=CF=F2=BA=F3=D0=
+=D0=B6=CF=D1=D4</span>=C0=B4=B2=E9=D5=D2<span class=3D"desc">=C7=B0=D7=BAex=
+p=B2=BB=B4=E6=D4=DA=B5=C4=CE=BB=D6=C3</span>=A3=BA<span class=3D"regex">(?&=
+lt;![a-z])\d{7}</span>=C6=A5=C5=E4<span class=3D"desc">=C7=B0=C3=E6=B2=BB=
+=CA=C7=D0=A1=D0=B4=D7=D6=C4=B8=B5=C4=C6=DF=CE=BB=CA=FD=D7=D6</span>(=CA=B5=
+=D1=E9=CA=B1=B7=A2=CF=D6=B4=ED=CE=F3=A3=BF=D7=A2=D2=E2=C4=E3=B5=C4=A1=B0=C7=
+=F8=B7=D6=B4=F3=D0=A1=D0=B4=A1=B1=CF=C8=CF=EE=CA=C7=B7=F1=D1=A1=D6=D0)=A1=
+=A3</p>
+    <p>
+        =D2=BB=B8=F6=B8=FC=B8=B4=D4=D3=B5=C4=C0=FD=D7=D3=A3=BA<span class=
+=3D"regex">(?&lt;=3D&lt;(\w+)&gt;).*(?=3D&lt;\/\1&gt;)</span>=C6=A5=C5=E4<s=
+pan class=3D"desc">=B2=BB=B0=FC=BA=AC=CA=F4=D0=D4=B5=C4=BC=F2=B5=A5HTML=B1=
+=EA=C7=A9=C4=DA=C0=EF=B5=C4=C4=DA=C8=DD</span>=A1=A3<span class=3D"code">(&=
+lt;?(\w+)&gt;)</span>=D6=B8=B6=A8=C1=CB=D5=E2=D1=F9=B5=C4=C7=B0=D7=BA=A3=BA=
+<span class=3D"desc">=B1=BB=BC=E2=C0=A8=BA=C5=C0=A8=C6=F0=C0=B4=B5=C4=B5=A5=
+=B4=CA</span>(=B1=C8=C8=E7=BF=C9=C4=DC=CA=C7&lt;b&gt;)=A3=AC=C8=BB=BA=F3=CA=
+=C7<span class=3D"part">.*</span>(=C8=CE=D2=E2=B5=C4=D7=D6=B7=FB=B4=AE),=D7=
+=EE=BA=F3=CA=C7=D2=BB=B8=F6=BA=F3=D7=BA<span class=3D"part">(?=3D&lt;\/\1&g=
+t;)</span>=A1=A3=D7=A2=D2=E2=BA=F3=D7=BA=C0=EF=B5=C4<span class=3D"part">\/=
+</span>=A3=AC=CB=FC=D3=C3=B5=BD=C1=CB=C7=B0=C3=E6=CC=E1=B9=FD=B5=C4=D7=D6=
+=B7=FB=D7=AA=D2=E5=A3=BB<span class=3D"part">\1</span>=D4=F2=CA=C7=D2=BB=B8=
+=F6=B7=B4=CF=F2=D2=FD=D3=C3=A3=AC=D2=FD=D3=C3=B5=C4=D5=FD=CA=C7<span class=
+=3D"desc">=B2=B6=BB=F1=B5=C4=B5=DA=D2=BB=D7=E9</span>=A3=AC=C7=B0=C3=E6=B5=
+=C4<span class=3D"part">(\w+)</span>=C6=A5=C5=E4=B5=C4=C4=DA=C8=DD=A3=AC=D5=
+=E2=D1=F9=C8=E7=B9=FB=C7=B0=D7=BA=CA=B5=BC=CA=C9=CF=CA=C7&lt;b&gt;=B5=C4=BB=
+=B0=A3=AC=BA=F3=D7=BA=BE=CD=CA=C7&lt;/b&gt;=C1=CB=A1=A3=D5=FB=B8=F6=B1=ED=
+=B4=EF=CA=BD=C6=A5=C5=E4=B5=C4=CA=C7&lt;b&gt;=BA=CD&lt;/b&gt;=D6=AE=BC=E4=
+=B5=C4=C4=DA=C8=DD(=D4=D9=B4=CE=CC=E1=D0=D1=A3=AC=B2=BB=B0=FC=C0=A8=C7=B0=
+=D7=BA=BA=CD=BA=F3=D7=BA=B1=BE=C9=ED)=A1=A3</p>
+    <h2>
+        =D7=A2=CA=CD</h2>
+    <p>
+        =D0=A1=C0=A8=BA=C5=B5=C4=C1=ED=D2=BB=D6=D6=D3=C3=CD=BE=CA=C7=C4=DC=
+=B9=FD=D3=EF=B7=A8<span class=3D"code">(?#comment)</span>=C0=B4=B0=FC=BA=AC=
+=D7=A2=CA=CD=A1=A3=D2=AA=B0=FC=BA=AC=D7=A2=CA=CD=B5=C4=BB=B0=A3=AC=D7=EE=BA=
+=C3=CA=C7=C6=F4=D3=C3=A1=B0=BA=F6=C2=D4=C4=A3=CA=BD=C0=EF=B5=C4=BF=D5=B0=D7=
+=B7=FB=A1=B1=D1=A1=CF=EE=A3=AC=D5=E2=D1=F9=D4=DA=B1=E0=D0=B4=B1=ED=B4=EF=CA=
+=BD=CA=B1=C4=DC=C8=CE=D2=E2=B5=C4=CC=ED=BC=D3=BF=D5=B8=F1=A3=ACTab=A3=AC=BB=
+=BB=D0=D0=A3=AC=B6=F8=CA=B5=BC=CA=CA=B9=D3=C3=CA=B1=D5=E2=D0=A9=B6=BC=BD=AB=
+=B1=BB=BA=F6=C2=D4=A1=A3=C6=F4=D3=C3=D5=E2=B8=F6=D1=A1=CF=EE=BA=F3=A3=AC=D4=
+=DA#=BA=F3=C3=E6=B5=BD=D5=E2=D2=BB=D0=D0=BD=E1=CA=F8=B5=C4=CB=F9=D3=D0=CE=
+=C4=B1=BE=B6=BC=BD=AB=B1=BB=B5=B1=B3=C9=D7=A2=CA=CD=BA=F6=C2=D4=B5=F4=A1=A3=
+=C0=FD=C8=E7=A3=AC=CE=D2=C3=C7=BF=C9=D2=D4=B0=D1=C9=CF=D2=BB=B8=F6=B1=ED=B4=
+=EF=CA=BD=D0=B4=B3=C9=D5=E2=D1=F9=A3=BA</p>
+    <pre>      (?&lt;=3D    # =B2=E9=D5=D2=C7=B0=D7=BA=A3=AC=B5=AB=B2=BB=B0=
+=FC=BA=AC=CB=FC
+      &lt;(\w+)&gt; # =B2=E9=D5=D2=BC=E2=C0=A8=BA=C5=C0=A8=C6=F0=C0=B4=B5=
+=C4=D7=D6=C4=B8=BB=F2=CA=FD=D7=D6(=B1=EA=C7=A9)
+      )       # =C7=B0=D7=BA=BD=E1=CA=F8
+      .*      # =C6=A5=C5=E4=C8=CE=D2=E2=CE=C4=B1=BE
+      (?=3D     # =B2=E9=D5=D2=BA=F3=D7=BA=A3=AC=B5=AB=B2=BB=B0=FC=BA=AC=CB=
+=FC
+      &lt;\/\1&gt;  # =B2=E9=D5=D2=BC=E2=C0=A8=BA=C5=C0=A8=C6=F0=C0=B4=B5=
+=C4=C4=DA=C8=DD=A3=BA=C7=B0=C3=E6=CA=C7=D2=BB=B8=F6"/"=A3=AC=BA=F3=C3=E6=CA=
+=C7=CF=C8=C7=B0=B2=B6=BB=F1=B5=C4=B1=EA=C7=A9
+      )       # =BA=F3=D7=BA=BD=E1=CA=F8
+    </pre>
+    <h2>
+        =CC=B0=C0=B7=D3=EB=C0=C1=B6=E8</h2>
+    <p>
+        =B5=B1=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=D6=D0=B0=FC=BA=AC=C4=DC=BD=D3=
+=CA=DC=D6=D8=B8=B4=B5=C4=C1=BF=B4=CA(=D6=B8=B6=A8=CA=FD=C1=BF=B5=C4=B4=FA=
+=C2=EB=A3=AC=C0=FD=C8=E7*,{5,12}=B5=C8)=CA=B1=A3=AC=CD=A8=B3=A3=B5=C4=D0=D0=
+=CE=AA=CA=C7=C6=A5=C5=E4<strong>=BE=A1=BF=C9=C4=DC=B6=E0</strong>=B5=C4=D7=
+=D6=B7=FB=A1=A3=BF=BC=C2=C7=D5=E2=B8=F6=B1=ED=B4=EF=CA=BD=A3=BA<span class=
+=3D"regex">a.*b</span>=A3=AC=CB=FC=BD=AB=BB=E1=C6=A5=C5=E4<span class=3D"de=
+sc">=D7=EE=B3=A4=B5=C4=D2=D4a=BF=AA=CA=BC=A3=AC=D2=D4b=BD=E1=CA=F8=B5=C4=D7=
+=D6=B7=FB=B4=AE</span>=A1=A3=C8=E7=B9=FB=D3=C3=CB=FC=C0=B4=CB=D1=CB=F7<span=
+ class=3D"string">aabab</span>=B5=C4=BB=B0=A3=AC=CB=FC=BB=E1=C6=A5=C5=E4=D5=
+=FB=B8=F6=D7=D6=B7=FB=B4=AE<span class=3D"desc">aabab</span>=A1=A3=D5=E2=B1=
+=BB=B3=C6=CE=AA<span class=3D"name">=CC=B0=C0=B7</span>=C6=A5=C5=E4=A1=A3</=
+p>
+    <p>
+        =D3=D0=CA=B1=A3=AC=CE=D2=C3=C7=B8=FC=D0=E8=D2=AA<span class=3D"name=
+">=C0=C1=B6=E8</span>=C6=A5=C5=E4=A3=AC=D2=B2=BE=CD=CA=C7=C6=A5=C5=E4<stron=
+g>=BE=A1=BF=C9=C4=DC=C9=D9</strong>=B5=C4=D7=D6=B7=FB=A1=A3=C7=B0=C3=E6=B8=
+=F8=B3=F6=B5=C4=C1=BF=B4=CA=B6=BC=BF=C9=D2=D4=B1=BB=D7=AA=BB=AF=CE=AA=C0=C1=
+=B6=E8=C6=A5=C5=E4=C4=A3=CA=BD=A3=AC=D6=BB=D2=AA=D4=DA=CB=FC=BA=F3=C3=E6=BC=
+=D3=C9=CF=D2=BB=B8=F6=CE=CA=BA=C5<span class=3D"code">?</span>=A1=A3=D5=E2=
+=D1=F9<span class=3D"regex">.*?</span>=BE=CD=D2=E2=CE=B6=D7=C5<span class=
+=3D"desc">=C6=A5=C5=E4=C8=CE=D2=E2=CA=FD=C1=BF=B5=C4=D6=D8=B8=B4=A3=AC=B5=
+=AB=CA=C7=D4=DA=C4=DC=CA=B9=D5=FB=B8=F6=C6=A5=C5=E4=B3=C9=B9=A6=B5=C4=C7=B0=
+=CC=E1=CF=C2=CA=B9=D3=C3=D7=EE=C9=D9=B5=C4=D6=D8=B8=B4</span>=A1=A3=CF=D6=
+=D4=DA=BF=B4=BF=B4=C0=C1=B6=E8=B0=E6=B5=C4=C0=FD=D7=D3=B0=C9=A3=BA</p>
+    <p>
+        <span class=3D"regex">a.*?b</span>=C6=A5=C5=E4<span class=3D"desc">=
+=D7=EE=B6=CC=B5=C4=A3=AC=D2=D4a=BF=AA=CA=BC=A3=AC=D2=D4b=BD=E1=CA=F8=B5=C4=
+=D7=D6=B7=FB=B4=AE</span>=A1=A3=C8=E7=B9=FB=B0=D1=CB=FC=D3=A6=D3=C3=D3=DA<s=
+pan class=3D"string">aabab</span>=B5=C4=BB=B0=A3=AC=CB=FC=BB=E1=C6=A5=C5=E4=
+<span class=3D"desc">aab</span>=BA=CD<span class=3D"desc">ab</span>=A1=A3</=
+p>
+    <table cellspacing=3D"0">
+        <caption>
+            =B1=ED5.=C0=C1=B6=E8=C1=BF=B4=CA</caption>
+        <tbody><tr>
+            <td>
+                <span class=3D"code">*?</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4=C8=CE=D2=E2=B4=CE=A3=AC=
+=B5=AB=BE=A1=BF=C9=C4=DC=C9=D9=D6=D8=B8=B4</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">+?</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B41=B4=CE=BB=F2=B8=FC=B6=E0=
+=B4=CE=A3=AC=B5=AB=BE=A1=BF=C9=C4=DC=C9=D9=D6=D8=B8=B4</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">??</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B40=B4=CE=BB=F21=B4=CE=A3=AC=
+=B5=AB=BE=A1=BF=C9=C4=DC=C9=D9=D6=D8=B8=B4</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">{n,m}?</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4n=B5=BDm=B4=CE=A3=AC=B5=AB=
+=BE=A1=BF=C9=C4=DC=C9=D9=D6=D8=B8=B4</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">{n,}?</span></td>
+            <td>
+                <span class=3D"desc">=D6=D8=B8=B4n=B4=CE=D2=D4=C9=CF=A3=AC=
+=B5=AB=BE=A1=BF=C9=C4=DC=C9=D9=D6=D8=B8=B4</span></td>
+        </tr>
+    </tbody></table>
+    <h2>
+        =BB=B9=D3=D0=D0=A9=CA=B2=C3=B4=B6=AB=CE=F7=C3=BB=CC=E1=B5=BD</h2>
+    <p>
+=CE=D2=D2=D1=BE=AD=C3=E8=CA=F6=C1=CB=B9=B9=D4=EC=D5=FD=D4=F2=B1=ED=B4=EF=CA=
+=BD=B5=C4=B4=F3=C1=BF=D4=AA=CB=D8=A3=AC=BB=B9=D3=D0=D2=BB=D0=A9=CE=D2=C3=BB=
+=D3=D0=CC=E1=B5=BD=B5=C4=B6=AB=CE=F7=A1=A3=CF=C2=C3=E6=CA=C7=CE=B4=CC=E1=B5=
+=BD=B5=C4=D4=AA=CB=D8=B5=C4=C1=D0=B1=ED=A3=AC=B0=FC=BA=AC=D3=EF=B7=A8=BA=CD=
+=BC=F2=B5=A5=B5=C4=CB=B5=C3=F7=A1=A3=C4=E3=BF=C9=D2=D4=D4=DA=CD=F8=C9=CF=D5=
+=D2=B5=BD=B8=FC=CF=EA=CF=B8=B5=C4=B2=CE=BF=BC=D7=CA=C1=CF
+=C0=B4=D1=A7=CF=B0=CB=FC=C3=C7--=B5=B1=C4=E3=D0=E8=D2=AA=D3=C3=B5=BD=CB=FC=
+=C3=C7=B5=C4=CA=B1=BA=F2=A1=A3=C8=E7=B9=FB=C4=E3=B0=B2=D7=B0=C1=CBMSDN Libr=
+ary,=C4=E3=D2=B2=BF=C9=D2=D4=D4=DA=C0=EF=C3=E6=D5=D2=B5=BD=B9=D8=D3=DA.net=
+=CF=C2=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=CF=EA=CF=B8=B5=C4=CE=C4=B5=B5=A1=A3</p=
+>
+    <table cellspacing=3D"0">
+        <caption>
+            =B1=ED6.=C9=D0=CE=B4=CC=D6=C2=DB=B5=C4=D3=EF=B7=A8</caption>
+        <tbody><tr>
+            <td>
+                <span class=3D"code">\a</span></td>
+            <td>
+                <span class=3D"desc">=B1=A8=BE=AF=D7=D6=B7=FB(=B4=F2=D3=A1=
+=CB=FC=B5=C4=D0=A7=B9=FB=CA=C7=B5=E7=C4=D4=E0=D6=D2=BB=C9=F9)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\b</span></td>
+            <td>
+                <span class=3D"desc">=CD=A8=B3=A3=CA=C7=B5=A5=B4=CA=B7=D6=
+=BD=E7=CE=BB=D6=C3=A3=AC=B5=AB=C8=E7=B9=FB=D4=DA=D7=D6=B7=FB=C0=E0=C0=EF=CA=
+=B9=D3=C3=B4=FA=B1=ED=CD=CB=B8=F1</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\t</span></td>
+            <td>
+                <span class=3D"desc">=D6=C6=B1=ED=B7=FB=A3=ACTab</span></td=
+>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\r</span></td>
+            <td>
+                <span class=3D"desc">=BB=D8=B3=B5</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\v</span></td>
+            <td>
+                <span class=3D"desc">=CA=FA=CF=F2=D6=C6=B1=ED=B7=FB</span><=
+/td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\f</span></td>
+            <td>
+                <span class=3D"desc">=BB=BB=D2=B3=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\n</span></td>
+            <td>
+                <span class=3D"desc">=BB=BB=D0=D0=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\e</span></td>
+            <td>
+                <span class=3D"desc">Escape</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\0nn</span></td>
+            <td>
+                <span class=3D"desc">ASCII=B4=FA=C2=EB=D6=D0=B0=CB=BD=F8=D6=
+=C6=B4=FA=C2=EB=CE=AAnn=B5=C4=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\xnn</span></td>
+            <td>
+                <span class=3D"desc">ASCII=B4=FA=C2=EB=D6=D0=CA=AE=C1=F9=BD=
+=F8=D6=C6=B4=FA=C2=EB=CE=AAnn=B5=C4=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\unnnn</span></td>
+            <td>
+                <span class=3D"desc">Unicode=B4=FA=C2=EB=D6=D0=CA=AE=C1=F9=
+=BD=F8=D6=C6=B4=FA=C2=EB=CE=AAnnnn=B5=C4=D7=D6=B7=FB</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\cN</span></td>
+            <td>
+                <span class=3D"desc">ASCII=BF=D8=D6=C6=D7=D6=B7=FB=A1=A3=B1=
+=C8=C8=E7\cC=B4=FA=B1=EDCtrl+C</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\A</span></td>
+            <td>
+                <span class=3D"desc">=D7=D6=B7=FB=B4=AE=BF=AA=CD=B7(=C0=E0=
+=CB=C6^=A3=AC=B5=AB=B2=BB=CA=DC=B4=A6=C0=ED=B6=E0=D0=D0=D1=A1=CF=EE=B5=C4=
+=D3=B0=CF=EC)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\Z</span></td>
+            <td>
+                <span class=3D"desc">=D7=D6=B7=FB=B4=AE=BD=E1=CE=B2=BB=F2=
+=D0=D0=CE=B2(=B2=BB=CA=DC=B4=A6=C0=ED=B6=E0=D0=D0=D1=A1=CF=EE=B5=C4=D3=B0=
+=CF=EC)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\z</span></td>
+            <td>
+                <span class=3D"desc">=D7=D6=B7=FB=B4=AE=BD=E1=CE=B2(=C0=E0=
+=CB=C6$=A3=AC=B5=AB=B2=BB=CA=DC=B4=A6=C0=ED=B6=E0=D0=D0=D1=A1=CF=EE=B5=C4=
+=D3=B0=CF=EC)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\G</span></td>
+            <td>
+                <span class=3D"desc">=B5=B1=C7=B0=CB=D1=CB=F7=B5=C4=BF=AA=
+=CD=B7</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">\p{name}</span></td>
+            <td>
+                <span class=3D"desc">Unicode=D6=D0=C3=FC=C3=FB=CE=AAname=B5=
+=C4=D7=D6=B7=FB=C0=E0=A3=AC=C0=FD=C8=E7\p{IsGreek}</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?&gt;exp)</span></td>
+            <td>
+                <span class=3D"desc">=CC=B0=C0=B7=D7=D3=B1=ED=B4=EF=CA=BD</=
+span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?&lt;x&gt;-&lt;y&gt;exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=BD=BA=E2=D7=E9</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?-&lt;y&gt;exp)</span></td>
+            <td>
+                <span class=3D"desc">=C6=BD=BA=E2=D7=E9</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?im-nsx:exp)</span></td>
+            <td>
+                <span class=3D"desc">=D4=DA=D7=D3=B1=ED=B4=EF=CA=BDexp=D6=
+=D0=B8=C4=B1=E4=B4=A6=C0=ED=D1=A1=CF=EE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?im-nsx)</span></td>
+            <td>
+                <span class=3D"desc">=CE=AA=B1=ED=B4=EF=CA=BD=BA=F3=C3=E6=
+=B5=C4=B2=BF=B7=D6=B8=C4=B1=E4=B4=A6=C0=ED=D1=A1=CF=EE</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?(exp)yes|no)</span></td>
+            <td>
+                <span class=3D"desc">=B0=D1exp=B5=B1=D7=F7=C1=E3=BF=ED=D5=
+=FD=CF=F2=CF=C8=D0=D0=B6=CF=D1=D4=A3=AC=C8=E7=B9=FB=D4=DA=D5=E2=B8=F6=CE=BB=
+=D6=C3=C4=DC=C6=A5=C5=E4=A3=AC=CA=B9=D3=C3yes=D7=F7=CE=AA=B4=CB=D7=E9=B5=C4=
+=B1=ED=B4=EF=CA=BD=A3=BB=B7=F1=D4=F2=CA=B9=D3=C3no</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?(exp)yes)</span></td>
+            <td>
+                <span class=3D"desc">=CD=AC=C9=CF=A3=AC=D6=BB=CA=C7=CA=B9=
+=D3=C3=BF=D5=B1=ED=B4=EF=CA=BD=D7=F7=CE=AAno</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?(name)yes|no)</span></td>
+            <td>
+                <span class=3D"desc">=C8=E7=B9=FB=C3=FC=C3=FB=CE=AAname=B5=
+=C4=D7=E9=B2=B6=BB=F1=B5=BD=C1=CB=C4=DA=C8=DD=A3=AC=CA=B9=D3=C3yes=D7=F7=CE=
+=AA=B1=ED=B4=EF=CA=BD=A3=BB=B7=F1=D4=F2=CA=B9=D3=C3no</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class=3D"code">(?(name)yes)</span></td>
+            <td>
+                <span class=3D"desc">=CD=AC=C9=CF=A3=AC=D6=BB=CA=C7=CA=B9=
+=D3=C3=BF=D5=B1=ED=B4=EF=CA=BD=D7=F7=CE=AAno</span></td>
+        </tr>
+    </tbody></table>
+    <h2 id=3D"reference">
+        =D2=BB=D0=A9=CE=D2=C8=CF=CE=AA=C4=E3=BF=C9=C4=DC=D2=D1=BE=AD=D6=AA=
+=B5=C0=B5=C4=CA=F5=D3=EF=B5=C4=B2=CE=BF=BC</h2>
+    <dl>
+        <dt>=D7=D6=B7=FB</dt><dd>=B3=CC=D0=F2=B4=A6=C0=ED=CE=C4=D7=D6=CA=B1=
+=D7=EE=BB=F9=B1=BE=B5=C4=B5=A5=CE=BB=A3=AC=BF=C9=C4=DC=CA=C7=D7=D6=C4=B8=A3=
+=AC=CA=FD=D7=D6=A3=AC=B1=EA=B5=E3=B7=FB=BA=C5=A3=AC=BF=D5=B8=F1=A3=AC=BB=BB=
+=D0=D0=B7=FB=A3=AC=BA=BA=D7=D6=B5=C8=B5=C8=A1=A3</dd>
+        <dt>=D7=D6=B7=FB=B4=AE</dt><dd>0=B8=F6=BB=F2=B8=FC=B6=E0=B8=F6=D7=
+=D6=B7=FB=B5=C4=D0=F2=C1=D0=A1=A3</dd>
+        <dt>=CE=C4=B1=BE</dt><dd>=CE=C4=D7=D6=A3=AC=D7=D6=B7=FB=B4=AE=A1=A3=
+</dd>
+        <dt>=C6=A5=C5=E4</dt><dd>=B7=FB=BA=CF=B9=E6=D4=F2=A3=AC=BC=EC=D1=E9=
+=CA=C7=B7=F1=B7=FB=BA=CF=B9=E6=D4=F2=A3=AC=B7=FB=BA=CF=B9=E6=D4=F2=B5=C4=B2=
+=BF=B7=D6=A1=A3</dd>
+    </dl>
+    <h2>=CD=F8=C9=CF=B5=C4=D7=CA=D4=B4</h2>
+    <ul>
+        <li><a href=3D"http://msdn.microsoft.com/library/chs/default.asp?ur=
+l=3D/library/CHS/jscript7/html/jsreconintroductiontoregularexpressions.asp"=
+>=CE=A2=C8=ED=B5=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=BD=CC=B3=CC</a></li>
+        <li><a href=3D"http://www.regular-expressions.info/">=D7=A8=D2=B5=
+=B5=C4=D5=FD=D4=F2=B1=ED=B4=EF=CA=BD=BD=CC=D1=A7=CD=F8=D5=BE(=D3=A2=CE=C4)<=
+/a></li>
+        <li><a href=3D"http://sourceforge.net/projects/regulator/">The Regu=
+lator=B9=D9=B7=BD=CD=F8=D5=BE</a></li>
+    </ul>
+
+<div id=3D"gtx-trans" style=3D"position: absolute; left: 667px; top: 5229.5=
+px;"><div class=3D"gtx-trans-icon"></div></div></body><style id=3D"custom-s=
+tyle-code-2" type=3D"text/css">.w960{width:100%!import}</style></html>
+------MultipartBoundary--F7B32B6yuguzpYuelpkNbY7V6rN4rJWnjlHuuukaXv----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://deerchao.net/tutorials/regex/images/TheRegulator.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAHgAoADASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAqMTwtcPbrLGZ0RXeMMNyqxIUkdQCVYA99p9KkrxtUu9e1LTtY1vSLTUNQu0sbW
+4sLvwhdhbZPNJl2zSMUUqJnJY8Hy14oA9gnnhtbeW4uJY4YIkLySSMFVFAySSeAAOc0Tzw2tvLcX
+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
++l/+Jo/taT1l/wC+l/8AiazaKLsLGl/a0nrL/wB9L/8AE0f2tJ6y/wDfS/8AxNZtFF2FjS/taT1l
+/wC+l/8AiaP7Wk9Zf++l/wDiazaKLsLGl/a0nrL/AN9L/wDE1S8L61faroEN3dShpnlmUlUAwBK6
+gYHoMD16dT96Kqvgbnwlbd/3twPX/ls/19f16c4dpgdP9qmP8fX0A/8Ar+o9e3Xjefapj/H19AP/
+AK/qPXt143xdffP45/n6+/Xvn5zr75/HP8/X3698/OxEv2qY/wAfX0A/+v6j17deN59qmP8AH19A
+P/r+o9e3XjfF198/jn+fr79e+fnOvvn8c/z9ffr3z84BL9qmP8fX0A/+v6j17deN59qmP8fX0A/+
+v6j17deN8XX3z+Of5+vv175+c6++fxz/AD9ffr3z84BL9qmP8fX0A/8Ar+o9e3Xjefapj/H19AP/
+AK/qPXt143xdffP45/n6+/Xvn5zr75/HP8/X3698/OAS/apj/H19AP8A6/qPXt143n2qY/x9fQD/
+AOv6j17deN8XX3z+Of5+vv175+c6++fxz/P19+vfPzgEv2qY/wAfX0A/+v6j17deN59qmP8AH19A
+P/r+o9e3XjfF198/jn+fr79e+fnOvvn8c/z9ffr3z84BL9qmP8fX0A/+v6j17deN59qmP8fX0A/+
+v6j17deN8XX3z+Of5+vv175+c6++fxz/AD9ffr3z84BL9qmP8fX0A/8Ar+o9e3Xjefapj/H19AP/
+AK/qPXt143xdffP45/n6+/Xvn5zr75/HP8/X3698/OAS/apj/H19AP8A6/qPXt143n2qY/x9fQD/
+AOv6j17deN8XX3z+Of5+vv175+c6++fxz/P19+vfPzgEv2qY/wAfX0A/+v6j17deN59qmP8AH19A
+P/r+o9e3XjfF198/jn+fr79e+fnOvvn8c/z9ffr3z84BL9qmP8fX0A/+v6j17deN59qmP8fX0A/+
+v6j17deN8XX3z+Of5+vv175+c6++fxz/AD9ffr3z84BL9qmP8fX0A/8Ar+o9e3Xjefapj/H19AP/
+AK/qPXt143xdffP45/n6+/Xvn5zr75/HP8/X3698/OAS/apj/H19AP8A6/qPXt143n2qY/x9fQD/
+AOv6j17deN8XX3z+Of5+vv175+c6++fxz/P19+vfPzgEv2qY/wAfX0A/+v6j17deN59qmP8AH19A
+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
+BeQE9RmNHAI5yR06jTrV6U0u7/L+mZrWpft+v9IKKKKyNAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDM0H/kHy/8AX7df+lEladZmg/8A
+IPl/6/br/wBKJK061rfxZerM6P8ADj6IKKKKyNAooooAKKKKACiiigAooooAKKKKACiiigAooooA
+KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDM
+b/SfEoRvu2dsJAp5DNKzKG9iojYZ9JD05zp1maJ+9gur09bu5kkBH3Sqny0ZfYoiNnvnI4IrTrWr
+pLl7af5/jczpax5u+v8Al+AUUUVkaBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFF
+ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAGZoP/IPl/6/br/0okrTrM0H/kHy/wDX7df+lElada1v
+4svVmdH+HH0QUUUVkaBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUU
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFY/iy+uNM8G65f2cnl3Vrp9xNC+0Ha6xsVODwcEDrX
+H7vEH/CR/wBnf8Jdqvk/23/Z+77PZ7vL/s/7Tn/Ufe38Z6be2eaAPSKK8fvPF+txfEC2tbPX/tOi
+Jd2Ns/7+2LXHmLD8wxb/APLTz1cAMMrBcbcDGzYtPFF5BdJf6deeI/EGmPp7y4udIMSGRpYFhZGS
+2RmUq8jHaHO1SQpwAQD0iivK7j4jXdqfD0Ueq+H5EkdPOnvtUS1luYzbOwlliETfZ0dtki4JPzIp
+C7iBY+IniTxHYaNp2paJcSRQPplzdTzWCfaYBIFiaP8AefZ5AUwZCCRGGAyWXFAHplUdZuJbbR7q
+S3bbclPLtzgH963yxjnjlio549eK43whfeLNRl1mK5up49kVsbSbUrF2QOWl8wY8i1ZvlVOMHGQc
+nJWjRtV8WajeQAa3pRh1SKS+09n0dyPsyCFckC5BXcZQ4U7jg8lT8i1FqMk2rkyTcWkd3bW8Vpaw
+20C7IYUEaLknCgYAyfapa5PUde1CwuLlbR49Qu7G3gF/ZNa3ES5kLbZoTHFK7AkOCo3gbR8ylG3n
+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
+wIRjt2SqdyxtBqo8FXuhQeHNSFuUFnbQXK2zlbVlKlDsu13hVBUNvVsMn3yGY95RQB4vpXhPV7PW
+Jru48C2Ij/tCG7iNtpVpFIgjWLiNhfDyvmjJx84JJJyGKiPx78L9Y1jW9Rv9N03TZjMmY/s9vBbB
+iyXe4uX3s0oZoPnGwMWB+UoHT2yigDh9L0bWdF1/WzZWnmLd7EgvJygiUvcXdw7lFfeVQXCpj5S7
+D+FSXXUXQG0JLK70dZLieztzb3EUjKHv0LBizPwDPu3OGbgmSUHb5hdekooA8v8AEHhrW9U8UfaN
+NsNVjji88xfb9UlW2M7BgJleK7MkagEhUWIZDsp2hgU2LbQnh8PLbT6Prl7eeakTLea40qtIiEC4
+8wy/LHuO7KoHDBXEQZFx3FFAHncWlaxpepWUN54bk1e0isr6C5mtJoGW7e4lhkZ3jmePYXZJWaMb
+lXeoVmGQsniTw/f6lq17cX+i/brW6ijt44rKO1uHh8mR2jmJuyqKzLPIpQRvjHDjv6BRQB4/ovgj
+UrTw3odlB4cnt7+1u4pb2Wa7t7HzQLWaM7Z7PMhVXbgsC58zkkFiNRfC2pw+EbjTxpV3/aeoW+p2
+LtFeRywRpPcO8TzySMJJQoclWAZgHkyu5sV6ZRQBx/iCy1nxBP5Vjp8+mSWvnxrqEt4kTyo6MhWL
+yvMba3ytl9mxlifbIUKVcEGp6loz6VBZSeHfIRYQ6eXJE6BSNsBjkV1QELyVjbYcKEYhk6SigDz/
+AEjwf4gtdVvpzfaVZLHdh7R7XTWTKC1gj2qPPIWEmJVaMg58vcpU7GT0CiigAooooAKKKKACiiig
+AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK
+KKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooo
+oAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiig
+AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK
+KKACiiigAooooAKKKKAP/9k=
+
+------MultipartBoundary--F7B32B6yuguzpYuelpkNbY7V6rN4rJWnjlHuuukaXv------

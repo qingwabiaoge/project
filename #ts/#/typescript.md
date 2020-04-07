@@ -14,7 +14,7 @@ let isDone: boolean = false;
 let i :InterfaceName
 ```
 
-# 对基本类型变量的约束
+# 简单结构
 
 ### :boolean
 
@@ -157,7 +157,19 @@ let arrString:string[] = ['1', '2', '3']
 let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
 ```
 
-### 元组 
+
+
+### 联合类型
+
+```ts
+let myFavoriteNumber: string | number;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
+```
+
+# 元组 
+
+[对比数组](#数组)
 
 元:多元的意思
 
@@ -172,13 +184,7 @@ x = ['hello', 10]; // OK
 x = [10, 'hello']; // Error
 ```
 
-### 联合类型
 
-```ts
-let myFavoriteNumber: string | number;
-myFavoriteNumber = 'seven';
-myFavoriteNumber = 7;
-```
 
 # Class和interface
 
@@ -375,7 +381,7 @@ dog.bark();
 
 ```
 
-###### ==泛型类==
+###### ==泛型Class==
 
 ```ts
 class GenericNumber<T> {
@@ -672,7 +678,53 @@ class Clock implements ClockInterface {
 }
 ```
 
+```js
+interface Alarm {
+    alert(): void;
+}
+
+class Door {
+}
+
+class SecurityDoor extends Door implements Alarm {
+    alert() {
+        console.log('SecurityDoor alert');
+    }
+}
+
+class Car implements Alarm {
+    alert() {
+        console.log('Car alert');
+    }
+}
+```
+
+
+
 ##### 类实现多个接口
+
+```js
+interface Alarm {
+    alert(): void;
+}
+
+interface Light {
+    lightOn(): void;
+    lightOff(): void;
+}
+
+class Car implements Alarm, Light {
+    alert() {
+        console.log('Car alert');
+    }
+    lightOn() {
+        console.log('Car light on');
+    }
+    lightOff() {
+        console.log('Car light off');
+    }
+}
+```
 
 
 
@@ -796,7 +848,7 @@ printLabel(myObj);
 
 ### 接口
 
-可索引接口对数组的约束
+**可索引接口对数组的约束**
 
 ```js
 interface NumberArr{
@@ -820,7 +872,7 @@ let  objectArr:ObjectArr = [
 ]
 ```
 
-对类数组对象的约束
+**对类数组对象的约束**
 
 ```js
 interface UserObj {

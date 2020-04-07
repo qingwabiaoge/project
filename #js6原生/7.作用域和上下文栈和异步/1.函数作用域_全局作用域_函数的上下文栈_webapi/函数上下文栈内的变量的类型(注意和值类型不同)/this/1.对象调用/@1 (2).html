@@ -1,0 +1,24 @@
+<script>
+
+  const obj = {
+
+    obj2: {
+
+      fn1() {
+
+        //1.this.fn2()调用
+        this.fn2()
+        var fn3 = this.fn2
+        //3.调用
+        fn3()
+      },
+      fn2() {
+        //2.在第1处调用时调用时,此作用域的this===obj.obj2
+        //3.在第3处调用时,此作用域的this===window
+        console.log(this)
+      }
+    }
+  }
+  obj.obj2.fn1()
+
+</script>

@@ -725,11 +725,13 @@ icacls C:\test /t /grant:r everyone:r
 
 ```
 
+### 删除文件夹
+
 ```
 rd /s /q "C:\test"
 ```
 
-
+### mklink
 
 ```
 1.复制User目录到D盘：　robocopy “C:\Users” “D:\Users” /E /COPYALL /XJ
@@ -737,3 +739,22 @@ rd /s /q "C:\test"
 3.创建C盘下的User的软件链接，链接到D盘User目录：mklink /J "C:\Users" "D:\Users"
 ```
 
+### dism修复
+
+```
+Dism /Image:C:\ /Cleanup-Image /RestoreHealth /Source:E:\ghost\win7.wim
+```
+
+
+
+.若要使用已装载的映像作为修复源来修复一个脱机映像，请在命令提示符下键入下列命令：
+
+Dism /Image:C:\offline /Cleanup-Image /RestoreHealth /Source:c:\test\mount\windows
+
+或者，若要使用你自己的一些来源，不使用 Windows 更新来修复一个联机映像，则只需装载Win10 ISO镜像，然后在上述命令后添加安装文件install.wim路径即可。完整命令示例如下：
+
+DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:X:\sources\install.wim:1 /LimitAccess
+
+PS：命令中的 X: 为虚拟光驱盘符，install.wim后面的数字 1 指代Win10二合一版本ISO镜像中的Windows 10 Pro系统。
+
+修复完成以后会生成日志文件，路径为 %windir%/Logs/CBS/CBS.log ，你可以在日志文件中查看修复系统文件的详情。

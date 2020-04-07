@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>map方法</title>
+</head>
+<body>
+    <p>点击按钮将数组中的每个元素乘以输入框指定的值，并返回新数组</p>
+    <p>
+        最小年龄:
+        <input type="number" id="age" value="10" />
+    </p>
+    <button id="btn">点我</button>
+    <p id="data">新数组</p>
+
+    <script type="text/javascript">
+        var btn = document.getElementById("btn");
+        var data = document.getElementById("data");
+        var age = document.getElementById("age");
+        var numbers = [25,36,121,49];
+
+        function myFunction({num,index,arr}){
+            console.log(arr);
+            return num * age.value;
+        }
+
+        btn.onclick = function(num){
+            data.innerHTML = numbers.map(myFunction);
+        }
+
+  
+//   //map定义和方法
+//     map()方法返回一个新数组，数组中的元素为原始数组元素调用函数处理的后值。
+//     map()方法按照原始数组元素顺序依次处理元素。
+//     注意：
+//     map不会对空数组进行检测
+//     map不会改变原始数组
+//     arr.map(function(currentValue，index，arr),thisValue)
+//     参数说明
+//     function(currentValue,index,arr)
+//     必须，函数，数组中的每个元素都会执行这个函数函数参数
+//     函数参数
+//     currentValue 必须 当前元素值
+//     index 可选 当前元素的索引值
+//     arr 可选 当前元素属于的数组对象。
+//     我们看个小demo，就会一目了然 -->
+
+
+
+
+
+//使用map()重组数组
+var kvArray = [{key: 1, value: 10},
+               {key: 2, value: 20},
+               {key: 3, value: 30}];
+ 
+var reformattedArray = kvArray.map(function(obj) {
+   var rObj = {};
+   rObj[obj.key] = obj.value;
+   return rObj;
+});
+console.log(reformattedArray)
+
+
+
+
+
+var users = [
+  {name: "张含韵", "email": "zhang@email.com"},
+  {name: "江一燕",   "email": "jiang@email.com"},
+  {name: "李小璐",  "email": "li@email.com"}
+];
+
+var emails = users.map(function (user) { return user.email; });
+
+console.log(emails.join(", ")); // zhang@email.com, jiang@email.com, li@email.com
+
+//Array.prototype扩展可以让IE6-IE8浏览器也支持map方法：
+
+if (typeof Array.prototype.map != "function") {
+  Array.prototype.map = function (fn, context) {
+    var arr = [];
+    if (typeof fn === "function") {
+      for (var k = 0, length = this.length; k < length; k++) {      
+         arr.push(fn.call(context, this[k], k, this));
+      }
+    }
+    return arr;
+  }}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

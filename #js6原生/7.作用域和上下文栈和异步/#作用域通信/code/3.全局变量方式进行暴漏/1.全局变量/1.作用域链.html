@@ -1,0 +1,19 @@
+<script>
+
+    //作用域1暴漏---------------------
+    let i = 1
+
+    function f(n) {
+        console.log(n)
+    }
+
+
+    function fn() { //作用域2
+        i = 10
+        f(10)
+    }
+
+    f1n()
+
+
+</script>
