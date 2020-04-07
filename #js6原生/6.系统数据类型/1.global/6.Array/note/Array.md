@@ -253,6 +253,12 @@ initialValue：可选项，其值用于第一次调用 callback 的第一个参�
 </script>
 ```
 
+###### _ _proto__
+
+```js
+__proto__:Object.prototype
+```
+
 ### ownProperty
 
 ```javascript
