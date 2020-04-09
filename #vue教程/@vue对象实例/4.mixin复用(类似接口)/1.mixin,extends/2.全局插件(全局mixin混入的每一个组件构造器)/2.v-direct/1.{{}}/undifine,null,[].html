@@ -1,0 +1,22 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+    <!--显示为[]-->
+    {{[ ]}}
+    <!--undifne显示为空-->
+    {{undefined}}
+    {{[][0]}}
+    {{ {}.a}}
+    <!--null显示为空-->
+    {{null}}
+
+
+</div>
+
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {}
+    })
+
+
+</script>

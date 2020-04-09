@@ -1,0 +1,24 @@
+<script>
+
+    //作用域1
+    function out() {
+        let i = 1
+        let fn = function (n) {   //作用域3引入了n
+
+            console.log(n)
+        }
+
+        return {i, fn}
+    }
+
+    const obj = out()
+
+    function f() { //作用域2引入obj
+
+        const n = obj.i + 1
+        //回调导出了n
+        obj.fn(n)
+    }
+
+    f()
+</script>

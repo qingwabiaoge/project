@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+  <!-- 实例化并选择挂载位置-->
+  <cl prop="100"></cl>
+
+</div>
+
+<script>
+
+  Vue.component('cl', {
+    template: `<div  >{{prop}}</div>`,
+    props: {prop: {default: 1}}, //默认属性,
+    created(){
+      console.log(this)
+    }
+
+  })
+
+  new Vue({
+    el: '#app'
+  })
+</script>

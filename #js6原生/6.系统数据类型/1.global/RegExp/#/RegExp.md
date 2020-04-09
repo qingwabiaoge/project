@@ -1,3 +1,17 @@
+# RegExp.prototype
+
+##### test( )  /  exec( )
+
+见上方gmi修饰符
+
+若reg.test判定为true, reg.exe(str)才不是undefined
+
+```javascript
+reg.test判定为true, reg.exe(str)才不是undefined
+```
+
+
+
 #  新建正则对象
 
 ## 构造函数新建对象
@@ -305,16 +319,10 @@ new  RegExp)( )的参数
 
 
 
-### RegExp.prototype
+### _ _proto__
 
-##### test( )  /  exec( )
-
-见上方gmi修饰符
-
-若reg.test判定为true, reg.exe(str)才不是undefined
-
-```javascript
-reg.test判定为true, reg.exe(str)才不是undefined
+```
+__proto__：RegExp.prototype
 ```
 
 ### ownProperty
@@ -323,7 +331,7 @@ reg.test判定为true, reg.exe(str)才不是undefined
 console.log(reg.hasOwnProperty('lastIndex'))//true
 console.log(Object.getOwnPropertyNames(reg))//["lastIndex"] 记录test exec匹配的字符串的最后一位的索引
 ```
-### ennumberable
+##### ennumberable
 
 只包含一些用户自定义的key
 

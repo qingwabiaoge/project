@@ -1,0 +1,16 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+  {{msg}}
+  <br>
+  <input type="text" :value="msg" @input="msg=$event.target.value">
+  <br>
+  <input type="text" v-model="msg">
+
+</div>
+<script>
+const vm = new Vue({
+  el: '#app',
+  data: { msg: 'msg' }
+})
+
+</script>

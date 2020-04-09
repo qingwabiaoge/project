@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  async function f(word) {
+    return word
+  }
+
+  async function f1() {
+    try {
+      const a = await f('猪八戒')
+      console.log(a)
+      const b = await f('孙悟空')
+      console.log(b)
+
+    } catch (e) {
+      console.log(e)
+    }
+
+    console.log('我在等待孙悟空结束，async内部会等待await')
+  }
+
+  f1()
+  console.log("主程序没有堵塞")
+</script>
+</body>
+</html>

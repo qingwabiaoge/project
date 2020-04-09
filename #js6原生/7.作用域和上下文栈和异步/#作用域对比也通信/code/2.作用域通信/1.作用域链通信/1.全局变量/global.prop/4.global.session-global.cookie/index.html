@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+
+
+<script>
+  const obj = {a: 1, b: 2}
+  sessionStorage.setItem("obj", obj);
+  let i = sessionStorage.getItem('obj')
+  console.log(i.a)
+
+
+
+
+  localStorage.setItem('obj', obj);
+  i = localStorage.getItem('obj')
+  console.log(i.a)
+</script>

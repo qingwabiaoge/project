@@ -1,0 +1,20 @@
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+<div id="app">
+
+  <a href="http://baidu.com" @click.prevent="fn">
+    baidu
+  </a>
+</div>
+
+
+<script>
+new Vue({
+  el: '#app',
+  methods: {
+    fn () {
+      console.log(1)
+    }
+  }
+})
+</script>

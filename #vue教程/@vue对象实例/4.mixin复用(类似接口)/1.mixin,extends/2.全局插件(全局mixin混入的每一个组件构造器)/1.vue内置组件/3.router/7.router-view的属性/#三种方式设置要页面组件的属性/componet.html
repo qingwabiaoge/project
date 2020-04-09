@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+
+
+    <div>
+
+        <button @click="isValue='def'; isProp='父data-def'">def</button>
+        <button @click="isValue='cl'; isProp='父data-cl'">cl</button>
+    </div>
+
+
+    <hr>
+
+
+    <component is="def"></component>
+    <component is="def" prop="component标签默认值"></component>
+    <component is="cl" :prop="isProp"></component>
+
+
+</div>
+
+<script>
+    const def = {template: `<div>{{prop}}</div>`, props: {prop: {default: 'def组件props:{}默认属性'}}}
+    const cl = {template: `<div>{{prop}}</div>`, props: {prop: {default: 'cl组件props:{}默认属性'}}}
+
+
+    const vm2 = new Vue({
+        el: '#app',
+        data: {
+            isValue: 'def',
+            isProp: ''
+        },
+        components: {def,cl}//注册组件
+    })
+
+</script>

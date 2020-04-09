@@ -1,6 +1,6 @@
 # 实例化
 
-Boolean(p:any)
+Boolean(i:any)
 
 ### 基本类型
 

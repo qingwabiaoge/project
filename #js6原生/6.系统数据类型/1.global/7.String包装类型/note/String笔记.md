@@ -1,12 +1,4 @@
-# String实例化包装对象的表达式和键值对
-
-
-
-![1566952961137](img/1566952961137.png)
-
-
-
-### String.prototype
+# String.prototype
 
 ##### 和数组相同和相似的方法和属性
 
@@ -38,6 +30,24 @@ startsWith()
 
 ```
 repeat()
+```
+
+
+
+# String实例化对象
+
+
+
+![1566952961137](img/1566952961137.png)
+
+
+
+
+
+### _ _proto__
+
+```
+_ _proto__:String.proto
 ```
 
 ### own属性 

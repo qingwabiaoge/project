@@ -1,6 +1,7 @@
 [^1]: prototype:原型 
 [^2]: Property: 属性
 [^3]: number-able 可计数的
+[^5]:进入(指行动); 进入(指权利等); 参与，加入(指权利、机会);
 
 # Object的静态函数
 
@@ -38,24 +39,24 @@ Object.is(NaN, NaN) // true
         writable: true,
         value: 4
     })
-    //获取原型--------------------------------------------------------------------------------------
+    //获取原型------
     console.log(Object.getPrototypeOf(obj)) //@return:回构造函数 @param:任意实例化对象
     console.log(obj.__proto__)
     console.log(obj.constructor)
     console.log(Object.prototype.isPrototypeOf(obj)) //true
 
-    //枚举------------------------------------------------------------------------------------------------
-    //列出所有属性包括不可枚举
+   
+    //列出own属性包括不可枚举
     a = Object.getOwnPropertyNames(obj)
     console.log(a)   //[a,b,c,d]
 
-    //列出可以枚举的属性----------------------------
+    //列出可以枚举的属性
 
     b = Object.keys(obj)
     console.log(b) //["a", "b", "c"]
 
 
-    //枚举出属性和值
+    //列出枚举属性和值
     for (key in obj) {
         console.log(key + ':' + obj[key])
     }
@@ -113,11 +114,41 @@ Object.is(NaN, NaN) // true
 
 
 
-# Object实例化对象的属性
+###  Object.getPrototypeOf(obj):Object
 
-### Object.prototype
+   获得obj原型
+
+### Object.getOwnPropertyNames(obj):Array
+
+列出own属性
+
+### Object.keys(obj) :Array
+
+列出可枚举的key返回数组
+
+### Object.values(obj):Array
+
+列出可枚举的value返回数组
+
+### Object.entries[^5]遍历出key和value
+
+```
+Object.entries(object) //['name', 'wang'],['age', 18]
+```
+
+
+
+# Object.prototype
 
 ![](img/object.prototype.png)
+
+# Object的实例
+
+### _ _proto__
+
+```
+__proto__：Object.prototype
+```
 
 ### ownProperty
 
@@ -127,16 +158,18 @@ obj.hasOwnProperty(a) 返回boolen
 Object.getOwnPropertyNames(obj)//['a']
 ```
 
-### key
+##### key
 
 ```js
 obj.propertyIsEnumerable('a')
 obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可以枚举
 ```
 
-# Object实例化属性判断&Object静态函数列出对象的属性:
+# 实例化对象的属性的性质判断和列出
 
-==注:只有属性判断类型用的Object的实例方法==
+Object.prototype.xxx判断属性性质
+
+Object.xxx 列出对象的属性:
 
  * 判断:in ,in判断对象是否有某属性(返回Boolean,in操作符是针对key的)
 
@@ -153,12 +186,12 @@ obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可�
  'hasOwnProperty'in{a:1}
  ```
 
-###  __Prototype[^1]:__
+###  Prototype[^1]
 
  * 判断:Person.prototype.isprototypeof(xiaoming),
  * 列出: Object.getPrototypeOf(obj)
 
-###  __ownProperty[^2]:__ 
+###  ownProperty[^2]:
 
  * 判断:obj.hasOwnProperty(propertyName) ,arr.hasOwnProperty('length')
 * 列出:Object.getOwnPropertyNames(obj)
@@ -170,7 +203,7 @@ obj.propertyIsEnumerable(propertyName)返回boolen 判断指定属性是否可�
 obj.propertyIsEnumerable(propertyName) ,
 arr.propertyIsEnumerable(0)
 
-###### 枚举出对象
+###### 枚举出对象的可枚举属性
 
 1. for....in操作符 列出可枚举的key (in操作符是针对key的)
 
@@ -197,7 +230,7 @@ for....of
   Object.values(obj)
 ```
 
-5. Object.entries遍历对象
+5. Object.entries[^5]遍历对象
 
 ```
 Object.entries(object) //['name', 'wang'],['age', 18]
@@ -208,7 +241,7 @@ Object.entries(object) //['name', 'wang'],['age', 18]
   JSON.stringify( )   列出obj返回json字符串
 
      JSON.stringify(obj) 
-###### 合并枚举类型
+###### 枚举类型合并
 
 1. Object.assign静态函数合并而不改变内存地址
 

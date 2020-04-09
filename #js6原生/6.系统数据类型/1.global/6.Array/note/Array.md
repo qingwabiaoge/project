@@ -33,11 +33,9 @@ Array.from('abc')
 
 
 
-# 实例的 in属性(真实数据结构)
 
-![](./img/4.png)
 
-### Array.prototype
+# Array.prototype
 
 ##### 栈方法修改数组(只有此组改变原数组)
 
@@ -253,10 +251,22 @@ initialValue：可选项，其值用于第一次调用 callback 的第一个参�
 </script>
 ```
 
+
+
 ###### _ _proto__
 
 ```js
 __proto__:Object.prototype
+```
+
+# 实例的 in属性(真实数据结构)
+
+![](./img/4.png)
+
+### _ _proto__
+
+```
+__proto__:Array.proto
 ```
 
 ### ownProperty
@@ -265,7 +275,7 @@ __proto__:Object.prototype
 ['leng','0','1']
 ```
 
-### keys(EnumerableProperty()
+##### keys(EnumerableProperty()
 
 ```javascript
 ['0','1']

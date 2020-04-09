@@ -8,7 +8,7 @@
 let isDone: boolean = false;
 ```
 
-### 对对象类型约束
+### 对结构类型约束
 
 ```js
 let i :InterfaceName
@@ -103,7 +103,7 @@ let n: null = null;
 
 ##### 由名称找值
 
-`enum`类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，==使用枚举类型可以为一组数值赋予友好的名字==。
+`enum`类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，使用枚举类型可以为一组数值赋予友好的名字。的名字==。
 
 ```ts
 enum Color {Red, Green, Blue}
@@ -157,17 +157,7 @@ let arrString:string[] = ['1', '2', '3']
 let arrAny:any[] = [1, '2', {name: 'xiao ming'}]
 ```
 
-
-
-### 联合类型
-
-```ts
-let myFavoriteNumber: string | number;
-myFavoriteNumber = 'seven';
-myFavoriteNumber = 7;
-```
-
-# 元组 
+### 元组 
 
 [对比数组](#数组)
 
@@ -186,17 +176,24 @@ x = [10, 'hello']; // Error
 
 
 
+### 联合类型
+
+```ts
+let myFavoriteNumber: string | number;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
+```
+
+
+
 # Class和interface
 
-## 区别
+|                      | Class | interface |
+| -------------------- | ----- | --------- |
+| 为结构化值做一组验证 | √     | √         |
+| 实例化               | √     | X         |
 
-##### 相同点
 
-为结构化值做一组验证
-
-##### 不同点
-
-接口不能实例化 类可以
 
 ## Class
 
