@@ -162,172 +162,6 @@ C:/Program Files/Git/mingw64/libexec/git-core
 git init 初始化新项目
 ```
 
-# git clone/git fetch/git pull
-
-**区别**
-
-|                      | git clone                                                    | git fetch                                                    | git pull                                                     | git pull --rebase                                            |
-| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 是否需要git init     | 不需要                                                       | 需要                                                         | 需要                                                         | 需要                                                         |
-| 是否携带远程主机信息 | √                                                            | x                                                            | x                                                            |                                                              |
-| 作用                 | git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。 | `git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中。 | 而`git pull` 则是将远程主机的最新内容拉下来后直接合并，即：`git pull = git fetch + git merge`，这样可能会产生冲突，需要手动解决。 | `git pull --rebase=git fetch origin+git rebase origin/master` |
-
-
-
-### git clone克隆项目
-
-git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。因为是克隆来的，所以 .git 文件夹里存放着与远程仓库一模一样的版本库记录，clone 操作是一个从无到有的克隆操作。
-
-先github建立一个项目,会在远程仓库自动建一个分支mater ,web操作提交了一次版本
-
-![image-20191204193910352](img/image-20191204193910352.png)
-
-基本用法：
-
-```
-$ git clone <版本库的URL> [本地目录名]
-```
-
-如果不指定本地目录，则会在本地生成一个远程仓库同名的目录。
-
-看不到分支解决
-
-```
-git checkout dev
-```
-
-git克隆项目到一个非空目录
-
-1. 进入非空目录，假设是 /workdir/proj1
-
-2. git clone --no-checkout https://git.oschina.net/NextApp/platform.git tmp
-
-3. mv tmp/.git .  #将 tmp 目录下的 .git 目录移到当前目录
-
-4. rmdir tmp
-
-5. git reset --hard HEAD
-
-### git pull
-
-git pull 是拉取远程分支更新到本地仓库再与本地分支进行合并，即：git pull = git fetch + git merge
-
-基本用法：
-
-```
-$ git pull <远程主机名> [远程分支名]:[本地分支名]
-```
-
-如果不指定远程分支名和本地分支名，则会将远程 master 分支拉取下来和本地的当前分支合并。
-
-##### 语法
-
-git pull的作用是从一个仓库或者本地的分支拉取并且整合代码。
-
-```
-git pull [<options>] [<repository> [<refspec>…]]
-```
-
-```
-git pull gitee master
-```
-
-##### 描述
-
-`git pull`相当于 `git fetch` +`git merge FETCH_HEAD`。``是仓库的名字，`` 是分支的名字。如果都不写，会有一个默认值。
-
-一个例子：
-
-```
-     A---B---C master on origin
-    /
-D---E---F---G master
-    ^
-    origin/master in your repository
-```
-
-远程的`master`分支到了`C`，本地的开发到了`G`。
-
-```
-     A---B---C origin/master
-    /         \
-D---E---F---G---H master
-```
-
-`git pull`之后会生成一个新的`H`，合并两个分支。
-
-如果发生了冲突，可以使用`git reset --merge`进行回退。
-
-##### options（选项）
-
-下面摘录几个常用的选项。
-
-> –allow-unrelated-histories
-> By default, git merge command refuses to merge histories that do not share a common ancestor. This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare
-> occasion, no configuration variable to enable this by default exists and will not be added.
-
-允许无关的历史，这个选项，更多是在更改远程仓库的时候用到。
-
-> –ff
-> When the merge resolves as a fast-forward, only update the branch pointer, without creating a merge commit. This is the default behavior.
->
-> –no-ff
-> Create a merge commit even when the merge resolves as a fast-forward. This is the default behaviour when merging an annotated (and possibly signed) tag that is not stored in its natural place in refs/tags/ hierarchy.
->
-> –ff-only
-> Refuse to merge and exit with a non-zero status unless the current HEAD is already up to date or the merge can be resolved as a fast-forward.
-
-`ff`选项，这几个选项是说合并时是否开启`fast-forward`，快速合并，这个有在[另外一篇帖子](https://www.oxysun.cn/git/git-git-merge-ff-no-ff.html)中详细讲解，这里就不赘述了。
-
-按照`git branch` 设置的默认跟踪的服务器和分支来拉取。
-
-```
-git pull
-```
-
- 拉取远程服务器`origin`的`master`分支
-
-```
-git pull origin master
-```
-
-### git fetch
-
-`git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中
-
-git fetch 并没更改本地仓库的代码，只是拉取了远程 commit 数据，将远程仓库的 commit id 更新为latest。
-
-具体的行为你可以尝试看看.git文件夹：./git/refs 里面有三个文件夹：heads、remotes、tags。
-heads 和 remotes 分别记录的就是本地和远程不同仓库的最新 commit id
-
-![img](img/v2-cb2fd21d633a8bae817a088bff5ec20c_hd.jpg)![img](img/v2-cb2fd21d633a8bae817a088bff5ec20c_720w.jpg)
-
-fetch 改变的是 remotes 里面相应分支的 commit id。
-
-
-
-
-
-理解 fetch 的关键, 是理解 FETCH_HEAD，FETCH_HEAD 指的是：某个 branch 在服务器上的最新状态。这个列表保存在 .git/FETCH_HEAD 文件中，其中每一行对应于远程服务器的一个分支。
-当前分支指向的 FETCH_HEAD，就是这个文件第一行对应的那个分支。一般来说，存在两种情况：
-
-- 如果没有显式的指定远程分支，则远程分支的 master 将作为默认的 FETCH_HEAD
-- 如果指定了远程分支，就将这个远程分支作为 FETCH_HEAD
-
-git fetch 更新本地仓库的两种用法：
-
-```
-# 方法一
-$ git fetch origin master                #从远程的origin仓库的master分支下载代码到本地的origin master
-$ git log -p master.. origin/master      #比较本地的仓库和远程参考的区别
-$ git merge origin/master                #把远程下载下来的代码合并到本地仓库，远程的和本地的合并
-# 方法二
-$ git fetch origin master:temp           #从远程的origin仓库的master分支下载到本地并新建一个分支temp
-$ git diff temp                          #比较master分支和temp分支的不同
-$ git merge temp                         #合并temp分支到master分支
-$ git branch -d temp                     #删除temp
-```
-
 
 
 # git log
@@ -490,7 +324,52 @@ foo.diff用notepad++/sublime 之类的编辑器打开，高亮颜色
 
 webstorm比较
 
+### Git添加beyond compare4作为比较工具
 
+
+
+> 使用 `git diff` 或者是 `git difftool` 命令去比较文件都是在git小黑窗口去打开，比较起来很不友好。所以我们通过配置文件把比较功能强大的“beyond compare4”作为Git的比较工具，这样我们就可以通过命令行调用强大的“beyond compare4”。通过“beyond compare4”工具更加轻松的去比较本地和远程文件的差异性
+
+1.配置“.gitconfig”文件
+
+首先我们找到Git的配置文件“.gitconfig”，在 `C:\Users\Administrator\.gitconfig` 文件中配置,具体配置如下：
+
+```
+[gui]
+    encoding = utf-8
+[diff]
+    tool = bc4
+[difftool]
+    prompt = false
+[difftool "bc4"]
+    cmd = "\"C:/Program Files/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\""
+    
+[merge]
+    tool = bc
+[mergetool]
+    prompt = false
+    keepBackup = false
+[mergetool "bc"]
+    cmd = "\"C:/Program Files/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
+```
+
+`mergetool`是merge解决冲突时会弹出对应的运行软件， `keepBackup=false`可以防止合并后生产后缀为`.orig`的备份文件
+
+说明：`cmd = "\"C:/Program Files/BeyondCompare/bcomp.exe\" \"$LOCAL\" \"$REMOTE\""`
+
+表示输入命令 `git difftool`后去找对应的运行文件并传（大字符串里面用空格分开）递参数处理。用空格分开（相当于参数），`\"`表示单个输入的参数必须为字符串（个人理解）。
+
+- 第一个表示调用可执行文件的路径
+- 第二个`$LOCAL`表示远程文件临时存储在本地的`C:\Users\Administrator\AppData\Local\Temp\wj9D8b_.eslintrc`中去
+- 第三个`$REMOTE`表示去拿当前需要比较的文件
+
+注意：建议只比较一个文件，否则git会递归对比每一个文件。
+
+配置完成后可以使用`git difftool <文件>`，默认就会打开“Beyond Compare 4”工具
+
+```
+git difftool readme.md
+```
 
 # git add
 
@@ -825,9 +704,9 @@ index a7e146c..711d63f 100644
 
 见上图
 
-# git branch /git merge 分支建立和合并
+# git branch 
 
-**分支的概念**
+### 分支的概念
 
 
 分支是用来标记特定代码的提交，每一个分支通过SHA1sum值来标识，所以对分支的操作是轻量级的，你改变的仅仅是SHA1sum值。
@@ -925,6 +804,10 @@ git branch -m <oldbranch> <newbranch> //重命名本地分支
 -a
 --all：所有
 ```
+
+# git merge
+
+![image-20200414011428597](img/image-20200414011428597.png)
 
 # get rebash
 
@@ -1310,6 +1193,182 @@ git push -d github dev
 ![](./img/6.png)
 
 
+
+# git clone/git fetch/git pull
+
+**区别**
+
+|                      | git clone                                                    | git fetch                                                    | git pull                                                     | git pull --rebase                                            |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 是否需要git init     | 不需要                                                       | 需要                                                         | 需要                                                         | 需要                                                         |
+| 是否携带远程主机信息 | √                                                            | x                                                            | x                                                            |                                                              |
+| 作用                 | git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。 | `git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中。 | 而`git pull` 则是将远程主机的最新内容拉下来后直接合并，即：`git pull = git fetch + git merge`，这样可能会产生冲突，需要手动解决。 | `git pull --rebase=git fetch origin+git rebase origin/master` |
+
+
+
+### git clone克隆项目
+
+git clone 是将其他仓库克隆到本地，包括被 clone 仓库的版本变化，因此本地无需是一个仓库，且克隆将设置额外的远程跟踪分支。因为是克隆来的，所以 .git 文件夹里存放着与远程仓库一模一样的版本库记录，clone 操作是一个从无到有的克隆操作。
+
+先github建立一个项目,会在远程仓库自动建一个分支mater ,web操作提交了一次版本
+
+![image-20191204193910352](img/image-20191204193910352.png)
+
+基本用法：
+
+```
+$ git clone <版本库的URL> [本地目录名]
+```
+
+如果不指定本地目录，则会在本地生成一个远程仓库同名的目录。
+
+看不到分支解决
+
+```
+git checkout dev
+```
+
+git克隆项目到一个非空目录
+
+1. 进入非空目录，假设是 /workdir/proj1
+
+2. git clone --no-checkout https://git.oschina.net/NextApp/platform.git tmp
+
+3. mv tmp/.git .  #将 tmp 目录下的 .git 目录移到当前目录
+
+4. rmdir tmp
+
+5. git reset --hard HEAD
+
+### git pull
+
+git pull 是拉取远程分支更新到本地仓库再与本地分支进行合并，即：git pull = git fetch + [git merge](#git merge)
+
+
+
+![image-20200414005843778](img/image-20200414005843778.png)
+
+
+
+
+
+
+
+基本用法：
+
+```
+$ git pull <远程主机名> [远程分支名]:[本地分支名]
+```
+
+如果不指定远程分支名和本地分支名，则会将远程 master 分支拉取下来和本地的当前分支合并。
+
+##### 语法
+
+git pull的作用是从一个仓库或者本地的分支拉取并且整合代码。
+
+```
+git pull [<options>] [<repository> [<refspec>…]]
+```
+
+```
+git pull gitee master
+```
+
+##### 描述
+
+`git pull`相当于 `git fetch` +`git merge FETCH_HEAD`。``是仓库的名字，`` 是分支的名字。如果都不写，会有一个默认值。
+
+一个例子：
+
+```
+     A---B---C master on origin
+    /
+D---E---F---G master
+    ^
+    origin/master in your repository
+```
+
+远程的`master`分支到了`C`，本地的开发到了`G`。
+
+```
+     A---B---C origin/master
+    /         \
+D---E---F---G---H master
+```
+
+`git pull`之后会生成一个新的`H`，合并两个分支。
+
+如果发生了冲突，可以使用`git reset --merge`进行回退。
+
+##### options（选项）
+
+下面摘录几个常用的选项。
+
+> –allow-unrelated-histories
+> By default, git merge command refuses to merge histories that do not share a common ancestor. This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare
+> occasion, no configuration variable to enable this by default exists and will not be added.
+
+允许无关的历史，这个选项，更多是在更改远程仓库的时候用到。
+
+> –ff
+> When the merge resolves as a fast-forward, only update the branch pointer, without creating a merge commit. This is the default behavior.
+>
+> –no-ff
+> Create a merge commit even when the merge resolves as a fast-forward. This is the default behaviour when merging an annotated (and possibly signed) tag that is not stored in its natural place in refs/tags/ hierarchy.
+>
+> –ff-only
+> Refuse to merge and exit with a non-zero status unless the current HEAD is already up to date or the merge can be resolved as a fast-forward.
+
+`ff`选项，这几个选项是说合并时是否开启`fast-forward`，快速合并，这个有在[另外一篇帖子](https://www.oxysun.cn/git/git-git-merge-ff-no-ff.html)中详细讲解，这里就不赘述了。
+
+按照`git branch` 设置的默认跟踪的服务器和分支来拉取。
+
+```
+git pull
+```
+
+ 拉取远程服务器`origin`的`master`分支
+
+```
+git pull origin master
+```
+
+### git fetch
+
+`git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中
+
+git fetch 并没更改本地仓库的代码，只是拉取了远程 commit 数据，将远程仓库的 commit id 更新为latest。
+
+具体的行为你可以尝试看看.git文件夹：./git/refs 里面有三个文件夹：heads、remotes、tags。
+heads 和 remotes 分别记录的就是本地和远程不同仓库的最新 commit id
+
+![img](img/v2-cb2fd21d633a8bae817a088bff5ec20c_hd.jpg)![img](img/v2-cb2fd21d633a8bae817a088bff5ec20c_720w.jpg)
+
+fetch 改变的是 remotes 里面相应分支的 commit id。
+
+
+
+
+
+理解 fetch 的关键, 是理解 FETCH_HEAD，FETCH_HEAD 指的是：某个 branch 在服务器上的最新状态。这个列表保存在 .git/FETCH_HEAD 文件中，其中每一行对应于远程服务器的一个分支。
+当前分支指向的 FETCH_HEAD，就是这个文件第一行对应的那个分支。一般来说，存在两种情况：
+
+- 如果没有显式的指定远程分支，则远程分支的 master 将作为默认的 FETCH_HEAD
+- 如果指定了远程分支，就将这个远程分支作为 FETCH_HEAD
+
+git fetch 更新本地仓库的两种用法：
+
+```
+# 方法一
+$ git fetch origin master                #从远程的origin仓库的master分支下载代码到本地的origin master
+$ git log -p master.. origin/master      #比较本地的仓库和远程参考的区别
+$ git merge origin/master                #把远程下载下来的代码合并到本地仓库，远程的和本地的合并
+# 方法二
+$ git fetch origin master:temp           #从远程的origin仓库的master分支下载到本地并新建一个分支temp
+$ git diff temp                          #比较master分支和temp分支的不同
+$ git merge temp                         #合并temp分支到master分支
+$ git branch -d temp                     #删除temp
+```
 
 
 

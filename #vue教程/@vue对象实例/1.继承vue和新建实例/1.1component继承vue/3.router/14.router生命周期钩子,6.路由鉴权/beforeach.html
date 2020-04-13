@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<style>
+    div {
+        border: 1px solid #0f0;
+        margin: 20px
+    }
+
+    div > div {
+        border: 1px solid #f00;
+    }
+
+    div > div > div {
+        border: 1px solid #00f;
+    }
+
+
+</style>
+<div id="app">
+
+    <router-link to="/fa/01">/fa/01</router-link>
+    <router-link to="/fa/02">/fa/02</router-link>
+    <router-link to="/fa/sub1">/fa/sub1</router-link>
+
+    <router-view></router-view>
+
+</div>
+<script>
+
+    const id = {template: '<div>id组件:{{$route.params.id}}</div>'}
+    const sub1 = {template: '<div>_{{$route.name}}</div>'}
+    const login={template: '<div>登陆页</div>'}
+    const router = new VueRouter({
+            routes: [{
+
+                path: '/fa/:id',
+                name: 'id',
+                component: id,
+                meta:{admin: true}
+              },
+                {
+
+                    path: '/fa2/sub1',
+                    name: 'sub1',
+                    component: sub1,
+                    meta:{admin: true}
+                },
+                {
+                    path: '/login',
+                    name: 'login',
+                    component: login,
+                }
+            ]
+        }
+    )
+    router.beforeEach((to, from, next) => {//路由的声明周期 进入路由时间的钩子函数
+
+
+        if (to.meta.admin === true) {
+            console.log('需要admin授权')
+            next({
+                path: '/login/',
+                query: {redirect: to.fullPath}  // 将刚刚要去的路由path（却无权限）作为参数，方便登录成功后直接跳转到该路由
+            });
+        }
+        next()
+    })
+    const vm = new Vue({
+        el: '#app',
+        router
+    })
+
+</script>

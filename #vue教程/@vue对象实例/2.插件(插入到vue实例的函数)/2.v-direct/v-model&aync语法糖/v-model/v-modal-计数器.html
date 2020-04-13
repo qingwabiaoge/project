@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+</head>
+<body>
+
+
+<div id="app">
+    num: {{num}}
+
+    <!--v-model 等价于
+   :value="num"
+    @input="num=data"
+    -->
+    <my-counter v-model="num"></my-counter>
+
+</div>
+
+
+<script>
+
+
+    Vue.component("my-counter", {
+        template: `<div>
+
+  <button @click="plus">+</button>
+  <input type="text" :value="value">
+  <button @click="minu">-</button>
+  </div>`,
+        props: {
+            value: Number
+        },
+
+        methods: {
+            plus() {
+
+                this.$emit('input', this.value + 1) //触发 input 事件，并传入新值
+            },
+            minu() {
+                if (this.value > 0) {
+
+                    this.$emit('input', this.value - 1) //触发 input 事件，并传入新值
+                }
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'hello world',
+            num: 10
+        }
+    })
+
+</script>
+</body>
+</html>

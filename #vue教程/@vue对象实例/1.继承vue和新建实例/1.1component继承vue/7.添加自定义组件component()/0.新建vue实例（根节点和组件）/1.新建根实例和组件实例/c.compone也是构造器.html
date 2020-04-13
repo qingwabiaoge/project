@@ -1,0 +1,16 @@
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+
+<div id="app">
+
+
+</div>
+
+<script>
+
+    const VueComponent = Vue.component('cl', {
+        template: `<div>{{prop}}</div>`,
+        props: {prop: {default: 10}}
+    })
+    const vm = new VueComponent({props: {prop: {default: 100}}})
+    const dom = vm.$mount('#app')
+</script>

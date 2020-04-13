@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+
+<script src="https://cdn.bootcss.com/element-ui/2.4.0/index.js"></script>
+<link href="https://cdn.bootcss.com/element-ui/2.4.0/theme-chalk/index.css" rel="stylesheet">
+<div id="app"  v-loading.fullscreen.lock="true">
+</div>
+
+<script>
+    const vm=new Vue({
+        el:'#app',
+        data() {
+            return {
+                fullscreenLoading: false
+            }
+        },
+
+    })
+</script>

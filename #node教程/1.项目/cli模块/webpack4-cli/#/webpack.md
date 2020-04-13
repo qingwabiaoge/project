@@ -35,20 +35,183 @@ webpack生产环境打包
 webpack --mode=production
 ```
 
-# webpack模块配置
+# webpack.config.js
 
-见code
+```
+module.exports = {
 
-# 项目配置 npm-package.json 
+}
+```
+
+
+
+### entry/output
+
+```json
+const path=require('path')
+module.exports = {
+    //默认目录 __dirname + '/src/'
+    
+   
+    // 入口文件路径设置
+    entry: __dirname + '/src2/',
+    // 打包生成文件
+    output: {
+        path:path.resolve(__dirname, 'dist'),
+        // 打包多出口文件
+        // 生成 a.bundle.js  b.bundle.js  jquery.bundle.js
+        filename: './js/[name].bundle.js'
+    }
+}
+
+```
+
+### 多个entry
+
+```json
+const path=require('path')
+module.exports = {
+    // 入口文件路径，__dirname是根目录
+    entry: {
+        index:__dirname + '/src/index.js',
+        main:__dirname + '/src/main.js',
+
+    },
+    // 打包生成文件
+    output: {
+        path:path.resolve(__dirname, 'dist'),
+        // 打包多出口文件
+        // 生成 a.bundle.js  b.bundle.js  jquery.bundle.js
+        filename: './js/[name].bundle.js'
+    }
+
+}
+
+
+```
+
+### resolve{extensions,alias}
+
+```json
+module.exports = {
+    
+    resolve: {
+        extensions:['.css','.js','.vue'],//自动补全后缀名
+        alias: {
+            "@": path.resolve("./src") //替代目录
+        }
+    }
+
+    
+}
+```
+
+### devServer
+
+```json
+module.exports = {  
+
+devServer:{
+    //设置基本目录结构,用于找到程序打包地址
+    contentBase:path.resolve(__dirname,'./dist'),
+        //服务器的IP地址，可以使用IP也可以使用localhost
+        host:'localhost',
+        //服务端压缩是否开启
+        compress:true,
+        //配置服务端口号
+        port:8888
+}
+    
+    
+}    
+```
+
+### module
+
+##### css
+
+```
+   yarn add css-loader style-loader-D
+```
+
+```json
+module.exports = {     
+module: {
+    
+    
+        rules: [
+            // ...(config.dev.useEslint ? [createLintingRule()] : []),
+            {
+                test: /\.css$/,
+                use: [
+                    {loader: "style-loader"},//解析css文件成style标签插入到js
+                    {loader: 'css-loader'}//可以引入 .css文件
+                ]
+            },
+        ]
+    
+
+}
+}
+```
+
+##### less
+
+
+
+##### png|jpg|gif|jpeg  
+
+```
+   yarn add url-loader file-loader -D
+```
+
+```json
+module: {
+        rules: [
+            
+
+            {
+                test: /\.(png|jpg|gif|jpeg)/,
+                use: [
+
+                    {
+                        //url-loader会将引入的图片编码，生成dataURl
+                        //url-loader依赖file-loader,在node_moudles中使用file-loader
+                        loader: "url-loader",
+                        options: {
+                            name:'[name].[ext]',
+                            limit: 10 * 1000,
+                            outputPath:'./img',
+                            publicPath:'http://cdn.baidu.com',//可选项加前缀
+                        }, //默认单位为b,
+
+
+                    },
+
+
+                ]
+            }
+            
+            
+        ]
+    }
+```
+
+
+
+
+
+#  npm-package.json 对webpack设置
 
 ### npm run xxx 运行webpack脚本
 
- ```
-  "scripts": {
+ ```json
+ "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development",
-    "dev": "webpack-dev-server --inline --mode development"
-  }
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development&webpack-dev-server",
+    "server":"webpack-dev-server --inline --mode development"
+  },
  ```
 
 ### 目标浏览器配置表

@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<div id="app">
+<cl></cl>
+</div>
+<script language="javascript">
+  const cl = {
+    template: '<div class="cs"> <a href=""></a></div>',
+    mounted() {
+      console.log(this.$el)
+    }
+  }
+
+  new Vue({
+    el:'#app',
+
+    components:{cl}
+
+  })
+
+</script>

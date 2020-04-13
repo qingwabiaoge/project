@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+
+
+    <div v-for="(item,key) in msg">
+        <!--传递的是值类型变量(msg[key]计算获得的值),  而不是地址类型变量-->
+        <button type="text" @click="cur=msg[key]">{{key}}---{{item}}</button>
+    </div>
+
+    <input type="text" v-model="cur">
+
+</div>
+
+
+<script>
+
+
+    const vm = new Vue({
+        el: '#app',
+
+        data: {
+            cur: '',
+            msg: {a: 1, b: 2, c: 3}
+        },
+        methods: {}
+
+
+    })
+
+</script>
+
+

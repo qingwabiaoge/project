@@ -1,0 +1,30 @@
+<script>
+    let array = [
+        {
+            name: 'apple',
+            price: 10
+        }, {
+            name: 'banana',
+            price: 9
+        }
+    ];
+
+    let sumprice = 0;
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        sumprice += element.price;
+    }
+    console.log('for example sumprice',sumprice);
+
+    /*
+        reduce 语法实现
+        total    必需。初始值, 或者计算结束后的返回值。
+        currentValue    必需。当前元素
+        currentIndex    可选。当前元素的索引
+        arr    可选。当前元素所属的数组对象。
+    */
+    sumprice = array.reduce(function (total, currentValue, currentIndex, arr) {
+        return total + currentValue.price;
+    }, 0);
+    console.log('for reduce sumprice',sumprice);
+</script>

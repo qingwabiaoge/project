@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+
+
+<div id="app">
+    vm根组件
+    <router-link to="/fa/">/fa/</router-link>
+    <br>
+    <router-link to="/fa/01">/fa/01</router-link>
+    <br>
+    <router-link to="/fa/02">/fa/02</router-link>
+
+
+    <router-view :key="key"></router-view>
+
+</div>
+<script>
+    const id = {
+        template: '<div>id组件:{{$route.params.id}}</div>',
+        created(){
+            console.log('created')
+        },
+        destroyed(){
+            console.log('destroy')
+        }
+
+    }
+    const sub1 = {
+        template: '<div>sub1自定义内容</div>',
+
+    }
+    const router = new VueRouter({
+            routes: [{
+
+                path: '/fa/:id',
+                //id变化动画效果 需要设置key
+                name: 'id',
+                component: id
+            }
+            ]
+        }
+    )
+    const vm = new Vue({
+        el: '#app',
+        router,
+        computed: {
+            key() {
+                return this.$route.fullPath
+            }
+        }
+    })
+
+</script>
