@@ -391,18 +391,20 @@ git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch] [--quiet] [--] <fi
 Shell
 ```
 
-## 描述
 
-从索引中删除文件，或从工作树和索引中删除文件。 `git rm`不会从您的工作目录中删除文件。 (没有任何选项只能从工作树中删除文件，并将其保留在索引中;)要删除的文件必须与分支的提示相同，并且在索引中不能对其内容进行更新，尽管可以使用`-f`选项覆盖(默认行为)。 当给出`--cached`时，暂存区内容必须与分支的提示或磁盘上的文件相匹配，从而仅将文件从索引中删除。
 
-使用 `git rm` 来删除文件，同时还会将这个删除操作记录下来；而使用 `rm` 来删除文件，仅仅是删除了物理文件，没有将其从 `git` 的记录中剔除。
+git rm 与 git rm --cached 的区别
 
-直观的来讲，`git rm` 删除过的文件，执行 `git commit -m "commit message or mark"` 提交时，会自动将删除该文件的操作提交上去。
 
-而对于用 `rm` 命令直接删除的文件，执行 `git commit -m "commit message or mark"`提交时，则不会将删除该文件的操作提交上去。不过不要紧，即使你已经通过 `rm` 将某个文件删除掉了，也可以再通过 `git rm` 命令重新将该文件从 git 的记录中删除掉，
-这样的话，在执行 `git commit -m "commit message or mark"` 以后，也能将这个删除操作提交上去。
 
-如果之前不小心用 `rm` 命令删除了一大批文件呢？如此时用 `git rm` 逐个地再删除一次就显得相当卵痛了。可如下的方式做提交： `git commit -am "commit message or mark"`
+`git rm` ： 同时从工作区和索引中删除文件。即本地的文件也被删除了。
+
+`git rm --cached` ： 从索引中删除文件。但是本地文件还存在， 只是不希望这个文件被版本控制
+
+`git rm -r mydir
+`删除文件夹：`mydir`，并把它从git的仓库管理系统中移除。
+
+`git rm -r mydir --cache`删除文件夹：`mydir`，并把它从git的仓库管理系统中移除。但是本地文件还存在
 
 ## 示例
 
@@ -419,16 +421,9 @@ git rm text1.txt
 Shell
 ```
 
-**示例2**
 
-删除文件夹：`mydir`，并把它从git的仓库管理系统中移除。
 
-```shell
-git rm -r mydir
-Shell
-```
-
-**示例3**
+*示例3**
 
 ```shell
  git add 10.txt
