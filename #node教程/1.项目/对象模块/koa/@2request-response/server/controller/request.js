@@ -10,8 +10,6 @@ module.exports = async (ctx, next) => {
   ctx.state.data = 'data'
 
 
-
-
     //1.1后端设置ｃｏｏｋｉｅ:此方法仅用于ｈｔｔｐ请求localhost:3000/api时,后端向浏览器cookie设置toekn
     ctx.cookies.set(
       'cid',

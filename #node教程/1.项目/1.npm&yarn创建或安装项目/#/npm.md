@@ -180,7 +180,7 @@ $ npm link
 
    
 
-## 运行模块
+## 全局运行dos cli程序
 
 ### 全局安装过的cli模块,任意目录命令行可以运行安装path下的cli**命令**
 
@@ -200,7 +200,7 @@ $ npm link
 
 ### 项目目录命令行运行npm run xxx 
 
-##### 运行cli的原理
+##### 运行组合的cli的原理
 
 package.json设置dev命令
 
@@ -212,16 +212,18 @@ package.json设置dev命令
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "webpack --mode development&set host="xxx"&nuxt",
     }
 }
 ```
 
 `npm run dev` 时, 
 
-会搜索os全局path下有没有安装"nuxt"模块 
+会搜索os全局path下有没有安装webpack set "nuxt" 等程序
 
-如果没有会运行当前目录的`./node_modules/.bin/nuxt.cmd`
+匹配到webpack set,没有匹配到nuxt 
+
+去寻找当前目录的`./node_modules/.bin/nuxt.cmd` 执行
 
 *nuxt.cmd的代码如下*:(npm install自动生成的)
 

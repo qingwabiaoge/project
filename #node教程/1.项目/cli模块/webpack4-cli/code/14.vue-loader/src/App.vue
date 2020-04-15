@@ -9,7 +9,7 @@
 export default{
 
 data(){
-    return{msg:1}
+    return{msg:'data from vue'}
 }
 
 
