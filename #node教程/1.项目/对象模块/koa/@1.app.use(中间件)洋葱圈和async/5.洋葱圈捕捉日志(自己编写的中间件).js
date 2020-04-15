@@ -4,10 +4,14 @@ const app = new Koa()
 
 const logger =  (ctx, next) => {
   // 在ctx.body前运行
+  if(ctx.request.url==='/'){
   console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`)
+  }
    next()
   // ctx.body后运行
+  if(ctx.request.url==='/'){
   console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`)
+  }
 }
 
 const midware = (ctx) => {

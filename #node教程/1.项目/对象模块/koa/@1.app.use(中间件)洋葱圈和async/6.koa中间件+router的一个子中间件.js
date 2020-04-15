@@ -1,9 +1,16 @@
 const Koa = require('koa')
-const Router = require('koa-router')
-
 const app = new Koa()
 
+const Router = require('koa-router')
+const routerMiddlewares = async (ctx, next) => {
+  ctx.body += '3'
+  await next()
+  ctx.body += '4'
+}
 const router = new Router()
+router.get('/', routerMiddlewares)
+
+
 
 const normalMiddlewares = async (ctx, next) => {
   ctx.body = '1' // 在路由执行前添加
@@ -12,13 +19,6 @@ const normalMiddlewares = async (ctx, next) => {
 }
 
 
-const routerMiddlewares = async (ctx, next) => {
-  ctx.body += '3'
-  await next()
-  ctx.body += '4'
-}
-
-router.get('/', routerMiddlewares)
 
 
 //使用普通中间件

@@ -5,33 +5,33 @@ const router = new Router()
 
 const normalMiddlewares = async (ctx, next) => {
 
-  ctx.body = '1'
+  ctx.body = '页头'
   await next()
 
-  ctx.body += '2'
+  ctx.body += '页尾'
 }
 
 
-const i = 0
+const hasToken = false
 
-const routerMiddlewares = (ctx, next) => {
-  if (i) {
+const routerAutorMiddleware = (ctx, next) => {
+  if (hasToken) {
     //ctx.body += '3';
-    return next() //如果没有next()则不执行下一个routerMiddlewares,能执行normalMiddlewares的ctx.bocy_=2估计是路由中间件做了设置
+   next() //如果没有next()则不执行下一个routerMiddlewares,能执行normalMiddlewares的ctx.bocy_=2估计是路由中间件做了设置
   } else {
-    ctx.body += 'err'
+    ctx.body += '无权打开本页面'
   }
 }
 
 
-const routerMiddlewares2 = (ctx, next) => {
+const routerMiddleware = (ctx, next) => {
   ctx.body += '3'
   next()
   ctx.body += '4'
 }
 
 
-router.get('/', routerMiddlewares, routerMiddlewares2)
+router.get('/', routerAutorMiddleware, routerMiddleware)
 
 
 app.use(normalMiddlewares)

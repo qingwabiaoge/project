@@ -3,6 +3,6 @@ import App from './App'
 
 
 new Vue({
-    el: "#root",
+    el: "#app",
     render: h => h(App)
 })
