@@ -26,7 +26,7 @@ const schema = new Schema({
   tag: [{ type: Schema.Types.ObjectId, ref: 'Tag' }]
 })
 /* -------------------实例化对象的方法 ,类似protype--------------------------------------- */
-// this我实例化对象
+// this===实例化对象
 schema.methods.showInfo = function () {
   console.log(this.name, this.type)
 }
@@ -45,7 +45,7 @@ schema.methods.findClass = function (callback) {
   console.log(this)
 }
 
-/* --------------------类的静态方法----------------------------------- */
+/* --------------------类的静态方法封裝----------------------------------- */
 
 schema.statics.findDog = function (name, callback) {
   // this===Dog,   因为Dog.finddog(),对象调用函数 this被赋值Dog

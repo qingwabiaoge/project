@@ -496,9 +496,10 @@ git rm -r  --cached .
 git add .
 ```
 
+
 # git mv
 
-移动文件
+### 移动文件
 
 不像其它的 VCS 系统，Git 并不显式跟踪文件移动操作。 如果在 Git 中重命名了某个文件，仓库中存储的元数据并不会体现出这是一次改名操作。 不过 Git 非常聪明，它会推断出究竟发生了什么，至于具体是如何做到的，我们稍后再谈。
 
@@ -529,6 +530,21 @@ $ git add README
 ```
 
 如此分开操作，Git 也会意识到这是一次改名，所以不管何种方式结果都一样。 两者唯一的区别是，`mv` 是一条命令而另一种方式需要三条命令，直接用 `git mv` 轻便得多。 不过有时候用其他工具批处理改名的话，要记得在提交前删除老的文件名，再添加新的文件名。
+
+### 重命名
+
+```
+git mv -f oldfolder newfolder
+git add -u newfolder (-u选项会更新已经追踪的文件和文件夹)
+git commit -m "changed the foldername whaddup"
+
+git mv foldername tempname && git mv tempname folderName (在大小写不敏感的系统中，如windows，重命名文件的大小写,使用临时文件名)
+
+git mv -n foldername folderName (显示重命名会发生的改变，不进行重命名操作)
+```
+
+
+
 
 # git stash
 

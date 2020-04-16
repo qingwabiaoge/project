@@ -481,13 +481,32 @@ netsh wlan set hostednetwork mode=disallow
 
 ### 建立服务
 
-使用管理员权限打开一个新的cmd窗口，bin目录下执行`mongod --config "E:\mongodb-win32-x86_64-2012plus-4.2.1\mongo.conf" --install --serviceName MongoDB`，安装完成后可在windows的服务中看到MongoDB，可以在服务中启动或停止服务，或者在cmd的任意路径中执行net start/stop MongoDB来启停，并且启动后如果不手动停止，服务回一直为启动状态，后续连接数据库之前不需要先启动服务。
+```
+# mongo.conf, win10必须是绝对路径
+dbpath=D:\mongodb\data
+#日志路径
+logpath=D:\mongodb\log\mongo.log
+#启用日志文件，默认也启用
+journal=true
+#日志模式为追加
+logappend=true
+#过滤无用日志
+quiet=true
+#端口号
+port=27017
+```
+
+
+
+使用管理员权限打开一个新的cmd窗口，bin目录下执行`mongod --config "D:\mongodb\mongo.conf" --install --serviceName MongoDB`，安装完成后可在windows的服务中看到MongoDB，可以在服务中启动或停止服务，或者在cmd的任意路径中执行net start/stop MongoDB来启停，并且启动后如果不手动停止，服务回一直为启动状态，后续连接数据库之前不需要先启动服务。
 
  ![1572148904700](./img/1572148904700.png)
 
 如果不使用管理员权限安装服务，执行不报错但是服务无法注册成功，即无法在windows服务中找到mongoDB服务；使用管理员权限，如果有其他运行mongo服务的cmd窗口，也无法成功，查看日志如下，此时关闭其他cmd窗口重新执行安装服务即可。
 
 ### 服务操作
+
+cmd的任意路径中执行net start/stop MongoDB来启停
 
 ![1572148650833](./img/1572148650833.png)
 

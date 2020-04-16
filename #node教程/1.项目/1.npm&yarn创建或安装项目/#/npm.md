@@ -63,16 +63,14 @@ npm i nuxt -S //安装并保存到webpack.json生产环境配置
 yarn add nuxt 
 ```
 
-### 安装cli到项目文件夹
-
-安装记录保存到webpack.json的dev{ },打包时间忽略
+### 安装cli到项目文件夹,模块名保存到webpack.json->dev{ },打包时间忽略
 
 ```js
 npm i nuxt -D //安装并保存到webpack.json开发环境配置
 yarn add webpack -D
 ```
 
-### 安装对象模块在项目文件夹
+### 安装对象模块在项目文件夹(不能安裝到全局)
 
 引入module对象,并保存模块名到 webpack.json->dependencies{ },打包时间使用
 
@@ -121,14 +119,13 @@ npm update
 yarn upgrade
 ```
 
-## 自己动手新建cli模块
+# 發布自己的cli到npm
 
 运行原理: 间接运行了node test.js
 
 ### 建立自定义全局cli模块
 
 1. npm init创建项目和package.json
-
 2. 修改package.json文件,设置命令名字
 
 ```json
@@ -180,7 +177,7 @@ $ npm link
 
    
 
-## 全局运行dos cli程序
+# 全局运行dos cli程序
 
 ### 全局安装过的cli模块,任意目录命令行可以运行安装path下的cli**命令**
 

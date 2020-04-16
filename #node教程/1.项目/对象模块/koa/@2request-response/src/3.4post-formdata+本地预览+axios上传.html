@@ -10,7 +10,7 @@
 
 
 <input id="fileinput" type="file" accept="image/*" onchange="upload(event)">
-
+<img id="img"/>
 
 <script>
 
@@ -23,7 +23,8 @@
 
     console.log(file)
 
-    this.src = windowURL.createObjectURL(event.target.files[0]);
+    console.log(this)
+    img.src = windowURL.createObjectURL(event.target.files[0]);
 
     // 图片预览本地文件------------------------------------------>>
 
