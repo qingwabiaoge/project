@@ -1,0 +1,120 @@
+<template>
+  <div>
+    <div :class="$style['component']">
+      <el-breadcrumb separator=">" style="margin-bottom: 20px">
+        <el-breadcrumb-item>首页</el-breadcrumb-item>
+        <el-breadcrumb-item>组件</el-breadcrumb-item>
+      </el-breadcrumb>
+      <section v-for="item in $store.state.components.components">
+
+        <h4 @click="clickEdit(item)">{{item.title}} <b v-if="item.children&&item.children.length>0"
+                                                       @click.stop="clickAdd(item._id)" style="">+</b>
+        </h4>
+        <p v-if="item.children&&item.children.length>0">
+        <span v-for="i in item.children" @click="clickEdit(i)">
+          {{i.title}} <i @click.stop="clickReduce(i)">-</i>
+        </span>
+        </p>
+      </section>
+
+    </div>
+    <uniform ref="uniform" :data="uniformData" @submit='submitUniform'></uniform>
+    <div v-if="$isdev">
+      {{$store.state.components}}
+    </div>
+  </div>
+</template>
+
+<script>
+  import mapMixin from '@/mixins/page-mixin'
+  import mixin from '@/mixins/admin-page-mixin'
+
+  export default {
+
+    data() {
+      return {
+        parent: '',
+        uniformData: {}
+      }
+
+    },
+    methods: {
+      clickEdit(item) {
+        const component = {...item}
+        this.uniformData = component
+        this.$refs.uniform.visible = true
+      },
+      clickAdd(parent) {
+        this.uniformData = {model: 'component', parent, name: this.$tool.randomString(4)}
+        this.$refs.uniform.visible = true
+      },
+      clickReduce({_id, title}) {
+        this.$confirm(`删除组件 [${title}] , 是否继续?`, '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$axios.delete(`/component/${_id}`).then(_ => {
+            this.$message({
+                type: 'success',
+                message: '删除成功!'
+              }
+            );
+
+            this.$store.dispatch('components/get')
+            this.uniformData = {}
+          })
+
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          });
+        });
+      },
+      async submitUniform() {
+        if (this.uniformData._id) {// 如果不存在_id 是新增
+          await this.$axios.patch('/component', this.uniformData)
+        } else {
+          await this.$axios.post('/component', this.uniformData)
+        }
+        this.$store.dispatch('components/get')
+        this.uniformData = {}
+      }
+    }
+    ,
+    created() {
+
+    },
+    mixins: [mapMixin,mixin]
+  }
+</script>
+
+<style module lang="less">
+  .component {
+
+    section {
+      border-bottom: 1px solid #333;
+      padding: 30px;
+
+      span {
+        margin-left: 15px;
+      }
+
+      b {
+        color: #0bb20c;
+        margin-left: 15px
+      }
+
+      i {
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 25px;
+        font-weight: normal;
+        color: red;
+      }
+    }
+
+  }
+
+</style>

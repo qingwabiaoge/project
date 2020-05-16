@@ -1,0 +1,86 @@
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<body>
+<div id="app">
+    <tree-list :data="data"></tree-list>
+
+</div>
+</body>
+
+<script>
+
+    Vue.component("tree-list",{
+        data(){
+          return{
+            render:false
+          }
+        },
+        props:{
+            data:{
+                type:Array,
+                default:[],
+            },
+            increment:{
+                type:Number,
+                default:0
+            }
+        },
+        computed:{
+            count(){
+                var c = this.increment;
+                return ++c;
+            },
+            stylePadding(){
+                return {
+                    'padding-left':this.count+'px'
+                }
+            }
+        },
+        template:`
+                   <div>
+                   <ul>
+                    <li v-for="item of data">
+                    <div class="tree-title" :style="stylePadding"        @click="render=item.chidren">
+                    <span><strong>{{item.title}}</strong> <i class="ico"></i></span>
+                    </div>
+                    <tree-list
+                    v-if="render"
+                    :increment="count"
+                    :data="item.chidren"
+                    >
+                    </tree-list>
+                    </li>
+                    </ul>
+                    </div>
+                    `
+
+    })
+
+
+    var data = [{
+        title: "目录",
+        chidren: [{
+            title: "我的音乐",
+            chidren: [{
+                title: "周杰伦",
+                chidren: [{
+                    title: "发如雪"
+                }]
+            }, {
+                title: "王杰",
+                chidren: [{
+                    title: "一场游戏一场梦"
+                }]
+            }]
+        },
+            {
+            title: "我的照片"
+        }]
+    }];
+    new Vue({
+        el:"#app",
+        data:{
+            data:data
+        }
+    })
+</script>

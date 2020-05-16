@@ -1,0 +1,14 @@
+
+{
+  "apps": [
+    {
+      "name": "bonniena3002",
+      "script": "./server/index.js",
+      "cwd": "./",
+      "watch": ["server","nuxt.config.js"],
+      "error_file": "./logs/website-err.log",
+      "out_file": "./logs/website-out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}

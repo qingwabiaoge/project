@@ -1,0 +1,22 @@
+/* ========================================================================
+   Component: SVG
+ ========================================================================== */
+/*
+ * 1. Fill all SVG elements with the current text color if no `fill` attribute is set
+ * 2. Set the fill and stroke color of all SVG elements to the current text color
+ */
+/* 1 */
+.svg,
+.svg:not(.preserve) [fill*='#']:not(.preserve) {
+  fill: currentcolor;
+}
+.svg:not(.preserve) [stroke*='#']:not(.preserve) {
+  stroke: currentcolor;
+}
+/*
+ * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
+ */
+.svg {
+  transform: translate(0, 0);
+}
+/*# sourceMappingURL=svg.css.map */
