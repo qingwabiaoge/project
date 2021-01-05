@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/bulma": "^1.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
     "koa": "^2.5.2",
